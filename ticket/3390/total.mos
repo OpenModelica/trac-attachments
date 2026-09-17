@@ -1,0 +1,4 @@
+loadFile("total.mo"); getErrorString();
+instantiateModel(plant_total); getErrorString();
+buildModel(plant_total); getErrorString();
+

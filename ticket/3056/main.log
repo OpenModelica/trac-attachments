@@ -1,0 +1,1482 @@
+version:1
+:msg:main --->  Computing dependencies for openmodelica-devel:info:main .:debug:main openmodelica-devel has no conflicts
+:debug:main Searching for dependency: gtime
+:debug:main Found Dependency: receipt exists for gtime
+:debug:main Searching for dependency: cmake
+:debug:main Found Dependency: receipt exists for cmake
+:debug:main Searching for dependency: libtool
+:debug:main Found Dependency: receipt exists for libtool
+:debug:main Searching for dependency: autoconf
+:debug:main Found Dependency: receipt exists for autoconf
+:debug:main Searching for dependency: automake
+:debug:main Found Dependency: receipt exists for automake
+:debug:main Searching for dependency: gcc48
+:debug:main Found Dependency: receipt exists for gcc48
+:debug:main Searching for dependency: lp_solve
+:debug:main Found Dependency: receipt exists for lp_solve
+:debug:main Searching for dependency: gettext
+:debug:main Found Dependency: receipt exists for gettext
+:debug:main Searching for dependency: omniorb
+:debug:main Found Dependency: receipt exists for omniorb
+:debug:main Searching for dependency: readline
+:debug:main Found Dependency: receipt exists for readline
+:debug:main Searching for dependency: libgcc
+:debug:main Found Dependency: receipt exists for libgcc
+:debug:main Searching for dependency: sundials
+:debug:main Found Dependency: receipt exists for sundials
+:debug:main Searching for dependency: qt4-mac
+:debug:main Found Dependency: receipt exists for qt4-mac
+:debug:main Searching for dependency: qwt52
+:debug:main Found Dependency: receipt exists for qwt52
+:debug:main Searching for dependency: dbus
+:debug:main Found Dependency: receipt exists for dbus
+:debug:main Searching for dependency: gtk2
+:debug:main Found Dependency: receipt exists for gtk2
+:debug:main Searching for dependency: gtkglext
+:debug:main Found Dependency: receipt exists for gtkglext
+:debug:main Searching for dependency: OpenSceneGraph
+:debug:main Found Dependency: receipt exists for OpenSceneGraph
+:debug:main Searching for dependency: py27-gobject3
+:debug:main Found Dependency: receipt exists for py27-gobject3
+:debug:main Searching for dependency: openmodelicalibraries
+:debug:main Found Dependency: receipt exists for openmodelicalibraries
+:msg:main 
+:debug:main Executing org.macports.main (openmodelica-devel)
+:debug:main changing euid/egid - current euid: 0 - current egid: 0
+:debug:main egid changed to: 505
+:debug:main euid changed to: 504
+:debug:main Skipping completed org.macports.archivefetch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.fetch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.checksum (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.extract (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.patch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.configure (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:build build phase started at Tue Dec 30 10:41:27 EST 2014
+:notice:build --->  Building openmodelica-devel
+:debug:build Executing org.macports.build (openmodelica-devel)
+:debug:build Environment: 
+CC_PRINT_OPTIONS='YES'
+CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS'
+CPATH='/opt/local/include'
+LIBRARY_PATH='/opt/local/lib'
+MACOSX_DEPLOYMENT_TARGET='10.9'
+:debug:build Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917" && /usr/bin/make -j4 -w all NOLIBRARIES=Yes'
+:debug:build Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917" && /usr/bin/make -j4 -w all NOLIBRARIES=Yes 
+:info:build make: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make qtclients mosh
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build if [ ".app" = ".app" ]; then mkdir -p ./build/Applications/; fi
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/qwt -f Makefile.unix
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make bootstrap-dependencies
+:info:build test -d 3rdParty/qjson-0.8.1
+:info:build mkdir -p 3rdParty/qjson-0.8.1/build/include/qjson
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile
+:info:build (cd 3rdParty/qjson-0.8.1/build && test -f Makefile || CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" cmake -D CMAKE_AR:String="ar" .. -G "Unix Makefiles")
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build if [ ".app" = ".app" ]; then mkdir -p ./build/Applications/; fi
+:info:build mkdir -p ./build/bin
+:info:build mkdir -p ./build/lib/omc/emcc
+:info:build test -f 3rdParty/qjson-0.8.1/build/lib/libqjson.dylib || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/qjson-0.8.1/build
+:info:build mkdir -p ./build/include/omc/c/
+:info:build mkdir -p ./build/include/omc/c/linearization/
+:info:build mkdir -p ./build/bin
+:info:build mkdir -p ./build/lib/omc/emcc
+:info:build mkdir -p ./build/include/omc/c/optimization/
+:info:build test "(" ! `uname` = Darwin ")" -o "(" ! -f 3rdParty/qjson-0.8.1/build/lib/libqjson.dylib ")" || install_name_tool -id @rpath/libqjson.dylib 3rdParty/qjson-0.8.1/build/lib/libqjson.dylib
+:info:build mkdir -p ./build/include/omc/c/simulation/
+:info:build mkdir -p ./build/include/omc/c/
+:info:build mkdir -p ./build/include/omc/c/simulation/results/
+:info:build mkdir -p ./build/include/omc/c/linearization/
+:info:build mkdir -p ./build/include/omc/c/simulation/solver/
+:info:build mkdir -p ./build/include/omc/c/optimization/
+:info:build mkdir -p ./build/include/omc/c/simulation/solver/initialization/
+:info:build mkdir -p ./build/include/omc/c/simulation/
+:info:build mkdir -p ./build/include/omc/c/meta/
+:info:build mkdir -p ./build/include/omc/c/simulation/results/
+:info:build mkdir -p ./build/include/omc/c/simulation/solver/
+:info:build mkdir -p ./build/include/omc/c/meta/gc/
+:info:build mkdir -p ./build/include/omc/c/util/
+:info:build mkdir -p ./build/include/omc/c/simulation/solver/initialization/
+:info:build mkdir -p ./build/include/omc/c/meta/
+:info:build mkdir -p ./build/include/omc/c/fmi1/
+:info:build mkdir -p ./build/include/omc/c/meta/gc/
+:info:build mkdir -p ./build/include/omc/c/fmi2/
+:info:build mkdir -p ./build/include/omc/c/util/
+:info:build mkdir -p ./build/share/omc/java/
+:info:build mkdir -p ./build/include/omc/c/fmi1/
+:info:build mkdir -p ./build/share//omc/scripts/OpenTurns/
+:info:build mkdir -p ./build/include/omc/c/fmi2/
+:info:build mkdir -p ./build/share/doc/omc/testmodels
+:info:build mkdir -p ./build/share/omc/java/
+:info:build mkdir -p ./build/share/doc/omc/SimulationRuntime/IntegrationAlgorithms
+:info:build mkdir -p ./build/share/man//man1/
+:info:build mkdir -p ./build/share//omc/scripts/OpenTurns/
+:info:build test -d 3rdParty/FMIL
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt'
+:info:build cd src/ && /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile 
+:info:build mkdir -p ./build/share/doc/omc/testmodels
+:info:build mkdir -p 3rdParty/FMIL/build
+:info:build mkdir -p ./build/share/doc/omc/SimulationRuntime/IntegrationAlgorithms
+:info:build (cd 3rdParty/FMIL/build && test -f Makefile || CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector -g" CPPFLAGS="-I/opt/local/include" CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" cmake -D CMAKE_AR:String="ar" -D FMILIB_BUILD_SHARED_LIB:Bool=ON -D FMILIB_BUILD_TESTS:Bool=OFF -D FMILIB_GENERATE_DOXYGEN_DOC:Bool=OFF -DCMAKE_COLOR_MAKEFILE:Bool=OFF -DFMILIB_INSTALL_PREFIX:String=../install .. -G "Unix Makefiles")
+:info:build mkdir -p ./build/share/man//man1/
+:info:build cp -a 3rdParty/qjson-0.8.1/build/lib/libqjson*.dylib* ./build/lib/omc/
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C mosh/src -f Makefile
+:info:build test -f 3rdParty/FMIL/build/libfmilib_shared.dylib || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/FMIL/build
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/mosh/src'
+:info:build cp OMShell-terminal ../../build/bin/
+:info:build test -d 3rdParty/FMIL/install || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/FMIL/build install
+:info:build test "(" ! `uname` = Darwin ")" -o "(" ! -f 3rdParty/FMIL/build/libfmilib_shared.dylib ")" || install_name_tool -id @rpath/libfmilib_shared.dylib 3rdParty/FMIL/build/libfmilib_shared.dylib
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/mosh/src'
+:info:build # Configure and build lis
+:info:build if ! test -f 3rdParty/lis-1.4.12/Makefile; then cd 3rdParty/lis-1.4.12 && ./configure "--host=x86_64-apple-darwin13.4.0" --enable-shared --disable-static MPICC="false" CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" LDFLAGS="-L/opt/local/lib -Wl,-headerpad_max_install_names -arch x86_64 -Wl,-install_name,@rpath/liblis.dylib" && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean; fi
+:info:build test -d 3rdParty/Cdaskr/solver
+:info:build cp -a 3rdParty/qjson-0.8.1/src/*.h 3rdParty/qjson-0.8.1/build/include/qjson
+:info:build (cd 3rdParty/Cdaskr/solver && CC="/usr/bin/clang" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" make -f Makefile)
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/Cdaskr/solver'
+:info:build make[3]: Nothing to be done for `all'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/Cdaskr/solver'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C OMShell/OMShellGUI -f Makefile.unix
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/src'
+:info:build make[4]: Nothing to be done for `first'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/src'
+:info:build cd textengines/ && /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile 
+:info:build cp -pPR 3rdParty/FMIL/build/libfmilib_shared.dylib ./build/lib/omc/
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMShell/OMShellGUI'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile
+:info:build test ! -f build/lib/omc/libfmilib_shared.dylib || ln -sf libfmilib_shared.dylib build/lib/omc/libfmilib.dylib
+:info:build test -d 3rdParty/CMinpack
+:info:build #TODO: Only copy required headers, add them in omc/fmi subfolder, and do not copy c/txt-files
+:info:build mkdir -p 3rdParty/CMinpack/build
+:info:build #cp -rp 3rdParty/FMIL/install/include/* ./build/include/omc
+:info:build (cd 3rdParty/CMinpack/build && test -f Makefile || CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" cmake -D CMAKE_AR:String="ar" -DCMAKE_COLOR_MAKEFILE:Bool=OFF -DSHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX:String=../install .. -G "Unix Makefiles")
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C Compiler/Translation release
+:info:build test -f 3rdParty/CMinpack/install/lib*/libcminpack.dylib* || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/CMinpack/build
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/Translation'
+:info:build for locale in de sv es; do mkdir -p ../../build/share/locale//$locale/LC_MESSAGES && msgfmt -o../../build/share/locale//$locale/LC_MESSAGES/openmodelica.mo $locale.po; done
+:info:build test -d 3rdParty/CMinpack/install || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/CMinpack/build install
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/textengines'
+:info:build make[4]: Nothing to be done for `first'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/textengines'
+:info:build cd doc/ && /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile 
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMShell/OMShellGUI'
+:info:build test ! `uname` = Darwin || install_name_tool -id @rpath/libcminpack.dylib 3rdParty/CMinpack/install/lib/libcminpack.dylib
+:info:build /usr/bin/clang++ -headerpad_max_install_names -Wl,-headerpad_max_install_names   -Xarch_x86_64 -mmacosx-version-min=10.9 -o ../bin/OMShell.app/Contents/MacOS/OMShell commandcompletion.o omc_communication.o omc_communicator.o omcinteractiveenvironment.o oms.o main.o moc_commandcompletion.o moc_omc_communicator.o moc_oms.o qrc_oms.o   -F/opt/local/Library/Frameworks -F/opt/local/lib  -lomniORB4 -lomnithread -lpthread -F/opt/local/Library/Frameworks -F/opt/local/lib -L/opt/local/lib -framework QtXml -framework QtCore -framework QtGui 
+:info:build # copy dll/so to lib/omc/ folders
+:info:build (cp -af 3rdParty/CMinpack/install/lib*/libcminpack.dylib* ./build/lib/omc)
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/doc'
+:info:build make[4]: Nothing to be done for `first'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt/doc'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt'
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/qwt'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C SimulationRuntime/ParModelica/explicit/openclrt -f Makefile
+:info:build # Darwin has to be special always
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/ParModelica/explicit/openclrt'
+:info:build mkdir -p ../../../../build//include/omc/c//ParModelica/explicit/openclrt/
+:info:build cp -rp omc_ocl_interface.h ../../../../build//include/omc/c//ParModelica/explicit/openclrt/
+:info:build (test ! `uname` = Darwin || cp -af 3rdParty/CMinpack/install/lib*/*.dylib ./build/lib/omc)
+:info:build cp -rp omc_ocl_common_header.h ../../../../build//include/omc/c//ParModelica/explicit/openclrt/
+:info:build cp -rp omc_ocl_memory_ops.h ../../../../build//include/omc/c//ParModelica/explicit/openclrt/
+:info:build if test -f 3rdParty/graphstream/org.omc.graphstream.jar; then cp -p 3rdParty/graphstream/org.omc.graphstream.jar build/share/omc/java/.; fi
+:info:build cp -rp libOMOCLRuntime.a ../../../../build//lib/omc/
+:info:build cp -rp ParModelicaBuiltin.mo ../../../../build//lib/omc/
+:info:build cp -rp OCLRuntimeUtil.cl ../../../../build//include/omc/c//ParModelica/explicit/openclrt/
+:info:build cp -a 3rdParty/qwt/lib/libomqwt*dylib build/lib/omc/
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/ParModelica/explicit/openclrt'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C testsuite/ -f Makefile omc-diff
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/testsuite'
+:info:build make[3]: Nothing to be done for `omc-diff'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/testsuite'
+:info:build cp -p 3rdParty/gc/.libs/libgc.a build/lib/omc/libgc.a
+:info:build cp -pPR 3rdParty/gc/include/gc.h build/include/omc/c/gc.h
+:info:build cp -pPR 3rdParty/gc/include/gc_config_macros.h build/include/omc/c/gc_config_macros.h
+:info:build cp -pPR 3rdParty/gc/include/gc_version.h build/include/omc/c/gc_version.h
+:info:build install_name_tool -id @rpath/libomqwt.6.2.0.dylib build/lib/omc/libomqwt.6.2.0.dylib
+:info:build cp -pPR 3rdParty/gc/include/gc_pthread_redirects.h build/include/omc/c/gc_pthread_redirects.h
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/Translation'
+:info:build (cp -p doc/*.pdf doc/OpenModelicaAPI-Howto/*.pdf ./build/share/doc/omc)
+:info:build (cd "libraries/Resources//BuildProjects/autotools" && (test -f Makefile || ./autogen.sh))
+:info:build Building Lis from sources
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/lis-1.4.12
+:info:build (cd "libraries/Resources//BuildProjects/autotools" && (test -f Makefile || (./configure "--host=x86_64-apple-darwin13.4.0" --libdir="`cd ../../../../build/lib/omc/ && pwd -P || echo ERROR-BAD-INSTALL-PATH`" CC="/usr/bin/clang" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CPPFLAGS="-I/opt/local/include" LDFLAGS="-L/opt/local/lib -Wl,-headerpad_max_install_names -arch x86_64" --disable-hdf5 --enable-static-zlib --enable-static --disable-shared && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean)))
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C "libraries/Resources//BuildProjects/autotools"
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12'
+:info:build Making all in src
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src'
+:info:build Making all in matrix
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/matrix'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/matrix'
+:info:build Making all in vector
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/vector'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/vector'
+:info:build Making all in matvec
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/matvec'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/matvec'
+:info:build Making all in precon
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/precon'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/precon'
+:info:build Making all in solver
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/solver'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/solver'
+:info:build Making all in esolver
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/esolver'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/esolver'
+:info:build Making all in system
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/system'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/system'
+:info:build Making all in precision
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/precision'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src/precision'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src'
+:info:build make[5]: Nothing to be done for `all-am'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src'
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/src'
+:info:build Making all in include
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/include'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/include'
+:info:build make[5]: Nothing to be done for `all-am'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/include'
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/include'
+:info:build Making all in test
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/test'
+:info:build make[4]: Nothing to be done for `all'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12/test'
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12'
+:info:build make[4]: Nothing to be done for `all-am'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/lis-1.4.12'
+:info:build # Copy the library; not headers (as they are not used by the runtime system)
+:info:build cp -Pp 3rdParty/lis-1.4.12/src/.libs/liblis.dylib* build/lib/omc/
+:info:build (cp -p doc/SimulationRuntime/IntegrationAlgorithms/IntegrationAlgorithms.pdf ./build/share/doc/omc/SimulationRuntime/IntegrationAlgorithms)
+:info:build ! test -f build/lib/omc/liblis.so.0.0 -a ! -f build/lib/omc/liblis.so.0 || ln -s liblis.so.0.0 build/lib/omc/liblis.so.0
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMShell/OMShellGUI'
+:info:build mkdir -p ../..//build/share//omshell/nls/
+:info:build ! test -f build/lib/omc/liblis.so.0.0 -a ! -f build/lib/omc/liblis.so || ln -s liblis.so.0.0 build/lib/omc/liblis.so
+:info:build if [ ".app" = ".app" ]; then cp -rp ../bin/OMShell.app ../..//build/Applications/ ; else cp -p ../bin/OMShell ../..//build/bin/; fi
+:info:build (cp -p Examples/*.* ./build/share/doc/omc/testmodels/)
+:info:build if test -f 3rdParty/graphstream/Makefile; then /Applications/Xcode.app/Contents/Developer/usr/bin/make CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" -C 3rdParty/graphstream/; fi
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" -C gs-netstream/c++ all
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build make[3]: Nothing to be done for `all'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C "libraries/Resources//BuildProjects/autotools" install
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream/gs-netstream/c++'
+:info:build make[4]: Nothing to be done for `all'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream/gs-netstream/c++'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C OMPlot/OMPlotGUI -f Makefile.unix
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile.lib
+:info:build cp -p ../..//OMNotebook/OMNotebookGUI/commands.xml ../..//build/share//omshell/
+:info:build cp -p OMShell_*.qm ../..//build/share//omshell/nls/
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMShell/OMShellGUI'
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build make[3]: Nothing to be done for `first'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build cp -a ../bin/libOMPlot* ../..//build/lib/omc/
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build make[4]: Nothing to be done for `install-data-am'.
+:info:build  /opt/local/bin/gmkdir -p '/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc'
+:info:build test ! `uname` = Darwin || install_name_tool -id @rpath/libOMPlot.1.0.0.dylib ../..//build/lib/omc/libOMPlot.1.0.0.dylib
+:info:build rm -f ./build/share/doc/omc/testmodels/CMake*.txt
+:info:build cp -p ./SimulationRuntime/interactive/README.txt ./build/share/doc/omc/OpenModelica-InteractiveSimulation-README.txt
+:info:build  /bin/sh ./libtool   --mode=install /opt/local/bin/ginstall -c   libModelicaExternalC.la libModelicaStandardTables.la '/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc'
+:info:build # man pages
+:info:build (cd doc/manpages/ && for f in *.1; do cp -p $f ../.././build/share/man//man1/ && gzip -f ../.././build/share/man//man1/$f ; done)
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build make[3]: Nothing to be done for `first'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build cp -p ../bin/OMPlot.app/Contents/MacOS/OMPlot ../bin/OMPlot
+:info:build cp -p ../bin/OMPlot ../..//build/bin/
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/OMPlot/OMPlotGUI'
+:info:build libtool: install: /opt/local/bin/ginstall -c .libs/libModelicaExternalC.lai /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaExternalC.la
+:info:build libtool: install: /opt/local/bin/ginstall -c .libs/libModelicaStandardTables.lai /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaStandardTables.la
+:info:build libtool: install: /opt/local/bin/ginstall -c .libs/libModelicaExternalC.a /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaExternalC.a
+:info:build libtool: install: chmod 644 /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaExternalC.a
+:info:build libtool: install: ranlib /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaExternalC.a
+:info:build libtool: install: /opt/local/bin/ginstall -c .libs/libModelicaStandardTables.a /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaStandardTables.a
+:info:build libtool: install: chmod 644 /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaStandardTables.a
+:info:build libtool: install: ranlib /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libModelicaStandardTables.a
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/libraries/Resources/BuildProjects/autotools'
+:info:build touch libraries/msl-external-libs
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C SimulationRuntime/interactive -f Makefile
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/interactive'
+:info:build make[3]: Nothing to be done for `all'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/interactive'
+:info:build # Depends on libinteractive.a
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C SimulationRuntime/c -f Makefile
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c'
+:info:build # copy libraries
+:info:build cp -p libSimulationRuntimeC.dylib libOpenModelicaRuntimeC.dylib libOpenModelicaFMIRuntimeC.dylib \
+:info:build 	   ../interactive/libinteractive.a ../../build/lib/omc
+:info:build test ! -f libSimulationRuntimeC.bc || cp libSimulationRuntimeC.bc ../../build/lib/omc/emcc/libSimulationRuntimeC.so
+:info:build test ! -f simulation/libf2c/libf2c.bc || cp simulation/libf2c/libf2c.bc ../../build/lib/omc/emcc/libf2c.so
+:info:build # copy interactive sample client
+:info:build cp ../interactive/SampleClient/interactiveclient.app ../../build/bin
+:info:build # copy header files
+:info:build cp -p ./simulation/libf2c/f2c.h ./omc_inline.h ./math-support/blaswrap.h ./openmodelica_func.h ./openmodelica.h ./openmodelica_types.h ./simulation_data.h ./ModelicaUtilities.h ../../build/include/omc/c/
+:info:build cp -p ./linearization/linearize.h ../../build/include/omc/c/linearization/
+:info:build cp -p ./optimization/OptimizerData.h ./optimization/OptimizerLocalFunction.h ./optimization/OptimizerInterface.h ../../build/include/omc/c/optimization/
+:info:build cp -p ./simulation/modelinfo.h ./simulation/options.h ./simulation/simulation_info_xml.h ./simulation/simulation_input_xml.h ./simulation/simulation_runtime.h ../../build/include/omc/c/simulation/
+:info:build cp -p ./simulation/results/simulation_result.h ../../build/include/omc/c/simulation/results/
+:info:build cp -p ./simulation/solver/delay.h ./simulation/solver/mixedSystem.h ./simulation/solver/linearSystem.h ./simulation/solver/model_help.h ./simulation/solver/nonlinearSystem.h ./simulation/solver/stateset.h ./simulation/solver/perform_simulation.c ./simulation/solver/dassl.h ./simulation/solver/events.h ./simulation/solver/external_input.h ./simulation/solver/solver_main.h ../../build/include/omc/c/simulation/solver/
+:info:build cp -p ./simulation/solver/initialization/initialization.h ./simulation/solver/initialization/initialization_data.h ../../build/include/omc/c/simulation/solver/initialization/
+:info:build cp -p ./meta/meta_modelica_builtin_boxptr.h ./meta/meta_modelica_builtin_boxvar.h ./meta/meta_modelica_builtin.h ./meta/meta_modelica.h ./meta/meta_modelica_mk_box.h ./meta/meta_modelica_segv.h ./meta/meta_modelica_string_lit.h ../../build/include/omc/c/meta/
+:info:build cp -p ./meta/gc/mmc_gc.h ../../build/include/omc/c/meta/gc/
+:info:build cp -p ./util/base_array.h ./util/boolean_array.h ./util/division.h ./util/generic_array.h ./util/index_spec.h ./util/integer_array.h ./util/java_interface.h ./util/memory_pool.h ./util/modelica.h ./util/modelica_string.h ./util/omc_error.h ./util/omc_msvc.h ./util/omc_spinlock.h ./util/read_write.h ./util/real_array.h ./util/ringbuffer.h ./util/rtclock.h ./util/simulation_options.h ./util/string_array.h ./util/utility.h ./util/varinfo.h ./util/list.h ../../build/include/omc/c/util/
+:info:build # copy fmi stuff
+:info:build cp -p  ../fmi/export/fmi1/*.h \
+:info:build 	   ../fmi/export/fmi1/fmu1_model_interface.c ../../build/include/omc/c/fmi1
+:info:build cp -p ../fmi/export/fmi2/*.h \
+:info:build 	   ../fmi/export/fmi2/fmu2_model_interface.c ../../build/include/omc/c/fmi2
+:info:build # copy java interface stuff
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c/util/java_interface'
+:info:build make[4]: Nothing to be done for `build'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c/util/java_interface'
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c/util/java_interface'
+:info:build cp antlr-3.1.3.jar ../../../../build/share/omc/java
+:info:build cp modelica_java.jar ../../../../build/share/omc/java
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c/util/java_interface'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/SimulationRuntime/c'
+:info:build # NOTE: OpenModelicaBootstrappingHeader.h has to be regenerated without any other process writing to so/etc or you get bus errors
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile -C Compiler OpenModelicaBootstrappingHeader.h
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler'
+:info:build /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/bin/omc +g=MetaModelica GenerateOMCHeader.mos > OpenModelicaBootstrappingHeader.h.log || (cat OpenModelicaBootstrappingHeader.h.log && false)
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile -C Compiler/runtime install
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/runtime'
+:info:build /usr/bin/clang++ -pipe -Os -arch x86_64 -fno-stack-protector -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include -I../../SimulationRuntime/c -I../../SimulationRuntime/c/simulation/results -I../../SimulationRuntime/c/simulation/libf2c -I../../SimulationRuntime/c/util -I../../SimulationRuntime/c/meta -I../../SimulationRuntime/c/meta/gc -I../ -I. -I/opt/local/include -I../../3rdParty/FMIL/install/include -I../../3rdParty/gc/include -I../../3rdParty/graphstream/gs-netstream/c++/src/ -I../../3rdParty/cJSON  -c -o Error_omc.o Error_omc.cpp
+:info:build /usr/bin/clang -pipe -Os -arch x86_64 -fno-stack-protector -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include -I../../SimulationRuntime/c -I../../SimulationRuntime/c/simulation/results -I../../SimulationRuntime/c/simulation/libf2c -I../../SimulationRuntime/c/util -I../../SimulationRuntime/c/meta -I../../SimulationRuntime/c/meta/gc -I../ -I. -I/opt/local/include -I../../3rdParty/FMIL/install/include -I../../3rdParty/gc/include -I../../3rdParty/graphstream/gs-netstream/c++/src/ -I../../3rdParty/cJSON  -c -o FMI_omc.o FMI_omc.c
+:info:build /usr/bin/clang++ -pipe -Os -arch x86_64 -fno-stack-protector -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include -I../../SimulationRuntime/c -I../../SimulationRuntime/c/simulation/results -I../../SimulationRuntime/c/simulation/libf2c -I../../SimulationRuntime/c/util -I../../SimulationRuntime/c/meta -I../../SimulationRuntime/c/meta/gc -I../ -I. -I/opt/local/include -I../../3rdParty/FMIL/install/include -I../../3rdParty/gc/include -I../../3rdParty/graphstream/gs-netstream/c++/src/ -I../../3rdParty/cJSON  -c -o Dynload_omc.o Dynload_omc.cpp
+:info:build /usr/bin/clang++ -pipe -Os -arch x86_64 -fno-stack-protector -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include -I../../SimulationRuntime/c -I../../SimulationRuntime/c/simulation/results -I../../SimulationRuntime/c/simulation/libf2c -I../../SimulationRuntime/c/util -I../../SimulationRuntime/c/meta -I../../SimulationRuntime/c/meta/gc -I../ -I. -I/opt/local/include -I../../3rdParty/FMIL/install/include -I../../3rdParty/gc/include -I../../3rdParty/graphstream/gs-netstream/c++/src/ -I../../3rdParty/cJSON  -c -o GraphStreamExt_omc.o GraphStreamExt_omc.cpp
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:411:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:413:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:418:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:420:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:424:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:487:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:742:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:744:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:757:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:759:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:764:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:766:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:773:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:776:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:778:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:781:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:787:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: In file included from GraphStreamExt_omc.cpp:40expanded from macro 'GC_ATTR_ALLOC_SIZE':
+:info:build 
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:#   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build 411:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build In file included from FMI_omc.c:31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:804:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build 249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build /opt/local/include/gc/gc_config_macros.h:#   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from 249FMI_omc.c::54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build 31:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:806:29: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build GC_API /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                             ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h#   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum))):
+:info:build 2                                                     ^:
+:info:build 
+:info:build /opt/local/include/gc/gc.h:413:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:418:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:420:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:424:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:487:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:742:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:744:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:757:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:759:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:764:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:766:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:773:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:776:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:778:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:781:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:787:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:804:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from GraphStreamExt_omc.cpp:40:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:806:29: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                             ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:411:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:413:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:418:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:420:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:424:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:487:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:742:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:744:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:757:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:759:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:764:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:766:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:773:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:776:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:778:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:781:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:787:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:804:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Error_omc.cpp:35:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:806:29: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                             ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:411:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:413:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:418:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:420:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:424:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:487:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:742:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:744:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:757:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:759:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:764:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:766:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:773:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:776:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:778:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:781:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:787:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:804:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from Dynload_omc.cpp:39:
+:info:build In file included from ../../SimulationRuntime/c/util/modelica.h:98:
+:info:build In file included from ../../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:806:29: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                             ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build 19 warnings generated.
+:info:build 19 warnings generated.
+:info:build 19 warnings generated.
+:info:build 19 warnings generated.
+:info:build rm -f libomcruntime.a
+:info:build ar -s -r libomcruntime.a Error_omc.o Print_omc.o System_omc.o Settings_omc.o IOStreamExt_omc.o ErrorMessage.o FMI_omc.o systemimplmisc.o UnitParserExt_omc.o unitparser.o BackendDAEEXT_omc.o Socket_omc.o matching.o matching_cheap.o Database_omc.o Dynload_omc.o SimulationResults_omc.o TaskGraphResults_omc.o HpcOmSchedulerExt_omc.o HpcOmBenchmarkExt_omc.o ptolemyio_omc.o Lapack_omc.o getMemorySize.o GraphStreamExt_omc.o omc_communication.o omc_communication_impl.o Corba_omc.o
+:info:build ar: creating archive libomcruntime.a
+:info:build cp libomcruntime.a ../../build/lib/omc/
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/runtime'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile -C Compiler builtin install_scripts
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler'
+:info:build cp FrontEnd/ModelicaBuiltin.mo FrontEnd/MetaModelicaBuiltin.mo ../build/lib/omc/
+:info:build cd scripts; cp openmodelica.lefty default_profiling.xsl replace-startValue.sh replace-startValue.xsl simcodedump.xsl ngspicetoModelica.py ../../build/share/omc/scripts
+:info:build cp OpenModelicaBootstrappingHeader.h ../build/include/omc/c/
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile -C Parser install
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Parser'
+:info:build /usr/bin/clang -pipe -Os -arch x86_64 -fno-stack-protector -Wall  -Wno-parentheses-equality -Wno-unused-variable -I/opt/local/include -I../Compiler/ -I@rmlhome@/include/plain -I. -I../3rdParty/antlr/3.2/libantlr3c-3.2 -I../3rdParty/antlr/3.2/libantlr3c-3.2/include -I../3rdParty/gc/include -I../Compiler/runtime -I../SimulationRuntime/c/meta -I../SimulationRuntime/c/ -I../SimulationRuntime/c/meta/gc -I../SimulationRuntime/c/util -I../SimulationRuntime/c/simulation/libf2c  -c -o ModelicaParser_omc.o ModelicaParser_omc.c
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:411:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:413:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:418:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:420:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:424:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:487:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:742:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:744:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:757:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:759:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:764:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:766:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:773:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:776:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:778:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:781:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:787:46: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build                         /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2);
+:info:build                                              ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:804:23: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API GC_ATTR_MALLOC GC_ATTR_ALLOC_SIZE(1) void * GC_CALL
+:info:build                       ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:34:
+:info:build In file included from ../SimulationRuntime/c/meta/meta_modelica.h:50:
+:info:build In file included from ../SimulationRuntime/c/meta/gc/mmc_gc.h:71:
+:info:build In file included from /opt/local/include/gc.h:2:
+:info:build /opt/local/include/gc/gc.h:806:29: warning: unknown attribute '__alloc_size__' ignored [-Wattributes]
+:info:build GC_API /* 'realloc' attr */ GC_ATTR_ALLOC_SIZE(2) void * GC_CALL
+:info:build                             ^
+:info:build /opt/local/include/gc/gc_config_macros.h:249:54: note: expanded from macro 'GC_ATTR_ALLOC_SIZE'
+:info:build #   define GC_ATTR_ALLOC_SIZE(argnum) __attribute__((__alloc_size__(argnum)))
+:info:build                                                      ^
+:info:build In file included from ModelicaParser_omc.c:44:
+:info:build ./ModelicaParser.c:22126:154: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+:info:build                                     c_add_source_message(NULL,2,ErrorType_syntax, ErrorLevel_error, "%s cannot be represented by a double on this machine", &chars, 1, retval.start->line, retval.start->charPosition+1, LT(1)->line, LT(1)->charPosition+1, ModelicaParser_readonly, ModelicaParser_filename_C_testsuiteFriendly);
+:info:build                                                                                                                                                             ^~~~~~
+:info:build ../Compiler/runtime/errorext.h:58:21: note: passing argument to parameter 'ctokens' here
+:info:build        const char** ctokens,
+:info:build                     ^
+:info:build In file included from ModelicaParser_omc.c:44:
+:info:build ./ModelicaParser.c:25002:62: warning: '&&' within '||' [-Wlogical-op-parentheses]
+:info:build                         if ( !((LA(1)==IDENT || LA(1)==OPERATOR && LA(2) == EQUALS || LA(1) == RPAR || LA(1) == RBRACE)) ) 
+:info:build                                              ~~ ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+:info:build ./ModelicaParser.c:25002:62: note: place parentheses around the '&&' expression to silence this warning
+:info:build                         if ( !((LA(1)==IDENT || LA(1)==OPERATOR && LA(2) == EQUALS || LA(1) == RPAR || LA(1) == RBRACE)) ) 
+:info:build                                                 ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+:info:build ./ModelicaParser.c:491:26: warning: unused function 'freeScope' [-Wunused-function]
+:info:build static  void ANTLR3_CDECL freeScope(void * scope)
+:info:build                           ^
+:info:build ./ModelicaParser.c:747:26: warning: unused function 'getTokenNames' [-Wunused-function]
+:info:build static pANTLR3_UINT8    *getTokenNames() 
+:info:build                          ^
+:info:build 23 warnings generated.
+:info:build rm -f libomparse.a
+:info:build ar -ru libomparse.a ParModelica_Lexer_BaseModelica_Lexer.o ParModelica_Lexer.o MetaModelica_Lexer_BaseModelica_Lexer.o MetaModelica_Lexer.o Modelica_3_Lexer_BaseModelica_Lexer.o Modelica_3_Lexer.o MetaModelica_Lexer.o MetaModelica_Lexer_BaseModelica_Lexer.o Modelica_3_Lexer.o Modelica_3_Lexer_BaseModelica_Lexer.o ModelicaParser_omc.o ParModelica_Lexer.o ParModelica_Lexer_BaseModelica_Lexer.o Parser_omc.o 
+:info:build ar: creating archive libomparse.a
+:info:build ranlib libomparse.a
+:info:build cp libantlr3.a libomparse.a ../build/lib/omc/
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Parser'
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C Compiler/boot
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/boot'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-print-directory generate-files-in-steps
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile -s templates scripting
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile Makefile.sources
+:info:build make[4]: `Makefile.sources' is up to date.
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile interfaces INCLUDESOURCES=1
+:info:build make[4]: Nothing to be done for `interfaces'.
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile Makefile.depends INCLUDESOURCES=1
+:info:build make[4]: `Makefile.depends' is up to date.
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile generate-files INCLUDESOURCES=1 INCLUDEDEPENDS=1
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile --no-print-directory install INCLUDESOURCES=1
+:info:build /usr/bin/clang -shared -Wl,-rpath,'@loader_path/../lib/omc'  -o /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libOpenModelicaCompiler.dylib build/VarTransform.o build/Util.o build/System.o build/Socket.o build/TaskGraphResults.o build/SimulationResults.o build/Settings.o build/PriorityQueue.o build/Print.o build/ModelicaExternalC.o build/List.o build/Lapack.o build/IOStream.o build/IOStreamExt.o build/HashTableUnitToString.o build/HashTableCrToUnit.o build/HashTableStringToUnit.o build/HashTableStringToProgram.o build/HashTableStringToPath.o build/HashTablePathToFunction.o build/HashTableExpToIndex.o build/HashTable.o build/HashTableCrToExpSourceTpl.o build/HashTableCrIntToExp.o build/HashTableExpToExp.o build/HashTableCrILst.o build/HashTableCG.o build/HashTable5.o build/HashTable4.o build/HashTable3.o build/HashTable2.o build/HashSetString.o build/HashSet.o build/GraphStreamExt.o build/GraphStream.o build/GraphML.o build/Graph.o build/GC.o build/FMIExt.o build/FMI.o build/Flags.o build/Error.o build/ErrorExt.o build/DynLoad.o build/Debug.o build/Corba.o build/Config.o build/ClockIndexes.o build/BaseHashSet.o build/BaseHashTable.o build/AvlTreeString.o build/Array.o build/Main.o build/Global.o build/Unparsing.o build/TplParser.o build/Tpl.o build/TplMain.o build/TplCodegen.o build/TplAbsyn.o build/TaskSystemDump.o build/SimCodeDump.o build/SCodeDumpTpl.o build/NFInstDumpTpl.o build/GraphMLDumpTpl.o build/GraphvizDump.o build/GenerateAPIFunctionsTpl.o build/ExpressionDumpTpl.o build/DAEDumpTpl.o build/CodegenXML.o build/CodegenUtil.o build/CodegenSparseFMI.o build/CodegenQSS.o build/CodegenModelica.o build/CodegenJS.o build/CodegenJava.o build/CodegenCSharp.o build/CodegenFMUCpp.o build/CodegenFMU.o build/CodegenCppHpcom.o build/CodegenCpp.o build/CodegenC.o build/CodegenAdevs.o build/AbsynDumpTpl.o build/OpenModelicaScriptingAPI.o build/BlockCallRewrite.o build/Figaro.o build/RewriteRules.o build/Refactor.o build/Interactive.o build/StaticScript.o build/GlobalScriptUtil.o build/GlobalScriptDump.o build/GlobalScript.o build/CevalScript.o build/SimCodeVar.o build/SimCodeUtil.o build/SimCodeMain.o build/SimCode.o build/SerializeModelInfo.o build/HpcOmSimCodeMain.o build/HpcOmSimCode.o build/XMLDump.o build/Unit.o build/UnitCheck.o build/Uncertainties.o build/Tearing.o build/HashTableSM.o build/StateMachineFeatures.o build/SynchronousFeatures.o build/SymbolicJacobian.o build/ResolveLoops.o build/RemoveSimpleEquations.o build/OpenTURNS.o build/OnRelaxation.o build/MathematicaDump.o build/Matching.o build/Initialization.o build/InlineArrayEquations.o build/IndexReduction.o build/HpcOmTaskGraph.o build/HpcOmSchedulerExt.o build/HpcOmScheduler.o build/HpcOmMemory.o build/HpcOmEqSystems.o build/HpcOmBenchmarkExt.o build/HpcOmBenchmark.o build/FindZeroCrossings.o build/ExpressionSolve.o build/EvaluateParameter.o build/EvaluateFunctions.o build/DynamicOptimization.o build/DumpHTML.o build/Differentiate.o build/DAEQuery.o build/CommonSubExpression.o build/Causalize.o build/BinaryTreeInt.o build/BinaryTree.o build/BackendVarTransform.o build/BackendVariable.o build/BackendQSS.o build/BackendInline.o build/BackendEquation.o build/BackendDump.o build/BackendDAEUtil.o build/BackendDAETransform.o build/BackendDAEOptimize.o build/BackendDAEEXT.o build/BackendDAECreate.o build/BackendDAEFunc.o build/BackendDAE.o build/FVisit.o build/FTraverse.o build/FResolve.o build/FNode.o build/FMod.o build/FLookup.o build/FInst.o build/FGraphStream.o build/FGraphDump.o build/FGraphBuildEnv.o build/FGraphBuild.o build/FGraph.o build/FExpand.o build/FCore.o build/FBuiltin.o build/ValuesUtil.o build/Values.o build/UnitParserExt.o build/UnitChecker.o build/UnitAbsyn.o build/UnitAbsynBuilder.o build/Types.o build/NFTyping.o build/NFTypeCheck.o build/NFSCodeCheck.o build/NFSCodeMod.o build/NFSCodeLookup.o build/NFSCodeFlattenRedeclare.o build/NFSCodeFlatten.o build/NFSCodeFlattenImports.o build/NFSCodeExpand.o build/NFSCodeEnv.o build/NFSCodeDependency.o build/NFRedeclare.o build/NFMod.o build/NFLookup.o build/NFInstUtil.o build/NFInstTypesOld.o build/NFInstTypes.o build/NFInstSymbolTable.o build/NFInstPrefix.o build/NFInstFlatten.o build/NFInstDump.o build/NFInst.o build/NFExpandableConnectors.o build/NFEnvExtends.o build/NFEnvAvlTree.o build/NFEnv.o build/NFConnectionSets.o build/NFConnectUtil2.o build/NFConnectEquations.o build/NFConnectCheck.o build/NFConnect2.o build/NFBuiltin.o build/SCodeSimplify.o build/Static.o build/SCodeUtil.o build/SCodeDump.o build/SCode.o build/PrefixUtil.o build/Prefix.o build/Patternm.o build/ParserExt.o build/Parser.o build/OperatorOverloading.o build/Mod.o build/MMath.o build/MetaUtil.o build/Lookup.o build/InstTypes.o build/InstSection.o build/InstExtends.o build/InstUtil.o build/InstBinding.o build/InstFunction.o build/InstDAE.o build/InstVar.o build/Inst.o build/InnerOuter.o build/Inline.o build/Graphviz.o build/ExpressionSimplifyTypes.o build/ExpressionSimplify.o build/Expression.o build/ExpressionDump.o build/Dump.o build/DumpGraphviz.o build/DAEUtil.o build/DAE.o build/DAEDump.o build/Constants.o build/ConnectUtil.o build/Connect.o build/ConnectionGraph.o build/ComponentReference.o build/ClassLoader.o build/ClassInf.o build/CheckModel.o build/Ceval.o build/CevalFunction.o build/Builtin.o build/BackendInterface.o build/Algorithm.o build/Absyn.o build/File.o build/VarTransform_records.o build/Util_records.o build/System_records.o build/Socket_records.o build/TaskGraphResults_records.o build/SimulationResults_records.o build/Settings_records.o build/PriorityQueue_records.o build/Print_records.o build/ModelicaExternalC_records.o build/List_records.o build/Lapack_records.o build/IOStream_records.o build/IOStreamExt_records.o build/HashTableUnitToString_records.o build/HashTableCrToUnit_records.o build/HashTableStringToUnit_records.o build/HashTableStringToProgram_records.o build/HashTableStringToPath_records.o build/HashTablePathToFunction_records.o build/HashTableExpToIndex_records.o build/HashTable_records.o build/HashTableCrToExpSourceTpl_records.o build/HashTableCrIntToExp_records.o build/HashTableExpToExp_records.o build/HashTableCrILst_records.o build/HashTableCG_records.o build/HashTable5_records.o build/HashTable4_records.o build/HashTable3_records.o build/HashTable2_records.o build/HashSetString_records.o build/HashSet_records.o build/GraphStreamExt_records.o build/GraphStream_records.o build/GraphML_records.o build/Graph_records.o build/GC_records.o build/FMIExt_records.o build/FMI_records.o build/Flags_records.o build/Error_records.o build/ErrorExt_records.o build/DynLoad_records.o build/Debug_records.o build/Corba_records.o build/Config_records.o build/ClockIndexes_records.o build/BaseHashSet_records.o build/BaseHashTable_records.o build/AvlTreeString_records.o build/Array_records.o build/Main_records.o build/Global_records.o build/Unparsing_records.o build/TplParser_records.o build/Tpl_records.o build/TplMain_records.o build/TplCodegen_records.o build/TplAbsyn_records.o build/TaskSystemDump_records.o build/SimCodeDump_records.o build/SCodeDumpTpl_records.o build/NFInstDumpTpl_records.o build/GraphMLDumpTpl_records.o build/GraphvizDump_records.o build/GenerateAPIFunctionsTpl_records.o build/ExpressionDumpTpl_records.o build/DAEDumpTpl_records.o build/CodegenXML_records.o build/CodegenUtil_records.o build/CodegenSparseFMI_records.o build/CodegenQSS_records.o build/CodegenModelica_records.o build/CodegenJS_records.o build/CodegenJava_records.o build/CodegenCSharp_records.o build/CodegenFMUCpp_records.o build/CodegenFMU_records.o build/CodegenCppHpcom_records.o build/CodegenCpp_records.o build/CodegenC_records.o build/CodegenAdevs_records.o build/AbsynDumpTpl_records.o build/OpenModelicaScriptingAPI_records.o build/BlockCallRewrite_records.o build/Figaro_records.o build/RewriteRules_records.o build/Refactor_records.o build/Interactive_records.o build/StaticScript_records.o build/GlobalScriptUtil_records.o build/GlobalScriptDump_records.o build/GlobalScript_records.o build/CevalScript_records.o build/SimCodeVar_records.o build/SimCodeUtil_records.o build/SimCodeMain_records.o build/SimCode_records.o build/SerializeModelInfo_records.o build/HpcOmSimCodeMain_records.o build/HpcOmSimCode_records.o build/XMLDump_records.o build/Unit_records.o build/UnitCheck_records.o build/Uncertainties_records.o build/Tearing_records.o build/HashTableSM_records.o build/StateMachineFeatures_records.o build/SynchronousFeatures_records.o build/SymbolicJacobian_records.o build/ResolveLoops_records.o build/RemoveSimpleEquations_records.o build/OpenTURNS_records.o build/OnRelaxation_records.o build/MathematicaDump_records.o build/Matching_records.o build/Initialization_records.o build/InlineArrayEquations_records.o build/IndexReduction_records.o build/HpcOmTaskGraph_records.o build/HpcOmSchedulerExt_records.o build/HpcOmScheduler_records.o build/HpcOmMemory_records.o build/HpcOmEqSystems_records.o build/HpcOmBenchmarkExt_records.o build/HpcOmBenchmark_records.o build/FindZeroCrossings_records.o build/ExpressionSolve_records.o build/EvaluateParameter_records.o build/EvaluateFunctions_records.o build/DynamicOptimization_records.o build/DumpHTML_records.o build/Differentiate_records.o build/DAEQuery_records.o build/CommonSubExpression_records.o build/Causalize_records.o build/BinaryTreeInt_records.o build/BinaryTree_records.o build/BackendVarTransform_records.o build/BackendVariable_records.o build/BackendQSS_records.o build/BackendInline_records.o build/BackendEquation_records.o build/BackendDump_records.o build/BackendDAEUtil_records.o build/BackendDAETransform_records.o build/BackendDAEOptimize_records.o build/BackendDAEEXT_records.o build/BackendDAECreate_records.o build/BackendDAEFunc_records.o build/BackendDAE_records.o build/FVisit_records.o build/FTraverse_records.o build/FResolve_records.o build/FNode_records.o build/FMod_records.o build/FLookup_records.o build/FInst_records.o build/FGraphStream_records.o build/FGraphDump_records.o build/FGraphBuildEnv_records.o build/FGraphBuild_records.o build/FGraph_records.o build/FExpand_records.o build/FCore_records.o build/FBuiltin_records.o build/ValuesUtil_records.o build/Values_records.o build/UnitParserExt_records.o build/UnitChecker_records.o build/UnitAbsyn_records.o build/UnitAbsynBuilder_records.o build/Types_records.o build/NFTyping_records.o build/NFTypeCheck_records.o build/NFSCodeCheck_records.o build/NFSCodeMod_records.o build/NFSCodeLookup_records.o build/NFSCodeFlattenRedeclare_records.o build/NFSCodeFlatten_records.o build/NFSCodeFlattenImports_records.o build/NFSCodeExpand_records.o build/NFSCodeEnv_records.o build/NFSCodeDependency_records.o build/NFRedeclare_records.o build/NFMod_records.o build/NFLookup_records.o build/NFInstUtil_records.o build/NFInstTypesOld_records.o build/NFInstTypes_records.o build/NFInstSymbolTable_records.o build/NFInstPrefix_records.o build/NFInstFlatten_records.o build/NFInstDump_records.o build/NFInst_records.o build/NFExpandableConnectors_records.o build/NFEnvExtends_records.o build/NFEnvAvlTree_records.o build/NFEnv_records.o build/NFConnectionSets_records.o build/NFConnectUtil2_records.o build/NFConnectEquations_records.o build/NFConnectCheck_records.o build/NFConnect2_records.o build/NFBuiltin_records.o build/SCodeSimplify_records.o build/Static_records.o build/SCodeUtil_records.o build/SCodeDump_records.o build/SCode_records.o build/PrefixUtil_records.o build/Prefix_records.o build/Patternm_records.o build/ParserExt_records.o build/Parser_records.o build/OperatorOverloading_records.o build/Mod_records.o build/MMath_records.o build/MetaUtil_records.o build/Lookup_records.o build/InstTypes_records.o build/InstSection_records.o build/InstExtends_records.o build/InstUtil_records.o build/InstBinding_records.o build/InstFunction_records.o build/InstDAE_records.o build/InstVar_records.o build/Inst_records.o build/InnerOuter_records.o build/Inline_records.o build/Graphviz_records.o build/ExpressionSimplifyTypes_records.o build/ExpressionSimplify_records.o build/Expression_records.o build/ExpressionDump_records.o build/Dump_records.o build/DumpGraphviz_records.o build/DAEUtil_records.o build/DAE_records.o build/DAEDump_records.o build/Constants_records.o build/ConnectUtil_records.o build/Connect_records.o build/ConnectionGraph_records.o build/ComponentReference_records.o build/ClassLoader_records.o build/ClassInf_records.o build/CheckModel_records.o build/Ceval_records.o build/CevalFunction_records.o build/Builtin_records.o build/BackendInterface_records.o build/Algorithm_records.o build/Absyn_records.o build/File_records.o /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libomcruntime.a /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libomparse.a build/_main_omc.o -L.  -Lbuild/ -L"/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc" -lomparse -lomcruntime -lOpenModelicaRuntimeC -lModelicaExternalC -lantlr3 -lomniORB4 -lomnithread -lpthread -L/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/FMIL/install/lib -lfmilib -L/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream/gs-netstream/c++/ -lnetstream -L/opt/local/lib -Wl,-headerpad_max_install_names -arch x86_64  -lintl  -llapack -lblas -liconv -lgc -lpthread -lm  -lstdc++  -llpsolve55 -lcolamd   -Wl,-undefined -Wl,dynamic_lookup  -lexpat
+:info:build test ! ".dylib" = ".dylib" || install_name_tool -id @rpath/libOpenModelicaCompiler.dylib /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libOpenModelicaCompiler.dylib
+:info:build /usr/bin/clang build/_main.o -Wl,-rpath,'@loader_path/../lib/omc' -pipe -Os -arch x86_64 -fno-stack-protector -I"/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/include/omc/c" -I/opt/local/include -DADD_METARECORD_DEFINITIONS= -o build/omc -L.  -Lbuild/ -L"/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc" -lomparse -lomcruntime -lOpenModelicaRuntimeC -lModelicaExternalC -lantlr3 -lomniORB4 -lomnithread -lpthread -L/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/FMIL/install/lib -lfmilib -L/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/graphstream/gs-netstream/c++/ -lnetstream -L/opt/local/lib -Wl,-headerpad_max_install_names -arch x86_64  -lintl  -llapack -lblas -liconv -lgc -lpthread -lm  -lstdc++  -llpsolve55 -lcolamd   -Wl,-undefined -Wl,dynamic_lookup  -lexpat -lOpenModelicaCompiler
+:info:build cp -a build/omc /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/bin/
+:info:build cp -a /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/lib/omc/libOpenModelicaCompiler.dylib /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/build/bin/
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/Compiler/boot'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make omlibrary
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build cd 3rdParty/modelica3d && mkdir -p build
+:info:build cd 3rdParty/modelica3d/build && CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -fno-stack-protector" CXXFLAGS="-pipe -Os -arch x86_64 -stdlib=libc++ -stdlib=libstdc++" CPPFLAGS="-I/opt/local/include" LDFLAGS="-Wl,-rpath,'@loader_path/../../../../lib/omc',-rpath,'@loader_path/../../../../lib/',-rpath,'/opt/local/lib/omc',-rpath,'/opt/local/lib/'" cmake -DCMAKE_COLOR_MAKEFILE:Bool=OFF -DOSG_BACKEND=1 -DUSE_OMC=0 ..
+:info:build -- Found dbus: /opt/local/lib/libdbus-1.dylib
+:info:build -- Boost version: 1.57.0
+:info:build -- Configuring done
+:info:build CMake Warning (dev):
+:info:build   Policy CMP0042 is not set: MACOSX_RPATH is enabled by default.  Run "cmake
+:info:build   --help-policy CMP0042" for policy details.  Use the cmake_policy command to
+:info:build   set the policy and suppress this warning.
+:info:build 
+:info:build   MACOSX_RPATH is not specified for the following targets:
+:info:build 
+:info:build    m3d-osg-gtk
+:info:build    proc3d
+:info:build 
+:info:build This warning is for project developers.  Use -Wno-dev to suppress it.
+:info:build 
+:info:build -- Generating done
+:info:build -- Build files have been written to: /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/modelica3d/build
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build [ 16%] Built target modcount
+:info:build [ 33%] Built target modbus
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build [ 50%] Building CXX object lib/proc3d/CMakeFiles/proc3d.dir/src/proc3d.cpp.o
+:info:build In file included from /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/lib/proc3d/src/proc3d.cpp:22:
+:info:build In file included from /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/lib/proc3d/src/proc3d.hpp:26:
+:info:build In file included from /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/lib/proc3d/src/operations.hpp:26:
+:info:build In file included from /opt/local/include/boost/numeric/ublas/matrix.hpp:18:
+:info:build In file included from /opt/local/include/boost/numeric/ublas/vector.hpp:21:
+:info:build In file included from /opt/local/include/boost/numeric/ublas/storage.hpp:25:
+:info:build In file included from /opt/local/include/boost/numeric/ublas/exception.hpp:19:
+:info:build In file included from /opt/local/include/boost/numeric/ublas/detail/config.hpp:299:
+:info:build /opt/local/include/boost/numeric/ublas/fwd.hpp:21:10: fatal error: 'array' file not found
+:info:build #include <array>
+:info:build          ^
+:info:build 1 error generated.
+:info:build make[5]: *** [lib/proc3d/CMakeFiles/proc3d.dir/src/proc3d.cpp.o] Error 1
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[4]: *** [lib/proc3d/CMakeFiles/proc3d.dir/all] Error 2
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[3]: *** [all] Error 2
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917/3rdParty/modelica3d/build'
+:info:build make[2]: *** [modelica3d] Error 2
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build make[1]: *** [omc-bootstrapped] Error 2
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build make: *** [all] Error 2
+:info:build make: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917'
+:info:build Command failed:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_23917" && /usr/bin/make -j4 -w all NOLIBRARIES=Yes 
+:info:build Exit code: 2
+:error:build org.macports.build for port openmodelica-devel returned: command execution failed
+:debug:build Error code: CHILDSTATUS 90537 2
+:debug:build Backtrace: command execution failed
+    while executing
+"system -nice 0 $fullcmdstring"
+    ("eval" body line 1)
+    invoked from within
+"eval system $notty $nice \$fullcmdstring"
+    invoked from within
+"command_exec build"
+    (procedure "portbuild::build_main" line 8)
+    invoked from within
+"portbuild::build_main org.macports.build"
+    ("eval" body line 1)
+    invoked from within
+"eval $procedure $targetname"
+:info:build Warning: targets not executed for openmodelica-devel: org.macports.install org.macports.build org.macports.destroot
+:notice:build Please see the log file for port openmodelica-devel for details:
+    /opt/local/var/macports/logs/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/main.log

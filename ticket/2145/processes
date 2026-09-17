@@ -1,0 +1,186 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  10648   672 ?        Ss   07:23   0:01 init [2]  
+root         2  0.0  0.0      0     0 ?        S    07:23   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    07:23   0:12 [ksoftirqd/0]
+root         6  0.0  0.0      0     0 ?        S    07:23   0:00 [migration/0]
+root         7  0.0  0.0      0     0 ?        S    07:23   0:00 [watchdog/0]
+root         8  0.0  0.0      0     0 ?        S    07:23   0:00 [migration/1]
+root        10  0.0  0.0      0     0 ?        S    07:23   0:11 [ksoftirqd/1]
+root        12  0.0  0.0      0     0 ?        S    07:23   0:00 [watchdog/1]
+root        13  0.0  0.0      0     0 ?        S<   07:23   0:00 [cpuset]
+root        14  0.0  0.0      0     0 ?        S<   07:23   0:00 [khelper]
+root        15  0.0  0.0      0     0 ?        S    07:23   0:00 [kdevtmpfs]
+root        16  0.0  0.0      0     0 ?        S<   07:23   0:00 [netns]
+root        17  0.0  0.0      0     0 ?        S    07:23   0:00 [sync_supers]
+root        18  0.0  0.0      0     0 ?        S    07:23   0:00 [bdi-default]
+root        19  0.0  0.0      0     0 ?        S<   07:23   0:00 [kintegrityd]
+root        20  0.0  0.0      0     0 ?        S<   07:23   0:00 [kblockd]
+root        23  0.0  0.0      0     0 ?        S    07:23   0:00 [khungtaskd]
+root        24  0.0  0.0      0     0 ?        S    07:23   0:01 [kswapd0]
+root        25  0.0  0.0      0     0 ?        SN   07:23   0:00 [ksmd]
+root        26  0.0  0.0      0     0 ?        SN   07:23   0:00 [khugepaged]
+root        27  0.0  0.0      0     0 ?        S    07:23   0:00 [fsnotify_mark]
+root        28  0.0  0.0      0     0 ?        S<   07:23   0:00 [crypto]
+root        94  0.0  0.0      0     0 ?        S    07:23   0:00 [khubd]
+root       117  0.0  0.0      0     0 ?        S<   07:23   0:00 [ata_sff]
+root       139  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_0]
+root       147  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_1]
+root       150  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_2]
+root       156  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_3]
+root       162  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_4]
+root       164  0.0  0.0      0     0 ?        S    07:23   0:00 [scsi_eh_5]
+root       237  0.0  0.0      0     0 ?        S    07:23   0:03 [kjournald]
+root       382  0.0  0.0  21808   904 ?        Ss   07:23   0:00 udevd --daemon
+root       572  0.0  0.0      0     0 ?        S<   07:23   0:00 [cfg80211]
+root       581  0.0  0.0      0     0 ?        S<   07:23   0:00 [kpsmoused]
+root       588  0.0  0.0      0     0 ?        S    07:23   0:00 [pccardd]
+root       606  0.0  0.0      0     0 ?        S<   07:23   0:00 [hd-audio0]
+root       614  0.0  0.0      0     0 ?        S<   07:23   0:00 [hd-audio1]
+root       618  0.0  0.0      0     0 ?        S<   07:23   0:00 [iwlwifi]
+root       643  0.0  0.0      0     0 ?        S<   07:24   0:00 [hci0]
+root      1310  0.0  0.0      0     0 ?        S<   07:24   0:00 [ttm_swap]
+root      2010  0.0  0.0      0     0 ?        S    07:24   0:01 [flush-8:0]
+root      2215  0.0  0.0   3932     0 ?        Ss   07:24   0:00 /usr/sbin/acpi_fakekeyd
+root      2229  0.0  0.0  53060   972 ?        Sl   07:24   0:00 /usr/sbin/rsyslogd -c5
+root      2346  0.0  0.0   4244   816 ?        Ss   07:24   0:00 /usr/sbin/acpid
+104       2363  0.0  0.0  30896  2036 ?        Ss   07:24   0:01 /usr/bin/dbus-daemon --system
+root      2419  0.0  0.1 156184  4232 ?        Ssl  07:24   0:02 /usr/sbin/NetworkManager
+root      2458  0.0  0.0 124288  3592 ?        Sl   07:24   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root      2462  0.0  0.0  80852  2384 ?        S    07:24   0:00 /usr/sbin/modem-manager
+root      2484  0.0  0.0  31228  2308 ?        S    07:24   0:00 /sbin/wpa_supplicant -u -s -O /var/run/wpa_supplicant
+root      2485  0.0  0.1 130800  6556 ?        Ss   07:24   0:00 /usr/sbin/apache2 -k start
+daemon    2550  0.0  0.0  16668   148 ?        Ss   07:24   0:00 /usr/sbin/atd
+root      2580  0.0  0.0  21128  1980 ?        Ss   07:24   0:00 /usr/sbin/bluetoothd
+root      2596  0.0  0.0      0     0 ?        S<   07:24   0:00 [krfcommd]
+avahi     2615  0.0  0.0  34156  1508 ?        S    07:24   0:00 avahi-daemon: running [ntb1.local]
+avahi     2616  0.0  0.0  34032   400 ?        S    07:24   0:00 avahi-daemon: chroot helper
+root      2635  0.0  0.0  26668   696 ?        Ss   07:24   0:00 /usr/bin/kdm
+root      2655  1.6  1.3 154172 53132 tty7     Ss+  07:24   5:48 /usr/bin/X :0 vt7 -br -nolisten tcp -auth /var/run/xauth/A:0-49CbXb
+www-data  2808  0.0  0.1 130824  5492 ?        S    07:24   0:00 /usr/sbin/apache2 -k start
+www-data  2809  0.0  0.1 130824  5492 ?        S    07:24   0:00 /usr/sbin/apache2 -k start
+www-data  2810  0.0  0.1 130824  5492 ?        S    07:24   0:00 /usr/sbin/apache2 -k start
+www-data  2811  0.0  0.1 130824  5492 ?        S    07:24   0:00 /usr/sbin/apache2 -k start
+www-data  2812  0.0  0.1 130824  5492 ?        S    07:24   0:00 /usr/sbin/apache2 -k start
+root      2815  0.0  0.0   6740   396 ?        Ss   07:24   0:00 /usr/sbin/gpm -m /dev/input/mice -t exps2
+root      2844  0.2  0.0  41392  1140 ?        Ssl  07:24   0:58 /usr/sbin/cpufreqd -f /etc/cpufreqd.conf
+root      2874  0.0  0.1  71328  4196 ?        Ss   07:24   0:00 /usr/sbin/cupsd -C /etc/cups/cupsd.conf
+clamav    2875  0.0  0.0  43328  1988 ?        Ss   07:24   0:08 /usr/bin/freshclam -d --quiet
+colord    2877  0.0  0.0 150112  3400 ?        Sl   07:24   0:00 /usr/lib/x86_64-linux-gnu/colord/colord
+colord    2998  0.0  0.1 353748  4884 ?        Sl   07:24   0:00 /usr/lib/x86_64-linux-gnu/colord/colord-sane
+root      3042  0.0  0.0  69060  1924 ?        S    07:24   0:00 -:0         
+root      3082  0.0  0.0 172636  1320 ?        Ssl  07:24   0:00 /usr/sbin/nscd
+root      3287  0.0  0.0  13060   804 ?        Ss   07:24   0:00 /usr/sbin/cron
+root      3313  0.0  0.0  14964   900 ?        Ss   07:24   0:00 /usr/sbin/rlinetd
+root      3314  0.0  0.0  32156  1448 ?        Ss   07:24   0:00 /usr/lib/postfix/master
+saned     3376  0.0  0.0  27896   508 ?        Ss   07:24   0:00 /usr/sbin/saned -a saned
+saned     3377  0.0  0.0  27896   620 ?        S    07:24   0:00 /usr/sbin/saned -a saned
+root      3380  0.0  0.1 172660  7176 ?        SL   07:24   0:15 /usr/sbin/samhain
+root      3383  0.0  0.0  61624  1788 ?        Ss   07:24   0:00 /usr/sbin/nmbd -D
+root      3405  0.0  0.0  85956  2824 ?        Ss   07:24   0:00 /usr/sbin/smbd -D
+root      3438  0.0  0.0  86472  1384 ?        S    07:24   0:00 /usr/sbin/smbd -D
+root      3506  0.0  0.0   8908   772 tty1     Ss+  07:24   0:00 /sbin/getty 38400 tty1
+root      3507  0.0  0.0   8908   772 tty2     Ss+  07:24   0:00 /sbin/getty 38400 tty2
+root      3508  0.0  0.0   8908   772 tty3     Ss+  07:24   0:00 /sbin/getty 38400 tty3
+root      3509  0.0  0.0   8908   768 tty4     Ss+  07:24   0:00 /sbin/getty 38400 tty4
+root      3510  0.0  0.0   8908   764 tty5     Ss+  07:24   0:00 /sbin/getty 38400 tty5
+root      3511  0.0  0.0   8908   760 tty6     Ss+  07:24   0:00 /sbin/getty 38400 tty6
+root      3527  0.0  0.0 127564  3244 ?        Sl   07:25   0:00 /usr/sbin/console-kit-daemon --no-daemon
+rony      3600  0.0  0.0  11648  1536 ?        Ss   07:25   0:00 /bin/sh /usr/bin/startkde
+rony      3638  0.0  0.0  12384   328 ?        Ss   07:25   0:00 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session /usr/bin/startkde
+rony      3641  0.0  0.0  15988   712 ?        S    07:25   0:00 /usr/bin/dbus-launch --exit-with-session /usr/bin/startkde
+rony      3642  0.0  0.0  23848  2112 ?        Ss   07:25   0:02 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+rony      3684  0.0  0.0   3940    84 ?        S    07:25   0:00 /usr/lib/kde4/libexec/start_kdeinit +kcminit_startup
+rony      3685  0.0  0.4 339220 17112 ?        Ss   07:25   0:00 kdeinit4: kdeinit4 Running...                  
+rony      3686  0.0  0.2 343508  9952 ?        S    07:25   0:00 kdeinit4: klauncher [kdeinit] --fd=9           
+rony      3688  0.0  0.8 816632 35064 ?        Sl   07:25   0:06 kdeinit4: kded4 [kdeinit]                      
+rony      3690  0.0  0.0  13964  1236 ?        S    07:25   0:00 /usr/lib/gamin/gam_server
+rony      3695  0.0  0.3 277276 13608 ?        S    07:25   0:00 /usr/bin/bluedevil-helper
+rony      3697  0.0  0.0 105596  2504 ?        S    07:25   0:00 /usr/bin/obex-data-server --no-daemon 
+root      3707  0.0  0.0 156272  3660 ?        Sl   07:25   0:00 /usr/lib/upower/upowerd
+root      3729  0.0  0.0 129764  3144 ?        Sl   07:25   0:00 /usr/lib/udisks/udisks-daemon
+root      3737  0.0  0.0  47408   692 ?        S    07:25   0:01 udisks-daemon: polling /dev/sr0
+rony      3768  0.0  0.3 281468 13304 ?        S    07:25   0:00 /usr/bin/bluedevil-monolithic
+rony      3801  0.0  0.3 282120 13796 ?        S    07:25   0:00 /usr/bin/kglobalaccel
+rony      3893  0.0  0.4 287020 16784 ?        S    07:25   0:01 /usr/bin/kwalletd
+rony      3897  0.0  0.3 289092 15324 ?        S    07:25   0:00 /usr/bin/kactivitymanagerd
+rony      3898  0.0  0.0   4076   312 ?        S    07:25   0:00 kwrapper4 ksmserver
+rony      3900  0.0  0.4 510560 18400 ?        Sl   07:25   0:01 kdeinit4: ksmserver [kdeinit]                  
+rony      3903  0.5  1.5 2669784 60964 ?       Sl   07:25   1:54 kwin -session 106e746231000136173560100000061120000_1365571328_587824
+rony      3912  0.2  2.1 2942600 86184 ?       Sl   07:26   1:01 /usr/bin/plasma-desktop
+rony      3913  0.0  0.5 633536 23660 ?        Sl   07:26   0:02 /usr/bin/knotify4
+rony      3923  0.0  0.3 278096 13924 ?        S    07:26   0:00 /usr/bin/kuiserver
+rony      3925  0.0  0.0   9232  1168 ?        S    07:26   0:00 ksysguardd
+rony      3928  0.0  0.1 163420  4552 ?        Sl   07:26   0:00 /usr/bin/akonadi_control
+rony      3974  0.0  0.1 395704  7904 ?        Sl   07:26   0:00 akonadiserver
+rony      3989  0.0  0.7 341996 30228 ?        Sl   07:26   0:15 /usr/sbin/mysqld --defaults-file=/home/rony/.local/share/akonadi/mysql.conf --datadir=/home/rony/.local/share/akonadi/db_data/ --socket=/home/rony/.local/share/akonadi/socket-ntb1/mysql.socket
+rony      3993  0.0  0.3 321760 13880 ?        S    07:26   0:01 /usr/bin/kaccess
+rony      4011  0.0  0.1 232348  5756 ?        Sl   07:26   0:00 /usr/bin/nepomukserver
+rony      4015  0.0  0.5 577620 24048 ?        SNl  07:26   0:09 /usr/bin/nepomukservicestub nepomukstorage
+rony      4017  0.0  0.9 761664 38800 ?        Sl   07:26   0:07 /usr/bin/krunner
+rony      4020  0.0  0.3 279444 13500 ?        S    07:26   0:00 /usr/bin/nepomukcontroller -session 106e746231000136260193100000039180008_1365571322_530729
+rony      4023  0.0  0.1 320304  5984 ?        S<l  07:26   0:02 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit     4025  0.0  0.0  31428  1156 ?        SNl  07:26   0:00 /usr/lib/rtkit/rtkit-daemon
+rony      4029  0.0  0.5 513200 23216 ?        Sl   07:26   0:01 /usr/bin/kmix -session 106e746231000136173561400000061120010_1365571322_709609
+rony      4036  0.0  0.3 279700 14688 ?        S    07:26   0:00 /usr/bin/kwalletmanager --kwalletd
+root      4058  0.0  0.0   8068  3644 ?        S    07:26   0:00 /sbin/dhclient -d -4 -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /var/run/dhclient-wlan0.pid -lf /var/lib/dhcp/dhclient-4a8c8938-94f2-4100-a592-a4294517ddd2-wlan0.lease -cf /var/run/nm-dhclient-wlan0.conf wlan0
+rony      4060  0.0  0.3 371616 14192 ?        Sl   07:26   0:00 /usr/lib/kde4/libexec/polkit-kde-authentication-agent-1
+rony      4061  0.0  0.3 288100 14188 ?        S    07:26   0:03 /usr/bin/klipper
+rony      4130  0.0  0.3 292752 14900 ?        S    07:27   0:00 /usr/bin/akonadi_contacts_resource --identifier akonadi_contacts_resource_0
+rony      4144  0.0  0.3 292752 14892 ?        S    07:27   0:00 /usr/bin/akonadi_contacts_resource --identifier akonadi_contacts_resource_1
+rony      4145  0.0  0.3 292752 14904 ?        S    07:27   0:00 /usr/bin/akonadi_contacts_resource --identifier akonadi_contacts_resource_2
+rony      4146  0.0  0.3 310288 16060 ?        S    07:27   0:00 /usr/bin/akonadi_ical_resource --identifier akonadi_ical_resource_0
+rony      4147  0.1  0.7 384256 28612 ?        Sl   07:27   0:23 /usr/bin/konsole
+rony      4159  0.0  0.3 309408 15828 ?        S    07:27   0:00 /usr/bin/akonadi_ical_resource --identifier akonadi_ical_resource_1
+rony      4160  0.0  0.3 309408 15268 ?        S    07:27   0:00 /usr/bin/akonadi_ical_resource --identifier akonadi_ical_resource_2
+rony      4161  0.0  0.3 309408 14384 ?        S    07:27   0:00 /usr/bin/akonadi_ical_resource --identifier akonadi_ical_resource_3
+rony      4162  0.0  0.3 300012 15944 ?        S    07:27   0:00 /usr/bin/akonadi_maildir_resource --identifier akonadi_maildir_resource_0
+root      4196  0.0  0.0  35624  1044 ?        Ss   07:27   0:00 /usr/sbin/sshd
+rony      4198  0.0  0.3 299132 15068 ?        S    07:27   0:00 /usr/bin/akonadi_maildir_resource --identifier akonadi_maildir_resource_1
+rony      4199  0.0  0.3 296160 16036 ?        S    07:27   0:00 /usr/bin/akonadi_maildispatcher_agent --identifier akonadi_maildispatcher_agent
+rony      4220  0.0  0.3 292768 14036 ?        S    07:27   0:00 /usr/bin/akonadi_vcard_resource --identifier akonadi_vcard_resource_0
+postfix   4225  0.0  0.0  34064  1288 ?        S    07:27   0:00 qmgr -l -t fifo -u
+rony      4239  0.0  0.1  14440  4152 pts/1    Ss   07:27   0:00 /bin/bash
+rony      4322  0.1  1.6 237440 67832 ?        SNl  07:28   0:22 /usr/bin/virtuoso-t +foreground +configfile /tmp/virtuoso_Et4015.ini +wait
+rony      4344  0.0  0.6 311652 24656 ?        SNl  07:29   0:15 /usr/bin/nepomukservicestub nepomukfilewatch
+rony      4345  0.0  0.3 261248 13952 ?        SN   07:29   0:00 /usr/bin/nepomukservicestub nepomukbackupsync
+rony      4346  0.0  0.3 211332 12304 ?        SN   07:29   0:00 /usr/bin/nepomukservicestub nepomukqueryservice
+root      4356  0.0  0.0  25396  1628 ?        Ss   07:29   0:00 /usr/bin/ssh -n -R 55555:localhost:22 -g -N fake-user@hades.nethouse.sk -i /root/tunelove_kluce/hades_id_rsa
+rony      4385  1.2  3.1 887488 126484 ?       Sl   07:30   4:28 /usr/lib/chromium/chromium --password-store=detect
+rony      4388  0.0  0.1 313676  7524 ?        S    07:30   0:01 /usr/lib/chromium/chromium --password-store=detect
+rony      4389  0.0  0.0   6240   368 ?        S    07:30   0:00 /usr/lib/chromium/chromium-sandbox /usr/lib/chromium/chromium --type=zygote
+rony      4390  0.0  0.4 329632 16780 ?        S    07:30   0:00 /usr/lib/chromium/chromium --type=zygote
+rony      4393  0.0  0.1 346024  5832 ?        S    07:31   0:00 /usr/lib/chromium/chromium --type=zygote
+rony      4417  0.0  0.7 982520 30720 ?        Sl   07:31   0:00 /usr/lib/chromium/chromium --type=zygote
+rony      4425  0.0  0.0  54816  2028 ?        S    07:31   0:00 /usr/lib/gvfs/gvfsd
+rony      4474  0.0  1.1 995620 45496 ?        Sl   07:31   0:10 /usr/lib/chromium/chromium --type=zygote
+rony      4482  0.6  5.3 1186848 218944 ?      Sl   07:31   2:09 /usr/lib/chromium/chromium --type=zygote
+rony      4489  0.2  1.8 1013120 73452 ?       Sl   07:31   0:50 /usr/lib/chromium/chromium --type=zygote
+rony      4502  0.1  1.4 1061596 59516 ?       Sl   07:31   0:41 /usr/lib/chromium/chromium --type=zygote
+root      4583  0.0  0.1 169836  4988 ?        S    07:31   0:00 /usr/sbin/samhain
+rony      4601  0.3  1.7 1011552 72936 ?       Sl   07:37   1:02 /usr/lib/chromium/chromium --type=zygote
+rony      4681  0.0  0.2 187696  8676 ?        S    07:53   0:00 /usr/lib/kde4/libexec/kio_http_cache_cleaner
+rony      4718  0.0  1.5 996248 63188 ?        Sl   08:12   0:17 /usr/lib/chromium/chromium --type=zygote
+rony      4858  0.8  1.0 566840 44284 ?        Sl   08:42   2:25 /usr/lib/chromium/chromium --type=plugin --plugin-path=/usr/lib/flashplugin-nonfree/libflashplayer.so --lang=sk --channel=4385.24.2128754205
+rony      4878  0.0  0.1  14520  4344 pts/2    Ss+  08:43   0:00 /bin/bash
+rony      5220  0.0  0.1  14592  4444 pts/4    Ss   09:26   0:00 /bin/bash
+rony      5561  0.1  1.0 469780 42352 ?        Sl   09:35   0:16 /usr/bin/krusader -caption Krusader --icon krusader_user
+rony      5629  0.0  0.0  64808  2880 ?        Sl   09:43   0:00 /usr/lib/libreoffice/program/oosplash --writer /home/rony/škola/EP_1/cviko_5/Meranie_na_kontaktoch.doc
+rony      5646  2.2  6.0 860128 246056 ?       Sl   09:43   4:46 /usr/lib/libreoffice/program/soffice.bin --writer /home/rony/škola/EP_1/cviko_5/Meranie_na_kontaktoch.doc --splash-pipe=6
+root      5877  0.0  0.0  21804   836 ?        S    10:33   0:00 udevd --daemon
+rony      6164  0.2  1.7 1012424 72092 ?       Sl   11:32   0:13 /usr/lib/chromium/chromium --type=zygote
+root      6255  0.0  0.0      0     0 ?        S<   12:16   0:02 [khidpd_045e0700]
+root      6258  0.0  0.0  21804   804 ?        S    12:16   0:00 udevd --daemon
+postfix  10915  0.0  0.0  34012  2208 ?        S    12:26   0:00 pickup -l -t fifo -u -c
+rony     11422  0.7  2.1 1041316 86180 ?       Sl   12:45   0:14 /usr/lib/chromium/chromium --type=zygote
+root     11628  0.0  0.0      0     0 ?        S    12:58   0:00 [kworker/0:1]
+root     11635  0.0  0.0      0     0 ?        S    13:00   0:00 [kworker/u:1]
+rony     11656 96.0  4.7 713816 192080 pts/1   Rl+  13:03  16:02 OMEdit --debug=true
+rony     11658  2.5  5.8 521388 237852 pts/1   Sl+  13:03   0:25 /usr/local/bin/omc +c=OMEdit106e746231000136559180700000039000054130327646 +d=interactiveCorba +locale=sk_SK
+root     11669  0.0  0.0      0     0 ?        S    13:03   0:00 [kworker/1:0]
+root     11691  0.0  0.0      0     0 ?        S    13:09   0:00 [kworker/0:2]
+root     11692  0.0  0.0      0     0 ?        S    13:09   0:00 [kworker/1:1]
+root     11693  0.0  0.0      0     0 ?        S    13:11   0:00 [kworker/u:0]
+root     11741  0.0  0.0      0     0 ?        S    13:15   0:00 [kworker/0:0]
+root     11744  0.0  0.0      0     0 ?        S    13:16   0:00 [kworker/u:2]
+root     11752  0.0  0.0      0     0 ?        S    13:19   0:00 [kworker/1:2]
+rony     11767  2.0  0.0   9488  1116 pts/4    R+   13:20   0:00 ps aux

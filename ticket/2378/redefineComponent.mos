@@ -1,0 +1,4 @@
+loadFile("redefineComponent.mo"); getErrorString();
+list(M); getErrorString();
+addComponent(a, Real, M); getErrorString();
+list(M); getErrorString();

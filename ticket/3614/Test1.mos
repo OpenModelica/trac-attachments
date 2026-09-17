@@ -1,0 +1,5 @@
+loadModel(Modelica, {"3.2.1"}); getErrorString();
+loadFile("ScalableTestSuite/package.mo"); getErrorString();
+setCommandLineOptions("--preOptModules+=evaluateAllParameters --preOptModules-=clockPartitioning --postOptModules-=detectJacobianSparsePattern --postOptModules+=wrapFunctionCalls --showErrorMessages --disableLinearTearing --removeSimpleEquations=new --indexReductionMethod=uode --tearingMethod=omcTearing -d=gcProfiling,execstat,nogen,initialization,backenddaeinfo,discreteinfo,stateselection");
+simulate(ScalableTestSuite.Electrical.DistributionSystemDC.ScaledExperiments.DistributionSystemModelica_N_28_M_28, simflags = "-lv LOG_STATS,LOG_LS -ls=klu"); getErrorString();
+

@@ -1,0 +1,95 @@
+true
+""
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 1.01, numberOfIntervals = 500, tolerance = 1e-006, method = 'dassl', fileNamePrefix = 'HeliumTestModel_total', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "Failed to build model: HeliumTestModel_total",
+    timeFrontend = 0.0,
+    timeBackend = 0.0,
+    timeSimCode = 0.0,
+    timeTemplates = 0.0,
+    timeCompile = 0.0,
+    timeSimulation = 0.0,
+    timeTotal = 0.0
+end SimulationResult;
+"Error: Fehler beim Bauen des Simulators. Build log: gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.4-dev//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o HeliumTestModel_total.o HeliumTestModel_total.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.4-dev//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o HeliumTestModel_total_functions.o HeliumTestModel_total_functions.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.4-dev//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o HeliumTestModel_total_records.o HeliumTestModel_total_records.c
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.4-dev//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o HeliumTestModel_total_01exo.o HeliumTestModel_total_01exo.c
+HeliumTestModel_total.c: In function 'HeliumTestModel_total_eqFunction_70':
+HeliumTestModel_total.c:126: error: '$Pambient$Pmedium$Psat$Pliq' undeclared (first use in this function)
+HeliumTestModel_total.c:126: error: (Each undeclared identifier is reported only once
+HeliumTestModel_total.c:126: error: for each function it appears in.)
+HeliumTestModel_total.c:127: error: '$Pambient$Pmedium$Psat$Pvap' undeclared (first use in this function)
+HeliumTestModel_total.c: In function 'HeliumTestModel_total_eqFunction_72':
+HeliumTestModel_total.c:164: error: '$PfixedMassFlowRate$Pmedium$Psat$Pliq' undeclared (first use in this function)
+HeliumTestModel_total.c:165: error: '$PfixedMassFlowRate$Pmedium$Psat$Pvap' undeclared (first use in this function)
+HeliumTestModel_total.c: In function 'HeliumTestModel_total_eqFunction_80':
+HeliumTestModel_total.c:283: error: '$Pvolume$Pmedium$Psat$Pliq' undeclared (first use in this function)
+HeliumTestModel_total.c:284: error: '$Pvolume$Pmedium$Psat$Pvap' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_HeliumTestModel__total_Medium_setState__pTX':
+HeliumTestModel_total_functions.c:242: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:242: error: (Each undeclared identifier is reported only once
+HeliumTestModel_total_functions.c:242: error: for each function it appears in.)
+HeliumTestModel_total_functions.c: In function 'omc_HeliumTestModel__total_Medium_setState__dTX':
+HeliumTestModel_total_functions.c:677: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:681: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_HeliumTestModel__total_Medium_setSat__T':
+HeliumTestModel_total_functions.c:948: error: '_d' undeclared (first use in this function)
+gcc    -falign-functions -msse2 -mfpmath=sse     -I"C:/OpenModelica1.9.4-dev//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o HeliumTestModel_total_02nls.o HeliumTestModel_total_02nls.c
+mingw32-make: *** [HeliumTestModel_total.o] Error 1
+mingw32-make: *** Waiting for unfinished jobs....
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_setState__pd':
+HeliumTestModel_total_functions.c:3809: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_setSat__p':
+HeliumTestModel_total_functions.c:4513: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:4522: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_setSat__T':
+HeliumTestModel_total_functions.c:4981: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_setState__dTX':
+HeliumTestModel_total_functions.c:5345: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:5349: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_setState__phX':
+HeliumTestModel_total_functions.c:5663: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:5672: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedAmbient$ambient_Medium_Ancillary_saturationTemperature__h__liq':
+HeliumTestModel_total_functions.c:7869: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:7873: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:7880: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_setSat__p':
+HeliumTestModel_total_functions.c:11029: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:11038: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_setSat__T':
+HeliumTestModel_total_functions.c:11528: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_setState__phX':
+HeliumTestModel_total_functions.c:11978: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:11987: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_setState__pd':
+HeliumTestModel_total_functions.c:12626: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_setState__dTX':
+HeliumTestModel_total_functions.c:13042: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:13046: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_FixedMassFlowRate$fixedMassFlowRate_Medium_Ancillary_saturationTemperature__h__liq':
+HeliumTestModel_total_functions.c:14808: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:14812: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:14819: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_setState__phX':
+HeliumTestModel_total_functions.c:20337: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:20346: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_setState__pd':
+HeliumTestModel_total_functions.c:20985: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_setSat__p':
+HeliumTestModel_total_functions.c:21442: error: '_T' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:21451: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_setSat__T':
+HeliumTestModel_total_functions.c:21910: error: '_d' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_setState__dTX':
+HeliumTestModel_total_functions.c:22274: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:22278: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c: In function 'omc_Modelica_Media_Examples_Tests_Components_PortVolume$volume_Medium_Ancillary_saturationTemperature__h__liq':
+HeliumTestModel_total_functions.c:24112: error: '_MM' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:24116: error: '_d_crit' undeclared (first use in this function)
+HeliumTestModel_total_functions.c:24123: error: '_d' undeclared (first use in this function)
+mingw32-make: *** [HeliumTestModel_total_functions.o] Error 1
+RESULT: 2
+"

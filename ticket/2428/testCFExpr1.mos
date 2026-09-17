@@ -1,0 +1,45 @@
+loadString("
+model testCFExpr1
+  Real x;
+initial equation
+  der(x) = 3.14159/2;
+equation
+  sin(der(x)) = cos(x);
+end testCFExpr1;
+");
+
+simulate(testCFExpr1, stopTime=10, tolerance=1e-4);
+val(x,0);
+val(x,10);
+
+val(der(x),0);
+val(der(x),10);
+
+simulate(testCFExpr1, stopTime=10, tolerance=1e-5);
+val(x,0);
+val(x,10);
+
+val(der(x),0);
+val(der(x),10);
+
+simulate(testCFExpr1, stopTime=10, tolerance=1e-6);
+val(x,0);
+val(x,10);
+
+val(der(x),0);
+val(der(x),10);
+
+simulate(testCFExpr1, stopTime=10, tolerance=1e-7);
+val(x,0);
+val(x,10);
+
+val(der(x),0);
+val(der(x),10);
+
+simulate(testCFExpr1, stopTime=10, tolerance=1e-8);
+val(x,0);
+val(x,10);
+
+val(der(x),0);
+val(der(x),10);
+

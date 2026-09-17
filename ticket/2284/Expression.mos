@@ -1,0 +1,2 @@
+loadFile("Expression.mo");
+simulate(Expression.Test);

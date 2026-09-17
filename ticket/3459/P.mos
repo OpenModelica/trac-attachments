@@ -1,0 +1,4 @@
+loadFile("P.mo");
+getErrorString();
+getInheritedClasses(P.A);
+getMessagesStringInternal();

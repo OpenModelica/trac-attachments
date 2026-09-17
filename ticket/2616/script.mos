@@ -1,0 +1,3 @@
+loadModel(Modelica); getErrorString();
+loadFile("TestCaseBug01.mo"); getErrorString();
+instantiateModel(TestCaseBug.TestCaseBug); getErrorString();

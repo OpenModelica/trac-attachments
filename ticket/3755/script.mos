@@ -1,0 +1,6 @@
+setCommandLineOptions("+grammar=PDEModelica");
+getErrorString();
+loadFile("advectionCos.mo");
+getErrorString();
+listFile(advectionSin);
+getErrorString();

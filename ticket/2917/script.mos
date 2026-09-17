@@ -1,0 +1,33 @@
+loadString("package p1
+  protected
+  package p2
+    model m1 end m1;
+  end p2;  
+end p1;");
+getErrorString();
+
+"Lets try to add a new model in p1.p2";
+loadString("within p1.p2; model m2 end m2;");
+getErrorString();
+list(p1);
+getErrorString();
+
+"Lets try to add a variable Real var in p1.p2.m1";
+loadString("within p1.p2; model m1 Real var; end m1;");
+getErrorString();
+"Even adding a variable via addComponent fails but surprisingly addComponent returns true.";
+addComponent(var, Real, p1.p2.m1, annotate=Placement());
+getErrorString();
+list(p1);
+getErrorString();
+
+"Lets try to delete the protected class. deleteClass returns true but actually the class is not deleted.";
+deleteClass(p1.p2.m1);
+getErrorString();
+list(p1);
+getErrorString();
+
+setSourceFile(p1, "p1.mo");
+getErrorString();
+save(p1);
+getErrorString();

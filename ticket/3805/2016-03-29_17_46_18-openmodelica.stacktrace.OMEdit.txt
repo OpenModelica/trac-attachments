@@ -1,0 +1,72 @@
+0xe04 : [unknown module] : [unknown file] 
+0x783d7c0 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x783d9d2 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x783de6b : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x783e02f : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x7840239 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x7840df0 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x783cabb : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : antlr3UCS2StringFactoryNew 
+0x75b9ffb : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4ad4 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4cd5 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4d71 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4e5b : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4e5b : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4fb1 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b97bd : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75bb440 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75c8a79 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75c8c4d : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75c8e8f : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b6f0c : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b783d : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b2e0f : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b355e : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b3d54 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75b4274 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75c9025 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75c9371 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : ModelicaParserNew 
+0x75aac5a : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_File_seek 
+0x75ab847 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_File_seek 
+0x75ab916 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_File_seek 
+0x7383b34 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_Parser_parsebuiltin 
+0x7383b8e : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_Parser_parse 
+0x750d53b : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_ClassLoader_checkOnLoadMessage 
+0x750d5d5 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_ClassLoader_parsePackageFile 
+0x750df55 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x70af6f7 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_List_fold3 
+0x750db50 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750e0fe : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x70af6f7 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_List_fold3 
+0x750db50 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750e0fe : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x70af6f7 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_List_fold3 
+0x750db50 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750e0fe : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x70af6f7 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_List_fold3 
+0x750db50 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750e51e : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750eb71 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : boxptr_ClassLoader_parsePackageFile 
+0x750ee30 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_ClassLoader_loadClass 
+0x7255d1e : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_CevalScript_getPackageVersion 
+0x70aee9d : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_List_fold 
+0x7253e28 : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_CevalScript_loadModel 
+0x72664ec : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_CevalScript_cevalInteractiveFunctions2 
+0x6df2bce : C:\OpenModelica1.9.6\bin\libOpenModelicaCompiler.dll : omc_OpenModelicaScriptingAPI_loadModel 
+0x46ba59 : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEdit\OMEditGUI/../../../build/include/omc/scripting-API/OpenModelicaScriptingAPIQt.cpp (3258) : in function (_ZN12OMCInterface9loadModelE7QString5QListIS0_EaS0_a) 
+0x4aff8c : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEdit\OMEditGUI/OMC/OMCProxy.cpp (1366) : in function (_ZN8OMCProxy9loadModelE7QStringS0_bS0_b) 
+0x4b02cc : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:/bin/QtSDK/Desktop/Qt/4.8.0/mingw/include/QtCore/qstring.h (880) : in function (~QString) 
+0x4d42e6 : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:/bin/QtSDK/Desktop/Qt/4.8.0/mingw/include/QtCore/qstring.h (419) : in function (QString) 
+0x43af08 : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEdit\OMEditGUI/MainWindow.cpp (242) : in function (MainWindow) 
+0x402581 : C:\OpenModelica1.9.6\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEdit\OMEditGUI/main.cpp (326) : in function (_Z5qMainiPPc) 
+0x6a4125 : C:\OpenModelica1.9.6\bin\OMEdit.exe : pseudo-reloc-list.c 
+0x6a3d96 : C:\OpenModelica1.9.6\bin\OMEdit.exe : main.c 
+0x4010db : C:\OpenModelica1.9.6\bin\OMEdit.exe : crt1.c 
+0x401158 : C:\OpenModelica1.9.6\bin\OMEdit.exe : crt1.c 
+Failed to init bfd from (C:\Windows\syswow64\kernel32.dll)
+0x76d2338a : C:\Windows\syswow64\kernel32.dll : BaseThreadInitThunk 
+Failed to init bfd from (C:\Windows\SysWOW64\ntdll.dll)
+0x77689a02 : C:\Windows\SysWOW64\ntdll.dll : RtlInitializeExceptionChain 
+Failed to init bfd from (C:\Windows\SysWOW64\ntdll.dll)
+0x776899d5 : C:\Windows\SysWOW64\ntdll.dll : RtlInitializeExceptionChain 
+0x730077 : C:\OpenModelica1.9.6\bin\OMEdit.exe : PlotWindow.cpp 

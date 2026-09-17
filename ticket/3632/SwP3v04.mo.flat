@@ -1,0 +1,852 @@
+"
+function Complex \"Automatically generated record constructor for Complex\"
+  input Real re;
+  input Real im;
+  output Complex res;
+end Complex;
+
+function Complex.'*'.multiply \"Inline before index reduction\" \"Multiply two complex numbers\"
+  input Complex c1 \"Complex number 1\";
+  input Complex c2 \"Complex number 2\";
+  output Complex c3 \"= c1*c2\";
+algorithm
+  c3 := Complex(c1.re * c2.re - c1.im * c2.im, c1.re * c2.im + c1.im * c2.re);
+end Complex.'*'.multiply;
+
+function Complex.'*'.scalarProduct \"Inline before index reduction\" \"Scalar product c1*c2 of two complex vectors\"
+  input Complex[:] c1 \"Vector of Complex numbers 1\";
+  input Complex[size(c1, 1)] c2 \"Vector of Complex numbers 2\";
+  output Complex c3 \"= c1*c2\";
+algorithm
+  c3 := Complex(0.0, 0.0);
+  for i in 1:size(c1, 1) loop
+    c3 := Complex.'+'(c3, Complex.'*'.multiply(c1[i], c2[i]));
+  end for;
+end Complex.'*'.scalarProduct;
+
+function Complex.'+' \"Inline before index reduction\" \"Add two complex numbers\"
+  input Complex c1 \"Complex number 1\";
+  input Complex c2 \"Complex number 2\";
+  output Complex c3 \"= c1 + c2\";
+algorithm
+  c3 := Complex(c1.re + c2.re, c1.im + c2.im);
+end Complex.'+';
+
+function Complex.'-'.negate \"Inline before index reduction\" \"Unary minus (multiply complex number by -1)\"
+  input Complex c1 \"Complex number\";
+  output Complex c2 \"= -c1\";
+algorithm
+  c2 := Complex(-c1.re, -c1.im);
+end Complex.'-'.negate;
+
+function Complex.'-'.subtract \"Inline before index reduction\" \"Subtract two complex numbers\"
+  input Complex c1 \"Complex number 1\";
+  input Complex c2 \"Complex number 2\";
+  output Complex c3 \"= c1 - c2\";
+algorithm
+  c3 := Complex(c1.re - c2.re, c1.im - c2.im);
+end Complex.'-'.subtract;
+
+function Complex.'/' \"Inline before index reduction\" \"Divide two complex numbers\"
+  input Complex c1 \"Complex number 1\";
+  input Complex c2 \"Complex number 2\";
+  output Complex c3 \"= c1/c2\";
+algorithm
+  c3 := Complex((c1.re * c2.re + c1.im * c2.im) / (c2.re ^ 2.0 + c2.im ^ 2.0), (c1.im * c2.re - c1.re * c2.im) / (c2.re ^ 2.0 + c2.im ^ 2.0));
+end Complex.'/';
+
+function Complex.'constructor'.fromReal \"Inline before index reduction\" \"Construct Complex from Real\"
+  input Real re \"Real part of complex number\";
+  input Real im = 0.0 \"Imaginary part of complex number\";
+  output Complex result = Complex(re, im) \"Complex number\";
+end Complex.'constructor'.fromReal;
+
+function ElPower.Electric.Basics.abs
+  input Real u;
+  output Real y;
+algorithm
+  y := if noEvent(u >= 0.0) then u else -u;
+end ElPower.Electric.Basics.abs;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.getDerTableValue \"Derivative of interpolated 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  input Real der_u;
+  output Real der_y;
+
+  external \"C\" der_y = ModelicaStandardTables_CombiTable1D_getDerValue(tableID, icol, u, der_u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.getDerTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.getTableValue \"Interpolate 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  output Real y;
+
+  external \"C\" y = ModelicaStandardTables_CombiTable1D_getValue(tableID, icol, u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.getTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.readTableData \"Read table data from ASCII text or MATLAB MAT-file\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Boolean forceRead = false \"= true: Force reading of table data; = false: Only read, if not yet read.\";
+  input Boolean verboseRead \"= true: Print info message; = false: No info message\";
+  output Real readSuccess \"Table read success\";
+
+  external \"C\" readSuccess = ModelicaStandardTables_CombiTable1D_read(tableID, forceRead, verboseRead);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.readTableData;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.getDerTableValue \"Derivative of interpolated 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  input Real der_u;
+  output Real der_y;
+
+  external \"C\" der_y = ModelicaStandardTables_CombiTable1D_getDerValue(tableID, icol, u, der_u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.getDerTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.getTableValue \"Interpolate 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  output Real y;
+
+  external \"C\" y = ModelicaStandardTables_CombiTable1D_getValue(tableID, icol, u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.getTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.readTableData \"Read table data from ASCII text or MATLAB MAT-file\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Boolean forceRead = false \"= true: Force reading of table data; = false: Only read, if not yet read.\";
+  input Boolean verboseRead \"= true: Print info message; = false: No info message\";
+  output Real readSuccess \"Table read success\";
+
+  external \"C\" readSuccess = ModelicaStandardTables_CombiTable1D_read(tableID, forceRead, verboseRead);
+end Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.readTableData;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.getDerTableValue \"Derivative of interpolated 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  input Real der_u;
+  output Real der_y;
+
+  external \"C\" der_y = ModelicaStandardTables_CombiTable1D_getDerValue(tableID, icol, u, der_u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.getDerTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.getTableValue \"Interpolate 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Integer icol;
+  input Real u;
+  input Real tableAvailable \"Dummy input to ensure correct sorting of function calls\";
+  output Real y;
+
+  external \"C\" y = ModelicaStandardTables_CombiTable1D_getValue(tableID, icol, u);
+end Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.getTableValue;
+
+function Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.readTableData \"Read table data from ASCII text or MATLAB MAT-file\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D tableID;
+  input Boolean forceRead = false \"= true: Force reading of table data; = false: Only read, if not yet read.\";
+  input Boolean verboseRead \"= true: Print info message; = false: No info message\";
+  output Real readSuccess \"Table read success\";
+
+  external \"C\" readSuccess = ModelicaStandardTables_CombiTable1D_read(tableID, forceRead, verboseRead);
+end Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.readTableData;
+
+function Modelica.Blocks.Types.ExternalCombiTable1D.constructor \"Initialize 1-dim. table defined by matrix\"
+  input String tableName \"Table name\";
+  input String fileName \"File name\";
+  input Real[:, :] table;
+  input Integer[:] columns;
+  input enumeration(LinearSegments, ContinuousDerivative, ConstantSegments) smoothness;
+  output Modelica.Blocks.Types.ExternalCombiTable1D externalCombiTable1D;
+
+  external \"C\" externalCombiTable1D = ModelicaStandardTables_CombiTable1D_init(tableName, fileName, table, size(table, 1), size(table, 2), columns, size(columns, 1), smoothness);
+end Modelica.Blocks.Types.ExternalCombiTable1D.constructor;
+
+function Modelica.Blocks.Types.ExternalCombiTable1D.destructor \"Terminate 1-dim. table defined by matrix\"
+  input Modelica.Blocks.Types.ExternalCombiTable1D externalCombiTable1D;
+
+  external \"C\" ModelicaStandardTables_CombiTable1D_close(externalCombiTable1D);
+end Modelica.Blocks.Types.ExternalCombiTable1D.destructor;
+
+function Modelica.ComplexMath.'abs' \"Inline before index reduction\" \"Absolute value of complex number\"
+  input Complex c \"Complex number\";
+  output Real result \"= abs(c)\";
+algorithm
+  result := (c.re ^ 2.0 + c.im ^ 2.0) ^ 0.5;
+end Modelica.ComplexMath.'abs';
+
+function Modelica.ComplexMath.arg \"Inline before index reduction\" \"Phase angle of complex number\"
+  input Complex c \"Complex number\";
+  input Real phi0(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") = 0.0 \"Phase angle phi shall be in the range: -pi < phi-phi0 < pi\";
+  output Real phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"= phase angle of c\";
+algorithm
+  phi := Modelica.Math.atan3(c.im, c.re, phi0);
+end Modelica.ComplexMath.arg;
+
+function Modelica.ComplexMath.conj \"Inline before index reduction\" \"Conjugate of complex number\"
+  input Complex c1 \"Complex number\";
+  output Complex c2 \"= c1.re - j*c1.im\";
+algorithm
+  c2 := Complex(c1.re, -c1.im);
+end Modelica.ComplexMath.conj;
+
+function Modelica.ComplexMath.exp \"Inline before index reduction\" \"Exponential of complex number\"
+  input Complex c1 \"Complex number\";
+  output Complex c2 \"= exp(c1)\";
+algorithm
+  c2 := Complex(exp(c1.re) * cos(c1.im), exp(c1.re) * sin(c1.im));
+end Modelica.ComplexMath.exp;
+
+function Modelica.ComplexMath.imag \"Inline before index reduction\" \"Imaginary part of complex number\"
+  input Complex c \"Complex number\";
+  output Real r \"= c.im\";
+algorithm
+  r := c.im;
+end Modelica.ComplexMath.imag;
+
+function Modelica.ComplexMath.real \"Inline before index reduction\" \"Real part of complex number\"
+  input Complex c \"Complex number\";
+  output Real r \"= c.re\";
+algorithm
+  r := c.re;
+end Modelica.ComplexMath.real;
+
+function Modelica.Math.atan3 \"Four quadrant inverse tangent (select solution that is closest to given angle y0)\"
+  input Real u1;
+  input Real u2;
+  input Real y0(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") = 0.0 \"y shall be in the range: -pi < y-y0 <= pi\";
+  output Real y(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\");
+  protected constant Real pi = 3.141592653589793;
+  protected Real w;
+  protected constant Real pi2 = 6.283185307179586;
+algorithm
+  w := atan2(u1, u2);
+  if y0 == 0.0 then
+    y := w;
+  else
+    y := w + 6.283185307179586 * /*Real*/(integer(0.5 + 0.1591549430918953 * (y0 - w)));
+  end if;
+end Modelica.Math.atan3;
+
+function Modelica.Math.tempInterpol1 \"Temporary function for linear interpolation (will be removed)\"
+  input Real u \"input value (first column of table)\";
+  input Real[:, :] table \"table to be interpolated\";
+  input Integer icol \"column of table to be interpolated\";
+  output Real y \"interpolated input value (icol column of table)\";
+  protected Integer i;
+  protected Integer n \"number of rows of table\";
+  protected Real u1;
+  protected Real u2;
+  protected Real y1;
+  protected Real y2;
+algorithm
+  n := size(table, 1);
+  if n <= 1 then
+    y := table[1,icol];
+  else
+    if u <= table[1,1] then
+      i := 1;
+    else
+      i := 2;
+      while i < n and u >= table[i,1] loop
+        i := 1 + i;
+      end while;
+      i := -1 + i;
+    end if;
+    u1 := table[i,1];
+    u2 := table[1 + i,1];
+    y1 := table[i,icol];
+    y2 := table[1 + i,icol];
+    assert(u2 > u1, \"Table index must be increasing\");
+    y := y1 + (y2 - y1) * (u - u1) / (u2 - u1);
+  end if;
+end Modelica.Math.tempInterpol1;
+
+function Modelica.Math.tempInterpol1_der \"Temporary function for linear interpolation (will be removed)\"
+  input Real u \"input value (first column of table)\";
+  input Real[:, :] table \"table to be interpolated\";
+  input Integer icol \"column of table to be interpolated\";
+  input Real du;
+  output Real dy \"interpolated input value (icol column of table)\";
+  protected Integer i;
+  protected Integer n \"number of rows of table\";
+  protected Real u1;
+  protected Real u2;
+  protected Real y1;
+  protected Real y2;
+algorithm
+  n := size(table, 1);
+  if n <= 1 then
+    dy := 0.0;
+  else
+    if u <= table[1,1] then
+      i := 1;
+    else
+      i := 2;
+      while i < n and u >= table[i,1] loop
+        i := 1 + i;
+      end while;
+      i := -1 + i;
+    end if;
+    u1 := table[i,1];
+    u2 := table[1 + i,1];
+    y1 := table[i,icol];
+    y2 := table[1 + i,icol];
+    assert(u2 > u1, \"Table index must be increasing\");
+    dy := (y2 - y1) / (u2 - u1);
+  end if;
+end Modelica.Math.tempInterpol1_der;
+
+function Modelica.SIunits.Conversions.to_deg \"Inline before index reduction\" \"Convert from radian to degree\"
+  input Real radian(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"radian value\";
+  output Real degree(quantity = \"Angle\", unit = \"deg\") \"degree value\";
+algorithm
+  degree := 57.29577951308232 * radian;
+end Modelica.SIunits.Conversions.to_deg;
+
+function Modelica.Utilities.Strings.Advanced.skipWhiteSpace \"Scans white space\"
+  input String string;
+  input Integer startIndex(min = 1) = 1;
+  output Integer nextIndex;
+
+  external \"C\" nextIndex = ModelicaStrings_skipWhiteSpace(string, startIndex);
+end Modelica.Utilities.Strings.Advanced.skipWhiteSpace;
+
+function Modelica.Utilities.Strings.isEmpty \"Return true if a string is empty (has only white space characters)\"
+  input String string;
+  output Boolean result \"True, if string is empty\";
+  protected Integer nextIndex;
+  protected Integer len;
+algorithm
+  nextIndex := Modelica.Utilities.Strings.Advanced.skipWhiteSpace(string, 1);
+  len := Modelica.Utilities.Strings.length(string);
+  if len < 1 or nextIndex > len then
+    result := true;
+  else
+    result := false;
+  end if;
+end Modelica.Utilities.Strings.isEmpty;
+
+function Modelica.Utilities.Strings.length \"Returns length of string\"
+  input String string;
+  output Integer result \"Number of characters of string\";
+
+  external \"C\" result = ModelicaStrings_length(string);
+end Modelica.Utilities.Strings.length;
+
+class SwP3v04
+  parameter Real load = 0.877;
+  parameter Real yMaxi = 1.5;
+  Real cycle;
+  Real torque;
+  Real torqueS;
+  input Real dt(start = 0.0);
+  Real meter.u.re \"Real part of complex number\";
+  Real meter.u.im \"Imaginary part of complex number\";
+  Real meter.i.re(start = 0.0) \"Real part of complex number\";
+  Real meter.i.im(start = 0.0) \"Imaginary part of complex number\";
+  Real meter.Pin1.i.re \"Real part of complex number\";
+  Real meter.Pin1.i.im \"Imaginary part of complex number\";
+  Real meter.Pin1.v.re \"Real part of complex number\";
+  Real meter.Pin1.v.im \"Imaginary part of complex number\";
+  Real meter.Pin2.i.re \"Real part of complex number\";
+  Real meter.Pin2.i.im \"Imaginary part of complex number\";
+  Real meter.Pin2.v.re \"Real part of complex number\";
+  Real meter.Pin2.v.im \"Imaginary part of complex number\";
+  Real meter.up.re \"Real part of complex number\";
+  Real meter.up.im(start = 1.0) \"Imaginary part of complex number\";
+  Real meter.Strom;
+  Real meter.Spannung;
+  Real meter.P;
+  Real meter.Q;
+  Real meter.S;
+  Real meter.I.re \"Real part of complex number\";
+  Real meter.I.im \"Imaginary part of complex number\";
+  Real meter.strom \"Betrag Strom\";
+  Real meter.spannung \"Betrag Spannung\";
+  Real meter.p \"Wirkleistung\";
+  Real meter.q \"Blindleistung\";
+  Real meter.s \"Scheinleistung\";
+  Real meter.sComplex.re \"Real part of complex number\";
+  Real meter.sComplex.im \"Imaginary part of complex number\";
+  Real meter.phiU \"Phasenwinkel Spannung U\";
+  Real meter.i2t(start = 0.0, fixed = true) \"i2t Integral\";
+  Real meter.energy(start = 0.0, fixed = true) \"u*i Integral\";
+  Real meter.NULL.i.re \"Real part of complex number\";
+  Real meter.NULL.i.im \"Imaginary part of complex number\";
+  Real meter.NULL.v.re \"Real part of complex number\";
+  Real meter.NULL.v.im \"Imaginary part of complex number\";
+  Real InertiaT.flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real InertiaT.flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real InertiaT.flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real InertiaT.flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter Real InertiaT.J(quantity = \"MomentOfInertia\", unit = \"kg.m2\", min = 0.0, start = 1.0) = 32.47 \"Moment of inertia\";
+  parameter enumeration(never, avoid, default, prefer, always) InertiaT.stateSelect = StateSelect.default \"Priority to use phi and w as states\";
+  Real InertiaT.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\", stateSelect = StateSelect.default) \"Absolute rotation angle of component\";
+  Real InertiaT.w(quantity = \"AngularVelocity\", unit = \"rad/s\", stateSelect = StateSelect.default) \"Absolute angular velocity of component (= der(phi))\";
+  Real InertiaT.a(quantity = \"AngularAcceleration\", unit = \"rad/s2\") \"Absolute angular acceleration of component (= der(w))\";
+  Real shaft.phi_rel(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\", start = 0.0, nominal = if shaft.phi_nominal >= 1e-15 then shaft.phi_nominal else 1.0, stateSelect = StateSelect.prefer) \"Relative rotation angle (= flange_b.phi - flange_a.phi)\";
+  Real shaft.w_rel(quantity = \"AngularVelocity\", unit = \"rad/s\", start = 0.0, stateSelect = StateSelect.prefer) \"Relative angular velocity (= der(phi_rel))\";
+  Real shaft.a_rel(quantity = \"AngularAcceleration\", unit = \"rad/s2\", start = 0.0) \"Relative angular acceleration (= der(w_rel))\";
+  Real shaft.tau(quantity = \"Torque\", unit = \"N.m\") \"Torque between flanges (= flange_b.tau)\";
+  Real shaft.flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real shaft.flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real shaft.flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real shaft.flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter Real shaft.phi_nominal(quantity = \"Angle\", unit = \"rad\", displayUnit = \"rad\", min = 0.0) = 0.0001 \"Nominal value of phi_rel (used for scaling)\";
+  parameter enumeration(never, avoid, default, prefer, always) shaft.stateSelect = StateSelect.prefer \"Priority to use phi_rel and w_rel as states\";
+  parameter Boolean shaft.useHeatPort = false \"=true, if heatPort is enabled\";
+  Real shaft.lossPower(quantity = \"Power\", unit = \"W\") \"Loss power leaving component via heatPort (> 0, if heat is flowing out of component)\";
+  parameter Real shaft.c(quantity = \"RotationalSpringConstant\", unit = \"N.m/rad\", min = 0.0, start = 100000.0) = 52.94 \"Spring constant\";
+  parameter Real shaft.d(quantity = \"RotationalDampingConstant\", unit = \"N.m.s/rad\", min = 0.0, start = 0.0) = 0.0 \"Damping constant\";
+  parameter Real shaft.phi_rel0(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") = 0.0 \"Unstretched spring angle\";
+  protected Real shaft.tau_c(quantity = \"Torque\", unit = \"N.m\") \"Spring torque\";
+  protected Real shaft.tau_d(quantity = \"Torque\", unit = \"N.m\") \"Damping torque\";
+  parameter Boolean asm.SteadyState = true;
+  parameter Boolean asm.InitSpeed = true;
+  Real asm.tau;
+  Real asm.phi(start = 0.0, fixed = true);
+  Real asm.w;
+  Real asm.leistung.re \"Real part of complex number\";
+  Real asm.leistung.im \"Imaginary part of complex number\";
+  Real asm.leistungMech;
+  Real asm.strom;
+  Real asm.spannung;
+  Real asm.deltaP \"Differenz El-Mech\";
+  Real asm.Pin.i.re \"Real part of complex number\";
+  Real asm.Pin.i.im \"Imaginary part of complex number\";
+  Real asm.Pin.v.re \"Real part of complex number\";
+  Real asm.Pin.v.im \"Imaginary part of complex number\";
+  Real asm.Flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real asm.Flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real asm.Flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real asm.Flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter String asm.projecthome = \"/home/hans/Projekte/Swansea/ShaftStudy/OM/\";
+  parameter Real asm.x1s = 0.1708;
+  parameter Real asm.x2s = 0.1216;
+  parameter Real asm.xh = 3.2;
+  parameter Real asm.r1 = 0.0139;
+  parameter Real asm.r2 = 0.0117;
+  parameter Boolean asm.bSat = false \"table for saturation\";
+  Real asm.u1.re \"Real part of complex number\";
+  Real asm.u1.im(start = 1.0) \"Imaginary part of complex number\";
+  Real asm.i1.re(start = -1.0) \"Real part of complex number\";
+  Real asm.i1.im(start = -0.5) \"Imaginary part of complex number\";
+  Real asm.i2.re(start = 1.0) \"Real part of complex number\";
+  Real asm.i2.im(start = 0.3) \"Imaginary part of complex number\";
+  Real asm.psi1.re(start = 0.0) \"Real part of complex number\";
+  Real asm.psi1.im(start = -1.0) \"Imaginary part of complex number\";
+  Real asm.psi2.re(start = 0.3) \"Real part of complex number\";
+  Real asm.psi2.im(start = -0.9) \"Imaginary part of complex number\";
+  Real asm.psim.re(start = 0.2) \"Real part of complex number\";
+  Real asm.psim.im(start = -0.91) \"Imaginary part of complex number\";
+  Real asm.im.re(start = 0.0) \"Real part of complex number\";
+  Real asm.im.im(start = -0.3) \"Imaginary part of complex number\";
+  Real asm.fdm \"Faktor Saettigung xh\";
+  Real asm.fd1 \"Faktor Saettigung x1\";
+  Real asm.fd2 \"Faktor Saettigung x2\";
+  Real asm.psi1abs;
+  Real asm.psi2abs;
+  Real asm.psimabs;
+  Real asm.i1Abs(start = 1.0);
+  Real asm.i2Abs(start = 1.0);
+  parameter Boolean asm.bXlsat = true \"table for xsat.\";
+  parameter String asm.XlFileName = asm.projecthome + \"xsat.txt\";
+  constant Real asm.J.re = 0.0 \"Real part of complex number\";
+  constant Real asm.J.im = 1.0 \"Imaginary part of complex number\";
+  parameter Integer asm.TsatM.n = 1 \"Number of inputs (= number of outputs)\";
+  Real asm.TsatM.u[1] \"Connector of Real input signals\";
+  Real asm.TsatM.y[1] \"Connector of Real output signals\";
+  parameter Boolean asm.TsatM.tableOnFile = asm.bXlsat \"= true, if table is defined on file or in function usertab\";
+  parameter Real asm.TsatM.table[1,1] = -1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.TsatM.table[1,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.TsatM.table[2,1] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.TsatM.table[2,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.TsatM.table[3,1] = 20.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.TsatM.table[3,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter String asm.TsatM.tableName = \"xh\" \"Table name on file or in function usertab (see docu)\";
+  parameter String asm.TsatM.fileName = asm.XlFileName \"File where matrix is stored\";
+  parameter Boolean asm.TsatM.verboseRead = true \"= true, if info message that file is loading is to be printed\";
+  parameter Integer asm.TsatM.columns[1] = 2 \"Columns of table to be interpolated\";
+  parameter enumeration(LinearSegments, ContinuousDerivative, ConstantSegments) asm.TsatM.smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments \"Smoothness of table interpolation\";
+  protected Modelica.Blocks.Types.ExternalCombiTable1D asm.TsatM.tableID = Modelica.Blocks.Types.ExternalCombiTable1D.constructor(\"xh\", \"/home/hans/Projekte/Swansea/ShaftStudy/OM/xsat.txt\", {{-1.0, 1.0}, {1.0, 1.0}, {20.0, 1.0}}, {2}, Modelica.Blocks.Types.Smoothness.LinearSegments) \"External table object\";
+  protected parameter Real asm.TsatM.tableOnFileRead(fixed = false) \"= 1, if table was successfully read from file\";
+  parameter Integer asm.Tsat1.n = 1 \"Number of inputs (= number of outputs)\";
+  Real asm.Tsat1.u[1] \"Connector of Real input signals\";
+  Real asm.Tsat1.y[1] \"Connector of Real output signals\";
+  parameter Boolean asm.Tsat1.tableOnFile = asm.bXlsat \"= true, if table is defined on file or in function usertab\";
+  parameter Real asm.Tsat1.table[1,1] = -1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat1.table[1,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat1.table[2,1] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat1.table[2,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat1.table[3,1] = 20.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat1.table[3,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter String asm.Tsat1.tableName = \"x1\" \"Table name on file or in function usertab (see docu)\";
+  parameter String asm.Tsat1.fileName = asm.XlFileName \"File where matrix is stored\";
+  parameter Boolean asm.Tsat1.verboseRead = true \"= true, if info message that file is loading is to be printed\";
+  parameter Integer asm.Tsat1.columns[1] = 2 \"Columns of table to be interpolated\";
+  parameter enumeration(LinearSegments, ContinuousDerivative, ConstantSegments) asm.Tsat1.smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments \"Smoothness of table interpolation\";
+  protected Modelica.Blocks.Types.ExternalCombiTable1D asm.Tsat1.tableID = Modelica.Blocks.Types.ExternalCombiTable1D.constructor(\"x1\", \"/home/hans/Projekte/Swansea/ShaftStudy/OM/xsat.txt\", {{-1.0, 1.0}, {1.0, 1.0}, {20.0, 1.0}}, {2}, Modelica.Blocks.Types.Smoothness.LinearSegments) \"External table object\";
+  protected parameter Real asm.Tsat1.tableOnFileRead(fixed = false) \"= 1, if table was successfully read from file\";
+  parameter Integer asm.Tsat2.n = 1 \"Number of inputs (= number of outputs)\";
+  Real asm.Tsat2.u[1] \"Connector of Real input signals\";
+  Real asm.Tsat2.y[1] \"Connector of Real output signals\";
+  parameter Boolean asm.Tsat2.tableOnFile = asm.bXlsat \"= true, if table is defined on file or in function usertab\";
+  parameter Real asm.Tsat2.table[1,1] = -1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat2.table[1,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat2.table[2,1] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat2.table[2,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat2.table[3,1] = 20.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter Real asm.Tsat2.table[3,2] = 1.0 \"Table matrix (grid = first column; e.g., table=[0,2])\";
+  parameter String asm.Tsat2.tableName = \"x2\" \"Table name on file or in function usertab (see docu)\";
+  parameter String asm.Tsat2.fileName = asm.XlFileName \"File where matrix is stored\";
+  parameter Boolean asm.Tsat2.verboseRead = true \"= true, if info message that file is loading is to be printed\";
+  parameter Integer asm.Tsat2.columns[1] = 2 \"Columns of table to be interpolated\";
+  parameter enumeration(LinearSegments, ContinuousDerivative, ConstantSegments) asm.Tsat2.smoothness = Modelica.Blocks.Types.Smoothness.LinearSegments \"Smoothness of table interpolation\";
+  protected Modelica.Blocks.Types.ExternalCombiTable1D asm.Tsat2.tableID = Modelica.Blocks.Types.ExternalCombiTable1D.constructor(\"x2\", \"/home/hans/Projekte/Swansea/ShaftStudy/OM/xsat.txt\", {{-1.0, 1.0}, {1.0, 1.0}, {20.0, 1.0}}, {2}, Modelica.Blocks.Types.Smoothness.LinearSegments) \"External table object\";
+  protected parameter Real asm.Tsat2.tableOnFileRead(fixed = false) \"= 1, if table was successfully read from file\";
+  parameter Real fixed.phi0(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") = 0.0 \"Fixed offset angle of housing\";
+  Real fixed.flange.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real fixed.flange.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real Max.y = yMaxi \"Value of Real output\";
+  Real clutch.phi_rel(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\", start = 0.0, nominal = if clutch.phi_nominal >= 1e-15 then clutch.phi_nominal else 1.0, stateSelect = StateSelect.prefer) \"Relative rotation angle (= flange_b.phi - flange_a.phi)\";
+  Real clutch.w_rel(quantity = \"AngularVelocity\", unit = \"rad/s\", start = 0.0, stateSelect = StateSelect.prefer) \"Relative angular velocity (= der(phi_rel))\";
+  Real clutch.a_rel(quantity = \"AngularAcceleration\", unit = \"rad/s2\", start = 0.0) \"Relative angular acceleration (= der(w_rel))\";
+  Real clutch.tau(quantity = \"Torque\", unit = \"N.m\") \"Torque between flanges (= flange_b.tau)\";
+  Real clutch.flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real clutch.flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real clutch.flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real clutch.flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter Real clutch.phi_nominal(quantity = \"Angle\", unit = \"rad\", displayUnit = \"rad\", min = 0.0) = 0.0001 \"Nominal value of phi_rel (used for scaling)\";
+  parameter enumeration(never, avoid, default, prefer, always) clutch.stateSelect = StateSelect.prefer \"Priority to use phi_rel and w_rel as states\";
+  parameter Real clutch.w_small(quantity = \"AngularVelocity\", unit = \"rad/s\") = 10000000000.0 \"Relative angular velocity near to zero if jumps due to a reinit(..) of the velocity can occur (set to low value only if such impulses can occur)\";
+  Real clutch.w_relfric(quantity = \"AngularVelocity\", unit = \"rad/s\") \"Relative angular velocity between frictional surfaces\";
+  Real clutch.a_relfric(quantity = \"AngularAcceleration\", unit = \"rad/s2\") \"Relative angular acceleration between frictional surfaces\";
+  Real clutch.tau0(quantity = \"Torque\", unit = \"N.m\") \"Friction torque for w=0 and forward sliding\";
+  Real clutch.tau0_max(quantity = \"Torque\", unit = \"N.m\") \"Maximum friction torque for w=0 and locked\";
+  Boolean clutch.free \"true, if frictional element is not active\";
+  Real clutch.sa(unit = \"1\") \"Path parameter of friction characteristic tau = f(a_relfric)\";
+  Boolean clutch.startForward(start = false, fixed = true) \"true, if w_rel=0 and start of forward sliding\";
+  Boolean clutch.startBackward(start = false, fixed = true) \"true, if w_rel=0 and start of backward sliding\";
+  Boolean clutch.locked(start = false, fixed = true) \"true, if w_rel=0 and not sliding\";
+  constant Integer clutch.Unknown = 3 \"Value of mode is not known\";
+  constant Integer clutch.Free = 2 \"Element is not active\";
+  constant Integer clutch.Forward = 1 \"w_rel > 0 (forward sliding)\";
+  constant Integer clutch.Stuck = 0 \"w_rel = 0 (forward sliding, locked or backward sliding)\";
+  constant Integer clutch.Backward = -1 \"w_rel < 0 (backward sliding)\";
+  Integer clutch.mode(min = -1, max = 3, start = 0, fixed = true);
+  protected constant Real clutch.unitAngularAcceleration(quantity = \"AngularAcceleration\", unit = \"rad/s2\") = 1.0;
+  protected constant Real clutch.unitTorque(quantity = \"Torque\", unit = \"N.m\") = 1.0;
+  parameter Boolean clutch.useHeatPort = false \"=true, if heatPort is enabled\";
+  Real clutch.lossPower(quantity = \"Power\", unit = \"W\") \"Loss power leaving component via heatPort (> 0, if heat is flowing out of component)\";
+  parameter Real clutch.mue_pos[1,1] = 0.0 \"[w,mue] positive sliding friction coefficient (w_rel>=0)\";
+  parameter Real clutch.mue_pos[1,2] = 0.5 \"[w,mue] positive sliding friction coefficient (w_rel>=0)\";
+  parameter Real clutch.peak(min = 1.0) = 2.0 \"peak*mue_pos[1,2] = maximum value of mue for w_rel==0\";
+  parameter Real clutch.cgeo(min = 0.0) = 1.0 \"Geometry constant containing friction distribution assumption\";
+  parameter Real clutch.fn_max(quantity = \"Force\", unit = \"N\", min = 0.0, start = 1.0) = 2.0 \"Maximum normal force\";
+  Real clutch.mue0 \"Friction coefficient for w=0 and forward sliding\";
+  Real clutch.fn(quantity = \"Force\", unit = \"N\") \"Normal force (fn=fn_max*f_normalized)\";
+  Real clutch.f_normalized \"Normalized force signal 0..1 (normal force = fn_max*f_normalized; clutch is engaged if > 0)\";
+  Real InertiaG.flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real InertiaG.flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real InertiaG.flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real InertiaG.flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter Real InertiaG.J(quantity = \"MomentOfInertia\", unit = \"kg.m2\", min = 0.0, start = 1.0) = 20.54 \"Moment of inertia\";
+  parameter enumeration(never, avoid, default, prefer, always) InertiaG.stateSelect = StateSelect.default \"Priority to use phi and w as states\";
+  Real InertiaG.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\", stateSelect = StateSelect.default) \"Absolute rotation angle of component\";
+  Real InertiaG.w(quantity = \"AngularVelocity\", unit = \"rad/s\", stateSelect = StateSelect.default) \"Absolute angular velocity of component (= der(phi))\";
+  Real InertiaG.a(quantity = \"AngularAcceleration\", unit = \"rad/s2\") \"Absolute angular acceleration of component (= der(w))\";
+  Real Inertia.flange_a.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real Inertia.flange_a.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  Real Inertia.flange_b.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real Inertia.flange_b.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  parameter Real Inertia.J(quantity = \"MomentOfInertia\", unit = \"kg.m2\", min = 0.0, start = 1.0) = 0.5 \"Moment of inertia\";
+  parameter enumeration(never, avoid, default, prefer, always) Inertia.stateSelect = StateSelect.default \"Priority to use phi and w as states\";
+  Real Inertia.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\", stateSelect = StateSelect.default) \"Absolute rotation angle of component\";
+  Real Inertia.w(quantity = \"AngularVelocity\", unit = \"rad/s\", stateSelect = StateSelect.default) \"Absolute angular velocity of component (= der(phi))\";
+  Real Inertia.a(quantity = \"AngularAcceleration\", unit = \"rad/s2\") \"Absolute angular acceleration of component (= der(w))\";
+  parameter Boolean Tconst.useSupport = false \"= true, if support flange enabled, otherwise implicitly grounded\";
+  Real Tconst.flange.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real Tconst.flange.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  protected Real Tconst.phi_support(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute angle of support flange\";
+  Real Tconst.tau(unit = \"N.m\") \"Accelerating torque acting at flange (= -flange.tau)\";
+  Real Torque.y = load \"Value of Real output\";
+  parameter Boolean torque1.useSupport = false \"= true, if support flange enabled, otherwise implicitly grounded\";
+  Real torque1.flange.phi(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute rotation angle of flange\";
+  Real torque1.flange.tau(quantity = \"Torque\", unit = \"N.m\") \"Cut torque in the flange\";
+  protected Real torque1.phi_support(quantity = \"Angle\", unit = \"rad\", displayUnit = \"deg\") \"Absolute angle of support flange\";
+  Real torque1.tau(unit = \"N.m\") \"Accelerating torque acting at flange (= -flange.tau)\";
+  Real input1.y = dt \"Value of Real output\";
+  parameter Real wk = 1.0 \"Geschw. Koordinatensystem\";
+  parameter Real Omega = 1.0;
+  parameter Real OMrated = 1.0;
+  parameter Real Ubase = 8164.97;
+  parameter Real Ibase = 2083.21;
+  parameter Real Zbase = 3.91942;
+  parameter Real Sbase = 17009300.0;
+  parameter Real Tbase = 3399840.0;
+  parameter Real Ebase = 283320.0;
+  parameter Real Urated = 10000.0;
+  parameter Real Irated = 1473.05;
+  parameter Real Srated = 25514000.0;
+  parameter Real Speedrpm = 71.66249999999999;
+  parameter Real Speedrad = 7.50448;
+  parameter Integer NoPolepairs = 8;
+  parameter String ProjectHome = \"/home/hans/Projekte/Swansea/ShaftStudy/OM/\";
+  parameter Real Tk = 0.0;
+  Real Energy(start = 0.0);
+  Real voltage;
+  Real phi_relDEG;
+  output Real dtshaft;
+  constant Real rz31.c1 = 0.6666666666666666;
+  constant Real rz31.c2 = 0.3333333333333333;
+  constant Real rz31.c3 = 0.5773502691896258;
+  Real rz31.TR.re \"Real part of complex number\";
+  Real rz31.TR.im \"Imaginary part of complex number\";
+  Real rz31.wt;
+  Real rz31.u[1] \"Spannung\";
+  Real rz31.u[2] \"Spannung\";
+  Real rz31.i[1] \"Strom\";
+  Real rz31.i[2] \"Strom\";
+  Real rz31.dPin.v[1];
+  Real rz31.dPin.v[2];
+  Real rz31.dPin.v[3];
+  Real rz31.dPin.i[1];
+  Real rz31.dPin.i[2];
+  Real rz31.dPin.i[3];
+  Real rz31.Null.v(quantity = \"ElectricPotential\", unit = \"V\") \"Potential at the pin\";
+  Real rz31.Null.i(quantity = \"ElectricCurrent\", unit = \"A\") \"Current flowing into the pin\";
+  Real rz31.cPin.i.re \"Real part of complex number\";
+  Real rz31.cPin.i.im \"Imaginary part of complex number\";
+  Real rz31.cPin.v.re \"Real part of complex number\";
+  Real rz31.cPin.v.im \"Imaginary part of complex number\";
+  Real gnd.p.v(quantity = \"ElectricPotential\", unit = \"V\") \"Potential at the pin\";
+  Real gnd.p.i(quantity = \"ElectricCurrent\", unit = \"A\") \"Current flowing into the pin\";
+  parameter Real spg3var1.phi = 0.0 \"phase\";
+  parameter Real spg3var1.w = 1.0 \"frequency\";
+  constant Real spg3var1.c23 = 2.094395102393195;
+  Real spg3var1.DreiPin.v[1];
+  Real spg3var1.DreiPin.v[2];
+  Real spg3var1.DreiPin.v[3];
+  Real spg3var1.DreiPin.i[1];
+  Real spg3var1.DreiPin.i[2];
+  Real spg3var1.DreiPin.i[3];
+  Real spg3var1.pin.v(quantity = \"ElectricPotential\", unit = \"V\") \"Potential at the pin\";
+  Real spg3var1.pin.i(quantity = \"ElectricCurrent\", unit = \"A\") \"Current flowing into the pin\";
+  Real spg3var1.u1;
+  Real spg3var1.u2;
+  Real spg3var1.u3;
+  Real volts.y = voltage \"Value of Real output\";
+  Real one.y = 1.0 \"Value of Real output\";
+initial equation
+  der(asm.psi1.re) = 0.0;
+  der(asm.psi1.im) = 0.0;
+  der(asm.psi2.re) = 0.0;
+  der(asm.psi2.im) = 0.0;
+  der(InertiaG.w) = 0.0;
+  der(Inertia.w) = 0.0;
+  der(InertiaT.w) = 0.0;
+  shaft.w_rel = 0.0;
+initial algorithm
+  if asm.TsatM.tableOnFile then
+    asm.TsatM.tableOnFileRead := Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.readTableData(asm.TsatM.tableID, false, asm.TsatM.verboseRead);
+  else
+    asm.TsatM.tableOnFileRead := 1.0;
+  end if;
+initial algorithm
+  if asm.Tsat1.tableOnFile then
+    asm.Tsat1.tableOnFileRead := Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.readTableData(asm.Tsat1.tableID, false, asm.Tsat1.verboseRead);
+  else
+    asm.Tsat1.tableOnFileRead := 1.0;
+  end if;
+initial algorithm
+  if asm.Tsat2.tableOnFile then
+    asm.Tsat2.tableOnFileRead := Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.readTableData(asm.Tsat2.tableID, false, asm.Tsat2.verboseRead);
+  else
+    asm.Tsat2.tableOnFileRead := 1.0;
+  end if;
+equation
+  meter.up.re = meter.Pin1.v.re;
+  meter.up.im = meter.Pin1.v.im;
+  meter.NULL.v.re = meter.Pin1.v.re;
+  meter.NULL.v.im = meter.Pin1.v.im;
+  meter.u.re = 0.0;
+  meter.u.im = 0.0;
+  meter.strom = Modelica.ComplexMath.'abs'(meter.i);
+  meter.spannung = Modelica.ComplexMath.'abs'(meter.up);
+  meter.s = 1.5 * meter.strom * meter.spannung;
+  meter.sComplex = Complex.'*'.multiply(Complex.'*'.multiply(meter.up, Modelica.ComplexMath.conj(meter.i)), Complex.'constructor'.fromReal(1.5, 0.0));
+  meter.p = Modelica.ComplexMath.real(meter.sComplex);
+  meter.q = Modelica.ComplexMath.imag(meter.sComplex);
+  meter.I = Complex.'*'.multiply(meter.i, Complex.'constructor'.fromReal(Ibase, 0.0));
+  meter.Strom = meter.strom * Irated;
+  meter.Spannung = meter.spannung * Urated;
+  meter.P = meter.p * Sbase;
+  meter.Q = meter.q * Sbase;
+  meter.S = meter.s * Sbase;
+  der(meter.i2t) = 1.5 * meter.strom ^ 2.0;
+  der(meter.energy) = meter.P;
+  meter.phiU = if noEvent(ElPower.Electric.Basics.abs(meter.up.re) < 0.0) then 1e-05 else Modelica.ComplexMath.arg(meter.up, 0.0);
+  meter.i.re = meter.Pin1.i.re;
+  meter.i.im = meter.Pin1.i.im;
+  meter.u = Complex.'-'.subtract(meter.Pin1.v, meter.Pin2.v);
+  Complex.'+'(meter.Pin1.i, meter.Pin2.i) = Complex(0.0, 0.0);
+  InertiaT.phi = InertiaT.flange_a.phi;
+  InertiaT.phi = InertiaT.flange_b.phi;
+  InertiaT.w = der(InertiaT.phi);
+  InertiaT.a = der(InertiaT.w);
+  InertiaT.J * InertiaT.a = InertiaT.flange_a.tau + InertiaT.flange_b.tau;
+  shaft.tau_c = shaft.c * (shaft.phi_rel - shaft.phi_rel0);
+  shaft.tau_d = shaft.d * shaft.w_rel;
+  shaft.tau = shaft.tau_c + shaft.tau_d;
+  shaft.lossPower = shaft.tau_d * shaft.w_rel;
+  shaft.phi_rel = shaft.flange_b.phi - shaft.flange_a.phi;
+  shaft.w_rel = der(shaft.phi_rel);
+  shaft.a_rel = der(shaft.w_rel);
+  shaft.flange_b.tau = shaft.tau;
+  shaft.flange_a.tau = -shaft.tau;
+  assert(asm.TsatM.tableName <> \"NoName\", \"tableOnFile = true and no table name given\");
+  asm.TsatM.y[1] = Modelica.Blocks.Tables.CombiTable1D$asm$TsatM.getTableValue(asm.TsatM.tableID, 1, asm.TsatM.u[1], asm.TsatM.tableOnFileRead);
+  assert(asm.Tsat1.tableName <> \"NoName\", \"tableOnFile = true and no table name given\");
+  asm.Tsat1.y[1] = Modelica.Blocks.Tables.CombiTable1D$asm$Tsat1.getTableValue(asm.Tsat1.tableID, 1, asm.Tsat1.u[1], asm.Tsat1.tableOnFileRead);
+  assert(asm.Tsat2.tableName <> \"NoName\", \"tableOnFile = true and no table name given\");
+  asm.Tsat2.y[1] = Modelica.Blocks.Tables.CombiTable1D$asm$Tsat2.getTableValue(asm.Tsat2.tableID, 1, asm.Tsat2.u[1], asm.Tsat2.tableOnFileRead);
+  asm.i1.re = asm.Pin.i.re;
+  asm.i1.im = asm.Pin.i.im;
+  asm.u1.re = asm.Pin.v.re;
+  asm.u1.im = asm.Pin.v.im;
+  asm.psi1abs = Modelica.ComplexMath.'abs'(asm.psi1);
+  asm.psi2abs = Modelica.ComplexMath.'abs'(asm.psi2);
+  asm.psimabs = Modelica.ComplexMath.'abs'(asm.psim);
+  asm.im = Complex.'+'(asm.i1, asm.i2);
+  Complex.'*'.multiply(asm.psim, Complex.'constructor'.fromReal(asm.fdm, 0.0)) = Complex.'*'.multiply(Complex.'constructor'.fromReal(asm.xh, 0.0), asm.im);
+  asm.psimabs = asm.TsatM.u[1];
+  asm.fdm = asm.TsatM.y[1];
+  asm.i1Abs = Modelica.ComplexMath.'abs'(asm.i1);
+  asm.i1Abs = asm.Tsat1.u[1];
+  asm.fd1 = asm.Tsat1.y[1];
+  asm.i2Abs = Modelica.ComplexMath.'abs'(asm.i2);
+  asm.i2Abs = asm.Tsat2.u[1];
+  asm.fd2 = asm.Tsat2.y[1];
+  asm.psi1 = Complex.'+'(Complex.'*'.multiply(Complex.'constructor'.fromReal(asm.fd1 * asm.x1s, 0.0), asm.i1), asm.psim);
+  asm.psi2 = Complex.'+'(asm.psim, Complex.'*'.multiply(Complex.'constructor'.fromReal(asm.fd2 * asm.x2s, 0.0), asm.i2));
+  asm.u1 = Complex.'+'(Complex.'+'(Complex.'*'.multiply(Complex.'constructor'.fromReal(asm.r1, 0.0), asm.i1), Complex.'/'(Complex(der(asm.psi1.re), der(asm.psi1.im)), Complex(OMrated, 0.0))), Complex.'*'.multiply(Complex.'*'.multiply(Complex.'constructor'.fromReal(wk, 0.0), Complex(0.0, 1.0)), asm.psi1));
+  Complex(0.0, 0.0) = Complex.'+'(Complex.'+'(Complex.'*'.multiply(Complex.'constructor'.fromReal(asm.r2, 0.0), asm.i2), Complex.'/'(Complex(der(asm.psi2.re), der(asm.psi2.im)), Complex(OMrated, 0.0))), Complex.'*'.multiply(Complex.'*'.multiply(Complex.'constructor'.fromReal(wk - asm.w, 0.0), Complex(0.0, 1.0)), asm.psi2));
+  asm.tau = asm.i1.re * asm.psi1.im - asm.i1.im * asm.psi1.re;
+  asm.phi = asm.Flange_a.phi - asm.Flange_b.phi;
+  asm.tau = asm.Flange_a.tau;
+  asm.tau = -asm.Flange_b.tau;
+  asm.w = der(asm.phi);
+  asm.strom = Modelica.ComplexMath.'abs'(asm.Pin.i);
+  asm.spannung = Modelica.ComplexMath.'abs'(asm.Pin.v);
+  asm.leistung = Complex.'*'.multiply(Complex.'*'.multiply(Complex.'constructor'.fromReal(1.5, 0.0), asm.Pin.v), Modelica.ComplexMath.conj(asm.Pin.i));
+  asm.leistungMech = 1.5 * asm.w * asm.tau;
+  asm.deltaP = asm.leistung.re + asm.leistungMech;
+  fixed.flange.phi = fixed.phi0;
+  clutch.mue0 = Modelica.Math.tempInterpol1(0.0, {{clutch.mue_pos[1,1], clutch.mue_pos[1,2]}}, 2);
+  clutch.w_relfric = clutch.w_rel;
+  clutch.a_relfric = clutch.a_rel;
+  clutch.fn = clutch.fn_max * clutch.f_normalized;
+  clutch.free = clutch.fn <= 0.0;
+  clutch.tau0 = clutch.mue0 * clutch.cgeo * clutch.fn;
+  clutch.tau0_max = clutch.peak * clutch.tau0;
+  clutch.tau = if clutch.locked then clutch.sa else if clutch.free then 0.0 else clutch.cgeo * clutch.fn * (if clutch.startForward then Modelica.Math.tempInterpol1(clutch.w_rel, {{clutch.mue_pos[1,1], clutch.mue_pos[1,2]}}, 2) else if clutch.startBackward then -Modelica.Math.tempInterpol1(-clutch.w_rel, {{clutch.mue_pos[1,1], clutch.mue_pos[1,2]}}, 2) else if pre(clutch.mode) == 1 then Modelica.Math.tempInterpol1(clutch.w_rel, {{clutch.mue_pos[1,1], clutch.mue_pos[1,2]}}, 2) else -Modelica.Math.tempInterpol1(-clutch.w_rel, {{clutch.mue_pos[1,1], clutch.mue_pos[1,2]}}, 2));
+  clutch.lossPower = clutch.tau * clutch.w_relfric;
+  clutch.phi_rel = clutch.flange_b.phi - clutch.flange_a.phi;
+  clutch.w_rel = der(clutch.phi_rel);
+  clutch.a_rel = der(clutch.w_rel);
+  clutch.flange_b.tau = clutch.tau;
+  clutch.flange_a.tau = -clutch.tau;
+  clutch.startForward = pre(clutch.mode) == 0 and (clutch.sa > clutch.tau0_max or pre(clutch.startForward) and clutch.sa > clutch.tau0) or pre(clutch.mode) == -1 and clutch.w_relfric > clutch.w_small or initial() and clutch.w_relfric > 0.0;
+  clutch.startBackward = pre(clutch.mode) == 0 and (clutch.sa < (-clutch.tau0_max) or pre(clutch.startBackward) and clutch.sa < (-clutch.tau0)) or pre(clutch.mode) == 1 and clutch.w_relfric < (-clutch.w_small) or initial() and clutch.w_relfric < 0.0;
+  clutch.locked = not clutch.free and not (pre(clutch.mode) == 1 or clutch.startForward or pre(clutch.mode) == -1 or clutch.startBackward);
+  clutch.a_relfric = if clutch.locked then 0.0 else if clutch.free then clutch.sa else if clutch.startForward then clutch.sa - clutch.tau0_max else if clutch.startBackward then clutch.sa + clutch.tau0_max else if pre(clutch.mode) == 1 then clutch.sa - clutch.tau0_max else clutch.sa + clutch.tau0_max;
+  clutch.mode = if clutch.free then 2 else if (pre(clutch.mode) == 1 or pre(clutch.mode) == 2 or clutch.startForward) and clutch.w_relfric > 0.0 then 1 else if (pre(clutch.mode) == -1 or pre(clutch.mode) == 2 or clutch.startBackward) and clutch.w_relfric < 0.0 then -1 else 0;
+  InertiaG.phi = InertiaG.flange_a.phi;
+  InertiaG.phi = InertiaG.flange_b.phi;
+  InertiaG.w = der(InertiaG.phi);
+  InertiaG.a = der(InertiaG.w);
+  InertiaG.J * InertiaG.a = InertiaG.flange_a.tau + InertiaG.flange_b.tau;
+  Inertia.phi = Inertia.flange_a.phi;
+  Inertia.phi = Inertia.flange_b.phi;
+  Inertia.w = der(Inertia.phi);
+  Inertia.a = der(Inertia.w);
+  Inertia.J * Inertia.a = Inertia.flange_a.tau + Inertia.flange_b.tau;
+  Tconst.flange.tau = -Tconst.tau;
+  Tconst.phi_support = 0.0;
+  torque1.flange.tau = -torque1.tau;
+  torque1.phi_support = 0.0;
+  rz31.u[1] = 0.6666666666666666 * rz31.dPin.v[1] + -0.3333333333333333 * rz31.dPin.v[2] + -0.3333333333333333 * rz31.dPin.v[3];
+  rz31.u[2] = 0.5773502691896258 * rz31.dPin.v[2] + -0.5773502691896258 * rz31.dPin.v[3];
+  -rz31.i[1] = 0.6666666666666666 * rz31.dPin.i[1] + -0.3333333333333333 * rz31.dPin.i[2] + -0.3333333333333333 * rz31.dPin.i[3];
+  -rz31.i[2] = 0.5773502691896258 * rz31.dPin.i[2] + -0.5773502691896258 * rz31.dPin.i[3];
+  rz31.wt = wk * time * OMrated;
+  rz31.TR = Modelica.ComplexMath.exp(Complex(0.0, -rz31.wt));
+  rz31.cPin.v = Complex.'*'.multiply(Complex(rz31.u[1], rz31.u[2]), rz31.TR);
+  rz31.cPin.i = Complex.'*'.multiply(Complex(rz31.i[1], rz31.i[2]), rz31.TR);
+  rz31.Null.i = (-rz31.dPin.i[3]) - rz31.dPin.i[1] - rz31.dPin.i[2];
+  rz31.Null.v = rz31.dPin.v[1] + rz31.dPin.v[2] + rz31.dPin.v[3];
+  gnd.p.v = 0.0;
+  spg3var1.DreiPin.v[1] = spg3var1.pin.v + spg3var1.u1 * cos(spg3var1.w * OMrated * time - spg3var1.phi);
+  spg3var1.DreiPin.v[2] = spg3var1.pin.v + spg3var1.u2 * cos(-2.094395102393195 + spg3var1.w * time * OMrated - spg3var1.phi);
+  spg3var1.DreiPin.v[3] = spg3var1.pin.v + spg3var1.u3 * cos(2.094395102393195 + spg3var1.w * OMrated * time - spg3var1.phi);
+  spg3var1.pin.i = spg3var1.DreiPin.i[1] + spg3var1.DreiPin.i[2] + spg3var1.DreiPin.i[3];
+  phi_relDEG = Modelica.SIunits.Conversions.to_deg(clutch.phi_rel) / /*Real*/(NoPolepairs);
+  voltage = if time > Tk then 0.0 else 1.0;
+  der(Energy) = clutch.lossPower;
+  dtshaft = shaft.tau;
+  6.283185307179586 * cycle = time;
+  torque = (-asm.tau) * Tbase;
+  torqueS = (-shaft.tau) * Tbase;
+  meter.Pin1.i.re + asm.Pin.i.re = 0.0;
+  meter.Pin1.i.im + asm.Pin.i.im = 0.0;
+  rz31.cPin.i.re + meter.Pin2.i.re = 0.0;
+  rz31.cPin.i.im + meter.Pin2.i.im = 0.0;
+  meter.NULL.i.re = 0.0;
+  meter.NULL.i.im = 0.0;
+  InertiaT.flange_a.tau + shaft.flange_b.tau = 0.0;
+  Tconst.flange.tau + InertiaT.flange_b.tau = 0.0;
+  shaft.flange_a.tau + Inertia.flange_b.tau = 0.0;
+  InertiaG.flange_a.tau + torque1.flange.tau + asm.Flange_a.tau = 0.0;
+  fixed.flange.tau + asm.Flange_b.tau = 0.0;
+  InertiaG.flange_b.tau + clutch.flange_a.tau = 0.0;
+  clutch.flange_b.tau + Inertia.flange_a.tau = 0.0;
+  rz31.dPin.i[1] + spg3var1.DreiPin.i[1] = 0.0;
+  rz31.dPin.i[2] + spg3var1.DreiPin.i[2] = 0.0;
+  rz31.dPin.i[3] + spg3var1.DreiPin.i[3] = 0.0;
+  rz31.Null.i = 0.0;
+  spg3var1.pin.i + gnd.p.i = 0.0;
+  one.y = spg3var1.u1;
+  spg3var1.u2 = spg3var1.u3;
+  spg3var1.u2 = volts.y;
+  rz31.dPin.v[1] = spg3var1.DreiPin.v[1];
+  rz31.dPin.v[2] = spg3var1.DreiPin.v[2];
+  rz31.dPin.v[3] = spg3var1.DreiPin.v[3];
+  gnd.p.v = spg3var1.pin.v;
+  meter.Pin2.v.re = rz31.cPin.v.re;
+  meter.Pin2.v.im = rz31.cPin.v.im;
+  input1.y = torque1.tau;
+  InertiaG.flange_a.phi = asm.Flange_a.phi;
+  InertiaG.flange_a.phi = torque1.flange.phi;
+  Tconst.tau = Torque.y;
+  InertiaT.flange_b.phi = Tconst.flange.phi;
+  Inertia.flange_a.phi = clutch.flange_b.phi;
+  Inertia.flange_b.phi = shaft.flange_a.phi;
+  InertiaG.flange_b.phi = clutch.flange_a.phi;
+  Max.y = clutch.f_normalized;
+  asm.Flange_b.phi = fixed.flange.phi;
+  asm.Pin.v.re = meter.Pin1.v.re;
+  asm.Pin.v.im = meter.Pin1.v.im;
+  InertiaT.flange_a.phi = shaft.flange_b.phi;
+algorithm
+
+algorithm
+end SwP3v04;
+"

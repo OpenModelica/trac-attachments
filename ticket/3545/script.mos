@@ -1,0 +1,9 @@
+loadString("package P1 model M1 end M1; end P1;", "P1");
+getErrorString();
+listFile(P1);
+getErrorString();
+setSourceFile(P1, "P2");
+setSourceFile(P1.M1, "P2");
+getClassInformation(P1);
+getClassInformation(P1.M1);
+listFile(P1);

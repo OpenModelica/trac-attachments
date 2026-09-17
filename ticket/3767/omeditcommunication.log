@@ -1,0 +1,93 @@
+setCommandLineOptions(+locale=de_DE) 14:41:46:871
+true 14:41:46:871
+Elapsed Time :: 0 secs
+
+getVersion(OpenModelica) 14:41:46:871
+"OpenModelica v1.9.4" 14:41:46:871
+Elapsed Time :: 0 secs
+
+"OMEdit v1.9.4-dev-525-ge8c9162" 14:41:46:871
+"OMEdit v1.9.4-dev-525-ge8c9162" 14:41:46:902
+Elapsed Time :: 0.031 secs
+
+getInstallationDirectoryPath() 14:41:46:902
+"C:/OpenModelica1.9.4/" 14:41:46:902
+Elapsed Time :: 0 secs
+
+cd(C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit/) 14:41:46:902
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:46:902
+Elapsed Time :: 0 secs
+
+getModelicaPath() 14:41:46:902
+"C:/OpenModelica1.9.4/lib/omlibrary" 14:41:46:902
+Elapsed Time :: 0 secs
+
+errors:=getMessagesStringInternal() 14:41:46:902
+{} 14:41:46:918
+Elapsed Time :: 0.016 secs
+
+size(errors,1) 14:41:46:918
+0 14:41:46:918
+Elapsed Time :: 0 secs
+
+cd() 14:41:46:918
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:46:918
+Elapsed Time :: 0 secs
+
+getAvailableMatchingAlgorithms() 14:41:46:949
+({"BFSB","DFSB","MC21A","PF","PFPlus","HK","HKDW","ABMP","PR","DFSBExt","BFSBExt","MC21AExt","PFExt","PFPlusExt","HKExt","HKDWExt","ABMPExt","PRExt","BB"},{"Breadth First Search based algorithm.","Depth First Search based algorithm.","Depth First Search based algorithm with look ahead feature.","Depth First Search based algorithm with look ahead feature.","Depth First Search based algorithm with look ahead feature and fair row traversal.","Combined BFS and DFS algorithm.","Combined BFS and DFS algorithm.","Combined BFS and DFS algorithm.","Matching algorithm using push relabel mechanism.","Depth First Search based Algorithm external c implementation.","Breadth First Search based Algorithm external c implementation.","Depth First Search based Algorithm with look ahead feature external c implementation.","Depth First Search based Algorithm with look ahead feature external c implementation.","Depth First Search based Algorithm with look ahead feature and fair row traversal external c implementation.","Combined BFS and DFS algorithm external c implementation.","Combined BFS and DFS algorithm external c implementation.","Combined BFS and DFS algorithm external c implementation.","Matching algorithm using push relabel mechanism external c implementation.","BBs try."}) 14:41:46:949
+Elapsed Time :: 0 secs
+
+getMatchingAlgorithm() 14:41:46:949
+"PFPlusExt" 14:41:46:949
+Elapsed Time :: 0 secs
+
+getAvailableIndexReductionMethods() 14:41:46:949
+({"uode","dynamicStateSelection","dummyDerivatives"},{"Use the underlying ODE without the constraints.","Simple index reduction method, select (dynamic) dummy states based on analysis of the system.","Simple index reduction method, select (static) dummy states based on heuristic."}) 14:41:46:949
+Elapsed Time :: 0 secs
+
+getIndexReductionMethod() 14:41:46:949
+"dynamicStateSelection" 14:41:46:949
+Elapsed Time :: 0 secs
+
+getConfigFlagValidOptions(simCodeTarget) 14:41:46:949
+({"None","Adevs","C","Cpp","CSharp","Java","JavaScript","sfmi","XML"},"Setzt die Zielsprache f�r die Codegenerierung.",{}) 14:41:46:949
+Elapsed Time :: 0 secs
+
+getConfigFlagValidOptions(target) 14:41:46:949
+({"gcc","msvc","msvc10","msvc12","msvc13","msvc15","vxworks69","debugrt"},"Setzt den zu verwendenden Ziel-Compiler.",{}) 14:41:46:949
+Elapsed Time :: 0 secs
+
+cd(C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit) 14:41:46:980
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:46:980
+Elapsed Time :: 0 secs
+
+cd() 14:41:46:980
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:46:980
+Elapsed Time :: 0 secs
+
+cd() 14:41:47:136
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:47:136
+Elapsed Time :: 0 secs
+
+cd() 14:41:47:152
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:47:152
+Elapsed Time :: 0 secs
+
+cd() 14:41:47:168
+"C:/Users/PHILIP~1/AppData/Local/Temp/OpenModelica/OMEdit" 14:41:47:168
+Elapsed Time :: 0 secs
+
+getAvailableLibraries() 14:41:47:199
+{"ADGenKinetics","ADMSL","AdvancedNoise","Annex60","BioChem","BondGraph","BondLib","BrineProp","BuildSysPro","BuildingSystems","Buildings","Chemical","Complex","ComplexLib","ConPNlib","DESLib","ExtendedPetriNets","ExternData","FCSys","FCSysTest","FastBuildings","FaultTriggering","Flight","FractionalOrder","FuzzyControl","HelmholtzMedia","IdealizedContact","IndustrialControlSystems","InstantaneousSymmetricalComponents","LinearMPC","MVEMLib","ManualTracking","MessagePack","Modelica","ModelicaAdditions","ModelicaByExample","ModelicaCompliance","ModelicaDEVS","ModelicaReference","ModelicaServices","ModelicaTest","Modelica_DeviceDrivers","Modelica_EnergyStorages","Modelica_LinearSystems2","Modelica_Noise","Modelica_StateGraph2","Modelica_Synchronous","MotorcycleDynamics","NcDataReader2","NeuralNetwork","ObjectStab","ObsoleteModelica3","OpenBLDC","OpenFDM","OpenHydraulics","PNlib","Physiolibrary","PlanarMechanics","PowerFlow","PowerSystems","PraxisSimulationstechnik","QCalc","QCalcTests","QSSFluidFlow","RealTimeCoordinationLibrary","ScalableTestSuite","Servomechanisms","SiemensPower","Spot","SpotExamples","SystemDynamics","ThermoPower","ThermoSysPro","VehicleInterfaces","WasteWater","WindPowerPlants","XogenyTest","iPSL","test"} 14:41:47:199
+Elapsed Time :: 0 secs
+
+numProcessors() 14:41:47:199
+8 14:41:47:199
+Elapsed Time :: 0 secs
+
+getConfigFlagValidOptions(profiling) 14:41:47:214
+({"none","blocks","blocks+html","all","all_perf","all_stat"},"Sets the profiling level to use. Profiled equations and functions record execution time and count for each time step taken by the integrator.",{"Generate code without profiling","Generate code for profiling function calls as well as linear and non-linear systems of equations","Like blocks, but also run xsltproc and gnuplot to generate an html report","Generate code for profiling of all functions and equations","Generate code for profiling of all functions and equations with additional performance data using the papi-interface (cpp-runtime)","Generate code for profiling of all functions and equations with additional statistics (cpp-runtime)"}) 14:41:47:214
+Elapsed Time :: 0 secs
+
+loadModel(Modelica,### Handle array arguments ###,false,,false) 14:41:48:306

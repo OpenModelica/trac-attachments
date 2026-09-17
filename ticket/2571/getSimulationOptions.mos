@@ -1,0 +1,4 @@
+loadFile("HelloWorld.mo");
+getErrorString();
+getSimulationOptions(HelloWorld);
+getErrorString();

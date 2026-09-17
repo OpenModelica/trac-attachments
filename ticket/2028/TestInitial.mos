@@ -1,0 +1,13 @@
+loadString("
+model TestInitial
+	discrete Real T[3,3];
+initial equation
+	pre(T) = identity(3);
+equation
+	when sample(1e-8, 1) then
+		T = time*identity(3);
+	end when;
+end TestInitial;
+"); getErrorString();
+
+simulate(TestInitial); getErrorString();

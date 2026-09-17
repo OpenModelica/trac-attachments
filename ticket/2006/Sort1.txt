@@ -1,0 +1,78 @@
+#1
+
+
+# Drive cycle for manual and automatic transmission
+# =================================================
+#
+# driveCycleDat[:,3]
+#
+#  where:
+#    column 1 - time [s]
+#    column 2 - desired speed [km/h]
+#    column 3 - gear for manual transmission
+#                  = 0: No gear (idle)
+#                  > 0: Forward gear
+#                  < 0: Rear gear
+#               gear for automatic transmission
+#                  = 0: gearboxMode = Neutral
+#                  > 0: gearboxMode = Drive (select appropriate forward gear)
+#                  < 0: gearboxMode = Rear (select appropriate rear gear)
+#
+# The line below starting with "# Heading:" is used as automatic heading for
+# a plot with PowerTrain.DriverEnvironments.DriveCycles.plotDriveCycle
+#
+# Heading: Ciclo Sort1 come da specifiche BMB
+double Cycle(49,3)
+     00.00    0.00   0
+     05.39    20.0   0
+     17.22    20.0   0
+     24.17    0.00   0
+     44.17    0.00   0
+     54.99    30.0   0
+     68.37    30.0   0
+     78.79    0.00   0
+     98.79    0.00   0
+    116.71    40.0   0
+    120.60    40.0   0
+    134.49    0.00   0
+    150.00    0.00   0
+
+    155.39    20.0   0
+    167.22    20.0   0
+    174.17    0.00   0
+    194.17    0.00   0
+    204.99    30.0   0
+    218.37    30.0   0
+    228.79    0.00   0
+    248.79    0.00   0
+    266.71    40.0   0
+    270.60    40.0   0
+    284.49    0.00   0
+    300.00    0.00   0
+
+    305.39    20.0   0
+    317.22    20.0   0
+    324.17    0.00   0
+    344.17    0.00   0
+    354.99    30.0   0
+    368.37    30.0   0
+    378.79    0.00   0
+    398.79    0.00   0
+    416.71    40.0   0
+    420.60    40.0   0
+    434.49    0.00   0
+    450.00    0.00   0
+
+    455.39    20.0   0
+    467.22    20.0   0
+    474.17    0.00   0
+    494.17    0.00   0
+    504.99    30.0   0
+    518.37    30.0   0
+    528.79    0.00   0
+    548.79    0.00   0
+    566.71    40.0   0
+    570.60    40.0   0
+    584.49    0.00   0
+    600.00    0.00   0
+

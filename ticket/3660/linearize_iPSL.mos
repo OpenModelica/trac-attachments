@@ -1,0 +1,10 @@
+loadModel(Modelica);getErrorString();
+loadFile("iPSL_stripped.mo");getErrorString();
+instantiateModel(iPSL);getErrorString();
+instantiateModel(iPSL.Examples.Example_1.Example_1);getErrorString();
+
+linearize(iPSL.Examples.Example_1.Example_1,stopTime=0.0);getErrorString();
+
+loadFile("linear_iPSL.Examples.Example_1.Example_1.mo");getErrorString();
+
+(a) := getParameterValue(linear_iPSL_Examples_Example__1_Example__1,"A");getErrorString();

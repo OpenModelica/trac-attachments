@@ -1,0 +1,12 @@
+loadFile("A.mo");
+getErrorString();
+getNamedAnnotation(A, __OpenModelica_commandLineOptions);
+getErrorString();
+list(A);
+getErrorString();
+addClassAnnotation(A, annotate = __OpenModelica_commandLineOptions("+d=initialzation +indexReductionMethod=dynamicStateSelection"));
+getErrorString();
+list(A);
+getErrorString();
+getNamedAnnotation(A, __OpenModelica_commandLineOptions);
+getErrorString();

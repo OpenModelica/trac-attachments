@@ -1,0 +1,8 @@
+Caught signal 11 (SIGSEGV)
+OMEdit[0x80b96b9]
+OMEdit(_Z13signalHandleri+0x140)[0x80b92d0]
+[0xb7790400]
+/usr/lib/i386-linux-gnu/libQtGui.so.4(_ZNK14QPlainTextEdit8documentEv+0x13)[0xb4e175b3]
+OMEdit(_ZN17LibraryTreeWidget22saveXMLLibraryTreeNodeEP15LibraryTreeNode+0x2dc)[0x8128d9c]
+[0xbfb34658]
+[0xa381068]

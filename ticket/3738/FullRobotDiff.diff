@@ -1,0 +1,416 @@
+--- FullRobot3.2.1.mo	2016-03-02 16:25:10.412195575 +0100
++++ FullRobotTrunk.mo	2016-03-02 16:25:08.545187299 +0100
+@@ -16,10 +16,10 @@
+     final constant Real inf = 1.e+60 "Biggest Real number such that inf and -inf are representable on the machine";
+     final constant Integer Integer_inf = OpenModelica.Internal.Architecture.integerMax() "Biggest Integer number such that Integer_inf and -Integer_inf are representable on the machine";
+   end Machine;
+-  annotation(Protection(access = Access.hide), version = "3.2.1", versionBuild = 2, versionDate = "2013-08-14", dateModified = "2013-08-14 08:44:41Z"); 
++  annotation(Protection(access = Access.hide), version = "trunk", versionBuild = 0, versionDate = "2016-01-15", dateModified = "2016-01-15 08:44:41Z"); 
+ end ModelicaServices;
+ 
+-package Modelica  "Modelica Standard Library - Version 3.2.1 (Build 4)" 
++package Modelica  "Modelica Standard Library - Version 3.2.2" 
+   extends Modelica.Icons.Package;
+ 
+   package Blocks  "Library of basic input/output control blocks (continuous, discrete, logical, table blocks)" 
+@@ -67,6 +67,12 @@
+         RealInput u "Connector of Real input signal";
+         RealOutput y "Connector of Real output signal";
+       end SISO;
++
++      partial block BooleanSISO  "Single Input Single Output control block with signals of type Boolean" 
++        extends Modelica.Blocks.Icons.BooleanBlock;
++        BooleanInput u "Connector of Boolean input signal";
++        BooleanOutput y "Connector of Boolean output signal";
++      end BooleanSISO;
+     end Interfaces;
+ 
+     package Logical  "Library of components with Boolean input and output signals" 
+@@ -119,17 +125,13 @@
+       extends Modelica.Icons.Package;
+ 
+       model RealPassThrough  "Pass a Real signal through without modification" 
+-        extends Modelica.Blocks.Icons.Block;
+-        Modelica.Blocks.Interfaces.RealInput u "Input signal" annotation(HideResult = true);
+-        Modelica.Blocks.Interfaces.RealOutput y "Output signal" annotation(HideResult = true);
++        extends Modelica.Blocks.Interfaces.SISO;
+       equation
+         y = u;
+       end RealPassThrough;
+ 
+       model BooleanPassThrough  "Pass a Boolean signal through without modification" 
+-        extends Modelica.Blocks.Icons.BooleanBlock;
+-        Modelica.Blocks.Interfaces.BooleanInput u "Input signal";
+-        Modelica.Blocks.Interfaces.BooleanOutput y "Output signal";
++        extends Modelica.Blocks.Interfaces.BooleanSISO;
+       equation
+         y = u;
+       end BooleanPassThrough;
+@@ -291,12 +293,12 @@
+         end Ground;
+ 
+         model Resistor  "Ideal linear electrical resistor" 
+-          parameter Modelica.SIunits.Resistance R(start = 1) "Resistance at temperature T_ref";
+-          parameter Modelica.SIunits.Temperature T_ref = 300.15 "Reference temperature";
+-          parameter Modelica.SIunits.LinearTemperatureCoefficient alpha = 0 "Temperature coefficient of resistance (R_actual = R*(1 + alpha*(T_heatPort - T_ref))";
++          parameter .Modelica.SIunits.Resistance R(start = 1) "Resistance at temperature T_ref";
++          parameter .Modelica.SIunits.Temperature T_ref = 300.15 "Reference temperature";
++          parameter .Modelica.SIunits.LinearTemperatureCoefficient alpha = 0 "Temperature coefficient of resistance (R_actual = R*(1 + alpha*(T_heatPort - T_ref))";
+           extends Modelica.Electrical.Analog.Interfaces.OnePort;
+           extends Modelica.Electrical.Analog.Interfaces.ConditionalHeatPort(T = T_ref);
+-          Modelica.SIunits.Resistance R_actual "Actual resistance = R*(1 + alpha*(T_heatPort - T_ref))";
++          .Modelica.SIunits.Resistance R_actual "Actual resistance = R*(1 + alpha*(T_heatPort - T_ref))";
+         equation
+           assert(1 + alpha * (T_heatPort - T_ref) >= Modelica.Constants.eps, "Temperature outside scope of model!");
+           R_actual = R * (1 + alpha * (T_heatPort - T_ref));
+@@ -373,12 +375,12 @@
+         extends Modelica.Icons.InterfacesPackage;
+ 
+         connector Pin  "Pin of an electrical component" 
+-          Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
++          .Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+         - a connector of an electrical component is not connected.");
+-          flow Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
++          flow .Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+@@ -386,12 +388,12 @@
+         end Pin;
+ 
+         connector PositivePin  "Positive pin of an electric component" 
+-          Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
++          .Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+         - a connector of an electrical component is not connected.");
+-          flow Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
++          flow .Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+@@ -399,12 +401,12 @@
+         end PositivePin;
+ 
+         connector NegativePin  "Negative pin of an electric component" 
+-          Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
++          .Modelica.SIunits.Voltage v "Potential at the pin" annotation(unassignedMessage = "An electrical potential cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+         - a connector of an electrical component is not connected.");
+-          flow Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
++          flow .Modelica.SIunits.Current i "Current flowing into the pin" annotation(unassignedMessage = "An electrical current cannot be uniquely calculated.
+         The reason could be that
+         - a ground object is missing (Modelica.Electrical.Analog.Basic.Ground)
+           to define the zero potential of the electrical circuit, or
+@@ -423,11 +425,11 @@
+         end OnePort;
+ 
+         partial model ConditionalHeatPort  "Partial model to include a conditional HeatPort in order to describe the power loss via a thermal network" 
+-          parameter Boolean useHeatPort = false "=true, if HeatPort is enabled" annotation(Evaluate = true, HideResult = true);
+-          parameter Modelica.SIunits.Temperature T = 293.15 "Fixed device temperature if useHeatPort = false";
+-          Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(T(start = T) = T_heatPort, Q_flow = -LossPower) if useHeatPort;
+-          Modelica.SIunits.Power LossPower "Loss power leaving component via HeatPort";
+-          Modelica.SIunits.Temperature T_heatPort "Temperature of HeatPort";
++          parameter Boolean useHeatPort = false "=true, if heatPort is enabled" annotation(Evaluate = true, HideResult = true);
++          parameter .Modelica.SIunits.Temperature T = 293.15 "Fixed device temperature if useHeatPort = false";
++          Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a heatPort(T(start = T) = T_heatPort, Q_flow = -LossPower) if useHeatPort "Conditional heat port";
++          .Modelica.SIunits.Power LossPower "Loss power leaving component via heatPort";
++          .Modelica.SIunits.Temperature T_heatPort "Temperature of heatPort";
+         equation
+           if not useHeatPort then
+             T_heatPort = T;
+@@ -652,7 +654,7 @@
+               end ControlBus;
+ 
+               model PathPlanning6  "Generate reference angles for fastest kinematic movement" 
+-                parameter Integer naxis = 6 "number of driven axis";
++                parameter Integer naxis = 6 "Number of driven axis";
+                 parameter Real[naxis] angleBegDeg(each unit = "deg") = zeros(naxis) "Start angles";
+                 parameter Real[naxis] angleEndDeg(each unit = "deg") = ones(naxis) "End angles";
+                 parameter .Modelica.SIunits.AngularVelocity[naxis] speedMax = fill(3, naxis) "Maximum axis speed";
+@@ -729,7 +731,7 @@
+ 
+               model GearType1  "Motor inertia and gearbox model for r3 joints 1,2,3" 
+                 extends Modelica.Mechanics.Rotational.Interfaces.PartialTwoFlanges;
+-                parameter Real i = -105 "gear ratio";
++                parameter Real i = -105 "Gear ratio";
+                 parameter Real c(unit = "N.m/rad") = 43 "Spring constant";
+                 parameter Real d(unit = "N.m.s/rad") = 0.005 "Damper constant";
+                 parameter .Modelica.SIunits.Torque Rv0 = 0.4 "Viscous friction torque at zero velocity";
+@@ -1173,9 +1175,9 @@
+               extends .Modelica.Icons.Function;
+               input .Modelica.Mechanics.MultiBody.Frames.Quaternions.Orientation Q1 "Quaternions orientation object to rotate frame 0 into frame 1";
+               input .Modelica.Mechanics.MultiBody.Frames.Quaternions.Orientation Q2 "Quaternions orientation object to rotate frame 0 into frame 2";
+-              output Real[3] residue "The half of the rotation angles around x-, y-, and z-axis of frame 1 to rotate frame 1 into frame 2 for a small rotation (shall be zero)";
++              output Real[3] residue "Zero vector if Q1 and Q2 are identical (the first three elements of the relative transformation (is {0,0,0} for the null rotation, guarded by atan2 to make the mirrored solution invalid";
+             algorithm
+-              residue := [Q1[4], Q1[3], -Q1[2], -Q1[1]; -Q1[3], Q1[4], Q1[1], -Q1[2]; Q1[2], -Q1[1], Q1[4], -Q1[3]] * Q2;
++              residue := {atan2({Q1[4], Q1[3], -Q1[2], -Q1[1]} * Q2, Q1 * Q2), atan2({-Q1[3], Q1[4], Q1[1], -Q1[2]} * Q2, Q1 * Q2), atan2({Q1[2], -Q1[1], Q1[4], -Q1[3]} * Q2, Q1 * Q2)};
+               annotation(Inline = true); 
+             end equalityConstraint;
+           end Orientation;
+@@ -1758,7 +1760,7 @@
+           .Modelica.SIunits.AngularVelocity w "Absolute angular velocity of flange_a and flange_b";
+           .Modelica.SIunits.AngularAcceleration a "Absolute angular acceleration of flange_a and flange_b";
+         equation
+-          tau0 = Modelica.Math.tempInterpol1(0, tau_pos, 2);
++          tau0 = Modelica.Math.Vectors.interpolate(tau_pos[:, 1], tau_pos[:, 2], 0, 1);
+           tau0_max = peak * tau0;
+           free = false;
+           phi = flange_a.phi - phi_support;
+@@ -1768,7 +1770,7 @@
+           w_relfric = w;
+           a_relfric = a;
+           flange_a.tau + flange_b.tau - tau = 0;
+-          tau = if locked then sa * unitTorque else if startForward then Modelica.Math.tempInterpol1(w, tau_pos, 2) else if startBackward then -Modelica.Math.tempInterpol1(-w, tau_pos, 2) else if pre(mode) == Forward then Modelica.Math.tempInterpol1(w, tau_pos, 2) else -Modelica.Math.tempInterpol1(-w, tau_pos, 2);
++          tau = if locked then sa * unitTorque else if startForward then Modelica.Math.Vectors.interpolate(tau_pos[:, 1], tau_pos[:, 2], w, 1) else if startBackward then -Modelica.Math.Vectors.interpolate(tau_pos[:, 1], tau_pos[:, 2], -w, 1) else if pre(mode) == Forward then Modelica.Math.Vectors.interpolate(tau_pos[:, 1], tau_pos[:, 2], w, 1) else -Modelica.Math.Vectors.interpolate(tau_pos[:, 1], tau_pos[:, 2], -w, 1);
+           lossPower = tau * w_relfric;
+         end BearingFriction;
+ 
+@@ -1884,9 +1886,11 @@
+ 
+         model ConstantTorque  "Constant torque, not dependent on speed" 
+           extends Rotational.Interfaces.PartialTorque;
+-          parameter Modelica.SIunits.Torque tau_constant "Constant torque (if negative, torque is acting as load)";
++          parameter Modelica.SIunits.Torque tau_constant "Constant torque (if negative, torque is acting as load in positive direction of rotation)";
++          Modelica.SIunits.AngularVelocity w "Angular velocity of flange with respect to support (= der(phi))";
+           Modelica.SIunits.Torque tau "Accelerating torque acting at flange (= -flange.tau)";
+         equation
++          w = der(phi);
+           tau = -flange.tau;
+           tau = tau_constant;
+         end ConstantTorque;
+@@ -1984,19 +1988,19 @@
+           parameter .Modelica.SIunits.AngularVelocity w_small = 1.0e10 "Relative angular velocity near to zero if jumps due to a reinit(..) of the velocity can occur (set to low value only if such impulses can occur)";
+           .Modelica.SIunits.AngularVelocity w_relfric "Relative angular velocity between frictional surfaces";
+           .Modelica.SIunits.AngularAcceleration a_relfric "Relative angular acceleration between frictional surfaces";
+-          .Modelica.SIunits.Torque tau0 "Friction torque for w=0 and forward sliding";
+-          .Modelica.SIunits.Torque tau0_max "Maximum friction torque for w=0 and locked";
+-          Boolean free "true, if frictional element is not active";
++          .Modelica.SIunits.Torque tau0 "Friction torque for w_relfric=0 and forward sliding";
++          .Modelica.SIunits.Torque tau0_max "Maximum friction torque for w_relfric=0 and locked";
++          Boolean free "= true, if frictional element is not active";
+           Real sa(final unit = "1") "Path parameter of friction characteristic tau = f(a_relfric)";
+-          Boolean startForward(start = false, fixed = true) "true, if w_rel=0 and start of forward sliding";
+-          Boolean startBackward(start = false, fixed = true) "true, if w_rel=0 and start of backward sliding";
++          Boolean startForward(start = false, fixed = true) "= true, if w_relfric=0 and start of forward sliding";
++          Boolean startBackward(start = false, fixed = true) "= true, if w_relfric=0 and start of backward sliding";
+           Boolean locked(start = false) "true, if w_rel=0 and not sliding";
+           constant Integer Unknown = 3 "Value of mode is not known";
+           constant Integer Free = 2 "Element is not active";
+-          constant Integer Forward = 1 "w_rel > 0 (forward sliding)";
+-          constant Integer Stuck = 0 "w_rel = 0 (forward sliding, locked or backward sliding)";
+-          constant Integer Backward = -1 "w_rel < 0 (backward sliding)";
+-          Integer mode(final min = Backward, final max = Unknown, start = Unknown, fixed = true);
++          constant Integer Forward = 1 "w_relfric > 0 (forward sliding)";
++          constant Integer Stuck = 0 "w_relfric = 0 (forward sliding, locked or backward sliding)";
++          constant Integer Backward = -1 "w_relfric < 0 (backward sliding)";
++          Integer mode(final min = Backward, final max = Unknown, start = Unknown, fixed = true) "Mode of friction (-1: backward sliding, 0: stuck, 1: forward sliding, 2: inactive, 3: unknown)";
+         protected
+           constant .Modelica.SIunits.AngularAcceleration unitAngularAcceleration = 1 annotation(HideResult = true);
+           constant .Modelica.SIunits.Torque unitTorque = 1 annotation(HideResult = true);
+@@ -2047,20 +2051,12 @@
+   package Math  "Library of mathematical functions (e.g., sin, cos) and of functions operating on vectors and matrices" 
+     extends Modelica.Icons.Package;
+ 
+-    package Icons  "Icons for Math" 
+-      extends Modelica.Icons.IconsPackage;
+-
+-      partial function AxisLeft  "Basic icon for mathematical function with y-axis on left side" end AxisLeft;
+-
+-      partial function AxisCenter  "Basic icon for mathematical function with y-axis in the center" end AxisCenter;
+-    end Icons;
+-
+     package Vectors  "Library of functions operating on vectors" 
+       extends Modelica.Icons.Package;
+ 
+       function length  "Return length of a vector (better as norm(), if further symbolic processing is performed)" 
+         extends Modelica.Icons.Function;
+-        input Real[:] v "Vector";
++        input Real[:] v "Real vector";
+         output Real result "Length of vector v";
+       algorithm
+         result := sqrt(v * v);
+@@ -2069,25 +2065,74 @@
+ 
+       function normalize  "Return normalized vector such that length = 1 and prevent zero-division for zero vector" 
+         extends Modelica.Icons.Function;
+-        input Real[:] v "Vector";
++        input Real[:] v "Real vector";
+         input Real eps(min = 0.0) = 100 * Modelica.Constants.eps "if |v| < eps then result = v/eps";
+         output Real[size(v, 1)] result "Input vector v normalized to length=1";
+       algorithm
+-        result := smooth(0, noEvent(if length(v) >= eps then v / length(v) else v / eps));
++        result := smooth(0, if length(v) >= eps then v / length(v) else v / eps);
+         annotation(Inline = true); 
+       end normalize;
+ 
+       function normalizeWithAssert  "Return normalized vector such that length = 1 (trigger an assert for zero vector)" 
+         extends Modelica.Icons.Function;
+-        input Real[:] v "Vector";
++        input Real[:] v "Real vector";
+         output Real[size(v, 1)] result "Input vector v normalized to length=1";
+       algorithm
+         assert(.Modelica.Math.Vectors.length(v) > 0.0, "Vector v={0,0,0} shall be normalized (= v/sqrt(v*v)), but this results in a division by zero.\nProvide a non-zero vector!");
+         result := v / .Modelica.Math.Vectors.length(v);
+         annotation(Inline = true); 
+       end normalizeWithAssert;
++
++      function interpolate  "Interpolate in a vector" 
++        extends Modelica.Icons.Function;
++        input Real[:] x "Abscissa table vector (strict monotonically increasing values required)";
++        input Real[size(x, 1)] y "Ordinate table vector";
++        input Real xi "Desired abscissa value";
++        input Integer iLast = 1 "Index used in last search";
++        output Real yi "Ordinate value corresponding to xi";
++        output Integer iNew = 1 "xi is in the interval x[iNew] <= xi < x[iNew+1]";
++      protected
++        Integer i;
++        Integer nx = size(x, 1);
++        Real x1;
++        Real x2;
++        Real y1;
++        Real y2;
++      algorithm
++        assert(nx > 0, "The table vectors must have at least 1 entry.");
++        if nx == 1 then
++          yi := y[1];
++        else
++          i := min(max(iLast, 1), nx - 1);
++          if xi >= x[i] then
++            while i < nx and xi >= x[i] loop
++              i := i + 1;
++            end while;
++            i := i - 1;
++          else
++            while i > 1 and xi < x[i] loop
++              i := i - 1;
++            end while;
++          end if;
++          x1 := x[i];
++          x2 := x[i + 1];
++          y1 := y[i];
++          y2 := y[i + 1];
++          assert(x2 > x1, "Abscissa table vector values must be increasing");
++          yi := y1 + (y2 - y1) * (xi - x1) / (x2 - x1);
++          iNew := i;
++        end if;
++      end interpolate;
+     end Vectors;
+ 
++    package Icons  "Icons for Math" 
++      extends Modelica.Icons.IconsPackage;
++
++      partial function AxisLeft  "Basic icon for mathematical function with y-axis on left side" end AxisLeft;
++
++      partial function AxisCenter  "Basic icon for mathematical function with y-axis in the center" end AxisCenter;
++    end Icons;
++
+     function sin  "Sine" 
+       extends Modelica.Math.Icons.AxisLeft;
+       input Modelica.SIunits.Angle u;
+@@ -2123,80 +2168,6 @@
+       output Real y;
+       external "builtin" y = exp(u);
+     end exp;
+-
+-    function tempInterpol1  "Temporary function for linear interpolation (will be removed)" 
+-      extends Modelica.Icons.Function;
+-      extends Modelica.Icons.ObsoleteModel;
+-      input Real u "input value (first column of table)";
+-      input Real[:, :] table "table to be interpolated";
+-      input Integer icol "column of table to be interpolated";
+-      output Real y "interpolated input value (icol column of table)";
+-    protected
+-      Integer i;
+-      Integer n "number of rows of table";
+-      Real u1;
+-      Real u2;
+-      Real y1;
+-      Real y2;
+-    algorithm
+-      n := size(table, 1);
+-      if n <= 1 then
+-        y := table[1, icol];
+-      else
+-        if u <= table[1, 1] then
+-          i := 1;
+-        else
+-          i := 2;
+-          while i < n and u >= table[i, 1] loop
+-            i := i + 1;
+-          end while;
+-          i := i - 1;
+-        end if;
+-        u1 := table[i, 1];
+-        u2 := table[i + 1, 1];
+-        y1 := table[i, icol];
+-        y2 := table[i + 1, icol];
+-        assert(u2 > u1, "Table index must be increasing");
+-        y := y1 + (y2 - y1) * (u - u1) / (u2 - u1);
+-      end if;
+-      annotation(derivative(zeroDerivative = table, zeroDerivative = icol) = tempInterpol1_der); 
+-    end tempInterpol1;
+-
+-    function tempInterpol1_der  "Temporary function for linear interpolation (will be removed)" 
+-      input Real u "input value (first column of table)";
+-      input Real[:, :] table "table to be interpolated";
+-      input Integer icol "column of table to be interpolated";
+-      input Real du;
+-      output Real dy "interpolated input value (icol column of table)";
+-    protected
+-      Integer i;
+-      Integer n "number of rows of table";
+-      Real u1;
+-      Real u2;
+-      Real y1;
+-      Real y2;
+-    algorithm
+-      n := size(table, 1);
+-      if n <= 1 then
+-        dy := 0;
+-      else
+-        if u <= table[1, 1] then
+-          i := 1;
+-        else
+-          i := 2;
+-          while i < n and u >= table[i, 1] loop
+-            i := i + 1;
+-          end while;
+-          i := i - 1;
+-        end if;
+-        u1 := table[i, 1];
+-        u2 := table[i + 1, 1];
+-        y1 := table[i, icol];
+-        y2 := table[i + 1, icol];
+-        assert(u2 > u1, "Table index must be increasing");
+-        dy := (y2 - y1) / (u2 - u1);
+-      end if;
+-    end tempInterpol1_der;
+   end Math;
+ 
+   package Utilities  "Library of utility functions dedicated to scripting (operating on files, streams, strings, system)" 
+@@ -2294,8 +2265,6 @@
+     expandable connector SignalBus  "Icon for signal bus" end SignalBus;
+ 
+     expandable connector SignalSubBus  "Icon for signal sub-bus" end SignalSubBus;
+-
+-    partial class ObsoleteModel  "Icon for classes that are obsolete and will be removed in later versions" end ObsoleteModel;
+   end Icons;
+ 
+   package SIunits  "Library of type and unit definitions based on SI units according to ISO 31-1992" 
+@@ -2367,7 +2336,7 @@
+     type Resistance = Real(final quantity = "Resistance", final unit = "Ohm");
+     type FaradayConstant = Real(final quantity = "FaradayConstant", final unit = "C/mol");
+   end SIunits;
+-  annotation(version = "3.2.1", versionBuild = 4, versionDate = "2013-08-14", dateModified = "2015-09-30 09:15:00Z"); 
++  annotation(version = "trunk", versionBuild = 0, versionDate = "2016-03-11", dateModified = "2016-03-11 08:44:41Z"); 
+ end Modelica;
+ 
+ model fullRobot_total  "6 degree of freedom robot with path planning, controllers, motors, brakes, gears and mechanics"

@@ -1,0 +1,161 @@
+Index: Compiler/BackEnd/Initialization.mo
+===================================================================
+--- Compiler/BackEnd/Initialization.mo	(revision 25130)
++++ Compiler/BackEnd/Initialization.mo	(working copy)
+@@ -355,10 +355,10 @@
+       DAE.ElementSource source;
+       DAE.Algorithm alg;
+       Integer size;
+-      list< DAE.Statement> stmts;
++      list<DAE.Statement> stmts;
+       list< BackendDAE.Equation> eqns;
+       BackendDAE.WhenEquation weqn;
+-      list< DAE.ComponentRef> crefLst;
++      list<DAE.ComponentRef> crefLst;
+       HashSet.HashSet leftCrs;
+       DAE.Expand crefExpand;
+       BackendDAE.EquationAttributes eqAttr;
+@@ -369,14 +369,14 @@
+     then eqns;
+ 
+     // algorithm
+-    case BackendDAE.ALGORITHM(alg=alg, source=source,expand=crefExpand) equation
++    case BackendDAE.ALGORITHM(alg=alg, source=source, expand=crefExpand) equation
+       DAE.ALGORITHM_STMTS(statementLst=stmts) = alg;
+-      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(stmts, {}, HashSet.emptyHashSetSized(50));
++      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(stmts, {}, HashSet.emptyHashSetSized(50), source);
+       alg = DAE.ALGORITHM_STMTS(stmts);
+       size = listLength(CheckModel.checkAndGetAlgorithmOutputs(alg, source, crefExpand));
+       crefLst = BaseHashSet.hashSetList(leftCrs);
+-      eqns = generateInactiveWhenEquationForInitialization(crefLst, source, inAccEq);
+-      eqns = List.consOnTrue(not listEmpty(stmts), BackendDAE.ALGORITHM(size, alg, source, crefExpand, BackendDAE.EQ_ATTR_DEFAULT_DYNAMIC), eqns);
++      //eqns = generateInactiveWhenEquationForInitialization(crefLst, source, inAccEq);
++      eqns = List.consOnTrue(not listEmpty(stmts), BackendDAE.ALGORITHM(size, alg, source, crefExpand, BackendDAE.EQ_ATTR_DEFAULT_DYNAMIC), inAccEq);
+     then eqns;
+ 
+     else inEq::inAccEq;
+@@ -416,18 +416,19 @@
+ 
+ protected function inlineWhenForInitializationWhenAlgorithm "author: lochel
+   This function generates out of a given when-algorithm, a algorithm for the initialization-problem."
+-  input list< DAE.Statement> inStmts;
+-  input list< DAE.Statement> inAcc "={}";
++  input list<DAE.Statement> inStmts;
++  input list<DAE.Statement> inAcc "={}";
+   input HashSet.HashSet inLeftCrs;
+-  output list< DAE.Statement> outStmts;
++  input DAE.ElementSource inSource;
++  output list<DAE.Statement> outStmts;
+   output HashSet.HashSet outLeftCrs;
+ algorithm
+   (outStmts, outLeftCrs) := matchcontinue(inStmts)
+     local
+       DAE.Exp condition;
+-      list< DAE.ComponentRef> crefLst;
++      list<DAE.ComponentRef> crefLst;
+       DAE.Statement stmt;
+-      list< DAE.Statement> stmts, rest;
++      list<DAE.Statement> stmts, rest;
+       HashSet.HashSet leftCrs;
+       list<tuple<DAE.ComponentRef, Integer>> crintLst;
+ 
+@@ -438,13 +439,13 @@
+     case (stmt as DAE.STMT_WHEN())::rest equation
+       // for when statements it is not necessary that all branches have the same left hand side variables
+       // -> take care that for each left hand side an assigment is generated
+-      (stmts, leftCrs) = inlineWhenForInitializationWhenStmt(stmt, inLeftCrs, inAcc);
+-      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(rest, stmts, leftCrs);
++      (stmts, leftCrs) = inlineWhenForInitializationWhenStmt(stmt, inLeftCrs, inAcc, inSource);
++      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(rest, stmts, leftCrs, inSource);
+     then  (stmts, leftCrs);
+ 
+     // no when statement
+     case stmt::rest equation
+-      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(rest, stmt::inAcc, inLeftCrs);
++      (stmts, leftCrs) = inlineWhenForInitializationWhenAlgorithm(rest, stmt::inAcc, inLeftCrs, inSource);
+     then (stmts, leftCrs);
+   end matchcontinue;
+ end inlineWhenForInitializationWhenAlgorithm;
+@@ -453,16 +454,17 @@
+   This function generates out of a given when-algorithm, a algorithm for the initialization-problem."
+   input DAE.Statement inWhenStatement;
+   input HashSet.HashSet inLeftCrs;
+-  input list< DAE.Statement> inAcc;
+-  output list< DAE.Statement> outStmts;
++  input list<DAE.Statement> inAcc;
++  input DAE.ElementSource inSource;
++  output list<DAE.Statement> outStmts;
+   output HashSet.HashSet outLeftCrs;
+ algorithm
+   (outStmts, outLeftCrs) := matchcontinue(inWhenStatement)
+     local
+       DAE.Exp condition;
+-      list< DAE.ComponentRef> crefLst;
++      list<DAE.ComponentRef> crefLst;
+       DAE.Statement stmt;
+-      list< DAE.Statement> stmts;
++      list<DAE.Statement> stmts;
+       HashSet.HashSet leftCrs;
+       list<tuple<DAE.ComponentRef, Integer>> crintLst;
+ 
+@@ -476,15 +478,23 @@
+     case DAE.STMT_WHEN(exp=condition, statementLst=stmts, elseWhen=NONE()) equation
+       false = Expression.containsInitialCall(condition, false);
+       crefLst = CheckModel.algorithmStatementListOutputs(stmts, DAE.EXPAND()); // expand as we're in an algorithm
++
++      stmts = generateInactiveWhenStatement(crefLst, inSource, {});
++      stmts = List.foldr(stmts, List.consr, inAcc);
++
+       leftCrs = List.fold(crefLst, BaseHashSet.add, inLeftCrs);
+-    then (inAcc, leftCrs);
++    then (stmts, leftCrs);
+ 
+     // inactive when equation during initialization with elsewhen part
+     case DAE.STMT_WHEN(exp=condition, statementLst=stmts, elseWhen=SOME(stmt)) equation
+       false = Expression.containsInitialCall(condition, false);
+       crefLst = CheckModel.algorithmStatementListOutputs(stmts, DAE.EXPAND()); // expand as we're in an algorithm
++      
++      stmts = generateInactiveWhenStatement(crefLst, inSource, {});
++      stmts = List.foldr(stmts, List.consr, inAcc);
++      
+       leftCrs = List.fold(crefLst, BaseHashSet.add, inLeftCrs);
+-      (stmts, leftCrs) = inlineWhenForInitializationWhenStmt(stmt, leftCrs, inAcc);
++      (stmts, leftCrs) = inlineWhenForInitializationWhenStmt(stmt, leftCrs, inAcc, inSource);
+     then (stmts, leftCrs);
+ 
+     else equation
+@@ -523,6 +533,34 @@
+  end match;
+ end generateInactiveWhenEquationForInitialization;
+ 
++protected function generateInactiveWhenStatement "author: lochel"
++  input list<DAE.ComponentRef> inCrLst;
++  input DAE.ElementSource inSource;
++  input list<DAE.Statement> inStmts;
++  output list<DAE.Statement> outStmts;
++algorithm
++  outStmts := match (inCrLst)
++    local
++      DAE.Type identType;
++      DAE.Exp crefExp, crefPreExp;
++      DAE.ComponentRef cr;
++      list<DAE.ComponentRef> rest;
++      DAE.Statement stmt;
++      list<DAE.Statement> stmts;
++
++    case {}
++    then inStmts;
++
++    case cr::rest equation
++      identType = ComponentReference.crefTypeConsiderSubs(cr);
++      crefExp = DAE.CREF(cr, identType);
++      crefPreExp = Expression.makePureBuiltinCall("pre", {crefExp}, DAE.T_BOOL_DEFAULT);
++      stmt = DAE.STMT_ASSIGN(identType, crefExp, crefPreExp, inSource);
++      stmts = generateInactiveWhenStatement(rest, inSource, stmt::inStmts);
++    then stmts;
++ end match;
++end generateInactiveWhenStatement;
++
+ // =============================================================================
+ // section for collecting all variables, of which the left limit is also used.
+ //

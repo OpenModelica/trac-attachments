@@ -1,0 +1,10 @@
+loadFile("infoXMLTest.mo");
+getErrorString();
+addComponent(x, Real, X);
+getErrorString();
+setSourceFile(X, "infoXMLTest.mo");
+getErrorString();
+save(X);
+getErrorString();
+buildModel(X);
+getErrorString();

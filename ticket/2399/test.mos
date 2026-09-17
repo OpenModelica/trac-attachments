@@ -1,0 +1,4 @@
+loadFile("test.mo");
+getErrorString();
+simulate(M, outputFormat="csv");
+getErrorString();

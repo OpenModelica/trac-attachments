@@ -1,0 +1,17 @@
+loadString("class HelloWorld
+  Real x(start = 1);
+  parameter Real a = 1;
+  String str = \"\";
+equation
+  der(x) = - a * x;
+end HelloWorld;
+");
+getErrorString();
+translateModelFMU(HelloWorld, version="2.0");
+getErrorString();
+importFMU("HelloWorld.fmu");
+getErrorString();
+loadFile("HelloWorld_me_FMU.mo");
+getErrorString();
+simulate(HelloWorld_me_FMU);
+getErrorString();

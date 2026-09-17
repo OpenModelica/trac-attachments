@@ -1,0 +1,25 @@
+From 4ad0164adf92461338702e421d3a5e184ee3e9d0 Mon Sep 17 00:00:00 2001
+From: gossen <maksimov.io@yandex.ru>
+Date: Mon, 12 Oct 2015 20:16:23 +0300
+Subject: [PATCH] Fix qjson build for systems with multiple Qt version
+
+---
+ qjson/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/qjson/CMakeLists.txt b/qjson/CMakeLists.txt
+index a7c9e60..e5d4b75 100644
+--- a/qjson/CMakeLists.txt
++++ b/qjson/CMakeLists.txt
+@@ -41,6 +41,8 @@ SET(FRAMEWORK_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/Library/Frameworks"
+ SET(QT_USE_IMPORTED_TARGETS TRUE)
+ 
+ option(QT4_BUILD "Force building with Qt4 even if Qt5 is found")
++set(QT4_BUILD ON)
++
+ IF (NOT QT4_BUILD)
+   FIND_PACKAGE( Qt5Core QUIET )
+ ENDIF()
+-- 
+2.5.0
+

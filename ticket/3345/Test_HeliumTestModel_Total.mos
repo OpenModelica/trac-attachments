@@ -1,0 +1,5 @@
+// C:\OpenModelica1.9.3Nightly\bin\omc.exe Test_HeliumTestModel_Total.mos
+loadFile("HeliumTestModel_Total.mo");
+getErrorString();
+simulate(HeliumTestModel_total);
+getErrorString();

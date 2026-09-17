@@ -1,0 +1,4 @@
+loadFile("ComplexArray.mo"); getErrorString();
+// loadModel(Complex); getErrorString();
+instantiateModel(ComplexArray); getErrorString();
+simulate(ComplexArray); getErrorString();

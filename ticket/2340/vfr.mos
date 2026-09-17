@@ -1,0 +1,5 @@
+loadFile("vfr.mo"); getErrorString();
+instantiateModel(Buildings.Fluid.Sensors.Examples.VolumeFlowRate); getErrorString(); 
+simulate(Buildings.Fluid.Sensors.Examples.VolumeFlowRate); getErrorString();
+
+

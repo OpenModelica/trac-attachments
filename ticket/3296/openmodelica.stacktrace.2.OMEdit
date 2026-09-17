@@ -1,0 +1,18 @@
+0x5e64164 : C:\OpenModelica1.9.3Nightly\bin\libOpenModelicaCompiler.dll : boxptr_File_seek 
+0x54e1da9 : C:\OpenModelica1.9.3Nightly\bin\libOpenModelicaCompiler.dll : omc_System_readEnv 
+0x54dca8b : C:\OpenModelica1.9.3Nightly\bin\libOpenModelicaCompiler.dll : omc_Util_makeValueOrDefault 
+0x550f184 : C:\OpenModelica1.9.3Nightly\bin\libOpenModelicaCompiler.dll : omc_Main_setWindowsPaths 
+0x487015 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : c:/omdev/tools/mingw/bin/../lib/gcc/mingw32/4.4.0/include/c++/bits/basic_string.h (281) : in function (_ZNKSs6_M_repEv) 
+0x49755c : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEditGUI/OMC/OMCProxy.cpp (126) : in function (OMCProxy) 
+0x426e54 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEditGUI/MainWindow.cpp (74) : in function (MainWindow) 
+0x401ff8 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : c:\dev\OpenModelica\OMEdit\OMEditGUI/main.cpp (285) : in function (_Z5qMainiPPc) 
+0x6667c5 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : pseudo-reloc-list.c 
+0x666436 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : main.c 
+0x4010db : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : crt1.c 
+0x401158 : C:\OpenModelica1.9.3Nightly\bin\OMEdit.exe : crt1.c 
+Failed to init bfd from (C:\Windows\syswow64\kernel32.dll)
+0x7527338a : C:\Windows\syswow64\kernel32.dll : BaseThreadInitThunk 
+Failed to init bfd from (C:\Windows\SysWOW64\ntdll.dll)
+0x77409ef2 : C:\Windows\SysWOW64\ntdll.dll : RtlInitializeExceptionChain 
+Failed to init bfd from (C:\Windows\SysWOW64\ntdll.dll)
+0x77409ec5 : C:\Windows\SysWOW64\ntdll.dll : RtlInitializeExceptionChain 

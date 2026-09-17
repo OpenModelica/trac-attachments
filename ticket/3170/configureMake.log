@@ -1,0 +1,574 @@
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_FMU.o BouncingBallFMI20_FMU.c
+In file included from BouncingBallFMI20_FMU.c:65:
+include/fmi2/fmu2_model_interface.c:870:12: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+    if (vr < 0 || vr >= NUMBER_OF_REALS|| setReal(comp, vr, x[i]) != fmi2OK) { // to be implemented by the includer of this file
+        ~~ ^ ~
+1 warning generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20.o BouncingBallFMI20.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_functions.o BouncingBallFMI20_functions.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_records.o BouncingBallFMI20_records.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_01exo.o BouncingBallFMI20_01exo.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_02nls.o BouncingBallFMI20_02nls.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_03lsy.o BouncingBallFMI20_03lsy.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_04set.o BouncingBallFMI20_04set.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_05evt.o BouncingBallFMI20_05evt.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_06inz.o BouncingBallFMI20_06inz.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_07dly.o BouncingBallFMI20_07dly.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_08bnd.o BouncingBallFMI20_08bnd.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_09alg.o BouncingBallFMI20_09alg.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_10asr.o BouncingBallFMI20_10asr.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_11mix.o BouncingBallFMI20_11mix.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_12jac.o BouncingBallFMI20_12jac.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_13opt.o BouncingBallFMI20_13opt.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_14lnz.o BouncingBallFMI20_14lnz.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_15syn.o BouncingBallFMI20_15syn.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o BouncingBallFMI20_init_fmu.o BouncingBallFMI20_init_fmu.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/base_array.o include/./util/base_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/boolean_array.o include/./util/boolean_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/omc_error.o include/./util/omc_error.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/division.o include/./util/division.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/generic_array.o include/./util/generic_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/index_spec.o include/./util/index_spec.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/integer_array.o include/./util/integer_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/list.o include/./util/list.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/memory_pool.o include/./util/memory_pool.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/modelica_string.o include/./util/modelica_string.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/real_array.o include/./util/real_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/ringbuffer.o include/./util/ringbuffer.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/rtclock.o include/./util/rtclock.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/string_array.o include/./util/string_array.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/utility.o include/./util/utility.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/varinfo.o include/./util/varinfo.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/ModelicaUtilities.o include/./util/ModelicaUtilities.c
+include/./util/ModelicaUtilities.c:71:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+}
+^
+include/./util/ModelicaUtilities.c:75:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+}
+^
+include/./util/ModelicaUtilities.c:82:1: warning: function declared 'noreturn' should not return [-Winvalid-noreturn]
+}
+^
+3 warnings generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/omc_msvc.o include/./util/omc_msvc.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/simulation_options.o include/./util/simulation_options.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/cJSON.o include/./util/cJSON.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/rational.o include/./util/rational.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/modelica_string_lit.o include/./util/modelica_string_lit.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/omc_init.o include/./util/omc_init.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./util/omc_mmap.o include/./util/omc_mmap.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./math-support/pivot.o include/./math-support/pivot.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/simulation_info_json.o include/./simulation/simulation_info_json.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/options.o include/./simulation/options.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/simulation_omc_assert.o include/./simulation/simulation_omc_assert.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/delay.o include/./simulation/solver/delay.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/linearSystem.o include/./simulation/solver/linearSystem.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/linearSolverLapack.o include/./simulation/solver/linearSolverLapack.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/linearSolverTotalPivot.o include/./simulation/solver/linearSolverTotalPivot.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/mixedSystem.o include/./simulation/solver/mixedSystem.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/mixedSearchSolver.o include/./simulation/solver/mixedSearchSolver.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/nonlinearSystem.o include/./simulation/solver/nonlinearSystem.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/nonlinearValuesList.o include/./simulation/solver/nonlinearValuesList.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/nonlinearSolverHybrd.o include/./simulation/solver/nonlinearSolverHybrd.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/nonlinearSolverHomotopy.o include/./simulation/solver/nonlinearSolverHomotopy.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/omc_math.o include/./simulation/solver/omc_math.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/model_help.o include/./simulation/solver/model_help.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/stateset.o include/./simulation/solver/stateset.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/synchronous.o include/./simulation/solver/synchronous.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./simulation/solver/initialization/initialization.o include/./simulation/solver/initialization/initialization.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./meta/meta_modelica_catch.o include/./meta/meta_modelica_catch.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/enorm_.o include/./external_solvers/enorm_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/hybrj_.o include/./external_solvers/hybrj_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dpmpar_.o include/./external_solvers/dpmpar_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/qrfac_.o include/./external_solvers/qrfac_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/qform_.o include/./external_solvers/qform_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dogleg_.o include/./external_solvers/dogleg_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/r1updt_.o include/./external_solvers/r1updt_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/r1mpyq_.o include/./external_solvers/r1mpyq_.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dgesv.o include/./external_solvers/dgesv.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dgetrf.o include/./external_solvers/dgetrf.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dlamch.o include/./external_solvers/dlamch.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dtrtrs.o include/./external_solvers/dtrtrs.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ilaenv.o include/./external_solvers/ilaenv.c
+include/./external_solvers/ilaenv.c:210:16: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+            ~~~~~~~~~~^~~~~~~~~~~~ ~~
+include/./external_solvers/ilaenv.c:210:16: note: place parentheses around the '&&' expression to silence this warning
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+                      ^
+            (                     )
+include/./external_solvers/ilaenv.c:210:42: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+                                   ~~ ~~~~~~~~~~^~~~~~~~~~~~
+include/./external_solvers/ilaenv.c:210:42: note: place parentheses around the '&&' expression to silence this warning
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+                                                ^
+                                      (                     )
+include/./external_solvers/ilaenv.c:210:68: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+                                                             ~~ ~~~~~~~~~~^~
+include/./external_solvers/ilaenv.c:210:68: note: place parentheses around the '&&' expression to silence this warning
+        if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 162 && 
+                                                                          ^
+include/./external_solvers/ilaenv.c:215:17: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 
+                    ~~~~~~~~~~^~~~~~~~~~~~ ~~
+include/./external_solvers/ilaenv.c:215:17: note: place parentheses around the '&&' expression to silence this warning
+                if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 
+                              ^
+                    (                     )
+include/./external_solvers/ilaenv.c:215:43: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 
+                                           ~~ ~~~~~~~~~~^~~~~~~~~~~~
+include/./external_solvers/ilaenv.c:215:43: note: place parentheses around the '&&' expression to silence this warning
+                if (ic >= 129 && ic <= 137 || ic >= 145 && ic <= 153 || ic >= 
+                                                        ^
+                                              (                     )
+include/./external_solvers/ilaenv.c:216:8: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                        162 && ic <= 169) {
+                        ~~~~^~~~~~~~~~~~
+include/./external_solvers/ilaenv.c:216:8: note: place parentheses around the '&&' expression to silence this warning
+                        162 && ic <= 169) {
+                            ^
+6 warnings generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ilazlr.o include/./external_solvers/ilazlr.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/xerbla.o include/./external_solvers/xerbla.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zlarfb.o include/./external_solvers/zlarfb.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zlarft.o include/./external_solvers/zlarft.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zungbr.o include/./external_solvers/zungbr.c
+include/./external_solvers/zungbr.c:166:32: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    } else if (*n < 0 || wantq && (*n > *m || *n < lmin(*m,*k)) || ! wantq && (
+                      ~~ ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+include/./external_solvers/zungbr.c:166:32: note: place parentheses around the '&&' expression to silence this warning
+    } else if (*n < 0 || wantq && (*n > *m || *n < lmin(*m,*k)) || ! wantq && (
+                               ^
+                         (                                     )
+include/./external_solvers/zungbr.c:166:76: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    } else if (*n < 0 || wantq && (*n > *m || *n < lmin(*m,*k)) || ! wantq && (
+                                                                ~~ ~~~~~~~~^~~~
+include/./external_solvers/zungbr.c:166:76: note: place parentheses around the '&&' expression to silence this warning
+    } else if (*n < 0 || wantq && (*n > *m || *n < lmin(*m,*k)) || ! wantq && (
+                                                                           ^
+2 warnings generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zunglq.o include/./external_solvers/zunglq.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dgetf2.o include/./external_solvers/dgetf2.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dgetrs.o include/./external_solvers/dgetrs.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dlaswp.o include/./external_solvers/dlaswp.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ieeeck.o include/./external_solvers/ieeeck.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ilazlc.o include/./external_solvers/ilazlc.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/iparmq.o include/./external_solvers/iparmq.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zlacgv.o include/./external_solvers/zlacgv.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zlarf.o include/./external_solvers/zlarf.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zung2r.o include/./external_solvers/zung2r.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zungl2.o include/./external_solvers/zungl2.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zungqr.o include/./external_solvers/zungqr.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dgemm.o include/./external_solvers/dgemm.c
+include/./external_solvers/dgemm.c:230:57: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (*m == 0 || *n == 0 || (*alpha == 0. || *k == 0) && *beta == 1.) {
+                           ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/dgemm.c:230:57: note: place parentheses around the '&&' expression to silence this warning
+    if (*m == 0 || *n == 0 || (*alpha == 0. || *k == 0) && *beta == 1.) {
+                                                        ^
+                              (                                       )
+1 warning generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dger.o include/./external_solvers/dger.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dscal.o include/./external_solvers/dscal.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dswap.o include/./external_solvers/dswap.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/dtrsm.o include/./external_solvers/dtrsm.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/idamax.o include/./external_solvers/idamax.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/lsame.o include/./external_solvers/lsame.c
+include/./external_solvers/lsame.c:89:18: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (inta >= 129 && inta <= 137 || inta >= 145 && inta <= 153 || inta 
+            ~~~~~~~~~~~~^~~~~~~~~~~~~~ ~~
+include/./external_solvers/lsame.c:89:18: note: place parentheses around the '&&' expression to silence this warning
+        if (inta >= 129 && inta <= 137 || inta >= 145 && inta <= 153 || inta 
+                        ^
+            (                         )
+include/./external_solvers/lsame.c:89:48: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (inta >= 129 && inta <= 137 || inta >= 145 && inta <= 153 || inta 
+                                       ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/lsame.c:89:48: note: place parentheses around the '&&' expression to silence this warning
+        if (inta >= 129 && inta <= 137 || inta >= 145 && inta <= 153 || inta 
+                                                      ^
+                                          (                         )
+include/./external_solvers/lsame.c:90:10: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                >= 162 && inta <= 169) {
+                ~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/lsame.c:90:10: note: place parentheses around the '&&' expression to silence this warning
+                >= 162 && inta <= 169) {
+                       ^
+include/./external_solvers/lsame.c:93:18: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (intb >= 129 && intb <= 137 || intb >= 145 && intb <= 153 || intb 
+            ~~~~~~~~~~~~^~~~~~~~~~~~~~ ~~
+include/./external_solvers/lsame.c:93:18: note: place parentheses around the '&&' expression to silence this warning
+        if (intb >= 129 && intb <= 137 || intb >= 145 && intb <= 153 || intb 
+                        ^
+            (                         )
+include/./external_solvers/lsame.c:93:48: warning: '&&' within '||' [-Wlogical-op-parentheses]
+        if (intb >= 129 && intb <= 137 || intb >= 145 && intb <= 153 || intb 
+                                       ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/lsame.c:93:48: note: place parentheses around the '&&' expression to silence this warning
+        if (intb >= 129 && intb <= 137 || intb >= 145 && intb <= 153 || intb 
+                                                      ^
+                                          (                         )
+include/./external_solvers/lsame.c:94:10: warning: '&&' within '||' [-Wlogical-op-parentheses]
+                >= 162 && intb <= 169) {
+                ~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/lsame.c:94:10: note: place parentheses around the '&&' expression to silence this warning
+                >= 162 && intb <= 169) {
+                       ^
+6 warnings generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zcopy.o include/./external_solvers/zcopy.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zgemm.o include/./external_solvers/zgemm.c
+include/./external_solvers/zgemm.c:237:47: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (*m == 0 || *n == 0 || (alpha->r == 0. && alpha->i == 0. || *k == 0) &&
+                               ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~ ~~
+include/./external_solvers/zgemm.c:237:47: note: place parentheses around the '&&' expression to silence this warning
+    if (*m == 0 || *n == 0 || (alpha->r == 0. && alpha->i == 0. || *k == 0) &&
+                                              ^
+                               (                               )
+include/./external_solvers/zgemm.c:237:77: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (*m == 0 || *n == 0 || (alpha->r == 0. && alpha->i == 0. || *k == 0) &&
+                           ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+include/./external_solvers/zgemm.c:237:77: note: place parentheses around the '&&' expression to silence this warning
+    if (*m == 0 || *n == 0 || (alpha->r == 0. && alpha->i == 0. || *k == 0) &&
+                                                                            ^
+2 warnings generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zgemv.o include/./external_solvers/zgemv.c
+include/./external_solvers/zgemv.c:177:64: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (*m == 0 || *n == 0 || alpha->r == 0. && alpha->i == 0. && (beta->r == 
+                           ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+include/./external_solvers/zgemv.c:177:64: note: place parentheses around the '&&' expression to silence this warning
+    if (*m == 0 || *n == 0 || alpha->r == 0. && alpha->i == 0. && (beta->r == 
+                                                               ^
+1 warning generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zgerc.o include/./external_solvers/zgerc.c
+include/./external_solvers/zgerc.c:145:46: warning: '&&' within '||' [-Wlogical-op-parentheses]
+    if (*m == 0 || *n == 0 || alpha->r == 0. && alpha->i == 0.) {
+                           ~~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+include/./external_solvers/zgerc.c:145:46: note: place parentheses around the '&&' expression to silence this warning
+    if (*m == 0 || *n == 0 || alpha->r == 0. && alpha->i == 0.) {
+                                             ^
+                              (                               )
+1 warning generated.
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/zscal.o include/./external_solvers/zscal.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ztrmm.o include/./external_solvers/ztrmm.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/ztrmv.o include/./external_solvers/ztrmv.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/d_cnjg.o include/./external_solvers/d_cnjg.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/i_len.o include/./external_solvers/i_len.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/i_nint.o include/./external_solvers/i_nint.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/pow_di.o include/./external_solvers/pow_di.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/s_cmp.o include/./external_solvers/s_cmp.c
+gcc -g -O2 -fno-stack-protector -Wno-parentheses-equality -Wno-unused-variable -fPIC -DOMC_MINIMAL_RUNTIME=1 -DCMINPACK_NO_DLL=1 -Iinclude/ -Iinclude/fmi2 -I.    -c -o include/./external_solvers/s_copy.o include/./external_solvers/s_copy.c
+gcc -shared -o BouncingBallFMI20.dylib BouncingBallFMI20_FMU.o BouncingBallFMI20.o BouncingBallFMI20_functions.o BouncingBallFMI20_records.o BouncingBallFMI20_01exo.o BouncingBallFMI20_02nls.o BouncingBallFMI20_03lsy.o BouncingBallFMI20_04set.o BouncingBallFMI20_05evt.o BouncingBallFMI20_06inz.o BouncingBallFMI20_07dly.o BouncingBallFMI20_08bnd.o BouncingBallFMI20_09alg.o BouncingBallFMI20_10asr.o BouncingBallFMI20_11mix.o BouncingBallFMI20_12jac.o BouncingBallFMI20_13opt.o BouncingBallFMI20_14lnz.o BouncingBallFMI20_15syn.o BouncingBallFMI20_init_fmu.o include/./util/base_array.o include/./util/boolean_array.o include/./util/omc_error.o include/./util/division.o include/./util/generic_array.o include/./util/index_spec.o include/./util/integer_array.o include/./util/list.o include/./util/memory_pool.o include/./util/modelica_string.o include/./util/real_array.o include/./util/ringbuffer.o include/./util/rtclock.o include/./util/string_array.o include/./util/utility.o include/./util/varinfo.o include/./util/ModelicaUtilities.o include/./util/omc_msvc.o include/./util/simulation_options.o include/./util/cJSON.o include/./util/rational.o include/./util/modelica_string_lit.o include/./util/omc_init.o include/./util/omc_mmap.o include/./math-support/pivot.o include/./simulation/simulation_info_json.o include/./simulation/options.o include/./simulation/simulation_omc_assert.o include/./simulation/solver/delay.o include/./simulation/solver/linearSystem.o include/./simulation/solver/linearSolverLapack.o include/./simulation/solver/linearSolverTotalPivot.o include/./simulation/solver/mixedSystem.o include/./simulation/solver/mixedSearchSolver.o include/./simulation/solver/nonlinearSystem.o include/./simulation/solver/nonlinearValuesList.o include/./simulation/solver/nonlinearSolverHybrd.o include/./simulation/solver/nonlinearSolverHomotopy.o include/./simulation/solver/omc_math.o include/./simulation/solver/model_help.o include/./simulation/solver/stateset.o include/./simulation/solver/synchronous.o include/./simulation/solver/initialization/initialization.o include/./meta/meta_modelica_catch.o include/./external_solvers/enorm_.o include/./external_solvers/hybrj_.o include/./external_solvers/dpmpar_.o include/./external_solvers/qrfac_.o include/./external_solvers/qform_.o include/./external_solvers/dogleg_.o include/./external_solvers/r1updt_.o include/./external_solvers/r1mpyq_.o include/./external_solvers/dgesv.o include/./external_solvers/dgetrf.o include/./external_solvers/dlamch.o include/./external_solvers/dtrtrs.o include/./external_solvers/ilaenv.o include/./external_solvers/ilazlr.o include/./external_solvers/xerbla.o include/./external_solvers/zlarfb.o include/./external_solvers/zlarft.o include/./external_solvers/zungbr.o include/./external_solvers/zunglq.o include/./external_solvers/dgetf2.o include/./external_solvers/dgetrs.o include/./external_solvers/dlaswp.o include/./external_solvers/ieeeck.o include/./external_solvers/ilazlc.o include/./external_solvers/iparmq.o include/./external_solvers/zlacgv.o include/./external_solvers/zlarf.o include/./external_solvers/zung2r.o include/./external_solvers/zungl2.o include/./external_solvers/zungqr.o include/./external_solvers/dgemm.o include/./external_solvers/dger.o include/./external_solvers/dscal.o include/./external_solvers/dswap.o include/./external_solvers/dtrsm.o include/./external_solvers/idamax.o include/./external_solvers/lsame.o include/./external_solvers/zcopy.o include/./external_solvers/zgemm.o include/./external_solvers/zgemv.o include/./external_solvers/zgerc.o include/./external_solvers/zscal.o include/./external_solvers/ztrmm.o include/./external_solvers/ztrmv.o include/./external_solvers/d_cnjg.o include/./external_solvers/i_len.o include/./external_solvers/i_nint.o include/./external_solvers/pow_di.o include/./external_solvers/s_cmp.o include/./external_solvers/s_copy.o    -shared -lm -lpthread 
+mkdir -p ../binaries/darwin64
+cp BouncingBallFMI20.dylib BouncingBallFMI20_FMU.libs config.log ../binaries/darwin64/
+/Applications/Xcode.app/Contents/Developer/usr/bin/make distclean
+rm -f BouncingBallFMI20.def BouncingBallFMI20.o BouncingBallFMI20.dylib BouncingBallFMI20_FMU.o BouncingBallFMI20.o BouncingBallFMI20_functions.o BouncingBallFMI20_records.o BouncingBallFMI20_01exo.o BouncingBallFMI20_02nls.o BouncingBallFMI20_03lsy.o BouncingBallFMI20_04set.o BouncingBallFMI20_05evt.o BouncingBallFMI20_06inz.o BouncingBallFMI20_07dly.o BouncingBallFMI20_08bnd.o BouncingBallFMI20_09alg.o BouncingBallFMI20_10asr.o BouncingBallFMI20_11mix.o BouncingBallFMI20_12jac.o BouncingBallFMI20_13opt.o BouncingBallFMI20_14lnz.o BouncingBallFMI20_15syn.o BouncingBallFMI20_init_fmu.o include/./util/base_array.o include/./util/boolean_array.o include/./util/omc_error.o include/./util/division.o include/./util/generic_array.o include/./util/index_spec.o include/./util/integer_array.o include/./util/list.o include/./util/memory_pool.o include/./util/modelica_string.o include/./util/real_array.o include/./util/ringbuffer.o include/./util/rtclock.o include/./util/string_array.o include/./util/utility.o include/./util/varinfo.o include/./util/ModelicaUtilities.o include/./util/omc_msvc.o include/./util/simulation_options.o include/./util/cJSON.o include/./util/rational.o include/./util/modelica_string_lit.o include/./util/omc_init.o include/./util/omc_mmap.o include/./math-support/pivot.o include/./simulation/simulation_info_json.o include/./simulation/options.o include/./simulation/simulation_omc_assert.o include/./simulation/solver/delay.o include/./simulation/solver/linearSystem.o include/./simulation/solver/linearSolverLapack.o include/./simulation/solver/linearSolverTotalPivot.o include/./simulation/solver/mixedSystem.o include/./simulation/solver/mixedSearchSolver.o include/./simulation/solver/nonlinearSystem.o include/./simulation/solver/nonlinearValuesList.o include/./simulation/solver/nonlinearSolverHybrd.o include/./simulation/solver/nonlinearSolverHomotopy.o include/./simulation/solver/omc_math.o include/./simulation/solver/model_help.o include/./simulation/solver/stateset.o include/./simulation/solver/synchronous.o include/./simulation/solver/initialization/initialization.o include/./meta/meta_modelica_catch.o include/./external_solvers/enorm_.o include/./external_solvers/hybrj_.o include/./external_solvers/dpmpar_.o include/./external_solvers/qrfac_.o include/./external_solvers/qform_.o include/./external_solvers/dogleg_.o include/./external_solvers/r1updt_.o include/./external_solvers/r1mpyq_.o include/./external_solvers/dgesv.o include/./external_solvers/dgetrf.o include/./external_solvers/dlamch.o include/./external_solvers/dtrtrs.o include/./external_solvers/ilaenv.o include/./external_solvers/ilazlr.o include/./external_solvers/xerbla.o include/./external_solvers/zlarfb.o include/./external_solvers/zlarft.o include/./external_solvers/zungbr.o include/./external_solvers/zunglq.o include/./external_solvers/dgetf2.o include/./external_solvers/dgetrs.o include/./external_solvers/dlaswp.o include/./external_solvers/ieeeck.o include/./external_solvers/ilazlc.o include/./external_solvers/iparmq.o include/./external_solvers/zlacgv.o include/./external_solvers/zlarf.o include/./external_solvers/zung2r.o include/./external_solvers/zungl2.o include/./external_solvers/zungqr.o include/./external_solvers/dgemm.o include/./external_solvers/dger.o include/./external_solvers/dscal.o include/./external_solvers/dswap.o include/./external_solvers/dtrsm.o include/./external_solvers/idamax.o include/./external_solvers/lsame.o include/./external_solvers/zcopy.o include/./external_solvers/zgemm.o include/./external_solvers/zgemv.o include/./external_solvers/zgerc.o include/./external_solvers/zscal.o include/./external_solvers/ztrmm.o include/./external_solvers/ztrmv.o include/./external_solvers/d_cnjg.o include/./external_solvers/i_len.o include/./external_solvers/i_nint.o include/./external_solvers/pow_di.o include/./external_solvers/s_cmp.o include/./external_solvers/s_copy.o
+rm -f Makefile config.status config.log
+cd .. && rm -f ../BouncingBallFMI20.fmu && zip -r ../BouncingBallFMI20.fmu *
+  adding: binaries/ (stored 0%)
+  adding: binaries/darwin64/ (stored 0%)
+  adding: binaries/darwin64/BouncingBallFMI20.dylib (deflated 63%)
+  adding: binaries/darwin64/BouncingBallFMI20_FMU.libs (stored 0%)
+  adding: binaries/darwin64/config.log (deflated 91%)
+  adding: modelDescription.xml (deflated 73%)
+  adding: sources/ (stored 0%)
+  adding: sources/BouncingBallFMI20.c (deflated 76%)
+  adding: sources/BouncingBallFMI20.makefile (deflated 2%)
+  adding: sources/BouncingBallFMI20_01exo.c (deflated 62%)
+  adding: sources/BouncingBallFMI20_02nls.c (deflated 58%)
+  adding: sources/BouncingBallFMI20_03lsy.c (deflated 64%)
+  adding: sources/BouncingBallFMI20_04set.c (deflated 59%)
+  adding: sources/BouncingBallFMI20_05evt.c (deflated 67%)
+  adding: sources/BouncingBallFMI20_06inz.c (deflated 75%)
+  adding: sources/BouncingBallFMI20_07dly.c (deflated 58%)
+  adding: sources/BouncingBallFMI20_08bnd.c (deflated 69%)
+  adding: sources/BouncingBallFMI20_09alg.c (deflated 64%)
+  adding: sources/BouncingBallFMI20_10asr.c (deflated 57%)
+  adding: sources/BouncingBallFMI20_11mix.c (deflated 61%)
+  adding: sources/BouncingBallFMI20_11mix.h (stored 0%)
+  adding: sources/BouncingBallFMI20_12jac.c (deflated 77%)
+  adding: sources/BouncingBallFMI20_12jac.h (deflated 77%)
+  adding: sources/BouncingBallFMI20_13opt.c (deflated 63%)
+  adding: sources/BouncingBallFMI20_13opt.h (deflated 59%)
+  adding: sources/BouncingBallFMI20_14lnz.c (deflated 62%)
+  adding: sources/BouncingBallFMI20_15syn.c (deflated 64%)
+  adding: sources/BouncingBallFMI20_FMU.c (deflated 81%)
+  adding: sources/BouncingBallFMI20_FMU.libs (stored 0%)
+  adding: sources/BouncingBallFMI20_functions.c (deflated 46%)
+  adding: sources/BouncingBallFMI20_functions.h (deflated 52%)
+  adding: sources/BouncingBallFMI20_includes.h (stored 0%)
+  adding: sources/BouncingBallFMI20_info.c (deflated 85%)
+  adding: sources/BouncingBallFMI20_init_fmu.c (deflated 87%)
+  adding: sources/BouncingBallFMI20_literals.h (deflated 59%)
+  adding: sources/BouncingBallFMI20_model.h (deflated 82%)
+  adding: sources/BouncingBallFMI20_records.c (deflated 24%)
+  adding: sources/config.guess (deflated 70%)
+  adding: sources/config.sub (deflated 71%)
+  adding: sources/configure (deflated 75%)
+  adding: sources/include/ (stored 0%)
+  adding: sources/include/blaswrap.h (deflated 78%)
+  adding: sources/include/external_solvers/ (stored 0%)
+  adding: sources/include/external_solvers/blaswrap.h (deflated 78%)
+  adding: sources/include/external_solvers/clapack.h (deflated 91%)
+  adding: sources/include/external_solvers/cminpack.h (deflated 82%)
+  adding: sources/include/external_solvers/d_cnjg.c (deflated 37%)
+  adding: sources/include/external_solvers/dgemm.c (deflated 75%)
+  adding: sources/include/external_solvers/dger.c (deflated 66%)
+  adding: sources/include/external_solvers/dgesv.c (deflated 62%)
+  adding: sources/include/external_solvers/dgetf2.c (deflated 62%)
+  adding: sources/include/external_solvers/dgetrf.c (deflated 64%)
+  adding: sources/include/external_solvers/dgetrs.c (deflated 66%)
+  adding: sources/include/external_solvers/dlamch.c (deflated 74%)
+  adding: sources/include/external_solvers/dlaswp.c (deflated 60%)
+  adding: sources/include/external_solvers/dogleg_.c (deflated 66%)
+  adding: sources/include/external_solvers/dpmpar_.c (deflated 73%)
+  adding: sources/include/external_solvers/dscal.c (deflated 58%)
+  adding: sources/include/external_solvers/dswap.c (deflated 59%)
+  adding: sources/include/external_solvers/dtrsm.c (deflated 76%)
+  adding: sources/include/external_solvers/dtrtrs.c (deflated 65%)
+  adding: sources/include/external_solvers/enorm_.c (deflated 59%)
+  adding: sources/include/external_solvers/f2c.h (deflated 66%)
+  adding: sources/include/external_solvers/hybrj_.c (deflated 71%)
+  adding: sources/include/external_solvers/i_len.c (deflated 34%)
+  adding: sources/include/external_solvers/i_nint.c (deflated 36%)
+  adding: sources/include/external_solvers/idamax.c (deflated 58%)
+  adding: sources/include/external_solvers/ieeeck.c (deflated 67%)
+  adding: sources/include/external_solvers/ilaenv.c (deflated 80%)
+  adding: sources/include/external_solvers/ilazlc.c (deflated 57%)
+  adding: sources/include/external_solvers/ilazlr.c (deflated 57%)
+  adding: sources/include/external_solvers/iparmq.c (deflated 68%)
+  adding: sources/include/external_solvers/lsame.c (deflated 60%)
+  adding: sources/include/external_solvers/minpack.h (deflated 85%)
+  adding: sources/include/external_solvers/pow_di.c (deflated 43%)
+  adding: sources/include/external_solvers/qform_.c (deflated 60%)
+  adding: sources/include/external_solvers/qrfac_.c (deflated 65%)
+  adding: sources/include/external_solvers/r1mpyq_.c (deflated 65%)
+  adding: sources/include/external_solvers/r1updt_.c (deflated 67%)
+  adding: sources/include/external_solvers/s_cmp.c (deflated 55%)
+  adding: sources/include/external_solvers/s_copy.c (deflated 52%)
+  adding: sources/include/external_solvers/xerbla.c (deflated 51%)
+  adding: sources/include/external_solvers/zcopy.c (deflated 56%)
+  adding: sources/include/external_solvers/zgemm.c (deflated 83%)
+  adding: sources/include/external_solvers/zgemv.c (deflated 75%)
+  adding: sources/include/external_solvers/zgerc.c (deflated 68%)
+  adding: sources/include/external_solvers/zlacgv.c (deflated 56%)
+  adding: sources/include/external_solvers/zlarf.c (deflated 65%)
+  adding: sources/include/external_solvers/zlarfb.c (deflated 86%)
+  adding: sources/include/external_solvers/zlarft.c (deflated 73%)
+  adding: sources/include/external_solvers/zscal.c (deflated 57%)
+  adding: sources/include/external_solvers/ztrmm.c (deflated 80%)
+  adding: sources/include/external_solvers/ztrmv.c (deflated 80%)
+  adding: sources/include/external_solvers/zung2r.c (deflated 63%)
+  adding: sources/include/external_solvers/zungbr.c (deflated 69%)
+  adding: sources/include/external_solvers/zungl2.c (deflated 64%)
+  adding: sources/include/external_solvers/zunglq.c (deflated 66%)
+  adding: sources/include/external_solvers/zungqr.c (deflated 66%)
+  adding: sources/include/f2c.h (deflated 69%)
+  adding: sources/include/fmi/ (stored 0%)
+  adding: sources/include/fmi1/ (stored 0%)
+  adding: sources/include/fmi1/fmiModelFunctions.h (deflated 75%)
+  adding: sources/include/fmi1/fmiModelTypes.h (deflated 58%)
+  adding: sources/include/fmi1/fmu1_model_interface.c (deflated 83%)
+  adding: sources/include/fmi1/fmu1_model_interface.h (deflated 47%)
+  adding: sources/include/fmi2/ (stored 0%)
+  adding: sources/include/fmi2/fmi2Functions.h (deflated 74%)
+  adding: sources/include/fmi2/fmi2FunctionTypes.h (deflated 73%)
+  adding: sources/include/fmi2/fmi2TypesPlatform.h (deflated 61%)
+  adding: sources/include/fmi2/fmu2_model_interface.c (deflated 83%)
+  adding: sources/include/fmi2/fmu2_model_interface.h (deflated 53%)
+  adding: sources/include/gc.h (deflated 75%)
+  adding: sources/include/gc_config_macros.h (deflated 73%)
+  adding: sources/include/gc_pthread_redirects.h (deflated 63%)
+  adding: sources/include/gc_version.h (deflated 56%)
+  adding: sources/include/linearization/ (stored 0%)
+  adding: sources/include/linearization/linearize.h (deflated 46%)
+  adding: sources/include/Makefile.objs (deflated 72%)
+  adding: sources/include/math-support/ (stored 0%)
+  adding: sources/include/math-support/pivot.c (deflated 65%)
+  adding: sources/include/meta/ (stored 0%)
+  adding: sources/include/meta/gc/ (stored 0%)
+  adding: sources/include/meta/gc/mmc_gc.h (deflated 57%)
+  adding: sources/include/meta/meta_modelica.h (deflated 61%)
+  adding: sources/include/meta/meta_modelica_builtin.h (deflated 74%)
+  adding: sources/include/meta/meta_modelica_builtin_boxptr.h (deflated 76%)
+  adding: sources/include/meta/meta_modelica_builtin_boxvar.h (deflated 90%)
+  adding: sources/include/meta/meta_modelica_catch.c (deflated 44%)
+  adding: sources/include/meta/meta_modelica_data.h (deflated 68%)
+  adding: sources/include/meta/meta_modelica_mk_box.h (deflated 94%)
+  adding: sources/include/meta/meta_modelica_segv.h (deflated 57%)
+  adding: sources/include/meta/meta_modelica_string_lit.h (deflated 45%)
+  adding: sources/include/ModelicaUtilities.h (deflated 66%)
+  adding: sources/include/omc_inline.h (deflated 47%)
+  adding: sources/include/openmodelica.h (deflated 59%)
+  adding: sources/include/openmodelica_func.h (deflated 71%)
+  adding: sources/include/openmodelica_types.h (deflated 58%)
+  adding: sources/include/OpenModelicaBootstrappingHeader.h (deflated 91%)
+  adding: sources/include/optimization/ (stored 0%)
+  adding: sources/include/optimization/OptimizerData.h (deflated 63%)
+  adding: sources/include/optimization/OptimizerInterface.h (deflated 45%)
+  adding: sources/include/optimization/OptimizerLocalFunction.h (deflated 55%)
+  adding: sources/include/ParModelica/ (stored 0%)
+  adding: sources/include/ParModelica/explicit/ (stored 0%)
+  adding: sources/include/ParModelica/explicit/openclrt/ (stored 0%)
+  adding: sources/include/ParModelica/explicit/openclrt/OCLRuntimeUtil.cl (deflated 86%)
+  adding: sources/include/ParModelica/explicit/openclrt/omc_ocl_common_header.h (deflated 53%)
+  adding: sources/include/ParModelica/explicit/openclrt/omc_ocl_interface.h (deflated 67%)
+  adding: sources/include/ParModelica/explicit/openclrt/omc_ocl_memory_ops.h (deflated 62%)
+  adding: sources/include/simulation/ (stored 0%)
+  adding: sources/include/simulation/modelinfo.h (deflated 50%)
+  adding: sources/include/simulation/options.c (deflated 70%)
+  adding: sources/include/simulation/options.h (deflated 46%)
+  adding: sources/include/simulation/results/ (stored 0%)
+  adding: sources/include/simulation/results/simulation_result.h (deflated 52%)
+  adding: sources/include/simulation/simulation_info_json.c (deflated 71%)
+  adding: sources/include/simulation/simulation_info_json.h (deflated 49%)
+  adding: sources/include/simulation/simulation_info_xml.h (deflated 50%)
+  adding: sources/include/simulation/simulation_input_xml.h (deflated 47%)
+  adding: sources/include/simulation/simulation_omc_assert.c (deflated 71%)
+  adding: sources/include/simulation/simulation_runtime.h (deflated 56%)
+  adding: sources/include/simulation/solver/ (stored 0%)
+  adding: sources/include/simulation/solver/dassl.h (deflated 55%)
+  adding: sources/include/simulation/solver/delay.c (deflated 67%)
+  adding: sources/include/simulation/solver/delay.h (deflated 50%)
+  adding: sources/include/simulation/solver/epsilon.h (deflated 47%)
+  adding: sources/include/simulation/solver/events.h (deflated 51%)
+  adding: sources/include/simulation/solver/external_input.h (deflated 45%)
+  adding: sources/include/simulation/solver/initialization/ (stored 0%)
+  adding: sources/include/simulation/solver/initialization/initialization.c (deflated 78%)
+  adding: sources/include/simulation/solver/initialization/initialization.h (deflated 49%)
+  adding: sources/include/simulation/solver/initialization/initialization_data.h (deflated 57%)
+  adding: sources/include/simulation/solver/linearSolverLapack.c (deflated 68%)
+  adding: sources/include/simulation/solver/linearSolverLapack.h (deflated 47%)
+  adding: sources/include/simulation/solver/linearSolverTotalPivot.c (deflated 70%)
+  adding: sources/include/simulation/solver/linearSolverTotalPivot.h (deflated 47%)
+  adding: sources/include/simulation/solver/linearSystem.c (deflated 77%)
+  adding: sources/include/simulation/solver/linearSystem.h (deflated 51%)
+  adding: sources/include/simulation/solver/mixedSearchSolver.c (deflated 67%)
+  adding: sources/include/simulation/solver/mixedSearchSolver.h (deflated 46%)
+  adding: sources/include/simulation/solver/mixedSystem.c (deflated 64%)
+  adding: sources/include/simulation/solver/mixedSystem.h (deflated 48%)
+  adding: sources/include/simulation/solver/model_help.c (deflated 83%)
+  adding: sources/include/simulation/solver/model_help.h (deflated 69%)
+  adding: sources/include/simulation/solver/nonlinearSolverHomotopy.c (deflated 81%)
+  adding: sources/include/simulation/solver/nonlinearSolverHomotopy.h (deflated 48%)
+  adding: sources/include/simulation/solver/nonlinearSolverHybrd.c (deflated 81%)
+  adding: sources/include/simulation/solver/nonlinearSolverHybrd.h (deflated 56%)
+  adding: sources/include/simulation/solver/nonlinearSystem.c (deflated 79%)
+  adding: sources/include/simulation/solver/nonlinearSystem.h (deflated 54%)
+  adding: sources/include/simulation/solver/nonlinearValuesList.c (deflated 72%)
+  adding: sources/include/simulation/solver/nonlinearValuesList.h (deflated 52%)
+  adding: sources/include/simulation/solver/omc_math.c (deflated 84%)
+  adding: sources/include/simulation/solver/omc_math.h (deflated 71%)
+  adding: sources/include/simulation/solver/perform_qss_simulation.c (deflated 71%)
+  adding: sources/include/simulation/solver/perform_simulation.c (deflated 71%)
+  adding: sources/include/simulation/solver/solver_main.h (deflated 57%)
+  adding: sources/include/simulation/solver/stateset.c (deflated 74%)
+  adding: sources/include/simulation/solver/stateset.h (deflated 51%)
+  adding: sources/include/simulation/solver/synchronous.c (deflated 67%)
+  adding: sources/include/simulation/solver/synchronous.h (deflated 50%)
+  adding: sources/include/simulation_data.h (deflated 73%)
+  adding: sources/include/suitesparse/ (stored 0%)
+  adding: sources/include/suitesparse/Include/ (stored 0%)
+  adding: sources/include/suitesparse/Include/amd.h (deflated 68%)
+  adding: sources/include/suitesparse/Include/amd_internal.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/btf.h (deflated 68%)
+  adding: sources/include/suitesparse/Include/colamd.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/klu.h (deflated 80%)
+  adding: sources/include/suitesparse/Include/UFconfig.h (deflated 65%)
+  adding: sources/include/suitesparse/Include/umfpack.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_col_to_triplet.h (deflated 65%)
+  adding: sources/include/suitesparse/Include/umfpack_defaults.h (deflated 72%)
+  adding: sources/include/suitesparse/Include/umfpack_free_numeric.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_free_symbolic.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_get_determinant.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_get_lunz.h (deflated 73%)
+  adding: sources/include/suitesparse/Include/umfpack_get_numeric.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_get_symbolic.h (deflated 74%)
+  adding: sources/include/suitesparse/Include/umfpack_global.h (deflated 67%)
+  adding: sources/include/suitesparse/Include/umfpack_load_numeric.h (deflated 69%)
+  adding: sources/include/suitesparse/Include/umfpack_load_symbolic.h (deflated 69%)
+  adding: sources/include/suitesparse/Include/umfpack_numeric.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_qsymbolic.h (deflated 72%)
+  adding: sources/include/suitesparse/Include/umfpack_report_control.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_report_info.h (deflated 72%)
+  adding: sources/include/suitesparse/Include/umfpack_report_matrix.h (deflated 73%)
+  adding: sources/include/suitesparse/Include/umfpack_report_numeric.h (deflated 68%)
+  adding: sources/include/suitesparse/Include/umfpack_report_perm.h (deflated 69%)
+  adding: sources/include/suitesparse/Include/umfpack_report_status.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_report_symbolic.h (deflated 69%)
+  adding: sources/include/suitesparse/Include/umfpack_report_triplet.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_report_vector.h (deflated 68%)
+  adding: sources/include/suitesparse/Include/umfpack_save_numeric.h (deflated 73%)
+  adding: sources/include/suitesparse/Include/umfpack_save_symbolic.h (deflated 74%)
+  adding: sources/include/suitesparse/Include/umfpack_scale.h (deflated 70%)
+  adding: sources/include/suitesparse/Include/umfpack_solve.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_symbolic.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_tictoc.h (deflated 63%)
+  adding: sources/include/suitesparse/Include/umfpack_timer.h (deflated 58%)
+  adding: sources/include/suitesparse/Include/umfpack_transpose.h (deflated 71%)
+  adding: sources/include/suitesparse/Include/umfpack_triplet_to_col.h (deflated 68%)
+  adding: sources/include/suitesparse/Include/umfpack_wsolve.h (deflated 75%)
+  adding: sources/include/util/ (stored 0%)
+  adding: sources/include/util/base_array.c (deflated 75%)
+  adding: sources/include/util/base_array.h (deflated 60%)
+  adding: sources/include/util/boolean_array.c (deflated 82%)
+  adding: sources/include/util/boolean_array.h (deflated 78%)
+  adding: sources/include/util/cJSON.c (deflated 73%)
+  adding: sources/include/util/cJSON.h (deflated 65%)
+  adding: sources/include/util/division.c (deflated 64%)
+  adding: sources/include/util/division.h (deflated 60%)
+  adding: sources/include/util/generic_array.c (deflated 57%)
+  adding: sources/include/util/generic_array.h (deflated 51%)
+  adding: sources/include/util/index_spec.c (deflated 65%)
+  adding: sources/include/util/index_spec.h (deflated 49%)
+  adding: sources/include/util/integer_array.c (deflated 83%)
+  adding: sources/include/util/integer_array.h (deflated 83%)
+  adding: sources/include/util/java_interface.h (deflated 61%)
+  adding: sources/include/util/libcsv.c (deflated 76%)
+  adding: sources/include/util/libcsv.h (deflated 68%)
+  adding: sources/include/util/list.c (deflated 73%)
+  adding: sources/include/util/list.h (deflated 56%)
+  adding: sources/include/util/memory_pool.c (deflated 63%)
+  adding: sources/include/util/memory_pool.h (deflated 49%)
+  adding: sources/include/util/modelica.h (deflated 55%)
+  adding: sources/include/util/modelica_string.c (deflated 73%)
+  adding: sources/include/util/modelica_string.h (deflated 71%)
+  adding: sources/include/util/modelica_string_lit.c (deflated 91%)
+  adding: sources/include/util/modelica_string_lit.h (deflated 38%)
+  adding: sources/include/util/ModelicaUtilities.c (deflated 63%)
+  adding: sources/include/util/omc_error.c (deflated 76%)
+  adding: sources/include/util/omc_error.h (deflated 73%)
+  adding: sources/include/util/omc_init.c (deflated 47%)
+  adding: sources/include/util/omc_init.h (deflated 47%)
+  adding: sources/include/util/omc_mmap.c (deflated 66%)
+  adding: sources/include/util/omc_mmap.h (deflated 65%)
+  adding: sources/include/util/omc_msvc.c (deflated 57%)
+  adding: sources/include/util/omc_msvc.h (deflated 55%)
+  adding: sources/include/util/omc_spinlock.h (deflated 41%)
+  adding: sources/include/util/rational.c (deflated 65%)
+  adding: sources/include/util/rational.h (deflated 53%)
+  adding: sources/include/util/read_csv.c (deflated 71%)
+  adding: sources/include/util/read_csv.h (deflated 48%)
+  adding: sources/include/util/read_matlab4.c (deflated 76%)
+  adding: sources/include/util/read_matlab4.h (deflated 56%)
+  adding: sources/include/util/read_write.h (deflated 69%)
+  adding: sources/include/util/real_array.c (deflated 82%)
+  adding: sources/include/util/real_array.h (deflated 80%)
+  adding: sources/include/util/ringbuffer.c (deflated 67%)
+  adding: sources/include/util/ringbuffer.h (deflated 49%)
+  adding: sources/include/util/rtclock.c (deflated 77%)
+  adding: sources/include/util/rtclock.h (deflated 63%)
+  adding: sources/include/util/simulation_options.c (deflated 76%)
+  adding: sources/include/util/simulation_options.h (deflated 61%)
+  adding: sources/include/util/string_array.c (deflated 81%)
+  adding: sources/include/util/string_array.h (deflated 78%)
+  adding: sources/include/util/uthash.h (deflated 81%)
+  adding: sources/include/util/utility.c (deflated 56%)
+  adding: sources/include/util/utility.h (deflated 64%)
+  adding: sources/include/util/varinfo.c (deflated 55%)
+  adding: sources/include/util/varinfo.h (deflated 46%)
+  adding: sources/install-sh (deflated 61%)
+  adding: sources/m.out (deflated 92%)
+  adding: sources/Makefile.in (deflated 65%)

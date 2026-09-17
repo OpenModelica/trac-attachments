@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("vector.mo");
+getErrorString();
+simulate(P.M);
+getErrorString();

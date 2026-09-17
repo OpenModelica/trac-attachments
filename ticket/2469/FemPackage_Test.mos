@@ -1,0 +1,14 @@
+loadString("
+model FemPackage_Test
+  constant Integer N = 10;
+  constant Integer M = 30;
+  parameter Real A[N,N] = identity(N);
+  parameter Real B[N,N,M] = ones(N,N,M);
+  Real q[M](each start = 1, each fixed=true);
+  Real C[N,N];
+equation
+  C = A + sum(B[:,:,i]*q[i] for i in 1:M);
+  der(q) = -q;
+end FemPackage_Test;
+"); getErrorString();
+simulate(FemPackage_Test); getErrorString();

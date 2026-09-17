@@ -1,0 +1,31 @@
+Index: Compiler/BackEnd/SimCodeUtil.mo
+===================================================================
+--- Compiler/BackEnd/SimCodeUtil.mo	(revision 22335)
++++ Compiler/BackEnd/SimCodeUtil.mo	(working copy)
+@@ -1247,6 +1247,8 @@
+       DAE.Exp exp;
+       String msg;
+       tuple<Integer, HashTableExpToIndex.HashTable, list<DAE.Exp>> t;
++      list<DAE.Exp> expl;
++
+     case (exp, t)
+       equation
+         failure(isLiteralExp(exp));
+@@ -1255,14 +1257,13 @@
+       equation
+         isTrivialLiteralExp(exp);
+       then (exp, t);
+-    case (exp, t)
++    case (DAE.LIST(valList = expl as _ :: _), t)
+       equation
+-        exp = listToCons(exp);
+-        (exp, t) = Expression.traverseExp(exp, replaceLiteralExp, t);
++        (expl, t) = Expression.traverseExpList(expl, replaceLiteralExp, t);
++        exp = listToCons(DAE.LIST(expl));
+       then (exp, t); // All sublists should also be added as literals...
+     case (exp, t)
+       equation
+-        failure(_ = listToCons(exp));
+         (exp,t) = replaceLiteralExp2(exp, inTpl);
+       then (exp, t);
+     case (exp, _)

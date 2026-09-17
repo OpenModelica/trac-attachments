@@ -1,0 +1,104 @@
+package ImageExport
+  model ControlWithoutFilter "Control of B6 rectifier"
+    parameter Boolean useConstantFiringAngle = true "Use constant firing angle instead of signal input";
+    parameter Modelica.SIunits.Angle constantFiringAngle = 0 "Firing angle" annotation(Dialog(enable = useConstantFiringAngle));
+    parameter Modelica.SIunits.Angle firingAngleMax(min = 0, max = Modelica.Constants.pi) = Modelica.Constants.pi "Maximum firing angle";
+    Modelica.Blocks.Interfaces.RealInput firingAngle if not useConstantFiringAngle "Firing angle (rad)" annotation(Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
+    Modelica.Electrical.Analog.Interfaces.PositivePin p1 annotation(Placement(transformation(extent = {{-110, 50}, {-90, 70}})));
+    Modelica.Electrical.Analog.Interfaces.PositivePin p2 annotation(Placement(transformation(extent = {{-110, -10}, {-90, 10}})));
+    Modelica.Electrical.Analog.Interfaces.PositivePin p3 annotation(Placement(transformation(extent = {{-110, -70}, {-90, -50}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_p1 annotation(Placement(transformation(extent = {{100, 90}, {120, 110}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_p2 annotation(Placement(transformation(extent = {{100, 50}, {120, 70}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_p3 annotation(Placement(transformation(extent = {{100, 10}, {120, 30}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_n1 annotation(Placement(transformation(extent = {{100, -30}, {120, -10}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_n2 annotation(Placement(transformation(extent = {{100, -70}, {120, -50}})));
+    Modelica.Blocks.Interfaces.BooleanOutput fire_n3 annotation(Placement(transformation(extent = {{100, -110}, {120, -90}})));
+    Modelica.Electrical.PowerConverters.ACDC.Control.VoltageBridge2mPulse voltageBridge2mPulse(final m = 3, final f = 50, final useConstantFiringAngle = useConstantFiringAngle, final constantFiringAngle = constantFiringAngle, final firingAngleMax = Modelica.Constants.pi, final useFilter = false) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin = {0, -20})));
+    Modelica.Electrical.MultiPhase.Basic.PlugToPin_p plugToPin1(final m = 3, final k = 1) annotation(Placement(transformation(extent = {{-30, 10}, {-50, 30}})));
+    Modelica.Electrical.MultiPhase.Basic.PlugToPin_p plugToPin2(final m = 3, final k = 2) annotation(Placement(transformation(extent = {{-30, -10}, {-50, 10}})));
+    Modelica.Electrical.MultiPhase.Basic.PlugToPin_p plugToPin3(final m = 3, final k = 3) annotation(Placement(transformation(extent = {{-30, -30}, {-50, -10}})));
+  equation
+    connect(firingAngle, voltageBridge2mPulse.firingAngle) annotation(Line(points = {{0, -120}, {0, -32}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(p1, plugToPin1.pin_p) annotation(Line(points = {{-100, 60}, {-60, 60}, {-60, 20}, {-42, 20}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(plugToPin1.plug_p, voltageBridge2mPulse.ac) annotation(Line(points = {{-38, 20}, {-20, 20}, {-20, -20}, {-10, -20}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(plugToPin2.pin_p, p2) annotation(Line(points = {{-42, 0}, {-100, 0}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(plugToPin2.plug_p, voltageBridge2mPulse.ac) annotation(Line(points = {{-38, 4.44089e-16}, {-30, 4.44089e-16}, {-30, 0}, {-20, 0}, {-20, -20}, {-10, -20}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(plugToPin3.pin_p, p3) annotation(Line(points = {{-42, -20}, {-60, -20}, {-60, -60}, {-100, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(plugToPin3.plug_p, voltageBridge2mPulse.ac) annotation(Line(points = {{-38, -20}, {-10, -20}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_p[1], fire_p1) annotation(Line(points = {{-6, -9.66667}, {-6, 100}, {110, 100}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_p[2], fire_p2) annotation(Line(points = {{-6, -9}, {-6, 60}, {110, 60}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_p[3], fire_p3) annotation(Line(points = {{-6, -8.33333}, {-6, 20}, {110, 20}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_n[1], fire_n1) annotation(Line(points = {{6, -9.66667}, {6, 0}, {40, 0}, {40, -20}, {110, -20}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_n[2], fire_n2) annotation(Line(points = {{6, -9}, {6, 0}, {40, 0}, {40, -60}, {110, -60}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(voltageBridge2mPulse.fire_n[3], fire_n3) annotation(Line(points = {{6, -8.33333}, {6, 0}, {40, 0}, {40, -100}, {110, -100}}, color = {255, 0, 255}, smooth = Smooth.None));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics = {Rectangle(extent = {{-100, 100}, {100, -100}}, lineColor = {0, 0, 255}), Line(points = {{20, 0}, {20, -24}, {40, -24}, {40, -40}, {20, -40}, {20, -40}}, color = {255, 0, 255}, smooth = Smooth.None), Line(points = {{-40, 0}, {-40, -4}, {-20, -4}, {-20, -20}, {-40, -20}, {-40, -40}}, color = {255, 0, 255}, smooth = Smooth.None), Text(extent = {{-40, 80}, {40, 20}}, lineColor = {255, 0, 255}, fillColor = {0, 0, 255}, fillPattern = FillPattern.Solid, textString = "B6")}));
+  end ControlWithoutFilter;
+
+   model Load_R_draft
+    extends Modelica.Icons.Example;
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor annotation(Placement(visible = true, transformation(origin = {60, 0}, extent = {{10, -10}, {-10, 10}}, rotation = 90)));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentSensor annotation(Placement(transformation(extent = {{-10, 10}, {10, -10}}, rotation = 270, origin = {42, -60})));
+    Modelica.Electrical.Analog.Basic.Ground ground annotation(Placement(transformation(extent = {{-100, -80}, {-80, -60}})));
+    Modelica.Electrical.Analog.Basic.Resistor resistor(R = 70) annotation(Placement(visible = true, transformation(origin = {42, 20}, extent = {{10, -10}, {-10, 10}}, rotation = 90)));
+    Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage1(V = 110 * sqrt(2), phase = 0, freqHz = 50) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 180, origin = {-80, 30})));
+    Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage2(V = 110 * sqrt(2), freqHz = 50, phase = -2.0943951023932) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 180, origin = {-80, 0})));
+    Modelica.Electrical.Analog.Sources.SineVoltage sineVoltage3(V = 110 * sqrt(2), freqHz = 50, phase = -4.1887902047864) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 180, origin = {-80, -30})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_p1 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-40, 60})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_p2 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-10, 60})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_p3 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {20, 60})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_n1 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-40, -60})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_n2 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-10, -60})));
+    Modelica.Electrical.Analog.Ideal.IdealThyristor idealThyristor_n3 annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {20, -60})));
+    ImageExport.ControlWithoutFilter controlWithoutFilter(constantFiringAngle = 1.5707963267949) annotation(Placement(transformation(extent = {{-4, -10}, {16, 10}})));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentSensor_p1 annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = 180, origin = {-24, 88})));
+    Modelica.Electrical.Analog.Sensors.VoltageSensor voltagesensor_p1 annotation(Placement(visible = true, transformation(origin = {-78, 60}, extent = {{-10, 10}, {10, -10}}, rotation = 90)));
+    Modelica.Electrical.Analog.Sensors.CurrentSensor currentSensorAC1 annotation(Placement(transformation(extent = {{10, 10}, {-10, -10}}, rotation = 180, origin = {-54, 30})));
+    Modelica.Blocks.Math.RootMeanSquare rmsCurrent_p1(f = 50) annotation(Placement(transformation(extent = {{0, 100}, {20, 80}})));
+    Modelica.Blocks.Math.Mean meanVoltage(f = 300) annotation(Placement(transformation(extent = {{78, -10}, {98, 10}})));
+    Modelica.Blocks.Math.Mean meanCurrent(f = 300) annotation(Placement(transformation(extent = {{60, -70}, {80, -50}})));
+    Modelica.Blocks.Math.RootMeanSquare rmsCurrentAC1(f = 50) annotation(Placement(transformation(extent = {{-48, -100}, {-28, -80}})));
+  equation
+    connect(currentSensor.p, voltagesensor.n) annotation(Line(points = {{42, -50}, {42, -40}, {60, -40}, {60, -10}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(ground.p, sineVoltage1.n) annotation(Line(points = {{-90, -60}, {-90, 30}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(sineVoltage2.n, ground.p) annotation(Line(points = {{-90, 0}, {-90, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(sineVoltage3.n, ground.p) annotation(Line(points = {{-90, -30}, {-90, -60}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_n1.p, currentSensor.n) annotation(Line(points = {{-40, -70}, {42, -70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_n2.p, currentSensor.n) annotation(Line(points = {{-10, -70}, {42, -70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_n3.p, currentSensor.n) annotation(Line(points = {{20, -70}, {42, -70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(sineVoltage2.p, idealThyristor_p2.p) annotation(Line(points = {{-70, 0}, {-10, 0}, {-10, 50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(sineVoltage3.p, idealThyristor_p3.p) annotation(Line(points = {{-70, -30}, {20, -30}, {20, 50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p1.p, idealThyristor_n1.n) annotation(Line(points = {{-40, 50}, {-40, -50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p2.p, idealThyristor_n2.n) annotation(Line(points = {{-10, 50}, {-10, -50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p3.p, idealThyristor_n3.n) annotation(Line(points = {{20, 50}, {20, -50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.p2, sineVoltage2.p) annotation(Line(points = {{-4, 0}, {-70, 0}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.p3, sineVoltage3.p) annotation(Line(points = {{-4, -6}, {-8, -6}, {-8, -30}, {-70, -30}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_p1, idealThyristor_p1.fire) annotation(Line(points = {{17, 10}, {24, 10}, {24, 36}, {-32, 36}, {-32, 44}, {-60, 44}, {-60, 67}, {-51, 67}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_p2, idealThyristor_p2.fire) annotation(Line(points = {{17, 6}, {28, 6}, {28, 40}, {-28, 40}, {-28, 67}, {-21, 67}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_p3, idealThyristor_p3.fire) annotation(Line(points = {{17, 2}, {32, 2}, {32, 44}, {2, 44}, {2, 67}, {9, 67}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_n1, idealThyristor_n1.fire) annotation(Line(points = {{17, -2}, {32, -2}, {32, -34}, {-58, -34}, {-58, -53}, {-51, -53}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_n2, idealThyristor_n2.fire) annotation(Line(points = {{17, -6}, {28, -6}, {28, -38}, {-28, -38}, {-28, -53}, {-21, -53}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.fire_n3, idealThyristor_n3.fire) annotation(Line(points = {{17, -10}, {24, -10}, {24, -42}, {2, -42}, {2, -53}, {9, -53}}, color = {255, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p1.n, currentSensor_p1.p) annotation(Line(points = {{-40, 70}, {-40, 88}, {-34, 88}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(currentSensor_p1.n, idealThyristor_p2.n) annotation(Line(points = {{-14, 88}, {-14, 88}, {-10, 88}, {-10, 88}, {-10, 88}, {-10, 70}, {-10, 70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p2.n, idealThyristor_p3.n) annotation(Line(points = {{-10, 70}, {20, 70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p3.n, resistor.p) annotation(Line(points = {{20, 70}, {42, 70}, {42, 30}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p3.n, voltagesensor.p) annotation(Line(points = {{20, 70}, {42, 70}, {42, 40}, {60, 40}, {60, 10}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(voltagesensor_p1.p, idealThyristor_p1.p) annotation(Line(points = {{-78, 50}, {-40, 50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(idealThyristor_p1.n, voltagesensor_p1.n) annotation(Line(points = {{-40, 70}, {-78, 70}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(sineVoltage1.p, currentSensorAC1.p) annotation(Line(points = {{-70, 30}, {-64, 30}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(currentSensorAC1.n, idealThyristor_p1.p) annotation(Line(points = {{-44, 30}, {-40, 30}, {-40, 50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(controlWithoutFilter.p1, currentSensorAC1.n) annotation(Line(points = {{-4, 6}, {-40, 6}, {-40, 30}, {-44, 30}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(currentSensor_p1.i, rmsCurrent_p1.u) annotation(Line(points = {{-24, 98}, {-24, 100}, {-8, 100}, {-8, 90}, {-2, 90}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(voltagesensor.v, meanVoltage.u) annotation(Line(points = {{70, 0}, {76, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(currentSensor.i, meanCurrent.u) annotation(Line(points = {{52, -60}, {58, -60}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(currentSensorAC1.i, rmsCurrentAC1.u) annotation(Line(points = {{-54, 20}, {-54, -16}, {-62, -16}, {-62, -90}, {-50, -90}}, color = {0, 0, 127}, smooth = Smooth.None));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StopTime = 0.1, Interval = 0.0001));
+  end Load_R_draft;
+
+  model Load_R "R load with constant firing angle"
+    extends Load_R_draft;
+  equation
+    connect(resistor.n, currentSensor.p) annotation(Line(points = {{42, 10}, {42, -50}}, color = {0, 0, 255}, smooth = Smooth.None));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics), experiment(StopTime = 0.1, Interval = 0.0001));
+  end Load_R;
+end ImageExport;

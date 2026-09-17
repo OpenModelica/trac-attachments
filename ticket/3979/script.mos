@@ -1,0 +1,4 @@
+loadFile("package.mo");
+getErrorString();
+getComponents(TestPackage.Connectors.ACPower);
+getErrorString();

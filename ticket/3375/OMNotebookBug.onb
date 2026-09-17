@@ -1,0 +1,27 @@
+<!DOCTYPE OMNotebook>
+<Notebook>
+  <GroupCell closed="false">
+    <GraphCell style="Graph" closed="false">
+      <Input>model foo
+  Real a, b;
+equation
+  a = sin(10*time);
+  b = sin(20*time);  
+end foo;
+</Input>
+      <Output>{foo}</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>simulate(foo)</Input>
+      <Output>record SimulationResult
+    resultFile = "foo_res.mat",
+    messages = ""
+end SimulationResult;</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <OMCPlot PlotType="0" XRangeMin="0" Title="" LogX="false" XRangeMax="0" AutoScale="true" Grid="detailed" LogY="false" CurveStyle="1" YRangeMin="0" LegendPosition="top" Footer="" YRangeMax="0" YLabel="" XLabel="time" CurveWidth="1"/>
+      <Input>plot({a,b})</Input>
+      <Output>true</Output>
+    </GraphCell>
+  </GroupCell>
+</Notebook>

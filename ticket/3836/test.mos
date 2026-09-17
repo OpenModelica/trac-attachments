@@ -1,0 +1,32 @@
+setCommandLineOptions("-g=MetaModelica");
+
+loadString("
+  uniontype UT
+    record R
+      Integer x;
+    end R;
+  end UT;
+ 
+  function f
+    input Integer x;
+    output Integer y = x + 1;
+    output Integer z = x + 2;
+  end f;
+
+  function f2
+    input output UT ut;
+  protected
+    Integer y;
+  algorithm
+    (ut.x, y) := f(ut.x);
+  end f2;
+
+  function test
+  protected
+    UT ut = R(1);
+  algorithm
+    ut := f2(ut);
+  end test;
+"); getErrorString();
+
+test(); getErrorString();

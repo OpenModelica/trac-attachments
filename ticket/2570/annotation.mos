@@ -1,0 +1,6 @@
+loadFile("annotation.mo");
+getErrorString();
+save(HelloWorld);
+getErrorString();
+loadFile("annotation.mo");
+getErrorString();

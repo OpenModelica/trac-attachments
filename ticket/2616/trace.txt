@@ -1,0 +1,80 @@
+true
+""
+true
+""
+- Inst.moveBindings failed:equation
+  simpleTest.controller.stepdef[1].steptype = simpleTest.stepdef[1].steptype;
+  simpleTest.controller.stepdef[1].loop_start = simpleTest.stepdef[1].loop_start;
+  simpleTest.controller.stepdef[1].loop_count = simpleTest.stepdef[1].loop_count;
+ ###   parameter enumeration(invalid, charge, discharge, rest) simpleTest.controller.stepdef[1].steptype = TestCaseBug.StepType.invalid;
+  parameter Integer simpleTest.controller.stepdef[1].loop_start = 0;
+  parameter Integer simpleTest.controller.stepdef[1].loop_count = 0;
+
+- Inst.instScalar failed on stepdef in scope simpleTest.controller env: TestCaseBug
+
+- Inst.instVar2 failed: simpleTest.controller.stepdef( = simpleTest.stepdef[1])
+  Scope: TestCaseBug
+- Inst.instArray failed: stepdef
+- Inst.instVar2 failed: simpleTest.controller.stepdef( = {simpleTest.stepdef[1], simpleTest.stepdef[2], simpleTest.stepdef[3], simpleTest.stepdef[4], simpleTest.stepdef[5]})
+  Scope: TestCaseBug
+- Inst.instVar failed while instatiating variable: simpleTest.controller.stepdef  = {simpleTest.stepdef[1], simpleTest.stepdef[2], simpleTest.stepdef[3], simpleTest.stepdef[4], simpleTest.stepdef[5]}
+in scope: TestCaseBug class:
+record StepData  
+  parameter .TestCaseBug.StepType steptype = StepType.invalid;
+  parameter Integer loop_start = 0;
+  parameter Integer loop_count = 0;
+end StepData
+- Inst.instElement failed: parameter StepData[:] stepdef = {StepData()}
+  Scope: TestCaseBug.Full
+- Inst.instClassdef failed
+  class :TestCaseBug.Full
+- Inst.instClassIn2 failed on class:Full in environment: TestCaseBug.Full
+- Inst.instClass: Full in env: TestCaseBug failed
+- Inst.instScalar failed on controller in scope simpleTest env: TestCaseBug
+
+- Inst.instVar2 failed: simpleTest.controller((stepdef = {simpleTest.stepdef[1], simpleTest.stepdef[2], simpleTest.stepdef[3], simpleTest.stepdef[4], simpleTest.stepdef[5]}), class or component stepdef)
+  Scope: TestCaseBug
+- Inst.instVar failed while instatiating variable: simpleTest.controller (stepdef = {simpleTest.stepdef[1], simpleTest.stepdef[2], simpleTest.stepdef[3], simpleTest.stepdef[4], simpleTest.stepdef[5]}), class or component stepdef
+in scope: TestCaseBug class:
+model Full  
+  parameter StepData[:] stepdef = {StepData()};
+  Modelica.Blocks.Interfaces.RealInput u_now;
+  Modelica.Blocks.Interfaces.RealInput i_now;
+  Modelica.Blocks.Interfaces.RealOutput Temp_C_set;
+algorithm
+  Temp_C_set := 1;
+end Full
+- Inst.instElement failed: Full controller(stepdef = stepdef)
+  Scope: TestCaseBug.Controller
+- Inst.instClassdef failed
+  class :TestCaseBug.Controller
+- Inst.instClassIn2 failed on class:Controller in environment: TestCaseBug.Controller
+- Inst.instClass: Controller in env: TestCaseBug failed
+- Inst.instScalar failed on simpleTest in scope <Prefix.NOPRE()> env: TestCaseBug
+
+- Inst.instVar2 failed: <Prefix.NOPRE()>.simpleTest((stepdef = {TestCaseBug.StepData(TestCaseBug.StepType.invalid, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0)}), class or component stepdef)
+  Scope: TestCaseBug
+- Inst.instVar failed while instatiating variable: simpleTest (stepdef = {TestCaseBug.StepData(TestCaseBug.StepType.invalid, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0), TestCaseBug.StepData(TestCaseBug.StepType.rest, 0, 0)}), class or component stepdef
+in scope: TestCaseBug class:
+model Controller  
+  parameter Real[:, 2] timeTableCurrent = [0, 0];
+  parameter Real[:, 2] timeTableVoltage = [0, 0];
+  parameter StepData[:] stepdef = {StepData()};
+  Modelica.Blocks.Sources.TimeTable i_timeTable(table = timeTableCurrent);
+  Modelica.Blocks.Sources.TimeTable u_timeTable1(table = timeTableVoltage);
+protected
+  Full controller(stepdef = stepdef);
+equation
+  connect(u_timeTable1.y, controller.u_now);
+  connect(i_timeTable.y, controller.i_now);
+end Controller
+- Inst.instElement failed: Controller simpleTest(stepdef = {StepData(), StepData(steptype = StepType.rest), StepData(steptype = StepType.rest), StepData(steptype = StepType.rest), StepData(steptype = StepType.rest)})
+  Scope: TestCaseBug.TestCaseBug
+- Inst.instClassdef failed
+  class :TestCaseBug.TestCaseBug
+- Inst.instClassIn2 failed on class:TestCaseBug in environment: TestCaseBug.TestCaseBug
+- Inst.instClass: TestCaseBug in env: TestCaseBug failed
+{"Error: Error occurred while flattening model TestCaseBug.TestCaseBug", "TRANSLATION", "Error", "89"}
+""
+"Error: Error occurred while flattening model TestCaseBug.TestCaseBug
+"

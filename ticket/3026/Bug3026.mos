@@ -1,0 +1,2 @@
+loadFile("Bug3026.mo"); getErrorString();
+simulate(M); getErrorString();

@@ -1,0 +1,168 @@
+$ make -f MakefileLib
+clang++ -c -pipe -O2 -w -fPIC -D_REENTRANT -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/var/tmp/openmodelica-1.9.2-beta1/mkspecs/linux-g++ -I. -I/var/tmp/openmodelica-1.9.2-beta1/include/QtCore -I/var/tmp/openmodelica-1.9.2-beta1/include/QtGui -I/var/tmp/openmodelica-1.9.2-beta1/include/QtXml -I/var/tmp/openmodelica-1.9.2-beta1/include/QtSvg -I/var/tmp/openmodelica-1.9.2-beta1/include -I../../3rdParty/qwt/src -I/var/tmp/openmodelica-1.9.2-beta1/include -I/var/tmp/openmodelica-1.9.2-beta1/include/paradiseo -I/var/tmp/openmodelica-1.9.2-beta1/include/paradiseo/utils -I../../OMOptimBasis/build/release/generatedfiles/ui -Irelease/generatedfiles/ui -I. -I.. -I../.. -I../Core -I../GUI -I../Vld -I../Core/Dymola -I../Core/FileData -I../Core/Infos -I../Core/Modelica -I../Core/OMC -I../Core/OpenModelica -I../Core/Problems -I../Core/Tools -I../Core/Units -I../GUI/Dialogs -I../GUI/Plots -I../GUI/Resources -I../GUI/Scene -I../GUI/Tabs -I../GUI/Tools -I../GUI/Views -I../GUI/Widgets -I../Core/Optim -I../Core/Optim/EA -I../Core/Optim/MILP -I../Core/Optim/EA/Checkpoints -I../Core/Optim/EA/Chromosome -I../Core/Optim/EA/Crossover -I../Core/Optim/EA/Evaluations -I../Core/Optim/EA/Init -I../Core/Optim/EA/Monitor -I../Core/Optim/EA/Mutations -I../Core/Optim/EA/NSGA2 -I../Core/Optim/EA/Results -I../Core/Optim/EA/SPEA2 -I../Core/Optim/EA/SPEA2Adaptative -I../Core/Optim/EA/SA1 -I../Core/Optim/EA/PSO -I../../OMOptimBasis -I../../OMOptimBasis/FileData -I../../OMOptimBasis/GUI -I../../OMOptimBasis/GUI/Tools -I../../OMOptimBasis/GUI/Dialogs -I../../OMOptimBasis/GUI/Widgets -I../../OMOptimBasis/Infos -I../../OMOptimBasis/Units -I../../OMOptimBasis/Tools -I../../OMOptimBasis/Problems -I/var/tmp/openmodelica-1.9.2-beta1/include/paradiseo/src -Irelease/generatedfiles/moc -Irelease/generatedfiles/ui -o release/generatedfiles/ModPlusDymolaCtrl.o ../Core/Dymola/ModPlusDymolaCtrl.cpp
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:121:12: error: incomplete type 'Variable' named in nested name specifier
+    return ItemClass::nbFields;
+           ^~~~~~~~~~~
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::columnCount' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:121:21: error: incomplete definition of type 'Variable'
+    return ItemClass::nbFields;
+           ~~~~~~~~~^~
+../../OMOptimBasis/MOVector.cpp:147:52: error: incomplete type 'Variable' named in nested name specifier
+    if(index.row()<_items.size() && index.column()<ItemClass::nbFields)
+                                                   ^~~~~~~~~~~
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::data' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:147:61: error: incomplete definition of type 'Variable'
+    if(index.row()<_items.size() && index.column()<ItemClass::nbFields)
+                                                   ~~~~~~~~~^~
+../../OMOptimBasis/MOVector.cpp:160:40: error: member access into incomplete type 'Variable'
+        result = _items.at(index.row())->getFieldValue(index.column(),role);
+                                       ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:164:23: error: member access into incomplete type 'Variable'
+        return curItem->getStrToolTip();
+                      ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:189:31: error: member access into incomplete type 'Variable'
+    return _items[index.row()]->setFieldValue(index.column(),value);
+                              ^
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::setData' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:131:20: error: incomplete type 'Variable' named in nested name specifier
+            return ItemClass::sFieldName(section,role);
+                   ^~~~~~~~~~~
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::headerData' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:131:29: error: incomplete definition of type 'Variable'
+            return ItemClass::sFieldName(section,role);
+                   ~~~~~~~~~^~
+../../OMOptimBasis/MOVector.cpp:621:46: error: member access into incomplete type 'Variable'
+        csv.push_back(dragVector._items.at(i)->toCSV());
+                                             ^
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::mimeData' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:178:65: error: member access into incomplete type 'Variable'
+    bool itemIsEditable =  _editable && !(_items.at(index.row())->isProtectedField(index.column()));
+                                                                ^
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::flags' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:322:31: error: member access into incomplete type 'Variable'
+        itemName2=_items.at(i)->name();
+                              ^
+../../OMOptimBasis/MOVector.cpp:303:23: note: in instantiation of member function 'MOAVector<Variable>::findItem' requested here
+    ItemClass* item = findItem(itemName);
+                      ^
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::removeRow' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:529:22: error: incomplete type 'Variable' named in nested name specifier
+    for(int iF=0; iF<ItemClass::nbFields; iF++)
+                     ^~~~~~~~~~~
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::toSavingString' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:529:31: error: incomplete definition of type 'Variable'
+    for(int iF=0; iF<ItemClass::nbFields; iF++)
+                     ~~~~~~~~~^~
+../../OMOptimBasis/MOVector.cpp:536:35: error: member access into incomplete type 'Variable'
+        saveString += _items.at(i)->toSavingString();
+                                  ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.cpp:44:
+In file included from ../Core/Dymola/ModPlusDymolaCtrl.h:18:
+In file included from ../Core/Modelica/ModPlusCtrl.h:47:
+In file included from ../../OMOptimBasis/MOVector.h:169:
+../../OMOptimBasis/MOVector.cpp:550:41: error: member access into incomplete type 'Variable'
+        QDomElement cItem = _items.at(i)->toXmlData(doc);
+                                        ^
+../Core/Dymola/ModPlusDymolaCtrl.cpp:121:21: note: in instantiation of member function 'MOAVector<Variable>::toXmlData' requested here
+    finalVariables->clear();
+                    ^
+../Core/ModelPlus.h:14:7: note: forward declaration of 'Variable'
+class Variable;
+      ^
+16 errors generated.
+MakefileLib:1994: recipe for target 'release/generatedfiles/ModPlusDymolaCtrl.o' failed
+make: *** [release/generatedfiles/ModPlusDymolaCtrl.o] Error 1
+

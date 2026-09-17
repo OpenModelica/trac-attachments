@@ -1,0 +1,13 @@
+Index: OMOptim/Core/Optim/EA/SA1/SA1explorer.h
+===================================================================
+--- OMOptim/Core/Optim/EA/SA1/SA1explorer.h	(revision 17878)
++++ OMOptim/Core/Optim/EA/SA1/SA1explorer.h	(working copy)
+@@ -68,7 +68,7 @@
+      * @param _solution unused solution
+      */
+     virtual void updateParam(EOT & _solution) {
+-        coolingSchedule.update(temperature);
++        coolingSchedule.update(temperature, true);
+     };
+ 
+     /**

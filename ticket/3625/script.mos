@@ -1,0 +1,10 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("TestKeyWordIO.mo");
+getErrorString();
+translateModel(TestKeyWordIO.RLOn);
+getErrorString();
+loadFile("KeyWordIO.mo");
+getErrorString();
+translateModel(TestKeyWordIO.RLOn_io);
+getErrorString();

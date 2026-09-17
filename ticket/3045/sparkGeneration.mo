@@ -1,0 +1,30 @@
+model sparkGeneration
+  Real enArc;
+  Modelica.Electrical.Analog.Sources.ConstantVoltage Edc(V = 14) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = -90, origin = {-100, -2})));
+  Modelica.Electrical.Analog.Basic.Resistor Rbat(R = 2) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {-100, 30})));
+  Modelica.Electrical.Analog.Basic.Transformer transformer(L1 = 2.8e-3, M = 0.252, L2 = 28.0) annotation(Placement(transformation(extent = {{-60, 38}, {-40, 58}})));
+  Modelica.Electrical.Analog.Basic.Ground ground annotation(Placement(transformation(extent = {{-110, -60}, {-90, -40}})));
+  Modelica.Electrical.Analog.Sensors.PotentialSensor vInnerPin annotation(Placement(transformation(extent = {{-2, 70}, {18, 90}})));
+  Modelica.Electrical.Analog.Basic.Ground ground1 annotation(Placement(transformation(extent = {{-28, 6}, {-8, 26}})));
+  Modelica.Blocks.Math.Abs abs1 annotation(Placement(transformation(extent = {{28, 70}, {48, 90}})));
+  Modelica.Electrical.Analog.Ideal.CloserWithArc swArc(useHeatPort = false, V0 = 400, dVdt = 1, Vmax = 401, Goff = 0.1e-6, Ron = 40e3) annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = -90, origin = {-2, 46})));
+  Modelica.Blocks.Logical.GreaterThreshold greaterThreshold(threshold = 15e3) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 0, origin = {80, 80})));
+  Modelica.Electrical.Analog.Basic.VariableResistor igbt annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = -90, origin = {-60, -22})));
+  Modelica.Blocks.Sources.Ramp ramp(startTime = 0.003, height = 1000.0, duration = 0.0002) annotation(Placement(transformation(extent = {{-14, -32}, {-34, -12}})));
+equation
+  der(enArc) = swArc.v * swArc.i;
+  connect(Edc.p, Rbat.p) annotation(Line(points = {{-100, 8}, {-100, 20}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(transformer.p1, Rbat.n) annotation(Line(points = {{-60, 53}, {-100, 53}, {-100, 50}, {-100, 50}, {-100, 40}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(abs1.u, vInnerPin.phi) annotation(Line(points = {{26, 80}, {19, 80}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(swArc.n, transformer.p2) annotation(Line(points = {{-2, 56}, {-26, 56}, {-26, 53}, {-40, 53}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(transformer.n2, swArc.p) annotation(Line(points = {{-40, 43}, {-26, 43}, {-26, 36}, {-2, 36}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(ground1.p, swArc.p) annotation(Line(points = {{-18, 26}, {-18, 36}, {-2, 36}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(vInnerPin.p, transformer.p2) annotation(Line(points = {{-2, 80}, {-16, 80}, {-16, 56}, {-26, 56}, {-26, 53}, {-40, 53}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(greaterThreshold.u, abs1.y) annotation(Line(points = {{68, 80}, {49, 80}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(igbt.p, transformer.n1) annotation(Line(points = {{-60, -12}, {-60, 43}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(igbt.n, Edc.n) annotation(Line(points = {{-60, -32}, {-100, -32}, {-100, -12}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(ground.p, Edc.n) annotation(Line(points = {{-100, -40}, {-100, -12}}, color = {0, 0, 255}, smooth = Smooth.None));
+  connect(ramp.y, igbt.R) annotation(Line(points = {{-35, -22}, {-49, -22}}, color = {0, 0, 127}, smooth = Smooth.None));
+  connect(greaterThreshold.y, swArc.control) annotation(Line(points = {{91, 80}, {100, 80}, {100, 46}, {8, 46}}, color = {255, 0, 255}, smooth = Smooth.None));
+  annotation(Icon(coordinateSystem(extent = {{-120, -80}, {120, 100}}, preserveAspectRatio = false)), experiment(StopTime = 0.008), Diagram(coordinateSystem(extent = {{-120, -80}, {120, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})));
+end sparkGeneration;

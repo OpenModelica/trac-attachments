@@ -1,0 +1,2 @@
+loadFile("Model.mo");
+buildModel(Model,startTime=0.0,stopTime=10.0,method="euler",outputFormat="mat",cflags="-O0",variableFilter=".*");

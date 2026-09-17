@@ -1,0 +1,1056 @@
+version:1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main omniORB 4.1.6_2 exists in the ports tree
+:debug:main omniORB 4.1.6_2 +python27 is the latest installed
+:debug:main omniORB 4.1.6_2 +python27 is active
+:debug:main Merging existing variants '+python27' into variants
+:debug:main new fully merged portvariants: python27 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/omniORB
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Executing variant python27 provides python27
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! omniORB 4.1.6_2 >= omniORB 4.1.6_2
+:debug:main epoch: in tree: 2 installed: 2
+:debug:main python27 2.7.6_0 exists in the ports tree
+:debug:main python27 2.7.6_0 +universal is the latest installed
+:debug:main python27 2.7.6_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/python27
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! python27 2.7.6_0 >= python27 2.7.6_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main gettext 0.18.3.1_1 exists in the ports tree
+:debug:main gettext 0.18.3.1_1 +universal is the latest installed
+:debug:main gettext 0.18.3.1_1 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/gettext
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main compiler clang 500.2.79 not blacklisted because it doesn't match {clang < 211.10.1}
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gettext 0.18.3.1_1 >= gettext 0.18.3.1_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main expat 2.1.0_0 exists in the ports tree
+:debug:main expat 2.1.0_0 +universal is the latest installed
+:debug:main expat 2.1.0_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/textproc/expat
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! expat 2.1.0_0 >= expat 2.1.0_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libiconv 1.14_0 exists in the ports tree
+:debug:main libiconv 1.14_0  is the latest installed
+:debug:main libiconv 1.14_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/textproc/libiconv
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libiconv 1.14_0 >= libiconv 1.14_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main ncurses 5.9_2 exists in the ports tree
+:debug:main ncurses 5.9_2 +universal is the latest installed
+:debug:main ncurses 5.9_2 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/ncurses
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! ncurses 5.9_2 >= ncurses 5.9_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main zlib 1.2.8_0 exists in the ports tree
+:debug:main zlib 1.2.8_0 +universal is the latest installed
+:debug:main zlib 1.2.8_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/archivers/zlib
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! zlib 1.2.8_0 >= zlib 1.2.8_0
+:debug:main epoch: in tree: 1 installed: 1
+:debug:main openssl 1.0.1e_1 exists in the ports tree
+:debug:main openssl 1.0.1e_1 +universal is the latest installed
+:debug:main openssl 1.0.1e_1 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/openssl
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! openssl 1.0.1e_1 >= openssl 1.0.1e_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main sqlite3 3.8.1_0 exists in the ports tree
+:debug:main sqlite3 3.8.1_0 +universal is the latest installed
+:debug:main sqlite3 3.8.1_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/databases/sqlite3
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! sqlite3 3.8.1_0 >= sqlite3 3.8.1_0
+:debug:main epoch: in tree: 20090923 installed: 20090923
+:debug:main libedit 20121213-3.0_0 exists in the ports tree
+:debug:main libedit 20121213-3.0_0 +universal is the latest installed
+:debug:main libedit 20121213-3.0_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/libedit
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libedit 20121213-3.0_0 >= libedit 20121213-3.0_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main db46 4.6.21_8 exists in the ports tree
+:debug:main db46 4.6.21_8 +universal is the latest installed
+:debug:main db46 4.6.21_8 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/databases/db46
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! db46 4.6.21_8 >= db46 4.6.21_8
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main db_select 0.1_2 exists in the ports tree
+:debug:main db_select 0.1_2  is the latest installed
+:debug:main db_select 0.1_2  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/sysutils/db_select
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! db_select 0.1_2 >= db_select 0.1_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main bzip2 1.0.6_0 exists in the ports tree
+:debug:main bzip2 1.0.6_0 +universal is the latest installed
+:debug:main bzip2 1.0.6_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/archivers/bzip2
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! bzip2 1.0.6_0 >= bzip2 1.0.6_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main python_select 0.3_3 exists in the ports tree
+:debug:main python_select 0.3_3  is the latest installed
+:debug:main python_select 0.3_3  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/sysutils/python_select
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! python_select 0.3_3 >= python_select 0.3_3
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main gtime 1.7_1 exists in the ports tree
+:debug:main gtime 1.7_1  is the latest installed
+:debug:main gtime 1.7_1  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/sysutils/gtime
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gtime 1.7_1 >= gtime 1.7_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main cmake 2.8.12_1 exists in the ports tree
+:debug:main cmake 2.8.12_1 +universal is the latest installed
+:debug:main cmake 2.8.12_1 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/cmake
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! cmake 2.8.12_1 >= cmake 2.8.12_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libidn 1.26_0 exists in the ports tree
+:debug:main libidn 1.26_0 +universal is the latest installed
+:debug:main libidn 1.26_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/mail/libidn
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libidn 1.26_0 >= libidn 1.26_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libtool 2.4.2_3 exists in the ports tree
+:debug:main libtool 2.4.2_3 +universal is the latest installed
+:debug:main libtool 2.4.2_3 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/libtool
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libtool 2.4.2_3 >= libtool 2.4.2_3
+:debug:main epoch: in tree: 1 installed: 1
+:debug:main autoconf 2.69_2 exists in the ports tree
+:debug:main autoconf 2.69_2  is the latest installed
+:debug:main autoconf 2.69_2  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/autoconf
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main only one arch supported, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! autoconf 2.69_2 >= autoconf 2.69_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main perl5 5.12.4_0 exists in the ports tree
+:debug:main perl5 5.12.4_0 +perl5_12 is the latest installed
+:debug:main perl5 5.12.4_0 +perl5_12 is active
+:debug:main Merging existing variants '+perl5_12' into variants
+:debug:main new fully merged portvariants: perl5_12 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/perl5
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Executing variant perl5_12 provides perl5_12
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! perl5 5.12.4_0 >= perl5 5.12.4_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main perl5.12 5.12.4_2 exists in the ports tree
+:debug:main perl5.12 5.12.4_2 +universal is the latest installed
+:debug:main perl5.12 5.12.4_2 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/perl5.12
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! perl5.12 5.12.4_2 >= perl5.12 5.12.4_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main gdbm 1.10_2 exists in the ports tree
+:debug:main gdbm 1.10_2 +universal is the latest installed
+:debug:main gdbm 1.10_2 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/databases/gdbm
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gdbm 1.10_2 >= gdbm 1.10_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main m4 1.4.16_0 exists in the ports tree
+:debug:main m4 1.4.16_0 +universal is the latest installed
+:debug:main m4 1.4.16_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/m4
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! m4 1.4.16_0 >= m4 1.4.16_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main automake 1.14_0 exists in the ports tree
+:debug:main automake 1.14_0  is the latest installed
+:debug:main automake 1.14_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/automake
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main only one arch supported, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! automake 1.14_0 >= automake 1.14_0
+:debug:main epoch: in tree: 2 installed: 2
+:debug:main gcc48 4.8.2_0 exists in the ports tree
+:debug:main gcc48 4.8.2_0  is the latest installed
+:debug:main gcc48 4.8.2_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/gcc48
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main compiler llvm-gcc-4.2 2336.11.00 not blacklisted because it doesn't match {llvm-gcc-4.2 < 2336.1}
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gcc48 4.8.2_0 >= gcc48 4.8.2_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main gmp 5.1.2_0 exists in the ports tree
+:debug:main gmp 5.1.2_0 +universal is the latest installed
+:debug:main gmp 5.1.2_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/gmp
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gmp 5.1.2_0 >= gmp 5.1.2_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main mpfr 3.1.1-p2_0 exists in the ports tree
+:debug:main mpfr 3.1.1-p2_0  is the latest installed
+:debug:main mpfr 3.1.1-p2_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/mpfr
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! mpfr 3.1.1-p2_0 >= mpfr 3.1.1-p2_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libmpc 1.0.1_0 exists in the ports tree
+:debug:main libmpc 1.0.1_0  is the latest installed
+:debug:main libmpc 1.0.1_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/libmpc
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libmpc 1.0.1_0 >= libmpc 1.0.1_0
+:debug:main epoch: in tree: 1 installed: 1
+:debug:main cloog 0.18.0_0 exists in the ports tree
+:debug:main cloog 0.18.0_0  is the latest installed
+:debug:main cloog 0.18.0_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/cloog
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! cloog 0.18.0_0 >= cloog 0.18.0_0
+:debug:main epoch: in tree: 1 installed: 1
+:debug:main isl 0.12_0 exists in the ports tree
+:debug:main isl 0.12_0  is the latest installed
+:debug:main isl 0.12_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/isl
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! isl 0.12_0 >= isl 0.12_0
+:debug:main epoch: in tree: 2 installed: 2
+:debug:main libgcc 4.8.2_0 exists in the ports tree
+:debug:main libgcc 4.8.2_0  is the latest installed
+:debug:main libgcc 4.8.2_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/gcc48
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main compiler llvm-gcc-4.2 2336.11.00 not blacklisted because it doesn't match {llvm-gcc-4.2 < 2336.1}
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libgcc 4.8.2_0 >= libgcc 4.8.2_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main gcc_select 0.1_8 exists in the ports tree
+:debug:main gcc_select 0.1_8  is the latest installed
+:debug:main gcc_select 0.1_8  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/sysutils/gcc_select
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! gcc_select 0.1_8 >= gcc_select 0.1_8
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main ld64 136_2 exists in the ports tree
+:debug:main ld64 136_2 +llvm33 is the latest installed
+:debug:main ld64 136_2 +llvm33 is active
+:debug:main Merging existing variants '+llvm33' into variants
+:debug:main new fully merged portvariants: llvm33 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/ld64
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant llvm33 provides llvm33
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! ld64 136_2 >= ld64 136_2
+:debug:main epoch: in tree: 1 installed: 1
+:debug:main llvm-3.3 3.3_1 exists in the ports tree
+:debug:main llvm-3.3 3.3_1  is the latest installed
+:debug:main llvm-3.3 3.3_1  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/lang/llvm-3.3
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! llvm-3.3 3.3_1 >= llvm-3.3 3.3_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libffi 3.0.13_0 exists in the ports tree
+:debug:main libffi 3.0.13_0 +universal is the latest installed
+:debug:main libffi 3.0.13_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/libffi
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libffi 3.0.13_0 >= libffi 3.0.13_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main llvm_select 0.2_0 exists in the ports tree
+:debug:main llvm_select 0.2_0  is the latest installed
+:debug:main llvm_select 0.2_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/sysutils/llvm_select
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! llvm_select 0.2_0 >= llvm_select 0.2_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main cctools 845_0 exists in the ports tree
+:debug:main cctools 845_0 +llvm33 is the latest installed
+:debug:main cctools 845_0 +llvm33 is active
+:debug:main Merging existing variants '+llvm33' into variants
+:debug:main new fully merged portvariants: llvm33 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/cctools
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant llvm33 provides llvm33
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! cctools 845_0 >= cctools 845_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main cctools-headers 845_0 exists in the ports tree
+:debug:main cctools-headers 845_0  is the latest installed
+:debug:main cctools-headers 845_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/cctools-headers
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main universal_variant is false, so not adding the default universal variant
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! cctools-headers 845_0 >= cctools-headers 845_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main lp_solve 5.5.2.0_0 exists in the ports tree
+:debug:main lp_solve 5.5.2.0_0  is the latest installed
+:debug:main lp_solve 5.5.2.0_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/math/lp_solve
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! lp_solve 5.5.2.0_0 >= lp_solve 5.5.2.0_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main sundials 2.5.0_0 exists in the ports tree
+:debug:main sundials 2.5.0_0 +gcc48 is the latest installed
+:debug:main sundials 2.5.0_0 +gcc48 is active
+:debug:main Merging existing variants '+gcc48' into variants
+:debug:main new fully merged portvariants: gcc48 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/build.openmodelica.org/macports/math/sundials
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant gcc48 provides gcc48
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Chosen compiler macports-gcc-4.8 is provided by a port, adding dependency
+:debug:main Adding depends_lib port:gcc48
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! sundials 2.5.0_0 >= sundials 2.5.0_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main qt4-mac 4.8.5_0 exists in the ports tree
+:debug:main qt4-mac 4.8.5_0  is the latest installed
+:debug:main qt4-mac 4.8.5_0  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/aqua/qt4-mac
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main compiler clang 500.2.79 not blacklisted because it doesn't match { clang <= 318.0.61 }
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! qt4-mac 4.8.5_0 >= qt4-mac 4.8.5_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main dbus 1.6.12_0 exists in the ports tree
+:debug:main dbus 1.6.12_0 +startupitem+universal is the latest installed
+:debug:main dbus 1.6.12_0 +startupitem+universal is active
+:debug:main Merging existing variants '+startupitem+universal' into variants
+:debug:main new fully merged portvariants: universal + startupitem +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/devel/dbus
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Executing variant startupitem provides startupitem
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! dbus 1.6.12_0 >= dbus 1.6.12_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main tiff 4.0.3_2 exists in the ports tree
+:debug:main tiff 4.0.3_2 +universal is the latest installed
+:debug:main tiff 4.0.3_2 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/tiff
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! tiff 4.0.3_2 >= tiff 4.0.3_2
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main jpeg 9_1 exists in the ports tree
+:debug:main jpeg 9_1  is the latest installed
+:debug:main jpeg 9_1 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/jpeg
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! jpeg 9_1 >= jpeg 9_1
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main xz 5.0.5_0 exists in the ports tree
+:debug:main xz 5.0.5_0 +universal is the latest installed
+:debug:main xz 5.0.5_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/archivers/xz
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! xz 5.0.5_0 >= xz 5.0.5_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libpng 1.5.17_0 exists in the ports tree
+:debug:main libpng 1.5.17_0 +universal is the latest installed
+:debug:main libpng 1.5.17_0 +universal is active
+:debug:main Merging existing variants '+universal' into variants
+:debug:main new fully merged portvariants: universal +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/libpng
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant universal provides universal
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libpng 1.5.17_0 >= libpng 1.5.17_0
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main libmng 1.0.10_3 exists in the ports tree
+:debug:main libmng 1.0.10_3  is the latest installed
+:debug:main libmng 1.0.10_3  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/libmng
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! libmng 1.0.10_3 >= libmng 1.0.10_3
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main lcms 1.19_5 exists in the ports tree
+:debug:main lcms 1.19_5  is the latest installed
+:debug:main lcms 1.19_5  is active
+:debug:main Merging existing variants '' into variants
+:debug:main new fully merged portvariants: 
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/lcms
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main universal variant already exists, so not adding the default one
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! lcms 1.19_5 >= lcms 1.19_5
+:debug:main epoch: in tree: 0 installed: 0
+:debug:main qwt52 5.2.3_0 exists in the ports tree
+:debug:main qwt52 5.2.3_0 +qt4 is the latest installed
+:debug:main qwt52 5.2.3_0 +qt4 is active
+:debug:main Merging existing variants '+qt4' into variants
+:debug:main new fully merged portvariants: qt4 +
+:debug:main Changing to port directory: /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/graphics/qwt
+:debug:main OS darwin/13.0.0 (Mac OS X 10.9) arch i386
+:debug:main adding the default universal variant
+:debug:main Reading variant descriptions from /opt/local/var/macports/sources/rsync.macports.org/release/tarballs/ports/_resources/port1.0/variant_descriptions.conf
+:debug:main Executing variant qt4 provides qt4
+:debug:main Running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Finished running callback portconfigure::add_automatic_compiler_dependencies
+:debug:main Running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main Finished running callback portbuild::add_automatic_buildsystem_dependencies
+:debug:main No need to upgrade! qwt52 5.2.3_0 >= qwt52 5.2.3_0
+:msg:main --->  Computing dependencies for openmodelica-devel:info:main .:debug:main openmodelica-devel has no conflicts
+:debug:main Searching for dependency: omniorb
+:debug:main Found Dependency: receipt exists for omniorb
+:debug:main Searching for dependency: gtime
+:debug:main Found Dependency: receipt exists for gtime
+:debug:main Searching for dependency: cmake
+:debug:main Found Dependency: receipt exists for cmake
+:debug:main Searching for dependency: libtool
+:debug:main Found Dependency: receipt exists for libtool
+:debug:main Searching for dependency: autoconf
+:debug:main Found Dependency: receipt exists for autoconf
+:debug:main Searching for dependency: automake
+:debug:main Found Dependency: receipt exists for automake
+:debug:main Searching for dependency: gcc48
+:debug:main Found Dependency: receipt exists for gcc48
+:debug:main Searching for dependency: lp_solve
+:debug:main Found Dependency: receipt exists for lp_solve
+:debug:main Searching for dependency: gettext
+:debug:main Found Dependency: receipt exists for gettext
+:debug:main Searching for dependency: libgcc
+:debug:main Found Dependency: receipt exists for libgcc
+:debug:main Searching for dependency: sundials
+:debug:main Found Dependency: receipt exists for sundials
+:debug:main Searching for dependency: qt4-mac
+:debug:main Found Dependency: receipt exists for qt4-mac
+:debug:main Searching for dependency: qwt52
+:debug:main Found Dependency: receipt exists for qwt52
+:msg:main 
+:debug:main Executing org.macports.main (openmodelica-devel)
+:debug:main changing euid/egid - current euid: 0 - current egid: 0
+:debug:main egid changed to: 505
+:debug:main euid changed to: 504
+:debug:main Skipping completed org.macports.archivefetch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.fetch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.checksum (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.extract (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.patch (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.configure (openmodelica-devel)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:build build phase started at Mon Nov 25 13:38:35 EST 2013
+:notice:build --->  Building openmodelica-devel
+:debug:build Executing org.macports.build (openmodelica-devel)
+:debug:build Environment: CPATH='/opt/local/include' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS' LIBRARY_PATH='/opt/local/lib' CC_PRINT_OPTIONS='YES' MACOSX_DEPLOYMENT_TARGET='10.9'
+:debug:build Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292" && /usr/bin/make -w all'
+:debug:build Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292" && /usr/bin/make -w all 
+:info:build make: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build if [ ".app" = ".app" ]; then mkdir -p ./build/Applications/; fi
+:info:build mkdir -p ./build/bin
+:info:build mkdir -p ./build/lib/omc/emcc
+:info:build mkdir -p ./build/lib/python
+:info:build mkdir -p ./build/lib/python/omniORB
+:info:build mkdir -p ./build/include/omc
+:info:build mkdir -p ./build/share/omc/java/
+:info:build mkdir -p ./build/share//omc/scripts/PythonInterface/OMPython/OMParser
+:info:build mkdir -p ./build/share//omc/scripts/PythonInterface/PySimulator
+:info:build mkdir -p ./build/share//omc/scripts/OpenTurns/
+:info:build mkdir -p ./build/share/doc/omc/testmodels
+:info:build mkdir -p ./build/share/man//man1/
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C testsuite/ -f Makefile omc-diff
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/testsuite'
+:info:build make[1]: Nothing to be done for `omc-diff'.
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/testsuite'
+:info:build if test -f /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/build/bin/omc; then /Applications/Xcode.app/Contents/Developer/usr/bin/make bootstrap-from-compiled; else /Applications/Xcode.app/Contents/Developer/usr/bin/make bootstrap-from-tarball; fi
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make bootstrap-dependencies
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build if [ ".app" = ".app" ]; then mkdir -p ./build/Applications/; fi
+:info:build mkdir -p ./build/bin
+:info:build mkdir -p ./build/lib/omc/emcc
+:info:build mkdir -p ./build/lib/python
+:info:build mkdir -p ./build/lib/python/omniORB
+:info:build mkdir -p ./build/include/omc
+:info:build mkdir -p ./build/share/omc/java/
+:info:build mkdir -p ./build/share//omc/scripts/PythonInterface/OMPython/OMParser
+:info:build mkdir -p ./build/share//omc/scripts/PythonInterface/PySimulator
+:info:build mkdir -p ./build/share//omc/scripts/OpenTurns/
+:info:build mkdir -p ./build/share/doc/omc/testmodels
+:info:build mkdir -p ./build/share/man//man1/
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C testsuite/ -f Makefile omc-diff
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/testsuite'
+:info:build make[3]: Nothing to be done for `omc-diff'.
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/testsuite'
+:info:build cp -p 3rdParty/gc-7.2/.libs/libgc.a build/lib/omc/libgc.a
+:info:build cp -pPR 3rdParty/gc-7.2/include/gc.h build/include/omc/gc.h
+:info:build cp -pPR 3rdParty/gc-7.2/include/gc_config_macros.h build/include/omc/gc_config_macros.h
+:info:build cp -pPR 3rdParty/gc-7.2/include/gc_version.h build/include/omc/gc_version.h
+:info:build cp -pPR 3rdParty/gc-7.2/include/gc_pthread_redirects.h build/include/omc/gc_pthread_redirects.h
+:info:build test -d 3rdParty/FMIL
+:info:build mkdir -p 3rdParty/FMIL/build
+:info:build (cd 3rdParty/FMIL/build && test -f Makefile || CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64 -g" CPPFLAGS="-I/opt/local/include" CC=/usr/bin/clang CXX=/usr/bin/clang++ cmake -D CMAKE_AR:String="ar" -D FMILIB_BUILD_SHARED_LIB:Bool=ON "-DFMILIB_FMI_PLATFORM:String=darwin-x86_64" -D FMILIB_BUILD_TESTS:Bool=OFF -D FMILIB_GENERATE_DOXYGEN_DOC:Bool=OFF -DCMAKE_COLOR_MAKEFILE:Bool=OFF -DFMILIB_INSTALL_PREFIX:String=../install .. -G "Unix Makefiles")
+:info:build test -f 3rdParty/FMIL/build/libfmilib_shared.dylib || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/FMIL/build
+:info:build test -d 3rdParty/FMIL/install || /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/FMIL/build install
+:info:build test "(" ! `uname` = Darwin ")" -o "(" ! -f 3rdParty/FMIL/build/libfmilib_shared.dylib ")" || install_name_tool -id @rpath/libfmilib_shared.dylib 3rdParty/FMIL/build/libfmilib_shared.dylib
+:info:build cp -pPR 3rdParty/FMIL/build/libfmilib_shared.dylib ./build/lib/omc/
+:info:build test ! -f build/lib/omc/libfmilib_shared.dylib || ln -sf libfmilib_shared.dylib build/lib/omc/libfmilib.dylib
+:info:build #TODO: Only copy required headers, add them in omc/fmi subfolder, and do not copy c/txt-files
+:info:build #cp -rp 3rdParty/FMIL/install/include/* ./build/include/omc
+:info:build # Configure and build lis
+:info:build if ! test -f 3rdParty/lis-1.4.12/Makefile; then cd 3rdParty/lis-1.4.12 && ./configure "--host=x86_64-apple-darwin13.0.0" --enable-shared --disable-static MPICC="false" CC="/usr/bin/clang" CXX="/usr/bin/clang++" CFLAGS="-pipe -Os -arch x86_64" CPPFLAGS="-I/opt/local/include" LDFLAGS=" -Wl,-install_name,@rpath/liblis.dylib" && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean; fi
+:info:build Building Lis from sources
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C 3rdParty/lis-1.4.12
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12'
+:info:build Making all in src
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src'
+:info:build Making all in matrix
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/matrix'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/matrix'
+:info:build Making all in vector
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/vector'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/vector'
+:info:build Making all in matvec
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/matvec'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/matvec'
+:info:build Making all in precon
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/precon'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/precon'
+:info:build Making all in solver
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/solver'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/solver'
+:info:build Making all in esolver
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/esolver'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/esolver'
+:info:build Making all in system
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/system'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/system'
+:info:build Making all in precision
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/precision'
+:info:build make[5]: Nothing to be done for `all'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src/precision'
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src'
+:info:build make[5]: Nothing to be done for `all-am'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src'
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/src'
+:info:build Making all in include
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/include'
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make  all-am
+:info:build make[5]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/include'
+:info:build make[5]: Nothing to be done for `all-am'.
+:info:build make[5]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/include'
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/include'
+:info:build Making all in test
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/test'
+:info:build make[4]: Nothing to be done for `all'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12/test'
+:info:build make[4]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12'
+:info:build make[4]: Nothing to be done for `all-am'.
+:info:build make[4]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12'
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/3rdParty/lis-1.4.12'
+:info:build # Copy the library; not headers (as they are not used by the runtime system)
+:info:build cp -Pp 3rdParty/lis-1.4.12/src/.libs/liblis.dylib* build/lib/omc/
+:info:build /Applications/Xcode.app/Contents/Developer/usr/bin/make -C SimulationRuntime/interactive -f Makefile
+:info:build make[3]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/SimulationRuntime/interactive'
+:info:build /usr/bin/clang++ -pipe -Os -arch x86_64 -I.. -Wall -I../c/simulation/results/ -I../c/linearization -I../c/simulation/solver/ -I../c/util/ -I../c/ -I../c/simulation/ -I../c/math-support/   -c -o omi_ServiceInterface.o omi_ServiceInterface.cpp
+:info:build In file included from omi_ServiceInterface.cpp:22:
+:info:build In file included from ../c/simulation/simulation_runtime.h:49:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/string:434:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/algorithm:594:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/memory:595:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/limits:111:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max:12:2: warning: : macro min is incompatible with C++.  #undefing min [-W#warnings]
+:info:build #warning: macro min is incompatible with C++.  #undefing min
+:info:build  ^
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/__undef_min_max:17:2: warning: : macro max is incompatible with C++.  #undefing max [-W#warnings]
+:info:build #warning: macro max is incompatible with C++.  #undefing max
+:info:build  ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:158:53: error: expected unqualified-id
+:info:build inline _LIBCPP_INLINE_VISIBILITY long      abs(     long __x) _NOEXCEPT {return  labs(__x);}
+:info:build                                                     ^
+:info:build /opt/local/include/f2c.h:157:18: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                  ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:158:53: error: expected ')'
+:info:build /opt/local/include/f2c.h:157:18: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                  ^
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:158:44: note: to match this '('
+:info:build inline _LIBCPP_INLINE_VISIBILITY long      abs(     long __x) _NOEXCEPT {return  labs(__x);}
+:info:build                                            ^
+:info:build /opt/local/include/f2c.h:157:17: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                 ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:158:44: error: expected ')'
+:info:build inline _LIBCPP_INLINE_VISIBILITY long      abs(     long __x) _NOEXCEPT {return  labs(__x);}
+:info:build                                            ^
+:info:build /opt/local/include/f2c.h:157:21: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                     ^
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:158:44: note: to match this '('
+:info:build /opt/local/include/f2c.h:157:16: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:160:48: error: expected unqualified-id
+:info:build inline _LIBCPP_INLINE_VISIBILITY long long abs(long long __x) _NOEXCEPT {return llabs(__x);}
+:info:build                                                ^
+:info:build /opt/local/include/f2c.h:157:18: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                  ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:160:48: error: expected ')'
+:info:build /opt/local/include/f2c.h:157:18: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                  ^
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:160:44: note: to match this '('
+:info:build inline _LIBCPP_INLINE_VISIBILITY long long abs(long long __x) _NOEXCEPT {return llabs(__x);}
+:info:build                                            ^
+:info:build /opt/local/include/f2c.h:157:17: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                 ^
+:info:build In file included from omi_ServiceInterface.cpp:26:
+:info:build In file included from ./omi_ServiceInterface.h:20:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/iomanip:34:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/istream:156:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/ostream:132:
+:info:build In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/locale:187:
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:160:44: error: expected ')'
+:info:build inline _LIBCPP_INLINE_VISIBILITY long long abs(long long __x) _NOEXCEPT {return llabs(__x);}
+:info:build                                            ^
+:info:build /opt/local/include/f2c.h:157:21: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                     ^
+:info:build /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/c++/v1/cstdlib:160:44: note: to match this '('
+:info:build /opt/local/include/f2c.h:157:16: note: expanded from macro 'abs'
+:info:build #define abs(x) ((x) >= 0 ? (x) : -(x))
+:info:build                ^
+:info:build 2 warnings and 6 errors generated.
+:info:build make[3]: *** [omi_ServiceInterface.o] Error 1
+:info:build make[3]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292/SimulationRuntime/interactive'
+:info:build make[2]: *** [interactive] Error 2
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build make[1]: *** [bootstrap-from-tarball] Error 2
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build make: *** [omc-bootstrapped] Error 2
+:info:build make: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292'
+:info:build Command failed:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_18292" && /usr/bin/make -w all 
+:info:build Exit code: 2
+:error:build org.macports.build for port openmodelica-devel returned: command execution failed
+:debug:build Error code: CHILDSTATUS 58898 2
+:debug:build Backtrace: command execution failed
+    while executing
+"system -nice 0 $fullcmdstring"
+    ("eval" body line 1)
+    invoked from within
+"eval system $notty $nice \$fullcmdstring"
+    invoked from within
+"command_exec build"
+    (procedure "portbuild::build_main" line 8)
+    invoked from within
+"$procedure $targetname"
+:info:build Warning: targets not executed for openmodelica-devel: org.macports.activate org.macports.build org.macports.destroot org.macports.install
+:notice:build Please see the log file for port openmodelica-devel for details:
+    /opt/local/var/macports/logs/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/main.log

@@ -1,0 +1,9 @@
+loadModel(Modelica, {"3.2.1"}); getErrorString();
+loadFile("Pendulum.mo"); getErrorString();
+setDebugFlags("doLinearTearing"); getErrorString();
+loadString("
+model Pendulum_10 
+  extends Pendulum.Pendulum_N_MultiBody(N = 10); 
+end Pendulum_10;
+"); getErrorString();
+simulate(Pendulum_10, stopTime=1.0); getErrorString();

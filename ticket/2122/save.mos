@@ -1,0 +1,4 @@
+loadFile("save.mo");
+getErrorString();
+save(A);
+getErrorString();

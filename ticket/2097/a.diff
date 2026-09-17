@@ -1,0 +1,46 @@
+Index: OMEdit/OMEditGUI/OMCProxy.cpp
+===================================================================
+--- OMEdit/OMEditGUI/OMCProxy.cpp	(revision 15280)
++++ OMEdit/OMEditGUI/OMCProxy.cpp	(working copy)
+@@ -1954,6 +1983,14 @@
+   return StringHandler::unparse(getResult());
+ }
+ 
++//! Resolve a URI to a local filename
++//! @return the name of the index reduction method.
++QString OMCProxy::uriToFilename(QString uri)
++{
++  sendCommand("uriToFilename(\"" + uri + "\")");
++  return StringHandler::unparse(getResult());
++}
++
+ //! Sets the matching algorithm.
+ //! @param matchingAlgorithm the macthing algorithm to set
+ //! @return true on success
+Index: OMEdit/OMEditGUI/OMCProxy.h
+===================================================================
+--- OMEdit/OMEditGUI/OMCProxy.h	(revision 15280)
++++ OMEdit/OMEditGUI/OMCProxy.h	(working copy)
+@@ -145,6 +145,7 @@
+   QStringList getComponentAnnotations(QString className);
+   QString getDocumentationAnnotation(QString className);
+   QString changeDirectory(QString directory = QString());
++  QString uriToFilename(QString uri);
+   bool loadFile(QString fileName);
+   bool loadString(QString value);
+   bool parseFile(QString fileName, QString encoding = "UTF-8");
+Index: OMEdit/OMEditGUI/BitmapAnnotation.cpp
+===================================================================
+--- OMEdit/OMEditGUI/BitmapAnnotation.cpp	(revision 15280)
++++ OMEdit/OMEditGUI/BitmapAnnotation.cpp	(working copy)
+@@ -227,6 +227,10 @@
+   //8 Item contains filename
+   index = index + 1;
+   QString tempFileName = StringHandler::removeFirstLastQuotes(list.at(index));
++  if (tempFileName.startsWith("modelica:") || tempFileName.startsWith("file:")) {
++    tempFileName = mpComponent->mpOMCProxy->uriToFilename(tempFileName);
++  }
++
+   QDir dir(tempFileName);
+ 
+   if(dir.isAbsolute())

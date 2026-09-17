@@ -1,0 +1,51 @@
+true
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 400.0, numberOfIntervals = 500, tolerance = 0.000001, method = 'dassl', fileNamePrefix = 'Modelica.Electrical.Digital.Examples.RAM', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = ''",
+    messages = "Simulation failed for model: Modelica.Electrical.Digital.Examples.RAM
+Error: Internal error BackendDAECreate.lowerAlgorithm failed for algorithm
+  if initial() then
+    (dLATRAM.mem, _, _) := Modelica.Electrical.Digital.Memories.DLATRAM.getMemory(dLATRAM.fileName, dLATRAM.n_addr, dLATRAM.n_data);
+  end if;
+  if dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'1' or dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'H' then
+    dLATRAM.int_addr := Modelica.Electrical.Digital.Memories.DLATRAM.address(dLATRAM.n_addr, {dLATRAM.addr[1], dLATRAM.addr[2]});
+    if dLATRAM.int_addr > 0 then
+      for i in 1:dLATRAM.n_data loop
+        dLATRAM.mem_word[i] := {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'X'}[dLATRAM.dataIn[i]];
+      end for;
+      dLATRAM.mem[dLATRAM.int_addr,1:dLATRAM.n_data] := {dLATRAM.mem_word[1], dLATRAM.mem_word[2]};
+    end if;
+  elseif dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'X' or dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'W' or dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'Z' or dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'U' or dLATRAM.WE == Modelica.Electrical.Digital.Interfaces.Logic.'-' then
+    dLATRAM.int_addr := Modelica.Electrical.Digital.Memories.DLATRAM.address(dLATRAM.n_addr, {dLATRAM.addr[1], dLATRAM.addr[2]});
+    if dLATRAM.int_addr > 0 then
+      dLATRAM.mem_word := {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X'};
+      dLATRAM.mem[dLATRAM.int_addr,1:dLATRAM.n_data] := {dLATRAM.mem_word[1], dLATRAM.mem_word[2]};
+    end if;
+  end if;
+  if dLATRAM.RE == Modelica.Electrical.Digital.Interfaces.Logic.'0' or dLATRAM.RE == Modelica.Electrical.Digital.Interfaces.Logic.'L' then
+    dLATRAM.nextstate := {Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'Z'};
+  elseif dLATRAM.RE == Modelica.Electrical.Digital.Interfaces.Logic.'1' or dLATRAM.RE == Modelica.Electrical.Digital.Interfaces.Logic.'H' then
+    dLATRAM.int_addr := Modelica.Electrical.Digital.Memories.DLATRAM.address(dLATRAM.n_addr, {dLATRAM.addr[1], dLATRAM.addr[2]});
+    if dLATRAM.int_addr > 0 then
+      dLATRAM.mem_word := dLATRAM.mem[dLATRAM.int_addr,1:dLATRAM.n_data];
+      for i in 1:dLATRAM.n_data loop
+        dLATRAM.nextstate[i] := {{Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U', Modelica.Electrical.Digital.Interfaces.Logic.'U'}, {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W'}, {Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'L'}, {Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'1'}, {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W'}, {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W'}, {Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'L', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'0', Modelica.Electrical.Digital.Interfaces.Logic.'L'}, {Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'1', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'Z', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'H', Modelica.Electrical.Digital.Interfaces.Logic.'1'}, {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W', Modelica.Electrical.Digital.Interfaces.Logic.'W'}}[dLATRAM.mem_word[i], dLATRAM.strength];
+      end for;
+    else
+      dLATRAM.nextstate := {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X'};
+    end if;
+  else
+    dLATRAM.nextstate := {Modelica.Electrical.Digital.Interfaces.Logic.'X', Modelica.Electrical.Digital.Interfaces.Logic.'X'};
+  end if;
+  dLATRAM.yy := {dLATRAM.nextstate[1], dLATRAM.nextstate[2]};
+
+Error: Internal error SimCode: The model Modelica.Electrical.Digital.Examples.RAM could not be translated
+",
+    timeFrontend = 0.0,
+    timeBackend = 0.0,
+    timeSimCode = 0.0,
+    timeTemplates = 0.0,
+    timeCompile = 0.0,
+    timeSimulation = 0.0,
+    timeTotal = 0.0
+end SimulationResult;

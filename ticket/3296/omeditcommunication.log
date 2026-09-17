@@ -1,0 +1,12 @@
+setCommandLineOptions("+locale=en_US") 11:14:39:462
+true 11:14:39:581
+Elapsed Time :: 0.122 secs
+
+getVersion(OpenModelica) 11:14:39:581
+"1.9.3+dev (r25747)" 11:14:39:582
+Elapsed Time :: 0.001 secs
+
+getInstallationDirectoryPath() 11:14:39:582
+"C:/OpenModelica1.9.3Nightly/" 11:14:39:585
+Elapsed Time :: 0.003 secs
+

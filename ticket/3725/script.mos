@@ -1,0 +1,26 @@
+loadString("model Test
+  Integer N = 2;
+  Real x[N](each fixed = true);
+equation
+  for i in 1:N loop
+    der(x[i]) = -x[i];
+  end for;
+  annotation(Icon(coordinateSystem(initialScale = 1)), Diagram);
+end Test;");
+getErrorString();
+setSourceFile(Test, "Test");
+getErrorString();
+checkModel(Test);
+getErrorString();
+loadString("model Test
+  parameter Integer N = 2;
+  Real x[N](each fixed = true);
+equation
+  for i in 1:N loop
+    der(x[i]) = -x[i];
+  end for;
+  annotation(Icon(coordinateSystem(initialScale = 1)), Diagram);
+end Test;", merge=true);
+getErrorString();
+checkModel(Test);
+getErrorString();

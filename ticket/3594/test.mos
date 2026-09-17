@@ -1,0 +1,15 @@
+loadString("
+  function test_shift
+  algorithm
+    print(String(intBitLShift(1, 1)) + \"\n\");
+    print(String(intBitLShift(1, 2)) + \"\n\");
+    print(String(intBitLShift(32, 1)) + \"\n\");
+    print(String(intBitRShift(1, 1)) + \"\n\");
+    print(String(intBitRShift(2, 1)) + \"\n\");
+    print(String(intBitRShift(64, 5)) + \"\n\");
+    print(String(intBitOr(1, 2)) + \"\n\");
+    print(String(intBitAnd(7, 4)) + \"\n\");
+  end test_shift;
+");
+
+test_shift();

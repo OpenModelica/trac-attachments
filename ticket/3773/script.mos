@@ -1,0 +1,11 @@
+loadString("model View
+
+  M m(T_ref(displayUnit=\"K\") = 302.15)
+      annotation (Placement(transformation(extent={{-80,20},{-60,40}})));
+end View;
+");
+getErrorString();
+getComponentModifierNames(View, "m");
+getErrorString();
+getComponentModifierValue(View, m.T_ref);
+getErrorString();

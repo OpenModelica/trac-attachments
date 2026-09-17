@@ -1,0 +1,590 @@
+
+Thread 8 (Thread 0x7f47b3d51700 (LWP 30553)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b3d51700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b3d51700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945936492288, -3803265223397284101, 0, 0, 139945936492992, 139945936492288, 
+                3870687505184384763, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 7 (Thread 0x7f47b3550700 (LWP 30554)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b3550700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b3550700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945928099584, -3803265223397284101, 0, 0, 139945928100288, 139945928099584, 
+                3870686405135886075, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 6 (Thread 0x7f47b2d4f700 (LWP 30556)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b2d4f700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b2d4f700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945919706880, -3803265223397284101, 0, 0, 139945919707584, 139945919706880, 
+                3870689703133898491, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 5 (Thread 0x7f47b254e700 (LWP 30557)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b254e700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b254e700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945911314176, -3803265223397284101, 0, 0, 139945911314880, 139945911314176, 
+                3870688603085399803, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 4 (Thread 0x7f47b1d4d700 (LWP 30559)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b1d4d700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b1d4d700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945902921472, -3803265223397284101, 0, 0, 139945902922176, 139945902921472, 
+                3870691901083412219, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 3 (Thread 0x7f47b154c700 (LWP 30561)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b154c700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b154c700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945894528768, -3803265223397284101, 0, 0, 139945894529472, 139945894528768, 
+                3870690801034913531, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 2 (Thread 0x7f47b0d4b700 (LWP 30562)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f47b7fdfc97 in GC_wait_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#2  0x00007f47b7fd814a in GC_help_marker ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#3  0x00007f47b7fe1500 in GC_mark_thread ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+No symbol table info available.
+#4  0x00007f47b7da9182 in start_thread (arg=0x7f47b0d4b700) at pthread_create.c:312
+        __res = <optimized out>
+        pd = 0x7f47b0d4b700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139945886136064, -3803265223397284101, 0, 0, 139945886136768, 139945886136064, 
+                3870694099032925947, 3870696387030345467}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, 
+              cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f47b4be547d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 1 (Thread 0x7f47b8e86880 (LWP 30551)):
+#0  __lll_lock_wait_private () at ../nptl/sysdeps/unix/sysv/linux/x86_64/lowlevellock.S:95
+No locals.
+#1  0x00007f47b4b6fdca in _L_lock_12779 () at malloc.c:5206
+No symbol table info available.
+#2  0x00007f47b4b6d7a5 in __GI___libc_malloc (bytes=56) at malloc.c:2887
+        ar_ptr = 0x7f47b4ea9760 <main_arena>
+        victim = 0x1
+        __func__ = "__libc_malloc"
+#3  0x00007f47b8c9beac in _dl_map_object_deps (map=map@entry=0x7f47b8e8c000, preloads=preloads@entry=0x0, npreloads=npreloads@entry=0, 
+    trace_mode=trace_mode@entry=0, open_mode=open_mode@entry=-2147483648) at dl-deps.c:511
+        runp = <optimized out>
+        tail = <optimized out>
+        i = <optimized out>
+        name = <optimized out>
+        errno_saved = <optimized out>
+        errno_reason = 0
+        errstring = 0x0
+        objname = 0x0
+        needed_space = <optimized out>
+        needed_space_bytes = <optimized out>
+        __PRETTY_FUNCTION__ = "_dl_map_object_deps"
+        old_l_initfini = 0x0
+        l_initfini = <optimized out>
+        l_reldeps = <optimized out>
+#4  0x00007f47b8ca2aab in dl_open_worker (a=a@entry=0x23c6178) at dl-open.c:272
+        args = 0x23c6178
+        file = 0x7f47b4c675be "libgcc_s.so.1"
+        mode = -2147483647
+        call_map = <optimized out>
+        dst = <optimized out>
+        __PRETTY_FUNCTION__ = "dl_open_worker"
+        new = 0x7f47b8e8c000
+        r = <optimized out>
+        reloc_mode = <optimized out>
+        nmaps = <optimized out>
+        l = <optimized out>
+        maps = <optimized out>
+        any_tls = <optimized out>
+        first_static_tls = <optimized out>
+#5  0x00007f47b8c9dff4 in _dl_catch_error (objname=objname@entry=0x23c6168, errstring=errstring@entry=0x23c6170, 
+    mallocedp=mallocedp@entry=0x23c6160, operate=operate@entry=0x7f47b8ca29a0 <dl_open_worker>, args=args@entry=0x23c6178) at dl-error.c:187
+        errcode = 0
+        c = {objname = 0x23c6168, errstring = 0x23c6170, malloced = 0x23c6160, errcode = 0x23c6054, env = {{__jmpbuf = {37511784, 
+                -3803269996139845893, 2147483649, 139945952310718, 140736330941288, 3, -3803269996177594629, 3870676744076584699}, 
+              __mask_was_saved = 0, __saved_mask = {__val = {0 <repeats 16 times>}}}}}
+        catchp = 0x7f47b8e7f768
+        old = <optimized out>
+#6  0x00007f47b8ca23bb in _dl_open (file=0x7f47b4c675be "libgcc_s.so.1", mode=-2147483647, caller_dlopen=<optimized out>, nsid=-2, argc=3, 
+    argv=0x7fffbb034368, env=0x7fffbb034388) at dl-open.c:661
+        args = {file = 0x7f47b4c675be "libgcc_s.so.1", mode = -2147483647, caller_dlopen = 0x7f47b4bf5d55 <init+21>, 
+          caller_dl_open = 0x7f47b4c210f2 <do_dlopen+66>, map = 0x7f47b8e8c000, nsid = 0, argc = 3, argv = 0x7fffbb034368, env = 0x7fffbb034388}
+        objname = 0x0
+        errstring = 0x0
+        malloced = false
+        errcode = <optimized out>
+        __PRETTY_FUNCTION__ = "_dl_open"
+#7  0x00007f47b4c210f2 in do_dlopen (ptr=ptr@entry=0x23c6390) at dl-libc.c:87
+        args = 0x23c6390
+#8  0x00007f47b8c9dff4 in _dl_catch_error (objname=0x23c6370, errstring=0x23c6380, mallocedp=0x23c6360, operate=0x7f47b4c210b0 <do_dlopen>, 
+    args=0x23c6390) at dl-error.c:187
+        errcode = 32583
+        c = {objname = 0x23c6370, errstring = 0x23c6380, malloced = 0x23c6360, errcode = 0x23c6264, env = {{__jmpbuf = {0, -3803269996204857605, 
+                234136128, 256, 0, 139945954678624, -3803269996250994949, 3870676744076584699}, __mask_was_saved = -1192559280, __saved_mask = {
+                __val = {37511936, 37511920, 3582080933, 139946016662883, 4294967295, 0, 139945950808504, 139946021670912, 0, 0, 0, 0, 0, 0, 0, 
+                  0}}}}}
+        catchp = 0x7f47b8e7f768
+        old = <optimized out>
+#9  0x00007f47b4c211b2 in dlerror_run (args=0x23c6390, operate=0x7f47b4c210b0 <do_dlopen>) at dl-libc.c:46
+        objname = 0x0
+        last_errstring = 0x0
+        malloced = false
+        result = <optimized out>
+#10 __GI___libc_dlopen_mode (name=name@entry=0x7f47b4c675be "libgcc_s.so.1", mode=mode@entry=-2147483647) at dl-libc.c:163
+        args = {name = 0x7f47b4c675be "libgcc_s.so.1", mode = -2147483647, caller_dlopen = 0x7f47b4bf5d55 <init+21>, map = 0x0}
+#11 0x00007f47b4bf5d55 in init () at ../sysdeps/x86_64/backtrace.c:52
+No locals.
+#12 0x00007f47b7daea90 in pthread_once () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_once.S:103
+No locals.
+#13 0x00007f47b4bf5e6c in __GI___backtrace (array=<optimized out>, size=16) at ../sysdeps/x86_64/backtrace.c:103
+        __p = <optimized out>
+        arg = {array = 0x7f47b8c0ac40 <trace>, cfa = 0, cnt = -1, size = 16}
+        once = 1
+#14 0x00007f47b89d348b in handler ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaRuntimeC.so
+No symbol table info available.
+#15 <signal handler called>
+No locals.
+#16 0x00007f47b4b69845 in malloc_consolidate (av=av@entry=0x7f47b4ea9760 <main_arena>) at malloc.c:4165
+        fb = <optimized out>
+        maxfb = 0x7f47b4ea97b0 <main_arena+80>
+        p = 0xdf4a210
+        nextp = 0x0
+        unsorted_bin = 0x7f47b4ea97b8 <main_arena+88>
+        first_unsorted = <optimized out>
+        nextchunk = 0xdf4a240
+        size = 304
+        nextsize = 256
+        prevsize = <optimized out>
+        nextinuse = 0
+        bck = 0xfe
+        fwd = 0x6c
+        __func__ = "malloc_consolidate"
+#17 0x00007f47b4b6adf8 in _int_malloc (av=0x7f47b4ea9760 <main_arena>, bytes=41664) at malloc.c:3423
+        nb = 41680
+        idx = 120
+        bin = <optimized out>
+        victim = <optimized out>
+        size = <optimized out>
+        victim_index = <optimized out>
+        remainder = <optimized out>
+        remainder_size = <optimized out>
+        block = <optimized out>
+        bit = <optimized out>
+        map = <optimized out>
+        fwd = <optimized out>
+        bck = <optimized out>
+        errstr = 0x0
+        __func__ = "_int_malloc"
+#18 0x00007f47b4b6d7b0 in __GI___libc_malloc (bytes=41664) at malloc.c:2891
+        ar_ptr = 0x7f47b4ea9760 <main_arena>
+        victim = 0xfe
+        __func__ = "__libc_malloc"
+#19 0x00007f47b5de82c4 in getData ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#20 0x00007f47b5debf72 in SimulationResultsCmp_compareResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#21 0x00007f47b5dedb64 in SimulationResults_diffSimulationResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#22 0x00007f47b532b02c in omc_SimulationResults_diffSimulationResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#23 0x00007f47b57efdfd in omc_CevalScript_cevalInteractiveFunctions2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#24 0x00007f47b57fa399 in omc_CevalScript_cevalInteractiveFunctions ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#25 0x00007f47b57fa8de in omc_CevalScript_ceval ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#26 0x00007f47b5789925 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#27 0x00007f47b578a9fd in omc_Interactive_evaluateAlgStmtLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#28 0x00007f47b5788be8 in omc_Interactive_evaluatePartOfIfStatement ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#29 0x00007f47b5788d01 in omc_Interactive_evaluateIfStatementLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#30 0x00007f47b57896c1 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#31 0x00007f47b578a9fd in omc_Interactive_evaluateAlgStmtLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#32 0x00007f47b5788be8 in omc_Interactive_evaluatePartOfIfStatement ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#33 0x00007f47b5788d01 in omc_Interactive_evaluateIfStatementLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#34 0x00007f47b57896c1 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#35 0x00007f47b57b3ebb in omc_Interactive_evaluate2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#36 0x00007f47b57b473a in omc_Interactive_evaluateToStdOut ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#37 0x00007f47b5358efd in omc_Main_translateFile ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#38 0x00007f47b535afe5 in omc_Main_main2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#39 0x00007f47b535b21c in omc_Main_main ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#40 0x00007f47b5e3d34b in __omc_main ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#41 0x00007f47b4b0cec5 in __libc_start_main (main=0x400850 <main>, argc=3, argv=0x7fffbb034368, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7fffbb034358) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -3803265223397284101, 4196224, 140736330941280, 0, 0, 3803114412444673787, 
+                3870702109568853755}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x400860 <__libc_csu_init>, 0x7fffbb034368}, data = {
+              prev = 0x0, cleanup = 0x0, canceltype = 4196448}}}
+        not_first_call = <optimized out>
+#42 0x00000000004007a9 in _start ()
+No symbol table info available.
+#0  __lll_lock_wait_private () at ../nptl/sysdeps/unix/sysv/linux/x86_64/lowlevellock.S:95
+No locals.
+#1  0x00007f47b4b6fdca in _L_lock_12779 () at malloc.c:5206
+No symbol table info available.
+#2  0x00007f47b4b6d7a5 in __GI___libc_malloc (bytes=56) at malloc.c:2887
+        ar_ptr = 0x7f47b4ea9760 <main_arena>
+        victim = 0x1
+        __func__ = "__libc_malloc"
+#3  0x00007f47b8c9beac in _dl_map_object_deps (map=map@entry=0x7f47b8e8c000, preloads=preloads@entry=0x0, npreloads=npreloads@entry=0, 
+    trace_mode=trace_mode@entry=0, open_mode=open_mode@entry=-2147483648) at dl-deps.c:511
+        runp = <optimized out>
+        tail = <optimized out>
+        i = <optimized out>
+        name = <optimized out>
+        errno_saved = <optimized out>
+        errno_reason = 0
+        errstring = 0x0
+        objname = 0x0
+        needed_space = <optimized out>
+        needed_space_bytes = <optimized out>
+        __PRETTY_FUNCTION__ = "_dl_map_object_deps"
+        old_l_initfini = 0x0
+        l_initfini = <optimized out>
+        l_reldeps = <optimized out>
+#4  0x00007f47b8ca2aab in dl_open_worker (a=a@entry=0x23c6178) at dl-open.c:272
+        args = 0x23c6178
+        file = 0x7f47b4c675be "libgcc_s.so.1"
+        mode = -2147483647
+        call_map = <optimized out>
+        dst = <optimized out>
+        __PRETTY_FUNCTION__ = "dl_open_worker"
+        new = 0x7f47b8e8c000
+        r = <optimized out>
+        reloc_mode = <optimized out>
+        nmaps = <optimized out>
+        l = <optimized out>
+        maps = <optimized out>
+        any_tls = <optimized out>
+        first_static_tls = <optimized out>
+#5  0x00007f47b8c9dff4 in _dl_catch_error (objname=objname@entry=0x23c6168, errstring=errstring@entry=0x23c6170, 
+    mallocedp=mallocedp@entry=0x23c6160, operate=operate@entry=0x7f47b8ca29a0 <dl_open_worker>, args=args@entry=0x23c6178) at dl-error.c:187
+        errcode = 0
+        c = {objname = 0x23c6168, errstring = 0x23c6170, malloced = 0x23c6160, errcode = 0x23c6054, env = {{__jmpbuf = {37511784, 
+                -3803269996139845893, 2147483649, 139945952310718, 140736330941288, 3, -3803269996177594629, 3870676744076584699}, 
+              __mask_was_saved = 0, __saved_mask = {__val = {0 <repeats 16 times>}}}}}
+        catchp = 0x7f47b8e7f768
+        old = <optimized out>
+#6  0x00007f47b8ca23bb in _dl_open (file=0x7f47b4c675be "libgcc_s.so.1", mode=-2147483647, caller_dlopen=<optimized out>, nsid=-2, argc=3, 
+    argv=0x7fffbb034368, env=0x7fffbb034388) at dl-open.c:661
+        args = {file = 0x7f47b4c675be "libgcc_s.so.1", mode = -2147483647, caller_dlopen = 0x7f47b4bf5d55 <init+21>, 
+          caller_dl_open = 0x7f47b4c210f2 <do_dlopen+66>, map = 0x7f47b8e8c000, nsid = 0, argc = 3, argv = 0x7fffbb034368, env = 0x7fffbb034388}
+        objname = 0x0
+        errstring = 0x0
+        malloced = false
+        errcode = <optimized out>
+        __PRETTY_FUNCTION__ = "_dl_open"
+#7  0x00007f47b4c210f2 in do_dlopen (ptr=ptr@entry=0x23c6390) at dl-libc.c:87
+        args = 0x23c6390
+#8  0x00007f47b8c9dff4 in _dl_catch_error (objname=0x23c6370, errstring=0x23c6380, mallocedp=0x23c6360, operate=0x7f47b4c210b0 <do_dlopen>, 
+    args=0x23c6390) at dl-error.c:187
+        errcode = 32583
+        c = {objname = 0x23c6370, errstring = 0x23c6380, malloced = 0x23c6360, errcode = 0x23c6264, env = {{__jmpbuf = {0, -3803269996204857605, 
+                234136128, 256, 0, 139945954678624, -3803269996250994949, 3870676744076584699}, __mask_was_saved = -1192559280, __saved_mask = {
+                __val = {37511936, 37511920, 3582080933, 139946016662883, 4294967295, 0, 139945950808504, 139946021670912, 0, 0, 0, 0, 0, 0, 0, 
+                  0}}}}}
+        catchp = 0x7f47b8e7f768
+        old = <optimized out>
+#9  0x00007f47b4c211b2 in dlerror_run (args=0x23c6390, operate=0x7f47b4c210b0 <do_dlopen>) at dl-libc.c:46
+        objname = 0x0
+        last_errstring = 0x0
+        malloced = false
+        result = <optimized out>
+#10 __GI___libc_dlopen_mode (name=name@entry=0x7f47b4c675be "libgcc_s.so.1", mode=mode@entry=-2147483647) at dl-libc.c:163
+        args = {name = 0x7f47b4c675be "libgcc_s.so.1", mode = -2147483647, caller_dlopen = 0x7f47b4bf5d55 <init+21>, map = 0x0}
+#11 0x00007f47b4bf5d55 in init () at ../sysdeps/x86_64/backtrace.c:52
+No locals.
+#12 0x00007f47b7daea90 in pthread_once () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_once.S:103
+No locals.
+#13 0x00007f47b4bf5e6c in __GI___backtrace (array=<optimized out>, size=16) at ../sysdeps/x86_64/backtrace.c:103
+        __p = <optimized out>
+        arg = {array = 0x7f47b8c0ac40 <trace>, cfa = 0, cnt = -1, size = 16}
+        once = 1
+#14 0x00007f47b89d348b in handler ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaRuntimeC.so
+No symbol table info available.
+#15 <signal handler called>
+No locals.
+#16 0x00007f47b4b69845 in malloc_consolidate (av=av@entry=0x7f47b4ea9760 <main_arena>) at malloc.c:4165
+        fb = <optimized out>
+        maxfb = 0x7f47b4ea97b0 <main_arena+80>
+        p = 0xdf4a210
+        nextp = 0x0
+        unsorted_bin = 0x7f47b4ea97b8 <main_arena+88>
+        first_unsorted = <optimized out>
+        nextchunk = 0xdf4a240
+        size = 304
+        nextsize = 256
+        prevsize = <optimized out>
+        nextinuse = 0
+        bck = 0xfe
+        fwd = 0x6c
+        __func__ = "malloc_consolidate"
+#17 0x00007f47b4b6adf8 in _int_malloc (av=0x7f47b4ea9760 <main_arena>, bytes=41664) at malloc.c:3423
+        nb = 41680
+        idx = 120
+        bin = <optimized out>
+        victim = <optimized out>
+        size = <optimized out>
+        victim_index = <optimized out>
+        remainder = <optimized out>
+        remainder_size = <optimized out>
+        block = <optimized out>
+        bit = <optimized out>
+        map = <optimized out>
+        fwd = <optimized out>
+        bck = <optimized out>
+        errstr = 0x0
+        __func__ = "_int_malloc"
+#18 0x00007f47b4b6d7b0 in __GI___libc_malloc (bytes=41664) at malloc.c:2891
+        ar_ptr = 0x7f47b4ea9760 <main_arena>
+        victim = 0xfe
+        __func__ = "__libc_malloc"
+#19 0x00007f47b5de82c4 in getData ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#20 0x00007f47b5debf72 in SimulationResultsCmp_compareResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#21 0x00007f47b5dedb64 in SimulationResults_diffSimulationResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#22 0x00007f47b532b02c in omc_SimulationResults_diffSimulationResults ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#23 0x00007f47b57efdfd in omc_CevalScript_cevalInteractiveFunctions2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#24 0x00007f47b57fa399 in omc_CevalScript_cevalInteractiveFunctions ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#25 0x00007f47b57fa8de in omc_CevalScript_ceval ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#26 0x00007f47b5789925 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#27 0x00007f47b578a9fd in omc_Interactive_evaluateAlgStmtLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#28 0x00007f47b5788be8 in omc_Interactive_evaluatePartOfIfStatement ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#29 0x00007f47b5788d01 in omc_Interactive_evaluateIfStatementLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#30 0x00007f47b57896c1 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#31 0x00007f47b578a9fd in omc_Interactive_evaluateAlgStmtLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#32 0x00007f47b5788be8 in omc_Interactive_evaluatePartOfIfStatement ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#33 0x00007f47b5788d01 in omc_Interactive_evaluateIfStatementLst ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#34 0x00007f47b57896c1 in omc_Interactive_evaluateAlgStmt ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#35 0x00007f47b57b3ebb in omc_Interactive_evaluate2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#36 0x00007f47b57b473a in omc_Interactive_evaluateToStdOut ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#37 0x00007f47b5358efd in omc_Main_translateFile ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#38 0x00007f47b535afe5 in omc_Main_main2 ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#39 0x00007f47b535b21c in omc_Main_main ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#40 0x00007f47b5e3d34b in __omc_main ()
+   from /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+No symbol table info available.
+#41 0x00007f47b4b0cec5 in __libc_start_main (main=0x400850 <main>, argc=3, argv=0x7fffbb034368, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7fffbb034358) at libc-start.c:287
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {0, -3803265223397284101, 4196224, 140736330941280, 0, 0, 3803114412444673787, 
+                3870702109568853755}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x400860 <__libc_csu_init>, 0x7fffbb034368}, data = {
+              prev = 0x0, cleanup = 0x0, canceltype = 4196448}}}
+        not_first_call = <optimized out>
+#42 0x00000000004007a9 in _start ()
+No symbol table info available.
+A debugging session is active.
+
+	Inferior 1 [process 30551] will be detached.
+
+Quit anyway? (y or n) Detaching from program: /var/lib/hudson/jobs/OpenModelica_TEST_ALL_LIBRARIES/workspace/OpenModelica/build/bin/omc, process 30551

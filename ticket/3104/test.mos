@@ -1,0 +1,4 @@
+loadFile("TestST3LRh_bypassTotal.mo"); getErrorString();
+setDebugFlags("dumpSimCode");
+simulate(ThermoPower.PowerPlants.SteamTurbineGroup.Tests.TestST3LRh_bypass, simflags = "-lv LOG_STATS", stopTime = 0); getErrorString();
+

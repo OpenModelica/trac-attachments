@@ -1,0 +1,21 @@
+#1
+double xh(4, 2)   # saturation faktor main reactance
+-1	1.0
+1.3	1.0
+2.5	1.0
+20	1.0
+
+double x1(5, 2)   # saturation faktor stator leakage reactance
+0	1.0
+1.3	1.0
+2	0.85
+4	0.74
+20	0.74
+
+
+double x2(5, 2)   # saturation faktor rotor leakage reactance
+0	1.0
+1.3	1.0
+2	0.75
+4	0.56
+20	0.56

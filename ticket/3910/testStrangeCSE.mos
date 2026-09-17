@@ -1,0 +1,31 @@
+loadString("
+package CSE
+
+  model Test1
+    Real x;
+    Real y;
+    Real z;
+    Real w(fixed = true);
+  equation
+    der(w) = 1 - w;
+    x = 3*sin(w);
+    y = 3*sin(w);
+    z = 6*sin(w)-1;
+   end Test1;
+
+  model Test2
+     Real x(fixed = true);
+     Real y;
+     Real z;
+   equation
+     der(x) =  1 - x;
+     y = sin(x);
+     z = 2*sin(x);
+   end Test2;
+end CSE;
+"); getErrorString();
+
+setDebugFlags("dumpCSE"); getErrorString();
+setCommandLineOptions("--postOptModules+=wrapFunctionCalls"); getErrorString();
+simulate(CSE.Test1); getErrorString();
+simulate(CSE.Test2); getErrorString();

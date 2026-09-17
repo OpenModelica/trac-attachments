@@ -1,0 +1,95 @@
+With RemoveSimpleEquations
+
+108:  (NONLINEAR) index:1 jacobian: false
+		crefs: $cse16 [Real] , $cse12 [Real] , $cse17 [Real] , $cse6 [Real] , V5 [model .ValveLiq$V5] .fluidState [record .ThermodynamicState$V5$fluidState] .p [Real]
+	79: V5.dp=V5.fluidState.p - SinkP1.p0[Real ]
+	80: V3.dp=SourceP2.p0 - V5.fluidState.p[Real ]
+	81: V2.dp=SourceP1.p0 - V5.fluidState.p[Real ]
+	82: V3.rho=Modelica.Media.Water.IF97_Utilities.rho_props_ph(SourceP2.p0, DIVISION($cse6 * SourceP2.h + $cse12 * SinkP3.h, $cse6 + $cse12), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SourceP2.p0, DIVISION($cse6 * SourceP2.h + $cse12 * SinkP3.h, $cse6 + $cse12), 0, 0))[Real ]
+	83: V3.w=homotopy(ThermoPower.Water.ValveLiq$V3.FlowChar(CloseValves.y) * V3.Av * sqrt(V3.rho) * ThermoPower.Water.ValveLiq$V3.sqrtR(V3.dp, 3000.0), CloseValves.y * V3.wnom * DIVISION(SourceP2.p0 - V5.fluidState.p, V3.thetanom * V3.dpnom))[Real ]
+	84: $cse2=max(V3.w, 1e-015)[Real (start = -V3.wnom, max = if V3.allowFlowReversal then 9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", min = -100000.0, unit = "kg/s")]
+	85: $cse7=max(-V3.w, 1e-015)[Real (start = V3.wnom, min = if V3.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	86: V3.outlet.h_outflow=DIVISION($cse6 * SourceP2.h + $cse12 * SinkP3.h, $cse6 + $cse12)[Real ]
+	87: V2.outlet.h_outflow=DIVISION($cse16 * SinkP2.h + $cse17 * SourceP1.h, $cse16 + $cse17)[Real ]
+	88: V2.rho=Modelica.Media.Water.IF97_Utilities.rho_props_ph(SourceP1.p0, DIVISION($cse16 * SinkP2.h + $cse17 * SourceP1.h, $cse16 + $cse17), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SourceP1.p0, DIVISION($cse16 * SinkP2.h + $cse17 * SourceP1.h, $cse16 + $cse17), 0, 0))[Real ]
+	89: V2.w=homotopy(ThermoPower.Water.ValveLiq$V2.FlowChar(CloseValves.y) * V2.Av * sqrt(V2.rho) * ThermoPower.Water.ValveLiq$V2.sqrtR(V2.dp, 5000.0), CloseValves.y * V2.wnom * DIVISION(SourceP1.p0 - V5.fluidState.p, V2.thetanom * V2.dpnom))[Real ]
+	90: V5.w=V2.w + V3.w[Real ]
+	91: $cse11=max(-V5.w, 1e-015)[Real (start = V5.wnom, min = if V5.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	92: V2.inlet.h_outflow=DIVISION($cse11 * SinkP1.h + $cse2 * V3.outlet.h_outflow, $cse11 + $cse2)[Real ]
+	93: $cse1=max(V2.w, 1e-015)[Real (start = -V2.wnom, max = if V2.allowFlowReversal then 9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", min = -100000.0, unit = "kg/s")]
+	94: V3.inlet.h_outflow=DIVISION($cse1 * V2.outlet.h_outflow + $cse11 * SinkP1.h, $cse1 + $cse11)[Real ]
+	95: V4.rho=Modelica.Media.Water.IF97_Utilities.rho_props_ph(SourceP2.p0, DIVISION($cse6 * SourceP2.h + $cse7 * V3.inlet.h_outflow, $cse6 + $cse7), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SourceP2.p0, DIVISION($cse6 * SourceP2.h + $cse7 * V3.inlet.h_outflow, $cse6 + $cse7), 0, 0))[Real ]
+	96: V4.w=homotopy(ThermoPower.Water.ValveLiq$V4.FlowChar(OpenRelief.y) * V4.Av * sqrt(V4.rho) * ThermoPower.Water.ValveLiq$V4.sqrtR(V4.dp, 8000.0), OpenRelief.y * V4.wnom * DIVISION(SourceP2.p0 - SinkP3.p0, V4.thetanom * V4.dpnom))[Real ]
+	97: SourceP2.flange.m_flow=(-V4.w) - V3.w[Real ]
+	98: $cse21=max(-V2.w, 1e-015)[Real (start = V2.wnom, min = if V2.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	99: V1.rho=Modelica.Media.Water.IF97_Utilities.rho_props_ph(SourceP1.p0, DIVISION($cse21 * V2.inlet.h_outflow + $cse17 * SourceP1.h, $cse21 + $cse17), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(SourceP1.p0, DIVISION($cse21 * V2.inlet.h_outflow + $cse17 * SourceP1.h, $cse21 + $cse17), 0, 0))[Real ]
+	100: V1.w=homotopy(ThermoPower.Water.ValveLiq$V1.FlowChar(OpenRelief.y) * V1.Av * sqrt(V1.rho) * ThermoPower.Water.ValveLiq$V1.sqrtR(V1.dp, 9000.0), OpenRelief.y * V1.wnom * DIVISION(SourceP1.p0 - SinkP2.p0, V1.thetanom * V1.dpnom))[Real ]
+	101: SourceP1.flange.m_flow=(-V2.w) - V1.w[Real ]CS
+	102: V5.rho=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V5.fluidState.p, DIVISION($cse1 * V2.outlet.h_outflow + $cse2 * V3.outlet.h_outflow, $cse1 + $cse2), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V5.fluidState.p, DIVISION($cse1 * V2.outlet.h_outflow + $cse2 * V3.outlet.h_outflow, $cse1 + $cse2), 0, 0))[Real ]
+	107: max(-SourceP2.flange.m_flow, 1e-015) - $cse6 (RESIDUAL)
+	106: homotopy(ThermoPower.Water.ValveLiq$V5.FlowChar(CloseLoad.y) * V5.Av * sqrt(V5.rho) * ThermoPower.Water.ValveLiq$V5.sqrtR(V5.dp, 4000.0), CloseLoad.y * V5.wnom * DIVISION(V5.fluidState.p - SinkP1.p0, V5.thetanom * V5.dpnom)) - V5.w (RESIDUAL)
+	105: max(-V4.w, 1e-015) - $cse12 (RESIDUAL)
+	104: max(-V1.w, 1e-015) - $cse16 (RESIDUAL)
+	103: max(-SourceP1.flange.m_flow, 1e-015) - $cse17 (RESIDUAL)
+
+
+Without removeSimpleEquations
+
+292:  (NONLINEAR) index:1 jacobian: false
+		crefs: V5 [model .ValveLiq$V5] .inlet [connector .FlangeA$V5$inlet] .p [Real] , $cse16 [Real] , $cse17 [Real] , $cse26 [Real] , $cse22 [Real] , $cse23 [Real] , $cse13 [Real] , $cse6 [Real] , V3 [model .ValveLiq$V3] .outlet [connector .FlangeB$V3$outlet] .h_outflow [Real]
+	236: V5.dp=V5.inlet.p - V5.outlet.p[Real ]
+	237: $cse36=ThermoPower.Water.ValveLiq$V5.sqrtR(V5.dp, 4000.0)[Real ]
+	238: $cse25=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V3.inlet.p, DIVISION($cse22 * SourceP2.flange.h_outflow + $cse23 * SinkP3.in_h_internal, $cse22 + $cse23), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V3.inlet.p, DIVISION($cse22 * SourceP2.flange.h_outflow + $cse23 * SinkP3.in_h_internal, $cse22 + $cse23), 0, 0))[Real ]
+	239: V3.fluidState.d=$cse25[Real ]
+	240: V3.rho=V3.fluidState.d[Real ]
+	241: $cse19=sqrt(V3.rho)[Real ]
+	242: V2.inlet.h_outflow=DIVISION($cse16 * SinkP1.in_h_internal + $cse17 * V3.outlet.h_outflow, $cse16 + $cse17)[Real ]
+	243: V2.outlet.h_outflow=DIVISION($cse13 * SinkP2.in_h_internal + $cse6 * SourceP1.flange.h_outflow, $cse13 + $cse6)[Real ]
+	244: V3.inlet.h_outflow=DIVISION($cse26 * V2.outlet.h_outflow + $cse16 * SinkP1.in_h_internal, $cse26 + $cse16)[Real ]
+	245: $cse39=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V5.inlet.p, DIVISION($cse26 * V2.outlet.h_outflow + $cse17 * V3.outlet.h_outflow, $cse26 + $cse17), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V5.inlet.p, DIVISION($cse26 * V2.outlet.h_outflow + $cse17 * V3.outlet.h_outflow, $cse26 + $cse17), 0, 0))[Real ]
+	246: V5.fluidState.d=$cse39[Real ]
+	247: V5.rho=V5.fluidState.d[Real ]
+	248: $cse35=sqrt(V5.rho)[Real ]
+	249: V5.w=$cse34 * V5.Av * $cse35 * $cse36[Real ]
+	250: V5.inlet.m_flow=V5.w[Real ]
+	251: V2.outlet.p=V5.inlet.p[Real ]
+	252: V3.outlet.p=V2.outlet.p[Real ]
+	253: V3.dp=V3.inlet.p - V3.outlet.p[Real ]
+	254: $cse20=ThermoPower.Water.ValveLiq$V3.sqrtR(V3.dp, 3000.0)[Real ]
+	255: V3.w=$cse18 * V3.Av * $cse19 * $cse20[Real ]
+	256: V3.inlet.m_flow=V3.w[Real ]
+	257: V3.outlet.m_flow=-V3.inlet.m_flow[Real ]
+	258: $cse31=max(-V3.inlet.m_flow, 1e-015)[Real (start = V3.wnom, min = if V3.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	259: $cse33=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V4.inlet.p, DIVISION($cse22 * SourceP2.flange.h_outflow + $cse31 * V3.inlet.h_outflow, $cse22 + $cse31), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V4.inlet.p, DIVISION($cse22 * SourceP2.flange.h_outflow + $cse31 * V3.inlet.h_outflow, $cse22 + $cse31), 0, 0))[Real ]
+	260: V4.fluidState.d=$cse33[Real ]
+	261: V4.rho=V4.fluidState.d[Real ]
+	262: $cse28=sqrt(V4.rho)[Real ]
+	263: V4.w=$cse27 * V4.Av * $cse28 * $cse29[Real ]
+	264: V4.inlet.m_flow=V4.w[Real ]
+	265: SourceP2.flange.m_flow=(-V4.inlet.m_flow) - V3.inlet.m_flow[Real (start = V4.wnom, min = if V4.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	266: V2.dp=V2.inlet.p - V2.outlet.p[Real ]
+	267: $cse11=ThermoPower.Water.ValveLiq$V2.sqrtR(V2.dp, 5000.0)[Real ]
+	268: $cse15=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V2.inlet.p, DIVISION($cse13 * SinkP2.in_h_internal + $cse6 * SourceP1.flange.h_outflow, $cse13 + $cse6), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V2.inlet.p, DIVISION($cse13 * SinkP2.in_h_internal + $cse6 * SourceP1.flange.h_outflow, $cse13 + $cse6), 0, 0))[Real ]
+	269: V2.fluidState.d=$cse15[Real ]
+	270: V2.rho=V2.fluidState.d[Real ]
+	271: $cse10=sqrt(V2.rho)[Real ]
+	272: V2.w=$cse9 * V2.Av * $cse10 * $cse11[Real ]
+	273: V2.inlet.m_flow=V2.w[Real ]
+	274: $cse5=max(-V2.inlet.m_flow, 1e-015)[Real (start = V2.wnom, min = if V2.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	275: $cse8=Modelica.Media.Water.IF97_Utilities.rho_props_ph(V1.inlet.p, DIVISION($cse5 * V2.inlet.h_outflow + $cse6 * SourceP1.flange.h_outflow, $cse5 + $cse6), Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(V1.inlet.p, DIVISION($cse5 * V2.inlet.h_outflow + $cse6 * SourceP1.flange.h_outflow, $cse5 + $cse6), 0, 0))[Real ]
+	276: V1.fluidState.d=$cse8[Real ]
+	277: V1.rho=V1.fluidState.d[Real ]
+	278: $cse2=sqrt(V1.rho)[Real ]
+	279: V1.w=$cse1 * V1.Av * $cse2 * $cse3[Real ]
+	280: V1.inlet.m_flow=V1.w[Real ]
+	281: SourceP1.flange.m_flow=(-V2.inlet.m_flow) - V1.inlet.m_flow[Real (start = V2.wnom, min = if V2.allowFlowReversal then -9.999999999999999e+059 else 0.0, quantity = "MassFlowRate.WaterIF97", max = 100000.0, unit = "kg/s")]
+	282: V2.outlet.m_flow=-V2.inlet.m_flow[Real ]
+	291: $cse22 * SourceP2.flange.h_outflow + $cse23 * SinkP3.in_h_internal - V3.outlet.h_outflow * ($cse22 + $cse23) (RESIDUAL)
+	290: max(-SourceP1.flange.m_flow, 1e-015) - $cse6 (RESIDUAL)
+	289: V3.outlet.m_flow + V5.inlet.m_flow + V2.outlet.m_flow (RESIDUAL)
+	288: max(-V4.inlet.m_flow, 1e-015) - $cse23 (RESIDUAL)
+	287: max(-SourceP2.flange.m_flow, 1e-015) - $cse22 (RESIDUAL)
+	286: max(-V2.outlet.m_flow, 1e-015) - $cse26 (RESIDUAL)
+	285: max(-V3.outlet.m_flow, 1e-015) - $cse17 (RESIDUAL)
+	284: max(-V5.inlet.m_flow, 1e-015) - $cse16 (RESIDUAL)
+	283: max(-V1.inlet.m_flow, 1e-015) - $cse13 (RESIDUAL)

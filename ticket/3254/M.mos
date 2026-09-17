@@ -1,0 +1,12 @@
+loadString("model M
+  N n1 annotation(Placement(visible = true, transformation(origin = {-30, 42}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+end M;");
+getErrorString();
+getComponentAnnotations(M);
+getErrorString();
+loadString("model M
+  N n1 annotation(choicesAllMatching=true,Placement(visible = true, transformation(origin = {-30, 42}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+end M;");
+getErrorString();
+getComponentAnnotations(M);
+getErrorString();

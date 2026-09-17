@@ -1,0 +1,8 @@
+loadModel(Modelica);
+getErrorString();
+loadModel(Buildings);
+getErrorString();
+loadFile("ETAFabrik.mo");
+getErrorString();
+translateModel(ETAFabrik.Gebaeude,startTime=0, stopTime=86400, numberOfIntervals=497, method="dassl", tolerance=1e-06, outputFormat="mat", variableFilter=".*");
+getErrorString();

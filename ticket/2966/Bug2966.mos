@@ -1,0 +1,22 @@
+loadString("model A
+  parameter Real r = 1;
+end A;");
+getErrorString();
+loadString("model B
+  A a;
+end B;");
+getErrorString();
+setComponentModifierValue(B,a.r.start, $Code(=500));
+getErrorString();
+list(B);
+
+"The above code is wrong. It should be A a(r(start = 500));";
+"Now add modifiers to model and try to update them with setComponentModifierValue";
+
+loadString("model B
+  A a(r(start=5));
+end B;");
+getErrorString();
+setComponentModifierValue(B,a.r.start, $Code(=500));
+getErrorString();
+list(B);

@@ -1,0 +1,10 @@
+loadModel(Modelica, {"trunk"});
+getErrorString();
+fileName := getSourceFile(Modelica.Electrical.PowerConverters.Examples.DCAC.MultiPhaseTwoLevel.MultiPhaseTwoLevel_R);
+s1 := readFile(fileName);
+updateComponent(fundamentalWaveCurrent,Modelica.Blocks.Math.Harmonic,Modelica.Electrical.PowerConverters.Examples.DCAC.MultiPhaseTwoLevel.MultiPhaseTwoLevel_R,annotate=Placement(visible=true, transformation=transformation(origin={90,-48}, extent={{-10,-10},{10,10}}, rotation=0)));
+getErrorString();
+s2 := listFile(Modelica.Electrical.PowerConverters);
+getErrorString();
+diffModelicaFileListings(s1, s2, OpenModelica.Scripting.DiffFormat.plain);
+getErrorString();

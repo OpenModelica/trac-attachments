@@ -1,0 +1,8 @@
+loadModel(Modelica);
+loadFile("SimpleTest.mo"); getErrorString();
+translateModelFMU(SimpleTest); getErrorString();
+importFMU("SimpleTest.fmu"); getErrorString();
+loadFile("SimpleTest_me_FMU.mo"); getErrorString();
+loadFile("test.mo"); getErrorString();
+simulate(test); getErrorString();
+plot({simpletest_me_fmu1.u,simpletest_me_fmu1.y}); getErrorString();

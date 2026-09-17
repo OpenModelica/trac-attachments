@@ -1,0 +1,24 @@
+loadModel(Modelica,{"3.2.1"}); getErrorString();
+
+loadFile("ParameterBug.mo"); getErrorString();
+
+setDebugFlags("scodeInstShortcut"); getErrorString();
+
+instantiateModel(ParameterBug.Test); getErrorString();
+
+// See if pipe1.flowModel.m_flow_nominal has a binding equation
+// Currently, it does not
+// true
+// ""
+// true
+// ""
+// true
+// ""
+// "class ParameterBug.Test
+//   parameter Real pipe1.flowModel.m_flow_nominal(quantity = \"MassFlowRate\", unit = \"kg/s\");
+// end ParameterBug.Test;
+// "
+// ""
+
+// It should be
+//   parameter Real pipe1.flowModel.m_flow_nominal(quantity = \"MassFlowRate\", unit = \"kg/s\") = 1;

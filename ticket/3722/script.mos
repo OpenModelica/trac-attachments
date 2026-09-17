@@ -1,0 +1,12 @@
+loadFile("P.mo");
+getErrorString();
+loadFile("M.mo");
+getErrorString();
+copyClass(M, "M", P);
+getErrorString();
+getClassInformation(P.M);
+getErrorString();
+list(P);
+getErrorString();
+save(P);
+getErrorString();

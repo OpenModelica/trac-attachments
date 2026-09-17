@@ -1,0 +1,48 @@
+C:/OpenModelica1.10.0-dev-64bit//share/omc/scripts/Compile.bat Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise gcc mingw64 parallel 8 0
+PATH = "C:\OpenModelica1.10.0-dev-64bit\tools\msys\mingw64\bin;C:\OpenModelica1.10.0-dev-64bit\tools\msys\mingw64\bin\..\..\usr\bin;"
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_records.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_records.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_01exo.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_01exo.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_02nls.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_02nls.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_03lsy.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_03lsy.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_04set.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_04set.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_05evt.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_05evt.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.c
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c: In function 'omc_Modelica__Noise_Math_Random_Generators_Xorshift128plus_random':
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c:20:34: warning: passing argument 1 of 'ModelicaRandom_xorshift128plus' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   ModelicaRandom_xorshift128plus((const int*) _stateIn_c89, (int*) _stateOut_c89, &_result_ext);
+                                  ^
+In file included from Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_includes.h:4:0,
+                 from Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c:7:
+C:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include/ModelicaRandom.c:363:22: note: expected 'int *' but argument is of type 'const int *'
+ MODELICA_EXPORT void ModelicaRandom_xorshift128plus(int state_in[], int state_out[], double* y) {
+                      ^
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c: In function 'omc_Modelica__Noise_Math_Random_Generators_Xorshift64star_random':
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c:106:33: warning: passing argument 1 of 'ModelicaRandom_xorshift64star' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   ModelicaRandom_xorshift64star((const int*) _stateIn_c89, (int*) _stateOut_c89, &_result_ext);
+                                 ^
+In file included from Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_includes.h:4:0,
+                 from Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_functions.c:7:
+C:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include/ModelicaRandom.c:312:22: note: expected 'int *' but argument is of type 'const int *'
+ MODELICA_EXPORT void ModelicaRandom_xorshift64star(int state_in[], int state_out[], double* y) {
+                      ^
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_07dly.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_07dly.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_08bnd.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_08bnd.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_09alg.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_09alg.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_10asr.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_10asr.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_11mix.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_11mix.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_12jac.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_12jac.c
+gcc    -falign-functions -msse2 -mfpmath=sse      "-IC:/OpenModelica1.10.0-dev-64bit/lib/omlibrary/Modelica_Noise 1.0 Beta.1/Resources/Include" -I"C:/OpenModelica1.10.0-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME  -c -o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_13opt.o Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_13opt.c
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.c: In function 'Modelica_Noise_Blocks_Examples_NoiseExamples_UniformNoise_eqFunction_6':
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.c:67:55: error: '$Pstate' undeclared (first use in this function)
+   integer_array_create(&tmp0, ((modelica_integer*)&((&$Pstate)[calc_base_index_dims_subs(1, $PstateSize, ((modelica_integer) 1))])), 1, $PstateSize);
+                                                       ^
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.c:67:55: note: each undeclared identifier is reported only once for each function it appears in
+Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.c:67:93: error: '$PstateSize' undeclared (first use in this function)
+   integer_array_create(&tmp0, ((modelica_integer*)&((&$Pstate)[calc_base_index_dims_subs(1, $PstateSize, ((modelica_integer) 1))])), 1, $PstateSize);
+                                                                                             ^
+<builtin>: recipe for target 'Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.o' failed
+\tools\msys\mingw64\bin\mingw32-make: *** [Modelica_Noise.Blocks.Examples.NoiseExamples.UniformNoise_06inz.o] Error 1
+\tools\msys\mingw64\bin\mingw32-make: *** Waiting for unfinished jobs....
+Compilation process failed. Exited with code 2.

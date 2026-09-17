@@ -1,0 +1,13 @@
+Index: Compiler/BackEnd/XMLDump.mo
+===================================================================
+--- Compiler/BackEnd/XMLDump.mo	(revision 19323)
++++ Compiler/BackEnd/XMLDump.mo	(working copy)
+@@ -2015,7 +2015,7 @@
+         dumpStrOpenTag(MathMLApply);
+         dumpStrVoidTag(MathMLTranspose);
+         dumpStrOpenTag(MathMLVector);
+-        dumpList(es,dumpExp3);
++        dumpList(es,dumpExp2);
+         dumpStrCloseTag(MathMLVector);
+         dumpStrCloseTag(MathMLApply);
+       then ();

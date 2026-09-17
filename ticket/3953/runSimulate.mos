@@ -1,0 +1,13 @@
+loadModel(Modelica);
+
+res := simulate(Modelica.Blocks.Examples.PID_Controller);
+print("A");
+print(res); // No error, but this line will be blank?
+print("B");
+
+if true then
+  res := simulate(Modelica.Blocks.Examples.PID_Controller);
+  print(res); // Throws an error that record is passed, but String expected
+else
+  print("Just to have an else");
+end if;

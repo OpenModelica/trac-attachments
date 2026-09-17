@@ -1,0 +1,5 @@
+loadFile("example.mo");
+loadFile("mediators.mo");
+getErrorString();
+inferBindings(test.TestModel);
+getErrorString();

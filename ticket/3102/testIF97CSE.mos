@@ -1,0 +1,58 @@
+loadString("
+package CSE
+  model Test1
+     package Medium = Modelica.Media.Water.StandardWater;
+     Medium.ThermodynamicState state;
+     Modelica.SIunits.Pressure p(start = 1e6, fixed = true);
+     Modelica.SIunits.Pressure p2(start = 1e6, fixed = true);
+     Modelica.SIunits.SpecificEnthalpy h(start = 1e5, fixed = true);
+     Medium.Temperature T;
+     Medium.Density rho;
+     Medium.SpecificHeatCapacity cp;
+   equation
+     der(p) = 2e6 - p;
+     der(h) = 2e5 - h;
+     der(p2) = 3e6 - p2;
+     state = Medium.setState_ph(p,h);
+     T = Medium.temperature(state);
+     rho = Medium.density(state);
+     cp = Medium.specificHeatCapacityCp(state);
+   end Test1;
+
+   model Test2
+     package Medium = Modelica.Media.Water.StandardWater;
+     Modelica.SIunits.Pressure p(start = 1e6, fixed = true);
+     Modelica.SIunits.SpecificEnthalpy h(start = 1e5, fixed = true);
+     Medium.Temperature T;
+     Medium.Density rho;
+   equation
+     der(p) = 2e6 - p;
+     der(h) = 2e5 - h;
+     T = Medium.temperature_ph(p,h);
+     rho = Medium.density_ph(p,h);
+   end Test2;
+
+   model Test3
+     package Medium = Modelica.Media.Water.StandardWater;
+     Modelica.SIunits.Pressure p(start = 1e6, fixed = true);
+     Modelica.SIunits.SpecificEnthalpy h(start = 1e5, fixed = true);
+     Medium.Temperature T;
+     Medium.Density rho;
+     Medium.SpecificHeatCapacity cp;
+   equation
+     der(p) = 2e6 - p;
+     der(h) = 2e5 - h;
+     T = Medium.temperature(Medium.setState_ph(p,h));
+     rho = Medium.density(Medium.setState_ph(p,h));
+     cp = Medium.specificHeatCapacityCp(Medium.setState_ph(p,h));
+   end Test3;
+
+end CSE;
+"); getErrorString();
+
+loadModel(Modelica); getErrorString();
+setDebugFlags("dumpCSE"); getErrorString();
+setCommandLineOptions("--postOptModules+=wrapFunctionCalls"); getErrorString();
+simulate(CSE.Test1); getErrorString();
+simulate(CSE.Test2); getErrorString();
+simulate(CSE.Test3); getErrorString();

@@ -1,0 +1,4 @@
+//loadFile("Test.mo"); getErrorString();
+//buildModelFMU(Test); getErrorString();
+loadFile("TestPackage.mo"); getErrorString();
+buildModelFMU(TestPackage.Test); getErrorString();

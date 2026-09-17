@@ -1,0 +1,101 @@
+﻿within ;
+package t3879 "PM SMA package"
+  //package Propulsion
+  extends Modelica.Icons.Package;
+  //end Propulsion;
+
+  model IqControl
+  //  extends Modelica.Icons.Example;
+    Modelica.Electrical.MultiPhase.Sources.SignalCurrent signalCurr(final m = 3) annotation(Placement(transformation(origin = {22, 2}, extent = {{-10, 10}, {10, -10}}, rotation = 180)));
+    Modelica.Electrical.MultiPhase.Basic.Star star(final m = 3) annotation(Placement(transformation(extent = {{10, -10}, {-10, 10}}, rotation = 180, origin = {50, 2})));
+    Modelica.Electrical.Analog.Basic.Ground ground1 annotation(Placement(transformation(origin = {76, 2}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+    Modelica.Electrical.Analog.Basic.Ground groundM annotation(Placement(transformation(origin = {-26, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
+    Modelica.Electrical.Machines.Utilities.TerminalBox terminalBox(terminalConnection = "Y") annotation(Placement(transformation(extent = {{-12, -28}, {8, -8}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor angleS annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {18, -30})));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia1(J = 0.29, phi(fixed = true, start = 0), w(fixed = true, start = 0)) annotation(Placement(transformation(extent = {{26, -54}, {46, -34}})));
+    Modelica.Mechanics.Rotational.Sources.QuadraticSpeedDependentTorque tRes1(w_nominal(displayUnit = "rpm") = 157.07963267949, tau_nominal = -150) annotation(Placement(transformation(extent = {{76, -54}, {56, -34}})));
+    FromPark fromPark(p = smpm.p) annotation(Placement(transformation(extent = {{-30, 0}, {-10, 20}})));
+    Modelica.Blocks.Sources.Trapezoid IqRef(period = 1e6, rising = 2, width = 2, falling = 2, offset = 1, amplitude = 85.0) annotation(Placement(transformation(extent = {{-82, -32}, {-62, -12}})));
+    Modelica.Blocks.Sources.Trapezoid IdRef(period = 1e6, rising = 2, width = 2, falling = 2, offset = 1, amplitude = -35.0) annotation(Placement(transformation(extent = {{-82, 12}, {-62, 32}})));
+  Modelica.Electrical.Machines.BasicMachines.SynchronousInductionMachines.SM_PermanentMagnet smpm annotation(Placement(visible = true, transformation(origin = {-4, -44}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(angleS.flange, smpm.flange) annotation(Line(points = {{18, -40}, {18, -40}, {18, -44}, {6, -44}, {6, -44}}));
+    connect(smpm.flange, inertia1.flange_a) annotation(Line(points = {{6, -44}, {26, -44}, {26, -44}, {26, -44}}));
+    connect(terminalBox.plug_sp, smpm.plug_sp) annotation(Line(points = {{4, -24}, {4, -28}, {2, -28}, {2, -34}}, color = {0, 0, 255}));
+    connect(terminalBox.plug_sn, smpm.plug_sn) annotation(Line(points = {{-8, -24}, {-8, -28}, {-10, -28}, {-10, -34}}, color = {0, 0, 255}));
+    connect(star.pin_n, ground1.p) annotation(Line(points = {{60, 2}, {60, 2}, {66, 2}}, color = {0, 0, 255}));
+    connect(signalCurr.plug_p, star.plug_p) annotation(Line(points = {{32, 2}, {40, 2}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(signalCurr.plug_n, terminalBox.plugSupply) annotation(Line(points = {{12, 2}, {-2, 2}, {-2, -22}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(groundM.p, terminalBox.starpoint) annotation(Line(points = {{-16, -26}, {-14, -26}, {-14, -22}, {-11, -22}}, color = {0, 0, 255}, smooth = Smooth.None));
+    connect(tRes1.flange, inertia1.flange_b) annotation(Line(points = {{56, -44}, {46, -44}}, color = {0, 0, 0}, smooth = Smooth.None));
+    connect(fromPark.y, signalCurr.i) annotation(Line(points = {{-9, 10}, {22, 10}, {22, 9}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(angleS.phi, fromPark.phi) annotation(Line(points = {{18, -19}, {18, -12}, {-20, -12}, {-20, -2}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(IqRef.y, fromPark.Xq) annotation(Line(points = {{-61, -22}, {-46, -22}, {-46, 4}, {-32, 4}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(fromPark.Xd, IdRef.y) annotation(Line(points = {{-32, 16}, {-46, 16}, {-46, 22}, {-61, 22}}, color = {0, 0, 127}));
+    annotation(experiment(StopTime = 8, Interval = 0.001), __Dymola_experimentSetupOutput, Documentation(info = "<html>
+  <p>Ths model propose a comparisono of the library PMDrive and what can be seen using the MSL PMSM machine model.</p>
+  <p>To make this comparison it is proceeded as follows:</p>
+  <ol>
+  <li>PMDrive is run so that the behaviour of Pd and Iq over time is determined. this behaviour is the result of optimisations, that consider the need to have optimal angle between PM and stator field at lows speeds, and an alggle that produces the needed fluz weakening at high speeds, so that the machin terminal voltages are compatible with the available DC voltage</li>
+  <li>The shape of Id(t) and Id(t) is emulated with two trapezoids. The corresponding instantaneous currents are generated by making the inverse park transform and fed to the machine.</li>
+  <li>Some quantities of the MSL PMSM and PMDrive model are compared.</li>
+  </ol>
+  <p>Plots that show this can be the following one:</p>
+  <ul>
+  <li>plot in the same window IqRef.y and pmDrive.allFluxLim.atomicPmsm.Iq. It is seen that the trapezoid follows in a reasonable way the Iq value PMDrive model computes over time</li>
+  <li>plot in the same window IdRef.y and pmDrive.allFluxLim.atomicPmsm.Id. It is seen that the trapezoid follows in a reasonable way the Id value PMDrive model computes over time</li>
+  <li>plot in the same window smpm.v[1] and pmDrive.allFluxLim.atomicPmsm.Vpark and pmDrive.allFluxLim.atomicPmsm.VparkFF. It can be seen that the trend of Vpark is the same of all the instantaneous peaks of v[1], while in the central zones, in which the machine speed overcomes the base speed VparkFF is larger</li>
+  <li>plot in the same window smpm.tauElectrical and pmDrive.allFluxLim.tauElectrical. It can be seen that the two torques are nearly equal to each other. The differences can be justified considering that Id(t) and Id(t) of the two models are not perfectly equal to each other</li>
+  </ul>
+  </html>"), Icon(coordinateSystem(extent = {{-100, -80}, {100, 60}})), Diagram(coordinateSystem(extent = {{-100, -80}, {100, 60}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})), uses(Modelica(version = "3.2.2")));
+  end IqControl;
+
+  model FromPark "Semplice PMM con modello funzionale inverter"
+    parameter Integer p "Number or pole pairs";
+    Modelica.Electrical.Machines.SpacePhasors.Blocks.FromSpacePhasor fromSpacePhasor annotation(Placement(transformation(extent = {{60, 0}, {80, 20}})));
+    Modelica.Electrical.Machines.SpacePhasors.Blocks.Rotator rotator annotation(Placement(transformation(extent = {{0, 6}, {20, 26}})));
+    Modelica.Blocks.Routing.Multiplex2 multiplex2_1 annotation(Placement(transformation(extent = {{-40, 0}, {-20, 20}})));
+    Modelica.Blocks.Interfaces.RealOutput y[3] annotation(Placement(transformation(extent = {{100, -10}, {120, 10}}), iconTransformation(extent = {{100, -10}, {120, 10}})));
+    Modelica.Blocks.Interfaces.RealInput Xd annotation(Placement(transformation(extent = {{-140, 40}, {-100, 80}}), iconTransformation(extent = {{-140, 40}, {-100, 80}})));
+    Modelica.Blocks.Interfaces.RealInput Xq annotation(Placement(transformation(extent = {{-140, -80}, {-100, -40}}), iconTransformation(extent = {{-140, -80}, {-100, -40}})));
+    Modelica.Blocks.Interfaces.RealInput phi annotation(Placement(transformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120}), iconTransformation(extent = {{-20, -20}, {20, 20}}, rotation = 90, origin = {0, -120})));
+    Modelica.Blocks.Math.Gain gain(k = -p) annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {10, -50})));
+    Modelica.Blocks.Sources.Constant const annotation(Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = 90, origin = {50, -30})));
+  equation
+    connect(multiplex2_1.y, rotator.u) annotation(Line(points = {{-19, 10}, {-10, 10}, {-10, 16}, {-2, 16}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(fromSpacePhasor.u, rotator.y) annotation(Line(points = {{58, 10}, {40, 10}, {40, 16}, {21, 16}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(fromSpacePhasor.y, y) annotation(Line(points = {{81, 10}, {94, 10}, {94, 0}, {110, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(multiplex2_1.u1[1], Xd) annotation(Line(points = {{-42, 16}, {-60, 16}, {-60, 60}, {-120, 60}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(multiplex2_1.u2[1], Xq) annotation(Line(points = {{-42, 4}, {-60, 4}, {-60, -60}, {-120, -60}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(rotator.angle, gain.y) annotation(Line(points = {{10, 4}, {10, -39}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(gain.u, phi) annotation(Line(points = {{10, -62}, {10, -120}, {0, -120}}, color = {0, 0, 127}, smooth = Smooth.None));
+    connect(fromSpacePhasor.zero, const.y) annotation(Line(points = {{58, 2}, {50, 2}, {50, -19}}, color = {0, 0, 127}, smooth = Smooth.None));
+    annotation(Diagram(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}})), experiment(StopTime = 5, Interval = 0.001), Documentation(info = "<html>
+ <p><br/><b>Test example: Permanent magnet synchronous induction machine fed by a current source</b></p>
+
+
+ <p><i><span style='color:red'>NOTA: la macchina ha Lmd=Lmq=0.3(2*pi*f) come definito internamente.</p>
+ <i><span style='color:red'>E&apos; pertanto una macchina isotropa. la miglior maniera di controllarla, quindi, dovrebbe essere di mettere la corrente tutta sull&apos;asse q e mantenere a 0 la componente sull&apos;asse d.</p></i>
+
+
+ <p><br/><br/>A synchronous induction machine with permanent magnets accelerates a quadratic speed dependent load from standstill. The rms values of d- and q-current in rotor fixed coordinate system are converted to threephase currents, and fed to the machine. The result shows that the torque is influenced by the q-current, whereas the stator voltage is influenced by the d-current.</p><p><br/><br/>Default machine parameters of model <i>SM_PermanentMagnet</i> are used. </p>
+ </html>"),
+          __Dymola_experimentSetupOutput, Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics={  Rectangle(lineColor = {0, 0, 127}, fillColor = {255, 255, 255},
+              fillPattern =                                                                                                    FillPattern.Solid, extent = {{-100, 100}, {100, -100}}), Text(lineColor = {0, 0, 127}, extent = {{-96, 28}, {96, -26}}, textString = "P=>"), Text(lineColor = {0, 0, 255}, extent = {{-108, 150}, {102, 110}}, textString = "%name")}));
+  end FromPark;
+  annotation(uses(Modelica(version="3.2.2")),   Icon(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics={  Polygon(points = {{-60, 16}, {78, 16}, {94, 0}, {96, -16}, {-98, -16}, {-90, 0}, {-76, 12}, {-60, 16}}, lineColor = {0, 0, 0}, smooth = Smooth.None, fillColor = {0, 0, 255},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{-70, -4}, {-30, -40}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{34, -6}, {74, -42}}, lineColor = {95, 95, 95}, fillColor = {95, 95, 95},
+            fillPattern =                                                                                                    FillPattern.Solid), Polygon(points = {{-54, 16}, {-18, 46}, {46, 46}, {74, 16}, {-54, 16}}, lineColor = {0, 0, 0}, smooth = Smooth.None, fillColor = {0, 0, 255},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{-86, -6}, {-92, 4}}, lineColor = {0, 0, 0}, fillColor = {255, 255, 0},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{98, -10}, {92, -4}}, lineColor = {0, 0, 0}, fillColor = {255, 0, 0},
+            fillPattern =                                                                                                    FillPattern.Solid), Polygon(points = {{-46, 20}, {-20, 42}, {16, 42}, {14, 20}, {-46, 20}}, lineColor = {0, 0, 0}, smooth = Smooth.None, fillColor = {255, 255, 255},
+            fillPattern =                                                                                                    FillPattern.Solid), Polygon(points = {{22, 42}, {42, 42}, {60, 20}, {20, 20}, {22, 42}}, lineColor = {0, 0, 0}, smooth = Smooth.None, fillColor = {255, 255, 255},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{-60, -12}, {-40, -30}}, lineColor = {95, 95, 95}, fillColor = {215, 215, 215},
+            fillPattern =                                                                                                    FillPattern.Solid), Ellipse(extent = {{44, -14}, {64, -32}}, lineColor = {95, 95, 95}, fillColor = {215, 215, 215},
+            fillPattern =                                                                                                    FillPattern.Solid)}), Documentation(info = "<html>
+<p>Library containing models of components, subsystems and full vehicle examples for simulation of electric and Hybrid vehicular power trains.</p>
+<p>A general description of the library composition and on how to use it effectively is in the compaion paper:</p>
+<p>M. Ceraolo &QUOT;Modelica Electric and hybrid power trains library&QUOT; submitted for publication at the 11th International Modelica Conference, 2015, September 21-23, Palais des congr&egrave;s de Versailles, 23-23 September, France</p>
+</html>"));
+end t3879;

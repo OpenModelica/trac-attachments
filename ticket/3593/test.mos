@@ -1,0 +1,40 @@
+setCommandLineOptions("-g=MetaModelica -d=rml");
+
+loadString("
+encapsulated partial package BaseP
+  replaceable type T = Integer;
+  constant T defaultValue;
+
+  uniontype U
+    record R
+      array<T> arr;
+    end R;
+  end U;
+
+  function new
+    output U u;
+  protected
+    array<T> arr;
+  algorithm
+    arr := arrayCreate(1, defaultValue);
+    u := R(arr);
+  end new;
+
+  annotation(__OpenModelica_Interface=\"util\", __OpenModelica_isBaseClass=true);
+end BaseP;
+  
+package DerP
+  extends BaseP(redeclare type T = String, defaultValue = \"\");
+  annotation(__OpenModelica_Interface=\"util\");
+end DerP;
+
+function test
+protected
+  DerP.U u;
+algorithm
+  u := DerP.new();
+end test;
+");
+getErrorString();
+test();
+getErrorString();

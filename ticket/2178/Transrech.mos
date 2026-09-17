@@ -1,0 +1,3 @@
+loadModel(Modelica); getErrorString();
+loadFile("Transrech.mo"); getErrorString();
+simulate(Transrech.Versuche.SprungRunter.mitBremsChopper, stopTime=5); getErrorString();

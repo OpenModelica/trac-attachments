@@ -1,0 +1,14 @@
+Index: initialization.c
+===================================================================
+--- initialization.c	(revision 14748)
++++ initialization.c	(working copy)
+@@ -916,7 +916,9 @@
+   if(initMethod == IIM_SYMBOLIC) {
+     /* do pivoting for dynamic state selection */ 
+     stateSelection(data);
++    data->simulationInfo.discreteCall = 1;
+     retVal = symbolic_initialization(data);
++    data->simulationInfo.discreteCall = 0;
+   }
+   updateDiscreteSystem(data);
+ 

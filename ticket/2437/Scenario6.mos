@@ -1,0 +1,8 @@
+loadFile("Scenario6.mo"); getErrorString();
+simulate(SystemDynamics.WorldDynamics.World2.Scenario_6); getErrorString();
+// note that STRANGELY simulate(Scenario6) does work to simulate!
+// simulate(Scenario6); getErrorString();
+
+
+
+

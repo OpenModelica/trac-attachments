@@ -1,0 +1,78 @@
+Index: SimulationRuntime/c/simulation/solver/perform_simulation.c
+===================================================================
+--- SimulationRuntime/c/simulation/solver/perform_simulation.c	(revision 18659)
++++ SimulationRuntime/c/simulation/solver/perform_simulation.c	(working copy)
+@@ -96,6 +96,8 @@
+   SIMULATION_INFO *simInfo = &(data->simulationInfo);
+ 
+   solverInfo->currentTime = simInfo->startTime;
++  
++  unsigned int __currStepNo = 0;
+ 
+   if(measure_time_flag)
+   {
+@@ -151,25 +153,15 @@
+       rotateRingBuffer(data->simulationData, 1, (void**) data->localData);
+ 
+       /***** Calculation next step size *****/
+-      /* Calculate new step size after an event */
+       if(solverInfo->didEventStep == 1)
+       {
+-        if((solverInfo->currentTime - solverInfo->laststep) + DBL_EPSILON > simInfo->stepSize)
+-          solverInfo->currentStepSize = simInfo->stepSize;
+-        else
+-          solverInfo->currentStepSize = simInfo->stepSize - (solverInfo->currentTime - solverInfo->laststep);
+-        
+         infoStreamPrint(LOG_SOLVER, 0, "offset value for the next step: %.10f", (solverInfo->currentTime - solverInfo->laststep));
+       }
+       else
+       {
+-        solverInfo->currentStepSize = simInfo->stepSize;
++        __currStepNo++;
+       }
+-
+-      /* adjust final step? */
+-      if(solverInfo->currentTime + solverInfo->currentStepSize > simInfo->stopTime) {
+-        solverInfo->currentStepSize = simInfo->stopTime - solverInfo->currentTime;
+-      }
++      solverInfo->currentStepSize = (double)(__currStepNo*(simInfo->stopTime-simInfo->startTime))/(simInfo->numSteps) + simInfo->startTime - solverInfo->currentTime;
+       /***** End calculation next step size *****/
+ 
+       /* check for next time event */
+Index: testsuite/openmodelica/cruntime/simoptions/testOutputIntervalDASSL.mos
+===================================================================
+--- testsuite/openmodelica/cruntime/simoptions/testOutputIntervalDASSL.mos	(revision 18659)
++++ testsuite/openmodelica/cruntime/simoptions/testOutputIntervalDASSL.mos	(working copy)
+@@ -56,7 +56,7 @@
+ //     simulationOptions = "startTime = 0.0, stopTime = 2.0, numberOfIntervals = 6, tolerance = 0.000001, method = 'dassl', fileNamePrefix = 'testModel', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = '-noEventEmit'",
+ //     messages = ""
+ // end SimulationResult;
+-// 8
++// 7
+ // record SimulationResult
+ //     resultFile = "testModel_res.mat",
+ //     simulationOptions = "startTime = 0.0, stopTime = 3.0, numberOfIntervals = 500, tolerance = 0.000001, method = 'dassl', fileNamePrefix = 'testModel', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = '-noEventEmit'",
+Index: testsuite/openmodelica/cruntime/simoptions/testOutputIntervalEuler.mos
+===================================================================
+--- testsuite/openmodelica/cruntime/simoptions/testOutputIntervalEuler.mos	(revision 18659)
++++ testsuite/openmodelica/cruntime/simoptions/testOutputIntervalEuler.mos	(working copy)
+@@ -56,7 +56,7 @@
+ //     simulationOptions = "startTime = 0.0, stopTime = 2.0, numberOfIntervals = 6, tolerance = 0.000001, method = 'euler', fileNamePrefix = 'testModel', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = '-noEventEmit'",
+ //     messages = ""
+ // end SimulationResult;
+-// 8
++// 7
+ // record SimulationResult
+ //     resultFile = "testModel_res.mat",
+ //     simulationOptions = "startTime = 0.0, stopTime = 3.0, numberOfIntervals = 500, tolerance = 0.000001, method = 'euler', fileNamePrefix = 'testModel', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = '-noEventEmit'",
+Index: testsuite/openmodelica/cruntime/simoptions/testOutputIntervalRK.mos
+===================================================================
+--- testsuite/openmodelica/cruntime/simoptions/testOutputIntervalRK.mos	(revision 18659)
++++ testsuite/openmodelica/cruntime/simoptions/testOutputIntervalRK.mos	(working copy)
+@@ -62,5 +62,5 @@
+ //     simulationOptions = "startTime = 0.0, stopTime = 2.0, numberOfIntervals = 6, tolerance = 0.000001, method = 'rungekutta', fileNamePrefix = 'testModel', options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = '-noEventEmit'",
+ //     messages = ""
+ // end SimulationResult;
+-// 8
++// 7
+ // endResult

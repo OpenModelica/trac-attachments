@@ -1,0 +1,44 @@
+Index: OMOptimBasis/MOVector.cpp
+===================================================================
+--- OMOptimBasis/MOVector.cpp	(Revision 16951)
++++ OMOptimBasis/MOVector.cpp	(Arbeitskopie)
+@@ -674,7 +674,7 @@
+         if( !domItem.isNull() )
+         {
+             newItem = new ItemClass(domItem);
+-            addItem(newItem);
++            this->addItem(newItem);
+         }
+         n = n.nextSibling();
+     }
+@@ -705,7 +705,7 @@
+     :MOAVector<ItemClass>(owner)
+ {
+     setItems(domList);
+-    connect(this,SIGNAL(dataChanged(QModelIndex,QModelIndex)),this,SIGNAL(modified()));
++    this->connect(this,SIGNAL(dataChanged(QModelIndex,QModelIndex)),this,SIGNAL(modified()));
+ }
+ 
+ 
+@@ -738,7 +738,7 @@
+         qDebug(QString("droped vector size :"+QString::number(dropedVector.size())).toLatin1().data());
+         for(int i=0;i<dropedVector.size();i++)
+         {
+-            somethingDone = insertItem(dropedVector.at(i),row) || somethingDone;
++            somethingDone = this->insertItem(dropedVector.at(i),row) || somethingDone;
+         }
+     }
+     return somethingDone;
+Index: OMOptim/Core/Optim/EA/SA1/SA1explorer.h
+===================================================================
+--- OMOptim/Core/Optim/EA/SA1/SA1explorer.h	(Revision 16951)
++++ OMOptim/Core/Optim/EA/SA1/SA1explorer.h	(Arbeitskopie)
+@@ -68,7 +68,7 @@
+      * @param _solution unused solution
+      */
+     virtual void updateParam(EOT & _solution) {
+-        coolingSchedule.update(temperature);
++        coolingSchedule.update(temperature, true);
+     };
+ 
+     /**

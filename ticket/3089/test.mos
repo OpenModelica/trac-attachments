@@ -1,0 +1,2 @@
+loadFile("CentrifugalPumpTotal.mo");
+simulate(Cryogenics_Test_CentrifugalPump, simflags = "-lv LOG_STATS,LOG_SOLVER,LOG_SIMULATION", method = "dassl", tolerance = 1e-4); getErrorString();

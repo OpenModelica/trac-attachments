@@ -1,0 +1,14 @@
+diff --git a/SimulationRuntime/c/simulation/solver/linearSolverUmfpack.h b/SimulationRuntime/c/simulation/solver/linearSolverUmfpack.h
+index 2fc85c7..92f4e96 100644
+--- a/SimulationRuntime/c/simulation/solver/linearSolverUmfpack.h
++++ b/SimulationRuntime/c/simulation/solver/linearSolverUmfpack.h
+@@ -58,6 +58,9 @@ typedef struct DATA_UMFPACK
+ 
+   double* work;
+ 
++  int* Wi;
++  double* W;
++
+   rtclock_t timeClock;             /* time clock */
+   int numberSolving;
+ 

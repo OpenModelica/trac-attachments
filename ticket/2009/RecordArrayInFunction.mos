@@ -1,0 +1,2 @@
+loadFile("RecordArrayInFunction.mo");
+simulate(RecordArrayInFunction, stopTime=0.0);

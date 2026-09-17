@@ -1,0 +1,7 @@
+loadFile("TestStrongComponentJacobians.mo"); getErrorString();
+setCommandLineOptions("--postOptModules-=calculateStrongComponentJacobians --preOptModules-=clockPartitioning  --postOptModules-=detectJacobianSparsePattern --showErrorMessages --disableLinearTearing --removeSimpleEquations=new --indexReductionMethod=uode --tearingMethod=omcTearing -d=dumpSimCode,gcProfiling,execstat,nogen,initialization,backenddaeinfo,discreteinfo,stateselection"); getErrorString();
+simulate(TestStrongComponentJacobians.M_100, method = "euler", stopTime = 1, numberOfIntervals = 10, simflags = "-lv LOG_STATS"); getErrorString();
+simulate(TestStrongComponentJacobians.M_400, method = "euler", stopTime = 1, numberOfIntervals = 10, simflags = "-lv LOG_STATS"); getErrorString();
+simulate(TestStrongComponentJacobians.M_1600, method = "euler", stopTime = 1, numberOfIntervals = 10, simflags = "-lv LOG_STATS"); getErrorString();
+simulate(TestStrongComponentJacobians.M_3200, method = "euler", stopTime = 1, numberOfIntervals = 10, simflags = "-lv LOG_STATS"); getErrorString();
+

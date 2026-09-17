@@ -1,0 +1,12 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("M.mo");
+getErrorString();
+simulate(M);
+getErrorString();
+plot(constantvoltage1.V);
+getErrorString();
+setInitXmlStartValue("M_init.xml", "constantvoltage1.V", "2", "M_init.xml");
+getErrorString();
+plot(constantvoltage1.V);
+getErrorString();

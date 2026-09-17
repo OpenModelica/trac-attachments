@@ -1,0 +1,29 @@
+package CellFlow
+  model Cells_v1
+    package Medium = Modelica.Media.Air.MoistAir;
+    //Modelica.Fluid.Fittings.Orifices.ThickEdgedOrifice thickedgedorifice1(redeclare package Medium = Medium, geometry.crossArea = 0.01, geometry.venaPerimeter = 0.01) annotation(Placement(visible = true, transformation(origin = {-12, -4}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    //  Modelica.Fluid.Vessels.ClosedVolume closedvolume1(C_start = {1.519E-3}, V = 100, redeclare package Medium = Medium, nPorts = 2, X_start = {0.015, 0.085}, massDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial, use_portsData = false) annotation(Placement(visible = true, transformation(origin = {-52, 30}, extent = {{-20, 0}, {0, 20}}, rotation = 0)));
+    //Modelica.Fluid.Fittings.SimpleGenericOrifice orifice(redeclare package Medium = Medium, diameter = 2.54e-2, use_zeta = false, zeta = 0, dp_nominal = 100000, m_flow_nominal = 1) annotation(Placement(transformation(extent = {{20, 10}, {40, 30}}, rotation = 0)));
+    Modelica.Fluid.Sources.FixedBoundary boundary(p = 90000, nPorts = 1, redeclare package Medium = Medium) annotation(Placement(visible = true, transformation(origin = {78, -18}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
+    Modelica.Fluid.Fittings.SimpleGenericOrifice orifice(redeclare package Medium = Medium, diameter = 2.54e-4, use_zeta = false) annotation(Placement(visible = true, transformation(origin = {-68, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Fluid.Fittings.SimpleGenericOrifice simplegenericorifice1(redeclare package Medium = Medium, diameter = 2.54e-4, use_zeta = false) annotation(Placement(visible = true, transformation(origin = {-28, 20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Fluid.Fittings.SimpleGenericOrifice simplegenericorifice2(redeclare package Medium = Medium, diameter = 2.54e-4, use_zeta = false) annotation(Placement(visible = true, transformation(origin = {14, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Fluid.Fittings.SimpleGenericOrifice simplegenericorifice3(redeclare package Medium = Medium, diameter = 2.54e-4, use_zeta = false) annotation(Placement(visible = true, transformation(origin = {50, 18}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Fluid.Vessels.ClosedVolume volume(V = 100, nPorts = 2, redeclare package Medium = Medium, massDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial, use_portsData = false) annotation(Placement(visible = true, transformation(origin = {-26, 54}, extent = {{-20, 0}, {0, 20}}, rotation = 0)));
+    Modelica.Fluid.Vessels.ClosedVolume closedvolume3(V = 100, nPorts = 2, redeclare package Medium = Medium, massDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial, use_portsData = false) annotation(Placement(visible = true, transformation(origin = {54, 56}, extent = {{-20, 0}, {0, 20}}, rotation = 0)));
+    inner Modelica.Fluid.System system(energyDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial) annotation(Placement(visible = true, transformation(origin = {-138, -118}, extent = {{52, 36}, {72, 56}}, rotation = 0)));
+    Modelica.Fluid.Vessels.ClosedVolume closedvolume2(V = 100, nPorts = 2, redeclare package Medium = Medium, massDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial, use_portsData = false) annotation(Placement(visible = true, transformation(origin = {6, 54}, extent = {{-20, 0}, {0, 20}}, rotation = 0)));
+    Modelica.Fluid.Vessels.ClosedVolume closedvolume1(V = 100, nPorts = 1, redeclare package Medium = Medium, massDynamics = Modelica.Fluid.Types.Dynamics.FixedInitial, use_portsData = false) annotation(Placement(visible = true, transformation(origin = {-78, 54}, extent = {{-20, 0}, {0, 20}}, rotation = 0)));
+  equation
+    connect(closedvolume1.ports[1], orifice.port_a) annotation(Line(points = {{-88, 54}, {-74, 54}, {-74, 38}, {-86, 38}, {-86, 20}, {-78, 20}}, color = {0, 127, 255}));
+    connect(simplegenericorifice2.port_a, closedvolume2.ports[2]) annotation(Line(points = {{4, 18}, {-2, 18}, {-2, 40}, {20, 40}, {20, 54}, {-4, 54}}, color = {0, 127, 255}));
+    connect(simplegenericorifice1.port_b, closedvolume2.ports[1]) annotation(Line(points = {{-18, 20}, {-4, 20}, {-4, 54}}, color = {0, 127, 255}));
+    connect(closedvolume3.ports[2], simplegenericorifice3.port_a) annotation(Line(points = {{44, 56}, {56, 56}, {56, 38}, {36, 38}, {36, 20}, {40, 20}}, color = {0, 127, 255}));
+    connect(simplegenericorifice2.port_b, closedvolume3.ports[1]) annotation(Line(points = {{24, 18}, {28, 18}, {28, 56}, {44, 56}}, color = {0, 127, 255}));
+    connect(simplegenericorifice1.port_a, volume.ports[2]) annotation(Line(points = {{-38, 20}, {-42, 20}, {-42, 38}, {-18, 38}, {-18, 54}, {-36, 54}}, color = {0, 127, 255}));
+    connect(orifice.port_b, volume.ports[1]) annotation(Line(points = {{-58, 20}, {-50, 20}, {-50, 54}, {-36, 54}}, color = {0, 127, 255}));
+    connect(simplegenericorifice3.port_b, boundary.ports[1]) annotation(Line(points = {{60, 18}, {76, 18}, {76, -2}, {52, -2}, {52, -18}, {70, -18}, {70, -18}}, color = {0, 127, 255}));
+    annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+  end Cells_v1;
+  annotation(Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})), Diagram(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = true, initialScale = 0.1, grid = {2, 2})));
+end CellFlow;

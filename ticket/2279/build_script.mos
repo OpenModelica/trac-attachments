@@ -1,0 +1,7 @@
+setCommandLineOptions({"+d=gendebugsymbols"});
+// loadModel(Modelica);
+loadFile("MathRandom.mo");
+getErrorString();
+simulate(test_MR);
+getErrorString();
+// plot({y});

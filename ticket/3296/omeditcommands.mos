@@ -1,0 +1,3 @@
+setCommandLineOptions("+locale=en_US"); getErrorString();
+getVersion(OpenModelica); getErrorString();
+getInstallationDirectoryPath(); getErrorString();

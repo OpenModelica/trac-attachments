@@ -1,0 +1,4 @@
+loadFile("A.mo");
+getErrorString();
+getComponents(A);
+getErrorString();
