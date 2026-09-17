@@ -1,0 +1,122 @@
+loadString("
+model Test
+  parameter Integer N = 100;
+  parameter Real k_min = 1;
+  parameter Real k_max = 2;
+  parameter Real d_0_a = 0.5;
+  parameter Real d_0_b = 3;
+  parameter Real d_tot = 1;
+  final parameter Real s_0_a = d_0_a/N;
+  final parameter Real s_0_b = d_0_b/N;
+  Real d[N+1];
+  Real s[N];
+  Real F_a[N];
+  Real F_b[N];
+  Real k[N];
+equation
+  d[1] = 0;
+  for i in 1:N loop
+    d[i+1] = d[i] + s[i]; 
+    s[i]*(1 + abs(s[i])/s_0_a)*k[i]*N = F_a[i];
+    s[i]*(1 + abs(s[i])/s_0_b)*k[i]*N = F_b[i];
+    k[i] = k_min + (k_max-k_min)/(N-1)*(i-1);
+  end for;
+  for i in 1:N-1 loop
+    F_a[i] + F_b[i] = F_a[i+1] + F_b[i+1];
+  end for;
+  d[end] = d_tot;
+end Test;
+");getErrorString();
+
+loadString("
+// Well-scaled models
+model TestW1 \"Base case\"
+  extends Test;
+end TestW1;
+
+model TestW2 \"Less variables\"
+  extends TestW1(N = 10);
+end TestW2;
+
+model TestW3 \"More variables\"
+  extends TestW1(N = 1000);
+end TestW3;
+
+model TestW4 \"More strongly nonlinear\"
+  extends TestW1(d_0_a = 0.1, d_0_b = 1);
+end TestW4;
+
+// Badly-scaled models
+model TestB1 \"Base case\"
+  extends Test(k_min = 1e9, k_max = 2e9,
+               F_a(each nominal = 1e9), F_b(each nominal = 1e9));
+end TestB1;
+
+model TestB2 \"Less variables\"
+  extends TestB1(N = 10);
+end TestB2;
+
+model TestB3 \"More variables\"
+  extends TestB1(N = 1000);
+end TestB3;
+
+model TestB4 \"More strongly nonlinear\"
+  extends TestB1(d_0_a = 0.1, d_0_b = 1);
+end TestB4;
+
+model TestB5 \"Less badly scaled\"
+  extends TestB1(k_min = 1e6, k_max = 2e6,
+                 F_a(each nominal = 1e6), F_b(each nominal = 1e6));
+end TestB5;
+
+model TestB6 \"More badly scaled\"
+  extends TestB1(k_min = 1e12, k_max = 2e12,
+                 F_a(each nominal = 1e12), F_b(each nominal = 1e12));
+end TestB6;
+    
+model TestB7 \"Nominal values off by 3 o.d.g.\"
+  extends TestB1(F_a(each nominal = 1e6), F_b(each nominal = 1e6));
+end TestB7;
+
+model TestB8 \"Nominal values off by 5 o.d.g.\"
+  extends TestB1(F_a(each nominal = 1e4), F_b(each nominal = 1e4));
+end TestB8;
+
+model TestB9 \"Nominal values off by 7 o.d.g.\"
+  extends TestB1(F_a(each nominal = 1e2), F_b(each nominal = 1e2));
+end TestB9;
+
+model TestB10 \"Nominal values off by 9 o.d.g.\"
+  extends TestB1(F_a(each nominal = 1e0), F_b(each nominal = 1e0));
+end TestB10;
+
+
+");getErrorString();
+
+setCommandLineOptions("--maxSizeNonlinearTearing=0");getErrorString();
+setCommandLineOptions("--preOptModules-=removeSimpleEquations");getErrorString();
+setCommandLineOptions("--postOptModules-=removeSimpleEquations");getErrorString();
+setCommandLineOptions("--maxSizeNonlinearTearing=0");getErrorString();
+
+//simulate(TestW1, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestW2, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestW3, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestW4, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+//simulate(TestB1, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB2, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB3, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB4, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB5, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB6, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB7, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB8, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB9, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+//simulate(TestB10, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+//simulate(TestB1, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();
+//simulate(TestB2, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();
+//simulate(TestB3, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();
+//simulate(TestB4, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();
+simulate(TestB5, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();
+simulate(TestB6, numberOfIntervals = 0, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler -noScaling");getErrorString();

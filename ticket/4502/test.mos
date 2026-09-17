@@ -1,0 +1,40 @@
+setCommandLineOptions("-g=MetaModelica");
+loadString("
+  type E = enumeration(one, two, three);
+
+  uniontype UT
+    record R
+      E e;
+    end R;
+  end UT;
+
+  function f
+    input UT ut;
+  algorithm
+    print(\"f: \");
+    if ut.e == E.one then
+      print(\"E.one\");
+    elseif ut.e == E.two then
+      print(\"E.two\");
+    elseif ut.e == E.three then
+      print(\"E.three\");
+    end if;
+    print(\"\\n\");
+  end f;
+
+  function test
+  protected
+    UT ut;
+  algorithm
+    ut := UT.R(E.one);
+    f(ut);
+    ut := UT.R(E.two);
+    f(ut);
+    ut := UT.R(E.three);
+    f(ut);
+  end test;
+");
+
+test();
+getErrorString();
+

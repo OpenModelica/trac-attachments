@@ -1,0 +1,6 @@
+
+loadModel(Modelica);getErrorString();
+loadModel(Modelica_DeviceDrivers); getErrorString();
+loadFile("MDD_test.mo"); getErrorString();
+
+simulate(MDD_test); getErrorString();

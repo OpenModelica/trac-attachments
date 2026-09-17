@@ -1,0 +1,9 @@
+loadModel(Modelica); getErrorString();
+
+// array numbers = 18 x 36
+loadFile("Pac_OnlyFunction_1.mo"); getErrorString();
+simulate(Pac_OnlyFunction_1.Calculate_Test_1); getErrorString();
+
+// array numbers = 36 x 72
+//loadFile("Pac_OnlyFunction_2.mo"); getErrorString();
+//simulate(Pac_OnlyFunction_2.Calculate_Test_1); getErrorString();

@@ -1,0 +1,52 @@
+loadString("
+model Test
+  parameter Integer N = 20;
+  parameter Real k_min = 1;
+  parameter Real k_max = 2;
+  parameter Real d_0 = 10;
+  parameter Real d_tot = 1;
+  final parameter Real s_0 = d_0/N;
+  Real d[N+1];
+  Real s[N];
+  Real F[N];
+  Real k[N];
+equation
+  d[1] = 0;
+  for i in 1:N loop
+    d[i+1] = d[i] + s[i]; 
+    s[i]*(1 + abs(s[i])/s_0)*k[i]*N = F[i];
+    k[i] = k_min + (k_max-k_min)/(N-1)*(i-1);
+  end for;
+  for i in 1:N-1 loop
+    F[i] = F[i+1];
+  end for;
+  d[end] = d_tot;
+end Test;
+");getErrorString();
+
+setCommandLineOptions("--maxSizeNonlinearTearing=0");getErrorString();
+
+// Test 1: N=10, quick convergence at the first attempt
+//simulate(Test, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 2: N=100, somewhat difficult convergence at the first attempt
+//loadString("model Test2 extends Test(N=100); end Test2;"); simulate(Test2, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 3: N=1000, first attempt failed, second converges quickly
+// loadString("model Test3 extends Test(N=1000); end Test3;"); simulate(Test3, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 4: N=100, d_0 = 10000 (almost linear problem),  first doesn't converge quickly enough, second converges quickly. Very similar to RETE_C initialization
+//loadString("model Test4 extends Test(N=100, d_0 = 10000); end Test4;"); simulate(Test4, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 5: N=100, d_0 = 1e7 (practically linear problem),  first doesn't converge quickly enough, second converges quickly. Very similar to RETE_C initialization
+//loadString("model Test5 extends Test(N=100, d_0 = 1e7); end Test5;"); simulate(Test5, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 6: N=100, k_min = 1e8, k_max = 2e8 (badly scaled), first four attempts do not converge, the fift finally does
+//loadString("model Test6 extends Test(N=100, k_min = 1e8, k_max = 2e8); end Test6;"); simulate(Test6, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 8: N=50, k_min = 1, k_max = 2. Inherently well-scaled
+loadString("model Test8 extends Test(N=50, k_min = 1, k_max = 2); end Test8;"); simulate(Test8, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+
+// Test 9: N=50, k_min = 1e8, k_max = 2e8. Badly scaled, but with nominal values on badly scaled unknowns
+loadString("model Test9 extends Test(N=50, k_min = 1e8, k_max = 2e8, F(each nominal=1e8), k(each nominal = 1e8)); end Test9;"); simulate(Test9, numberOfIntervals = 1, simflags="-lv=LOG_NLS_V -nls=kinsol -s=euler");getErrorString();
+

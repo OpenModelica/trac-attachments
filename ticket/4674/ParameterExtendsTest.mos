@@ -1,0 +1,16 @@
+loadFile("ParameterExtendsTest.mo");
+getErrorString();
+classes:= getInheritedClasses(ParameterExtendsTest.SpecialRecord);getErrorString();
+for i in 1:size(classes,1) loop
+  params := getParameterNames(classes[i]);getErrorString();
+ for j in 1:size(params,1) loop
+    print("parameter = "+params[j]+ " value=" +getParameterValue(classes[i],params[j]) +"\n");
+    print("new value = " + getExtendsModifierValue(ParameterExtendsTest.SpecialRecord,classes[i],params[j]));getErrorString();
+  end for;
+end for;
+params:= getParameterNames(ParameterExtendsTest.SpecialRecord);getErrorString();
+for i in 1:size(params,1) loop
+    print("parameter = "+params[i]+ " value=" +getParameterValue(ParameterExtendsTest.SpecialRecord,params[i]) +"\n");
+    print("new value = " + getExtendsModifierValue(ParameterExtendsTest.SpecialRecord,ParameterExtendsTest.BaseRecord,params[i]));getErrorString();
+end for;
+getErrorString();

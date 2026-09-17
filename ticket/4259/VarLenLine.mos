@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("VarLenLine.mo");
+getErrorString();
+getIconAnnotation(VarLenLine);
+getErrorString();

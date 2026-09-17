@@ -1,0 +1,4 @@
+rm -f OneModel.fmutmp/sources/OneModel_init.xml
+cp -a /home/nboldi/OpenModelica/build/include/omc/c/* OneModel.fmutmp/sources/include/
+cp -a /home/nboldi/OpenModelica/build/share/omc/runtime/c/fmi/buildproject/* OneModel.fmutmp/sources
+cp -a OneModel_FMU.libs OneModel.fmutmp/sources/

@@ -1,0 +1,346 @@
+Skripting Fehler
+InstFunction.getRecordConstructorFunction failed for OpenModelica.Scripting.getMessagesStringInternal 
+InstFunction.getRecordConstructorFunction failed for OpenModelica.Scripting.size 
+{"[<interactive>:1:1-1:0:writable] Error: Klasse OpenModelica.Scripting.size konnte nicht im Geltungsbereich von <global scope> (looking for a function or record) gefunden werden.", "TRANSLATION", "Error", "3"} 
+- Static.elabCall failed 
+ 
+ function: OpenModelica.Scripting.size   posargs: errors, 1 
+ prefix: <Prefix.NOPRE()> 
+{"[<interactive>:1:1-1:0:writable] Error: Klasse OpenModelica.Scripting.size konnte nicht im Geltungsbereich von <global scope> (looking for a function or record) gefunden werden.", "TRANSLATION", "Error", "3"} 
+InstFunction.getRecordConstructorFunction failed for Modelica.Math.Nonlinear.solveOneNonlinearEquation 
+InstFunction.getRecordConstructorFunction failed for Math.asin 
+InstFunction.getRecordConstructorFunction failed for OpenModelica.Internal.Architecture.integerMax 
+InstFunction.getRecordConstructorFunction failed for f 
+InstFunction.getRecordConstructorFunction failed for f 
+InstFunction.getRecordConstructorFunction failed for .Modelica.Utilities.Streams.error 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for abs 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+- Inst.instClassdef failed 
+  class :abs 
+- Inst.instClassIn2 failed on class: abs in environment: abs 
+- Inst.instClass: abs in env: <global scope> failed 
+InstFunction.getRecordConstructorFunction failed for f 
+- Ceval.ceval DAE.CALL failed: Modelica.Math.Nonlinear.solveOneNonlinearEquation(function SimpleModelWithSubstructure.dhydCalc(#(qNom[1,2])), 0.0, 0.1, 1e-013) 
+-PrefixUtil.prefixExp failed on exp: function SimpleModelWithSubstructure.dhydCalc(#(qNom[1,2])) 
+-PrefixUtil.prefixExp failed on exp: Modelica.Math.Nonlinear.solveOneNonlinearEquation(function SimpleModelWithSubstructure.dhydCalc(#(qNom[1,2])), 0.0, 0.1, 1e-013) 
+-PrefixUtil.prefixExp failed on exp: {{Modelica.Math.Nonlinear.solveOneNonlinearEquation(function SimpleModelWithSubstructure.dhydCalc(#(qNom[1,2])), 0.0, 0.1, 1e-013)}, {Modelica.Math.Nonlinear.solveOneNonlinearEquation(function SimpleModelWithSubstructure.dhydCalc(#(qNom[2,2])), 0.0, 0.1, 1e-013)}, {Modelica.Math.Nonlinear.solveOneNonlinearEquation(function SimpleModelWithSubstructure.dhydCalc(#(qNom[3,2])), 0.0, 0.1, 1e-013)}} 
+- Inst.instElement failed: parameter Real[n, 1] dhydMax = [{Modelica.Math.Nonlinear.solveOneNonlinearEquation(function dhydCalc(qNom = qNom[i, 2]), 0, 1e-1, 1e-13) for i in 1:n}] 
+  Scope: SimpleModelWithSubstructure 
+- Inst.instClassdef failed 
+  class :SimpleModelWithSubstructure 
+- Inst.instClassIn2 failed on class: SimpleModelWithSubstructure in environment: SimpleModelWithSubstructure 
+- Inst.instClass: SimpleModelWithSubstructure in env: <global scope> failed 
+- Inst.instScalar failed on simpleModelWithSubstructure1 in scope <Prefix.NOPRE()> env: <global scope> 
+ 
+- InstVar.instVar2 failed: <Prefix.NOPRE()>.simpleModelWithSubstructure1() 
+  Scope: <global scope> 
+- InstVar.instVar failed while instatiating variable: simpleModelWithSubstructure1  
+in scope: <global scope> class: 
+model SimpleModelWithSubstructure   
+  parameter Real[:, 2] qNom = [0.0, 0.0001; 5.0, 0.001; 10.0, 0.01]; 
+  parameter Integer n = size(qNom, 1); 
+  parameter Real[n, 1] dhydMax = [{Modelica.Math.Nonlinear.solveOneNonlinearEquation(function dhydCalc(qNom = qNom[i, 2]), 0, 1e-1, 1e-13) for i in 1:n}]; 
+ 
+  function dhydCalc   
+    extends Modelica.Math.Nonlinear.Interfaces.partialScalarFunction; 
+    input Real qNom; 
+  algorithm 
+    y := u - 1e-3; 
+  end dhydCalc; 
+end SimpleModelWithSubstructure 
+- Inst.instElement failed: SimpleModelWithSubstructure simpleModelWithSubstructure1 
+  Scope: SimpleModelWithSubstructure_TC01 
+- Inst.instClassdef failed 
+  class :SimpleModelWithSubstructure_TC01 
+- Inst.instClassIn2 failed on class: SimpleModelWithSubstructure_TC01 in environment: SimpleModelWithSubstructure_TC01 
+- Inst.instClass: SimpleModelWithSubstructure_TC01 in env: <global scope> failed 
+Inst.instClassInProgram failed 
+{"Error: Error occurred while flattening model SimpleModelWithSubstructure_TC01", "TRANSLATION", "Error", "89"} 
+
+
+[2] 13:32:06 Übersetzung Fehler
+Error occurred while flattening model SimpleModelWithSubstructure_TC01

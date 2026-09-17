@@ -1,0 +1,101 @@
+[New LWP 2361]
+[New LWP 2362]
+[New LWP 2363]
+[New LWP 2364]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0x00007f084133f5d3 in select () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+[Current thread is 1 (Thread 0x7f084980f8c0 (LWP 2359))]
+
+Thread 5 (Thread 0x7f082f55d700 (LWP 2364)):
+#0  0x00007f084133d74d in poll () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f0837991c62 in  () at /usr/lib/x86_64-linux-gnu/libxcb.so.1
+#2  0x00007f08379938d7 in xcb_wait_for_event () at /usr/lib/x86_64-linux-gnu/libxcb.so.1
+#3  0x00007f083271c889 in  () at /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5
+#4  0x00007f08424b17be in  () at /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+#5  0x00007f0841eb46ba in start_thread (arg=0x7f082f55d700) at pthread_create.c:333
+        __res = <optimized out>
+        pd = 0x7f082f55d700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139673130620672, -2036316625695579909, 0, 140720518146399, 139673130621376, 20840288, 2138596827559190779, 2138381924430471419}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#6  0x00007f084134941d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 4 (Thread 0x7f083344b700 (LWP 2363)):
+#0  0x00007f0841eba360 in pthread_cond_wait@@GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f08470216d4 in GC_wait_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#2  0x00007f0847016705 in GC_help_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#3  0x00007f084701f510 in GC_mark_thread () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#4  0x00007f0841eb46ba in start_thread (arg=0x7f083344b700) at pthread_create.c:333
+        __res = <optimized out>
+        pd = 0x7f083344b700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139673196607232, -2036316625695579909, 0, 140720518148127, 139673196607936, 139673527776368, 2138623066588143867, 2138381924430471419}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f084134941d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 3 (Thread 0x7f0833c4c700 (LWP 2362)):
+#0  0x00007f0841eba360 in pthread_cond_wait@@GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f08470216d4 in GC_wait_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#2  0x00007f0847016705 in GC_help_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#3  0x00007f084701f510 in GC_mark_thread () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#4  0x00007f0841eb46ba in start_thread (arg=0x7f0833c4c700) at pthread_create.c:333
+        __res = <optimized out>
+        pd = 0x7f0833c4c700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139673204999936, -2036316625695579909, 0, 140720518148127, 139673205000640, 139673527776368, 2138624168784126203, 2138381924430471419}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f084134941d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 2 (Thread 0x7f083444d700 (LWP 2361)):
+#0  0x00007f0841eba360 in pthread_cond_wait@@GLIBC_2.3.2 () at ../sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f08470216d4 in GC_wait_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#2  0x00007f0847016705 in GC_help_marker () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#3  0x00007f084701f510 in GC_mark_thread () at /usr/bin/../lib/x86_64-linux-gnu/omc/libomcgc.so.1
+#4  0x00007f0841eb46ba in start_thread (arg=0x7f083444d700) at pthread_create.c:333
+        __res = <optimized out>
+        pd = 0x7f083444d700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {139673213392640, -2036316625695579909, 0, 140720518148127, 139673213393344, 139673527776368, 2138616472739602683, 2138381924430471419}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+        __PRETTY_FUNCTION__ = "start_thread"
+#5  0x00007f084134941d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:109
+
+Thread 1 (Thread 0x7f084980f8c0 (LWP 2359)):
+#0  0x00007f084133f5d3 in select () at ../sysdeps/unix/syscall-template.S:84
+#1  0x00007f08426e3e5f in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timespec const*) () at /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+#2  0x00007f08426e3f4a in  () at /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+#3  0x00007f08426275a2 in  () at /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+#4  0x00007f08425c22bf in QProcess::waitForFinished(int) () at /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+#5  0x0000000000897a73 in GDBBacktrace::GDBBacktrace(QObject*) ()
+#6  0x0000000000899af5 in CrashReportDialog::createGDBBacktrace() ()
+#7  0x00000000008984ff in CrashReportDialog::CrashReportDialog(QString) ()
+#8  0x00000000004ff050 in signalHandler(int) ()
+#9  0x00007f08412774b0 in <signal handler called> () at /lib/x86_64-linux-gnu/libc.so.6
+#10 0x00007f08412cd746 in strlen () at ../sysdeps/x86_64/strlen.S:106
+#11 0x00007f08486d33ef in  () at /usr/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+#12 0x00007f08486d34cc in ParserExt_stringPath () at /usr/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+#13 0x00007f0847e838c2 in omc_OpenModelicaScriptingAPI_getVersion () at /usr/bin/../lib/x86_64-linux-gnu/omc/libOpenModelicaCompiler.so
+#14 0x00000000005c49e9 in OMCInterface::getVersion(QString) ()
+#15 0x00000000005ed854 in OMCProxy::getVersion(QString) ()
+#16 0x00000000005ecd9c in OMCProxy::initializeOMC() ()
+#17 0x00000000005ec200 in OMCProxy::OMCProxy(QWidget*) ()
+#18 0x000000000051bcbc in MainWindow::setUpMainWindow() ()
+#19 0x00000000008b2494 in OMEditApplication::OMEditApplication(int&, char**) ()
+#20 0x00000000004ff48f in main ()

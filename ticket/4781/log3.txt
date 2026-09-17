@@ -1,0 +1,454 @@
+getDefaultComponentPrefixes(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor) 18:37:09:030
+{} 18:37:09:031
+#s#; 0.001000; 5.183000; 'getDefaultComponentPrefixes(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor)'
+
+getDefaultComponentName(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor) 18:37:09:031
+{} 18:37:09:031
+#s#; 0.000000; 5.183000; 'getDefaultComponentName(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor)'
+
+getComponentModifierNames(M,"heatCapacitor1") 18:37:11:020
+{} 18:37:11:020
+#s#; 0.000000; 5.183000; 'getComponentModifierNames(M,"heatCapacitor1")'
+
+getComponents(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor, useQuotes = true) 18:37:11:020
+{{"Modelica.SIunits.HeatCapacity","C","Heat capacity of element (= cp*m)", "public", "false", "false", "false", "false", "parameter", "none", "unspecified","{}"},{"Modelica.SIunits.Temperature","T","Temperature of element", "public", "false", "false", "false", "false", "unspecified", "none", "unspecified","{}"},{"Modelica.SIunits.TemperatureSlope","der_T","Time derivative of temperature (= der(T))", "public", "false", "false", "false", "false", "unspecified", "none", "unspecified","{}"},{"Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a","port","", "public", "false", "false", "false", "false", "unspecified", "none", "unspecified","{}"}} 18:37:11:021
+#s#; 0.001000; 5.184000; 'getComponents(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor, useQuotes = true)'
+
+getComponentAnnotations(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor) 18:37:11:021
+{{},{},{},{Placement(true,0.0,-100.0,-10.0,-10.0,10.0,10.0,90.0,-,-,-,-,-,-,)}} 18:37:11:022
+#s#; 0.001000; 5.185000; 'getComponentAnnotations(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor)'
+
+getInheritedClasses(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a) 18:37:11:030
+{Modelica.Thermal.HeatTransfer.Interfaces.HeatPort} 18:37:11:030
+#s#; 0.000000; 5.185000; 'getInheritedClasses(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a)'
+
+errors:=getMessagesStringInternal() 18:37:11:030
+{} 18:37:11:035
+#s#; 0.005000; 5.190000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:035
+0 18:37:11:036
+#s#; 0.001000; 5.191000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort) 18:37:11:044
+{} 18:37:11:044
+#s#; 0.000000; 5.191000; 'getInheritedClasses(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort)'
+
+errors:=getMessagesStringInternal() 18:37:11:044
+{} 18:37:11:047
+#s#; 0.003000; 5.194000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:048
+0 18:37:11:049
+#s#; 0.001000; 5.195000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort) 18:37:11:049
+{} 18:37:11:049
+#s#; 0.000000; 5.195000; 'getIconAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort)'
+
+errors:=getMessagesStringInternal() 18:37:11:049
+{} 18:37:11:052
+#s#; 0.003000; 5.198000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:052
+0 18:37:11:053
+#s#; 0.001000; 5.199000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a) 18:37:11:053
+{-100.0,-100.0,100.0,100.0,true,0.1,2.0,2.0, {Rectangle(true, {0.0, 0.0}, 0.0, {191, 0, 0}, {191, 0, 0}, LinePattern.Solid, FillPattern.Solid, 0.25, BorderPattern.None, {{-100.0, 100.0}, {100.0, -100.0}}, 0.0)}} 18:37:11:054
+#s#; 0.001000; 5.200000; 'getIconAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a)'
+
+errors:=getMessagesStringInternal() 18:37:11:054
+{} 18:37:11:057
+#s#; 0.003000; 5.203000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:057
+0 18:37:11:058
+#s#; 0.001000; 5.204000; 'size(errors,1)'
+
+getComponents(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort, useQuotes = true) 18:37:11:059
+{{"Modelica.SIunits.Temperature","T","Port temperature", "public", "false", "false", "false", "false", "unspecified", "none", "unspecified","{}"},{"Modelica.SIunits.HeatFlowRate","Q_flow","Heat flow rate (positive if flowing from outside into the component)", "public", "false", "true", "false", "false", "unspecified", "none", "unspecified","{}"}} 18:37:11:060
+#s#; 0.001000; 5.205000; 'getComponents(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort, useQuotes = true)'
+
+getComponentAnnotations(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort) 18:37:11:060
+{{},{}} 18:37:11:060
+#s#; 0.000000; 5.205000; 'getComponentAnnotations(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort)'
+
+getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort) 18:37:11:060
+{} 18:37:11:060
+#s#; 0.000000; 5.205000; 'getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort)'
+
+errors:=getMessagesStringInternal() 18:37:11:060
+{} 18:37:11:063
+#s#; 0.003000; 5.208000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:063
+0 18:37:11:064
+#s#; 0.001000; 5.209000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.SIunits.Temperature) 18:37:11:073
+{Modelica.SIunits.ThermodynamicTemperature} 18:37:11:074
+#s#; 0.002000; 5.211000; 'getInheritedClasses(Modelica.SIunits.Temperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:074
+{} 18:37:11:077
+#s#; 0.003000; 5.214000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:077
+0 18:37:11:078
+#s#; 0.001000; 5.215000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.SIunits.ThermodynamicTemperature) 18:37:11:086
+{Real} 18:37:11:088
+#s#; 0.002000; 5.217000; 'getInheritedClasses(Modelica.SIunits.ThermodynamicTemperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:088
+{} 18:37:11:091
+#s#; 0.003000; 5.220000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:091
+0 18:37:11:092
+#s#; 0.001000; 5.221000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.SIunits.ThermodynamicTemperature) 18:37:11:092
+{} 18:37:11:092
+#s#; 0.000000; 5.221000; 'getIconAnnotation(Modelica.SIunits.ThermodynamicTemperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:092
+{} 18:37:11:095
+#s#; 0.003000; 5.224000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:095
+0 18:37:11:096
+#s#; 0.001000; 5.225000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.SIunits.Temperature) 18:37:11:096
+{} 18:37:11:096
+#s#; 0.000000; 5.225000; 'getIconAnnotation(Modelica.SIunits.Temperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:096
+{} 18:37:11:100
+#s#; 0.003000; 5.228000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:100
+0 18:37:11:101
+#s#; 0.001000; 5.229000; 'size(errors,1)'
+
+getComponents(Modelica.SIunits.ThermodynamicTemperature, useQuotes = true) 18:37:11:102
+{} 18:37:11:102
+#s#; 0.000000; 5.229000; 'getComponents(Modelica.SIunits.ThermodynamicTemperature, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.SIunits.ThermodynamicTemperature) 18:37:11:102
+{} 18:37:11:102
+#s#; 0.000000; 5.229000; 'getDiagramAnnotation(Modelica.SIunits.ThermodynamicTemperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:102
+{} 18:37:11:105
+#s#; 0.003000; 5.232000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:105
+0 18:37:11:106
+#s#; 0.001000; 5.233000; 'size(errors,1)'
+
+getComponents(Modelica.SIunits.Temperature, useQuotes = true) 18:37:11:106
+{} 18:37:11:106
+#s#; 0.000000; 5.233000; 'getComponents(Modelica.SIunits.Temperature, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.SIunits.Temperature) 18:37:11:106
+{} 18:37:11:106
+#s#; 0.000000; 5.233000; 'getDiagramAnnotation(Modelica.SIunits.Temperature)'
+
+errors:=getMessagesStringInternal() 18:37:11:106
+{} 18:37:11:109
+#s#; 0.003000; 5.236000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:109
+0 18:37:11:110
+#s#; 0.001000; 5.237000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.SIunits.HeatFlowRate) 18:37:11:119
+{Real} 18:37:11:121
+#s#; 0.002000; 5.239000; 'getInheritedClasses(Modelica.SIunits.HeatFlowRate)'
+
+errors:=getMessagesStringInternal() 18:37:11:121
+{} 18:37:11:124
+#s#; 0.003000; 5.242000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:124
+0 18:37:11:125
+#s#; 0.001000; 5.243000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.SIunits.HeatFlowRate) 18:37:11:125
+{} 18:37:11:125
+#s#; 0.000000; 5.243000; 'getIconAnnotation(Modelica.SIunits.HeatFlowRate)'
+
+errors:=getMessagesStringInternal() 18:37:11:125
+{} 18:37:11:128
+#s#; 0.003000; 5.246000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:128
+0 18:37:11:129
+#s#; 0.001000; 5.247000; 'size(errors,1)'
+
+getComponents(Modelica.SIunits.HeatFlowRate, useQuotes = true) 18:37:11:130
+{} 18:37:11:130
+#s#; 0.000000; 5.247000; 'getComponents(Modelica.SIunits.HeatFlowRate, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.SIunits.HeatFlowRate) 18:37:11:130
+{} 18:37:11:130
+#s#; 0.000000; 5.247000; 'getDiagramAnnotation(Modelica.SIunits.HeatFlowRate)'
+
+errors:=getMessagesStringInternal() 18:37:11:131
+{} 18:37:11:134
+#s#; 0.003000; 5.250000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:134
+0 18:37:11:135
+#s#; 0.001000; 5.251000; 'size(errors,1)'
+
+getComponents(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a, useQuotes = true) 18:37:11:137
+{} 18:37:11:137
+#s#; 0.000000; 5.251000; 'getComponents(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a) 18:37:11:137
+{-100.0,-100.0,100.0,100.0,true,0.1,2.0,2.0, {Rectangle(true, {0.0, 0.0}, 0.0, {191, 0, 0}, {191, 0, 0}, LinePattern.Solid, FillPattern.Solid, 0.25, BorderPattern.None, {{-50.0, 50.0}, {50.0, -50.0}}, 0.0), Text(true, {0.0, 0.0}, 0.0, {191, 0, 0}, {0, 0, 0}, LinePattern.Solid, FillPattern.None, 0.25, {{-120.0, 120.0}, {100.0, 60.0}}, "%name", 0.0, {-1, -1, -1}, "", {}, TextAlignment.Center)}} 18:37:11:137
+#s#; 0.000000; 5.251000; 'getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Interfaces.HeatPort_a)'
+
+errors:=getMessagesStringInternal() 18:37:11:137
+{} 18:37:11:140
+#s#; 0.003000; 5.254000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:140
+0 18:37:11:141
+#s#; 0.001000; 5.255000; 'size(errors,1)'
+
+getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor) 18:37:11:148
+{-100.0,-100.0,100.0,100.0,true,0.1,2.0,2.0, {Polygon(true, {0.0, 0.0}, 0.0, {160, 160, 164}, {192, 192, 192}, LinePattern.Solid, FillPattern.Solid, 0.25, {{0.0, 67.0}, {-20.0, 63.0}, {-40.0, 57.0}, {-52.0, 43.0}, {-58.0, 35.0}, {-68.0, 25.0}, {-72.0, 13.0}, {-76.0, -1.0}, {-78.0, -15.0}, {-76.0, -31.0}, {-76.0, -43.0}, {-76.0, -53.0}, {-70.0, -65.0}, {-64.0, -73.0}, {-48.0, -77.0}, {-30.0, -83.0}, {-18.0, -83.0}, {-2.0, -85.0}, {8.0, -89.0}, {22.0, -89.0}, {32.0, -87.0}, {42.0, -81.0}, {54.0, -75.0}, {56.0, -73.0}, {66.0, -61.0}, {68.0, -53.0}, {70.0, -51.0}, {72.0, -35.0}, {76.0, -21.0}, {78.0, -13.0}, {78.0, 3.0}, {74.0, 15.0}, {66.0, 25.0}, {54.0, 33.0}, {44.0, 41.0}, {36.0, 57.0}, {26.0, 65.0}, {0.0, 67.0}}, Smooth.None), Polygon(true, {0.0, 0.0}, 0.0, {0, 0, 0}, {160, 160, 164}, LinePattern.Solid, FillPattern.Solid, 0.25, {{-58.0, 35.0}, {-68.0, 25.0}, {-72.0, 13.0}, {-76.0, -1.0}, {-78.0, -15.0}, {-76.0, -31.0}, {-76.0, -43.0}, {-76.0, -53.0}, {-70.0, -65.0}, {-64.0, -73.0}, {-48.0, -77.0}, {-30.0, -83.0}, {-18.0, -83.0}, {-2.0, -85.0}, {8.0, -89.0}, {22.0, -89.0}, {32.0, -87.0}, {42.0, -81.0}, {54.0, -75.0}, {42.0, -77.0}, {40.0, -77.0}, {30.0, -79.0}, {20.0, -81.0}, {18.0, -81.0}, {10.0, -81.0}, {2.0, -77.0}, {-12.0, -73.0}, {-22.0, -73.0}, {-30.0, -71.0}, {-40.0, -65.0}, {-50.0, -55.0}, {-56.0, -43.0}, {-58.0, -35.0}, {-58.0, -25.0}, {-60.0, -13.0}, {-60.0, -5.0}, {-60.0, 7.0}, {-58.0, 17.0}, {-56.0, 19.0}, {-52.0, 27.0}, {-48.0, 35.0}, {-44.0, 45.0}, {-40.0, 57.0}, {-58.0, 35.0}}, Smooth.None), Ellipse(true, {0.0, 0.0}, 0.0, {255, 0, 0}, {191, 0, 0}, LinePattern.Solid, FillPattern.Solid, 0.25, {{-6.0, -1.0}, {6.0, -12.0}}, 0.0, 360.0), Text(true, {0.0, 0.0}, 0.0, {0, 0, 0}, {0, 0, 0}, LinePattern.Solid, FillPattern.None, 0.25, {{11.0, 13.0}, {50.0, -25.0}}, "T", 0.0, {-1, -1, -1}, "", {}, TextAlignment.Center), Line(true, {0.0, 0.0}, 0.0, {{0.0, -12.0}, {0.0, -96.0}}, {255, 0, 0}, LinePattern.Solid, 0.25, {Arrow.None, Arrow.None}, 3.0, Smooth.None)}} 18:37:11:149
+#s#; 0.001000; 5.256000; 'getDiagramAnnotation(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor)'
+
+errors:=getMessagesStringInternal() 18:37:11:150
+{} 18:37:11:153
+#s#; 0.003000; 5.259000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:153
+0 18:37:11:153
+#s#; 0.000000; 5.259000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.SIunits.HeatCapacity) 18:37:11:167
+{Real} 18:37:11:168
+#s#; 0.001000; 5.260000; 'getInheritedClasses(Modelica.SIunits.HeatCapacity)'
+
+errors:=getMessagesStringInternal() 18:37:11:169
+{} 18:37:11:172
+#s#; 0.003000; 5.263000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:172
+0 18:37:11:173
+#s#; 0.001000; 5.264000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.SIunits.HeatCapacity) 18:37:11:173
+{} 18:37:11:173
+#s#; 0.000000; 5.264000; 'getIconAnnotation(Modelica.SIunits.HeatCapacity)'
+
+errors:=getMessagesStringInternal() 18:37:11:173
+{} 18:37:11:176
+#s#; 0.003000; 5.267000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:176
+0 18:37:11:177
+#s#; 0.001000; 5.268000; 'size(errors,1)'
+
+getComponents(Modelica.SIunits.HeatCapacity, useQuotes = true) 18:37:11:178
+{} 18:37:11:178
+#s#; 0.000000; 5.268000; 'getComponents(Modelica.SIunits.HeatCapacity, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.SIunits.HeatCapacity) 18:37:11:179
+{} 18:37:11:179
+#s#; 0.001000; 5.269000; 'getDiagramAnnotation(Modelica.SIunits.HeatCapacity)'
+
+errors:=getMessagesStringInternal() 18:37:11:179
+{} 18:37:11:182
+#s#; 0.003000; 5.272000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:182
+0 18:37:11:183
+#s#; 0.001000; 5.273000; 'size(errors,1)'
+
+getInheritedClasses(Modelica.SIunits.TemperatureSlope) 18:37:11:195
+{Real} 18:37:11:196
+#s#; 0.001000; 5.274000; 'getInheritedClasses(Modelica.SIunits.TemperatureSlope)'
+
+errors:=getMessagesStringInternal() 18:37:11:196
+{} 18:37:11:200
+#s#; 0.004000; 5.278000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:200
+0 18:37:11:201
+#s#; 0.001000; 5.279000; 'size(errors,1)'
+
+getIconAnnotation(Modelica.SIunits.TemperatureSlope) 18:37:11:201
+{} 18:37:11:201
+#s#; 0.000000; 5.279000; 'getIconAnnotation(Modelica.SIunits.TemperatureSlope)'
+
+errors:=getMessagesStringInternal() 18:37:11:201
+{} 18:37:11:204
+#s#; 0.003000; 5.282000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:204
+0 18:37:11:205
+#s#; 0.001000; 5.283000; 'size(errors,1)'
+
+getComponents(Modelica.SIunits.TemperatureSlope, useQuotes = true) 18:37:11:206
+{} 18:37:11:206
+#s#; 0.000000; 5.283000; 'getComponents(Modelica.SIunits.TemperatureSlope, useQuotes = true)'
+
+getDiagramAnnotation(Modelica.SIunits.TemperatureSlope) 18:37:11:206
+{} 18:37:11:206
+#s#; 0.000000; 5.283000; 'getDiagramAnnotation(Modelica.SIunits.TemperatureSlope)'
+
+errors:=getMessagesStringInternal() 18:37:11:207
+{} 18:37:11:210
+#s#; 0.003000; 5.286000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:210
+0 18:37:11:211
+#s#; 0.001000; 5.287000; 'size(errors,1)'
+
+getParameterValue(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,"C") 18:37:11:212
+"" 18:37:11:212
+#s#; 0.000000; 5.287000; 'getParameterValue(Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,"C")'
+
+addComponent(heatCapacitor1, Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,M,annotate=Placement(visible=true, transformation=transformation(origin={26,10}, extent={{-10,-10},{10,10}}, rotation=0))) 18:37:11:214
+true 18:37:11:215
+#s#; 0.001000; 5.288000; 'addComponent(heatCapacitor1, Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,M,annotate=Placement(visible=true, transformation=transformation(origin={26,10}, extent={{-10,-10},{10,10}}, rotation=0)))'
+
+getUses(M) 18:37:11:215
+{} 18:37:11:215
+#s#; 0.000000; 5.288000; 'getUses(M)'
+
+errors:=getMessagesStringInternal() 18:37:11:215
+{} 18:37:11:284
+#s#; 0.069000; 5.357000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:284
+0 18:37:11:441
+#s#; 0.157000; 5.514000; 'size(errors,1)'
+
+addClassAnnotation(M, annotate=$annotation(uses(Modelica(version="3.2.3")))) 18:37:11:441
+true 18:37:11:442
+#s#; 0.001000; 5.515000; 'addClassAnnotation(M, annotate=$annotation(uses(Modelica(version="3.2.3"))))'
+
+listFile(M,true) 18:37:11:442
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+  annotation(
+    uses(Modelica(version = "3.2.3")));
+end M;" 18:37:11:442
+#s#; 0.000000; 5.515000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:37:11:442
+{} 18:37:11:508
+#s#; 0.066000; 5.581000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:508
+0 18:37:11:509
+#s#; 0.001000; 5.582000; 'size(errors,1)'
+
+diffModelicaFileListings("model M\nequation\n\nend M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain) 18:37:11:509
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+annotation(
+    uses(Modelica(version = \"3.2.3\")));end M;" 18:37:11:512
+#s#; 0.003000; 5.585000; 'diffModelicaFileListings("model M\nequation\n\nend M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain)'
+
+errors:=getMessagesStringInternal() 18:37:11:512
+{} 18:37:11:515
+#s#; 0.003000; 5.588000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:515
+0 18:37:11:516
+#s#; 0.001000; 5.589000; 'size(errors,1)'
+
+listFile(M,true) 18:37:11:526
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+  annotation(
+    uses(Modelica(version = "3.2.3")));
+end M;" 18:37:11:526
+#s#; 0.000000; 5.589000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:37:11:527
+{} 18:37:11:530
+#s#; 0.003000; 5.592000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:530
+0 18:37:11:531
+#s#; 0.000000; 5.592000; 'size(errors,1)'
+
+diffModelicaFileListings("model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\nannotation(\n    uses(Modelica(version = \"3.2.3\")));end M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain) 18:37:11:531
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+annotation(
+    uses(Modelica(version = \"3.2.3\")));end M;" 18:37:11:534
+#s#; 0.003000; 5.595000; 'diffModelicaFileListings("model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\nannotation(\n    uses(Modelica(version = \"3.2.3\")));end M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain)'
+
+errors:=getMessagesStringInternal() 18:37:11:534
+{} 18:37:11:537
+#s#; 0.003000; 5.598000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:37:11:537
+0 18:37:11:538
+#s#; 0.001000; 5.599000; 'size(errors,1)'
+
+updateComponent(heatCapacitor1,Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,M,annotate=Placement(visible=true, transformation=transformation(origin={4,-26}, extent={{-10,-10},{10,10}}, rotation=0))) 18:39:12:798
+true 18:39:12:798
+#s#; 0.000000; 5.599000; 'updateComponent(heatCapacitor1,Modelica.Thermal.HeatTransfer.Components.HeatCapacitor,M,annotate=Placement(visible=true, transformation=transformation(origin={4,-26}, extent={{-10,-10},{10,10}}, rotation=0)))'
+
+listFile(M,true) 18:39:12:799
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {4, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+  annotation(
+    uses(Modelica(version = "3.2.3")));
+end M;" 18:39:12:799
+#s#; 0.001000; 5.600000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:39:12:799
+{} 18:39:12:862
+#s#; 0.063000; 5.663000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:39:12:862
+0 18:39:12:863
+#s#; 0.001000; 5.664000; 'size(errors,1)'
+
+diffModelicaFileListings("model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\nannotation(\n    uses(Modelica(version = \"3.2.3\")));end M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {4, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain) 18:39:12:863
+"model M
+  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(
+    Placement(visible = true, transformation(origin = {4, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+
+annotation(
+    uses(Modelica(version = \"3.2.3\")));end M;" 18:39:12:867
+#s#; 0.003000; 5.667000; 'diffModelicaFileListings("model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {26, 10}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\nannotation(\n    uses(Modelica(version = \"3.2.3\")));end M;", "model M\n  Modelica.Thermal.HeatTransfer.Components.HeatCapacitor heatCapacitor1 annotation(\n    Placement(visible = true, transformation(origin = {4, -26}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));\nequation\n\n  annotation(\n    uses(Modelica(version = \"3.2.3\")));\nend M;", OpenModelica.Scripting.DiffFormat.plain)'
+
+errors:=getMessagesStringInternal() 18:39:12:867
+{} 18:39:12:869
+#s#; 0.002000; 5.669000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:39:12:869
+0 18:39:12:870
+#s#; 0.001000; 5.670000; 'size(errors,1)'

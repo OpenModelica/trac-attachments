@@ -1,0 +1,33 @@
+loadString("
+model Test
+  parameter Integer N = 20;
+  parameter Real k_min = 1;
+  parameter Real k_max = 2;
+  parameter Real d_0 = 10;
+  parameter Real d_tot = 1;
+  final parameter Real s_0 = d_0/N;
+  Real d[N+1];
+  Real s[N];
+  Real F[N];
+  Real k[N];
+equation
+  d[1] = 0;
+  for i in 1:N loop
+    d[i+1] = d[i] + s[i]; 
+    s[i]*(1 + abs(s[i])/s_0)*k[i]*N = F[i];
+    k[i] = k_min + (k_max-k_min)/(N-1)*(i-1);
+  end for;
+  for i in 1:N-1 loop
+    F[i] = F[i+1];
+  end for;
+  d[end] = d_tot;
+end Test;
+");getErrorString();
+
+setCommandLineOptions("--maxSizeNonlinearTearing=0");getErrorString();
+setCommandLineOptions("--preOptModules-=removeSimpleEquations");getErrorString();
+setCommandLineOptions("--postOptModules-=removeSimpleEquations");getErrorString();
+setCommandLineOptions("--maxSizeNonlinearTearing=0");getErrorString();
+
+loadString("model Test2 extends Test(N=100); end Test2;"); simulate(Test2, numberOfIntervals = 1, simflags="-lv=LOG_NLS  -s=euler");getErrorString();
+//loadString("model Test3 extends Test(N=100, k_min = 1e8, k_max = 2e8, F(each nominal=1e8), k(each nominal = 1e8)); end Test3;"); simulate(Test3, numberOfIntervals = 1, simflags="-lv=LOG_NLS -s=euler");getErrorString();

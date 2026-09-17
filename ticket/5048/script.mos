@@ -1,0 +1,14 @@
+loadModel(Modelica);
+getErrorString();
+print("Get the extends of MassWithStopAndFriction");
+getInheritedClasses(Modelica.Mechanics.Translational.Components.MassWithStopAndFriction);
+print("The output only lists PartialElementaryConditionalHeatPortWithoutT and not PartialFrictionWithStop");
+getErrorString();
+getInheritanceCount(Modelica.Mechanics.Translational.Components.MassWithStopAndFriction);
+print("The count of extends classes is correct.");
+getErrorString();
+getNthInheritedClass(Modelica.Mechanics.Translational.Components.MassWithStopAndFriction, 1);
+getErrorString();
+getNthInheritedClass(Modelica.Mechanics.Translational.Components.MassWithStopAndFriction, 2);
+getErrorString();
+print("The index 2 also gives PartialElementaryConditionalHeatPortWithoutT which is wrong. The error message is this case is perhaps a hint.");

@@ -1,0 +1,77 @@
+FrontEnd - loaded program 11.34 MB / 330.6 MB
+FrontEnd - Absyn->SCode 8.672 MB / 396.6 MB
+FrontEnd - scodeFlatten 118.4 MB / 0.4967 GB
+FrontEnd - mkProgramGraph 120 MB / 0.4967 GB
+FrontEnd 83.54 MB / 0.8443 GB
+Transformations before backend 83.63 MB / 0.8443 GB
+Generate backend data structure 59.61 MB / 0.8443 GB
+prepare preOptimizeDAE 68.37 MB / 0.8443 GB
+preOpt normalInlineFunction (simulation) 68.37 MB / 0.8443 GB
+preOpt evaluateParameters (simulation) 63.93 MB / 0.8443 GB
+preOpt simplifyIfEquations (simulation) 64.05 MB / 0.8443 GB
+preOpt expandDerOperator (simulation) 64.05 MB / 0.8443 GB
+preOpt removeEqualFunctionCalls (simulation) 63.55 MB / 0.8443 GB
+preOpt clockPartitioning (simulation) 63.8 MB / 0.8443 GB
+preOpt findStateOrder (simulation) 63.8 MB / 0.8443 GB
+preOpt replaceEdgeChange (simulation) 63.8 MB / 0.8443 GB
+preOpt inlineArrayEqn (simulation) 63.8 MB / 0.8443 GB
+preOpt removeSimpleEquations (simulation) 140.1 MB / 0.9381 GB
+preOpt comSubExp (simulation) 139.9 MB / 0.9381 GB
+preOpt resolveLoops (simulation) 140 MB / 0.9381 GB
+preOpt evalFunc (simulation) 140.1 MB / 0.9381 GB
+preOpt encapsulateWhenConditions (simulation) 140 MB / 0.9381 GB
+pre-optimization done (n=9720) 140 MB / 0.9381 GB
+matching and sorting (n=9720) 139.8 MB / 0.9381 GB
+inlineWhenForInitialization (initialization) 139.7 MB / 0.9381 GB
+selectInitializationVariablesDAE (initialization) 139.2 MB / 0.9381 GB
+collectPreVariables (initialization) 139.2 MB / 0.9381 GB
+collectInitialEqns (initialization) 138.5 MB / 0.9381 GB
+collectInitialBindings (initialization) 138.4 MB / 0.9381 GB
+simplifyInitialFunctions (initialization) 138.4 MB / 0.9381 GB
+setup shared object (initialization) 138 MB / 0.9381 GB
+preBalanceInitialSystem (initialization) 137.9 MB / 0.9381 GB
+partitionIndependentBlocks (initialization) 124.7 MB / 0.9381 GB
+analyzeInitialSystem (initialization) 124.7 MB / 0.9381 GB
+solveInitialSystemEqSystem (initialization) 124.7 MB / 0.9381 GB
+matching and sorting (n=14561) (initialization) 108.1 MB / 0.9381 GB
+prepare postOptimizeDAE 113.3 MB / 0.9381 GB
+postOpt simplifyComplexFunction (initialization) 113.3 MB / 0.9381 GB
+Notification: Tearing is skipped for strong component 1 because system size of 6479 exceeds maximum system size for tearing of linear systems (200).
+To adjust the maximum system size for tearing use --maxSizeLinearTearing=<size> and --maxSizeNonlinearTearing=<size>.
+postOpt tearingSystem (initialization) 113.3 MB / 0.9381 GB
+postOpt solveSimpleEquations (initialization) 113 MB / 0.9381 GB
+postOpt calculateStrongComponentJacobians (initialization) 113 MB / 0.9381 GB
+postOpt simplifyAllExpressions (initialization) 111.5 MB / 0.9381 GB
+postOpt collapseArrayExpressions (initialization) 111.5 MB / 0.9381 GB
+prepare postOptimizeDAE 115.2 MB / 0.9381 GB
+postOpt lateInlineFunction (simulation) 115.2 MB / 0.9381 GB
+postOpt wrapFunctionCalls (simulation) 114.8 MB / 0.9381 GB
+postOpt inlineArrayEqn (simulation) 115.2 MB / 0.9381 GB
+postOpt constantLinearSystem (simulation) 115.2 MB / 0.9381 GB
+postOpt simplifysemiLinear (simulation) 115.2 MB / 0.9381 GB
+postOpt removeSimpleEquations (simulation) 114.5 MB / 0.9381 GB
+postOpt simplifyComplexFunction (simulation) 114.5 MB / 0.9381 GB
+postOpt solveSimpleEquations (simulation) 114.5 MB / 0.9381 GB
+Notification: Tearing is skipped for strong component 2 because system size of 6479 exceeds maximum system size for tearing of linear systems (200).
+To adjust the maximum system size for tearing use --maxSizeLinearTearing=<size> and --maxSizeNonlinearTearing=<size>.
+postOpt tearingSystem (simulation) 114.5 MB / 0.9381 GB
+postOpt inputDerivativesUsed (simulation) 114.5 MB / 0.9381 GB
+postOpt calculateStrongComponentJacobians (simulation) 114.5 MB / 0.9381 GB
+postOpt calculateStateSetsJacobians (simulation) 114.5 MB / 0.9381 GB
+postOpt detectJacobianSparsePattern (simulation) 114.5 MB / 0.9381 GB
+postOpt removeConstants (simulation) 111.2 MB / 0.9381 GB
+postOpt simplifyTimeIndepFuncCalls (simulation) 111.2 MB / 0.9381 GB
+postOpt simplifyAllExpressions (simulation) 111.2 MB / 0.9381 GB
+postOpt findZeroCrossings (simulation) 111.2 MB / 0.9381 GB
+postOpt collapseArrayExpressions (simulation) 111.2 MB / 0.9381 GB
+sort global known variables 110.3 MB / 0.9381 GB
+remove unused functions 111.3 MB / 0.9381 GB
+Backend phase and start with SimCode phase 112.1 MB / 0.9381 GB
+simCode: created initialization part 109 MB / 0.9381 GB
+simCode: created event and clocks part 109 MB / 0.9381 GB
+simCode: created simulation system equations 107.6 MB / 0.9381 GB
+simCode: created of all other equations (e.g. parameter, nominal, assert, etc) 107 MB / 0.9381 GB
+simCode: created linear, non-linear and system jacobian parts 96.3 MB / 0.9537 GB
+simCode: all other stuff during SimCode phase 101.2 MB / 0.9537 GB
+SimCode 102.3 MB / 0.9537 GB
+Templates 414.7 MB / 1.258 GB

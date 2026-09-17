@@ -1,0 +1,2427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenModelicaModelDescription
+  xmlns:exp="https://svn.jmodelica.org/trunk/XML/daeExpressions.xsd"
+  xmlns:equ="https://svn.jmodelica.org/trunk/XML/daeEquations.xsd"
+  xmlns:fun="https://svn.jmodelica.org/trunk/XML/daeFunctions.xsd"
+  xmlns:opt="https://svn.jmodelica.org/trunk/XML/daeOptimization.xsd"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  fmiVersion="1.0"
+  modelName="Modelica.Mechanics.Rotational.Examples.FirstGrounded"
+  modelIdentifier="Modelica_Mechanics_Rotational_Examples_FirstGrounded"
+  guid="{dd85fe5b-1bb6-4e73-9e1b-ee5ebe1f07fd}"
+  generationDateAndTime="2016-08-18T11:07:32"
+  variableNamingConvention="structured"
+  numberOfContinuousStates="4"
+  numberOfEventIndicators="1"
+  >
+  
+  <VendorAnnotations>
+    <Tool name="OpenModelica Compiler OpenModelica v1.11.0-dev-54-g4ec62d0"> </Tool>
+  </VendorAnnotations>
+
+  <DefaultExperiment startTime="0.0" stopTime="1.0" tolerance="1e-006" />
+
+  <ModelVariables>
+    <ScalarVariable name="damper.phi_rel" description="Relative rotation angle (= flange_b.phi - flange_a.phi)" valueReference="0" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="phi_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>state</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.w_rel" description="Relative angular velocity (= der(phi_rel))" valueReference="1" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad/s" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="w_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>state</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.phi" description="Absolute rotation angle of component" valueReference="2" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="-0.0" fixed="false"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>state</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.w" description="Absolute angular velocity of component (= der(phi))" valueReference="3" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad/s" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>state</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="der(damper.phi_rel)" description="Relative rotation angle (= flange_b.phi - flange_a.phi)" valueReference="4" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="Hz" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="phi_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>derivative</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(damper.w_rel)" description="Relative angular velocity (= der(phi_rel))" valueReference="5" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="s-2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="w_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>derivative</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(inertia3.phi)" description="Absolute rotation angle of component" valueReference="6" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="Hz" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>derivative</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(inertia3.w)" description="Absolute angular velocity of component (= der(phi))" valueReference="7" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="s-2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>derivative</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="der(inertia1.phi)" description="Absolute rotation angle of component" valueReference="8" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(inertia1.w)" description="Absolute angular velocity of component (= der(phi))" valueReference="9" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(inertia2.phi)" description="Absolute rotation angle of component" valueReference="10" variability="continuous" causality="internal" alias="noAlias">
+      <Real     />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="der(inertia2.w)" description="Absolute angular velocity of component (= der(phi))" valueReference="11" variability="continuous" causality="internal" alias="noAlias">
+      <Real     />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.a_rel" description="Relative angular acceleration (= der(w_rel))" valueReference="12" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad/s2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="a_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.lossPower" description="Loss power leaving component via heatPort (&gt; 0, if heat is flowing out of component)" valueReference="13" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="W" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="lossPower"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.tau" description="Torque between flanges (= flange_b.tau)" valueReference="14" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.phi_support" description="Absolute angle of support flange" valueReference="15" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="phi_support"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.a" description="Absolute angular acceleration of component (= der(w))" valueReference="16" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad/s2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="a"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.flange_b.tau" description="Cut torque in the flange" valueReference="17" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.phi" description="Absolute rotation angle of component" valueReference="18" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.w" description="Absolute angular velocity of component (= der(phi))" valueReference="19" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad/s" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.a" description="Absolute angular acceleration of component (= der(w))" valueReference="20" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="rad/s2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="a"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.flange_a.tau" description="Cut torque in the flange" valueReference="21" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="-0.0" fixed="false"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.flange_b.tau" description="Cut torque in the flange" valueReference="22" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.phi" description="Absolute rotation angle of component" valueReference="23" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.w" description="Absolute angular velocity of component (= der(phi))" valueReference="24" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="rad/s" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="w"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.a" description="Absolute angular acceleration of component (= der(w))" valueReference="25" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="rad/s2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="a"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.flange_b.tau" description="Cut torque in the flange" valueReference="26" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.y" description="Connector of Real output signal" valueReference="27" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="-0.0" fixed="false"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="y"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.phi_rel" description="Relative rotation angle (= flange_b.phi - flange_a.phi)" valueReference="28" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="phi_rel"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.tau" description="Torque between flanges (= flange_b.tau)" valueReference="29" variability="continuous" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="false"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="torque.phi_support" description="Absolute angle of support flange" valueReference="30" variability="continuous" causality="internal" alias="noAlias">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="phi_support"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="damper.flange_a.phi" description="Absolute rotation angle of flange" valueReference="31" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.flange_a.tau" description="Cut torque in the flange" valueReference="32" variability="continuous" causality="internal" alias="-damper.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.flange_b.phi" description="Absolute rotation angle of flange" valueReference="33" variability="continuous" causality="internal" alias="fixed.phi0">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.flange_b.tau" description="Cut torque in the flange" valueReference="34" variability="continuous" causality="internal" alias="damper.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="fixed.flange.phi" description="Absolute rotation angle of flange" valueReference="35" variability="continuous" causality="internal" alias="fixed.phi0">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="fixed"/>
+        <exp:QualifiedNamePart name="flange"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="fixed.flange.tau" description="Cut torque in the flange" valueReference="36" variability="continuous" causality="internal" alias="-damper.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="fixed"/>
+        <exp:QualifiedNamePart name="flange"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.flange_a.phi" description="Absolute rotation angle of flange" valueReference="37" variability="continuous" causality="internal" alias="inertia1.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.flange_a.tau" description="Cut torque in the flange" valueReference="38" variability="continuous" causality="internal" alias="-inertia1.flange_b.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.flange_b.phi" description="Absolute rotation angle of flange" valueReference="39" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.flange_b.tau" description="Cut torque in the flange" valueReference="40" variability="continuous" causality="internal" alias="-inertia2.flange_a.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.phi_a" description="Angle between left shaft flange and support" valueReference="41" variability="continuous" causality="internal" alias="inertia1.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="phi_a"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.phi_b" description="Angle between right shaft flange and support" valueReference="42" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="phi_b"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.flange_a.phi" description="Absolute rotation angle of flange" valueReference="43" variability="continuous" causality="internal" alias="inertia1.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.flange_a.tau" description="Cut torque in the flange" valueReference="44" variability="continuous" causality="internal" alias="sine.y">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.flange_b.phi" description="Absolute rotation angle of flange" valueReference="45" variability="continuous" causality="internal" alias="inertia1.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.flange_a.phi" description="Absolute rotation angle of flange" valueReference="46" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.flange_b.phi" description="Absolute rotation angle of flange" valueReference="47" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.flange_a.phi" description="Absolute rotation angle of flange" valueReference="48" variability="continuous" causality="internal" alias="inertia3.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.flange_a.tau" description="Cut torque in the flange" valueReference="49" variability="continuous" causality="internal" alias="-spring.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.flange_b.phi" description="Absolute rotation angle of flange" valueReference="50" variability="continuous" causality="internal" alias="inertia3.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.flange_a.phi" description="Absolute rotation angle of flange" valueReference="51" variability="continuous" causality="internal" alias="inertia2.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.flange_a.tau" description="Cut torque in the flange" valueReference="52" variability="continuous" causality="internal" alias="-spring.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="flange_a"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.flange_b.phi" description="Absolute rotation angle of flange" valueReference="53" variability="continuous" causality="internal" alias="inertia3.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.flange_b.tau" description="Cut torque in the flange" valueReference="54" variability="continuous" causality="internal" alias="spring.tau">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="flange_b"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="torque.flange.phi" description="Absolute rotation angle of flange" valueReference="55" variability="continuous" causality="internal" alias="inertia1.phi">
+      <Real    unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="flange"/>
+        <exp:QualifiedNamePart name="phi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="torque.flange.tau" description="Cut torque in the flange" valueReference="56" variability="continuous" causality="internal" alias="-sine.y">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="flange"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="torque.tau" description="Accelerating torque acting at flange (= -flange.tau)" valueReference="57" variability="continuous" causality="internal" alias="sine.y">
+      <Real    unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="tau"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>algebraic</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="Jload" description="Load inertia" valueReference="58" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="2.0" fixed="true" min="0.0"  unit="kg.m2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="Jload"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="Jmotor" description="Motor inertia" valueReference="59" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.1" fixed="true" min="0.0"  unit="kg.m2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="Jmotor"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="amplitude" description="Amplitude of driving torque" valueReference="60" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="10.0" fixed="true"   unit="N.m" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="amplitude"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.d" description="Damping constant" valueReference="61" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true" min="0.0"  unit="N.m.s/rad" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="d"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damper.phi_nominal" description="Nominal value of phi_rel (used for scaling)" valueReference="62" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0001" fixed="true" min="0.0"  unit="rad" displayUnit="rad"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="phi_nominal"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="damping" description="Damping in bearing of gear" valueReference="63" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="10.0" fixed="true"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damping"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="fixed.phi0" description="Fixed offset angle of housing" valueReference="64" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="fixed"/>
+        <exp:QualifiedNamePart name="phi0"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="freqHz" description="Frequency of driving torque" valueReference="65" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="5.0" fixed="true"   unit="Hz" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="freqHz"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.ratio" description="Transmission ratio (flange_a.phi/flange_b.phi)" valueReference="66" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="1.0" fixed="true"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="ratio"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.J" description="Moment of inertia" valueReference="67" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="1.0" fixed="true" min="0.0"  unit="kg.m2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="J"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.J" description="Moment of inertia" valueReference="68" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="2.0" fixed="true" min="0.0"  unit="kg.m2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="J"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.J" description="Moment of inertia" valueReference="69" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="1.0" fixed="true" min="0.0"  unit="kg.m2" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="J"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="ratio" description="Gear ratio" valueReference="70" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="10.0" fixed="true"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="ratio"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.amplitude" description="Amplitude of sine wave" valueReference="71" variability="parameter" causality="internal" alias="noAlias">
+      <Real     />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="amplitude"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.freqHz" description="Frequency of sine wave" valueReference="72" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="1.0" fixed="true"   unit="Hz" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="freqHz"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.offset" description="Offset of output signal" valueReference="73" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"    />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="offset"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.phase" description="Phase of sine wave" valueReference="74" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="phase"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="sine.startTime" description="Output = offset for time &lt; startTime" valueReference="75" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="s" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="startTime"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.c" description="Spring constant" valueReference="76" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="10000.0" fixed="true" min="0.0"  unit="N.m/rad" />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="c"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="spring.phi_rel0" description="Unstretched spring angle" valueReference="77" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="0.0" fixed="true"   unit="rad" displayUnit="deg"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="phi_rel0"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="damper.stateSelect" description="Priority to use phi_rel and w_rel as states" valueReference="78" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="4" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia1.stateSelect" description="Priority to use phi and w as states" valueReference="79" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="3" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia2.stateSelect" description="Priority to use phi and w as states" valueReference="80" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="3" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="inertia3.stateSelect" description="Priority to use phi and w as states" valueReference="81" variability="parameter" causality="internal" alias="noAlias">
+      <Real start="3" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="damper.useHeatPort" description="=true, if heatPort is enabled" valueReference="82" variability="parameter" causality="internal" alias="noAlias">
+      <Boolean start="0" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="useHeatPort"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="idealGear.useSupport" description="= true, if support flange enabled, otherwise implicitly grounded" valueReference="83" variability="parameter" causality="internal" alias="noAlias">
+      <Boolean start="0" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="useSupport"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+
+    <ScalarVariable name="torque.useSupport" description="= true, if support flange enabled, otherwise implicitly grounded" valueReference="84" variability="parameter" causality="internal" alias="noAlias">
+      <Boolean start="0" fixed="true"/>
+      <QualifiedName>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="useSupport"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentParameter</VariableCategory>
+    </ScalarVariable> 
+    <ScalarVariable name="sine.pi"  valueReference="85" variability="constant" causality="internal" alias="noAlias">
+      <Real     />
+      <QualifiedName>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="pi"/>
+      </QualifiedName>
+    <isLinearTimedVariables>
+      <TimePoint index="0" isLinear="true"/>
+    </isLinearTimedVariables>
+      <VariableCategory>independentConstant</VariableCategory>
+    </ScalarVariable> 
+  </ModelVariables>
+
+  <equ:BindingEquations>
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="Jload"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>2.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="Jmotor"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.1</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="amplitude"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>10.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="d"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="phi_nominal"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0001</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="damping"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>10.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="fixed"/>
+        <exp:QualifiedNamePart name="phi0"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="freqHz"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>5.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="ratio"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>1.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="J"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>1.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="J"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>2.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="J"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>1.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="ratio"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>10.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="freqHz"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>1.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="offset"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="phase"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="sine"/>
+        <exp:QualifiedNamePart name="startTime"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="c"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>10000.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="spring"/>
+        <exp:QualifiedNamePart name="phi_rel0"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        4
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia1"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        3
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia2"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        3
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="inertia3"/>
+        <exp:QualifiedNamePart name="stateSelect"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        3
+      </equ:BindingExp>
+    </equ:BindingEquation>
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="damper"/>
+        <exp:QualifiedNamePart name="useHeatPort"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:BooleanLiteral>0</exp:BooleanLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="idealGear"/>
+        <exp:QualifiedNamePart name="useSupport"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:BooleanLiteral>0</exp:BooleanLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+
+    <equ:BindingEquation>
+      <equ:Parameter>
+        <exp:QualifiedNamePart name="torque"/>
+        <exp:QualifiedNamePart name="useSupport"/>
+      </equ:Parameter>
+      <equ:BindingExp>
+        <exp:BooleanLiteral>0</exp:BooleanLiteral>
+      </equ:BindingExp>
+    </equ:BindingEquation>
+  </equ:BindingEquations>
+
+  <equ:DynamicEquations>
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="damper"/>
+              <exp:QualifiedNamePart name="w_rel"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="damper"/>
+              <exp:QualifiedNamePart name="w_rel"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="d"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="lossPower"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="phi_rel"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="w_rel"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="sine"/>
+          <exp:QualifiedNamePart name="y"/>
+        </exp:Identifier>
+        <fun:If>
+          <fun:Condition>
+            <exp:LogLt>
+              <exp:Time>time</exp:Time>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="sine"/>
+                <exp:QualifiedNamePart name="startTime"/>
+              </exp:Identifier>
+            </exp:LogLt>
+          </fun:Condition>
+          <fun:Statements>
+            <exp:RealLiteral>0.0</exp:RealLiteral>
+          </fun:Statements>
+          <fun:Else>
+            <exp:Mul>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="sine"/>
+                <exp:QualifiedNamePart name="amplitude"/>
+              </exp:Identifier>
+              <exp:Sin>
+                <exp:Add>
+                  <exp:Mul>
+                    <exp:RealLiteral>6.283185307179586</exp:RealLiteral>
+                    <exp:Mul>
+                      <exp:Identifier>
+                        <exp:QualifiedNamePart name="sine"/>
+                        <exp:QualifiedNamePart name="freqHz"/>
+                      </exp:Identifier>
+                      <exp:Sub>
+                        <exp:Time>time</exp:Time>
+                        <exp:Identifier>
+                          <exp:QualifiedNamePart name="sine"/>
+                          <exp:QualifiedNamePart name="startTime"/>
+                        </exp:Identifier>
+                      </exp:Sub>
+                    </exp:Mul>
+                  </exp:Mul>
+                  <exp:Identifier>
+                    <exp:QualifiedNamePart name="sine"/>
+                    <exp:QualifiedNamePart name="phase"/>
+                  </exp:Identifier>
+                </exp:Add>
+              </exp:Sin>
+            </exp:Mul>
+          </fun:Else>
+        </fun:If>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:Mul>
+            <exp:Neg>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="idealGear"/>
+                <exp:QualifiedNamePart name="ratio"/>
+              </exp:Identifier>
+            </exp:Neg>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:Sub>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="fixed"/>
+            <exp:QualifiedNamePart name="phi0"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="phi_rel"/>
+          </exp:Identifier>
+        </exp:Sub>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="idealGear"/>
+            <exp:QualifiedNamePart name="ratio"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="phi_rel"/>
+        </exp:Identifier>
+        <exp:Sub>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Sub>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="spring"/>
+            <exp:QualifiedNamePart name="c"/>
+          </exp:Identifier>
+          <exp:Sub>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="spring"/>
+              <exp:QualifiedNamePart name="phi_rel"/>
+            </exp:Identifier>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="spring"/>
+              <exp:QualifiedNamePart name="phi_rel0"/>
+            </exp:Identifier>
+          </exp:Sub>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+        <exp:Div>
+            <exp:Neg>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="spring"/>
+                <exp:QualifiedNamePart name="tau"/>
+              </exp:Identifier>
+            </exp:Neg>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="J"/>
+          </exp:Identifier>
+        </exp:Div>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="flange_b"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Add>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="spring"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+        </exp:Add>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="a_rel"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="damper"/>
+              <exp:QualifiedNamePart name="a_rel"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="damper"/>
+              <exp:QualifiedNamePart name="a_rel"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+  </equ:DynamicEquations>
+
+  <equ:InitialEquations>
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="phi_rel"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="w_rel"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:RealLiteral>-0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="a_rel"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="lossPower"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="flange_b"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="flange_a"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>-0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="flange_b"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="sine"/>
+          <exp:QualifiedNamePart name="y"/>
+        </exp:Identifier>
+        <exp:RealLiteral>-0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="phi_rel"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="sine"/>
+          <exp:QualifiedNamePart name="freqHz"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="freqHz"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="sine"/>
+          <exp:QualifiedNamePart name="amplitude"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="amplitude"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="d"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damping"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="J"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="Jload"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="idealGear"/>
+          <exp:QualifiedNamePart name="ratio"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="ratio"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="J"/>
+        </exp:Identifier>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="Jmotor"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="sine"/>
+          <exp:QualifiedNamePart name="y"/>
+        </exp:Identifier>
+        <fun:If>
+          <fun:Condition>
+            <exp:LogLt>
+              <exp:Time>time</exp:Time>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="sine"/>
+                <exp:QualifiedNamePart name="startTime"/>
+              </exp:Identifier>
+            </exp:LogLt>
+          </fun:Condition>
+          <fun:Statements>
+            <exp:RealLiteral>0.0</exp:RealLiteral>
+          </fun:Statements>
+          <fun:Else>
+            <exp:Mul>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="sine"/>
+                <exp:QualifiedNamePart name="amplitude"/>
+              </exp:Identifier>
+              <exp:Sin>
+                <exp:Add>
+                  <exp:Mul>
+                    <exp:RealLiteral>6.283185307179586</exp:RealLiteral>
+                    <exp:Mul>
+                      <exp:Identifier>
+                        <exp:QualifiedNamePart name="sine"/>
+                        <exp:QualifiedNamePart name="freqHz"/>
+                      </exp:Identifier>
+                      <exp:Sub>
+                        <exp:Time>time</exp:Time>
+                        <exp:Identifier>
+                          <exp:QualifiedNamePart name="sine"/>
+                          <exp:QualifiedNamePart name="startTime"/>
+                        </exp:Identifier>
+                      </exp:Sub>
+                    </exp:Mul>
+                  </exp:Mul>
+                  <exp:Identifier>
+                    <exp:QualifiedNamePart name="sine"/>
+                    <exp:QualifiedNamePart name="phase"/>
+                  </exp:Identifier>
+                </exp:Add>
+              </exp:Sin>
+            </exp:Mul>
+          </fun:Else>
+        </fun:If>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="idealGear"/>
+            <exp:QualifiedNamePart name="ratio"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="phi_rel"/>
+        </exp:Identifier>
+        <exp:Sub>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="fixed"/>
+            <exp:QualifiedNamePart name="phi0"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Sub>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="idealGear"/>
+            <exp:QualifiedNamePart name="ratio"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="w_rel"/>
+        </exp:Identifier>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="inertia2"/>
+              <exp:QualifiedNamePart name="w"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="phi_rel"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="w_rel"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="d"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="lossPower"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="phi_rel"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="phi"/>
+        </exp:Identifier>
+        <exp:Add>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="spring"/>
+            <exp:QualifiedNamePart name="phi_rel"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Add>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="spring"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Mul>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="spring"/>
+            <exp:QualifiedNamePart name="c"/>
+          </exp:Identifier>
+          <exp:Sub>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="spring"/>
+              <exp:QualifiedNamePart name="phi_rel"/>
+            </exp:Identifier>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="spring"/>
+              <exp:QualifiedNamePart name="phi_rel0"/>
+            </exp:Identifier>
+          </exp:Sub>
+        </exp:Mul>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="flange_b"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:Add>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="spring"/>
+            <exp:QualifiedNamePart name="tau"/>
+          </exp:Identifier>
+        </exp:Add>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="a_rel"/>
+        </exp:Identifier>
+          <exp:Neg>
+            <exp:Identifier>
+              <exp:QualifiedNamePart name="inertia2"/>
+              <exp:QualifiedNamePart name="a"/>
+            </exp:Identifier>
+          </exp:Neg>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="damper"/>
+            <exp:QualifiedNamePart name="w_rel"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="damper"/>
+          <exp:QualifiedNamePart name="a_rel"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia2"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia2"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia1"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia1"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+        <exp:Div>
+            <exp:Neg>
+              <exp:Identifier>
+                <exp:QualifiedNamePart name="spring"/>
+                <exp:QualifiedNamePart name="tau"/>
+              </exp:Identifier>
+            </exp:Neg>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="J"/>
+          </exp:Identifier>
+        </exp:Div>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="a"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="flange_b"/>
+          <exp:QualifiedNamePart name="tau"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="idealGear"/>
+          <exp:QualifiedNamePart name="phi_support"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="torque"/>
+          <exp:QualifiedNamePart name="phi_support"/>
+        </exp:Identifier>
+        <exp:RealLiteral>0.0</exp:RealLiteral>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+        <exp:Pre>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="w"/>
+          </exp:Identifier>
+        </exp:Pre>
+      </exp:Sub>
+    </equ:Equation>  
+    <equ:Equation>
+      <exp:Sub>
+        <exp:Der>
+          <exp:Identifier>
+            <exp:QualifiedNamePart name="inertia3"/>
+            <exp:QualifiedNamePart name="phi"/>
+          </exp:Identifier>
+        </exp:Der>
+        <exp:Identifier>
+          <exp:QualifiedNamePart name="inertia3"/>
+          <exp:QualifiedNamePart name="w"/>
+        </exp:Identifier>
+      </exp:Sub>
+    </equ:Equation>  
+  </equ:InitialEquations>
+
+  <fun:Algorithm>
+  </fun:Algorithm>
+
+  <fun:RecordsList>
+  </fun:RecordsList>
+
+  <fun:FunctionsList>
+  </fun:FunctionsList>
+
+
+</OpenModelicaModelDescription>

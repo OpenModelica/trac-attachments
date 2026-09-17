@@ -1,0 +1,119 @@
+[VERBOSE][FMUCHK] Setting log level to [DEBUG]
+[VERBOSE][FMUCHK] This binary is build without debug log messages.
+ Reconfigure with FMUCHK_ENABLE_LOG_LEVEL_DEBUG=ON and rebuild to enable debug level logging
+[INFO][FMUCHK] FMI compliance checker Test [FMILibrary: Test] build date: Dec 19 2016
+[INFO][FMUCHK] Called with following options:
+[INFO][FMUCHK] /home/trosinenko/tmp/FMUChecker-2.0.3/build/fmuCheck.linux64 -l 6 -i input.csv DiscreteInput.fmu
+[INFO][FMUCHK] Will process FMU DiscreteInput.fmu
+[VERBOSE][FMILIB] Allocating FMIL context
+[VERBOSE][FMILIB] Detecting FMI standard version
+[VERBOSE][FMIZIP] Unpacking FMU into /tmp/fmucktmpmlvNJm
+[VERBOSE][FMIXML] Parsing XML to detect FMI standard version
+[VERBOSE][FMIXML] XML specifies FMI 2.0
+[INFO][FMILIB] XML specifies FMI standard version 2.0
+[VERBOSE][FMILIB] Parsing model description XML
+[VERBOSE][FMI2XML] Parsing XML element fmiModelDescription
+[VERBOSE][FMI2XML] Parsing XML element CoSimulation
+[VERBOSE][FMI2XML] Parsing XML element LogCategories
+[VERBOSE][FMI2XML] Parsing XML element ModelVariables
+[VERBOSE][FMI2XML] Parsing XML element ModelStructure
+[VERBOSE][FMI2XML] Parsing XML element Outputs
+[VERBOSE][FMILIB] Parsing finished successfully
+[INFO][FMUCHK] Model name: DiscreteInput
+[INFO][FMUCHK] Model GUID: {33aebb10-b453-4c3d-8992-c64f2596c5ac}
+[INFO][FMUCHK] Model version: 
+[INFO][FMUCHK] FMU kind: CoSimulation
+[INFO][FMUCHK] The FMU contains:
+0 constants
+0 parameters
+1 discrete variables
+0 continuous variables
+1 inputs
+0 outputs
+0 local variables
+0 independent variables
+0 calculated parameters
+0 real variables
+1 integer variables
+0 enumeration variables
+0 boolean variables
+0 string variables
+
+[INFO][FMUCHK] Printing output file header
+[INFO][FMUCHK] Opening input file input.csv
+[INFO][FMUCHK] Detected separator character in input file: ,
+[INFO][FMUCHK] Model identifier for CoSimulation: DiscreteInput
+[INFO][FMILIB] Loading 'linux64' binary with 'default' platform types
+[VERBOSE][FMICAPI] Loaded FMU binary from /tmp/fmucktmpmlvNJm/binaries/linux64/DiscreteInput.so
+[VERBOSE][FMICAPI] Loading functions for the co-simulation interface
+[VERBOSE][FMILIB] Successfully loaded all the interface functions
+[INFO][FMUCHK] Version returned from CS FMU:   2.0
+[VERBOSE][FMICAPI] Calling fmi2GetModelTypesPlatform
+[VERBOSE][FMUCHK] allocateMemory( 1, 192) called. Returning pointer: 0xd771d0
+[VERBOSE][FMUCHK] allocateMemory( 16, 1) called. Returning pointer: 0xd772a0
+[VERBOSE][FMUCHK] allocateMemory( 39, 1) called. Returning pointer: 0xd7d8c0
+[VERBOSE][FMUCHK] allocateMemory( 1, 40) called. Returning pointer: 0xd772c0
+[VERBOSE][FMUCHK] allocateMemory( 1, 512) called. Returning pointer: 0xd772f0
+[VERBOSE][FMUCHK] allocateMemory( 1, 616) called. Returning pointer: 0xd77500
+[VERBOSE][FMUCHK] allocateMemory( 1, 248) called. Returning pointer: 0xd77770
+	[FMU][logFmi2Call][FMU status:OK] fmi2Instantiate: GUID={33aebb10-b453-4c3d-8992-c64f2596c5ac}
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetInteger: nvr = 1
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetInteger: int = 0
+[VERBOSE][FMICAPI] Calling fmi2SetupExperiment
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetupExperiment: toleranceDefined=0 tolerance=1e-06 startTime=0 stopTimeDefined=0 stopTime=0
+[VERBOSE][FMICAPI] Calling fmi2EnterInitializationMode
+	[FMU][logFmi2Call][FMU status:OK] fmi2EnterInitializationMode...
+	[FMU][logFmi2Call][FMU status:OK] fmi2EnterInitializationMode: succeed
+[VERBOSE][FMICAPI] Calling fmi2ExitInitializationMode
+	[FMU][logFmi2Call][FMU status:OK] fmi2ExitInitializationMode...
+	[FMU][logFmi2Call][FMU status:OK] fmi2ExitInitializationMode: succeed
+[INFO][FMUCHK] Initialized FMU for simulation starting at time 0
+[VERBOSE][FMUCHK] Writing simulation output for start time
+	[FMU][logFmi2Call][FMU status:OK] fmi2GetInteger: int = 0
+[VERBOSE][FMUCHK] Simulation step from time: 0 until: 0.002
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetInteger: nvr = 1
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetInteger: int = 0
+[VERBOSE][FMUCHK] allocateMemory( 0, 8) called. Returning pointer: 0xd78680
+[VERBOSE][FMUCHK] allocateMemory( 0, 8) called. Returning pointer: 0xd786a0
+[VERBOSE][FMUCHK] allocateMemory( 0, 8) called. Returning pointer: 0xd786c0
+[VERBOSE][FMUCHK] allocateMemory( 0, 8) called. Returning pointer: 0xd786e0
+	[FMU][logEvents][FMU status:OK] fmi2EnterEventMode
+	[FMU][logFmi2Call][FMU status:OK] fmi2NewDiscreteStates
+	[FMU][logFmi2Call][FMU status:OK] fmi2EventUpdate: Start Event Update! Next Sample Event 0
+	[FMU][logFmi2Call][FMU status:OK] fmi2EventUpdate: newDiscreteStatesNeeded false
+	[FMU][logFmi2Call][FMU status:OK] fmi2EventUpdate: Checked for Sample Events! Next Sample Event 0
+	[FMU][logFmi2Call][FMU status:OK] fmi2EnterContinuousTimeMode
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetTime: time=0.002
+	[FMU][logFmi2Call][FMU status:OK] fmi2CompletedIntegratorStep
+[VERBOSE][FMUCHK] freeMemory(0xd78680) called
+[VERBOSE][FMUCHK] freeMemory(0xd786a0) called
+[VERBOSE][FMUCHK] freeMemory(0xd786c0) called
+[VERBOSE][FMUCHK] freeMemory(0xd786e0) called
+	[FMU][logFmi2Call][FMU status:OK] fmi2GetInteger: int = 0
+[VERBOSE][FMUCHK] Simulation step from time: 0.002 until: 0.004
+	[FMU][logStatusError][FMU status:Error] fmi2SetInteger: Illegal call sequence. fmi2SetInteger is not allowed in Continuous-Time Mode state.
+[FATAL][FMUCHK] Simulation loop terminated  at time 0.002 since FMU returned status: Error
+	[FMU][logStatusError][FMU status:Error] fmi2Terminate: Illegal call sequence. fmi2Terminate is not allowed in Error state.
+[ERROR][FMUCHK] fmiTerminateSlave returned status: Error
+	[FMU][logFmi2Call][FMU status:OK] fmi2FreeInstance
+[VERBOSE][FMUCHK] freeMemory(0xd772f0) called
+[VERBOSE][FMUCHK] freeMemory(0xd77500) called
+[VERBOSE][FMUCHK] freeMemory(0xd77770) called
+[VERBOSE][FMUCHK] freeMemory(0xd772c0) called
+[VERBOSE][FMUCHK] freeMemory(0xd772a0) called
+[VERBOSE][FMUCHK] freeMemory(0xd7d8c0) called
+[VERBOSE][FMUCHK] freeMemory(0xd771d0) called
+[VERBOSE][FMILIB] Releasing allocated library resources
+[VERBOSE][FMILIB] Releasing FMU CAPI interface
+[VERBOSE][FMICAPI] Successfully unloaded FMU binary
+[VERBOSE][JMPRT] Removing /tmp/fmucktmpmlvNJm
+FMU check summary:
+FMU reported:
+	2 warning(s) and error(s)
+Checker reported:
+	0 Warning(s)
+	2 Error(s)
+	1 Fatal error(s) occurred during processing
+"time"
+0
+0.002

@@ -1,0 +1,35 @@
+setCommandLineOptions("-g=MetaModelica, -d=gen");
+loadString("
+package P
+  import MetaModelica.Dangerous.listArrayLiteral;
+
+  uniontype UT1
+    record R1
+      Integer n;
+    end R1;
+  end UT1;
+
+  uniontype UT2
+    record R2
+      array<UT1> ut1;
+    end R2;
+  end UT2;
+
+  constant UT2 ut2 = UT2.R2(
+    listArrayLiteral({})
+  );
+end P;
+
+function f
+  input P.UT2 ut2;
+  output array<P.UT1> ut1 = ut2.ut1;
+end f;
+
+function test
+algorithm
+  f(P.ut2);
+end test;
+");
+getErrorString();
+test();
+getErrorString();

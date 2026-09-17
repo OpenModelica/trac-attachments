@@ -1,0 +1,22 @@
+loadString("
+model TestVariableIncidence
+  parameter Integer N = 4;
+  Real x[N](start = cat(1, {1}, zeros(N-1)), each fixed = true);
+  Integer idx[N](start = 1:N, each fixed = true);
+equation 
+  for i in 1:N loop
+    der(x[i]) = 1-x[idx[i]];
+  end for;
+  when sample(0.5,1) then
+    idx[1] = pre(idx[N]);
+    for i in 2:N loop
+      idx[i] = pre(idx[i-1]); 
+    end for;
+  end when;
+  annotation(experiment(StopTime = 4, StartTime = 0, Tolerance = 1e-06, Interval = 0.02));
+end TestVariableIncidence;
+"); getErrorString();
+
+simulate(TestVariableIncidence, simflags="-r=ODE.mat"); getErrorString();
+setCommandLineOptions("--daeMode=dynamic");getErrorString();
+simulate(TestVariableIncidence, simflags = "-r=DAE.mat -lv=LOG_STATS,LOG_SOLVER,LOG_SIMULATION -s=ida -daeMode");getErrorString();

@@ -1,0 +1,61 @@
+<!DOCTYPE OMNotebook>
+<Notebook>
+  <GroupCell closed="false">
+    <GraphCell style="Graph" closed="false">
+      <Input>function x_to_y
+  input Real x;
+  output Real y;
+  annotation(inline = false, inverse(x = y_to_x(y)));
+algorithm
+  y := x ^ 2;
+  y := sign(x) * y;
+end x_to_y;</Input>
+      <Output>{x_to_y}</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>function y_to_x
+  input Real y;
+  output Real x;
+algorithm
+  x := sqrt(abs(y));
+  x := sign(y) * x;
+end y_to_x;</Input>
+      <Output>{y_to_x}</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>y_to_x(4)</Input>
+      <Output>2.0</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>model Test
+  parameter Real y = -5;
+  Real x;
+equation
+  y = x_to_y(x);
+end Test;</Input>
+      <Output>{Test}</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>simulate(Test)</Input>
+      <Output>record SimulationResult
+    resultFile = "",
+    messages = "Simulation execution failed for model: Test
+assert            | warning | The following assertion has been violated during initialization at time 0.000000
+assert            | debug   | Model error: Argument of sqrt(y) was -5 should be >= 0
+assert            | info    | simulation terminated by an assertion at initialization
+"
+end SimulationResult;
+OMC-ERROR: 
+"Warning: Iteration variables with default zero start attribute in nonlinear equation system:
+         x:VARIABLE()  type: Real
+"</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>val(x, 1.)</Input>
+      <Output>NaN
+OMC-ERROR: 
+"Error: x not defined at time 1 (startTime=0, stopTime=1).
+"</Output>
+    </GraphCell>
+  </GroupCell>
+</Notebook>

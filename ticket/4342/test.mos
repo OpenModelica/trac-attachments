@@ -1,0 +1,8 @@
+loadFile("test.mo");
+getErrorString();
+list(test);
+getErrorString();
+updateComponent(ground, Modelica.Electrical.Analog.Basic.Ground, test, annotate=Placement(visible=true, transformation=transformation(origin={-6,20}, extent={{-10,-10},{10,10}}, rotation=-90)));
+getErrorString();
+list(test);
+getErrorString();

@@ -1,0 +1,5 @@
+13:33:00	OMC: attempt to start
+13:33:00	OMC: running command: C:\OpenModelica1.12.0-dev.alpha1-64bit\/bin/omc.exe +c=OMOptim{1072EA2E-1867-40EA-A030-23CA2FD33725}133300526 +d=interactiveCorba +corbaObjectReferenceFilePath=C:/Users/Daniel/AppData/Local/Temp/OpenModelica/OMOptim/
+13:33:21	OMC: unable to find OMC server, Object reference file C:/Users/Daniel/AppData/Local/Temp/OpenModelica/OMOptim//openmodelica.objid.OMOptim{1072EA2E-1867-40EA-A030-23CA2FD33725}133300526 not created.
+13:33:21	OMC: getClassNames()
+13:33:21	OMC not started. Please start it again (menu OMC->restart)

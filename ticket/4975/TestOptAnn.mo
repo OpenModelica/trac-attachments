@@ -1,0 +1,51 @@
+package TestOptAnn
+  model BangBang "Model to verify that optimization gives bang-bang optimal control"
+    parameter Real m = 1;
+    parameter Real p = 1 "needed for final constraints";
+    Real a;
+    Real v(start = 0);
+    Real pos(start = 0);
+    Real pow(min = -30, max = 30) = f * v annotation(
+      isConstraint = true);
+    input Real f(min = -10, max = 10);
+    Real costPos(nominal = 1) = -pos "minimize -pos(tf)" annotation(
+      isMayer = true);
+    Real conSpeed(min = 0, max = 0) = p * v " 0<= p*v(tf) <=0 " annotation(
+      isFinalConstraint = true);
+  equation
+    der(pos) = v;
+    der(v) = a;
+    f = m * a;
+    annotation(   
+      experiment(StartTime = 0, StopTime = 1, Tolerance = 1e-08, Interval = 0.0142857),
+         __OpenModelica_commandLineOptions="+gDynOpt",
+         __OpenModelica_simulationFlags(optimizerNP = "1", s = "optimization"));
+  end BangBang;
+
+
+
+  model RL
+  Modelica.Electrical.Analog.Basic.Resistor resistor1(R = 1)  annotation(
+      Placement(visible = true, transformation(origin = {-18, 36}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Electrical.Analog.Basic.Inductor inductor1(L = 0.1)  annotation(
+      Placement(visible = true, transformation(origin = {38, 6}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+  Modelica.Electrical.Analog.Sources.ConstantVoltage constantVoltage1 annotation(
+      Placement(visible = true, transformation(origin = {-66, 18}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+  Modelica.Electrical.Analog.Basic.Ground ground1 annotation(
+      Placement(visible = true, transformation(origin = {-66, -32}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  equation
+    connect(resistor1.p, constantVoltage1.p) annotation(
+      Line(points = {{-28, 36}, {-66, 36}, {-66, 28}}, color = {0, 0, 255}));
+    connect(resistor1.n, inductor1.p) annotation(
+      Line(points = {{-8, 36}, {38, 36}, {38, 16}}, color = {0, 0, 255}));
+    connect(ground1.p, constantVoltage1.n) annotation(
+      Line(points = {{-66, -22}, {-66, -22}, {-66, 8}, {-66, 8}}, color = {0, 0, 255}));
+    connect(constantVoltage1.n, inductor1.n) annotation(
+      Line(points = {{-66, 8}, {-66, 8}, {-66, -14}, {38, -14}, {38, -4}, {38, -4}}, color = {0, 0, 255}));
+  annotation(
+      Diagram(coordinateSystem(extent = {{-100, -80}, {100, 80}})),
+      experiment(StartTime = 0, StopTime = 1, Tolerance = 1e-07, Interval = 0.002));end RL;
+  annotation(
+    Diagram(coordinateSystem(extent = {{-100, -80}, {100, 80}})),
+    uses(Modelica(version = "3.2.2")));
+end TestOptAnn;

@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+setCommandLineOptions("-d=initialization,newInst");
+getErrorString();
+simulate(Modelica.Mechanics.MultiBody.Examples.Elementary.RollingWheel, simflags="-w -lv=LOG_STATS");
+getErrorString();

@@ -1,0 +1,8 @@
+loadModel(Modelica_Synchronous);
+getErrorString();
+loadFile("ControlledMixingUnit2.mo");
+getErrorString();
+checkModel(ControlledMixingUnit2);
+getErrorString();
+getComponents(Modelica_Synchronous.Examples.Systems.ControlledMixingUnit);
+getErrorString();

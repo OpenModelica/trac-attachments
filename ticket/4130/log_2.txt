@@ -1,0 +1,70 @@
+[VERBOSE][FMUCHK] Setting log level to [DEBUG]
+[VERBOSE][FMUCHK] This binary is build without debug log messages.
+ Reconfigure with FMUCHK_ENABLE_LOG_LEVEL_DEBUG=ON and rebuild to enable debug level logging
+[INFO][FMUCHK] FMI compliance checker 2.0.1 [FMILibrary: 2.0.1] build date: Oct 24 2014
+[INFO][FMUCHK] Called with following options:
+[INFO][FMUCHK] fmuCheck.win32 -e log_2.txt -o result.csv -c , -s 32 -h 1e-2 -l 6 Test_2.FMU
+[INFO][FMUCHK] Will process FMU Test_2.FMU
+[VERBOSE][FMILIB] Allocating FMIL context
+[VERBOSE][FMILIB] Detecting FMI standard version
+[VERBOSE][FMIZIP] Unpacking FMU into C:\Users\i61470\AppData\Local\Temp\fmucktmpa11928
+[VERBOSE][FMIXML] Parsing XML to detect FMI standard version
+[VERBOSE][FMIXML] XML specifies FMI 2.0
+[INFO][FMILIB] XML specifies FMI standard version 2.0
+[VERBOSE][FMILIB] Parsing model description XML
+[VERBOSE][FMI2XML] Parsing XML element fmiModelDescription
+[VERBOSE][FMI2XML] Parsing XML element ModelExchange
+[VERBOSE][FMI2XML] Parsing XML element LogCategories
+[VERBOSE][FMI2XML] Parsing XML element ModelVariables
+[VERBOSE][FMI2XML] Building alias index
+[VERBOSE][FMI2XML] Variables In_real and add1.u1 reference the same vr 0. Marking 'add1.u1' as alias.
+[VERBOSE][FMI2XML] Variables Out_boucle and add1.u2 reference the same vr 1. Marking 'add1.u2' as alias.
+[VERBOSE][FMI2XML] Variables Out_boucle and gain2.y reference the same vr 1. Marking 'gain2.y' as alias.
+[VERBOSE][FMI2XML] Variables add1.y and gain2.u reference the same vr 2. Marking 'gain2.u' as alias.
+[VERBOSE][FMI2XML] Parsing XML element ModelStructure
+[VERBOSE][FMI2XML] Parsing XML element Outputs
+[VERBOSE][FMI2XML] Parsing XML element Derivatives
+[VERBOSE][FMI2XML] Parsing XML element InitialUnknowns
+[VERBOSE][FMILIB] Parsing finished successfully
+[INFO][FMUCHK] Model name: Test_2
+[INFO][FMUCHK] Model GUID: {8c4e810f-3df3-4a00-8276-176fa3c9f9e0}
+[INFO][FMUCHK] Model version: 
+[INFO][FMUCHK] FMU kind: ModelExchange
+[INFO][FMUCHK] The FMU contains:
+0 constants
+3 parameters
+0 discrete variables
+7 continuous variables
+1 inputs
+1 outputs
+5 local variables
+0 independent variables
+0 calculated parameters
+10 real variables
+0 integer variables
+0 enumeration variables
+0 boolean variables
+0 string variables
+
+[INFO][FMUCHK] No input data provided. In case of simulation initial values from FMU will be used.
+[INFO][FMUCHK] Printing output file header
+[INFO][FMUCHK] Model identifier for ModelExchange: Test_2
+[INFO][FMILIB] Loading 'win32' binary with 'default' platform types
+[VERBOSE][FMICAPI] Loaded FMU binary from C:\Users\i61470\AppData\Local\Temp\fmucktmpa11928\binaries\win32\Test_2.dll
+[VERBOSE][FMICAPI] Loading functions for the model exchange interface
+[VERBOSE][FMILIB] Successfully loaded all the interface functions
+[INFO][FMUCHK] Version returned from ME FMU: '2.0'
+
+[VERBOSE][FMICAPI] Calling fmi2GetModelTypesPlatform
+[VERBOSE][FMUCHK] allocateMemory( 1, 160) called. Returning pointer: 0x28b1740
+[VERBOSE][FMUCHK] allocateMemory( 16, 1) called. Returning pointer: 0x28b1a60
+[VERBOSE][FMUCHK] allocateMemory( 39, 1) called. Returning pointer: 0x28b24b0
+[VERBOSE][FMUCHK] allocateMemory( 1, 20) called. Returning pointer: 0x29b1880
+[VERBOSE][FMUCHK] allocateMemory( 1, 244) called. Returning pointer: 0x29b9f70
+[VERBOSE][FMUCHK] allocateMemory( 1, 344) called. Returning pointer: 0x29ba070
+[VERBOSE][FMUCHK] allocateMemory( 1, 108) called. Returning pointer: 0x28b17e8
+	[FMU][logFmi2Call][FMU status:OK] fmi2Instantiate: GUID={8c4e810f-3df3-4a00-8276-176fa3c9f9e0}
+[VERBOSE][FMICAPI] Calling fmi2SetupExperiment
+	[FMU][logFmi2Call][FMU status:OK] fmi2SetupExperiment: toleranceDefined=0 tolerance=1e-006 startTime=0 stopTimeDefined=0 stopTime=0
+[VERBOSE][FMICAPI] Calling fmi2EnterInitializationMode
+	[FMU][logFmi2Call][FMU status:OK] fmi2EnterInitializationMode...

@@ -1,0 +1,4 @@
+readSimulationResultVars("PowerGrids.Electrical.Test.OneBusLineLoad1_res.mat");
+getErrorString();
+val(time, 0.0, "PowerGrids.Electrical.Test.OneBusLineLoad1_res.mat");
+getErrorString();

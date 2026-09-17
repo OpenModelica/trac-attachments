@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fmiModelDescription generationTool="Modelio" guid="{4b752182-2f79-41ba-b01b-58d500625d54}" modelName="Airframe" fmiVersion="2.0">
+
+<CoSimulation modelIdentifier="Airframe"/>
+
+
+<ModelVariables>
+
+<ScalarVariable variability="discrete" causality="output" valueReference="0" name="Position_X">
+<Real />
+</ScalarVariable>
+
+<ScalarVariable variability="discrete" causality="input" valueReference="1" name="F_inputo">
+<Real />
+</ScalarVariable>
+
+</ModelVariables>
+
+
+<ModelStructure>
+
+
+<Outputs>
+
+<Unknown index="1"/>
+
+</Outputs>
+
+</ModelStructure>
+
+</fmiModelDescription>

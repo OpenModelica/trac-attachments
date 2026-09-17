@@ -1,0 +1,22 @@
+[1] 09:37:36 Scripting Notification
+sh: 1: impact: not found
+
+
+[1] 09:40:04 Symbolic Error
+An independent subset of the model has imbalanced number of equations (5) and variables (6).
+variables:
+constantCurrent1.n.v
+constantCurrent1.p.v
+constantCurrent1.v
+constantVoltage1.n.v
+constantVoltage1.p.v
+constantVoltage1.v
+equations:
+1 : constantVoltage1.v = constantVoltage1.V
+2 : constantVoltage1.v = constantVoltage1.p.v - constantVoltage1.n.v
+3 : constantCurrent1.v = constantCurrent1.p.v - constantCurrent1.n.v
+4 : constantCurrent1.n.v = constantVoltage1.n.v
+5 : constantCurrent1.p.v = constantVoltage1.p.v
+
+[2] 09:40:04 Translation Error
+pre-optimization module clockPartitioning (simulation) failed.

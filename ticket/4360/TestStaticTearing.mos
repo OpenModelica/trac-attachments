@@ -1,0 +1,18 @@
+loadString("
+model M
+  parameter Real a = 1;
+  parameter Real b = 0.5;
+  parameter Real c = 0.5;
+  parameter Real d = 1;
+  Real x,y;
+equation
+  a*x + b*y = 1;
+  c*x + d*y = -1;
+end M;
+"); getErrorString();
+
+setCommandLineOptions("-d=dumpSimCode");getErrorString();
+simulate(M, simflags="-lv=LOG_STATS");getErrorString();
+simulate(M, simflags="-lv=LOG_STATS -override=b=0");getErrorString();
+simulate(M, simflags="-lv=LOG_STATS -override=b=1e-9");getErrorString();
+

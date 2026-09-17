@@ -1,0 +1,223 @@
+existClass(M) 18:07:04:106
+false 18:07:04:106
+#s#; 0.000000; 3.051000; 'existClass(M)'
+
+getErrorString(false) 18:07:04:106
+"" 18:07:04:106
+#s#; 0.000000; 3.051000; 'getErrorString(false)'
+
+loadString("model M equation end M;","M","UTF-8",false) 18:07:04:106
+true 18:07:04:106
+#s#; 0.000000; 3.051000; 'loadString("model M equation end M;","M","UTF-8",false)'
+
+getClassInformation(M) 18:07:04:107
+("model","",false,false,false,"M",false,1,1,1,22,{},false,false,"","",false,"") 18:07:04:107
+#s#; 0.001000; 3.052000; 'getClassInformation(M)'
+
+getClassNames(M,true,true,false,false,true,false) 18:07:04:107
+{M} 18:07:04:107
+#s#; 0.000000; 3.052000; 'getClassNames(M,true,true,false,false,true,false)'
+
+getInheritedClasses(M) 18:07:04:125
+{} 18:07:04:182
+#s#; 0.057000; 3.109000; 'getInheritedClasses(M)'
+
+errors:=getMessagesStringInternal() 18:07:04:183
+{} 18:07:04:186
+#s#; 0.002000; 3.111000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:186
+0 18:07:04:186
+#s#; 0.000000; 3.111000; 'size(errors,1)'
+
+getIconAnnotation(M) 18:07:04:186
+{} 18:07:04:186
+#s#; 0.000000; 3.111000; 'getIconAnnotation(M)'
+
+errors:=getMessagesStringInternal() 18:07:04:187
+{} 18:07:04:189
+#s#; 0.003000; 3.114000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:189
+0 18:07:04:190
+#s#; 0.001000; 3.115000; 'size(errors,1)'
+
+getComponents(M, useQuotes = true) 18:07:04:201
+{} 18:07:04:201
+#s#; 0.000000; 3.115000; 'getComponents(M, useQuotes = true)'
+
+getDiagramAnnotation(M) 18:07:04:201
+{} 18:07:04:201
+#s#; 0.000000; 3.115000; 'getDiagramAnnotation(M)'
+
+errors:=getMessagesStringInternal() 18:07:04:201
+{} 18:07:04:204
+#s#; 0.003000; 3.118000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:204
+0 18:07:04:205
+#s#; 0.001000; 3.119000; 'size(errors,1)'
+
+getConnectionCount(M) 18:07:04:205
+0 18:07:04:205
+#s#; 0.000000; 3.119000; 'getConnectionCount(M)'
+
+getTransitions(M) 18:07:04:205
+{} 18:07:04:205
+#s#; 0.000000; 3.119000; 'getTransitions(M)'
+
+errors:=getMessagesStringInternal() 18:07:04:205
+{} 18:07:04:208
+#s#; 0.003000; 3.122000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:208
+0 18:07:04:209
+#s#; 0.001000; 3.123000; 'size(errors,1)'
+
+getInitialStates(M) 18:07:04:209
+{} 18:07:04:209
+#s#; 0.000000; 3.123000; 'getInitialStates(M)'
+
+errors:=getMessagesStringInternal() 18:07:04:209
+{} 18:07:04:212
+#s#; 0.003000; 3.126000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:212
+0 18:07:04:212
+#s#; 0.000000; 3.126000; 'size(errors,1)'
+
+listFile(M,true) 18:07:04:219
+"model M
+equation
+
+end M;" 18:07:04:219
+#s#; 0.000000; 3.126000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:07:04:219
+{} 18:07:04:222
+#s#; 0.003000; 3.129000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:222
+0 18:07:04:223
+#s#; 0.001000; 3.130000; 'size(errors,1)'
+
+listFile(M,true) 18:07:04:367
+"model M
+equation
+
+end M;" 18:07:04:368
+#s#; 0.000000; 3.130000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:07:04:368
+{} 18:07:04:372
+#s#; 0.004000; 3.134000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:372
+0 18:07:04:373
+#s#; 0.001000; 3.135000; 'size(errors,1)'
+
+diffModelicaFileListings("model M\nequation\n\nend M;", "model M\nequation\n\nend M;", OpenModelica.Scripting.DiffFormat.plain) 18:07:04:373
+"model M
+equation
+
+end M;" 18:07:04:376
+#s#; 0.003000; 3.138000; 'diffModelicaFileListings("model M\nequation\n\nend M;", "model M\nequation\n\nend M;", OpenModelica.Scripting.DiffFormat.plain)'
+
+errors:=getMessagesStringInternal() 18:07:04:377
+{record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of sanity parsestring(s5): time 2.72e-005/0.0002984, allocations: 11.98 kB / 0.6672 GB, free: 26.91 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of sanity parsestring(s2): time 4.65e-005/0.0002497, allocations: 3.984 kB / 0.6672 GB, free: 26.92 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of treeDiff: time 9.7e-006/0.0001843, allocations: 0 / 0.6672 GB, free: 26.92 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of diffModelicaFileListings parse string 2: time 4.4e-006/0.0001541, allocations: 4 kB / 0.6672 GB, free: 26.92 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of diffModelicaFileListings scan string 2: time 4e-006/0.0001288, allocations: 5.25 kB / 0.6672 GB, free: 26.93 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of diffModelicaFileListings parse string 1: time 1.59e-005/0.0001034, allocations: 0 / 0.6672 GB, free: 26.93 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;,record OpenModelica.Scripting.ErrorMessage
+    info = record OpenModelica.Scripting.SourceInfo
+    filename = "",
+    readonly = false,
+    lineStart = 0,
+    columnStart = 0,
+    lineEnd = 0,
+    columnEnd = 0
+end OpenModelica.Scripting.SourceInfo;,
+    message = "Performance of diffModelicaFileListings scan string 1: time 2.24e-005/2.23e-005, allocations: 1.313 kB / 0.6672 GB, free: 26.93 MB / 362.7 MB",
+    kind = .OpenModelica.Scripting.ErrorKind.translation,
+    level = .OpenModelica.Scripting.ErrorLevel.notification,
+    id = 572
+end OpenModelica.Scripting.ErrorMessage;} 18:07:04:380
+#s#; 0.004000; 3.142000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:07:04:380
+7 18:07:04:381
+#s#; 0.001000; 3.143000; 'size(errors,1)'

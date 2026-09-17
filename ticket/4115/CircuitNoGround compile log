@@ -1,0 +1,118 @@
+[1] 17:33:04 Translation Error
+Internal error Circular Equalities Detected for Variables:
+resistor1.p.i
+resistor1.n.i
+----------------------------------
+constantVoltage1.p.i
+resistor1.p.i
+----------------------------------
+constantVoltage1.p.i
+constantVoltage1.n.i
+----------------------------------
+
+
+[2] 17:33:04 Symbolic Warning
+The linear system: 
+1 : constantVoltage1.v = constantVoltage1.p.v - constantVoltage1.n.v
+2 : constantVoltage1.p.v = resistor1.p.v
+3 : resistor1.v = resistor1.p.v - resistor1.n.v
+4 : constantVoltage1.n.v = resistor1.n.v
+[
+  1.0 , 0.0 , 0.0 , -1.0 ;
+  0.0 , 0.0 , -1.0 , 1.0 ;
+  0.0 , 1.0 , -1.0 , 0.0 ;
+  1.0 , -1.0 , 0.0 , 0.0
+]
+  *
+[
+  constantVoltage1.n.v ;
+  resistor1.n.v ;
+  resistor1.p.v ;
+  constantVoltage1.p.v
+]
+  =
+[
+  -constantVoltage1.v ;
+  0.0 ;
+  -resistor1.v ;
+  0.0
+]
+ might be structurally or numerically singular for variable constantVoltage1.p.v since U(4,4) = 0.0. It might be hard to solve. Compilation continues anyway.
+
+[3] 17:33:04 Symbolic Warning
+The linear system: 
+1 : constantVoltage1.p.i + resistor1.p.i = 0.0
+2 : resistor1.p.i = -constantVoltage1.p.i
+[
+  1.0 , 1.0 ;
+  1.0 , 1.0
+]
+  *
+[
+  constantVoltage1.p.i ;
+  resistor1.p.i
+]
+  =
+[
+  0.0 ;
+  0.0
+]
+ might be structurally or numerically singular for variable resistor1.p.i since U(2,2) = 0.0. It might be hard to solve. Compilation continues anyway.
+
+[4] 17:33:04 Symbolic Warning
+The linear system: 
+1 : constantVoltage1.p.v = resistor1.p.v
+2 : resistor1.v = resistor1.p.v - resistor1.n.v
+3 : constantVoltage1.n.v = resistor1.n.v
+4 : constantVoltage1.v = constantVoltage1.p.v - constantVoltage1.n.v
+[
+  1.0 , 0.0 , 0.0 , -1.0 ;
+  0.0 , 0.0 , 1.0 , -1.0 ;
+  0.0 , 1.0 , -1.0 , 0.0 ;
+  -1.0 , 1.0 , 0.0 , 0.0
+]
+  *
+[
+  constantVoltage1.p.v ;
+  constantVoltage1.n.v ;
+  resistor1.n.v ;
+  resistor1.p.v
+]
+  =
+[
+  0.0 ;
+  -resistor1.v ;
+  0.0 ;
+  -constantVoltage1.v
+]
+ might be structurally or numerically singular for variable resistor1.p.v since U(4,4) = 0.0. It might be hard to solve. Compilation continues anyway.
+
+[5] 17:33:05 Symbolic Warning
+The linear system: 
+1 : resistor1.p.i = -constantVoltage1.p.i
+2 : constantVoltage1.p.i + resistor1.p.i = 0.0
+[
+  1.0 , 1.0 ;
+  1.0 , 1.0
+]
+  *
+[
+  constantVoltage1.p.i ;
+  resistor1.p.i
+]
+  =
+[
+  0.0 ;
+  0.0
+]
+ might be structurally or numerically singular for variable resistor1.p.i since U(2,2) = 0.0. It might be hard to solve. Compilation continues anyway.
+
+[6] 17:33:05 Translation Error
+Internal error Circular Equalities Detected for Variables:
+resistor1.p.i
+constantVoltage1.p.i
+----------------------------------
+
+
+[7] 17:33:05 Translation Error
+post-optimization module removeSimpleEquations (simulation) failed.

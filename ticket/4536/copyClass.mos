@@ -1,0 +1,8 @@
+loadModel(Modelica);
+getErrorString();
+getClassNames();
+getErrorString();
+copyClass(Modelica.Electrical.Machines.Examples.AsynchronousInductionMachines.AIMC_DOL,"AIMC_DOL");
+getErrorString();
+getClassNames();
+getErrorString();

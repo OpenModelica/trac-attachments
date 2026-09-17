@@ -1,0 +1,16 @@
+loadString("
+model TestDAEMode
+  Real x(start=0,fixed=true),y;
+ 
+equation
+  der(x) = y;
+  y= -x+1;
+  annotation(experiment(StopTime = 5, Tolerance = 1e-6),
+     __OpenModelica_simulationFlags(daeMode),
+     __OpenModelica_commandLineOptions = \"--daeMode=all\");
+end TestDAEMode;
+");getErrorString();
+
+// setCommandLineOptions("--daeMode=all");getErrorString();
+// simulate(UCTE_RETE_E_v4_nsl_m1_P_LoadPQ_PrtOff_Ds_NL_fixedReferenceMachine_Ext_Step_N_1576, stopTime = 20, simflags="-lv=LOG_STATS,LOG_LS,LOG_NLS,LOG_EVENTS -s=ida -daeMode -nls=kinsol -nlsLS=klu -noEquidistantTimeGrid"); getErrorString();
+simulate(TestDAEMode);getErrorString();

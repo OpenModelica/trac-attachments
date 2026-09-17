@@ -1,0 +1,4 @@
+loadModel(PowerSystems);
+getErrorString();
+simulate(PowerSystems.Examples.PowerWorld.PowerWorld);
+getErrorString();

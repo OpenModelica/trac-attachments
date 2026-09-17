@@ -1,0 +1,29 @@
+setCommandLineOptions("-g=MetaModelica, -d=gen");
+
+loadString("
+  function f
+    input Integer i;
+    input FuncT func;
+    
+    partial function FuncT
+      input String s;
+    end FuncT;
+  algorithm
+    func(String(i));
+  end f;
+
+  function wrongType
+    input Integer i;
+    input Integer i2 = 1;
+  algorithm
+    print(String(i) + \"\\n\");
+    print(String(i2) + \"\\n\");
+  end wrongType;
+
+  function test
+  algorithm
+    f(1, wrongType);
+  end test;
+");
+
+test(); getErrorString();

@@ -1,0 +1,10 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("PhotoVoltaics.mo");
+getErrorString();
+getClassNames();
+getErrorString();
+copyClass(PhotoVoltaics.Examples.SimpleModuleShadow, "SimpleModuleShadow2");
+getErrorString();
+getClassNames();
+getErrorString();

@@ -1,0 +1,132 @@
+existClass(M) 18:30:11:660
+false 18:30:11:661
+#s#; 0.001000; 4.475000; 'existClass(M)'
+
+getErrorString(false) 18:30:11:661
+"" 18:30:11:661
+#s#; 0.000000; 4.475000; 'getErrorString(false)'
+
+loadString("model M equation end M;","M","UTF-8",false) 18:30:11:661
+true 18:30:11:661
+#s#; 0.000000; 4.475000; 'loadString("model M equation end M;","M","UTF-8",false)'
+
+getClassInformation(M) 18:30:11:661
+("model","",false,false,false,"M",false,1,1,1,22,{},false,false,"","",false,"") 18:30:11:661
+#s#; 0.000000; 4.475000; 'getClassInformation(M)'
+
+getClassNames(M,true,true,false,false,true,false) 18:30:11:661
+{M} 18:30:11:661
+#s#; 0.000000; 4.475000; 'getClassNames(M,true,true,false,false,true,false)'
+
+getInheritedClasses(M) 18:30:11:670
+{} 18:30:11:724
+#s#; 0.054000; 4.529000; 'getInheritedClasses(M)'
+
+errors:=getMessagesStringInternal() 18:30:11:724
+{} 18:30:11:727
+#s#; 0.003000; 4.532000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:727
+0 18:30:11:728
+#s#; 0.001000; 4.533000; 'size(errors,1)'
+
+getIconAnnotation(M) 18:30:11:728
+{} 18:30:11:728
+#s#; 0.000000; 4.533000; 'getIconAnnotation(M)'
+
+errors:=getMessagesStringInternal() 18:30:11:728
+{} 18:30:11:731
+#s#; 0.003000; 4.536000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:731
+0 18:30:11:731
+#s#; 0.000000; 4.536000; 'size(errors,1)'
+
+getComponents(M, useQuotes = true) 18:30:11:739
+{} 18:30:11:740
+#s#; 0.001000; 4.537000; 'getComponents(M, useQuotes = true)'
+
+getDiagramAnnotation(M) 18:30:11:740
+{} 18:30:11:740
+#s#; 0.000000; 4.537000; 'getDiagramAnnotation(M)'
+
+errors:=getMessagesStringInternal() 18:30:11:740
+{} 18:30:11:743
+#s#; 0.003000; 4.540000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:743
+0 18:30:11:744
+#s#; 0.000000; 4.540000; 'size(errors,1)'
+
+getConnectionCount(M) 18:30:11:744
+0 18:30:11:744
+#s#; 0.000000; 4.540000; 'getConnectionCount(M)'
+
+getTransitions(M) 18:30:11:744
+{} 18:30:11:744
+#s#; 0.000000; 4.540000; 'getTransitions(M)'
+
+errors:=getMessagesStringInternal() 18:30:11:744
+{} 18:30:11:747
+#s#; 0.003000; 4.543000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:747
+0 18:30:11:748
+#s#; 0.001000; 4.544000; 'size(errors,1)'
+
+getInitialStates(M) 18:30:11:748
+{} 18:30:11:748
+#s#; 0.000000; 4.544000; 'getInitialStates(M)'
+
+errors:=getMessagesStringInternal() 18:30:11:748
+{} 18:30:11:750
+#s#; 0.002000; 4.546000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:750
+0 18:30:11:751
+#s#; 0.001000; 4.547000; 'size(errors,1)'
+
+listFile(M,true) 18:30:11:759
+"model M
+equation
+
+end M;" 18:30:11:759
+#s#; 0.000000; 4.547000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:30:11:759
+{} 18:30:11:762
+#s#; 0.003000; 4.550000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:762
+0 18:30:11:763
+#s#; 0.001000; 4.551000; 'size(errors,1)'
+
+listFile(M,true) 18:30:11:873
+"model M
+equation
+
+end M;" 18:30:11:873
+#s#; 0.000000; 4.551000; 'listFile(M,true)'
+
+errors:=getMessagesStringInternal() 18:30:11:873
+{} 18:30:11:877
+#s#; 0.004000; 4.555000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:877
+0 18:30:11:878
+#s#; 0.001000; 4.556000; 'size(errors,1)'
+
+diffModelicaFileListings("model M\nequation\n\nend M;", "model M\nequation\n\nend M;", OpenModelica.Scripting.DiffFormat.plain) 18:30:11:878
+"model M
+equation
+
+end M;" 18:30:11:880
+#s#; 0.002000; 4.558000; 'diffModelicaFileListings("model M\nequation\n\nend M;", "model M\nequation\n\nend M;", OpenModelica.Scripting.DiffFormat.plain)'
+
+errors:=getMessagesStringInternal() 18:30:11:880
+{} 18:30:11:883
+#s#; 0.003000; 4.561000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 18:30:11:883
+0 18:30:11:884
+#s#; 0.001000; 4.562000; 'size(errors,1)'

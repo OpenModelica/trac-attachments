@@ -1,0 +1,281 @@
+// OpenModelica OMCompiler v1.13.0-dev.287+g0e14e98
+// Configured 2017-12-02 05:12:37 using arguments: '--disable-option-checking --prefix=/home/adrpo/testing/newinst/OpenModelica/build --with-cppruntime --without-omc --disable-modelica3d CC=clang CXX=clang++ FC=gfortran CFLAGS=-O2 -march=native --with-omlibrary=all --with-ombuilddir=/home/adrpo/testing/newinst/OpenModelica/build --cache-file=/dev/null --srcdir=.'
+// Ubuntu 16.04.3 LTS x86_64
+"ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array";
+echo(false);
+alarm(3000);
+loadString("
+function cell
+  input Real elapsedTime;
+  input Boolean greenOnOk := false;
+  input String greenColor := \"#00FF00\";
+  input String mdFile := \"\";
+  output String str;
+algorithm
+  str := if mdFile == \"\" then \"\" else \" <a href=\\\"files/mdpad_local.html?\"+mdFile+\"\\\"><img width=\\\"16px\\\" src=\\\"files/Modelica.Icons.Example.svg\\\"></img></a>\";
+  str := if elapsedTime==-1.0 then \"<td bgcolor=\\\"#FF0000\\\">&nbsp;</td>\" else ((if greenOnOk then \"<td bgcolor=\\\"\" + greenColor + \"\\\">\" else \"<td>\") +
+    OpenModelica.Scripting.Internal.Time.readableTime(elapsedTime)+str+\"</td>\");
+end cell;
+function length input String str; output Integer len; external \"C\" len=ModelicaStrings_length(str); end length;
+function substring input String str; input Integer i1,i2; output String out; external \"C\" out=ModelicaStrings_substring(str,i1,i2); end substring;
+function firstPart input String str; input Integer maxLength := 4096; output String out; algorithm out := if length(str) < maxLength then str else (substring(str,1,maxLength) + \"
+... (output truncated, was \" + String(length(str)) + \" bytes)\"); end firstPart;
+function csvFileToVariable
+  input String str;
+  output String out;
+protected
+  String matches[2];
+algorithm
+  (,matches) := OpenModelica.Scripting.regex(str,\"^.*[.]diff[.](.*)$\",2);
+  out := matches[2];
+end csvFileToVariable;
+function testcase
+  input Real elapsedTime;
+  input Boolean success;
+  input String errNoXMLLong;
+  output String str;
+protected
+  String errXML;
+algorithm
+  errXML := OpenModelica.Scripting.escapeXML(firstPart(errNoXMLLong,16*1024)); // 16 kB log per test should be enough; increase if there is a good reason to do so
+  str:=\"<testcase name=\\\"ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array\\\" elapsedTime=\\\"\"+String(elapsedTime)+\"\\\">\"+(
+    if not success then \"<error type=\\\"Failure\\\" />\"
+    else \"\"
+  )+(
+    if errXML <> \"\" then (\"<system-out>\" + errXML + \"</system-out>\")
+    else \"\"
+  )+
+  \"</testcase>
+\";
+end testcase;
+");getErrorString();
+statFile := "ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.stat";
+writeFile("BuildModelRecursive.html","ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array
+",append=true);
+writeFile(statFile,"<tr><td bgcolor=\"#ff0000\">ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array</td></tr>");getErrorString();
+writeFile(statFile + ".flat", testcase(0,false,"killed"));getErrorString();
+writeFile(statFile + ".compile", testcase(0,false,"killed"));getErrorString();
+writeFile(statFile + ".sim", testcase(0,false,"killed"));getErrorString();
+writeFile(statFile + ".verify", testcase(0,false,"killed"));getErrorString();
+writeFile("files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.uses", "");getErrorString();
+
+outputFormat:="default";
+javascript:=false;
+mslRegressionOutput:="";
+
+setCommandLineOptions("--daeMode=dynamic -d=execstat,nogen,initialization,backenddaeinfo,discreteinfo,stateselection,newInst"); ulimitExe:="3000"; ulimitOmc:="3000"; sortFiles:=false;
+extraSimFlags := "-mei=4000 -daeMode -s=ida -idaLS=klu";
+
+loadModel(ScalableTestSuite,{"default"});
+
+reference_reltol:=0.003;
+reference_reltolDiffMinMax:=0.003;
+reference_rangeDelta:=0.001;
+simFlags:="-abortSlowSimulation -alarm=3000 -mei=4000 -daeMode -s=ida -idaLS=klu";
+
+referenceOK := false;
+referenceFiles := "";
+referenceCell := if referenceFiles == "" then "" else "<td>&nbsp;</td>";
+reference := "/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.mat";
+referenceExists := referenceFiles <> "" and regularFileExists(reference);
+if not referenceExists then
+  reference := "/ScalableTestSuite/Electrical/BreakerCircuits/Verification/BreakerNetwork_3_Array/BreakerNetwork_3_Array.mat";
+  referenceExists := referenceFiles <> "" and regularFileExists(reference);
+end if;
+
+// outputFormat can be overridden in CustomCommands.mos, so we set it to 'default' first
+outputFormat := if outputFormat == "default" then (if referenceExists then "mat" else "empty") else outputFormat;
+
+compareVarsUri := "modelica://" + /*libraryString*/ "Buildings" + "/Resources/Scripts/OpenModelica/compareVars/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.mos";
+(compareVarsFile,compareVarsFileMessages) := uriToFilename(compareVarsUri);
+
+if regularFileExists(compareVarsFile) then
+  runScript(compareVarsFile);
+  vars := compareVars;
+  variableFilter := sum(stringReplace(stringReplace(s,"[","."),"]",".") + "|" for s in vars) + "time";
+  numCompared := size(vars,1);
+  emit_protected := " -emit_protected";
+elseif referenceExists then
+  vars := readSimulationResultVars(reference, readParameters=true, openmodelicaStyle=true);
+  variableFilter := sum(stringReplace(stringReplace(stringReplace(stringReplace(s,"[","."),"]","."),"(","."),")",".") + "|" for s in vars);
+  numCompared := size(vars,1);
+  emit_protected := " -emit_protected";
+  /* print(variableFilter + "
+"); */
+else
+  variableFilter := "";
+  outputFormat := "empty";
+  emit_protected := "";
+end if;
+
+writeFile("files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.uses", sum(typeNameString(c) + "
+" for c in OpenModelica.Scripting.getUsedClassNames(ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array)));getErrorString();
+
+// Use twice as many output points as the experiment annotation suggests. Else aim for 5000 points.
+(startTime,stopTime,tolerance,numberOfIntervals,stepSize):=getSimulationOptions(ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array,defaultTolerance=1e-06,defaultNumberOfIntervals=2500);
+numberOfIntervals := 2*numberOfIntervals;
+alarm(3000); // Reset the alarm in case the other parts took a long time (reading simulation results)
+res:=buildModel(ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array,tolerance=tolerance,outputFormat=outputFormat,numberOfIntervals=numberOfIntervals,variableFilter=variableFilter);
+// We built the model fine, so reset the alarm. The simulation executable will also have an alarm, making only result verification a potential to stall.
+alarm(0);
+
+greenColor := "#00FF00";
+errFile:="files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.err";
+simFile:="files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.sim";
+(nmessage,nerror,nwarning) := countMessages();
+errorLinkClass := if nerror>0 then "messagesError" elseif nwarning>0 then "messagesWarning" else "messagesInfo";
+err:=getErrorString();
+system("rm -f " + errFile);
+writeFile(simFile,"");
+if err <> "" then
+  writeFile(errFile,err);
+end if;
+
+build    :=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_BUILD_MODEL);
+total    :=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_SIMULATE_TOTAL);
+templates:=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_TEMPLATES);
+simcode  :=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_SIMCODE);
+backend  :=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_BACKEND);
+frontend :=OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_FRONTEND);
+
+frontend :=if backend <> -1.0 then frontend-backend else frontend;
+backend  :=if simcode <> -1.0 then backend-simcode else backend;
+simcode  :=if templates <> -1.0 then simcode-templates else simcode;
+templates:=if build <> -1.0 then templates-build else templates;
+timeDiff := -1.0;
+
+OpenModelica.Scripting.Internal.Time.timerTick(OpenModelica.Scripting.Internal.Time.RT_CLOCK_USER_RESERVED);
+buildRes := res[1] <> "";
+simRes  := if not buildRes then false else 0 == system("./ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array "+simFlags+emit_protected+" > "+simFile+" 2>&1");
+if buildRes and javascript then
+  system("cp ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.js ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array_info.xml ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array_init.xml ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.md files/");
+end if;
+mdFile := if javascript then "ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.md" else "";
+
+resFile := "ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array_res." + outputFormat;
+
+if mslRegressionOutput <> "" and referenceExists then
+  mslRegressionOutput := mslRegressionOutput + "/ScalableTestSuite/Electrical/BreakerCircuits/Verification/BreakerNetwork_3_Array/";
+  mkdir(mslRegressionOutput);
+  simFailLog := mslRegressionOutput+"simulate_failed.log";
+  simSuccessLog := mslRegressionOutput+"simulate_success.log";
+  buildFailLog := mslRegressionOutput+"translate_failed.log";
+  buildSuccessLog := mslRegressionOutput+"translate_success.log";
+
+  system("rm -f "+(if simRes then simFailLog else simSuccessLog));
+  system("rm -f "+(if buildRes then buildFailLog else buildSuccessLog));
+
+  system("cp "+simFile+" " + simFile + ".tmp");
+  if simRes then
+    system("cp "+resFile+" ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.csv");
+    compareFilesAndMove("ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.csv", mslRegressionOutput+"ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.csv");
+  else
+    system("rm -f " + mslRegressionOutput + "ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.csv");
+  end if;
+  system("cp ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.mos ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.mos.tmp");
+
+  if err == "" then
+    system("echo > " + errFile + ".tmp");
+  else
+    system("cp " + errFile + " " + errFile + ".tmp");
+  end if;
+
+  compareFilesAndMove(errFile + ".tmp", if buildRes then buildSuccessLog else buildFailLog);
+  compareFilesAndMove(simFile + ".tmp", if buildRes then simSuccessLog else simFailLog);
+  compareFilesAndMove("ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.mos.tmp", mslRegressionOutput+"creation.txt");
+end if;
+
+system("sed -i '300,$ d' '" + simFile + "'"); // Only keep the top 300 lines
+timeSim := OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_USER_RESERVED);
+
+if simRes then
+  system("touch ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.simsuccess");
+  prefix := "files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.diff";
+  if referenceExists then
+    OpenModelica.Scripting.Internal.Time.timerTick(OpenModelica.Scripting.Internal.Time.RT_CLOCK_USER_RESERVED);
+    getErrorString();
+    (referenceOK,diffVars) := diffSimulationResults(resFile,reference,prefix,relTol=reference_reltol,relTolDiffMinMax=reference_reltolDiffMinMax,rangeDelta=reference_rangeDelta);
+    errVerify := getErrorString();
+    if errVerify <> "" then
+      writeFile(errFile, "\nVariables in the reference:"+sum(var+"," for var in OpenModelica.Scripting.readSimulationResultVars(reference, openmodelicaStyle=true)), append=true);
+      writeFile(errFile, "\nVariables in the result:"+sum(var+"," for var in OpenModelica.Scripting.readSimulationResultVars(resFile))+"\n" + errVerify, append=true);
+    end if;
+    if referenceOK then
+      system("touch ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.verifysuccess");
+    end if;
+    timeDiff := OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_USER_RESERVED);
+    diffFiles := {prefix + "." + var for var in diffVars};
+    // Create a file containing only the calibrated variables, for easy display
+    if not referenceOK then
+      timeDiff := OpenModelica.Scripting.Internal.Time.timerTock(OpenModelica.Scripting.Internal.Time.RT_CLOCK_USER_RESERVED);
+      referenceCell := "<td bgcolor=\"#FF0000\">"+OpenModelica.Scripting.Internal.Time.readableTime(timeDiff)+", <a href=\"files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.diff.html\">"+String(size(diffFiles,1))+"/"+String(numCompared)+" signals failed</a></td>";
+      writeFile("files/ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array.diff.html","<html><body><h1>ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array differences from the reference file</h1><p>startTime: "+String(startTime)+"</p><p>stopTime: "+String(stopTime)+"</p><p>Simulated using tolerance: "+String(tolerance)+"</p><ul>" + sum("<li>"+csvFileToVariable(file)+" <a href=\""+OpenModelica.Scripting.basename(file)+".html\">(javascript)</a> <a href=\""+OpenModelica.Scripting.basename(file)+".csv\">(csv)</a></li>" for file in diffFiles) + "</ul></body></html>");
+      {writeFile(prefix + "." + var + ".html","<html>
+<head>
+<script type=\"text/javascript\" src=\"dygraph-combined.js\"></script>
+    <style type=\"text/css\">
+    #graphdiv {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 40px;
+      bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+<div id=\"graphdiv\"></div>
+<p><input type=checkbox id=\"0\" checked onClick=\"change(this)\">
+<label for=\"0\">reference</label>
+<input type=checkbox id=\"1\" checked onClick=\"change(this)\">
+<label for=\"1\">actual</label>
+<input type=checkbox id=\"2\" checked onClick=\"change(this)\">
+<label for=\"2\">high</label>
+<input type=checkbox id=\"3\" checked onClick=\"change(this)\">
+<label for=\"3\">low</label>
+<input type=checkbox id=\"4\" checked onClick=\"change(this)\">
+<label for=\"4\">error</label>
+<input type=checkbox id=\"5\" onClick=\"change(this)\">
+<label for=\"5\">actual (original)</label>
+Parameters used for the comparison: Relative tolerance "+String(reference_reltol)+" (local), "+String(reference_reltolDiffMinMax)+" (relative to max-min). Range delta "+String(reference_rangeDelta)+".</p>
+<script type=\"text/javascript\">
+g = new Dygraph(document.getElementById(\"graphdiv\"),
+                 \""+OpenModelica.Scripting.basename(prefix + "." + var+".csv")+"\",{title: '"+var+"',
+  legend: 'always',
+  connectSeparatedPoints: true,
+  xlabel: ['time'],
+  y2label: ['error'],
+  series : { 'error': { axis: 'y2' } },
+  colors: ['blue','red','teal','lightblue','orange','black'],
+  visibility: [true,true,true,true,true,false]
+});
+function change(el) {
+  g.setVisibility(parseInt(el.id), el.checked);
+}
+</script>
+</body>
+</html>") for var in diffVars};
+
+    else
+      referenceCell := "<td bgcolor=\"#00FF00\">"+OpenModelica.Scripting.Internal.Time.readableTime(timeDiff)+" ("+String(numCompared)+" signals)</td>";
+    end if;
+  end if;
+end if;
+
+sim:=readFile(simFile);
+str:="<tr><td>" + (if err <> "" then "<a class=\""+errorLinkClass+"\" href=\""+errFile+"\">ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array</a>" else "ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array") +
+  (if sim <> "" then " (<a href=\""+simFile+"\">sim</a>)" else "") +
+  "</td>" + referenceCell +
+  cell(if simRes then timeSim else -1.0,greenOnOk=true,greenColor=greenColor,mdFile=mdFile) +
+  "<td bgcolor=\""+(if res[1]<>"" then greenColor else "#FF0000")+"\">"+OpenModelica.Scripting.Internal.Time.readableTime(total)+"</td>" +
+  sum(cell(d,greenColor=greenColor) for d in {frontend,backend,simcode,templates,build}) + "</tr>\n";getErrorString();
+writeFile(statFile,str);getErrorString();
+skip:="<testcase name=\"ScalableTestSuite.Electrical.BreakerCircuits.Verification.BreakerNetwork_3_Array\"><skipped /></testcase>";
+str:=testcase(frontend,backend <> -1.0,err);
+writeFile(statFile + ".flat", str);getErrorString();
+str:=if backend <> -1.0 then testcase(total,buildRes,err) else skip;
+writeFile(statFile + ".compile", str);getErrorString();
+str:=if buildRes then testcase(timeSim,simRes,sim) else skip;
+writeFile(statFile + ".sim", str);getErrorString();
+str:=if simRes then testcase(timeDiff,referenceOK,if referenceOK then "" else "See the generated report for details") else skip;
+writeFile(statFile + ".verify", str);getErrorString();

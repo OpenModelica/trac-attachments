@@ -1,0 +1,3 @@
+loadModel(Modelica); //new OMC version stopped importing Modelica model
+loadFile("/tmp/asd/readRealMatrixFromFile_min.mo"); getErrorString();
+simulate(ReadRealMatrixFromFile); getErrorString();

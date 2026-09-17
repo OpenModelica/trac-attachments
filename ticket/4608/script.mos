@@ -1,0 +1,6 @@
+setCommandLineOptions("-d=nfAPI");
+getErrorString();
+loadFile("TestParameterUnits.mo");
+getErrorString();
+getComponents(TestParameterUnits.M2);
+getErrorString();

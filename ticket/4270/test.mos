@@ -1,0 +1,16 @@
+//loadModel(Modelica, {"3.2.1"});
+//getErrorString();
+
+loadFile("./iPSL_ATotal.mo");
+getErrorString();
+simulate(iPSL_A_total);
+getErrorString();
+
+val(MS.sortie.ir,1.0);
+
+loadFile("./iPSL_BTotal.mo");
+getErrorString();
+simulate(iPSL_B_total);
+getErrorString();
+
+val(MS.sortie.ir,1.0);

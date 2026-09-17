@@ -1,0 +1,51 @@
+loadString("
+model Superheater
+  parameter Integer N = 8 \"Number of finite volumes\";
+  parameter Real M = 500 \"Superheater wall mass\";
+  parameter Real c = 500 \"Wall specific heat\";
+  parameter Real cp = 2000 \"Steam cp\";
+  parameter Real UA = 1200 \"Total heat conductance external fluid\";
+  
+  parameter Real Te_des = 1000 \"Design value of the external fluid temperature\";
+  parameter Real Ti_des = 800 \"Design value of the inlet fluid temperature\";
+  parameter Real To_des = 888 \"Design value of the outlet fluid temperature\";
+  parameter Real wv_des = 1.0 \"Design value of the steam mass flow rate\";
+
+  input Real wv \"Steam mass flow rate\";
+  input Real Ti \"Steam inlet temperature\";
+  input Real Te \"External fluid temperature\";
+  output Real To \"Outlet temperature\";
+  Real T[N] \"Volume outlet temperature\";
+  Real Q[N] \"Heat flows entering the volumes\";
+equation
+  M*c/N*der(T[1]) = cp*Ti - cp*T[1] + Q[1];
+  for j in 2:N loop
+    M*c/N*der(T[j]) = wv*cp*T[j-1] - wv*cp*T[j] + Q[j];
+  end for;
+  for j in 1:N loop
+    Q[j] = UA/N*(Te-T[j]);
+  end for;
+  To = T[N];  
+initial equation
+  for j in 1:N loop
+    der(T[j]) = 0 \"Steady-state initial conditions\";
+  end for;
+end Superheater;
+");
+
+loadString("
+model TestSuperheater
+  Superheater SH;
+  parameter Real DTi = 1 \"Inlet temperature change\";
+  parameter Real DTe = 1 \"External temperature change\";
+  parameter Real Dwv = SH.wv_des*0.02 \"Steam mass flow rate change\";
+equation
+  SH.Ti = SH.Ti_des + (if time > 1000 then DTi else 0);
+  SH.Te = SH.Te_des + (if time > 2000 then DTe else 0);
+  SH.wv = SH.wv_des + (if time > 0 then Dwv else 0);
+end TestSuperheater;
+");
+
+simulate(TestSuperheater);
+getErrorString()
+

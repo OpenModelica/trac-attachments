@@ -1,0 +1,16 @@
+{"format":"Transformational debugger info","version":1,
+"info":{"name":"OneModel","description":""},
+"variables":{
+"h":{"comment":"","kind":"state","type":"Real","unit":"","displayUnit":"","source":{"info":{"file":"OneModel","lineStart":2,"lineEnd":2,"colStart":3,"colEnd":16},"within":["Real"]}},
+"der(h)":{"comment":"","kind":"derivative","type":"Real","unit":"","displayUnit":"","source":{"info":{"file":"OneModel","lineStart":2,"lineEnd":2,"colStart":3,"colEnd":16},"within":["Real"]}},
+"$outputStateAlias_h":{"comment":"","kind":"variable","type":"Real","unit":"","displayUnit":"","source":{"info":{"file":"OneModel","lineStart":2,"lineEnd":2,"colStart":3,"colEnd":16},"within":["Real"]}}
+},
+"equations":[{"eqIndex":0,"tag":"dummy"},
+{"eqIndex":1,"tag":"alias","equation":[3],"section":"initial"},
+{"eqIndex":2,"section":"initial","tag":"assign","defines":["h"],"uses":[],"equation":["0.0"],"source":{"info":{"file":"OneModel","lineStart":4,"lineEnd":4,"colStart":3,"colEnd":8},"within":["OneModel"]}},
+{"eqIndex":3,"section":"regular","tag":"assign","defines":["der(h)"],"uses":[],"equation":["1.0"],"source":{"info":{"file":"OneModel","lineStart":6,"lineEnd":6,"colStart":3,"colEnd":13},"within":["OneModel"]}},
+{"eqIndex":4,"section":"regular","tag":"assign","defines":["$outputStateAlias_h"],"uses":["h"],"equation":["h"],"source":{"info":{"file":"","lineStart":0,"lineEnd":0,"colStart":0,"colEnd":0}}}
+],
+"functions":[
+]
+}

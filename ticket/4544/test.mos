@@ -1,0 +1,19 @@
+setCommandLineOptions("-g=MetaModelica, -d=gen");
+
+loadString("
+  function test
+    output Boolean b;
+  protected
+    String s = \"test\";
+    Integer i;
+  algorithm
+    (b, s) := match s
+      case \"test\"
+        then match s
+          case \"test\" then (true, \"test\");
+        end match;
+    end match;
+  end test;
+"); getErrorString();
+
+test(); getErrorString();

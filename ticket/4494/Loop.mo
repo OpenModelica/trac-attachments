@@ -1,0 +1,31 @@
+model Loop "Kinematic loops in action"
+  extends Modelica.Icons.Example;
+  inner Modelica.Mechanics.MultiBody.World world annotation(Placement(visible = true, transformation(origin = {-100, 0}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute(w.start = 0, w.fixed = true, useAxisFlange = true) annotation(Placement(visible = true, transformation(origin = {-50, 2.097}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+  Modelica.Mechanics.MultiBody.Parts.BodyBox bodyBox(r = {1.5, 0, 0}, color = {0, 0, 0}) annotation(Placement(visible = true, transformation(origin = {0, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute1(w.start = 0) annotation(Placement(visible = true, transformation(origin = {40, -20}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Parts.BodyBox bodyBox1(r = {0, 1.2, 0}, color = {155, 0, 0}) annotation(Placement(visible = true, transformation(origin = {80, 0}, extent = {{-10, -10}, {10, 10}}, rotation = -270)));
+  Modelica.Mechanics.MultiBody.Parts.BodyBox bodyBox2(r = {-1.5, 0, 0}, color = {0, 128, 0}) annotation(Placement(visible = true, transformation(origin = {-0, 60}, extent = {{-10, -10}, {10, 10}}, rotation = -900)));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute3(w.start = 0) annotation(Placement(visible = true, transformation(origin = {-50, 70}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+  Modelica.Mechanics.MultiBody.Parts.BodyBox bodyBox3(r = {0, -1, 0}) annotation(Placement(visible = true, transformation(origin = {-50, 40}, extent = {{-10, -10}, {10, 10}}, rotation = -1170)));
+  Modelica.Mechanics.MultiBody.Joints.RevolutePlanarLoopConstraint revolute2 annotation(Placement(visible = true, transformation(origin = {80, 40}, extent = {{-10, -10}, {10, 10}}, rotation = -270)));
+  Modelica.Mechanics.Rotational.Sources.Position position annotation(Placement(visible = true, transformation(origin = {-60, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Blocks.Sources.Ramp ramp(duration = 10, height = -20) annotation(Placement(visible = true, transformation(origin = {-100, -40}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Parts.FixedTranslation fixedTranslation1(r = {0.75, 0.5, 0}) annotation(Placement(visible = true, transformation(origin = {40, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+  Modelica.Mechanics.MultiBody.Parts.Body body(m = 1) annotation(Placement(visible = true, transformation(origin = {80, 80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+equation
+  connect(bodyBox.frame_b, revolute1.frame_a) annotation(Line(visible = true, origin = {20, -20}, points = {{-10, 0}, {10, 0}}, color = {95, 95, 95}));
+  connect(revolute1.frame_b, bodyBox1.frame_a) annotation(Line(visible = true, origin = {70, -16.667}, points = {{-20, -3.333}, {10, -3.333}, {10, 6.667}}, color = {95, 95, 95}));
+  connect(bodyBox2.frame_b, revolute3.frame_a) annotation(Line(visible = true, origin = {-27.29, 73.205}, points = {{17.29, -13.205}, {14.065, -13.205}, {14.065, 9.807}, {-22.71, 9.807}, {-22.71, 6.795}}, color = {95, 95, 95}));
+  connect(revolute3.frame_b, bodyBox3.frame_a) annotation(Line(visible = true, origin = {-50, 55}, points = {{-0, 5}, {0, -5}}, color = {95, 95, 95}));
+  connect(revolute2.frame_a, bodyBox1.frame_b) annotation(Line(visible = true, origin = {80, 20}, points = {{0, 10}, {0, -10}}, color = {95, 95, 95}));
+  connect(revolute2.frame_b, bodyBox2.frame_a) annotation(Line(visible = true, origin = {56.667, 56.667}, points = {{23.333, -6.667}, {23.333, 3.333}, {-46.667, 3.333}}, color = {95, 95, 95}));
+  connect(bodyBox3.frame_b, revolute.frame_a) annotation(Line(visible = true, origin = {-50, 21.048}, points = {{0, 8.952}, {0, -8.952}}, color = {95, 95, 95}));
+  connect(position.flange, revolute.axis) annotation(Line(visible = true, origin = {-34.112, -20}, points = {{-15.887, -20}, {4.112, -20}, {4.112, 20}, {-5.888, 22.097}}, color = {64, 64, 64}));
+  connect(ramp.y, position.phi_ref) annotation(Line(visible = true, origin = {-80.5, -40}, points = {{-8.5, 0}, {8.5, 0}}, color = {1, 37, 163}));
+  connect(bodyBox.frame_a, revolute.frame_b) annotation(Line(visible = true, origin = {-36.667, -15.968}, points = {{26.667, -4.032}, {-13.333, -4.032}, {-13.333, 8.065}}, color = {95, 95, 95}));
+  connect(revolute.frame_b, world.frame_b) annotation(Line(visible = true, origin = {-72.71, -5.947}, points = {{22.71, -1.956}, {22.71, -4.969}, {-14.065, -4.969}, {-14.065, 5.947}, {-17.29, 5.947}}, color = {95, 95, 95}));
+  connect(fixedTranslation1.frame_a, bodyBox2.frame_b) annotation(Line(visible = true, origin = {-1.613, 70}, points = {{31.613, 10}, {-11.613, 10}, {-11.613, -10}, {-8.388, -10}}, color = {95, 95, 95}));
+  connect(fixedTranslation1.frame_b, body.frame_a) annotation(Line(visible = true, origin = {60, 80}, points = {{-10, 0}, {10, 0}}, color = {95, 95, 95}));
+  annotation(experiment(StopTime = 5));
+end Loop;

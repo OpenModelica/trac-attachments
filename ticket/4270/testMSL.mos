@@ -1,0 +1,306 @@
+// name:     ModelicaTest
+// keywords: simulation MSL Examples
+// status: correct
+//
+// Simulation Results 
+// Modelica Standard Library
+//
+
+loadModel(Modelica,{"3.2.1"});
+getErrorString();
+
+loadString("
+model RevolutePlanarLoopConstraintA
+  extends Modelica.Icons.Example;
+  parameter Real tor=1000;
+  Real k;
+
+  inner Modelica.Mechanics.MultiBody.World world(animateWorld=false,
+      animateGravity=false) annotation (Placement(transformation(extent={{-160,
+            40},{-140,60}}, rotation=0)));
+  Modelica.Mechanics.Rotational.Sources.Torque torque
+    annotation (Placement(transformation(extent={{-14,74},{6,94}})));
+  Modelica.Blocks.Sources.RealExpression realExpression(y=k)
+    annotation (Placement(transformation(extent={{-46,74},{-26,94}})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder1(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={106,20})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder2(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={42,-6})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder3(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=90,
+        origin={-20,22})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute2(
+    n={1,0,0},
+    phi(fixed=true, start=0),
+    w(fixed=true, start=2*Modelica.Constants.pi))
+    annotation (Placement(transformation(extent={{-122,40},{-102,60}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(n={0,1,0},
+      angle=90)
+    annotation (Placement(transformation(extent={{-86,40},{-66,60}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation1(angle=45,
+      n={0,0,1})
+    annotation (Placement(transformation(extent={{-52,40},{-32,60}})));
+
+  Modelica.Mechanics.MultiBody.Joints.RevolutePlanarLoopConstraint revolute(
+      n={0,1,0}) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={6,-6})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute1(n={0,1,0},
+      useAxisFlange=true) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=0,
+        origin={8,52})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute3(
+    n={0,1,0},
+    phi(fixed=true, start=1.5707963267949),
+    w(fixed=true)) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=0,
+        origin={82,52})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute4(n={0,1,0}, phi(
+        start=1.5707963267949)) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={76,-6})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder(r={1,0,0},
+      diameter=0.2)
+    annotation (Placement(transformation(extent={{36,42},{56,62}})));
+equation
+  if (time < 1) then
+    k = tor;
+  else
+    k = 0;
+  end if;
+  connect(revolute1.frame_b, bodyCylinder.frame_a) annotation (Line(
+      points={{18,52},{36,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder.frame_b, revolute3.frame_a) annotation (Line(
+      points={{56,52},{72,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(torque.flange, revolute1.axis) annotation (Line(
+      points={{6,84},{6,62},{8,62}},
+      color={0,0,0},
+      smooth=Smooth.None));
+  connect(realExpression.y, torque.tau) annotation (Line(
+      points={{-25,84},{-16,84}},
+      color={0,0,127},
+      smooth=Smooth.None));
+  connect(revolute3.frame_b, bodyCylinder1.frame_a) annotation (Line(
+      points={{92,52},{102,52},{102,30},{106,30}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder1.frame_b, revolute4.frame_a) annotation (Line(
+      points={{106,10},{98,10},{98,-6},{86,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute4.frame_b, bodyCylinder2.frame_a) annotation (Line(
+      points={{66,-6},{62.5,-6},{62.5,-6},{59,-6},{59,-6},{52,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder2.frame_b, revolute.frame_a) annotation (Line(
+      points={{32,-6},{28,-6},{28,-6},{24,-6},{24,-6},{16,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute.frame_b, bodyCylinder3.frame_a) annotation (Line(
+      points={{-4,-6},{-12,-6},{-12,12},{-20,12}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder3.frame_b, revolute1.frame_a) annotation (Line(
+      points={{-20,32},{-12,32},{-12,52},{-2,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(world.frame_b, revolute2.frame_a) annotation (Line(
+      points={{-140,50},{-122,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(fixedRotation.frame_b, fixedRotation1.frame_a) annotation (Line(
+      points={{-66,50},{-52,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute2.frame_b, fixedRotation.frame_a) annotation (Line(
+      points={{-102,50},{-86,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(fixedRotation1.frame_b, revolute1.frame_a) annotation (Line(
+      points={{-32,50},{-18,50},{-18,52},{-2,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  annotation (experiment(StopTime=5), Diagram(coordinateSystem(extent={{-160,
+            -40},{120,100}}, preserveAspectRatio=true)));
+end RevolutePlanarLoopConstraintA;
+
+model RevolutePlanarLoopConstraintB
+  extends Modelica.Icons.Example;
+  parameter Real tor=1000;
+  Real k;
+
+  inner Modelica.Mechanics.MultiBody.World world(animateWorld=false,
+      animateGravity=false) annotation (Placement(transformation(extent={{-160,
+            40},{-140,60}}, rotation=0)));
+
+  Modelica.Mechanics.MultiBody.Joints.RevolutePlanarLoopConstraint revolute(
+      n={0,1,0}) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={6,-6})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute1(n={0,1,0},
+      useAxisFlange=true) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=0,
+        origin={8,52})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute3(
+    n={0,1,0},
+    phi(fixed=true, start=1.5707963267949),
+    w(fixed=true)) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=0,
+        origin={82,52})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute4(n={0,1,0}, phi(
+        start=1.5707963267949)) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={76,-6})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder(r={1,0,0},
+      diameter=0.2)
+    annotation (Placement(transformation(extent={{36,42},{56,62}})));
+
+  Modelica.Mechanics.Rotational.Sources.Torque torque
+    annotation (Placement(transformation(extent={{-14,74},{6,94}})));
+  Modelica.Blocks.Sources.RealExpression realExpression(y=k)
+    annotation (Placement(transformation(extent={{-46,74},{-26,94}})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder1(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=270,
+        origin={106,20})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder2(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=180,
+        origin={42,-6})));
+  Modelica.Mechanics.MultiBody.Parts.BodyCylinder bodyCylinder3(r={1,0,0},
+      diameter=0.2) annotation (Placement(transformation(
+        extent={{-10,-10},{10,10}},
+        rotation=90,
+        origin={-20,22})));
+  Modelica.Mechanics.MultiBody.Joints.Revolute revolute2(
+    n={1,0,0},
+    phi(fixed=true, start=0),
+    w(fixed=true, start=2*Modelica.Constants.pi))
+    annotation (Placement(transformation(extent={{-122,40},{-102,60}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation(n={0,1,0},
+      angle=90)
+    annotation (Placement(transformation(extent={{-86,40},{-66,60}})));
+  Modelica.Mechanics.MultiBody.Parts.FixedRotation fixedRotation1(angle=45,
+      n={0,0,1})
+    annotation (Placement(transformation(extent={{-52,40},{-32,60}})));
+
+equation
+  if (time < 1) then
+    k = tor;
+  else
+    k = 0;
+  end if;
+  connect(revolute1.frame_b, bodyCylinder.frame_a) annotation (Line(
+      points={{18,52},{36,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder.frame_b, revolute3.frame_a) annotation (Line(
+      points={{56,52},{72,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(torque.flange, revolute1.axis) annotation (Line(
+      points={{6,84},{6,62},{8,62}},
+      color={0,0,0},
+      smooth=Smooth.None));
+  connect(realExpression.y, torque.tau) annotation (Line(
+      points={{-25,84},{-16,84}},
+      color={0,0,127},
+      smooth=Smooth.None));
+  connect(revolute3.frame_b, bodyCylinder1.frame_a) annotation (Line(
+      points={{92,52},{102,52},{102,30},{106,30}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder1.frame_b, revolute4.frame_a) annotation (Line(
+      points={{106,10},{98,10},{98,-6},{86,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute4.frame_b, bodyCylinder2.frame_a) annotation (Line(
+      points={{66,-6},{62.5,-6},{62.5,-6},{59,-6},{59,-6},{52,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder2.frame_b, revolute.frame_a) annotation (Line(
+      points={{32,-6},{28,-6},{28,-6},{24,-6},{24,-6},{16,-6}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute.frame_b, bodyCylinder3.frame_a) annotation (Line(
+      points={{-4,-6},{-12,-6},{-12,12},{-20,12}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(bodyCylinder3.frame_b, revolute1.frame_a) annotation (Line(
+      points={{-20,32},{-12,32},{-12,52},{-2,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(world.frame_b, revolute2.frame_a) annotation (Line(
+      points={{-140,50},{-122,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(fixedRotation.frame_b, fixedRotation1.frame_a) annotation (Line(
+      points={{-66,50},{-52,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(revolute2.frame_b, fixedRotation.frame_a) annotation (Line(
+      points={{-102,50},{-86,50}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  connect(fixedRotation1.frame_b, revolute1.frame_a) annotation (Line(
+      points={{-32,50},{-18,50},{-18,52},{-2,52}},
+      color={95,95,95},
+      thickness=0.5,
+      smooth=Smooth.None));
+  annotation (experiment(StopTime=5), Diagram(coordinateSystem(extent={{-160,
+            -40},{120,100}}, preserveAspectRatio=true)));
+end RevolutePlanarLoopConstraintB;
+");
+
+
+simulate(RevolutePlanarLoopConstraintA);
+getErrorString();
+
+simulate(RevolutePlanarLoopConstraintB);
+getErrorString();
+

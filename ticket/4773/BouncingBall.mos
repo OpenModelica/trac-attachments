@@ -1,0 +1,8 @@
+loadFile("BouncingBall.mo");
+getErrorString();
+setCommandLineOptions("-d=initialization");
+getErrorString();
+setCommandLineOptions("--simCodeTarget=Cpp");
+getErrorString();
+simulate(BouncingBall);
+getErrorString();

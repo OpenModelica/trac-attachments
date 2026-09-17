@@ -1,0 +1,9 @@
+print("Deleting tmp files from previous runs");
+system("rm -rf *.h *.o *.o *.json *.xml *.libs *.log *.makefile DrumBoiler_* sources binaries");
+
+bb_fmu_file_path := realpath("BouncingBall.fmu");
+print("Reading BouncingBall FMU from " + bb_fmu_file_path);
+imported_fmu_mo_file := importFMU("BouncingBall.fmu");
+loadFile(imported_fmu_mo_file);
+print("Simulating loaded FMU");
+simulate(BouncingBall_me_FMU, stopTime=3.0,outputFormat="csv");

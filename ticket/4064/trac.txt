@@ -1,0 +1,31 @@
+
+
+MDD_test_FMU.c 	:
+in Function:
+void setDefaultStartValues(ModelInstance *comp)
+
+comp->fmuData->modelData->stringParameterData[0].attribute.start = "COM3";
+
+
+
+MDD_test_FMU.c 	:
+in Function:
+void setStartValues(ModelInstance *comp)
+
+comp->fmuData->modelData->stringParameterData[0].attribute.start = comp->fmuData->simulationInfo->stringParameter[0];
+
+
+
+MDD_test_01exo.c :
+in Function:
+void MDD_test_callExternalObjectConstructors(DATA *data, threadData_t *threadData)
+
+data->simulationInfo->extObjs[1] /* serialReceive._sPort EXTOBJ: Modelica_DeviceDrivers.Communication.SerialPort */ = omc_Modelica__DeviceDrivers_Communication_SerialPort_constructor(threadData, data->simulationInfo->stringParameter[0] /* serialReceive._Serial_Port PARAM */, (data->simulationInfo->booleanParameter[0] /* serialReceive._autoBufferSize PARAM */?(modelica_integer)data->localData[0]->integerVars[0] /* serialReceive._bufferSize DISCRETE */:(modelica_integer)data->simulationInfo->integerParameter[3] /* serialReceive._userBufferSize PARAM */), (modelica_integer)data->simulationInfo->integerParameter[1] /* serialReceive._parity PARAM */, (modelica_integer)data->simulationInfo->integerParameter[2] /* serialReceive._receiver PARAM */, (modelica_integer)data->simulationInfo->integerParameter[0] /* serialReceive._baud PARAM */);
+
+
+
+MDD_test_functions.c :
+in Function:
+modelica_complex omc_Modelica__DeviceDrivers_Communication_SerialPort_constructor(threadData_t *threadData, modelica_string _deviceName, modelica_integer _bufferSize, modelica_integer _parity, modelica_integer _receiver, modelica_integer _baud)
+
+  _sPort_ext = MDD_serialPortConstructor(MMC_STRINGDATA(_deviceName), _bufferSize_ext, _parity_ext, _receiver_ext, _baud_ext);

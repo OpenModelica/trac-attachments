@@ -1,0 +1,4 @@
+loadFile("HelmholtzMedia/package.mo");
+getErrorString();
+getClassInformation(HelmholtzMedia);
+getErrorString();

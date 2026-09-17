@@ -1,0 +1,9 @@
+print("Deleting tmp files from previous runs");
+system("rm -rf *.h *.o *.o *.json *.xml *.libs *.log *.makefile sources binaries");
+
+bb_file_path :=realpath("BouncingBall.mo");
+print("Loading BouncingBall from:"+bb_file_path);
+loadFile(bb_file_path);
+print("Translating Model to FMU using translateModelFMU");
+//setCommandLineOptions("--simCodeTarget=Cpp"); getErrorString();
+translateModelFMU(BouncingBall);

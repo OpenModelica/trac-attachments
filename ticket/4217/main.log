@@ -1,0 +1,293 @@
+version:1
+:msg:main --->  Computing dependencies for openmodelica-devel:info:main .:debug:main openmodelica-devel has no conflicts
+:debug:main Searching for dependency: gtime
+:debug:main Found Dependency: receipt exists for gtime
+:debug:main Searching for dependency: gsed
+:debug:main Found Dependency: receipt exists for gsed
+:debug:main Searching for dependency: cmake
+:debug:main Found Dependency: receipt exists for cmake
+:debug:main Searching for dependency: libtool
+:debug:main Found Dependency: receipt exists for libtool
+:debug:main Searching for dependency: automake
+:debug:main Found Dependency: receipt exists for automake
+:debug:main Searching for dependency: pkgconfig
+:debug:main Found Dependency: receipt exists for pkgconfig
+:debug:main Searching for dependency: autoconf
+:debug:main Found Dependency: receipt exists for autoconf
+:debug:main Searching for dependency: gcc5
+:debug:main Found Dependency: receipt exists for gcc5
+:debug:main Searching for dependency: lp_solve
+:debug:main Found Dependency: receipt exists for lp_solve
+:debug:main Searching for dependency: gettext
+:debug:main Found Dependency: receipt exists for gettext
+:debug:main Searching for dependency: omniorb
+:debug:main Found Dependency: receipt exists for omniorb
+:debug:main Searching for dependency: readline
+:debug:main Found Dependency: receipt exists for readline
+:debug:main Searching for dependency: qjson
+:debug:main Found Dependency: receipt exists for qjson
+:debug:main Searching for dependency: libgcc
+:debug:main Found Dependency: receipt exists for libgcc
+:debug:main Searching for dependency: sundials
+:debug:main Found Dependency: receipt exists for sundials
+:debug:main Searching for dependency: qt4-mac
+:debug:main Found Dependency: receipt exists for qt4-mac
+:debug:main Searching for dependency: qwt52
+:debug:main Found Dependency: receipt exists for qwt52
+:debug:main Searching for dependency: qt5-qtbase
+:debug:main Found Dependency: receipt exists for qt5-qtbase
+:debug:main Searching for dependency: openmodelicalibraries
+:debug:main Found Dependency: receipt exists for openmodelicalibraries
+:msg:main 
+:debug:main Executing org.macports.main (openmodelica-devel)
+:debug:main changing euid/egid - current euid: 0 - current egid: 0
+:debug:main egid changed to: 505
+:debug:main euid changed to: 507
+:debug:archivefetch archivefetch phase started at Thu Jan 19 08:57:20 EST 2017
+:debug:archivefetch Executing proc-pre-org.macports.archivefetch-archivefetch-0
+:debug:archivefetch Active variants check for archivefetch-type install considers depends_lib depends_run: lp_solve gettext omniorb readline qjson libgcc sundials qt4-mac qwt52 qt5-qtbase openmodelicalibraries
+:debug:archivefetch Executing org.macports.archivefetch (openmodelica-devel)
+:debug:archivefetch Privilege de-escalation not attempted as not running as root.
+:debug:fetch fetch phase started at Thu Jan 19 08:57:20 EST 2017
+:notice:fetch --->  Fetching distfiles for openmodelica-devel
+:debug:fetch Executing org.macports.fetch (openmodelica-devel)
+:debug:fetch Privilege de-escalation not attempted as not running as root.
+:debug:checksum checksum phase started at Thu Jan 19 08:57:20 EST 2017
+:notice:checksum --->  Verifying checksums for openmodelica-devel
+:debug:checksum Executing org.macports.checksum (openmodelica-devel)
+:info:checksum --->  Checksumming openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz
+:debug:checksum Calculated (md5) is fdca6b366570770bb8c5b7dc04481727
+:debug:checksum Correct (md5) checksum for openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz
+:debug:checksum Calculated (sha1) is 606aafb3d2e2822b61b11e62a9eb78e5bff56007
+:debug:checksum Correct (sha1) checksum for openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz
+:debug:checksum Calculated (rmd160) is 54abc54c26e641f097864be0a19f5e5296b1debd
+:debug:checksum Correct (rmd160) checksum for openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz
+:debug:checksum Privilege de-escalation not attempted as not running as root.
+:debug:extract extract phase started at Thu Jan 19 08:57:20 EST 2017
+:notice:extract --->  Extracting openmodelica-devel
+:debug:extract Executing org.macports.extract (openmodelica-devel)
+:info:extract --->  Extracting openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz
+:debug:extract setting option extract.args to '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz'
+:debug:extract Environment: 
+CC_PRINT_OPTIONS='YES'
+CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS'
+CPATH='/opt/local/include'
+LIBRARY_PATH='/opt/local/lib'
+MACOSX_DEPLOYMENT_TARGET='10.12'
+:debug:extract Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work" && /usr/bin/gzip -dc '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz' | /usr/bin/tar -xf -'
+:debug:extract Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work" && /usr/bin/gzip -dc '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_1.12.0~dev-251-g1cebf30.orig.tar.xz' | /usr/bin/tar -xf - 
+:debug:extract euid/egid changed to: 0/0
+:debug:extract chowned /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work to macports
+:debug:extract euid/egid changed to: 507/505
+:debug:extract Privilege de-escalation not attempted as not running as root.
+:debug:patch patch phase started at Thu Jan 19 08:57:22 EST 2017
+:debug:patch Executing org.macports.patch (openmodelica-devel)
+:debug:patch Privilege de-escalation not attempted as not running as root.
+:debug:configure configure phase started at Thu Jan 19 08:57:22 EST 2017
+:notice:configure --->  Configuring openmodelica-devel
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Using compiler 'Xcode Clang'
+:debug:configure Executing proc-pre-org.macports.configure-configure-0
+:debug:configure qt5 PortGroup: Qt is provided by qt5
+:debug:configure Executing proc-pre-org.macports.configure-configure-1
+:debug:configure Active variants check for source-type install considers depends_fetch depends_extract depends_lib depends_build depends_run: lp_solve gettext omniorb readline qjson libgcc sundials qt4-mac qwt52 qt5-qtbase gtime gsed cmake libtool automake pkgconfig autoconf gcc5 openmodelicalibraries
+:debug:configure Executing proc-pre-org.macports.configure-configure-2
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure qt5-qtbase is installed with the following variants: 
+:debug:configure   required: debug, forbidden: 
+:debug:configure   rejected, because required variant debug is missing
+:debug:configure Executing org.macports.configure (openmodelica-devel)
+:debug:configure Environment: 
+CC_PRINT_OPTIONS='YES'
+CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS'
+CPATH='/opt/local/include'
+LIBRARY_PATH='/opt/local/lib'
+MACOSX_DEPLOYMENT_TARGET='10.12'
+:debug:configure Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_1.12.0~dev-251-g1cebf30" && autoconf --verbose'
+:debug:configure Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_1.12.0~dev-251-g1cebf30" && autoconf --verbose 
+:info:configure autoconf: running /opt/local/bin/autom4te --verbose --language=autoconf --output=configure configure.ac
+:info:configure autom4te: the trace request object is:
+:info:configure autom4te: $VAR1 = bless( [
+:info:configure autom4te:                  '0',
+:info:configure autom4te:                  0,
+:info:configure autom4te:                  [
+:info:configure autom4te:                    '/opt/local/share/autoconf'
+:info:configure autom4te:                  ],
+:info:configure autom4te:                  [
+:info:configure autom4te:                    '/opt/local/share/autoconf/autoconf/autoconf.m4f',
+:info:configure autom4te:                    'configure.ac'
+:info:configure autom4te:                  ],
+:info:configure autom4te:                  {
+:info:configure autom4te:                    '_AM_COND_ELSE' => 1,
+:info:configure autom4te:                    'AM_SILENT_RULES' => 1,
+:info:configure autom4te:                    'AM_XGETTEXT_OPTION' => 1,
+:info:configure autom4te:                    'm4_include' => 1,
+:info:configure autom4te:                    'm4_sinclude' => 1,
+:info:configure autom4te:                    'AM_CONDITIONAL' => 1,
+:info:configure autom4te:                    'AC_CANONICAL_SYSTEM' => 1,
+:info:configure autom4te:                    'LT_SUPPORTED_TAG' => 1,
+:info:configure autom4te:                    'LT_CONFIG_LTDL_DIR' => 1,
+:info:configure autom4te:                    'AH_OUTPUT' => 1,
+:info:configure autom4te:                    'AC_CONFIG_AUX_DIR' => 1,
+:info:configure autom4te:                    'AM_INIT_AUTOMAKE' => 1,
+:info:configure autom4te:                    'AM_NLS' => 1,
+:info:configure autom4te:                    'AC_SUBST' => 1,
+:info:configure autom4te:                    '_AM_MAKEFILE_INCLUDE' => 1,
+:info:configure autom4te:                    'AM_PROG_MOC' => 1,
+:info:configure autom4te:                    '_AM_COND_IF' => 1,
+:info:configure autom4te:                    'AC_CONFIG_SUBDIRS' => 1,
+:info:configure autom4te:                    'AM_PATH_GUILE' => 1,
+:info:configure autom4te:                    'AC_LIBSOURCE' => 1,
+:info:configure autom4te:                    'AM_MAINTAINER_MODE' => 1,
+:info:configure autom4te:                    'AC_FC_PP_DEFINE' => 1,
+:info:configure autom4te:                    'include' => 1,
+:info:configure autom4te:                    '_LT_AC_TAGCONFIG' => 1,
+:info:configure autom4te:                    'sinclude' => 1,
+:info:configure autom4te:                    'AC_FC_SRCEXT' => 1,
+:info:configure autom4te:                    'AC_DEFINE_TRACE_LITERAL' => 1,
+:info:configure autom4te:                    'AC_SUBST_TRACE' => 1,
+:info:configure autom4te:                    'AC_CONFIG_LINKS' => 1,
+:info:configure autom4te:                    'AC_CONFIG_LIBOBJ_DIR' => 1,
+:info:configure autom4te:                    'm4_pattern_forbid' => 1,
+:info:configure autom4te:                    'AC_PROG_LIBTOOL' => 1,
+:info:configure autom4te:                    'AM_GNU_GETTEXT_INTL_SUBDIR' => 1,
+:info:configure autom4te:                    'AM_ENABLE_MULTILIB' => 1,
+:info:configure autom4te:                    'AM_PROG_CC_C_O' => 1,
+:info:configure autom4te:                    'AC_FC_FREEFORM' => 1,
+:info:configure autom4te:                    '_AM_SUBST_NOTMAKE' => 1,
+:info:configure autom4te:                    'LT_INIT' => 1,
+:info:configure autom4te:                    'AM_POT_TOOLS' => 1,
+:info:configure autom4te:                    'AC_REQUIRE_AUX_FILE' => 1,
+:info:configure autom4te:                    'm4_pattern_allow' => 1,
+:info:configure autom4te:                    'AM_PROG_AR' => 1,
+:info:configure autom4te:                    'AC_CONFIG_FILES' => 1,
+:info:configure autom4te:                    'AM_GNU_GETTEXT' => 1,
+:info:configure autom4te:                    'AM_PROG_F77_C_O' => 1,
+:info:configure autom4te:                    'AC_INIT' => 1,
+:info:configure autom4te:                    'AM_AUTOMAKE_VERSION' => 1,
+:info:configure autom4te:                    'AC_CONFIG_HEADERS' => 1,
+:info:configure autom4te:                    'AC_CANONICAL_HOST' => 1,
+:info:configure autom4te:                    'AC_CANONICAL_TARGET' => 1,
+:info:configure autom4te:                    'AM_MAKEFILE_INCLUDE' => 1,
+:info:configure autom4te:                    'AM_PROG_CXX_C_O' => 1,
+:info:configure autom4te:                    'AC_CANONICAL_BUILD' => 1,
+:info:configure autom4te:                    '_m4_warn' => 1,
+:info:configure autom4te:                    'AC_FC_PP_SRCEXT' => 1,
+:info:configure autom4te:                    '_AM_COND_ENDIF' => 1,
+:info:configure autom4te:                    'AM_PROG_FC_C_O' => 1
+:info:configure autom4te:                  }
+:info:configure autom4te:                ], 'Autom4te::Request' );
+:info:configure autom4te: running: /usr/bin/m4 --nesting-limit=1024  --include=/opt/local/share/autoconf --debug=aflq --fatal-warning --error-output=autom4te.cache/traces.0t --trace=AC_CANONICAL_BUILD --trace=AC_CANONICAL_HOST --trace=AC_CANONICAL_SYSTEM --trace=AC_CANONICAL_TARGET --trace=AC_CONFIG_AUX_DIR --trace=AC_CONFIG_FILES --trace=AC_CONFIG_HEADERS --trace=AC_CONFIG_LIBOBJ_DIR --trace=AC_CONFIG_LINKS --trace=AC_CONFIG_SUBDIRS --trace=AC_DEFINE_TRACE_LITERAL --trace=AC_FC_FREEFORM --trace=AC_FC_PP_DEFINE --trace=AC_FC_PP_SRCEXT --trace=AC_FC_SRCEXT --trace=AC_INIT --trace=AC_LIBSOURCE --trace=AC_PROG_LIBTOOL --trace=AC_REQUIRE_AUX_FILE --trace=AC_SUBST --trace=AC_SUBST_TRACE --trace=AH_OUTPUT --trace=AM_AUTOMAKE_VERSION --trace=AM_CONDITIONAL --trace=AM_ENABLE_MULTILIB --trace=AM_GNU_GETTEXT --trace=AM_GNU_GETTEXT_INTL_SUBDIR --trace=AM_INIT_AUTOMAKE --trace=AM_MAINTAINER_MODE --trace=AM_MAKEFILE_INCLUDE --trace=AM_NLS --trace=AM_PATH_GUILE --trace=AM_POT_TOOLS --trace=AM_PROG_AR --trace=AM_PROG_CC_C_O --trace=AM_PROG_CXX_C_O --trace=AM_PROG_F77_C_O --trace=AM_PROG_FC_C_O --trace=AM_PROG_MOC --trace=AM_SILENT_RULES --trace=AM_XGETTEXT_OPTION --trace=LT_CONFIG_LTDL_DIR --trace=LT_INIT --trace=LT_SUPPORTED_TAG --trace=_AM_COND_ELSE --trace=_AM_COND_ENDIF --trace=_AM_COND_IF --trace=_AM_MAKEFILE_INCLUDE --trace=_AM_SUBST_NOTMAKE --trace=_LT_AC_TAGCONFIG --trace=_m4_warn --trace=include --trace=m4_include --trace=m4_pattern_allow --trace=m4_pattern_forbid --trace=m4_sinclude --trace=sinclude --reload-state=/opt/local/share/autoconf/autoconf/autoconf.m4f --undefine=__m4_version__ configure.ac > autom4te.cache/output.0t
+:info:configure autom4te: formatting traces for `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.tmp/am4tK0zlzz/warnings': _m4_warn
+:info:configure autom4te: reading /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.tmp/am4tK0zlzz/warnings
+:info:configure autom4te: creating configure
+:info:configure autom4te: formatting traces for `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.tmp/am4tK0zlzz/patterns': m4_pattern_allow, m4_pattern_forbid
+:info:configure autom4te: forbidden tokens: ^_?A[CHUM]_|_AC_|^LIBOBJS$|^_?m4_|^dnl$|^_?AS_
+:info:configure autom4te: forbidden token : ^LIBOBJS$ => do not use LIBOBJS directly, use AC_LIBOBJ (see section `AC_LIBOBJ vs LIBOBJS'
+:info:configure autom4te: allowed   tokens: ^AS_FLAGS$|^SHELL$|^PATH_SEPARATOR$|^PACKAGE_NAME$|^PACKAGE_TARNAME$|^PACKAGE_VERSION$|^PACKAGE_STRING$|^PACKAGE_BUGREPORT$|^PACKAGE_URL$|^exec_prefix$|^prefix$|^program_transform_name$|^bindir$|^sbindir$|^libexecdir$|^datarootdir$|^datadir$|^sysconfdir$|^sharedstatedir$|^localstatedir$|^includedir$|^oldincludedir$|^docdir$|^infodir$|^htmldir$|^dvidir$|^pdfdir$|^psdir$|^libdir$|^localedir$|^mandir$|^PACKAGE_NAME$|^PACKAGE_TARNAME$|^PACKAGE_VERSION$|^PACKAGE_STRING$|^PACKAGE_BUGREPORT$|^PACKAGE_URL$|^DEFS$|^ECHO_C$|^ECHO_N$|^ECHO_T$|^LIBS$|^build_alias$|^host_alias$|^target_alias$|^CC$|^CFLAGS$|^LDFLAGS$|^LIBS$|^CPPFLAGS$|^CC$|^CC$|^CC$|^CC$|^ac_ct_CC$|^EXEEXT$|^OBJEXT$|^OMBUILDDIR$|^build$|^build_cpu$|^build_vendor$|^build_os$|^host$|^host_cpu$|^host_vendor$|^host_os$|^target$|^target_cpu$|^target_vendor$|^target_os$|^host_short$|^OPENMODELICAHOME$|^RPATH_QMAKE$|^SHREXT$|^APP$|^OMC_TARGET$|^OMLIBRARY_TARGET$|^CMAKE_LDFLAGS$|^USE_CORBA$|^QT_USE_CORBA$|^CORBA_QMAKE_INCLUDES$|^CORBACFLAGS$|^CORBALIBS$|^IDLCMD$|^USE_CORBA$|^IDLPATH$|^ALL_TARGETS$|^ALL_TARGETS$|^subdirs$|^subdirs$|^LIBOBJS$|^LTLIBOBJS$
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Preferred compilers: clang macports-clang-3.8 macports-clang-3.7
+:debug:configure Environment: 
+ANTLRHOME='/opt/local'
+CC='/usr/bin/clang'
+CC_PRINT_OPTIONS='YES'
+CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS'
+CFLAGS='-pipe -Os -arch x86_64'
+CPATH='/opt/local/include'
+CPPFLAGS='-I/opt/local/include'
+CXX='/usr/bin/clang++'
+CXXFLAGS='-pipe -Os -arch x86_64 -stdlib=libc++'
+F77='/opt/local/bin/gfortran-mp-5'
+F77FLAGS='-m64'
+F90='/opt/local/bin/gfortran-mp-5'
+F90FLAGS='-pipe -Os -m64'
+FC='/opt/local/bin/gfortran-mp-5'
+FCFLAGS='-pipe -Os -m64'
+FFLAGS='-pipe -Os'
+INSTALL='/usr/bin/install -c'
+LDFLAGS='-L/opt/local/lib -Wl,-headerpad_max_install_names -arch x86_64'
+LIBRARY_PATH='/opt/local/lib'
+MACOSX_DEPLOYMENT_TARGET='10.12'
+OBJC='/usr/bin/clang'
+OBJCFLAGS='-pipe -Os -arch x86_64'
+OBJCXX='/usr/bin/clang++'
+OBJCXXFLAGS='-pipe -Os -arch x86_64 -stdlib=libc++'
+:debug:configure Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_1.12.0~dev-251-g1cebf30" && /opt/local/libexec/qt5/bin/qmake PREFIX=/opt/local --disable-python-interface --disable-modelica3d --with-lapack="-llapack -lblas" --without-omc --without-omlibrary OMPCC="/opt/local/bin/gcc-mp-5 -fopenmp -mno-avx" GNUCXX=/opt/local/bin/g++-mp-5 --with-omniORB=/opt/local -spec macx-clang'
+:debug:configure Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_1.12.0~dev-251-g1cebf30" && /opt/local/libexec/qt5/bin/qmake PREFIX=/opt/local --disable-python-interface --disable-modelica3d --with-lapack="-llapack -lblas" --without-omc --without-omlibrary OMPCC="/opt/local/bin/gcc-mp-5 -fopenmp -mno-avx" GNUCXX=/opt/local/bin/g++-mp-5 --with-omniORB=/opt/local -spec macx-clang 
+:info:configure ***Unknown option --disable-python-interface
+:info:configure Usage: /opt/local/libexec/qt5/bin/qmake [mode] [options] [files]
+:info:configure 
+:info:configure QMake has two modes, one mode for generating project files based on
+:info:configure some heuristics, and the other for generating makefiles. Normally you
+:info:configure shouldn't need to specify a mode, as makefile generation is the default
+:info:configure mode for qmake, but you may use this to test qmake on an existing project
+:info:configure 
+:info:configure Mode:
+:info:configure   -project       Put qmake into project file generation mode
+:info:configure                  In this mode qmake interprets files as files to
+:info:configure                  be built,
+:info:configure                  defaults to *; *; *; *.ts; *.xlf; *.qrc
+:info:configure                  Note: The created .pro file probably will 
+:info:configure                  need to be edited. For example add the QT variable to 
+:info:configure                  specify what modules are required.
+:info:configure   -makefile      Put qmake into makefile generation mode (default)
+:info:configure                  In this mode qmake interprets files as project files to
+:info:configure                  be processed, if skipped qmake will try to find a project
+:info:configure                  file in your current working directory
+:info:configure 
+:info:configure Warnings Options:
+:info:configure   -Wnone         Turn off all warnings; specific ones may be re-enabled by
+:info:configure                  later -W options
+:info:configure   -Wall          Turn on all warnings
+:info:configure   -Wparser       Turn on parser warnings
+:info:configure   -Wlogic        Turn on logic warnings (on by default)
+:info:configure   -Wdeprecated   Turn on deprecation warnings (on by default)
+:info:configure 
+:info:configure Options:
+:info:configure    * You can place any variable assignment in options and it will be     *
+:info:configure    * processed as if it was in [files]. These assignments will be parsed *
+:info:configure    * before [files].                                                     *
+:info:configure   -o file        Write output to file
+:info:configure   -d             Increase debug level
+:info:configure   -t templ       Overrides TEMPLATE as templ
+:info:configure   -tp prefix     Overrides TEMPLATE so that prefix is prefixed into the value
+:info:configure   -help          This help
+:info:configure   -v             Version information
+:info:configure   -after         All variable assignments after this will be
+:info:configure                  parsed after [files]
+:info:configure   -norecursive   Don't do a recursive search
+:info:configure   -recursive     Do a recursive search
+:info:configure   -set <prop> <value> Set persistent property
+:info:configure   -unset <prop>  Unset persistent property
+:info:configure   -query <prop>  Query persistent property. Show all if <prop> is empty.
+:info:configure   -cache file    Use file as cache           [makefile mode only]
+:info:configure   -spec spec     Use spec as QMAKESPEC       [makefile mode only]
+:info:configure   -nocache       Don't use a cache file      [makefile mode only]
+:info:configure   -nodepend      Don't generate dependencies [makefile mode only]
+:info:configure   -nomoc         Don't generate moc targets  [makefile mode only]
+:info:configure   -nopwd         Don't look for files in pwd [project mode only]
+:info:configure Command failed:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_1.12.0~dev-251-g1cebf30" && /opt/local/libexec/qt5/bin/qmake PREFIX=/opt/local --disable-python-interface --disable-modelica3d --with-lapack="-llapack -lblas" --without-omc --without-omlibrary OMPCC="/opt/local/bin/gcc-mp-5 -fopenmp -mno-avx" GNUCXX=/opt/local/bin/g++-mp-5 --with-omniORB=/opt/local -spec macx-clang 
+:info:configure Exit code: 1
+:error:configure org.macports.configure for port openmodelica-devel returned: configure failure: command execution failed
+:debug:configure Error code: NONE
+:debug:configure Backtrace: configure failure: command execution failed
+    while executing
+"portconfigure::configure_main org.macports.configure"
+    ("eval" body line 1)
+    invoked from within
+"eval $procedure $targetname"
+:info:configure Warning: targets not executed for openmodelica-devel: org.macports.install org.macports.configure org.macports.build org.macports.destroot
+:notice:configure Please see the log file for port openmodelica-devel for details:
+    /opt/local/var/macports/logs/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/main.log

@@ -1,0 +1,19 @@
+setCommandLineOptions("-g=MetaModelica, -d=gen");
+
+loadString("
+  function f
+  end f;
+
+  function test
+  protected
+    partial function pf
+    end pf;
+    
+    pf fu_nc = f;
+  algorithm
+    fu_nc();
+  end test;
+");
+getErrorString();
+test();
+getErrorString();

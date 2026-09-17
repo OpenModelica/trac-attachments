@@ -1,0 +1,4 @@
+loadModel(Modelica);getErrorString();
+loadFile("Test.mo");getErrorString();
+simulate(Test.fluids_property_plot_10e_5, simflags="-lv=LOG_NLS_V");getErrorString();
+simulate(Test.fluids_property_plot_10e_5, simflags="-lv=LOG_NLS_V -nls=kinsol");getErrorString();

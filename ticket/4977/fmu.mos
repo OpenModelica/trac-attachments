@@ -1,0 +1,4 @@
+loadModel(Modelica);
+loadFile("E10_linear.mo");
+translateModelFMU(E10_linear,version="2",fmuType="me", platforms={"static"}); 
+getErrorString();
