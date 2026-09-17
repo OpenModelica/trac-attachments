@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("package.mo");
+getErrorString();
+getComponents(WasteWater.Examples.ASM1SmallPlantRun);
+getErrorString();

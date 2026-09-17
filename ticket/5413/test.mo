@@ -1,0 +1,169 @@
+package test "Package containing basic EV models"
+  model EVbasic "Simulates a very basic Electric Vehicle"
+    Modelica.SIunits.Energy enP2, enP1, enP1Pos, enP1Neg;
+    Support.DragForce dragF(Cx = 0.65, S = 6.0, fc = 0.013, m = mass.m, rho = 1.226) annotation(
+      Placement(visible = true, transformation(origin = {104, -28}, extent = {{-10, -10}, {10, 10}}, rotation = 90)));
+    Modelica.Mechanics.Rotational.Components.IdealGear gear annotation(
+      Placement(visible = true, transformation(origin = {-26, 22}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sources.Torque torque annotation(
+      Placement(visible = true, transformation(extent = {{-92, 12}, {-72, 32}}, rotation = 0)));
+    Support.PropDriver driver(CycleFileName = "NEDC.txt", extrapolation = Modelica.Blocks.Types.Extrapolation.Periodic, k = 1000, yMax = 100000.0) annotation(
+      Placement(visible = true, transformation(extent = {{-130, 12}, {-110, 32}}, rotation = 0)));
+    Modelica.Mechanics.Translational.Sensors.PowerSensor mP2 annotation(
+      Placement(visible = true, transformation(origin = {104, 12}, extent = {{-10, -10}, {10, 10}}, rotation = -90)));
+    Modelica.Mechanics.Translational.Sensors.PowerSensor mP1 annotation(
+      Placement(visible = true, transformation(origin = {28, 22}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));
+    Modelica.Mechanics.Translational.Components.Mass mass(m = 16000, s(fixed = true), v(fixed = true)) annotation(
+      Placement(visible = true, transformation(extent = {{46, 12}, {66, 32}}, rotation = 0)));
+    Modelica.Mechanics.Translational.Sensors.SpeedSensor velSens annotation(
+      Placement(visible = true, transformation(origin = {78, -8}, extent = {{-10, -10}, {10, 10}}, rotation = 270)));
+    Modelica.Mechanics.Rotational.Components.IdealRollingWheel wheel(radius = 0.5715) annotation(
+      Placement(visible = true, transformation(extent = {{-8, 12}, {12, 32}}, rotation = 0)));
+    Modelica.Mechanics.Rotational.Sensors.SpeedSensor motSpeed annotation(
+      Placement(transformation(extent = {{-10, -10}, {10, 10}}, rotation = -90, origin = {-40, 0})));
+    Modelica.Mechanics.Rotational.Components.Inertia inertia(J = 5) annotation(
+      Placement(transformation(extent = {{-64, 12}, {-44, 32}})));
+    Modelica.Blocks.Nonlinear.Limiter to_mP1Pos(uMax = 1e99, uMin = 0) annotation(
+      Placement(transformation(extent = {{26, -20}, {46, 0}})));
+    Modelica.Blocks.Nonlinear.Limiter to_mP1Neg(limitsAtInit = true, uMax = 0, uMin = -1e99) annotation(
+      Placement(visible = true, transformation(origin = {-8, -10}, extent = {{10, -10}, {-10, 10}}, rotation = 0)));
+  equation
+    connect(to_mP1Neg.u, mP1.power) annotation(
+      Line(points = {{4, -10}, {20, -10}, {20, 11}, {20, 11}}, color = {0, 0, 127}));
+    der(enP2) = mP2.power;
+    der(enP1) = mP1.power;
+    der(enP1Pos) = to_mP1Pos.y;
+    der(enP1Neg) = -to_mP1Neg.y;
+    connect(torque.tau, driver.tauRef) annotation(
+      Line(points = {{-94, 22}, {-109, 22}}, color = {0, 0, 127}));
+    connect(driver.V, velSens.v) annotation(
+      Line(points = {{-120, 10.8}, {-120, -34}, {78, -34}, {78, -19}}, color = {0, 0, 127}));
+    connect(mP1.flange_a, wheel.flangeT) annotation(
+      Line(points = {{18, 22}, {12, 22}}, color = {0, 127, 0}));
+    connect(gear.flange_b, wheel.flangeR) annotation(
+      Line(points = {{-16, 22}, {-16, 22}, {-8, 22}}));
+    connect(velSens.flange, mP2.flange_a) annotation(
+      Line(points = {{78, 2}, {78, 22}, {104, 22}}, color = {0, 127, 0}));
+    connect(mass.flange_a, mP1.flange_b) annotation(
+      Line(points = {{46, 22}, {38, 22}}, color = {0, 127, 0}));
+    connect(mP2.flange_a, mass.flange_b) annotation(
+      Line(points = {{104, 22}, {66, 22}}, color = {0, 127, 0}));
+    connect(dragF.flange, mP2.flange_b) annotation(
+      Line(points = {{104, -18}, {104, 2}}, color = {0, 127, 0}));
+    connect(motSpeed.flange, gear.flange_a) annotation(
+      Line(points = {{-40, 10}, {-40, 22}, {-36, 22}}, color = {0, 0, 0}));
+    connect(inertia.flange_a, torque.flange) annotation(
+      Line(points = {{-64, 22}, {-68, 22}, {-72, 22}}, color = {0, 0, 0}));
+    connect(inertia.flange_b, gear.flange_a) annotation(
+      Line(points = {{-44, 22}, {-36, 22}}, color = {0, 0, 0}));
+/*   
+   */
+    connect(to_mP1Pos.u, mP1.power) annotation(
+      Line(points = {{24, -10}, {20, -10}, {20, 11}}, color = {0, 0, 127}));
+    annotation(
+      experimentSetupOutput(derivatives = false),
+      Documentation(info = "<html>
+             <p>Modello Semplice di veicolo elettrico usato per l&apos;esercitazione di SEB a.a. 2015-16.</p>
+              <p>OM 23136 OK </p>
+             </html>"),
+      Commands,
+      Icon(coordinateSystem(extent = {{-120, -60}, {120, 60}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2})),
+      experiment(StartTime = 0, StopTime = 1500, Tolerance = 0.0001, Interval = 0.75),
+      Diagram(coordinateSystem(extent = {{-140, -40}, {120, 60}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Text(extent = {{-82, 46}, {56, 42}}, lineColor = {0, 0, 255}, textString = "Sort1: 150s;  NEDC: 1184 s;  WLTC3: 1800 s.")}));
+  end EVbasic;
+
+  package Support
+    model PropDriver "Simple Proportional controller driver"
+      parameter String CycleFileName = "MyCycleName.txt" "Drive Cycle Name ex: \"sort1.txt\"";
+      parameter Real k(unit = "N.m/(m/s)") "Controller gain";
+      parameter Real yMax(unit = "N.m") = 1000000.0 "Max output value (absolute)";
+      parameter Modelica.Blocks.Types.Extrapolation extrapolation = Modelica.Blocks.Types.Extrapolation.HoldLastPoint;
+      Modelica.Blocks.Interfaces.RealInput V annotation(
+        Placement(transformation(extent = {{-14, -14}, {14, 14}}, rotation = 90, origin = {0, -114}), iconTransformation(extent = {{-12, -12}, {12, 12}}, rotation = 90, origin = {0, -112})));
+      Modelica.Blocks.Interfaces.RealOutput tauRef(unit = "N.m") annotation(
+        Placement(transformation(extent = {{100, -10}, {120, 10}}), iconTransformation(extent = {{100, -10}, {120, 10}})));
+      Modelica.Blocks.Sources.CombiTimeTable driveCyc(columns = {2}, extrapolation = extrapolation, fileName = CycleFileName, tableName = "Cycle", tableOnFile = true) annotation(
+        Placement(transformation(extent = {{-86, -10}, {-66, 10}})));
+      //    fileName=Modelica.Utilities.Files.loadResource("modelica://EVPkg1718eng/"+CycleFileName))   annotation (
+      Modelica.Blocks.Math.UnitConversions.From_kmh from_kmh annotation(
+        Placement(transformation(extent = {{-48, -10}, {-28, 10}})));
+      Modelica.Blocks.Math.Feedback feedback annotation(
+        Placement(transformation(extent = {{-10, -10}, {10, 10}})));
+      Modelica.Blocks.Math.Gain gain(k = k) annotation(
+        Placement(transformation(extent = {{32, -10}, {52, 10}})));
+      Modelica.Blocks.Nonlinear.Limiter limiter(uMax = yMax) annotation(
+        Placement(transformation(extent = {{70, -10}, {90, 10}})));
+    equation
+      connect(from_kmh.u, driveCyc.y[1]) annotation(
+        Line(points = {{-50, 0}, {-65, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+      connect(from_kmh.y, feedback.u1) annotation(
+        Line(points = {{-27, 0}, {-8, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+      connect(feedback.u2, V) annotation(
+        Line(points = {{0, -8}, {0, -114}, {1.77636e-015, -114}}, color = {0, 0, 127}, smooth = Smooth.None));
+      connect(feedback.y, gain.u) annotation(
+        Line(points = {{9, 0}, {30, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+      connect(gain.y, limiter.u) annotation(
+        Line(points = {{53, 0}, {68, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+      connect(tauRef, limiter.y) annotation(
+        Line(points = {{110, 0}, {91, 0}}, color = {0, 0, 127}, smooth = Smooth.None));
+      annotation(
+        Diagram(coordinateSystem(preserveAspectRatio = false, extent = {{-100, -100}, {100, 100}}), graphics),
+        Documentation(info = "<html>
+            <p>Modello semplice di pilota.</p>
+            <p>Esso contiene al suo interno il ciclo di riferimento, che insegue attraverso un regolatore solo proporzionale.</p>
+            </html>"),
+        Icon(coordinateSystem(extent = {{-100, -100}, {100, 100}}, preserveAspectRatio = false, initialScale = 0.1, grid = {2, 2}), graphics = {Rectangle(fillColor = {255, 255, 255}, fillPattern = FillPattern.Solid, extent = {{-100, 100}, {100, -100}}), Ellipse(fillColor = {255, 213, 170}, fillPattern = FillPattern.Solid, extent = {{-23, 26}, {-12, 0}}, endAngle = 360), Text(origin = {0, 1.81063}, lineColor = {0, 0, 255}, extent = {{-104, 142.189}, {98, 104}}, textString = "%name"), Polygon(fillColor = {215, 215, 215}, pattern = LinePattern.None, fillPattern = FillPattern.Solid, points = {{-22, -56}, {-42, -84}, {-16, -84}, {16, -84}, {-22, -56}}), Polygon(fillColor = {135, 135, 135}, pattern = LinePattern.None, fillPattern = FillPattern.Solid, points = {{-32, 44}, {-62, -48}, {-30, -48}, {-30, -48}, {-32, 44}}, smooth = Smooth.Bezier), Polygon(fillColor = {135, 135, 135}, pattern = LinePattern.None, fillPattern = FillPattern.Solid, points = {{-68, -32}, {-14, -86}, {10, -46}, {0, -46}, {-68, -32}}, smooth = Smooth.Bezier), Polygon(fillColor = {175, 175, 175}, fillPattern = FillPattern.Solid, points = {{-22, 14}, {-30, 10}, {-40, -44}, {2, -42}, {2, -30}, {0, 6}, {-22, 14}}, smooth = Smooth.Bezier), Ellipse(fillColor = {255, 213, 170}, fillPattern = FillPattern.Solid, extent = {{-30, 48}, {-3, 14}}, endAngle = 360), Polygon(pattern = LinePattern.None, fillPattern = FillPattern.Solid, points = {{-38, 38}, {-16, 54}, {-2, 40}, {4, 40}, {6, 40}, {-38, 38}}, smooth = Smooth.Bezier), Polygon(fillColor = {95, 95, 95}, fillPattern = FillPattern.Solid, points = {{30, -40}, {-32, -24}, {-36, -40}, {-24, -54}, {30, -40}}, smooth = Smooth.Bezier), Polygon(fillPattern = FillPattern.Solid, points = {{42, -66}, {36, -80}, {48, -74}, {52, -68}, {50, -64}, {42, -66}}, smooth = Smooth.Bezier), Line(points = {{48, -10}, {26, 4}, {26, 4}}, thickness = 0.5), Line(points = {{20, -6}, {34, 14}, {34, 14}}, thickness = 0.5), Polygon(fillColor = {255, 213, 170}, fillPattern = FillPattern.Solid, points = {{28, 8}, {32, 12}, {28, 6}, {34, 10}, {30, 6}, {34, 8}, {30, 4}, {26, 6}, {34, 4}, {26, 4}, {26, 6}, {28, 8}, {28, 8}, {26, 6}, {26, 6}, {26, 6}, {28, 12}, {28, 10}, {28, 8}}, smooth = Smooth.Bezier), Polygon(fillColor = {175, 175, 175}, fillPattern = FillPattern.Solid, points = {{-18, 4}, {28, 10}, {26, 2}, {-16, -12}, {-20, -12}, {-24, -2}, {-18, 4}}, smooth = Smooth.Bezier), Polygon(fillColor = {215, 215, 215}, fillPattern = FillPattern.Solid, points = {{72, -2}, {48, -2}, {36, -22}, {58, -82}, {72, -82}, {72, -2}}), Polygon(fillColor = {95, 95, 95}, fillPattern = FillPattern.Solid, points = {{49, -90}, {17, -36}, {7, -40}, {-1, -46}, {49, -90}}, smooth = Smooth.Bezier), Line(points = {{-7, 35}, {-3, 33}}), Line(points = {{-9, 22}, {-5, 22}}), Line(points = {{-7, 35}, {-3, 35}}), Text(extent = {{-82, 98}, {94, 58}}, lineColor = {238, 46, 47}, textString = "%CycleFileName")}));
+    end PropDriver;
+
+    model DragForce "Vehicle rolling and aerodinamical drag force"
+      import Modelica.Constants.g_n;
+      extends Modelica.Mechanics.Translational.Interfaces.PartialElementaryOneFlangeAndSupport2;
+      extends Modelica.Mechanics.Translational.Interfaces.PartialFriction;
+      Modelica.SIunits.Force f "Total drag force";
+      Modelica.SIunits.Velocity v "vehicle velocity";
+      Modelica.SIunits.Acceleration a "Absolute acceleration of flange";
+      Real Sign;
+      parameter Modelica.SIunits.Mass m "vehicle mass";
+      parameter Modelica.SIunits.Density rho(start = 1.226) "air density";
+      parameter Modelica.SIunits.Area S "vehicle cross area";
+      parameter Real fc(start = 0.01) "rolling friction coefficient";
+      parameter Real Cx "aerodinamic drag coefficient";
+      final parameter Real A = fc * m * g_n;
+      final parameter Real B = 1 / 2 * rho * S * Cx;
+      final parameter Real mu[:, 2] = [0, 1];
+      Real debug = f - B * v ^ 2 * Sign;
+      // Constant auxiliary variable
+    equation
+//  s = flange.s;
+      v = der(s);
+      a = der(v);
+// Le seguenti definizioni seguono l'ordine e le richieste del modello "PartialFriction" di
+// Modelica.Mechanics.Translational.Interfaces"
+      v_relfric = v;
+      a_relfric = a;
+      f0 = A "Friction force for v_relfric=0 and forward sliding";
+      f0_max = A "Maximum friction force for v_relfric=0 and locked";
+      free = false "true when there is not wheel-road contact (never!)";
+// Ora il calcolo di f, e la sua attribuzione alla flangia:
+      flange.f - f = 0;
+// friction force
+      if v > 0 then
+        Sign = 1;
+      else
+        Sign = -1;
+      end if;
+//La seguente equazione uguaglia la drag force f alla forza applicata se siamo in locked, altrimenti al termine A
+      f - B * v ^ 2 * Sign = if locked then sa * unitForce else f0 * (if startForward then Modelica.Math.Vectors.interpolate(mu[:, 1], mu[:, 2], v) else if startBackward then -Modelica.Math.Vectors.interpolate(mu[:, 1], mu[:, 2], -v) else if pre(mode) == Forward then Modelica.Math.Vectors.interpolate(mu[:, 1], mu[:, 2], v) else -Modelica.Math.Vectors.interpolate(mu[:, 1], mu[:, 2], -v));
+      annotation(
+        Documentation(info = "<html>
+            <p>This component modesl the total (rolling and aerodynamic vehicle drag resistance: </p>
+            <p>F=fc*m*g+(1/2)*rho*Cx*S*v^2</p>
+            <p>It models reliably the stuck phase. Based on Modelica-Intrerfaces.PartialFriction model</p>
+            </html>"),
+        Icon(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics = {Polygon(points = {{-98, 10}, {22, 10}, {22, 41}, {92, 0}, {22, -41}, {22, -10}, {-98, -10}, {-98, 10}}, lineColor = {0, 127, 0}, fillColor = {215, 215, 215}, fillPattern = FillPattern.Solid), Line(points = {{-42, -50}, {87, -50}}, color = {0, 0, 0}), Polygon(points = {{-72, -50}, {-41, -40}, {-41, -60}, {-72, -50}}, lineColor = {0, 0, 0}, fillColor = {128, 128, 128}, fillPattern = FillPattern.Solid), Line(points = {{-90, -90}, {-70, -88}, {-50, -82}, {-30, -72}, {-10, -58}, {10, -40}, {30, -18}, {50, 8}, {70, 38}, {90, 72}}, color = {0, 0, 255}, thickness = 0.5), Text(extent = {{-82, 90}, {80, 50}}, lineColor = {0, 0, 255}, textString = "%name")}),
+        Diagram(coordinateSystem(preserveAspectRatio = true, extent = {{-100, -100}, {100, 100}}), graphics));
+    end DragForce;
+  end Support;
+  annotation(
+    uses(Modelica(version = "3.2.2")));
+end test;

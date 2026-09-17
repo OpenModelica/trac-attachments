@@ -1,0 +1,4 @@
+loadModel(Modelica);
+getErrorString();
+getInheritedClasses(Modelica.Media.Air.ReferenceMoistAir);
+getErrorString();

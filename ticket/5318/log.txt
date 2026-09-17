@@ -1,0 +1,228 @@
+
+C:\workspace\modelica_vehicle\AltairVehicleLibraries\scripts>buildFMU.cmd AltairVehicleTesting.Vehicles.VehicleMacP VehicleMacP
+15:16
+true
+true
+""
+"Notification: Automatically loaded package Modelica 3.2.2 due to uses annotation.
+Notification: Automatically loaded package Complex 3.2.2 due to uses annotation.
+Notification: Automatically loaded package ModelicaServices 3.2.2 due to uses annotation.
+Notification: Automatically loaded package VehicleInterfaces 1.2.4 due to uses annotation.
+[C:/workspace/modelica_vehicle/AltairVehicleLibraries/AltairVehicle/Chassis.mo:424:174-424:187:writable] Warning: Non-array modification 'false' for array component, possibly due to missing 'each'.
+[C:/workspace/modelica_vehicle/AltairVehicleLibraries/AltairVehicle/Chassis.mo:424:216-424:229:writable] Warning: Non-array modification 'false' for array component, possibly due to missing 'each'.
+Warning: The initial conditions are not fully specified. For more information set -d=initialization. In OMEdit Tools->Options->Simulation->OMCFlags, in OMNotebook call setCommandLineOptions("-d=initialization").
+Warning: There are iteration variables with default zero start attribute. For more information set -d=initialization. In OMEdit Tools->Options->Simulation->OMCFlags, in OMNotebook call setCommandLineOptions("-d=initialization").
+Error: Error building simulator. Build log: gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_FMU.o VehicleMacP_FMU.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP.o VehicleMacP.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_functions.o VehicleMacP_functions.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_records.o VehicleMacP_records.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_01exo.o VehicleMacP_01exo.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_02nls.o VehicleMacP_02nls.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_03lsy.o VehicleMacP_03lsy.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_04set.o VehicleMacP_04set.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_05evt.o VehicleMacP_05evt.c
+In file included from VehicleMacP_FMU.c:54:0:
+include/fmi2/fmu2_model_interface.c: In function 'omc_assert_fmi_common':
+include/fmi2/fmu2_model_interface.c:162:16: warning: passing argument 1 of 'GC_vasprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+   GC_vasprintf(&str, msg, args);
+                ^
+In file included from include/openmodelica_func.h:52:0,
+                 from VehicleMacP_FMU.c:10:
+include/util/modelica_string.h:71:5: note: expected 'const char **' but argument is of type 'char **'
+ int GC_vasprintf(const char **strp, const char *fmt, va_list ap);
+     ^
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_06inz.o VehicleMacP_06inz.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_07dly.o VehicleMacP_07dly.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_08bnd.o VehicleMacP_08bnd.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_09alg.o VehicleMacP_09alg.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_10asr.o VehicleMacP_10asr.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_11mix.o VehicleMacP_11mix.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_12jac.o VehicleMacP_12jac.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_13opt.o VehicleMacP_13opt.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_14lnz.o VehicleMacP_14lnz.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_15syn.o VehicleMacP_15syn.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_16dae.o VehicleMacP_16dae.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_17inl.o VehicleMacP_17inl.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_init_fmu.o VehicleMacP_init_fmu.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_06inz_part0.o VehicleMacP_06inz_part0.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_06inz_part1.o VehicleMacP_06inz_part1.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_06inz_part2.o VehicleMacP_06inz_part2.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_08bnd_part3.o VehicleMacP_08bnd_part3.c
+gcc -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse   -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o VehicleMacP_08bnd_part4.o VehicleMacP_08bnd_part4.c
+g++ -shared -I. -o VehicleMacP.dll VehicleMacP_FMU.o  VehicleMacP.o VehicleMacP_functions.o VehicleMacP_records.o VehicleMacP_01exo.o VehicleMacP_02nls.o VehicleMacP_03lsy.o VehicleMacP_04set.o VehicleMacP_05evt.o VehicleMacP_06inz.o VehicleMacP_07dly.o VehicleMacP_08bnd.o VehicleMacP_09alg.o VehicleMacP_10asr.o VehicleMacP_11mix.o VehicleMacP_12jac.o VehicleMacP_13opt.o VehicleMacP_14lnz.o VehicleMacP_15syn.o VehicleMacP_16dae.o VehicleMacP_17inl.o VehicleMacP_init_fmu.o VehicleMacP_06inz_part0.o VehicleMacP_06inz_part1.o VehicleMacP_06inz_part2.o VehicleMacP_08bnd_part3.o VehicleMacP_08bnd_part4.o  -Iinclude/ -Iinclude/fmi2 -I.    -DOMC_MODEL_PREFIX=VehicleMacP -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=2 -DOMC_NUM_NONLINEAR_SYSTEMS=4 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0 -L"C:/workspace/modelica_vehicle/AltairVehicleLibraries/AltairVehicleTesting"  "-LC:/OpenModelica//lib//omc" "-LC:/OpenModelica//lib/" "-L%APPDATA%/.openmodelica/binaries/Modelica" "-LC:/OpenModelica/lib/omlibrary/Modelica 3.2.2/Resources/Library/mingw64" "-LC:/OpenModelica/lib/omlibrary/Modelica 3.2.2/Resources/Library/win64" "-LC:/OpenModelica/lib/omlibrary/Modelica 3.2.2/Resources/Library" -lModelicaStandardTables -lModelicaIO -lModelicaMatIO -lzlib -Os -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse  -L"C:/OpenModelica//lib//omc" -Wl,-rpath,"C:/OpenModelica//lib//omc" -fopenmp -Wl,-Bstatic -lregex -ltre -lintl -liconv -lexpat -lomcgc -lpthread -loleaut32 -limagehlp -lhdf5 -lz -lszip -Wl,-Bdynamic  -Wl,-Bstatic -lSimulationRuntimeC -Wl,-Bdynamic -Wl,-Bstatic -lomcgc -lregex -ltre -lintl -liconv -lexpat -static-libgcc -luuid -loleaut32 -lole32 -limagehlp -lws2_32 -llis -lumfpack -lklu -lcolamd -lbtf -lamd  -lsundials_idas -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lquadmath -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lopenblas -lcminpack -Wl,-Bdynamic -lwsock32 -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic  -llis -Wl,--kill-at
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x195): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x205): undefined reference to `__imp_SlsSetToZero'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x3e8): undefined reference to `__imp_PrintSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x5c6): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x7ea): undefined reference to `__imp_SlsConvertDls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x7f3): undefined reference to `__imp_PrintSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x8f8): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x990): undefined reference to `__imp_SlsSetToZero'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xc09): undefined reference to `__imp_PrintSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xd63): undefined reference to `__imp_KINSetFuncNormTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xd72): undefined reference to `__imp_KINSetScaledStepTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xd83): undefined reference to `__imp_KINSetNumMaxIters'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xd96): undefined reference to `__imp_KINSetNoInitSetup'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xdc2): undefined reference to `__imp_N_VConst'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xdd0): undefined reference to `__imp_N_VWL2Norm'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xde4): undefined reference to `__imp_KINSetMaxNewtonStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0xfb7): undefined reference to `__imp_N_VNew_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1006): undefined reference to `__imp_NewDenseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1034): undefined reference to `__imp_SlsConvertDls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x10ad): undefined reference to `__imp_N_VInv'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x10b4): undefined reference to `__imp_N_VDestroy_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1102): undefined reference to `__imp_NewSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x11ef): undefined reference to `__imp_N_VNew_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x124b): undefined reference to `__imp_KINCreate'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1262): undefined reference to `__imp_KINSetErrHandlerFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1276): undefined reference to `__imp_KINSetInfoHandlerFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1284): undefined reference to `__imp_KINSetUserData'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1299): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x12ef): undefined reference to `__imp_KINKLU'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x132a): undefined reference to `__imp_KINSlsSetSparseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x13ac): undefined reference to `__imp_KINSetPrintLevel'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x13c8): undefined reference to `__imp_KINDense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1418): undefined reference to `__imp_KINDense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x144b): undefined reference to `__imp_KINDlsSetDenseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1489): undefined reference to `__imp_KINSlsSetSparseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x14af): undefined reference to `__imp_KINFree'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x14b6): undefined reference to `__imp_N_VDestroy_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x162f): undefined reference to `__imp_KINSetMaxSetupCalls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x167a): undefined reference to `__imp_KINGetNumNonlinSolvIters'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1926): undefined reference to `__imp_KINSol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1954): undefined reference to `__imp_KINSetNoInitSetup'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x19bb): undefined reference to `__imp_N_VWL2Norm'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1ab1): undefined reference to `__imp_KINGetFuncNorm'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1af0): undefined reference to `__imp_KINSetFuncNormTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1afe): undefined reference to `__imp_KINSetScaledStepTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1c3e): undefined reference to `__imp_KINGetNumBetaCondFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1cf0): undefined reference to `__imp_N_VProd'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1d13): undefined reference to `__imp_KINKLUReInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1d3e): undefined reference to `__imp_KINSlsSetSparseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(kinsolSolver.o):kinsolSolver.c:(.text+0x1ebf): undefined reference to `__imp_KINSetMaxSetupCalls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xe36): undefined reference to `__imp_N_VNew_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xe67): undefined reference to `__imp_KINCreate'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xec7): undefined reference to `__imp_KINSetUserData'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xed8): undefined reference to `__imp_KINSetConstraints'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xf07): undefined reference to `__imp_KINSetFuncNormTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xf19): undefined reference to `__imp_KINSetScaledStepTol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xf2b): undefined reference to `__imp_KINSetNumMaxIters'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xf4b): undefined reference to `__imp_KINSetMaxSetupCalls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xfa6): undefined reference to `__imp_KINSetPrintLevel'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0xfbf): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x1052): undefined reference to `__imp_KINDense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x1061): undefined reference to `__imp_KINSetNoInitSetup'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x108b): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x10a7): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x10c3): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x10df): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x10fb): undefined reference to `__imp_KINInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x14eb): undefined reference to `__imp_KINSpgmr'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x164f): undefined reference to `__imp_N_VDestroy_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x1670): undefined reference to `__imp_KINFree'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x192e): undefined reference to `__imp_KINSetMaxNewtonStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x1935): undefined reference to `__imp_KINSol'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x193c): undefined reference to `__imp_KINDense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x199c): undefined reference to `__imp_KINGetNumFuncEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x19d0): undefined reference to `__imp_KINDlsGetNumJacEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x19fc): undefined reference to `__imp_KINGetNumBetaCondFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(radau.o):radau.c:(.text+0x1aae): undefined reference to `__imp_KINSpilsGetNumJtimesEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x8f): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x19f): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2bb): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x4b4): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xb58): undefined reference to `__imp_IDAReInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xb6a): undefined reference to `__imp_IDAGetActualInitStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xb9c): undefined reference to `__imp_IDASetMaxNumStepsIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xbb5): undefined reference to `__imp_IDASetMaxNumJacsIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xbce): undefined reference to `__imp_IDASetMaxNumItersIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xbe5): undefined reference to `__imp_IDACalcIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xc08): undefined reference to `__imp_IDAGetNumNonlinSolvIters'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xc57): undefined reference to `__imp_IDASetLineSearchOffIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xcd3): undefined reference to `__imp_IDAGetConsistentIC'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xd5c): undefined reference to `__imp_IDASetInitStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xd83): undefined reference to `__imp_IDASetInitStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0xe7f): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x117b): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1229): undefined reference to `__imp_IDAGetCurrentStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x15e3): undefined reference to `__imp_IDAGetErrWeights'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x165e): undefined reference to `__imp_IDACreate'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1795): undefined reference to `__imp_N_VMake_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x17e9): undefined reference to `__imp_IDAInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1820): undefined reference to `__imp_N_VNew_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1870): undefined reference to `__imp_IDASetUserData'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x188c): undefined reference to `__imp_IDASetErrHandlerFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x19ca): undefined reference to `__imp_IDASVtolerances'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1a72): undefined reference to `__imp_IDASetMaxOrd'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1aa5): undefined reference to `__imp_N_VMake_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1d00): undefined reference to `__imp_IDADlsSetDenseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1de7): undefined reference to `__imp_IDAKLU'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1dfb): undefined reference to `__imp_NewSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1e8a): undefined reference to `__imp_IDAKLU'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1eae): undefined reference to `__imp_IDASlsSetSparseJacFn'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1f90): undefined reference to `__imp_IDASetId'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x1fdf): undefined reference to `__imp_IDASetInitStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2106): undefined reference to `__imp_IDARootInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x22ae): undefined reference to `__imp_IDADense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x23c0): undefined reference to `__imp_IDASptfqmr'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x23d7): undefined reference to `__imp_IDASpbcg'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x23ee): undefined reference to `__imp_IDASpgmr'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2409): undefined reference to `__imp_IDADense'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2495): undefined reference to `__imp_IDASetMaxErrTestFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x24bc): undefined reference to `__imp_N_VCloneVectorArray_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x256e): undefined reference to `__imp_IDASensInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x25aa): undefined reference to `__imp_IDASetNonlinConvCoef'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x25e4): undefined reference to `__imp_IDASetMaxConvFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x261e): undefined reference to `__imp_IDASetMaxNonlinIters'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2658): undefined reference to `__imp_IDASetSensParams'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2682): undefined reference to `__imp_IDASetSensDQMethod'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x26a3): undefined reference to `__imp_IDASensEEtolerances'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x26c7): undefined reference to `__imp_N_VCloneVectorArrayEmpty_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x26e8): undefined reference to `__imp_N_VSetArrayPointer_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2787): undefined reference to `__imp_IDASetMaxStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x27d6): undefined reference to `__imp_IDASetSuppressAlg'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2a70): undefined reference to `__imp_N_VDestroyVectorArray_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2a97): undefined reference to `__imp_N_VDestroy_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2ab0): undefined reference to `__imp_IDAFree'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2acf): undefined reference to `__imp_DestroySparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2b41): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2b6d): undefined reference to `__imp_SlsSetToZero'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2e88): undefined reference to `__imp_SlsAddMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2f3e): undefined reference to `__imp_PrintSparseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x2f51): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3012): undefined reference to `__imp_IDAGetCurrentStep'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x305f): undefined reference to `__imp_SlsSetToZero'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3228): undefined reference to `__imp_IDAGetErrWeights'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3604): undefined reference to `__imp_N_VNew_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x363e): undefined reference to `__imp_N_VGetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x36c2): undefined reference to `__imp_NewDenseMat'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x371c): undefined reference to `__imp_SlsConvertDls'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x37fe): undefined reference to `__imp_N_VDestroy_Serial'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x385a): undefined reference to `__imp_IDAReInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3911): undefined reference to `__imp_IDASensReInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x39c4): undefined reference to `__imp_IDASolve'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3b3a): undefined reference to `__imp_IDAReInit'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3c15): undefined reference to `__imp_IDAGetSens'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3c51): undefined reference to `__imp_IDAGetNumSteps'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3c8a): undefined reference to `__imp_IDAGetNumResEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3cc8): undefined reference to `__imp_IDADlsGetNumJacEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3d02): undefined reference to `__imp_IDAGetNumErrTestFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3d3c): undefined reference to `__imp_IDAGetNumNonlinSolvConvFails'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3e0b): undefined reference to `__imp_IDAGetNonlinSolvStats'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3e53): undefined reference to `__imp_IDAGetTolScaleFactor'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3e87): undefined reference to `__imp_IDAGetNumLinSolvSetups'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x3f31): undefined reference to `__imp_IDASetStopTime'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x4112): undefined reference to `__imp_N_VSetArrayPointer'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x4282): undefined reference to `__imp_IDASlsGetNumJacEvals'
+C:/OpenModelica//lib//omc\libSimulationRuntimeC.a(ida_solver.o):ida_solver.c:(.text+0x4388): undefined reference to `__imp_NewSparseMat'
+collect2.exe: error: ld returned 1 exit status
+Makefile:43: recipe for target 'nozip' failed
+make: *** [nozip] Error 1
+"
+{{"AltairVehicle","C:/workspace/modelica_vehicle/AltairVehicleLibraries/AltairVehicle"},{"Modelica","C:/OpenModelica/lib/omlibrary/Modelica 3.2.2"},{"Complex","C:/OpenModelica/lib/omlibrary"},{"ModelicaServices","C:/OpenModelica/lib/omlibrary/ModelicaServices 3.2.2"},{"VehicleInterfaces","C:/OpenModelica/lib/omlibrary/VehicleInterfaces 1.2.4"},{"AltairVehicleTesting","C:/workspace/modelica_vehicle/AltairVehicleLibraries/AltairVehicleTesting"}}
+15:18
+unzip:  cannot find either VehicleMacP.fmu or VehicleMacP.fmu.zip.
+[FATAL][FMUCHK] Cannot open FMU file (No such file or directory)
+Premere un tasto per continuare . . .
+
+C:\workspace\modelica_vehicle\AltairVehicleLibraries\scripts>

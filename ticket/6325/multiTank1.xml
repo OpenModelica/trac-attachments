@@ -1,0 +1,7 @@
+<?xml version="1.0"?> <!-- multiTank1.xml -->
+<dummyRoot> <!-- Root name can be any name -->
+  <multiTank>
+     <tankHeights>{30,20,10,0}</tankHeights>
+     <initialTankLevels>{10,0,0,0}</initialTankLevels>
+  </multiTank>
+</dummyRoot>

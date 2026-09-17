@@ -1,0 +1,33 @@
+getVersion(OpenModelica) 11:38:48:360
+"OpenModelica 1.14.0~dev-26567-g6d621c3" 11:38:48:362
+#s#; 0.007000; 0.007000; 'getVersion(OpenModelica)'
+
+getInstallationDirectoryPath() 11:38:48:362
+"/usr" 11:38:48:364
+#s#; 0.002000; 0.009000; 'getInstallationDirectoryPath()'
+
+cd("/tmp/OpenModelica_andrea/OMEdit/") 11:38:48:364
+"/tmp/OpenModelica_andrea/OMEdit" 11:38:48:365
+#s#; 0.001000; 0.010000; 'cd("/tmp/OpenModelica_andrea/OMEdit/")'
+
+getModelicaPath() 11:38:48:366
+"/usr/lib/omlibrary:/home/andrea/.openmodelica/libraries/" 11:38:48:367
+#s#; 0.002000; 0.012000; 'getModelicaPath()'
+
+errors:=getMessagesStringInternal() 11:38:48:368
+{} 11:38:48:407
+#s#; 0.038000; 0.050000; 'errors:=getMessagesStringInternal()'
+
+size(errors,1) 11:38:48:407
+0 11:38:48:410
+#s#; 0.002000; 0.052000; 'size(errors,1)'
+
+numProcessors() 11:38:48:412
+8 11:38:48:414
+#s#; 0.002000; 0.054000; 'numProcessors()'
+
+cd("") 11:38:48:415
+"/tmp/OpenModelica_andrea/OMEdit" 11:38:48:417
+#s#; 0.002000; 0.056000; 'cd("")'
+
+getAvailableMatchingAlgorithms() 11:38:48:464

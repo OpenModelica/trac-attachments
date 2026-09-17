@@ -1,0 +1,107 @@
+make -j8 -f OpenIPSL.Examples.Machines.PSSE.GENCLS.makefile
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS.o OpenIPSL.Examples.Machines.PSSE.GENCLS.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.o OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_records.o OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_01exo.o OpenIPSL.Examples.Machines.PSSE.GENCLS_01exo.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_02nls.o OpenIPSL.Examples.Machines.PSSE.GENCLS_02nls.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_03lsy.o OpenIPSL.Examples.Machines.PSSE.GENCLS_03lsy.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_04set.o OpenIPSL.Examples.Machines.PSSE.GENCLS_04set.c
+clang  -Os -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers     -I"/usr/bin/../include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=OpenIPSL_Examples_Machines_PSSE_GENCLS -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=2 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o OpenIPSL.Examples.Machines.PSSE.GENCLS_05evt.o OpenIPSL.Examples.Machines.PSSE.GENCLS_05evt.c
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_05evt.c:2:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_04set.c:2:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c:5:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+1 error generated.
+1 error generated.
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS.c:7:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_04set.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_05evt.o] Error 1
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:2:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c:80:3: error: use of undeclared identifier 'OpenIPSL_Types_ComplexPower'; did you mean 'omc_OpenIPSL_Types_ComplexPower'?
+  OpenIPSL_Types_ComplexPower* ths = (OpenIPSL_Types_ComplexPower*)(v_ths);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  omc_OpenIPSL_Types_ComplexPower
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:29: note: 'omc_OpenIPSL_Types_ComplexPower' declared here
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+                            ^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c:80:32: error: use of undeclared identifier 'ths'
+  OpenIPSL_Types_ComplexPower* ths = (OpenIPSL_Types_ComplexPower*)(v_ths);
+                               ^
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_02nls.c:2:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:49:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower(threadData_t *threadData, modelica_real omc_re, modelica_real omc_im)
+^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c:80:67: error: expected expression
+  OpenIPSL_Types_ComplexPower* ths = (OpenIPSL_Types_ComplexPower*)(v_ths);
+                                                                  ^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_records.c:80:39: error: use of undeclared identifier 'OpenIPSL_Types_ComplexPower'; did you mean 'boxptr_OpenIPSL_Types_ComplexPower'?
+  OpenIPSL_Types_ComplexPower* ths = (OpenIPSL_Types_ComplexPower*)(v_ths);
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                      boxptr_OpenIPSL_Types_ComplexPower
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:140:19: note: 'boxptr_OpenIPSL_Types_ComplexPower' declared here
+modelica_metatype boxptr_OpenIPSL_Types_ComplexPower(threadData_t *threadData, modelica_metatype _re, modelica_metatype _im);
+                  ^
+5 errors generated.
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_records.o] Error 1
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:51:3: error: use of undeclared identifier 'OpenIPSL_Types_ComplexPower'; did you mean 'omc_OpenIPSL_Types_ComplexPower'?
+  OpenIPSL_Types_ComplexPower tmp1;
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  omc_OpenIPSL_Types_ComplexPower
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:29: note: 'omc_OpenIPSL_Types_ComplexPower' declared here
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+                            ^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:52:3: error: use of undeclared identifier 'tmp1'
+  tmp1._re = omc_re;
+  ^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:53:3: error: use of undeclared identifier 'tmp1'
+  tmp1._im = omc_im;
+  ^
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:54:10: error: use of undeclared identifier 'tmp1'
+  return tmp1;
+         ^
+1 error generated.
+OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.c:59:26: error: use of undeclared identifier 'OpenIPSL_Types_ComplexPower__desc'
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS.o] Error 1
+  return mmc_mk_box3(3, &OpenIPSL_Types_ComplexPower__desc, _re, _im);
+                         ^
+7 errors generated.
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_03lsy.c:2:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.o] Error 1
+1 error generated.
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_03lsy.o] Error 1
+1 error generated.
+In file included from OpenIPSL.Examples.Machines.PSSE.GENCLS_01exo.c:2:
+In file included from ./OpenIPSL.Examples.Machines.PSSE.GENCLS_model.h:24:
+./OpenIPSL.Examples.Machines.PSSE.GENCLS_functions.h:137:1: error: unknown type name 'OpenIPSL_Types_ComplexPower'
+OpenIPSL_Types_ComplexPower omc_OpenIPSL_Types_ComplexPower (threadData_t *threadData, modelica_real omc_re, modelica_real omc_im);
+^
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_02nls.o] Error 1
+1 error generated.
+make: *** [<builtin>: OpenIPSL.Examples.Machines.PSSE.GENCLS_01exo.o] Error 1
+Compilation process failed. Exited with code 2.

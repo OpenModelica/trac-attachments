@@ -1,0 +1,7 @@
+loadFile("P.mo");
+getErrorString();
+getComponents(P.N);
+getErrorString();
+setCommandLineOptions("-d=newInst,nfAPI");
+getErrorString();
+getComponents(P.N);

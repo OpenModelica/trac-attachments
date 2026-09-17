@@ -1,0 +1,1 @@
+info:    Logging information has been saved to "/tmp/OpenModelica_andrea/OMEdit//omslog.txt"

@@ -1,0 +1,10 @@
+loadFile("Simulator.mo");
+getErrorString();
+echo(false);
+s1 := list(Simulator);
+echo(true);
+deleteClass(Simulator);
+writeFile("Simulator1.mo",s1);
+getErrorString();
+loadFile("Simulator1.mo");
+getErrorString();

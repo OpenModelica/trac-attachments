@@ -1,0 +1,14 @@
+loadModel(Modelica);
+getErrorString();
+loadFile("package.mo");
+getErrorString();
+setCommandLineOptions("-d=nfAPI");
+getErrorString();
+
+print("\n\nWrong results from getComponents\n\n");
+getComponents(WasteWater.Examples.ASM1SmallPlantRun);
+getErrorString();
+
+print("\n\nCalling getComponents second time gives correct results\n\n");
+getComponents(WasteWater.Examples.ASM1SmallPlantRun);
+getErrorString();

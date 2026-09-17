@@ -1,0 +1,26 @@
+s1 := "model A
+  Real x(
+    start = 0,
+    fixed = true)
+    \"variable comment\";
+end A;";
+getErrorString();
+loadString(s1);
+getErrorString();
+copyClass(A, "B");
+getErrorString();
+answer := "model B
+  Real x(
+    start = 0,
+    fixed = true)
+    \"variable comment\";
+end B;";
+s2 := listFile(B);
+getErrorString();
+if answer<>diffModelicaFileListings(s1, s2, OpenModelica.Scripting.DiffFormat.plain) then
+  print("\nFailed \n");
+  print("\nStart model:\n\n" + s1 + "\n");
+  print("\nCopy model to top level:\n\n" + s2 + "\n");
+  print("\nDiff:\n\n" + diffModelicaFileListings(s1, s2) + "\n");
+  print(getErrorString());
+end if;

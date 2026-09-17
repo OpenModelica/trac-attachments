@@ -1,0 +1,11 @@
+Caught signal 11 (SIGSEGV)
+OMEdit(_ZN8OMCProxy30getAvailableMatchingAlgorithmsEv+0x10) [0x6581da]
+OMEdit(_ZN22TranslationFlagsWidgetC2EP7QWidget+0xf5) [0x838261]
+OMEdit(_ZN14SimulationPageC2EP13OptionsDialog+0x9b) [0x76263f]
+OMEdit(_ZN13OptionsDialogC1EP7QWidget+0x45c) [0x727cca]
+OMEdit(_ZN13OptionsDialog6createEv+0x28) [0x727840]
+OMEdit(_ZN10MainWindow15setUpMainWindowEP12threadData_s+0x43b) [0x54de7d]
+OMEdit(_ZN17OMEditApplicationC2ERiPPcP12threadData_s+0x104b) [0x92fdbf]
+OMEdit(main+0x142) [0x52fb88]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7fe6fa776830]
+OMEdit(_start+0x29) [0x52f199]

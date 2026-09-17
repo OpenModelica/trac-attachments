@@ -1,0 +1,18 @@
+loadFile("package.mo");
+getErrorString();
+getClassNames();
+getErrorString();
+getClassNames(Test);
+getErrorString();
+s := getSourceFile(Test);
+loadString("within; package Test
+  extends Modelica.Icons.Package;
+  // test 
+  // test comment
+end Test;
+",s,"UTF-8",true);
+getErrorString();
+getClassNames(Test);
+getErrorString();
+getClassNames();
+getErrorString();

@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+getClassNames(Modelica.Mechanics.MultiBody.World);
+getErrorString();
+getClassInformation(Modelica.Mechanics.MultiBody.World.gravityAcceleration);
+getErrorString();

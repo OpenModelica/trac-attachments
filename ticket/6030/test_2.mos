@@ -1,0 +1,16 @@
+setCommandLineOptions("-d=newInst"); getErrorString();
+loadModel(Modelica); getErrorString();
+loadFile("package.mo"); getErrorString();
+// first simulation with a=5
+writeFile("Resources/Parameters.txt", "a=5"); getErrorString();
+simulate(ParametersTest.M); getErrorString();
+val(config.a); getErrorString();
+closeSimulationResultFile();
+deleteFile("ParametersTest.M_res.mat"); getErrorString();
+writeFile("Resources/Parameters.txt", "a=3"); getErrorString();
+// resimulate with a=3
+system("./ParametersTest.M"); getErrorString();
+// for windows use this:
+// system("ParametersTest.M.exe"); getErrorString();
+val(config.a); getErrorString();
+

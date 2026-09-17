@@ -1,0 +1,169 @@
+;;************************************************ STATIC LIBRARY CASE FILE LOCATION *************************************************
+;;************************************************ LIBRARY LOADING IT IS WORKING ****************************************
+;;************************************************ BUT THE FMU INSTANTIATION FAILS ****************************************
+;;************************************************* SOMETIMES WE POINT TO THE NULL POINTER *******************************************
+;;******************************** DETAIL : WE ACCESS THE LIBRARY AND FUNCTIONS POINTERS BUT NO INSTANTIATION OF THE ME FMU   ***************
+;;**************************************** WE EVEN CAN PARAMETRIZE THE CALL BACK FUNCTIONS ***********************************
+;; ************************** BUT THE FMU OBJECT INSTANTIATION IS FROZEN ******************************
+
+
+I have tried to decompose the model exchange instantiation method into its intermediate stages.
+Starting from the point where I already have the fmu-information data from the access path to the
+binary location.
+Notice that here this is a static compilation.
+
+At this point the object f-i is the fmu-info object.
+FMI> (defparameter f-i fmu-info)
+F-I
+
+;;************************************************ STATIC LIBRARY CASE FILE LOCATION *************************************************
+We then try to load the library by first the location of the library .... here static format
+
+FMI> (defparameter lib-dir-content (directory
+			  (concatenate
+			   'string
+			   (namestring (ldp f-i))
+			   "*"
+			   *PROBE-EXT*)))
+LIB-DIR-CONTENT
+FMI> lib-dir-content
+(#P"/home/frederic/quicklisp/local-projects/cl-fmi/test/FirstOrderStat/unzip-3763847132/binaries/linux64/Modelica_Blocks_Continuous_FirstOrder.so")
+
+
+;;************************************************ LIBRARY LOADING IT IS WORKING ****************************************
+We then create the model exchange object instance.
+Here is the common lisp cffi way of doing it ... notice that the last two parameters of the fmi2Instantiate function are set to 0 0.
+The old fmu working case accepts this restriction.
+
+In our test here 
+
+;;************************************************ BUT THE FMU INSTANTIATION FAILS ****************************************
+FMI> (mapcar #'cffi:load-foreign-library
+	    lib-dir-content)
+(#<CFFI:FOREIGN-LIBRARY MODELICA_BLOCKS_CONTINUOUS_FIRSTORDER.SO-1056 "Modelica_Blocks_Continuous_FirstOrder.so">)
+FMI> (cffi:with-foreign-object (cbf 'fmi2CallbackFunctions)
+    (setf (cffi:foreign-slot-value cbf
+				   'fmi2CallbackFunctions
+				   'allocateMemory)
+	  calloc-function-pointer)
+    (setf (cffi:foreign-slot-value cbf
+				   'fmi2CallbackFunctions
+				   'freeMemory)
+	  free-function-pointer)
+    (setf (cffi:foreign-slot-value cbf 'fmi2CallbackFunctions
+				   'stepFinished)
+	  (cffi:null-pointer))
+    (setf (cffi:foreign-slot-value cbf
+				   'fmi2CallbackFunctions
+				   'componentEnvironment)
+	  (cffi:null-pointer))
+    (make-instance 'instance-me
+		   :p (fmi2Instantiate
+		       (mn (md f-i))
+		       :fmi2ModelExchange
+		       (g (md f-i))
+		       (string-right-trim "/"
+					  (namestring (car (directory (ldp f-i)))))
+		       cbf
+		       0
+		       0 )
+		   :i f-i))
+#<INSTANCE-ME {10025F25A3}>
+
+WE HAVE A POINTER !!!!! 
+;;************************************************* SOMETIMES WE POINT TO THE NULL POINTER *******************************************
+I then can assign a symbol to it and try the process of talking to it.
+But in fact the pointer to the callback function is null !!!
+FMI> (defparameter fmu-test #<INSTANCE-ME {10025F25A3}>)
+FMU-TEST
+FMI> (fmi2reset (p fmu-test))
+:FMI2ERROR
+FMI> (p fmu-test)
+#.(SB-SYS:INT-SAP #X00000000)
+
+;;***********************************************************************************************************************************************
+;;******************************** DETAIL : WE ACCESS THE LIBRARY AND FUNCTIONS POINTERS BUT NO INSTANTIATION OF THE ME FMU   ***************
+;;***********************************************************************************************************************************************
+DO I REALLY ACCESS THE LIBRARY ?
+Here is a detailed step by step definition of the fmu callback function object.
+And you can see that I managed to get a non-null pointer for each function.
+The callback functions pointer is cbf-fmu 
+
+FMI> (defparameter cbam-fmu (cffi:foreign-alloc 'fmi2CallbackAllocateMemory))
+CBAM-FMU
+FMI> CBAM-FMU
+#.(SB-SYS:INT-SAP #X7FFFE80008E0)
+FMI> (defparameter cbfm-fmu (cffi:foreign-alloc 'fmi2CallbackFreeMemory))
+CBFM-FMU
+FMI> CBFM-FMU
+#.(SB-SYS:INT-SAP #X7FFFE80065C0)
+FMI> (defparameter cbl-fmu (cffi:foreign-alloc 'fmi2CallbackLogger))
+CBL-FMU
+FMI> CBL-FMU
+#.(SB-SYS:INT-SAP #X7FFFE80065E0)
+FMI> (defparameter cbf-fmu (cffi:foreign-alloc 'fmi2CallbackFunctions) )
+CBF-FMU
+FMI> CBF-FMU
+#.(SB-SYS:INT-SAP #X7FFFE8006600)
+
+;;**************************************** WE EVEN CAN PARAMETRIZE THE CALL BACK FUNCTIONS ***********************************
+If we move on we can access the loggerstatus 
+At the end the fmi2Instantiate function call doesn't work  ... in this case the REPL is frozen with no warning messages.
+
+
+FMI> (defparameter loggerStatus (cffi:foreign-alloc 'fmi2Status))
+LOGGERSTATUS
+FMI> LOGGERSTATUS
+#.(SB-SYS:INT-SAP #X7FFFE8006630)
+
+;; some variables are defined so we can use either 0 or fmi2False 
+FMI> (string-right-trim "/"  (namestring (car (directory (ldp f-i)))))
+"/home/frederic/quicklisp/local-projects/cl-fmi/test/FirstOrderStat/unzip-3763847132/binaries/linux64"
+FMI> fmi2True
+1
+FMI> calloc-function-pointer
+#.(SB-SYS:INT-SAP #X7FFFF7176900)
+FMI> (setf (cffi:foreign-slot-value cbf-fmu
+				   'fmi2CallbackFunctions
+				   'allocateMemory)
+	  calloc-function-pointer)
+#.(SB-SYS:INT-SAP #X7FFFF7176900)
+
+FMI> free-function-pointer
+#.(SB-SYS:INT-SAP #X0042D230)
+
+FMI> (setf (cffi:foreign-slot-value cbf-fmu
+				   'fmi2CallbackFunctions
+				   'freeMemory)
+	  free-function-pointer)
+#.(SB-SYS:INT-SAP #X0042D230)
+
+FMI> (setf (cffi:foreign-slot-value cbf-fmu 'fmi2CallbackFunctions
+				   'stepFinished)
+	  (cffi:null-pointer))
+#.(SB-SYS:INT-SAP #X00000000)
+
+FMI> (cffi:null-pointer)
+#.(SB-SYS:INT-SAP #X00000000)
+
+FMI> (mn (md f-i))
+"Modelica.Blocks.Continuous.FirstOrder"
+
+FMI> (g (md f-i))
+"{15786be9-7df2-4916-bf0b-f46d83152302}"
+
+FMI> (string-right-trim "/" (namestring (car (directory (ldp f-i)))))
+"/home/frederic/quicklisp/local-projects/cl-fmi/test/FirstOrderStat/unzip-3763847132/binaries/linux64"
+
+;; ************************** BUT THE FMU OBJECT INSTANTIATION IS FROZEN ******************************
+FMI> (fmi2Instantiate
+		       (mn (md f-i))
+		       :fmi2ModelExchange
+		       (g (md f-i))
+		       (string-right-trim "/"
+					  (namestring (car (directory (ldp f-i)))))
+		       cbf-fmu
+		       0
+		       0 )
+FROZEN 
+

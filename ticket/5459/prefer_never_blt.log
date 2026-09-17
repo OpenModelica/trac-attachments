@@ -1,0 +1,134 @@
+true
+""
+true
+""
+unmatched equations: 2
+
+Index Reduction neccessary!
+MSS subsets:
+ 2, 1
+
+##############--MSSS--##############
+Indices of constraint equations: 2 1
+
+------------------1------------------
+Constraint equation to be differentiated:
+Vg = 0.125 + 0.01 * sin(6.283 * time)
+Differentiated equation:
+der(Vg) = 0.06283000000000001 * cos(6.283 * time)
+
+------------------2------------------
+Constraint equation to be differentiated:
+8.3144598 * N * T = (p + 0.01408 * (N / Vg) ^ 2.0) * (Vg - 3.913e-05 * N)
+Differentiated equation:
+8.3144598 * N * der(T) = (p + 0.01408 * (N / Vg) ^ 2.0) * der(Vg) + (der(p) + (-0.02816) * N ^ 2.0 * der(Vg) / Vg ^ 3.0) * (Vg + (-3.913e-05) * N)
+
+Update Incidence Matrix: 1 2
+
+########################### STATE SELECTION ###########################
+got 1 never states and 3 free states and 2 orgeqns.
+########## Try static state selection ##########
+Try to select dummy vars with natural matching (newer)
+Select 2 dummy states from 3 candidates.
+
+Highest order derivatives (state candidates): (3)
+========================================
+1: T:STATE(1)(min = 0.0 start = T_start unit = "K" nominal = 300.0 stateSelect=StateSelect.never )  "gas temperature" type: Real 
+2: Vg:STATE(1)(unit = "m3" nominal = Vtot )  "gas volume" type: Real 
+3: p:STATE(1)(start = p_start unit = "Pa" stateSelect=StateSelect.prefer )  "chamber pressure" type: Real 
+
+
+Constraint equations: (2)
+========================================
+1/1 (1): 8.3144598 * N * T = (p + 0.01408 * (N / Vg) ^ 2.0) * (Vg - 3.913e-05 * N)   [dynamic |0|0|0|0|]
+2/2 (1): Vg = 0.125 + 0.01 * sin(6.283 * time)   [dynamic |0|0|0|0|]
+
+Adjacency Matrix Enhanced (row == equation)
+====================================
+number of rows: 2
+1:(-1,variable(true)) (-3,variable(true)) (-2,nonlinear) 
+2:(-2,solved) 
+
+Transpose Adjacency Matrix Enhanced (row == var)
+=====================================
+number of rows: 3
+1:(-1,variable(true)) 
+2:(-2,solved) (-1,nonlinear) 
+3:(-1,variable(true)) 
+
+Matching
+========================================
+3 variables and equations
+var 1 is solved in eqn -1
+var 2 is solved in eqn 2
+var 3 is solved in eqn -1
+
+Matching
+========================================
+2 variables and equations
+var 1 is solved in eqn -1
+var 2 is solved in eqn 2
+
+Selected dummy states: (1)
+========================================
+1: Vg:STATE(1)(unit = "m3" nominal = Vtot )  "gas volume" type: Real 
+
+No perfect matching possible, dynamic index reduction needed.
+
+Unassigned equations: (1)
+========================================
+1/1 (1): 8.3144598 * N * T = (p + 0.01408 * (N / Vg) ^ 2.0) * (Vg - 3.913e-05 * N)   [dynamic |0|0|0|0|]
+
+
+Select 1 from 2 States
+2 p
+1 T
+Select as dummyStates(2):
+
+
+Generated StateSets:
+========================================
+StateSet "$STATESET1" (rang 1)
+
+state candidates (2)
+========================================
+1: p:DUMMY_STATE(start = p_start unit = "Pa" stateSelect=StateSelect.prefer )  "chamber pressure" type: Real 
+2: T:DUMMY_STATE(min = 0.0 start = T_start unit = "K" nominal = 300.0 stateSelect=StateSelect.never )  "gas temperature" type: Real 
+
+
+eqns (1)
+========================================
+1/1 (1): 8.3144598 * N * T = (p + 0.01408 * (N / Vg) ^ 2.0) * (Vg - 3.913e-05 * N)   [dynamic |0|0|0|0|]
+
+
+ovars (0)
+========================================
+
+
+varA (2)
+========================================
+1: $STATESET1.A[1]:VARIABLE(start = 1 fixed = true )  type: Integer  [2]
+2: $STATESET1.A[2]:VARIABLE(start = 0 fixed = true )  type: Integer  [2]
+
+
+varJ (1)
+========================================
+1: $STATESET1.J:VARIABLE(fixed = false )  type: Real 
+
+
+record SimulationResult
+    resultFile = "/home/kab/Repo/FH/promotion/modelicaLibs/ticketTests/5459/TestStateSelect.UnknownParameter.Pprefer_Tnever_res.mat",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'TestStateSelect.UnknownParameter.Pprefer_Tnever', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.275608302,
+    timeBackend = 0.016127679,
+    timeSimCode = 0.004639277000000001,
+    timeTemplates = 0.003327588,
+    timeCompile = 0.53426361,
+    timeSimulation = 0.026906773,
+    timeTotal = 0.860995242
+end SimulationResult;
+"Warning: There are iteration variables with default zero start attribute. For more information set -d=initialization. In OMEdit Tools->Options->Simulation->OMCFlags, in OMNotebook call setCommandLineOptions("-d=initialization").
+"

@@ -1,0 +1,81 @@
+/* configuration options */
+//setCompiler("clang");
+//setLinker("clang");
+//getErrorString();
+
+pwd := cd();
+
+print("*** Loading Modelica 3.2.2...");
+loadModel(Modelica, {"3.2.2"}); getErrorString();
+
+
+print("*** Loading Model...");
+loadFile("HeatedTank_2019.v7.1_modes_def_exclusifs_ou_non.mo"); getErrorString();
+
+
+print("*** Creating Temporary directory...");
+mkdir("temp");getErrorString();
+cd("temp");getErrorString();
+
+setCommandLineOptions({"+std=3.3", "-g=MetaModelica"}); 
+getErrorString();
+
+
+/* setup simulation parameters */
+numberRuns := 1000;
+endTime := 100;
+dataTable := fill(0, endTime);
+failedBy := fill(0, endTime);
+
+print("*** Running " + String(numberRuns) + " simulations \n" );
+
+print("*** Building model...");
+/* build model once */
+buildModel( HeatedTank_2019.HeatedTank_with_failures.system, stopTime=endTime);
+getErrorString();
+
+for i in 1:1:numberRuns loop
+ system("HeatedTank_2019.HeatedTank_with_failures.system -output=time -noemit", outputFile="res.txt");
+
+ getErrorString();
+ str := readFile("res.txt");
+ getErrorString();
+ // extract the time value
+ (_, value) := regex(str, "(time=)[0-9]*");
+ (_, value2) := regex(value[1], "[0-9]+");
+ getErrorString();
+ 
+ valT := stringInt(value2[1]); getErrorString();
+ dataTable[valT] := dataTable[valT]+1; getErrorString(); // how many models ended at this time
+
+end for;
+
+// calculate how many models fail
+
+failedBy[1] := dataTable[1];
+getErrorString();
+
+for i in 2:1:endTime loop
+ failedBy[i] := failedBy[i-1]+dataTable[i];
+end for; 
+
+failedBy := failedBy/numberRuns; // convert to probability 0-1
+
+// write and plot file
+
+res := "\"time\", \"terminated\" \n";
+for i in 1:1:endTime loop
+  res := res + String(i) + "," + String(failedBy[i]) + "\n";
+end for;
+getErrorString();
+
+OpenModelica.Scripting.writeFile(fileName="Test.csv", data=res);
+
+getErrorString();
+
+
+OpenModelica.Scripting.plot(terminated, fileName="Test.csv");
+getErrorString();
+
+cd(pwd);
+getErrorString();

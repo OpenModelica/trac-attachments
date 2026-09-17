@@ -1,0 +1,24 @@
+loadString("package Source
+  import Modelica.Constants.pi;
+  import SI = Modelica.SIunits;
+
+  package Components
+    model Component
+      parameter SI.Radius r = 1 \"Radius\";
+      parameter SI.Area area = r^2*pi;
+    end Component;
+  end Components;
+
+  model Example
+    Components.Component component;
+    parameter SI.Length l = 1;
+    annotation(experiment(StartTime = 0, StopTime = 1, Tolerance = 1e-6, Interval = 0.002));
+  end Example;
+end Source;");
+getErrorString();
+copyClass(Source.Example, "Example");
+getErrorString();
+list(Example);
+getErrorString();
+checkModel(Example);
+getErrorString();

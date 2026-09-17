@@ -1,0 +1,4 @@
+loadFile("X.mo");
+getErrorString();
+getIconAnnotation(X);
+getErrorString();

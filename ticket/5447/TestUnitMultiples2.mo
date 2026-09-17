@@ -1,0 +1,41 @@
+model TestUnitMultiples
+  Modelica.SIunits.PerUnit f = sin(time*10);
+  Modelica.SIunits.Voltage v_small= 1e-20*f;
+  Modelica.SIunits.Voltage v_16= 1e-16*f;
+  Modelica.SIunits.Voltage v_15 = 1e-15*f;
+  Modelica.SIunits.Voltage v_14 = 1e-14*f;
+  Modelica.SIunits.Voltage v_13 = 1e-13*f;
+  Modelica.SIunits.Voltage v_12= 1e-12*f;
+  Modelica.SIunits.Voltage v_11 = 1e-11*f;
+  Modelica.SIunits.Voltage v_10 = 1e-10*f;
+  Modelica.SIunits.Voltage v_9 = 1e-9*f;
+  Modelica.SIunits.Voltage v_8 = 1e-8*f;
+  Modelica.SIunits.Voltage v_7 = 1e-7*f;
+  Modelica.SIunits.Voltage v_6 = 1e-6*f;
+  Modelica.SIunits.Voltage v_5 = 1e-5*f;
+  Modelica.SIunits.Voltage v_4 = 1e-4*f;
+  Modelica.SIunits.Voltage v_3 = 1e-3*f;
+  Modelica.SIunits.Voltage v_2 = 1e-2*f;
+  Modelica.SIunits.Voltage v_1 = 1e-1*f;
+  Modelica.SIunits.Voltage v0= 1*f;
+  Modelica.SIunits.Voltage v1 = 1e1*f;
+  Modelica.SIunits.Voltage v2 = 1e2*f;
+  Modelica.SIunits.Voltage v3 = 1e3*f;
+  Modelica.SIunits.Voltage v4 = 1e4*f;
+  Modelica.SIunits.Voltage v5 = 1e5*f;
+  Modelica.SIunits.Voltage v6 = 1e6*f;
+  Modelica.SIunits.Voltage v7 = 1e7*f;
+  Modelica.SIunits.Voltage v8 = 1e8*f;
+  Modelica.SIunits.Voltage v9 = 1e9*f;
+  Modelica.SIunits.Voltage v10 = 1e10*f;
+  Modelica.SIunits.Voltage v11 = 1e11*f;
+  Modelica.SIunits.Voltage v12 = 1e12*f;
+  Modelica.SIunits.Voltage v13 = 1e13*f;
+  Modelica.SIunits.Voltage v14 = 1e14*f;
+  Modelica.SIunits.Voltage v15 = 1e15*f;
+  Modelica.SIunits.Voltage v16 = 1e16*f;
+  Modelica.SIunits.Voltage v_large= 1e20*f;
+  
+annotation(
+    uses(Modelica(version = "3.2.3")));
+end TestUnitMultiples;

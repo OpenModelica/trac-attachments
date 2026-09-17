@@ -1,0 +1,7 @@
+loadModel(Modelica); getErrorString();
+
+loadFile("TestArrayRecords.mo"); getErrorString();
+
+setCommandLineOptions("-d=newInst"); getErrorString();
+
+simulate(TestArrayRecords.Element); getErrorString();

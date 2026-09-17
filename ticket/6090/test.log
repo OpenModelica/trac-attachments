@@ -1,0 +1,361 @@
+C:/Users/LukasKo/AppData/Local/Temp/OpenModelica/OMEdit/test/test.exe -port=57470 -logFormat=xmltcp -override=startTime=0,stopTime=1,stepSize=0.002,tolerance=1e-6,solver=dassl,outputFormat=mat,variableFilter=.* -r=C:/Users/LukasKo/AppData/Local/Temp/OpenModelica/OMEdit/test/test_res.mat -w -lv=LOG_STATS -inputPath=C:/Users/LukasKo/AppData/Local/Temp/OpenModelica/OMEdit/test -outputPath=C:/Users/LukasKo/AppData/Local/Temp/OpenModelica/OMEdit/test
+Warning: maximal number of iteration reached but no root found
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+Jacobian determinant is NaN.
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=-1.#INF) / (b=1), where divisor b is: kumaresan_2008.sigma
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+division leads to inf or nan at time 0, (a=1.#INF) / (b=2478.97), where divisor b is: kumaresan_2008.R * kumaresan_2008.T
+nonlinear system 687 fails: at t=0
+proper start-values for some of the following iteration variables might help
+[1] Real kumaresan_2008.phi_I[4](start=2.39, nominal=1)
+[2] Real kumaresan_2008.phi_I[3](start=2.39, nominal=1)
+[3] Real kumaresan_2008.phi_II[8](start=0, nominal=1)
+[4] Real kumaresan_2008.phi_II[1](start=0, nominal=1)
+[5] Real kumaresan_2008.phi_II[7](start=0, nominal=1)
+[6] Real kumaresan_2008.phi_II[6](start=0, nominal=1)
+[7] Real kumaresan_2008.phi_II[5](start=0, nominal=1)
+[8] Real kumaresan_2008.phi_II[4](start=0, nominal=1)
+[9] Real kumaresan_2008.phi_II[2](start=0, nominal=1)
+[10] Real kumaresan_2008.phi_II[3](start=0, nominal=1)
+Solving non-linear system 687 failed at time=0.
+For more information please use -lv LOG_NLS.
+simulation terminated by an assertion at initialization
+Simulation process failed. Exited with code -1.

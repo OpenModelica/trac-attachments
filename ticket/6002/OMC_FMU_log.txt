@@ -1,0 +1,41 @@
+python3.7 FMUtest.py
+
+Model Info
+
+  FMI Version       2.0
+  FMI Type          Model Exchange, Co-Simulation
+  Model Name        AixLib.Fluid.FMI.ExportContainers.Examples.FMUs.ThermalZone
+  Description       Declaration of an FMU that exports a thermal zone
+  Platforms         c-code, win64
+  Continuous States 3
+  Event Indicators  2
+  Variables         644
+  Generation Tool   OpenModelica Compiler OpenModelica v1.16.0-dev-451-g9edc53b414 (64-bit)
+  Generation Date   2020-06-17T12:04:11Z
+
+Default Experiment
+
+  Stop Time         1
+  Tolerance         1e-06
+
+Variables (input, output)
+
+Name                Causality              Start Value  Unit     Description
+TOut                output                              K        Outdoor temperature
+TRad                output                              K        Radiative temperature
+fluPor[1].backward.T output                              K        Temperature
+fluPor[2].backward.T output                              K        Temperature
+fluPor[1].backward.X_w output                              1        Water vapor mass fractions per kg total air
+fluPor[2].backward.X_w output                              1        Water vapor mass fractions per kg total air
+fluPor[1].forward.T input                       293.15  K        Temperature
+fluPor[2].forward.T input                       293.15  K        Temperature
+fluPor[1].forward.X_w input                          0.0  1        Water vapor mass fractions per kg total air
+fluPor[2].forward.X_w input                          0.0  1        Water vapor mass fractions per kg total air
+fluPor[1].m_flow    input                          0.0  kg/s     Mass flow rate from the connection point into the component
+fluPor[2].m_flow    input                          0.0  kg/s     Mass flow rate from the connection point into the component
+Traceback (most recent call last):
+  File "FMUtest.py", line 9, in <module>
+    model_description = read_model_description(fmu)
+  File "[REDACTED].local/lib/python3.7/site-packages/fmpy/model_description.py", line 618, in read_model_description
+    raise Exception("The unit '%s' of variable '%s' is not defined." % (unit, variable.name))
+Exception: The unit 'bar' of variable 'vol.dynBal.medium.p_bar' is not defined.

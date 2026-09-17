@@ -1,0 +1,8 @@
+setCommandLineOptions("-d=initialization");
+getErrorString();
+loadModel(Modelica);
+getErrorString();
+loadFile("LockedRotorTest.mo");
+getErrorString();
+simulate(LockedRotorTest);
+getErrorString();

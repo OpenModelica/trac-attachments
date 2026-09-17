@@ -1,0 +1,236 @@
+mingw32-make: Entering directory 'C:/Temp/OPENMO~1/Temp'
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system.o HeatedTank_2019.HeatedTank_with_failures.system.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_functions.o HeatedTank_2019.HeatedTank_with_failures.system_functions.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_records.o HeatedTank_2019.HeatedTank_with_failures.system_records.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_01exo.o HeatedTank_2019.HeatedTank_with_failures.system_01exo.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_01exo.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_01exo.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_01exo.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system.c:12:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_functions.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_functions.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_functions.c"
+ ^
+In file included from C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h:1729:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system.c:12:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+In file included from C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h:1730:0:
+HeatedTank_2019.HeatedTank_with_failures.system_13opt.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_13opt.h"
+ ^
+In file included from C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h:1729:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_02nls.o HeatedTank_2019.HeatedTank_with_failures.system_02nls.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_03lsy.o HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_04set.o HeatedTank_2019.HeatedTank_with_failures.system_04set.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_02nls.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_02nls.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_02nls.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_04set.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_04set.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_04set.c"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_05evt.o HeatedTank_2019.HeatedTank_with_failures.system_05evt.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_05evt.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_05evt.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_05evt.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c:8:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_03lsy.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_02nls.c:8:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_02nls.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_04set.c:9:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_04set.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_06inz.o HeatedTank_2019.HeatedTank_with_failures.system_06inz.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_07dly.o HeatedTank_2019.HeatedTank_with_failures.system_07dly.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_08bnd.o HeatedTank_2019.HeatedTank_with_failures.system_08bnd.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_06inz.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_06inz.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_06inz.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_08bnd.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_08bnd.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_08bnd.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_07dly.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_07dly.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_07dly.c"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_09alg.o HeatedTank_2019.HeatedTank_with_failures.system_09alg.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_09alg.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_09alg.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_09alg.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_06inz.c:9:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_06inz.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_10asr.o HeatedTank_2019.HeatedTank_with_failures.system_10asr.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_11mix.o HeatedTank_2019.HeatedTank_with_failures.system_11mix.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_12jac.o HeatedTank_2019.HeatedTank_with_failures.system_12jac.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_11mix.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_11mix.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_11mix.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_10asr.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_10asr.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_10asr.c"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_13opt.o HeatedTank_2019.HeatedTank_with_failures.system_13opt.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_12jac.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_13opt.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_13opt.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_13opt.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_12jac.c:8:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_12jac.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_14lnz.o HeatedTank_2019.HeatedTank_with_failures.system_14lnz.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_15syn.o HeatedTank_2019.HeatedTank_with_failures.system_15syn.c
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_16dae.o HeatedTank_2019.HeatedTank_with_failures.system_16dae.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_13opt.c:8:0:
+HeatedTank_2019.HeatedTank_with_failures.system_12jac.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_12jac.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_functions.h:92:0,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_model.h:29,
+                 from HeatedTank_2019.HeatedTank_with_failures.system_13opt.c:7:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_14lnz.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_14lnz.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_14lnz.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_15syn.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_15syn.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_15syn.c"
+ ^
+gcc  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0  -c -o HeatedTank_2019.HeatedTank_with_failures.system_17inl.o HeatedTank_2019.HeatedTank_with_failures.system_17inl.c
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_16dae.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_16dae.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_16dae.c"
+ ^
+In file included from HeatedTank_2019.HeatedTank_with_failures.system_17inl.c:7:0:
+HeatedTank_2019.HeatedTank_with_failures.system_model.h:4:0: warning: "OMC_FILE" redefined
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_model.h"
+ ^
+HeatedTank_2019.HeatedTank_with_failures.system_17inl.c:4:0: note: this is the location of the previous definition
+   #define OMC_FILE "C:/temp/openModelica/temp/HeatedTank_2019.HeatedTank_with_failures.system_17inl.c"
+ ^
+gcc -I. -o HeatedTank_2019.HeatedTank_with_failures.system.exe HeatedTank_2019.HeatedTank_with_failures.system.o HeatedTank_2019.HeatedTank_with_failures.system_functions.o HeatedTank_2019.HeatedTank_with_failures.system_records.o HeatedTank_2019.HeatedTank_with_failures.system_01exo.o HeatedTank_2019.HeatedTank_with_failures.system_02nls.o HeatedTank_2019.HeatedTank_with_failures.system_03lsy.o HeatedTank_2019.HeatedTank_with_failures.system_04set.o HeatedTank_2019.HeatedTank_with_failures.system_05evt.o HeatedTank_2019.HeatedTank_with_failures.system_06inz.o HeatedTank_2019.HeatedTank_with_failures.system_07dly.o HeatedTank_2019.HeatedTank_with_failures.system_08bnd.o HeatedTank_2019.HeatedTank_with_failures.system_09alg.o HeatedTank_2019.HeatedTank_with_failures.system_10asr.o HeatedTank_2019.HeatedTank_with_failures.system_11mix.o HeatedTank_2019.HeatedTank_with_failures.system_12jac.o HeatedTank_2019.HeatedTank_with_failures.system_13opt.o HeatedTank_2019.HeatedTank_with_failures.system_14lnz.o HeatedTank_2019.HeatedTank_with_failures.system_15syn.o HeatedTank_2019.HeatedTank_with_failures.system_16dae.o HeatedTank_2019.HeatedTank_with_failures.system_17inl.o -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0 -L"C:/temp/openModelica"  "-LC:/PortablePrograms/OpenModelica-dev-64bit//lib//omc" "-LC:/PortablePrograms/OpenModelica-dev-64bit//lib/" "-L%APPDATA%/.openmodelica/binaries/Modelica" "-LC:/PortablePrograms/OpenModelica-dev-64bit/lib/omlibrary/Modelica 3.2.2/Resources/Library/mingw64" "-LC:/PortablePrograms/OpenModelica-dev-64bit/lib/omlibrary/Modelica 3.2.2/Resources/Library/win64" "-LC:/PortablePrograms/OpenModelica-dev-64bit/lib/omlibrary/Modelica 3.2.2/Resources/Library" -lModelicaExternalC  -O0 -falign-functions -fno-ipa-pure-const -mstackrealign -msse2 -mfpmath=sse     -I"C:/PortablePrograms/OpenModelica-dev-64bit//include/omc/c" -I. -DOPENMODELICA_XML_FROM_FILE_AT_RUNTIME -DOMC_MODEL_PREFIX=HeatedTank_2019_HeatedTank_with_failures_system -DOMC_NUM_MIXED_SYSTEMS=0 -DOMC_NUM_LINEAR_SYSTEMS=0 -DOMC_NUM_NONLINEAR_SYSTEMS=0 -DOMC_NDELAY_EXPRESSIONS=0 -DOMC_NVAR_STRING=0 -L"C:/PortablePrograms/OpenModelica-dev-64bit//lib//omc" -L"C:/PortablePrograms/OpenModelica-dev-64bit//lib" -Wl,--stack,16777216,-rpath,"C:/PortablePrograms/OpenModelica-dev-64bit//lib//omc" -Wl,-rpath,"C:/PortablePrograms/OpenModelica-dev-64bit//lib"   -fopenmp -Wl,-Bstatic -lregex -ltre -lintl -liconv -lexpat -lomcgc -lpthread -loleaut32 -limagehlp -lhdf5 -lz -lszip -Wl,-Bdynamic  -Wl,-Bstatic -lSimulationRuntimeC -Wl,-Bdynamic -Wl,-Bstatic -lomcgc -lregex -ltre -lintl -liconv -lexpat -static-libgcc -luuid -loleaut32 -lole32 -limagehlp -lws2_32 -llis -lumfpack -lklu -lcolamd -lbtf -lamd  -lsundials_idas -lsundials_kinsol -lsundials_nvecserial -lipopt -lcoinmumps -lpthread -lm -lgfortranbegin -lgfortran -lquadmath -lmingw32 -lgcc_eh -lmoldname -lmingwex -lmsvcrt -luser32 -lkernel32 -ladvapi32 -lshell32 -lopenblas -lcminpack -Wl,-Bdynamic -lwsock32 -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic 
+mingw32-make: Leaving directory 'C:/Temp/OPENMO~1/Temp'
+RESULT: 0 

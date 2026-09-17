@@ -1,0 +1,9 @@
+getVersion(OpenModelica); getErrorString();
+getInstallationDirectoryPath(); getErrorString();
+cd("/tmp/OpenModelica_andrea/OMEdit/"); getErrorString();
+getModelicaPath(); getErrorString();
+errors:=getMessagesStringInternal(); getErrorString();
+size(errors,1); getErrorString();
+numProcessors(); getErrorString();
+cd(""); getErrorString();
+getAvailableMatchingAlgorithms(); getErrorString();

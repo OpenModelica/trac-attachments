@@ -1,0 +1,30 @@
+loadString("
+model M
+  Real level(start = level_start);
+  parameter Real level_start = 1.0;
+initial equation
+  level = level_start;
+equation
+  der(level) = sin(time);
+end M;
+
+model M2
+  Real x;
+  Real level(start = level_start);
+  parameter Real level_start = 1.0;
+initial equation 
+  level = level_start;
+equation
+  homotopy(x^2 - 9, x - 9) = 0;
+  der(level) = sin(time);
+end M2;
+
+"); getErrorString();
+
+simulate(M, simflags="-override=level_start=1.2"); getErrorString();
+
+val(level_start); getErrorString();
+
+simulate(M2, simflags="-override=level_start=1.2"); getErrorString();
+
+val(level_start); getErrorString();

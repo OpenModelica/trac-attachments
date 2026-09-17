@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+copyClass(Modelica.Blocks.Examples.Filter, "Filter");
+getErrorString();
+getClassInformation(Filter);
+getErrorString();

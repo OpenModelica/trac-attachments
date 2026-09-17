@@ -1,0 +1,15 @@
+loadModel(Modelica); getErrorString();
+loadFile("package.mo"); getErrorString();
+
+// first simulation with a=5
+writeFile("Resources/Parameters.txt", "a=5"); getErrorString();
+
+simulate(ParametersTest.M); getErrorString();
+val(config.a); getErrorString();
+
+writeFile("Resources/Parameters.txt", "a=3"); getErrorString();
+
+// second simulation with a=3
+simulate(ParametersTest.M); getErrorString();
+val(config.a); getErrorString();
+

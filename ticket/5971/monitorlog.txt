@@ -1,0 +1,55 @@
+ Info: ----------------------  Reading composite model  ---------------------- 
+ Info: XML file is parsed OK. Creating model.
+ Info: -----  Processing SubModel  ----- 
+ Info: Name: shaft1
+ Warning: Cannot find attribute Dimensions
+ Warning: Cannot find attribute Causality
+ Warning: Cannot find attribute Domain
+ Info: Registering interface proxy. Id = 0, ComponentId = 0, Name = tlm, Dimensions = 6, Causality = bidirectional, Domain = mechanical
+ Info: -----  Processing SubModel  ----- 
+ Info: Name: brg1
+ Warning: Cannot find attribute Dimensions
+ Warning: Cannot find attribute Causality
+ Warning: Cannot find attribute Domain
+ Info: Registering interface proxy. Id = 1, ComponentId = 1, Name = bIR`cs1, Dimensions = 6, Causality = bidirectional, Domain = mechanical
+ Warning: Cannot find attribute Dimensions
+ Warning: Cannot find attribute Causality
+ Warning: Cannot find attribute Domain
+ Info: Registering interface proxy. Id = 2, ComponentId = 1, Name = bER`cs1, Dimensions = 6, Causality = bidirectional, Domain = mechanical
+ Info: -----  Processing SubModel  ----- 
+ Info: Name: shaft2
+ Warning: Cannot find attribute Dimensions
+ Warning: Cannot find attribute Causality
+ Warning: Cannot find attribute Domain
+ Info: Registering interface proxy. Id = 3, ComponentId = 2, Name = tlm, Dimensions = 6, Causality = bidirectional, Domain = mechanical
+ Info: Reading definition for Connections 
+ Info: -----  Processing Connection  ----- 
+ Info: From:shaft1.tlm
+ Info: To:brg1.bER`cs1
+ Info: Delay = 0.000100 s
+ Info: Zf    = 10000.000000
+ Info: Zf    = 1000.000000
+ Info: alpha = 0.200000
+ Info: -----  Processing Connection  ----- 
+ Info: From:brg1.bIR`cs1
+ Info: To:shaft2.tlm
+ Info: Delay = 0.000100 s
+ Info: Zf    = 10000.000000
+ Info: Zf    = 1000.000000
+ Info: alpha = 0.200000
+ Info: -----  Reading simulation parameters  ----- 
+ Info: StartTime     = 0.000000 s
+ Info: StopTime      = 10.000000 s
+ Info: WriteTimeStep = 0.010000 s
+ Info: ----------------------  Composite model is read  ---------------------- 
+ Info: Trying to register TLM monitor on host 192.168.0.100:12111
+ Info: WinSocket started
+
+ Info: TLM manager host found, trying to connect...
+ Info: Trying to register monitoring interface tlm
+ Info: Register Interface shaft1.tlm
+ Info: Registers TLM interface of type 3D
+ Info: Client sends name: shaft1.tlm
+ Warning: SOCKET_ERROR received, error code =10051
+ Info: Interface shaft1.tlm got ID -1
+ Fatal error: Wrong size of message in interface registration : DataSize 10 sizeof(TLMConnectionParams)=232

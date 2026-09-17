@@ -1,0 +1,324 @@
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking how to run the C preprocessor... clang -E
+ln: failed to create symbolic link '.git/hooks/pre-commit': File exists
+configure: OpenModelica commit-msg hook has been installed
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking if cppruntime is requested... no
+checking for omlibrary target... core
+checking for libraries directory... yes
+checking for CORBA... none
+configure: creating ./config.status
+config.status: creating Makefile
+=== configuring in OMCompiler (/home/user/src/OpenModelica/OMCompiler)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking how to run the C preprocessor... clang -E
+checking whether make sets $(MAKE)... yes
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking if -Werror works... ok
+checking looking for --no-undefined... yes
+clang
+checking for flags to append to CFLAGS (-fno-stack-protector)... -g -O2 -fno-stack-protector
+checking for flags to append to LDFLAGS ( -Wl,--no-as-needed -Wl,--disable-new-dtags)...  -Wl,--no-as-needed -Wl,--disable-new-dtags
+checking getconf LONG_BIT = 64 CFLAGS... adding -fPIC
+checking whether clang++ supports C++11 features by default... yes
+checking for omc... failed (tried ). Building it through bootstrapping (you might end up unable to recompile omc if you modify source code).
+checking for library containing clock_gettime... none required
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for antlr.Tool support... ANTLR Parser Generator   Version 2.7.7 (20060906)   1989-2005
+yes
+checking expat.h usability... yes
+checking expat.h presence... yes
+checking for expat.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking for getcwd... yes
+checking for select... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for scandir... no
+checking for OpenMP... -fopenmp=libomp
+checking runtime compiler... clang ok
+checking runtime compiler CFLAGS... -fPIC -falign-functions -mfpmath=sse -fno-dollars-in-identifiers
+checking for library containing dlopen... -ldl
+NO_LPLIB: ''
+checking for library containing dlopen... (cached) -ldl
+checking for library containing sqrt... -lm
+checking for library containing colamd... -lcolamd
+checking for library containing make_lp... -llpsolve55_pic
+checking lp_lib.h usability... no
+checking lp_lib.h presence... no
+checking for lp_lib.h... no
+checking lpsolve/lp_lib.h usability... yes
+checking lpsolve/lp_lib.h presence... yes
+checking for lpsolve/lp_lib.h... yes
+checking for socket... yes
+checking for gethostbyname... yes
+checking LAPACK/BLAS flags...  -llapack -lblas  
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking for locale.h... yes
+checking libintl.h usability... yes
+checking libintl.h presence... yes
+checking for libintl.h... yes
+checking gettext linking... in C-library
+checking setlocale linking... in C-library
+checking uuid/uuid.h usability... yes
+checking uuid/uuid.h presence... yes
+checking for uuid/uuid.h... yes
+checking for uuid_unparse in -luuid... yes
+checking for pthread_self in -lpthread... yes
+checking for CORBA... none
+checking for OpenCL... checking CL/cl.h usability... yes
+checking CL/cl.h presence... yes
+checking for CL/cl.h... yes
+checking for revision... OMCompiler v1.16.0-dev.65+g236638037
+checking for OpenModelica platform name... x86_64-linux
+checking for Modelica platform name... linux64
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating Compiler/Util/Autoconf.mo
+config.status: creating Compiler/Makefile
+config.status: creating Compiler/Script/Makefile
+config.status: creating Compiler/Template/Makefile
+config.status: creating Compiler/runtime/Makefile
+config.status: creating Compiler/runtime/config.unix.h
+config.status: creating Compiler/runtime/revision.h
+config.status: creating Parser/Makefile
+config.status: creating SimulationRuntime/cpp/Makefile.env
+config.status: creating SimulationRuntime/c/Makefile
+config.status: creating SimulationRuntime/opc/ua/Makefile
+config.status: creating SimulationRuntime/fmi/export/buildproject/Makefile
+config.status: creating SimulationRuntime/ParModelica/Makefile
+config.status: creating SimulationRuntime/ParModelica/auto/Makefile
+config.status: creating SimulationRuntime/ParModelica/explicit/openclrt/Makefile
+config.status: creating Compiler/boot/Makefile
+config.status: creating Compiler/Lexers/Makefile
+config.status: executing config.unix.h.fix commands
+=== configuring in SimulationRuntime/cpp (/home/user/src/OpenModelica/OMCompiler/SimulationRuntime/cpp)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking how to run the C preprocessor... clang -E
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking if boost static linking is requested... no
+checking if boost real paths are requested... no
+checking if c++03 support is requested... no
+checking if runtime profiling is requested... no
+checking if ScoreP is requested... no
+ScoreP-home is set to 
+checking if sundials for FMUs is requested... no
+checking if parallel output is requested... no
+checking if logger should be used... yes
+Build type is set to RelWithDebInfo
+configure: creating ./config.status
+config.status: creating Makefile
+
+Configured OpenModelica successfully using the following options:
+Simulations may use UMFPACK: No
+Simulations may use sundials suite: Yes
+Simulations may use UMFPACK: Yes
+ParModelica: Yes
+=== configuring in OMPlot (/home/user/src/OpenModelica/OMPlot)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking whether clang++ supports C++11 features by default... yes
+checking for qmake in env.vars QMAKE and QTDIR... /bin/qmake
+checking for qmake arguments... /bin/qmake -qt5
+checking for lrelease... /usr/lib/qt5/bin/lrelease
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking for OPENMODELICAHOME... /home/user/src/OpenModelica/build
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating qwt/Makefile.unix
+config.status: creating OMPlot/OMPlotGUI/Makefile.unix
+config.status: creating OMPlot/OMPlotGUI/OMPlotGUI.config
+config.status: creating qwt/qwt.config
+=== configuring in OMEdit (/home/user/src/OpenModelica/OMEdit)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking whether clang++ supports C++11 features by default... yes
+checking for qmake in env.vars QMAKE and QTDIR... /bin/qmake
+checking for qmake arguments... /bin/qmake -qt5
+checking for lrelease... /usr/lib/qt5/bin/lrelease
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking for OPENMODELICAHOME... /home/user/src/OpenModelica/build
+checking how to run the C++ preprocessor... clang++ -E
+checking for osg/qt include order bugs (broken OSG version)... no (giving up on OSG)
+"Disabled OSG"
+checking check if -lboost_regex is needed for OMSimulator... no need for -lboost_regex, std::regex is good enough
+checking for LSB description... Debian GNU/Linux bullseye/sid
+checking for revision... OMEdit v1.16.0-dev.65+g236638037
+configure: creating ./config.status
+config.status: creating Makefile.unix
+config.status: creating omc_config.h
+config.status: creating OMEditLIB/OMEditLIB.unix.config.pri
+config.status: creating OMEditLIB/Debugger/Parser/Makefile.unix
+config.status: creating OMEditLIB/Debugger/Parser/Makefile.lib.unix
+config.status: creating OMEditGUI/OMEditGUI.unix.config.pri
+config.status: creating Testsuite/Makefile.unix
+=== configuring in OMNotebook (/home/user/src/OpenModelica/OMNotebook)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking whether clang++ supports C++11 features by default... yes
+checking for qmake in env.vars QMAKE and QTDIR... /bin/qmake
+checking for qmake arguments... /bin/qmake -qt5
+checking for lrelease... /usr/lib/qt5/bin/lrelease
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking for OPENMODELICAHOME... /home/user/src/OpenModelica/build
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating OMNotebook/OMNotebookGUI/Makefile.unix
+config.status: creating OMNotebook/OMNotebookGUI/OMNotebook.config
+config.status: creating OMNotebook/OMNotebookGUI/omc_config.h
+=== configuring in OMShell (/home/user/src/OpenModelica/OMShell)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=clang' 'CXX=clang++' '--disable-modelica3d' '--with-ombuilddir=/home/user/src/OpenModelica/build' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking for gcc... clang
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking whether clang++ supports C++11 features by default... yes
+checking for qmake in env.vars QMAKE and QTDIR... /bin/qmake
+checking for qmake arguments... /bin/qmake -qt5
+checking for lrelease... /usr/lib/qt5/bin/lrelease
+build_short: x86_64-linux-gnu
+host_short: x86_64-linux-gnu
+checking for OPENMODELICAHOME... /home/user/src/OpenModelica/build
+checking if the user wants to compile OMShell-terminal... yes
+checking how to run the C++ preprocessor... clang++ -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking for library containing readline... -lreadline
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating OMShell/OMShellGUI/Makefile.unix
+config.status: creating OMShell/OMShellGUI/OMShell.config
+config.status: creating mosh/src/Makefile
+config.status: creating OMShell/OMShellGUI/omc_config.h
+config.status: creating mosh/src/omc_config.h

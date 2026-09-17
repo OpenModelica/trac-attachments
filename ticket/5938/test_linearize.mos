@@ -1,0 +1,17 @@
+loadString("
+model foo
+  input Real input1,input2;
+  output Real output1;
+  Real state1, state2;
+  Real z;
+  Real w;
+equation
+  z = input1 - state1;
+  w = 2*state2 + input2;
+  der(state1) = z;
+  der(state2) = state1;
+  output1 = w;
+end foo;"); getErrorString();
+setCommandLineOptions("--linearizationDumpLanguage=matlab");getErrorString();
+linearize(foo);getErrorString();
+  

@@ -1,0 +1,63 @@
+Caught signal 11 (SIGSEGV)
+OMEdit(_Z13signalHandleri+0x288) [0x53b190]
+??:?
+/lib/x86_64-linux-gnu/libc.so.6(+0x3f040) [0x7fd123947040]
+??:0
+OMEdit(_ZN11ModelWidget22removeInheritedClassesEP15LibraryTreeItem+0x2b) [0x602873]
+??:?
+OMEdit(_ZN11ModelWidget22removeInheritedClassesEP15LibraryTreeItem+0xb9) [0x602901]
+??:?
+OMEdit(_ZN11ModelWidget25modelicaEditorTextChangedEPP15LibraryTreeItem+0xb9a) [0x602186]
+??:?
+OMEdit(_ZN14ModelicaEditor12validateTextEPP15LibraryTreeItem+0x27) [0x67b0fb]
+??:?
+OMEdit(_ZN13LibraryWidget19saveLibraryTreeItemEP15LibraryTreeItem+0x112) [0x5bf920]
+??:?
+OMEdit(_ZN20ModelWidgetContainer15saveModelWidgetEv+0x29) [0x60e23f]
+??:?
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5(_ZN11QMetaObject8activateEP7QObjectiiPPv+0x865) [0x7fd124d9c555]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5(_ZN7QAction9triggeredEb+0x42) [0x7fd12685c122]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5(_ZN7QAction8activateENS_11ActionEventE+0xcc) [0x7fd12685e80c]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5(_ZN7QAction5eventEP6QEvent+0x35) [0x7fd12685f0d5]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x9c) [0x7fd12686283c]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5(_ZN12QApplication6notifyEP7QObjectP6QEvent+0x2a4) [0x7fd12686a104]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5(_ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent+0x118) [0x7fd124d6d8d8]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN12QShortcutMap13dispatchEventEP9QKeyEvent+0x117) [0x7fd1260d4417]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN12QShortcutMap11tryShortcutEP9QKeyEvent+0x5a) [0x7fd1260d44ea]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN22QWindowSystemInterface19handleShortcutEventEP7QWindowmi6QFlagsIN2Qt16KeyboardModifierEEjjjRK7QStringbt+0x173) [0x7fd126082c63]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN22QGuiApplicationPrivate15processKeyEventEPN29QWindowSystemInterfacePrivate8KeyEventE+0x87) [0x7fd1260a2ff7]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN22QGuiApplicationPrivate24processWindowSystemEventEPN29QWindowSystemInterfacePrivate17WindowSystemEventE+0x115) [0x7fd1260a8035]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Gui.so.5(_ZN22QWindowSystemInterface22sendWindowSystemEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xab) [0x7fd12607f2eb]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5(+0x9f260) [0x7fd0f9b7a260]
+??:0
+/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x2e7) [0x7fd11c145417]
+??:0
+/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0x4c650) [0x7fd11c145650]
+??:0
+/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x2c) [0x7fd11c1456dc]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5(_ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x5f) [0x7fd124dc688f]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0x13a) [0x7fd124d6b90a]
+??:0
+/usr/lib/x86_64-linux-gnu/libQt5Core.so.5(_ZN16QCoreApplication4execEv+0x94) [0x7fd124d749b4]
+??:0
+OMEdit(main+0x13c) [0x53bb46]
+??:?
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7fd123929bf7]
+??:0
+OMEdit(_start+0x2a) [0x53ae4a]
+??:?

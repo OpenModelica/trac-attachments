@@ -1,0 +1,8 @@
+loadString("model M
+  parameter Real p;
+equation 
+ p =10;
+end M;");
+getErrorString();
+translateModel(M);
+getErrorString();

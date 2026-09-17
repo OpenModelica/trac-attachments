@@ -1,0 +1,8 @@
+loadModel(Modelica);
+getErrorString();
+getIconAnnotation(Modelica.Mechanics.MultiBody.Examples.Loops.Utilities.EngineV6_analytic);
+getErrorString();
+setCommandLineOptions("-d=nfAPI");
+getErrorString();
+getIconAnnotation(Modelica.Mechanics.MultiBody.Examples.Loops.Utilities.EngineV6_analytic);
+getErrorString();

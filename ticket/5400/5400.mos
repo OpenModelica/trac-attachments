@@ -1,0 +1,10 @@
+loadFile("myEVpkg.mo");
+getErrorString();
+loadFile("wbEHPTLib.mo");
+getErrorString();
+getClassNames();
+getErrorString();
+moveClass(myEVpkg.WithRecord.Car,1);
+getErrorString();
+getClassNames();
+getErrorString();

@@ -1,0 +1,8 @@
+loadString("model test end test;","test");
+getErrorString();
+listFile(test);
+getErrorString();
+addComponent(integrator, Modelica.Blocks.Continuous.Integrator,test,annotate=Placement(visible=true, transformation=transformation(origin={-40,12}, extent={{-10,-10},{10,10}}, rotation=0)));
+getErrorString();
+listFile(test);
+getErrorString();

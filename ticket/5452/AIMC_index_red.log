@@ -1,0 +1,484 @@
+true
+""
+Linear dependent equation: inverter.star_n.plug_p.pin[2].i + inverter.diode_n.i[2] - inverter.transistor_n.i[2] = 0.0
+Gets replaced by equation: 0.0 = inverter.iAC[2] + inverter.iAC[1] + inverter.iAC[3] + inductor.inductor[1].i + inductor.inductor[3].i + inductor.inductor[2].i
+--- For more information please use -d=dumpAnalyticalToStructural.---
+
+unmatched equations: 172, 176, 216, 218, 222, 224, 227, 228, 230, 278
+
+Index Reduction neccessary!
+MSS subsets:
+ 278, 285, 284, 283, 206, 208, 212, 214, 213, 207
+ 218, 229, 220, 226, 223, 225, 221, 222, 224, 227, 228, 230, 219
+ 216
+ 176
+ 172
+
+##############--MSSS--##############
+Indices of constraint equations: 172
+
+------------------172------------------
+Constraint equation to be differentiated:
+aimc.phiMechanical = loadTorque.phi - aimc.fixed.phi0
+Differentiated equation:
+aimc.wMechanical = loadInertia.w
+
+Update Incidence Matrix: 172
+
+##############--MSSS--##############
+Indices of constraint equations: 176
+
+------------------176------------------
+Constraint equation to be differentiated:
+aimc.friction.phi = loadTorque.phi - aimc.fixed.phi0
+Differentiated equation:
+aimc.friction.w = loadInertia.w
+
+Update Incidence Matrix: 176
+
+##############--MSSS--##############
+Indices of constraint equations: 216
+
+------------------216------------------
+Constraint equation to be differentiated:
+aimc.strayLoad.phi = loadTorque.phi - aimc.fixed.phi0
+Differentiated equation:
+aimc.strayLoad.w = loadInertia.w
+
+Update Incidence Matrix: 216
+
+##############--MSSS--##############
+Indices of constraint equations: 218 229 220 226 223 225 221 222 224 227 228 230 219
+
+------------------219------------------
+Constraint equation to be differentiated:
+aimc.airGapS.i_ms[2] = aimc.lssigma.i_[2] + aimc.idq_rs[2]
+Differentiated equation:
+der(aimc.airGapS.i_ms[2]) = der(aimc.lssigma.i_[2]) + der(aimc.idq_rs[2])
+
+------------------230------------------
+Constraint equation to be differentiated:
+aimc.idq_rs[2] = aimc.airGapS.RotationMatrix[2,1] * aimc.idq_rr[1] + aimc.airGapS.RotationMatrix[2,2] * aimc.idq_rr[2]
+Differentiated equation:
+der(aimc.idq_rs[2]) = aimc.airGapS.RotationMatrix[2,1] * der(aimc.idq_rr[1]) + der(aimc.airGapS.RotationMatrix[2,1]) * aimc.idq_rr[1] + aimc.airGapS.RotationMatrix[2,2] * der(aimc.idq_rr[2]) + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.idq_rr[2]
+
+------------------228------------------
+Constraint equation to be differentiated:
+aimc.lssigma.i_[2] = aimc.airGapS.RotationMatrix[2,1] * aimc.idq_sr[1] + aimc.airGapS.RotationMatrix[2,2] * aimc.idq_sr[2]
+Differentiated equation:
+der(aimc.lssigma.i_[2]) = aimc.airGapS.RotationMatrix[2,1] * der(aimc.idq_sr[1]) + der(aimc.airGapS.RotationMatrix[2,1]) * aimc.idq_sr[1] + aimc.airGapS.RotationMatrix[2,2] * der(aimc.idq_sr[2]) + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.idq_sr[2]
+
+------------------227------------------
+Constraint equation to be differentiated:
+aimc.lssigma.i_[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.idq_sr[1] - aimc.airGapS.RotationMatrix[2,1] * aimc.idq_sr[2]
+Differentiated equation:
+der(aimc.lssigma.i_[1]) = aimc.airGapS.RotationMatrix[2,2] * der(aimc.idq_sr[1]) + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.idq_sr[1] + (-aimc.airGapS.RotationMatrix[2,1]) * der(aimc.idq_sr[2]) - der(aimc.airGapS.RotationMatrix[2,1]) * aimc.idq_sr[2]
+
+------------------224------------------
+Constraint equation to be differentiated:
+aimc.airGapS.gamma = /*Real*/(aimc.airGapS.p) * (loadTorque.phi - aimc.fixed.phi0)
+Differentiated equation:
+der(aimc.airGapS.gamma) = /*Real*/(aimc.airGapS.p) * loadInertia.w
+
+------------------222------------------
+Constraint equation to be differentiated:
+aimc.airGapS.psi_mr[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.psi_ms[1] + aimc.airGapS.RotationMatrix[2,1] * aimc.airGapS.psi_ms[2]
+Differentiated equation:
+aimc.airGapS.spacePhasor_r.v_[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.spacePhasor_s.v_[1] + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.airGapS.psi_ms[1] + aimc.airGapS.RotationMatrix[2,1] * aimc.airGapS.spacePhasor_s.v_[2] + der(aimc.airGapS.RotationMatrix[2,1]) * aimc.airGapS.psi_ms[2]
+
+------------------221------------------
+Constraint equation to be differentiated:
+aimc.airGapS.psi_ms[2] = aimc.airGapS.L[2,1] * aimc.airGapS.i_ms[1] + aimc.airGapS.L[2,2] * aimc.airGapS.i_ms[2]
+Differentiated equation:
+aimc.airGapS.spacePhasor_s.v_[2] = aimc.airGapS.L[2,1] * der(aimc.airGapS.i_ms[1]) + aimc.airGapS.L[2,2] * der(aimc.airGapS.i_ms[2])
+
+------------------225------------------
+Constraint equation to be differentiated:
+aimc.airGapS.RotationMatrix[2,2] = cos(aimc.airGapS.gamma)
+Differentiated equation:
+der(aimc.airGapS.RotationMatrix[2,2]) = (-sin(aimc.airGapS.gamma)) * der(aimc.airGapS.gamma)
+
+------------------223------------------
+Constraint equation to be differentiated:
+aimc.airGapS.psi_mr[2] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.psi_ms[2] - aimc.airGapS.RotationMatrix[2,1] * aimc.airGapS.psi_ms[1]
+Differentiated equation:
+aimc.airGapS.spacePhasor_r.v_[2] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.spacePhasor_s.v_[2] + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.airGapS.psi_ms[2] + (-aimc.airGapS.RotationMatrix[2,1]) * aimc.airGapS.spacePhasor_s.v_[1] - der(aimc.airGapS.RotationMatrix[2,1]) * aimc.airGapS.psi_ms[1]
+
+------------------226------------------
+Constraint equation to be differentiated:
+-aimc.airGapS.RotationMatrix[2,1] = -sin(aimc.airGapS.gamma)
+Differentiated equation:
+-der(aimc.airGapS.RotationMatrix[2,1]) = (-cos(aimc.airGapS.gamma)) * der(aimc.airGapS.gamma)
+
+------------------220------------------
+Constraint equation to be differentiated:
+aimc.airGapS.psi_ms[1] = aimc.airGapS.L[1,1] * aimc.airGapS.i_ms[1] + aimc.airGapS.L[1,2] * aimc.airGapS.i_ms[2]
+Differentiated equation:
+aimc.airGapS.spacePhasor_s.v_[1] = aimc.airGapS.L[1,1] * der(aimc.airGapS.i_ms[1]) + aimc.airGapS.L[1,2] * der(aimc.airGapS.i_ms[2])
+
+------------------229------------------
+Constraint equation to be differentiated:
+aimc.idq_rs[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.idq_rr[1] - aimc.airGapS.RotationMatrix[2,1] * aimc.idq_rr[2]
+Differentiated equation:
+der(aimc.idq_rs[1]) = aimc.airGapS.RotationMatrix[2,2] * der(aimc.idq_rr[1]) + der(aimc.airGapS.RotationMatrix[2,2]) * aimc.idq_rr[1] + (-aimc.airGapS.RotationMatrix[2,1]) * der(aimc.idq_rr[2]) - der(aimc.airGapS.RotationMatrix[2,1]) * aimc.idq_rr[2]
+
+------------------218------------------
+Constraint equation to be differentiated:
+aimc.airGapS.i_ms[1] = aimc.lssigma.i_[1] + aimc.idq_rs[1]
+Differentiated equation:
+der(aimc.airGapS.i_ms[1]) = der(aimc.lssigma.i_[1]) + der(aimc.idq_rs[1])
+
+Update Incidence Matrix: 219 230 228 227 224 222 221 225 223 226 220 229 218
+
+##############--MSSS--##############
+Indices of constraint equations: 268 275 274 273 206 208 212 214 213 207
+
+------------------207------------------
+Constraint equation to be differentiated:
+aimc.spacePhasorS.i[2] * aimc.spacePhasorS.turnsRatio = aimc.is[2]
+Differentiated equation:
+der(aimc.spacePhasorS.i[2]) * aimc.spacePhasorS.turnsRatio = der(aimc.is[2])
+
+------------------213------------------
+Constraint equation to be differentiated:
+aimc.lssigma.i_[1] = aimc.spacePhasorS.TransformationMatrix[1,1] * aimc.spacePhasorS.i[1] + aimc.spacePhasorS.TransformationMatrix[1,2] * aimc.spacePhasorS.i[2] + aimc.spacePhasorS.TransformationMatrix[1,3] * aimc.spacePhasorS.i[3]
+Differentiated equation:
+der(aimc.lssigma.i_[1]) = aimc.spacePhasorS.TransformationMatrix[1,1] * der(aimc.spacePhasorS.i[1]) + aimc.spacePhasorS.TransformationMatrix[1,2] * der(aimc.spacePhasorS.i[2]) + aimc.spacePhasorS.TransformationMatrix[1,3] * der(aimc.spacePhasorS.i[3])
+
+------------------214------------------
+Constraint equation to be differentiated:
+aimc.lssigma.i_[2] = aimc.spacePhasorS.TransformationMatrix[2,1] * aimc.spacePhasorS.i[1] + aimc.spacePhasorS.TransformationMatrix[2,2] * aimc.spacePhasorS.i[2] + aimc.spacePhasorS.TransformationMatrix[2,3] * aimc.spacePhasorS.i[3]
+Differentiated equation:
+der(aimc.lssigma.i_[2]) = aimc.spacePhasorS.TransformationMatrix[2,1] * der(aimc.spacePhasorS.i[1]) + aimc.spacePhasorS.TransformationMatrix[2,2] * der(aimc.spacePhasorS.i[2]) + aimc.spacePhasorS.TransformationMatrix[2,3] * der(aimc.spacePhasorS.i[3])
+
+------------------212------------------
+Constraint equation to be differentiated:
+(-3.0) * aimc.i_0_s = aimc.spacePhasorS.i[1] + aimc.spacePhasorS.i[2] + aimc.spacePhasorS.i[3]
+Differentiated equation:
+(-3.0) * der(aimc.i_0_s) = der(aimc.spacePhasorS.i[1]) + der(aimc.spacePhasorS.i[2]) + der(aimc.spacePhasorS.i[3])
+
+------------------208------------------
+Constraint equation to be differentiated:
+aimc.spacePhasorS.i[3] * aimc.spacePhasorS.turnsRatio = aimc.is[3]
+Differentiated equation:
+der(aimc.spacePhasorS.i[3]) * aimc.spacePhasorS.turnsRatio = der(aimc.is[3])
+
+------------------206------------------
+Constraint equation to be differentiated:
+aimc.spacePhasorS.i[1] * aimc.spacePhasorS.turnsRatio = aimc.is[1]
+Differentiated equation:
+der(aimc.spacePhasorS.i[1]) * aimc.spacePhasorS.turnsRatio = der(aimc.is[1])
+
+------------------273------------------
+Constraint equation to be differentiated:
+inverter.iAC[3] + aimc.is[3] - aimc.is[2] = 0.0
+Differentiated equation:
+der(inverter.iAC[3]) + der(aimc.is[3]) - der(aimc.is[2]) = 0.0
+
+------------------274------------------
+Constraint equation to be differentiated:
+inverter.iAC[2] + aimc.is[2] - aimc.is[1] = 0.0
+Differentiated equation:
+der(inverter.iAC[2]) + der(aimc.is[2]) - der(aimc.is[1]) = 0.0
+
+------------------275------------------
+Constraint equation to be differentiated:
+inverter.iAC[1] + aimc.is[1] - aimc.is[3] = 0.0
+Differentiated equation:
+der(inverter.iAC[1]) + der(aimc.is[1]) - der(aimc.is[3]) = 0.0
+
+------------------268------------------
+Constraint equation to be differentiated:
+0.0 = inverter.iAC[2] + inverter.iAC[1] + inverter.iAC[3] + inductor.inductor[1].i + inductor.inductor[3].i + inductor.inductor[2].i
+Differentiated equation:
+0.0 = der(inverter.iAC[2]) + der(inverter.iAC[1]) + der(inverter.iAC[3]) + der(inductor.inductor[1].i) + der(inductor.inductor[3].i) + der(inductor.inductor[2].i)
+
+Update Incidence Matrix: 215 190 189 178 193 192 187 186 270 169 168 167 89 271 88 272 87 207 213 214 212 208 206 273 274 275 268
+
+########################### STATE SELECTION ###########################
+State Order: (9)
+=============
+loadTorque.phi ---d/dt---> loadInertia.w
+loadInertia.w ---d/dt---> loadInertia.a
+aimc.airGapS.psi_mr[2] ---d/dt---> aimc.airGapS.spacePhasor_r.v_[2]
+aimc.airGapS.psi_mr[1] ---d/dt---> aimc.airGapS.spacePhasor_r.v_[1]
+aimc.airGapS.psi_ms[2] ---d/dt---> aimc.airGapS.spacePhasor_s.v_[2]
+aimc.airGapS.psi_ms[1] ---d/dt---> aimc.airGapS.spacePhasor_s.v_[1]
+aimc.strayLoad.phi ---d/dt---> aimc.strayLoad.w
+aimc.friction.phi ---d/dt---> aimc.friction.w
+aimc.phiMechanical ---d/dt---> aimc.wMechanical
+
+########## Try static state selection ##########
+Try to select dummy vars with natural matching (newer)
+Select 26 dummy states from 36 candidates.
+
+Highest order derivatives (state candidates): (36)
+========================================
+1: aimc.airGapS.gamma:STATE(1)(unit = "rad" )  "Rotor displacement angle" type: Real
+2: aimc.airGapS.RotationMatrix[2,1]:STATE(1)()  "Matrix of rotation from rotor to stator" type: Real [2,2]
+3: aimc.airGapS.RotationMatrix[2,2]:STATE(1)()  "Matrix of rotation from rotor to stator" type: Real [2,2]
+4: inverter.iAC[1]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+5: inverter.iAC[2]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+6: inverter.iAC[3]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+7: aimc.idq_rs[1]:STATE(1)(unit = "A" )  "Rotor space phasor current / stator fixed frame" type: Real [2]
+8: aimc.idq_rs[2]:STATE(1)(unit = "A" )  "Rotor space phasor current / stator fixed frame" type: Real [2]
+9: aimc.airGapS.i_ms[1]:STATE(1)(unit = "A" )  "Magnetizing current space phasor with respect to the stator fixed frame" type: Real [2]
+10: aimc.airGapS.i_ms[2]:STATE(1)(unit = "A" )  "Magnetizing current space phasor with respect to the stator fixed frame" type: Real [2]
+11: aimc.is[1]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+12: aimc.is[2]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+13: aimc.is[3]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+14: aimc.lssigma.i_[1]:STATE(1)(unit = "A" )  type: Real [2]
+15: aimc.lssigma.i_[2]:STATE(1)(unit = "A" )  type: Real [2]
+16: aimc.spacePhasorS.i[1]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+17: aimc.spacePhasorS.i[2]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+18: aimc.spacePhasorS.i[3]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+19: inductor.inductor[1].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+20: inductor.inductor[2].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+21: inductor.inductor[3].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+22: loadInertia.w:STATE(1,loadInertia.a)(unit = "rad/s" )  "Absolute angular velocity of component (= der(phi))" type: Real
+23: aimc.friction.phi:STATE(1,aimc.friction.w)(unit = "rad" )  "Angle between shaft and support" type: Real
+24: aimc.strayLoad.phi:STATE(1,aimc.strayLoad.w)(unit = "rad" )  "Angle between shaft and support" type: Real
+25: aimc.airGapS.psi_ms[1]:STATE(1,aimc.airGapS.spacePhasor_s.v_[1])(unit = "Wb" )  "Magnetizing flux phasor with respect to the stator fixed frame" type: Real [2]
+26: aimc.airGapS.psi_ms[2]:STATE(1,aimc.airGapS.spacePhasor_s.v_[2])(unit = "Wb" )  "Magnetizing flux phasor with respect to the stator fixed frame" type: Real [2]
+27: aimc.airGapS.psi_mr[1]:STATE(1,aimc.airGapS.spacePhasor_r.v_[1])(unit = "Wb" )  "Magnetizing flux phasor with respect to the rotor fixed frame" type: Real [2]
+28: aimc.airGapS.psi_mr[2]:STATE(1,aimc.airGapS.spacePhasor_r.v_[2])(unit = "Wb" )  "Magnetizing flux phasor with respect to the rotor fixed frame" type: Real [2]
+29: capacitor.v:STATE(1)(start = VDC unit = "V" fixed = true )  "Voltage drop of the two pins (= p.v - n.v)" type: Real
+30: vfController.x:STATE(1)(start = 0.0 unit = "rad" fixed = true )  "Integrator state" type: Real
+31: aimc.idq_sr[1]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Stator space phasor current / rotor fixed frame" type: Real [2]
+32: aimc.idq_sr[2]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Stator space phasor current / rotor fixed frame" type: Real [2]
+33: aimc.idq_rr[1]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Rotor space phasor current / rotor fixed frame" type: Real [2]
+34: aimc.idq_rr[2]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Rotor space phasor current / rotor fixed frame" type: Real [2]
+35: aimc.phiMechanical:STATE(1,aimc.wMechanical)(start = 0.0 unit = "rad" fixed = true )  "Mechanical angle of rotor against stator" type: Real
+36: aimc.i_0_s:STATE(1)(start = 0.0 unit = "A" stateSelect=StateSelect.prefer )  "Stator zero-sequence current" type: Real
+
+
+Constraint equations: (26)
+========================================
+1/1 (1): inverter.iAC[1] + aimc.is[1] - aimc.is[3] = 0.0   [dynamic |0|0|0|0|]
+2/2 (1): inverter.iAC[2] + aimc.is[2] - aimc.is[1] = 0.0   [dynamic |0|0|0|0|]
+3/3 (1): inverter.iAC[3] + aimc.is[3] - aimc.is[2] = 0.0   [dynamic |0|0|0|0|]
+4/4 (1): 0.0 = inverter.iAC[2] + inverter.iAC[1] + inverter.iAC[3] + inductor.inductor[1].i + inductor.inductor[3].i + inductor.inductor[2].i   [unknown |0|0|0|0|]
+5/5 (1): aimc.idq_rs[2] = aimc.airGapS.RotationMatrix[2,1] * aimc.idq_rr[1] + aimc.airGapS.RotationMatrix[2,2] * aimc.idq_rr[2]   [dynamic |0|0|0|0|]
+6/6 (1): aimc.idq_rs[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.idq_rr[1] - aimc.airGapS.RotationMatrix[2,1] * aimc.idq_rr[2]   [dynamic |0|0|0|0|]
+7/7 (1): aimc.lssigma.i_[2] = aimc.airGapS.RotationMatrix[2,1] * aimc.idq_sr[1] + aimc.airGapS.RotationMatrix[2,2] * aimc.idq_sr[2]   [dynamic |0|0|0|0|]
+8/8 (1): aimc.lssigma.i_[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.idq_sr[1] - aimc.airGapS.RotationMatrix[2,1] * aimc.idq_sr[2]   [dynamic |0|0|0|0|]
+9/9 (1): -aimc.airGapS.RotationMatrix[2,1] = -sin(aimc.airGapS.gamma)   [dynamic |0|0|0|0|]
+10/10 (1): aimc.airGapS.RotationMatrix[2,2] = cos(aimc.airGapS.gamma)   [dynamic |0|0|0|0|]
+11/11 (1): aimc.airGapS.gamma = /*Real*/(aimc.airGapS.p) * (loadTorque.phi - aimc.fixed.phi0)   [dynamic |0|0|0|0|]
+12/12 (1): aimc.airGapS.psi_mr[2] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.psi_ms[2] - aimc.airGapS.RotationMatrix[2,1] * aimc.airGapS.psi_ms[1]   [dynamic |0|0|0|0|]
+13/13 (1): aimc.airGapS.psi_mr[1] = aimc.airGapS.RotationMatrix[2,2] * aimc.airGapS.psi_ms[1] + aimc.airGapS.RotationMatrix[2,1] * aimc.airGapS.psi_ms[2]   [dynamic |0|0|0|0|]
+14/14 (1): aimc.airGapS.psi_ms[2] = aimc.airGapS.L[2,1] * aimc.airGapS.i_ms[1] + aimc.airGapS.L[2,2] * aimc.airGapS.i_ms[2]   [dynamic |0|0|0|0|]
+15/15 (1): aimc.airGapS.psi_ms[1] = aimc.airGapS.L[1,1] * aimc.airGapS.i_ms[1] + aimc.airGapS.L[1,2] * aimc.airGapS.i_ms[2]   [dynamic |0|0|0|0|]
+16/16 (1): aimc.airGapS.i_ms[2] = aimc.lssigma.i_[2] + aimc.idq_rs[2]   [dynamic |0|0|0|0|]
+17/17 (1): aimc.airGapS.i_ms[1] = aimc.lssigma.i_[1] + aimc.idq_rs[1]   [dynamic |0|0|0|0|]
+18/18 (1): aimc.strayLoad.phi = loadTorque.phi - aimc.fixed.phi0   [dynamic |0|0|0|0|]
+19/19 (1): aimc.lssigma.i_[2] = aimc.spacePhasorS.TransformationMatrix[2,1] * aimc.spacePhasorS.i[1] + aimc.spacePhasorS.TransformationMatrix[2,2] * aimc.spacePhasorS.i[2] + aimc.spacePhasorS.TransformationMatrix[2,3] * aimc.spacePhasorS.i[3]   [dynamic |0|0|0|0|]
+20/20 (1): aimc.lssigma.i_[1] = aimc.spacePhasorS.TransformationMatrix[1,1] * aimc.spacePhasorS.i[1] + aimc.spacePhasorS.TransformationMatrix[1,2] * aimc.spacePhasorS.i[2] + aimc.spacePhasorS.TransformationMatrix[1,3] * aimc.spacePhasorS.i[3]   [dynamic |0|0|0|0|]
+21/21 (1): (-3.0) * aimc.i_0_s = aimc.spacePhasorS.i[1] + aimc.spacePhasorS.i[2] + aimc.spacePhasorS.i[3]   [dynamic |0|0|0|0|]
+22/22 (1): aimc.spacePhasorS.i[3] * aimc.spacePhasorS.turnsRatio = aimc.is[3]   [dynamic |0|0|0|0|]
+23/23 (1): aimc.spacePhasorS.i[2] * aimc.spacePhasorS.turnsRatio = aimc.is[2]   [dynamic |0|0|0|0|]
+24/24 (1): aimc.spacePhasorS.i[1] * aimc.spacePhasorS.turnsRatio = aimc.is[1]   [dynamic |0|0|0|0|]
+25/25 (1): aimc.friction.phi = loadTorque.phi - aimc.fixed.phi0   [dynamic |0|0|0|0|]
+26/26 (1): aimc.phiMechanical = loadTorque.phi - aimc.fixed.phi0   [binding |0|0|0|0|]
+
+Adjacency Matrix Enhanced (row == equation)
+====================================
+number of rows: 26
+1:(-4,constone) (-11,constone) (-13,constone) 
+2:(-5,constone) (-12,constone) (-11,constone) 
+3:(-6,constone) (-13,constone) (-12,constone) 
+4:(-5,constone) (-4,constone) (-6,constone) (-19,constone) (-21,constone) (-20,constone) 
+5:(-8,solved) (-2,variable(true)) (-33,variable(true)) (-3,variable(true)) (-34,variable(true)) 
+6:(-7,solved) (-3,variable(true)) (-33,variable(true)) (-2,variable(true)) (-34,variable(true)) 
+7:(-15,solved) (-2,variable(true)) (-31,variable(true)) (-3,variable(true)) (-32,variable(true)) 
+8:(-14,solved) (-3,variable(true)) (-31,variable(true)) (-2,variable(true)) (-32,variable(true)) 
+9:(-2,solved) (-1,nonlinear) 
+10:(-3,solved) (-1,nonlinear) 
+11:(-1,solved) 
+12:(-28,solved) (-3,variable(true)) (-26,variable(true)) (-2,variable(true)) (-25,variable(true)) 
+13:(-27,solved) (-3,variable(true)) (-25,variable(true)) (-2,variable(true)) (-26,variable(true)) 
+14:(-26,solved) (-9,param(false)) (-10,param(true)) 
+15:(-25,solved) (-9,param(true)) (-10,param(false)) 
+16:(-10,solved) (-15,constone) (-8,constone) 
+17:(-9,solved) (-14,constone) (-7,constone) 
+18:(-24,solved) 
+19:(-15,solved) (-16,param(false)) (-17,param(true)) (-18,param(true)) 
+20:(-14,solved) (-16,param(true)) (-17,param(true)) (-18,param(true)) 
+21:(-36,const(true)) (-16,constone) (-17,constone) (-18,constone) 
+22:(-18,param(true)) (-13,solved) 
+23:(-17,param(true)) (-12,solved) 
+24:(-16,param(true)) (-11,solved) 
+25:(-23,solved) 
+26:(-35,solved) 
+
+Transpose Adjacency Matrix Enhanced (row == var)
+=====================================
+number of rows: 36
+1:(-11,solved) (-10,nonlinear) (-9,nonlinear) 
+2:(-13,variable(true)) (-12,variable(true)) (-9,solved) (-8,variable(true)) (-7,variable(true)) (-6,variable(true)) (-5,variable(true)) 
+3:(-13,variable(true)) (-12,variable(true)) (-10,solved) (-8,variable(true)) (-7,variable(true)) (-6,variable(true)) (-5,variable(true)) 
+4:(-4,constone) (-1,constone) 
+5:(-4,constone) (-2,constone) 
+6:(-4,constone) (-3,constone) 
+7:(-17,constone) (-6,solved) 
+8:(-16,constone) (-5,solved) 
+9:(-17,solved) (-15,param(true)) (-14,param(false)) 
+10:(-16,solved) (-15,param(false)) (-14,param(true)) 
+11:(-24,solved) (-2,constone) (-1,constone) 
+12:(-23,solved) (-3,constone) (-2,constone) 
+13:(-22,solved) (-3,constone) (-1,constone) 
+14:(-20,solved) (-17,constone) (-8,solved) 
+15:(-19,solved) (-16,constone) (-7,solved) 
+16:(-24,param(true)) (-21,constone) (-20,param(true)) (-19,param(false)) 
+17:(-23,param(true)) (-21,constone) (-20,param(true)) (-19,param(true)) 
+18:(-22,param(true)) (-21,constone) (-20,param(true)) (-19,param(true)) 
+19:(-4,constone) 
+20:(-4,constone) 
+21:(-4,constone) 
+22:
+23:(-25,solved) 
+24:(-18,solved) 
+25:(-15,solved) (-13,variable(true)) (-12,variable(true)) 
+26:(-14,solved) (-13,variable(true)) (-12,variable(true)) 
+27:(-13,solved) 
+28:(-12,solved) 
+29:
+30:
+31:(-8,variable(true)) (-7,variable(true)) 
+32:(-8,variable(true)) (-7,variable(true)) 
+33:(-6,variable(true)) (-5,variable(true)) 
+34:(-6,variable(true)) (-5,variable(true)) 
+35:(-26,solved) 
+36:(-21,const(true)) 
+
+Matching
+========================================
+36 variables and equations
+var 1 is solved in eqn 11
+var 2 is solved in eqn 9
+var 3 is solved in eqn 10
+var 4 is solved in eqn 1
+var 5 is solved in eqn 2
+var 6 is solved in eqn 3
+var 7 is solved in eqn 6
+var 8 is solved in eqn 5
+var 9 is solved in eqn 17
+var 10 is solved in eqn 16
+var 11 is solved in eqn 24
+var 12 is solved in eqn 23
+var 13 is solved in eqn 22
+var 14 is solved in eqn 8
+var 15 is solved in eqn 7
+var 16 is solved in eqn 20
+var 17 is solved in eqn 19
+var 18 is solved in eqn 21
+var 19 is solved in eqn 4
+var 20 is solved in eqn -1
+var 21 is solved in eqn -1
+var 22 is solved in eqn -1
+var 23 is solved in eqn 25
+var 24 is solved in eqn 18
+var 25 is solved in eqn 15
+var 26 is solved in eqn 14
+var 27 is solved in eqn 13
+var 28 is solved in eqn 12
+var 29 is solved in eqn -1
+var 30 is solved in eqn -1
+var 31 is solved in eqn -1
+var 32 is solved in eqn -1
+var 33 is solved in eqn -1
+var 34 is solved in eqn -1
+var 35 is solved in eqn 26
+var 36 is solved in eqn -1
+
+Matching
+========================================
+26 variables and equations
+var 1 is solved in eqn 4
+var 2 is solved in eqn 5
+var 3 is solved in eqn 6
+var 4 is solved in eqn 19
+var 5 is solved in eqn 8
+var 6 is solved in eqn 7
+var 7 is solved in eqn 15
+var 8 is solved in eqn 14
+var 9 is solved in eqn 2
+var 10 is solved in eqn 3
+var 11 is solved in eqn 1
+var 12 is solved in eqn 28
+var 13 is solved in eqn 27
+var 14 is solved in eqn 26
+var 15 is solved in eqn 25
+var 16 is solved in eqn 10
+var 17 is solved in eqn 9
+var 18 is solved in eqn 24
+var 19 is solved in eqn 17
+var 20 is solved in eqn 16
+var 21 is solved in eqn 18
+var 22 is solved in eqn 13
+var 23 is solved in eqn 12
+var 24 is solved in eqn 11
+var 25 is solved in eqn 23
+var 26 is solved in eqn 35
+Perfect Matching, no dynamic index reduction needed! There are no unassigned equations.
+
+
+Selected dummy states: (26)
+========================================
+1: aimc.phiMechanical:STATE(1,aimc.wMechanical)(start = 0.0 unit = "rad" fixed = true )  "Mechanical angle of rotor against stator" type: Real
+2: aimc.airGapS.psi_mr[2]:STATE(1,aimc.airGapS.spacePhasor_r.v_[2])(unit = "Wb" )  "Magnetizing flux phasor with respect to the rotor fixed frame" type: Real [2]
+3: aimc.airGapS.psi_mr[1]:STATE(1,aimc.airGapS.spacePhasor_r.v_[1])(unit = "Wb" )  "Magnetizing flux phasor with respect to the rotor fixed frame" type: Real [2]
+4: aimc.airGapS.psi_ms[2]:STATE(1,aimc.airGapS.spacePhasor_s.v_[2])(unit = "Wb" )  "Magnetizing flux phasor with respect to the stator fixed frame" type: Real [2]
+5: aimc.airGapS.psi_ms[1]:STATE(1,aimc.airGapS.spacePhasor_s.v_[1])(unit = "Wb" )  "Magnetizing flux phasor with respect to the stator fixed frame" type: Real [2]
+6: aimc.strayLoad.phi:STATE(1,aimc.strayLoad.w)(unit = "rad" )  "Angle between shaft and support" type: Real
+7: aimc.friction.phi:STATE(1,aimc.friction.w)(unit = "rad" )  "Angle between shaft and support" type: Real
+8: inductor.inductor[1].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+9: aimc.spacePhasorS.i[3]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+10: aimc.spacePhasorS.i[2]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+11: aimc.spacePhasorS.i[1]:STATE(1)(unit = "A" )  "Instantaneous phase currents" type: Real [3]
+12: aimc.lssigma.i_[2]:STATE(1)(unit = "A" )  type: Real [2]
+13: aimc.lssigma.i_[1]:STATE(1)(unit = "A" )  type: Real [2]
+14: aimc.is[3]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+15: aimc.is[2]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+16: aimc.is[1]:STATE(1)(unit = "A" )  "Stator instantaneous currents" type: Real [3]
+17: aimc.airGapS.i_ms[2]:STATE(1)(unit = "A" )  "Magnetizing current space phasor with respect to the stator fixed frame" type: Real [2]
+18: aimc.airGapS.i_ms[1]:STATE(1)(unit = "A" )  "Magnetizing current space phasor with respect to the stator fixed frame" type: Real [2]
+19: aimc.idq_rs[2]:STATE(1)(unit = "A" )  "Rotor space phasor current / stator fixed frame" type: Real [2]
+20: aimc.idq_rs[1]:STATE(1)(unit = "A" )  "Rotor space phasor current / stator fixed frame" type: Real [2]
+21: inverter.iAC[3]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+22: inverter.iAC[2]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+23: inverter.iAC[1]:STATE(1)(unit = "A" )  "AC current" type: Real [3]
+24: aimc.airGapS.RotationMatrix[2,2]:STATE(1)()  "Matrix of rotation from rotor to stator" type: Real [2,2]
+25: aimc.airGapS.RotationMatrix[2,1]:STATE(1)()  "Matrix of rotation from rotor to stator" type: Real [2,2]
+26: aimc.airGapS.gamma:STATE(1)(unit = "rad" )  "Rotor displacement angle" type: Real
+
+
+Selected continuous states: (10)
+========================================
+1: aimc.i_0_s:STATE(1)(start = 0.0 unit = "A" stateSelect=StateSelect.prefer )  "Stator zero-sequence current" type: Real
+2: aimc.idq_rr[2]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Rotor space phasor current / rotor fixed frame" type: Real [2]
+3: aimc.idq_rr[1]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Rotor space phasor current / rotor fixed frame" type: Real [2]
+4: aimc.idq_sr[2]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Stator space phasor current / rotor fixed frame" type: Real [2]
+5: aimc.idq_sr[1]:STATE(1)(unit = "A" stateSelect=StateSelect.prefer )  "Stator space phasor current / rotor fixed frame" type: Real [2]
+6: vfController.x:STATE(1)(start = 0.0 unit = "rad" fixed = true )  "Integrator state" type: Real
+7: capacitor.v:STATE(1)(start = VDC unit = "V" fixed = true )  "Voltage drop of the two pins (= p.v - n.v)" type: Real
+8: loadInertia.w:STATE(1,loadInertia.a)(unit = "rad/s" )  "Absolute angular velocity of component (= der(phi))" type: Real
+9: inductor.inductor[3].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+10: inductor.inductor[2].i:STATE(1)(start = 0.0 unit = "A" )  "Current flowing from pin p to pin n" type: Real [3]
+
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 1.5, numberOfIntervals = 30000, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'Modelica.Electrical.Machines.Examples.AsynchronousInductionMachines.AIMC_InverterDrive', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "Simulation execution failed for model: Modelica.Electrical.Machines.Examples.AsynchronousInductionMachines.AIMC_InverterDrive
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+assert            | debug   | Simulation terminated due to too many, i.e. 20, event iterations.
+|                 | |       | This could either indicate an inconsistent system or an undersized limit of event iterations.
+|                 | |       | The limit of event iterations can be specified using the runtime flag '–mei=<value>'.
+",
+    timeFrontend = 0.8346136749999999,
+    timeBackend = 0.78348839,
+    timeSimCode = 0.06675618500000001,
+    timeTemplates = 0.08867684899999995,
+    timeCompile = 1.288551428
+end SimulationResult;
+""

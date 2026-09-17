@@ -1,0 +1,147 @@
+
+This little file is an illustration of a working case of the treatment of a fmu object in COMMON-LISP.
+This is working on a 64bits Linux 4.9.0-8-amd64 #1 SMP Debian 4.9.130-2 (2018-10-27) x86_64 GNU/Linux
+SBCL 1.3.14.debian
+; SLIME 2.23
+
+;;************************************************************************************************************
+;; First we load the package that I have called cl-fmi.
+CL-USER> (in-package :cl-fmi)
+#<PACKAGE "CL-FMI">
+;;************************************************************************************************************
+;; Then we define a parameter containing the path to the fmu file.
+FMI> (defparameter test-fmu-file-path-64 "/home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/Modelica_Blocks_Continuous_SecondOrder_64bits.fmu")
+TEST-FMU-FILE-PATH-64
+
+;; The following is the instantiation of the fmu-info object of the class fmi2-information I have defined elsewhere.
+;; The instantiation method unzip the fmu file, goes through the xml file and dispatch info in the class slots.
+;; We also in this identifies the library location.
+FMI> (defparameter fmu-info (make-fmi2-information test-fmu-file-path-64  :unzip t))
+
+"unzip" 
+"/home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/unzip-3763774181/" 
+ UNZIP DIRECTORY : /home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/unzip-3763774181/ 
+
+"unzip finished" UPDATE OF *foreign-library-directories* 
+FMU PATHNAME : /home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/Modelica_Blocks_Continuous_SecondOrder_64bits.fmu 
+FMU DIRECTORY : /home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/ 
+UNZIP FLAG : T 
+UNZIP DIRECTORY : /home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/unzip-3763774181/ 
+INPUT LIB DIR FLAG : NIL 
+IDENTIFIED LIB DIR FLAG : /home/frederic/quicklisp/local-projects/cl-fmi/test/linux64/unzip-3763774181/binaries/linux64/ 
+FMU-INFO
+
+;; Small confirmation that the instance is indeed a fmi2-information class
+FMI> (class-of fmu-info)
+#<STANDARD-CLASS CL-FMI::FMI2-INFORMATION>
+
+;;************************************************************************************************************
+;; Then we generate the fmu-test object , instance of an instance-me model exchange class I have defined elsewhere.
+FMI> (defparameter fmu-test (make-instance-me fmu-info ))
+FMU-TEST
+
+FMI> (class-of fmu-test)
+#<STANDARD-CLASS CL-FMI::INSTANCE-ME>
+
+;;************************************************************************************************************
+;; At this stage we can talk to it ... and the library was indeed accessed in this case.
+;; Pre initialization stage
+;; Here we reset the object
+FMI> (fmi2reset (p fmu-test))
+:FMI2OK
+;; We can set the time ... notice the accessor (p fmu-test) to the process pointer.
+FMI> (fmi2settime (p fmu-test) 0.0d0)
+:FMI2OK
+;; We can set the experimental plan ... notice the fmi2 boolean variables
+FMI> (fmi2SetupExperiment (p fmu-test) fmi2True 1.0d-5 0.0d0 fmi2True 1.0d0)
+:FMI2OK
+
+;; Initialization stage
+FMI>(fmi2enterinitializationmode (p fmu-test))
+:FMI2OK
+;; The fmu-info helps us locate the variables
+;; At this moment we need to identify the parameters and variables to initialize
+;; We only access the fmu-info object so no status message here 
+FMI> (fmi2-print-variables fmu-info  :index t :variability t :causality t :type t)
+---------------
+MODEL VARIABLES 
+            y            0   continuous Real by Default       output
+           yd            1   continuous Real by Default       output
+       der(y)            2   continuous Real by Default        local
+      der(yd)            3   continuous Real by Default        local
+            u            4   continuous Real by Default        input
+            D            5        fixed Real by Default    parameter
+            k            6        fixed Real by Default    parameter
+            w            7        fixed Real by Default    parameter
+      y_start            8        fixed Real by Default    parameter
+     yd_start            9        fixed Real by Default    parameter
+     initType           10        fixed Modelica.Blocks.Types.Init calculatedParameter
+---------------
+MODEL STRUCTURE 
+---------------
+INDEX of OUTPUT VARIABLES :  (1 2) 
+---------------
+INDEX of DERIVATIVE VARIABLES :  (3 4) 
+NIL
+;; TO Ease the readability we can assign some values to parameters
+FMI> (defparameter D 0.7d0)
+(defparameter k 1.0d0)
+(defparameter w 100.0d0)
+(defparameter y_start 0.0d0)
+(defparameter yd_start 0.0d0)
+;; And send them to the real parameters of the FMU object
+FMI> (fmi2-set-real (p fmu-test) '(5 6 7 8 9) (list D k w y_start yd_start))
+:FMI2OK
+;; And check that it worked.
+FMI> (fmi2-get-real (p fmu-test) '(1 2 3 4 5 6 7 8))
+:FMI2OK 
+((1 0.0d0) (2 0.0d0) (3 0.0d0) (4 0.0d0) (5 0.7d0) (6 1.0d0) (7 100.0d0)
+ (8 0.0d0))
+
+;; Let us get out of initialization
+FMI> (fmi2ExitInitializationMode (p fmu-test))
+:FMI2OK
+
+;;************************************************************************************************************
+;; Let us enter the continuous mode
+FMI> (fmi2entercontinuoustimemode (p fmu-test))
+:FMI2OK
+;; At this stage we can set variables and see the impact for example on the derivatives
+;; Once we can do this we can exploit the model and feed it to a solver.
+;; u is the variable 4 it is an input
+FMI> (fmi2-set-real (p fmu-test) '(4) '(1.0d-2))
+:FMI2OK
+;; We can set time also at this stage ... as an input to the get derivatives
+;; It was already done but we can do it.
+FMI> (fmi2settime (p fmu-test) 0.0d0)
+:FMI2OK
+;; First let us set the states variables
+;; Setting of the State variables (here there are two )
+FMI> (fmi2-set-continuous-states (p fmu-test) '(0.0d0 0.0d0))
+:FMI2OK
+;; Getting the value of the Derivatives of the State variables
+FMI> (fmi2-get-derivatives (p fmu-test) 2 )
+:FMI2OK 
+((1 0.0d0) (2 100.0d0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

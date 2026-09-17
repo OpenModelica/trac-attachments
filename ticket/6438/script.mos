@@ -1,0 +1,9 @@
+loadFile("TestPackage.mo");
+getErrorString();
+getElements(TestPackage.Test);
+getErrorString();
+
+loadFile("TestPackage1.mo");
+getErrorString();
+getElements(TestPackage.Test);
+getErrorString();

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+  fmiVersion="2.0"
+  modelName="Modelica_Synchronous.Examples.Elementary.ClockSignals.SubSample"
+  guid="{35bb2623-912c-4d96-bd9d-d46a11617025}"
+  description="Example of a SubSample block for Clock signals"
+  generationTool="OpenModelica Compiler OMCompiler v1.18.0-dev.27+gaae2bf02b0"
+  generationDateAndTime="2021-02-09T11:43:43Z"
+  variableNamingConvention="structured"
+  numberOfEventIndicators="1">
+  <ModelExchange
+    modelIdentifier="Modelica_Synchronous_Examples_Elementary_ClockSignals_SubSample">
+  </ModelExchange>
+  <UnitDefinitions>
+    <Unit name="s">
+      <BaseUnit s="1" />
+    </Unit>
+    <Unit name="rad">
+      <BaseUnit />
+    </Unit>
+    <Unit name="Hz">
+      <BaseUnit s="-1" />
+    </Unit>
+  </UnitDefinitions>
+  <TypeDefinitions>
+    <SimpleType name="Modelica_Synchronous.Types.Resolution">
+      <Enumeration>
+        <Item name="y" value="1"/>
+        <Item name="d" value="2"/>
+        <Item name="h" value="3"/>
+        <Item name="m" value="4"/>
+        <Item name="s" value="5"/>
+        <Item name="ms" value="6"/>
+        <Item name="us" value="7"/>
+        <Item name="ns" value="8"/>
+      </Enumeration>
+    </SimpleType>
+    <Clocks>
+      <Clock><Inferred
+              intervalCounter="60"
+              resolution="1000"
+              /></Clock>
+    </Clocks>
+  </TypeDefinitions>
+  <LogCategories>
+    <Category name="logEvents" />
+    <Category name="logSingularLinearSystems" />
+    <Category name="logNonlinearSystems" />
+    <Category name="logDynamicStateSelection" />
+    <Category name="logStatusWarning" />
+    <Category name="logStatusDiscard" />
+    <Category name="logStatusError" />
+    <Category name="logStatusFatal" />
+    <Category name="logStatusPending" />
+    <Category name="logAll" />
+    <Category name="logFmi2Call" />
+  </LogCategories>
+  <DefaultExperiment startTime="0.0" stopTime="0.2" tolerance="1e-06"/>
+  <ModelVariables>
+  <!-- Index of variable = "1" -->
+  <ScalarVariable
+    name="sample1.y"
+    valueReference="0"
+    description="Connector of clocked, Real output signal"
+    variability="discrete"
+    clockIndex="1"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "2" -->
+  <ScalarVariable
+    name="sine.y"
+    valueReference="1"
+    description="Connector of Real output signal"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "3" -->
+  <ScalarVariable
+    name="sine.amplitude"
+    valueReference="2"
+    description="Amplitude of sine wave"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="1.0"/>
+  </ScalarVariable>
+  <!-- Index of variable = "4" -->
+  <ScalarVariable
+    name="sine.freqHz"
+    valueReference="3"
+    description="Frequency of sine wave"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="2.0" unit="Hz"/>
+  </ScalarVariable>
+  <!-- Index of variable = "5" -->
+  <ScalarVariable
+    name="sine.offset"
+    valueReference="4"
+    description="Offset of output signal y"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="0.1"/>
+  </ScalarVariable>
+  <!-- Index of variable = "6" -->
+  <ScalarVariable
+    name="sine.phase"
+    valueReference="5"
+    description="Phase of sine wave"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="0.0" unit="rad"/>
+  </ScalarVariable>
+  <!-- Index of variable = "7" -->
+  <ScalarVariable
+    name="sine.startTime"
+    valueReference="6"
+    description="Output y = offset for time &lt; startTime"
+    variability="fixed"
+    causality="parameter"
+    >
+    <Real start="0.0" unit="s"/>
+  </ScalarVariable>
+  <!-- Index of variable = "8" -->
+  <ScalarVariable
+    name="sample1.u"
+    valueReference="1"
+    description="Connector of continuous-time, Real input signal"
+    >
+    <Real/>
+  </ScalarVariable>
+  <!-- Index of variable = "9" -->
+  <ScalarVariable
+    name="periodicClock.factor"
+    valueReference="0"
+    description="Sample factor with respect to resolution"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Integer/>
+  </ScalarVariable>
+  <!-- Index of variable = "10" -->
+  <ScalarVariable
+    name="periodicClock.resolution"
+    valueReference="1"
+    description="Clock resolution"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Enumeration declaredType="Modelica_Synchronous.Types.Resolution"/>
+  </ScalarVariable>
+  <!-- Index of variable = "11" -->
+  <ScalarVariable
+    name="periodicClock.resolutionFactor"
+    valueReference="2"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Integer/>
+  </ScalarVariable>
+  <!-- Index of variable = "12" -->
+  <ScalarVariable
+    name="subSample.factor"
+    valueReference="3"
+    description="Sub-sampling factor (&gt;= 1)"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Integer/>
+  </ScalarVariable>
+  <!-- Index of variable = "13" -->
+  <ScalarVariable
+    name="periodicClock.useSolver"
+    valueReference="0"
+    description="= true, if solverMethod shall be explicitly defined"
+    variability="fixed"
+    causality="calculatedParameter"
+    >
+    <Boolean/>
+  </ScalarVariable>
+  <!-- Index of variable = "14" -->
+  <ScalarVariable
+    name="periodicClock.solverMethod"
+    valueReference="0"
+    description="Integration method used for discretized continuous-time partitions"
+    variability="fixed"
+    causality="parameter"
+    >
+    <String start="ExplicitEuler"/>
+  </ScalarVariable>
+  </ModelVariables>
+  <ModelStructure>
+    <InitialUnknowns>
+      <Unknown index="9" dependencies="" dependenciesKind="" />
+      <Unknown index="10" dependencies="" dependenciesKind="" />
+      <Unknown index="11" dependencies="" dependenciesKind="" />
+      <Unknown index="12" dependencies="" dependenciesKind="" />
+      <Unknown index="13" dependencies="" dependenciesKind="" />
+    </InitialUnknowns>
+  </ModelStructure>
+</fmiModelDescription>

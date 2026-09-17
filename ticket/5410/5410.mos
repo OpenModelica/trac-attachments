@@ -1,0 +1,35 @@
+echo(false);
+s1 := "package A
+  package P1
+    model M
+      Real x(
+        start = 0,
+        fixed = true)
+        \"variable comment\";
+      Real yy = 12;
+    end M;
+  end P1;
+end A;";
+loadString(s1, "A.mo");
+getErrorString();
+addComponent(z, Real, A.P1.M);
+getErrorString();
+answer := "package A
+  package P1
+    model M
+      Real x(
+        start = 0,
+        fixed = true)
+        \"variable comment\";
+      Real yy = 12;
+      Real z;
+    end M;
+  end P1;
+end A;";
+s2 := listFile(A);
+//print(s2);
+res := diffModelicaFileListings(s1, s2, OpenModelica.Scripting.DiffFormat.plain);
+//print("\n"+res);
+if answer<>res then
+  print("\nFailed:\nGot:\n"+diffModelicaFileListings(s1, s2, OpenModelica.Scripting.DiffFormat.plain)+"\nExpected:\n"+diffModelicaFileListings(s1, s2, OpenModelica.Scripting.DiffFormat.color));
+end if;

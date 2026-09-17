@@ -1,0 +1,36 @@
+oms_setLogFile("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit//omslog.txt") 09:09:46:677
+0 09:09:46:684
+#s#; 0.007000; 0.007000; 'oms_setLogFile("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit//omslog.txt")'
+
+oms_setTempDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/") 09:09:46:685
+0 09:09:46:689
+#s#; 0.004000; 0.011000; 'oms_setTempDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/")'
+
+oms_setLoggingCallback() 09:09:46:689
+0 09:09:46:689
+#s#; 0.000000; 0.011000; 'oms_setLoggingCallback()'
+
+oms_setCommandLineOption(--suppressPath=true) 09:09:46:840
+0 09:09:46:842
+#s#; 0.002000; 0.013000; 'oms_setCommandLineOption(--suppressPath=true)'
+
+oms_setWorkingDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/") 09:09:46:842
+0 09:09:46:842
+#s#; 0.000000; 0.013000; 'oms_setWorkingDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/")'
+
+oms_setLoggingLevel(0) 09:09:46:842
+0 09:09:46:842
+#s#; 0.000000; 0.013000; 'oms_setLoggingLevel(0)'
+
+oms_setCommandLineOption(--suppressPath=true) 09:10:25:706
+0 09:10:25:706
+#s#; 0.000000; 0.013000; 'oms_setCommandLineOption(--suppressPath=true)'
+
+oms_setWorkingDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/") 09:10:25:707
+0 09:10:25:707
+#s#; 0.000000; 0.013000; 'oms_setWorkingDirectory("/var/folders/s4/0j3cshj161126ygbpbzsdkmd4h24dl/T/OpenModelica_adershowitz/OMEdit/")'
+
+oms_setLoggingLevel(0) 09:10:25:707
+0 09:10:25:707
+#s#; 0.000000; 0.013000; 'oms_setLoggingLevel(0)'
+

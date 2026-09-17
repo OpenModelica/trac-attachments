@@ -1,0 +1,4 @@
+loadFile("P.mo");
+getErrorString();
+listFile(P);
+getErrorString();

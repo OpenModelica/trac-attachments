@@ -1,0 +1,5 @@
+loadModel(Modelica);
+getErrorString();
+getVersion(Modelica);
+simulate(Modelica.Magnetic.FundamentalWave.Examples.BasicMachines.SMEE_Generator_MultiPhase);
+getErrorString();

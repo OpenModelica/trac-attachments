@@ -1,0 +1,57 @@
+python3.7 FMUtest.py
+
+Model Info
+
+  FMI Version       2.0
+  FMI Type          Model Exchange, Co-Simulation
+  Model Name        AixLib.Fluid.FMI.ExportContainers.Examples.FMUs.ThermalZone
+  Description       Declaration of an FMU that exports a thermal zone
+  Platforms         win64
+  Continuous States 3
+  Event Indicators  38
+  Variables         650
+  Generation Tool   Dymola Version 2020 (64-bit), 2019-04-10 (requires license to execute)
+  Generation Date   2020-06-17T10:07:19Z
+
+Default Experiment
+
+  Stop Time         1
+  Tolerance         0.0001
+
+Variables (input, output)
+
+Name                Causality              Start Value  Unit     Description
+fluPor[1].m_flow    input                          0.0  kg/s     Mass flow rate from the connection point into the component
+fluPor[1].forward.T input                       293.15  K        Temperature
+fluPor[1].forward.X_w input                          0.0  1        Water vapor mass fractions per kg total air
+fluPor[1].backward.T output                              K        Temperature
+fluPor[1].backward.X_w output                              1        Water vapor mass fractions per kg total air
+fluPor[2].m_flow    input                          0.0  kg/s     Mass flow rate from the connection point into the component
+fluPor[2].forward.T input                       293.15  K        Temperature
+fluPor[2].forward.X_w input                          0.0  1        Water vapor mass fractions per kg total air
+fluPor[2].backward.T output                              K        Temperature
+fluPor[2].backward.X_w output                              1        Water vapor mass fractions per kg total air
+weaBus.TDryBul      output
+weaBus.HDifHor      output                                       Radiation
+weaBus.HDirNor      output                                       Radiation
+weaBus.HGloHor      output                                       Radiation
+weaBus.HHorIR       output                                       Horizontal infrared irradiation
+weaBus.TBlaSky      output                                       Black-body sky temperature
+weaBus.TDewPoi      output                                       Output temperature
+weaBus.celHei       output                                       Ceiling height
+weaBus.cloTim       output                                       Connector of Real output signal
+weaBus.lat          output                                       Latitude of the location
+weaBus.lon          output                                       Longitude of the location
+weaBus.nOpa         output                                       Sky cover [0, 1]
+weaBus.nTot         output                                       Sky cover [0, 1]
+weaBus.pAtm         output                                       Atmospheric pressure
+weaBus.relHum       output                                       Relative humidity
+weaBus.solAlt       output                                       Solar altitude angle
+weaBus.solDec       output                                       Solar declination angle
+weaBus.solHouAng    output                                       Solar hour angle
+weaBus.solTim       output                                       Solar time
+weaBus.solZen       output                                       Zenith angle
+weaBus.winDir       output                                       Wind direction
+weaBus.winSpe       output                                       Wind speed
+TOut                output                                       Outdoor temperature
+TRad                output                                       Radiative temperature

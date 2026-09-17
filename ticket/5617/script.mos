@@ -1,0 +1,6 @@
+loadFile("PhotoVoltaics-master/PhotoVoltaics/package.mo");
+getErrorString();
+loadFile("TestPkg.mo");
+getErrorString();
+translateModel(TestPkg.SimpleModule);
+getErrorString();

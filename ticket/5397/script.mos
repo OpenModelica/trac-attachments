@@ -1,0 +1,4 @@
+loadFile("FCSys 0.2.6/package.mo");
+getErrorString();
+getInheritedClasses(FCSys.Units);
+getErrorString();

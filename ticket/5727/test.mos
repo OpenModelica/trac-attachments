@@ -1,0 +1,3 @@
+loadFile("Test.mo");getErrorString();
+setCommandLineOptions("-d=stateselection,newInst");getErrorString();
+simulate(Test);getErrorString();

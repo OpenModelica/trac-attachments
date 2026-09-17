@@ -1,0 +1,3 @@
+loadFile("TestTotal.mo"); getErrorString();
+setCommandLineOptions("-d=newInst"); getErrorString();
+simulate(Test); getErrorString();

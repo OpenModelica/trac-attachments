@@ -1,0 +1,2 @@
+loadFile("Total.mo"); getErrorString();
+simulate(FlexiCaL.FeedWater.Tests.Tests_FWPHs_Accurate.Test_FWPH_11 simflags = "-lv LOG_STATS,LOG_INIT"); getErrorString();

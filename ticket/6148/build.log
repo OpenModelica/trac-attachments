@@ -1,0 +1,506 @@
+make -C OMCompiler 
+make[1]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler'
+Creating dirs: /home/leo/builds/OpenModelica/build/bin /home/leo/builds/OpenModelica/build/lib/omc/emcc /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc /home/leo/builds/OpenModelica/build/include/omc/c/ /home/leo/builds/OpenModelica/build/include/omc/c/gc/ /home/leo/builds/OpenModelica/build/include/omc/c/linearization/ /home/leo/builds/OpenModelica/build/include/omc/c/dataReconciliation/ /home/leo/builds/OpenModelica/build/include/omc/c/optimization/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/results/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/initialization/ /home/leo/builds/OpenModelica/build/include/omc/c/meta/ /home/leo/builds/OpenModelica/build/include/omc/c/util/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi1/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi2/ /home/leo/builds/OpenModelica/build/include/omc/scripting-API /home/leo/builds/OpenModelica/build/share/omc/java/ /home/leo/builds/OpenModelica/build/share//omc/scripts/OpenTurns/ /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels /home/leo/builds/OpenModelica/build/share/man//man1/
+
+make interactive sim-dependencies
+make[2]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler'
+Creating dirs: /home/leo/builds/OpenModelica/build/bin /home/leo/builds/OpenModelica/build/lib/omc/emcc /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc /home/leo/builds/OpenModelica/build/include/omc/c/ /home/leo/builds/OpenModelica/build/include/omc/c/gc/ /home/leo/builds/OpenModelica/build/include/omc/c/linearization/ /home/leo/builds/OpenModelica/build/include/omc/c/dataReconciliation/ /home/leo/builds/OpenModelica/build/include/omc/c/optimization/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/results/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/initialization/ /home/leo/builds/OpenModelica/build/include/omc/c/meta/ /home/leo/builds/OpenModelica/build/include/omc/c/util/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi1/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi2/ /home/leo/builds/OpenModelica/build/include/omc/scripting-API /home/leo/builds/OpenModelica/build/share/omc/java/ /home/leo/builds/OpenModelica/build/share//omc/scripts/OpenTurns/ /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels /home/leo/builds/OpenModelica/build/share/man//man1/
+
+cp ./3rdParty/antlr/3.2/tool/antlr-3.2.jar ./3rdParty/antlr/3.2/tool/antlr-2.7.7.jar /home/leo/builds/OpenModelica/build/share/omc/java//
+# Configure and build lis
+if ! test -f 3rdParty/lis-1.4.12/Makefile; then cd 3rdParty/lis-1.4.12 && autoconf && ./configure "--host=x86_64-unknown-linux-gnu" --enable-shared --disable-static MPICC="false" CC="clang" CXX="clang++" CFLAGS="-g -O2 -fno-stack-protector -fPIC" CPPFLAGS="" LDFLAGS="-Wl,--no-as-needed -Wl,--disable-new-dtags -Wl,-rpath-link,/home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc " && make clean; fi
+Building Lis from sources
+make -C 3rdParty/lis-1.4.12/src
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src'
+Making all in matrix
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/matrix'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/matrix'
+Making all in vector
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/vector'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/vector'
+Making all in matvec
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/matvec'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/matvec'
+Making all in precon
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/precon'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/precon'
+Making all in solver
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/solver'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/solver'
+Making all in esolver
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/esolver'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/esolver'
+Making all in system
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/system'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/system'
+Making all in precision
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/precision'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src/precision'
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src'
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/lis-1.4.12/src'
+# Copy the library; not headers (as they are not used by the runtime system)
+cp -Pp 3rdParty/lis-1.4.12/src/.libs/liblis.so* /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/
+! test -f build/lib/omc/liblis.so.0.0 -a ! -f /home/leo/builds/OpenModelica/build/lib/omc/liblis.so.0 || ln -s liblis.so.0.0 /home/leo/builds/OpenModelica/build/lib/omc/liblis.so.0
+! test -f build/lib/omc/liblis.so.0.0 -a ! -f /home/leo/builds/OpenModelica/build/lib/omc/liblis.so || ln -s liblis.so.0.0 /home/leo/builds/OpenModelica/build/lib/omc/liblis.so
+mkdir -p /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels
+cp -p Examples/*.* /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels/
+rm -f /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels/CMake*.txt
+make -C Compiler/Translation OMBUILDDIR=/home/leo/builds/OpenModelica/build release
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/Compiler/Translation'
+for locale in de sv es; do mkdir -p /home/leo/builds/OpenModelica/build/share/locale//$locale/LC_MESSAGES && msgfmt -o/home/leo/builds/OpenModelica/build/share/locale//$locale/LC_MESSAGES/openmodelica.mo $locale.po; done
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/Compiler/Translation'
+test -d 3rdParty/cppzmq
+mkdir -p 3rdParty/cppzmq/build
+(cd 3rdParty/cppzmq/build && test -f Makefile || CC="clang" CXX="clang++" CFLAGS="-g -O2 -fno-stack-protector -fPIC" CPPFLAGS="" CC="clang" CXX="clang++" CFLAGS="-g -O2 -fno-stack-protector -fPIC" CPPFLAGS="" cmake  -DCMAKE_FIND_DEBUG_MODE:Bool=ON -DCPPZMQ_BUILD_TESTS:Bool=OFF -DZeroMQ_DIR=../libzmq/build/share/cmake/ZeroMQ  -DCMAKE_VERBOSE_MAKEFILE:Bool=ON -DCMAKE_FIND_DEBUG_MODE:Bool=ON -DCMAKE_AR:String="ar" -DCMAKE_INSTALL_PREFIX="`pwd`" -DCMAKE_COLOR_MAKEFILE:Bool=OFF -DWITH_PERF_TOOL:Bool=OFF  .. -G "Unix Makefiles")
+make -C 3rdParty/cppzmq/build install
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+/usr/bin/cmake -S/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq -B/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/CMakeFiles /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+make[4]: Nothing to be done for 'preinstall'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/include/zmq.hpp
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/include/zmq_addon.hpp
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/share/cmake/cppzmq/cppzmqTargets.cmake
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/share/cmake/cppzmq/cppzmqConfig.cmake
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/share/cmake/cppzmq/cppzmqConfigVersion.cmake
+-- Up-to-date: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build/share/cmake/cppzmq/libzmq-pkg-config/FindZeroMQ.cmake
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/3rdParty/cppzmq/build'
+make -f Makefile /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libsundials_ida.a
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler'
+Creating dirs: /home/leo/builds/OpenModelica/build/bin /home/leo/builds/OpenModelica/build/lib/omc/emcc /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc /home/leo/builds/OpenModelica/build/include/omc/c/ /home/leo/builds/OpenModelica/build/include/omc/c/gc/ /home/leo/builds/OpenModelica/build/include/omc/c/linearization/ /home/leo/builds/OpenModelica/build/include/omc/c/dataReconciliation/ /home/leo/builds/OpenModelica/build/include/omc/c/optimization/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/results/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/initialization/ /home/leo/builds/OpenModelica/build/include/omc/c/meta/ /home/leo/builds/OpenModelica/build/include/omc/c/util/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi1/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi2/ /home/leo/builds/OpenModelica/build/include/omc/scripting-API /home/leo/builds/OpenModelica/build/share/omc/java/ /home/leo/builds/OpenModelica/build/share//omc/scripts/OpenTurns/ /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels /home/leo/builds/OpenModelica/build/share/man//man1/
+
+make[3]: '/home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libsundials_ida.a' is up to date.
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler'
+cd SimulationRuntime/OMSI; \
+ mkdir -p Build_static; (cd ./Build_static; echo "change to Build_static"; cmake -G "Unix Makefiles" --build . -DPLATFORM=static -DCMAKE_BUILD_TYPE=   -DCMAKE_INSTALL_PREFIX:PATH="/home/leo/builds/OpenModelica/build" -DLIB_OMC=lib/x86_64-linux-gnu/omc ..; make install);  mkdir -p Build_dynamic; (cd ./Build_dynamic; echo "change to Build_dynamic"; cmake -G "Unix Makefiles" --build . -DPLATFORM=dynamic -DCMAKE_BUILD_TYPE=   -DCMAKE_INSTALL_PREFIX:PATH="/home/leo/builds/OpenModelica/build" -DLIB_OMC=lib/x86_64-linux-gnu/omc ..; make install);
+change to Build_static
+-- CMake version 3.16.5
+-- GCC detected, adding compile flags
+-- Compiling with C flags:  -Wall -Wextra -ansi -pedantic -g -fPIC
+-- Libs will be installed in /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi
+-- Lapack Libraries: /usr/lib64/liblapack.so /usr/lib64/libblas.so
+-- Sundials path:
+-- /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver/../../../../OMCompiler/3rdParty/sundials/build
+-- Sundials include:
+-- /home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/include
+-- Used Sundials libraries: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/lib/libsundials_nvecserial.so;/home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/lib/libsundials_kinsol.so
+-- Using sundials 2.6.2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+/usr/bin/cmake -S/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI -B/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make -f solver/CMakeFiles/OMSISolver_static.dir/build.make solver/CMakeFiles/OMSISolver_static.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/solver /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/solver/CMakeFiles/OMSISolver_static.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make -f solver/CMakeFiles/OMSISolver_static.dir/build.make solver/CMakeFiles/OMSISolver_static.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make[5]: Nothing to be done for 'solver/CMakeFiles/OMSISolver_static.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+[ 29%] Built target OMSISolver_static
+make -f base/CMakeFiles/OMSIBase_static.dir/build.make base/CMakeFiles/OMSIBase_static.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/base /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/base /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/base/CMakeFiles/OMSIBase_static.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make -f base/CMakeFiles/OMSIBase_static.dir/build.make base/CMakeFiles/OMSIBase_static.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make[5]: Nothing to be done for 'base/CMakeFiles/OMSIBase_static.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+[100%] Built target OMSIBase_static
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+make[4]: Nothing to be done for 'preinstall'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_callbacks.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_api_functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_cs.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_me.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_wrapper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2Functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2FunctionTypes.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2TypesPlatform.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSISolver_static.a
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/omsi_solver.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/solver_api.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/solver_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase_static.a
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libexpat.a
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_event_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_getters_and_setters.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_global.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_initialization.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_json.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_model_variables.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_sim_data.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_xml.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_mmap.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_posix_func.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_solve_alg_system.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_utils.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/uthash.h
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_static'
+change to Build_dynamic
+-- CMake version 3.16.5
+-- GCC detected, adding compile flags
+-- Compiling with C flags:  -Wall -Wextra -ansi -pedantic -g -fPIC
+-- Libs will be installed in /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi
+-- Lapack Libraries: /usr/lib64/liblapack.so /usr/lib64/libblas.so
+-- Sundials path:
+-- /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver/../../../../OMCompiler/3rdParty/sundials/build
+-- Sundials include:
+-- /home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/include
+-- Used Sundials libraries: /home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/lib/libsundials_nvecserial.so;/home/leo/builds/OpenModelica/OMCompiler/3rdParty/sundials/build/lib/libsundials_kinsol.so
+-- Using sundials 2.6.2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+/usr/bin/cmake -S/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI -B/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make -f solver/CMakeFiles/OMSISolver.dir/build.make solver/CMakeFiles/OMSISolver.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/solver /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/solver /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/solver/CMakeFiles/OMSISolver.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make -f solver/CMakeFiles/OMSISolver.dir/build.make solver/CMakeFiles/OMSISolver.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make[5]: Nothing to be done for 'solver/CMakeFiles/OMSISolver.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+[ 29%] Built target OMSISolver
+make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/base /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/base/CMakeFiles/OMSIBase.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make -f base/CMakeFiles/OMSIBase.dir/build.make base/CMakeFiles/OMSIBase.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make[5]: Nothing to be done for 'base/CMakeFiles/OMSIBase.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+[100%] Built target OMSIBase
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+make[4]: Nothing to be done for 'preinstall'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_callbacks.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_api_functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_cs.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_me.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/omsi_fmi2_wrapper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2Functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2FunctionTypes.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/fmi2/fmi2TypesPlatform.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSISolver.so
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/omsi_solver.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/solver_api.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/solver/solver_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase.so
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libexpat.a
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_event_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_getters_and_setters.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_global.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_initialization.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_json.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_model_variables.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_sim_data.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_input_xml.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_mmap.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_posix_func.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_solve_alg_system.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/omsi_utils.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/base/uthash.h
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSI/Build_dynamic'
+test ! `uname` = Darwin || install_name_tool -id @rpath/omsi/libOMSIBase.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase.dylib
+test ! `uname` = Darwin || install_name_tool -id @rpath/omsi/libOMSISolver.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSISolver.dylib
+test ! `uname` = Darwin || install_name_tool -change libsundials_nvecserial.0.dylib @rpath/libsundials_nvecserial.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase.dylib
+test ! `uname` = Darwin || install_name_tool -change libsundials_kinsol.1.dylib @rpath/libsundials_kinsol.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase.dylib
+test ! `uname` = Darwin || install_name_tool -change libOMSISolver.dylib @rpath/libOMSISolver.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase.dylib
+test ! `uname` = Darwin || install_name_tool -change libsundials_nvecserial.0.dylib @rpath/libsundials_nvecserial.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSISolver.dylib
+test ! `uname` = Darwin || install_name_tool -change libsundials_kinsol.1.dylib @rpath/libsundials_kinsol.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSISolver.dylib
+cd SimulationRuntime/OMSIC; \
+ mkdir -p Build_static; (cd ./Build_static; echo "change to Build_static"; cmake -G "Unix Makefiles" --build . -DPLATFORM=static -DCMAKE_BUILD_TYPE=   -DCMAKE_INSTALL_PREFIX:PATH="/home/leo/builds/OpenModelica/build" -DLIB_OMC=lib/x86_64-linux-gnu/omc ..; make install);  mkdir -p Build_dynamic; (cd ./Build_dynamic; echo "change to Build_dynamic"; cmake -G "Unix Makefiles" --build . -DPLATFORM=dynamic -DCMAKE_BUILD_TYPE=   -DCMAKE_INSTALL_PREFIX:PATH="/home/leo/builds/OpenModelica/build" -DLIB_OMC=lib/x86_64-linux-gnu/omc ..; make install);
+change to Build_static
+-- CMake version 3.16.5
+-- GCC detected, adding compile flags
+-- Compiling with C flags:  -Wall -Wextra -ansi -pedantic -g -fPIC
+-- Libs will be installed in /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi
+-- OMSI Base Library: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase_static.a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+/usr/bin/cmake -S/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC -B/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static/CMakeFiles /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+make -f src/omsu/CMakeFiles/OMSIC_static.dir/build.make src/omsu/CMakeFiles/OMSIC_static.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/src/omsu /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static/src/omsu /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static/src/omsu/CMakeFiles/OMSIC_static.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+make -f src/omsu/CMakeFiles/OMSIC_static.dir/build.make src/omsu/CMakeFiles/OMSIC_static.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+make[5]: Nothing to be done for 'src/omsu/CMakeFiles/OMSIC_static.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+[100%] Built target OMSIC_static
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+make[4]: Nothing to be done for 'preinstall'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_callbacks.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_api_functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsic.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_common.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_initialization.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_getters_and_setters.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_continuous_simulation.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_event_simulation.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIC_static.a
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_static'
+change to Build_dynamic
+-- CMake version 3.16.5
+-- GCC detected, adding compile flags
+-- Compiling with C flags:  -Wall -Wextra -ansi -pedantic -g -fPIC
+-- Libs will be installed in /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi
+-- OMSI Base Library: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIBase
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+/usr/bin/cmake -S/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC -B/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic/CMakeFiles /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+make -f src/omsu/CMakeFiles/OMSIC.dir/build.make src/omsu/CMakeFiles/OMSIC.dir/depend
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+cd /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/src/omsu /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic/src/omsu /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic/src/omsu/CMakeFiles/OMSIC.dir/DependInfo.cmake --color=
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+make -f src/omsu/CMakeFiles/OMSIC.dir/build.make src/omsu/CMakeFiles/OMSIC.dir/build
+make[5]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+make[5]: Nothing to be done for 'src/omsu/CMakeFiles/OMSIC.dir/build'.
+make[5]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+[100%] Built target OMSIC
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+/usr/bin/cmake -E cmake_progress_start /home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+make[4]: Nothing to be done for 'preinstall'.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: ""
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_callbacks.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsi/omsi_api_functions.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsic.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_common.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_helper.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_initialization.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_getters_and_setters.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_continuous_simulation.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/include/omc/omsic/omsu_event_simulation.h
+-- Up-to-date: /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/omsi/libOMSIC.a
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/OMSIC/Build_dynamic'
+make -C SimulationRuntime/c -f Makefile OMBUILDDIR=/home/leo/builds/OpenModelica/build
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+cp -p libOpenModelicaRuntimeC.so /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc
+# copy header files
+cp -p ./omc_inline.h ./openmodelica_func.h ./openmodelica.h ./omc_simulation_settings.h ./openmodelica_types.h ./simulation_data.h ./ModelicaUtilities.h /home/leo/builds/OpenModelica/build/include/omc/c/
+cp -p ./linearization/linearize.h /home/leo/builds/OpenModelica/build/include/omc/c/linearization/
+cp -p ./optimization/OptimizerData.h ./optimization/OptimizerLocalFunction.h ./optimization/OptimizerInterface.h /home/leo/builds/OpenModelica/build/include/omc/c/optimization/
+cp -p ./simulation/modelinfo.h ./simulation/options.h ./simulation/simulation_info_json.h ./simulation/simulation_input_xml.h ./simulation/simulation_runtime.h ./simulation/omc_simulation_util.h /home/leo/builds/OpenModelica/build/include/omc/c/simulation/
+cp -p ./simulation/results/simulation_result.h /home/leo/builds/OpenModelica/build/include/omc/c/simulation/results/
+cp -p ./simulation/solver/delay.h ./simulation/solver/epsilon.h ./simulation/solver/fmi_events.h ./simulation/solver/mixedSystem.h ./simulation/solver/linearSystem.h ./simulation/solver/linearSolverLapack.h ./simulation/solver/linearSolverTotalPivot.h ./simulation/solver/model_help.h ./simulation/solver/mixedSearchSolver.h ./simulation/solver/nonlinearSystem.h ./simulation/solver/nonlinearValuesList.h ./simulation/solver/nonlinearSolverHomotopy.h ./simulation/solver/nonlinearSolverHybrd.h ./simulation/solver/stateset.h ./simulation/solver/real_time_sync.h ./simulation/solver/perform_simulation.c.inc ./simulation/solver/perform_qss_simulation.c.inc ./simulation/solver/dassl.h ./simulation/solver/embedded_server.h ./simulation/solver/ida_solver.h ./simulation/solver/cvode_solver.h ./simulation/solver/omc_math.h ./simulation/solver/events.h ./simulation/solver/synchronous.h ./simulation/solver/external_input.h ./simulation/solver/solver_main.h ./simulation/solver/dae_mode.h /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/
+cp -p ./simulation/solver/initialization/initialization.h /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/initialization/
+cp -p ./meta/meta_modelica_builtin_boxptr.h ./meta/meta_modelica_builtin_boxvar.h ./meta/meta_modelica_builtin.h ./meta/meta_modelica.h ./meta/meta_modelica_data.h ./meta/meta_modelica_mk_box.h ./meta/meta_modelica_segv.h /home/leo/builds/OpenModelica/build/include/omc/c/meta/
+cp -p ./gc/omc_gc.h ./gc/memory_pool.h /home/leo/builds/OpenModelica/build/include/omc/c/gc/
+cp -p ./util/base_array.h ./util/boolean_array.h ./util/division.h ./util/generic_array.h ./util/index_spec.h ./util/integer_array.h ./util/jacobian_util.h ./util/java_interface.h ./util/modelica.h ./util/modelica_string.h ./util/omc_error.h ./util/omc_file.h ./util/omc_mmap.h ./util/omc_msvc.h ./util/omc_numbers.h ./util/omc_spinlock.h ./util/parallel_helper.h ./util/read_matlab4.c ./util/read_matlab4.h ./util/read_csv.c ./util/read_csv.h ./util/libcsv.c ./util/libcsv.h ./util/read_write.h ./util/real_array.h ./util/ringbuffer.h ./util/rtclock.h ./util/simulation_options.h ./util/string_array.h ./util/uthash.h ./util/utility.h ./util/varinfo.h ./util/list.h ./util/rational.h ./util/modelica_string_lit.h ./util/omc_init.h /home/leo/builds/OpenModelica/build/include/omc/c/util/
+cp -p ./dataReconciliation/dataReconciliation.h /home/leo/builds/OpenModelica/build/include/omc/c/dataReconciliation/
+make -f Makefile OMC_MINIMAL_RUNTIME=1 OMC_FMI_RUNTIME=1 sourcedist_internal
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+mkdir -p /home/leo/builds/OpenModelica/build/include/omc/c/external_solvers external_solvers
+cp -p \
+ ../../3rdParty/CMinpack//enorm_.c ../../3rdParty/CMinpack//hybrj_.c ../../3rdParty/CMinpack//dpmpar_.c ../../3rdParty/CMinpack//qrfac_.c ../../3rdParty/CMinpack//qform_.c ../../3rdParty/CMinpack//dogleg_.c ../../3rdParty/CMinpack//r1updt_.c ../../3rdParty/CMinpack//r1mpyq_.c \
+ ../../3rdParty/dgesv//lapack/dgesv.c ../../3rdParty/dgesv//lapack/dgetrf.c ../../3rdParty/dgesv//lapack/dlamch.c ../../3rdParty/dgesv//lapack/ilaenv.c ../../3rdParty/dgesv//lapack/xerbla.c ../../3rdParty/dgesv//lapack/dgetf2.c ../../3rdParty/dgesv//lapack/dgetrs.c ../../3rdParty/dgesv//lapack/dlaswp.c ../../3rdParty/dgesv//lapack/ieeeck.c ../../3rdParty/dgesv//lapack/iparmq.c \
+ ../../3rdParty/dgesv//blas/dgemm.c ../../3rdParty/dgesv//blas/dger.c ../../3rdParty/dgesv//blas/dscal.c ../../3rdParty/dgesv//blas/dswap.c ../../3rdParty/dgesv//blas/dtrsm.c ../../3rdParty/dgesv//blas/idamax.c ../../3rdParty/dgesv//blas/lsame.c \
+ ../../3rdParty/dgesv//libf2c/i_nint.c ../../3rdParty/dgesv//libf2c/pow_di.c ../../3rdParty/dgesv//libf2c/s_cmp.c ../../3rdParty/dgesv//libf2c/s_copy.c \
+ "./external_solvers/"
+cp -p \
+ "../../3rdParty/CMinpack//minpack.h" "../../3rdParty/CMinpack//cminpack.h" \
+ "../../3rdParty/dgesv//include/blaswrap.h" \
+ "../../3rdParty/dgesv//include/clapack.h" \
+ "../../3rdParty/dgesv//include/f2c.h" \
+ "/home/leo/builds/OpenModelica/build/include/omc/c/external_solvers"
+mkdir -p /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver
+cp -p ./simulation/solver/cvode_solver.c /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver
+cp Makefile.objs /home/leo/builds/OpenModelica/build/include/omc/c/
+rm -r ./external_solvers
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+make -C ../fmi/export/buildproject -f Makefile
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/fmi/export/buildproject'
+mkdir -p /home/leo/builds/OpenModelica/build/share/omc/runtime/c/fmi/buildproject/
+cp -a configure "../../../../config.guess" "../../../../config.sub" "../../../../install-sh" /home/leo/builds/OpenModelica/build/share/omc/runtime/c/fmi/buildproject//
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/fmi/export/buildproject'
+make -f Makefile "libSimulationRuntimeFMI.a" OMC_MINIMAL_RUNTIME=1 OMC_FMI_RUNTIME=1 BUILDPATH=build/fmi OMC_NUM_NONLINEAR_SYSTEMS=1 OMC_NUM_LINEAR_SYSTEMS=1 OMC_NUM_MIXED_SYSTEMS=1
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+make[4]: 'libSimulationRuntimeFMI.a' is up to date.
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+# copy libraries
+cp -p libSimulationRuntimeC.so libOpenModelicaFMIRuntimeC.so libSimulationRuntimeFMI.a /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc
+# FMI runtime libs
+test ! -f libSimulationRuntimeC.bc || cp libSimulationRuntimeC.bc /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/emcc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_idas.0.dylib @rpath/libsundials_idas.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_ida.2.dylib @rpath/libsundials_ida.2.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_cvodes.2.dylib @rpath/libsundials_cvodes.2.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_cvode.1.dylib @rpath/libsundials_cvode.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_nvecserial.0.dylib @rpath/libsundials_nvecserial.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_kinsol.1.dylib @rpath/libsundials_kinsol.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libOpenModelicaFMIRuntimeC.so
+# C runtime libs
+test ! `uname` = Darwin || install_name_tool -change libsundials_idas.0.dylib @rpath/libsundials_idas.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_ida.2.dylib @rpath/libsundials_ida.2.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_cvodes.2.dylib @rpath/libsundials_cvodes.2.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_cvode.1.dylib @rpath/libsundials_cvode.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_nvecserial.0.dylib @rpath/libsundials_nvecserial.0.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change libsundials_kinsol.1.dylib @rpath/libsundials_kinsol.1.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+test ! `uname` = Darwin || install_name_tool -change liblis.dylib @rpath/liblis.dylib /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc/libSimulationRuntimeC.so
+# copy fmi stuff
+mkdir -p /home/leo/builds/OpenModelica/build/include/omc/c/fmi-export
+cp -p ../fmi/export/fmi/*.h /home/leo/builds/OpenModelica/build/include/omc/c/fmi
+cp -p ../fmi/export/openmodelica/*.inc ../fmi/export/openmodelica/*.h /home/leo/builds/OpenModelica/build/include/omc/c/fmi-export
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/SimulationRuntime/c'
+make -f Makefile bootstrap-dependencies-post
+make[3]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler'
+Creating dirs: /home/leo/builds/OpenModelica/build/bin /home/leo/builds/OpenModelica/build/lib/omc/emcc /home/leo/builds/OpenModelica/build/lib/x86_64-linux-gnu/omc /home/leo/builds/OpenModelica/build/include/omc/c/ /home/leo/builds/OpenModelica/build/include/omc/c/gc/ /home/leo/builds/OpenModelica/build/include/omc/c/linearization/ /home/leo/builds/OpenModelica/build/include/omc/c/dataReconciliation/ /home/leo/builds/OpenModelica/build/include/omc/c/optimization/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/results/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/ /home/leo/builds/OpenModelica/build/include/omc/c/simulation/solver/initialization/ /home/leo/builds/OpenModelica/build/include/omc/c/meta/ /home/leo/builds/OpenModelica/build/include/omc/c/util/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi1/ /home/leo/builds/OpenModelica/build/include/omc/c/fmi2/ /home/leo/builds/OpenModelica/build/include/omc/scripting-API /home/leo/builds/OpenModelica/build/share/omc/java/ /home/leo/builds/OpenModelica/build/share//omc/scripts/OpenTurns/ /home/leo/builds/OpenModelica/build/share/doc/omc/testmodels /home/leo/builds/OpenModelica/build/share/man//man1/
+
+make -f Makefile -C Compiler/runtime install_bootstrapping BOOTSTRAPPING=1 OMBUILDDIR=/home/leo/builds/OpenModelica/build
+make[4]: Entering directory '/home/leo/builds/OpenModelica/OMCompiler/Compiler/runtime'
+clang -c -o "om_unzip.o" "om_unzip.c" -g -O2 -fno-stack-protector -fPIC  -Wno-parentheses-equality -Wno-unused-variable -Werror=implicit-function-declaration -Werror=incompatible-pointer-types  -I../../SimulationRuntime/c -I../../SimulationRuntime/c/simulation/results -I../../SimulationRuntime/c/util -I../../SimulationRuntime/c/meta -I../../SimulationRuntime/c/meta/gc -I.  -DGC_THREADS -I../../3rdParty/gc/include -I../../3rdParty/FMIL/install/include -I../../3rdParty/graphstream/gs-netstream/c++/src/ -I../../3rdParty/metis-5.1.0/include -I../../3rdParty/cJSON -I../../3rdParty/libzmq/include -I../boot/tarball-include -I..
+In file included from om_unzip.c:4:
+In file included from ./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/unzip.h:55:
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:135:45: error: expected ';' after top level declarator
+typedef voidpf   (ZCALLBACK *open_file_func)      OF((voidpf opaque, const char* filename, int mode));
+                                            ^
+                                            ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:136:45: error: expected ';' after top level declarator
+typedef uLong    (ZCALLBACK *read_file_func)      OF((voidpf opaque, voidpf stream, void* buf, uLong size));
+                                            ^
+                                            ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:137:46: error: expected ';' after top level declarator
+typedef uLong    (ZCALLBACK *write_file_func)     OF((voidpf opaque, voidpf stream, const void* buf, uLong size));
+                                             ^
+                                             ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:138:46: error: expected ';' after top level declarator
+typedef int      (ZCALLBACK *close_file_func)     OF((voidpf opaque, voidpf stream));
+                                             ^
+                                             ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:139:50: error: expected ';' after top level declarator
+typedef int      (ZCALLBACK *testerror_file_func) OF((voidpf opaque, voidpf stream));
+                                                 ^
+                                                 ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:141:45: error: expected ';' after top level declarator
+typedef long     (ZCALLBACK *tell_file_func)      OF((voidpf opaque, voidpf stream));
+                                            ^
+                                            ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:142:45: error: expected ';' after top level declarator
+typedef long     (ZCALLBACK *seek_file_func)      OF((voidpf opaque, voidpf stream, uLong offset, int origin));
+                                            ^
+                                            ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:158:47: error: expected ';' after top level declarator
+typedef ZPOS64_T (ZCALLBACK *tell64_file_func)    OF((voidpf opaque, voidpf stream));
+                                              ^
+                                              ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:159:47: error: expected ';' after top level declarator
+typedef long     (ZCALLBACK *seek64_file_func)    OF((voidpf opaque, voidpf stream, ZPOS64_T offset, int origin));
+                                              ^
+                                              ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:160:47: error: expected ';' after top level declarator
+typedef voidpf   (ZCALLBACK *open64_file_func)    OF((voidpf opaque, const void* filename, int mode));
+                                              ^
+                                              ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:174:6: error: variable has incomplete type 'void'
+void fill_fopen64_filefunc OF((zlib_filefunc64_def* pzlib_filefunc_def));
+     ^
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:174:27: error: expected ';' after top level declarator
+void fill_fopen64_filefunc OF((zlib_filefunc64_def* pzlib_filefunc_def));
+                          ^
+                          ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:175:6: error: variable has incomplete type 'void'
+void fill_fopen_filefunc OF((zlib_filefunc_def* pzlib_filefunc_def));
+     ^
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:175:25: error: expected ';' after top level declarator
+void fill_fopen_filefunc OF((zlib_filefunc_def* pzlib_filefunc_def));
+                        ^
+                        ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:194:20: error: expected ';' after top level declarator
+voidpf call_zopen64 OF((const zlib_filefunc64_32_def* pfilefunc,const void*filename,int mode));
+                   ^
+                   ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:195:21: error: expected ';' after top level declarator
+long    call_zseek64 OF((const zlib_filefunc64_32_def* pfilefunc,voidpf filestream, ZPOS64_T offset, int origin));
+                    ^
+                    ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/ioapi.h:196:22: error: expected ';' after top level declarator
+ZPOS64_T call_ztell64 OF((const zlib_filefunc64_32_def* pfilefunc,voidpf filestream));
+                     ^
+                     ;
+In file included from om_unzip.c:4:
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/unzip.h:153:44: error: expected ';' after top level declarator
+extern int ZEXPORT unzStringFileNameCompare OF ((const char* fileName1,
+                                           ^
+                                           ;
+./../../3rdParty/FMIL/ThirdParty/Minizip/minizip/unzip.h:166:31: error: expected ';' after top level declarator
+extern unzFile ZEXPORT unzOpen OF((const char *path));
+                              ^
+                              ;
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make[4]: *** [Makefile.common:136: om_unzip.o] Error 1
+make[4]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler/Compiler/runtime'
+make[3]: *** [Makefile.common:94: bootstrap-dependencies-post-compiler-runtime] Error 2
+make[3]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler'
+make[2]: *** [Makefile.common:123: interactive] Error 2
+make[2]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler'
+make[1]: *** [Makefile:99: omc-bootstrapped] Error 2
+make[1]: Leaving directory '/home/leo/builds/OpenModelica/OMCompiler'
+make: *** [Makefile:12: omc.skip] Error 2

@@ -1,0 +1,6 @@
+loadModel(Modelica);
+getErrorString();
+simulate(Modelica.Fluid.Examples.Tanks.EmptyTanks, simflags="-override=tank1.level_start=1.2");
+getErrorString();
+val(tank1.level_start);
+getErrorString();

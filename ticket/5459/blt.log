@@ -1,0 +1,808 @@
+true
+""
+unmatched equations: 8, 32, 33, 39, 43, 73, 105, 111, 143, 186, 187, 188, 189
+
+Index Reduction neccessary!
+MSS subsets:
+ 188, 159, 158, 189, 162
+ 186, 152, 151, 187, 155
+ 111, 110, 142, 143, 114
+ 32, 3, 2, 33, 5, 39, 38, 50, 51, 80, 54, 49, 46, 53, 29, 23, 25, 11, 55, 99, 104, 77, 78, 88, 98, 72, 74, 86, 73, 105, 76
+ 43
+ 8
+
+##############--MSSS--##############
+Indices of constraint equations: 8
+
+------------------8------------------
+Constraint equation to be differentiated:
+tank.V = tank.crossArea * tank.level
+Differentiated equation:
+der(tank.V) = tank.crossArea * der(tank.level)
+
+Update Incidence Matrix: 8
+
+##############--MSSS--##############
+Indices of constraint equations: 43
+
+------------------43------------------
+Constraint equation to be differentiated:
+0.0 = pump.medium.p - pump.p_b_nominal
+Differentiated equation:
+0.0 = der(pump.medium.p)
+
+Update Incidence Matrix: 43
+
+##############--MSSS--##############
+Indices of constraint equations: 32 3 33 5 39 50 51 80 54 49 46 53 29 23 25 11 55 99 104 77 78 88 98 74 86 73 105 76
+
+------------------76------------------
+Constraint equation to be differentiated:
+heater.mediums[1].u = heater.mediums[1].h - heater.mediums[1].p / heater.statesFM[2].d
+Differentiated equation:
+der(heater.mediums[1].u) = der(heater.mediums[1].h) + (heater.mediums[1].p * der(heater.statesFM[2].d) - der(heater.mediums[1].p) * heater.statesFM[2].d) / heater.statesFM[2].d ^ 2.0
+
+------------------105------------------
+Constraint equation to be differentiated:
+heater.Us[1] = heater.ms[1] * heater.mediums[1].u
+Differentiated equation:
+der(heater.Us[1]) = heater.ms[1] * der(heater.mediums[1].u) + heater.mb_flows[1] * heater.mediums[1].u
+
+------------------73------------------
+Constraint equation to be differentiated:
+heater.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(heater.mediums[1].p, heater.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0))
+Differentiated equation:
+der(heater.statesFM[2].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(heater.mediums[1].p, heater.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0), der(heater.mediums[1].p), der(heater.mediums[1].h))
+
+------------------86------------------
+Constraint equation to be differentiated:
+heater.flowModel.Fs_p[1] = heater.crossAreas[1] * (heater.mediums[1].p - pump.medium.p) * heater.flowModel.nParallel
+Differentiated equation:
+der(heater.flowModel.Fs_p[1]) = heater.crossAreas[1] * (der(heater.mediums[1].p) - der(pump.medium.p)) * heater.flowModel.nParallel
+
+------------------74------------------
+Constraint equation to be differentiated:
+heater.heatTransfer.Ts[1] = Modelica.Media.Water.IF97_Utilities.T_props_ph(heater.mediums[1].p, heater.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0))
+Differentiated equation:
+der(heater.heatTransfer.Ts[1]) = Modelica.Media.Water.IF97_Utilities.T_ph_der(heater.mediums[1].p, heater.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0), der(heater.mediums[1].p), der(heater.mediums[1].h))
+
+------------------98------------------
+Constraint equation to be differentiated:
+heater.statesFM[1].T = Modelica.Media.Water.IF97_Utilities.T_props_ph(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0))
+Differentiated equation:
+der(heater.statesFM[1].T) = Modelica.Media.Water.IF97_Utilities.T_ph_der(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0), der(pump.medium.p), der(pump.medium.h))
+
+------------------88------------------
+Constraint equation to be differentiated:
+heater.flowModel.dps_fg[1] = (-2.0) * heater.flowModel.Fs_p[1] / (heater.flowModel.nParallel * 2.0 * heater.crossAreas[1])
+Differentiated equation:
+der(heater.flowModel.dps_fg[1]) = (-2.0) * der(heater.flowModel.Fs_p[1]) * heater.flowModel.nParallel * 2.0 * heater.crossAreas[1] / (heater.flowModel.nParallel ^ 2.0 * 4.0 * heater.crossAreas[1] ^ 2.0)
+
+------------------78------------------
+Constraint equation to be differentiated:
+heater.flowModel.mus[2] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[2].d, heater.heatTransfer.Ts[1], heater.mediums[1].p, heater.statesFM[2].phase)
+Differentiated equation:
+der(heater.flowModel.mus[2]) = $DER$$PModelica$PMedia$PWater$PIF97_Utilities$PdynamicViscosity(heater.statesFM[2].d, heater.heatTransfer.Ts[1], heater.mediums[1].p, heater.statesFM[2].phase, der(heater.statesFM[2].d), der(heater.heatTransfer.Ts[1]), der(heater.mediums[1].p))
+
+------------------77------------------
+Constraint equation to be differentiated:
+heater.flowModel.mus[1] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0)
+Differentiated equation:
+der(heater.flowModel.mus[1]) = der(heater.statesFM[1].d) * $DER$$PModelica$PMedia$PWater$PIF97_Utilities$PdynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0, 1.0, 0.0, 0.0) + der(heater.statesFM[1].T) * $DER$$PModelica$PMedia$PWater$PIF97_Utilities$PdynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0, 0.0, 1.0, 0.0) + der(pump.medium.p) * $DER$$PModelica$PMedia$PWater$PIF97_Utilities$PdynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0, 0.0, 0.0, 1.0)
+
+------------------104------------------
+Constraint equation to be differentiated:
+heater.ms[1] = heater.fluidVolumes[1] * heater.statesFM[2].d
+Differentiated equation:
+heater.mb_flows[1] = heater.fluidVolumes[1] * der(heater.statesFM[2].d)
+
+------------------99------------------
+Constraint equation to be differentiated:
+heater.statesFM[1].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0))
+Differentiated equation:
+der(heater.statesFM[1].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0), der(pump.medium.p), der(pump.medium.h))
+
+------------------55------------------
+Constraint equation to be differentiated:
+pump.Hb_flow = m_flow * (smooth(0, tank.medium.h) - smooth(0, pump.medium.h))
+Differentiated equation:
+der(pump.Hb_flow) = m_flow * (der(tank.medium.h) - der(pump.medium.h)) + der(m_flow) * (smooth(0, tank.medium.h) - smooth(0, pump.medium.h))
+
+------------------11------------------
+Constraint equation to be differentiated:
+tank.vessel_ps_static[2] = max(0.0, tank.level - tank.portsData[2].height) * system.g * tank.heatTransfer.states[1].d + tank.p_ambient
+Differentiated equation:
+der(tank.vessel_ps_static[2]) = system.g * (max(0.0, tank.level - tank.portsData[2].height) * der(tank.heatTransfer.states[1].d) + (if noEvent(0.0 > tank.level - tank.portsData[2].height) then 0.0 else der(tank.level)) * tank.heatTransfer.states[1].d)
+
+------------------25------------------
+Constraint equation to be differentiated:
+tank.ports_penetration[2] = Modelica.Fluid.Utilities.regStep(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height, 1.0, 0.001, 0.1 * tank.portsData[2].diameter)
+Differentiated equation:
+der(tank.ports_penetration[2]) = smooth(0, if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height > 0.1 * tank.portsData[2].diameter) then 0.0 else if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height < (-0.1) * tank.portsData[2].diameter) then 0.0 else if noEvent(0.1 * tank.portsData[2].diameter > 0.0) then 0.25 * ((tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) * (-999.0) * 2.0 * (tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) / tank.portsData[2].diameter * der(tank.level) * tank.portsData[2].diameter / tank.portsData[2].diameter ^ 2.0 * tank.portsData[2].diameter / tank.portsData[2].diameter ^ 2.0 + der(tank.level) * (-3.0 + 100.0 * ((tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) / tank.portsData[2].diameter) ^ 2.0) * (-9.99) / tank.portsData[2].diameter) else 0.0)
+
+------------------23------------------
+Constraint equation to be differentiated:
+tank.portInDensities[2] = Modelica.Media.Water.IF97_Utilities.rho_props_ph(tank.vessel_ps_static[2], tank.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.vessel_ps_static[2], tank.medium.h, 0, 0))
+Differentiated equation:
+der(tank.portInDensities[2]) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(tank.vessel_ps_static[2], tank.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.vessel_ps_static[2], tank.medium.h, 0, 0), der(tank.vessel_ps_static[2]), der(tank.medium.h))
+
+------------------29------------------
+Constraint equation to be differentiated:
+0.0 = if tank.regularFlow[2] then tank.ports[2].p - homotopy(tank.vessel_ps_static[2] + 0.5 * tank.portAreas[2] ^ (-2.0) * Modelica.Fluid.Utilities.regSquare2(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.ports_penetration[2] * tank.heatTransfer.states[1].d), false, 1.0), tank.vessel_ps_static[2]) else if tank.inFlow[2] then tank.ports[2].p - tank.vessel_ps_static[2] else -m_flow
+Differentiated equation:
+0.0 = if tank.regularFlow[2] then der(tank.ports[2].p) - homotopy(der(tank.vessel_ps_static[2]) + 0.5 * tank.portAreas[2] ^ (-2.0) * smooth(1, if noEvent((-m_flow) >= tank.m_flow_small) then (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] * 2.0 * m_flow * der(m_flow) + (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * (der(tank.ports_penetration[2]) * tank.portInDensities[2] - tank.ports_penetration[2] * der(tank.portInDensities[2])) / tank.portInDensities[2] ^ 2.0 * m_flow ^ 2.0 else if noEvent((-m_flow) <= (-tank.m_flow_small)) then (2.0 * m_flow * der(m_flow) * tank.heatTransfer.states[1].d * tank.ports_penetration[2] - m_flow ^ 2.0 * (tank.heatTransfer.states[1].d * der(tank.ports_penetration[2]) + der(tank.heatTransfer.states[1].d) * tank.ports_penetration[2])) * (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) ^ 2.0 else if noEvent((-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] >= (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2])) then (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * (der(tank.ports_penetration[2]) * tank.portInDensities[2] - tank.ports_penetration[2] * der(tank.portInDensities[2])) / tank.portInDensities[2] ^ 2.0 * $DER$$PModelica$PFluid$PUtilities$PregSquare2$PregSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0, -0.0, 0.0, 1.0, 0.0, 0.0) - der(m_flow) * $DER$$PModelica$PFluid$PUtilities$PregSquare2$PregSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0) + $DER$$PModelica$PFluid$PUtilities$PregSquare2$PregSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0, -0.0, 0.0, 0.0, 1.0, 0.0) * (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) * (tank.heatTransfer.states[1].d * der(tank.ports_penetration[2]) + der(tank.heatTransfer.states[1].d) * tank.ports_penetration[2]) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) ^ 2.0 else -$DER$$PModelica$PFluid$PUtilities$PregSquare2$PregSquare2_utility(m_flow, tank.m_flow_small, (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], false, 1.0, der(m_flow), 0.0, (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) * (tank.heatTransfer.states[1].d * der(tank.ports_penetration[2]) + der(tank.heatTransfer.states[1].d) * tank.ports_penetration[2]) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) ^ 2.0, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * (der(tank.ports_penetration[2]) * tank.portInDensities[2] - tank.ports_penetration[2] * der(tank.portInDensities[2])) / tank.portInDensities[2] ^ 2.0, 0.0)), der(tank.vessel_ps_static[2])) else if tank.inFlow[2] then der(tank.ports[2].p) - der(tank.vessel_ps_static[2]) else -der(m_flow)
+
+------------------53------------------
+Constraint equation to be differentiated:
+pump.eta = homotopy(Modelica.Fluid.Machines.ControlledPump$pump.efficiencyCharacteristic(pump.V_flow_single * pump.N_nominal / pump.N, 0.8), Modelica.Fluid.Machines.ControlledPump$pump.efficiencyCharacteristic(pump.V_flow_single_init, 0.8))
+Differentiated equation:
+der(pump.eta) = 0.0
+
+------------------46------------------
+Constraint equation to be differentiated:
+-pump.Hb_flow = pump.W_single * /*Real*/(pump.nParallel)
+Differentiated equation:
+-der(pump.Hb_flow) = der(pump.W_single) * /*Real*/(pump.nParallel)
+
+------------------49------------------
+Constraint equation to be differentiated:
+pump.dp_pump = pump.p_b_nominal - tank.ports[2].p
+Differentiated equation:
+der(pump.dp_pump) = -der(tank.ports[2].p)
+
+------------------54------------------
+Constraint equation to be differentiated:
+pump.W_single = homotopy(pump.dp_pump * pump.V_flow_single / pump.eta, pump.dp_pump * pump.V_flow_single_init / pump.eta)
+Differentiated equation:
+der(pump.W_single) = homotopy(pump.dp_pump * (der(pump.V_flow_single) * pump.eta - pump.V_flow_single * der(pump.eta)) / pump.eta ^ 2.0 + der(pump.dp_pump) * pump.V_flow_single / pump.eta, pump.dp_pump * (-pump.V_flow_single_init) * der(pump.eta) / pump.eta ^ 2.0 + der(pump.dp_pump) * pump.V_flow_single_init / pump.eta)
+
+------------------80------------------
+Constraint equation to be differentiated:
+m_flow = homotopy(Modelica.Fluid.Pipes.DynamicPipe$heater.FlowModel$heater$flowModel.WallFriction.massFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent) * heater.flowModel.nParallel, heater.flowModel.dps_fg[1] * heater.flowModel.m_flow_nominal / heater.flowModel.dp_nominal)
+Differentiated equation:
+der(m_flow) = homotopy((der(heater.flowModel.dps_fg[1]) * $DER$$PModelica$PFluid$PPipes$PDynamicPipe$heater$PFlowModel$heater$flowModel$PWallFriction$PmassFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) + der(heater.statesFM[1].d) * $DER$$PModelica$PFluid$PPipes$PDynamicPipe$heater$PFlowModel$heater$flowModel$PWallFriction$PmassFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) + der(heater.statesFM[2].d) * $DER$$PModelica$PFluid$PPipes$PDynamicPipe$heater$PFlowModel$heater$flowModel$PWallFriction$PmassFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) + der(heater.flowModel.mus[1]) * $DER$$PModelica$PFluid$PPipes$PDynamicPipe$heater$PFlowModel$heater$flowModel$PWallFriction$PmassFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) + der(heater.flowModel.mus[2]) * $DER$$PModelica$PFluid$PPipes$PDynamicPipe$heater$PFlowModel$heater$flowModel$PWallFriction$PmassFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)) * heater.flowModel.nParallel, der(heater.flowModel.dps_fg[1]) * heater.flowModel.m_flow_nominal / heater.flowModel.dp_nominal)
+
+------------------51------------------
+Constraint equation to be differentiated:
+pump.V_flow_single = pump.V_flow / /*Real*/(pump.nParallel)
+Differentiated equation:
+der(pump.V_flow_single) = der(pump.V_flow) / /*Real*/(pump.nParallel)
+
+------------------50------------------
+Constraint equation to be differentiated:
+pump.V_flow = homotopy(m_flow / pump.rho, m_flow / pump.rho_nominal)
+Differentiated equation:
+der(pump.V_flow) = homotopy((der(m_flow) * pump.rho - m_flow * der(pump.rho)) / pump.rho ^ 2.0, der(m_flow) * pump.rho_nominal / pump.rho_nominal ^ 2.0)
+
+------------------39------------------
+Constraint equation to be differentiated:
+pump.rho = Modelica.Media.Water.IF97_Utilities.rho_props_ph(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, pump.heatTransfer.states[1].phase, 0))
+Differentiated equation:
+der(pump.rho) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(pump.medium.p, pump.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, pump.heatTransfer.states[1].phase, 0), der(pump.medium.p), der(pump.medium.h))
+
+------------------5------------------
+Constraint equation to be differentiated:
+tank.medium.u = tank.medium.h - tank.p_ambient / tank.heatTransfer.states[1].d
+Differentiated equation:
+der(tank.medium.u) = der(tank.medium.h) + tank.p_ambient * der(tank.heatTransfer.states[1].d) / tank.heatTransfer.states[1].d ^ 2.0
+
+------------------33------------------
+Constraint equation to be differentiated:
+tank.U = tank.m * tank.medium.u
+Differentiated equation:
+der(tank.U) = tank.m * der(tank.medium.u) + tank.mb_flow * tank.medium.u
+
+------------------3------------------
+Constraint equation to be differentiated:
+tank.heatTransfer.states[1].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(tank.p_ambient, tank.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.p_ambient, tank.medium.h, tank.heatTransfer.states[1].phase, 0))
+Differentiated equation:
+der(tank.heatTransfer.states[1].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(tank.p_ambient, tank.medium.h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.p_ambient, tank.medium.h, tank.heatTransfer.states[1].phase, 0), 0.0, der(tank.medium.h))
+
+------------------32------------------
+Constraint equation to be differentiated:
+tank.m = tank.V * tank.heatTransfer.states[1].d
+Differentiated equation:
+tank.mb_flow = tank.V * der(tank.heatTransfer.states[1].d) + der(tank.V) * tank.heatTransfer.states[1].d
+
+Update Incidence Matrix: 92 84 82 81 70 69 93 85 83 102 96 94 90 45 31 30 28 24 20 10 48 47 44 52 42 76 105 73 86 74 98 88 78 77 104 99 55 11 25 23 29 53 46 49 54 80 51 50 39 5 33 3 32
+
+##############--MSSS--##############
+Indices of constraint equations: 111 142 143 114
+
+------------------114------------------
+Constraint equation to be differentiated:
+radiator.mediums[1].u = radiator.mediums[1].h - radiator.mediums[1].p / radiator.statesFM[2].d
+Differentiated equation:
+der(radiator.mediums[1].u) = der(radiator.mediums[1].h) + (radiator.mediums[1].p * der(radiator.statesFM[2].d) - der(radiator.mediums[1].p) * radiator.statesFM[2].d) / radiator.statesFM[2].d ^ 2.0
+
+------------------143------------------
+Constraint equation to be differentiated:
+radiator.Us[1] = radiator.ms[1] * radiator.mediums[1].u
+Differentiated equation:
+der(radiator.Us[1]) = radiator.ms[1] * der(radiator.mediums[1].u) + radiator.mb_flows[1] * radiator.mediums[1].u
+
+------------------142------------------
+Constraint equation to be differentiated:
+radiator.ms[1] = radiator.fluidVolumes[1] * radiator.statesFM[2].d
+Differentiated equation:
+radiator.mb_flows[1] = radiator.fluidVolumes[1] * der(radiator.statesFM[2].d)
+
+------------------111------------------
+Constraint equation to be differentiated:
+radiator.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(radiator.mediums[1].p, radiator.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(radiator.mediums[1].p, radiator.mediums[1].h, radiator.statesFM[2].phase, 0))
+Differentiated equation:
+der(radiator.statesFM[2].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(radiator.mediums[1].p, radiator.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(radiator.mediums[1].p, radiator.mediums[1].h, radiator.statesFM[2].phase, 0), der(radiator.mediums[1].p), der(radiator.mediums[1].h))
+
+Update Incidence Matrix: 130 122 120 119 118 116 114 143 142 111
+
+##############--MSSS--##############
+Indices of constraint equations: 186 152 187 155
+
+------------------155------------------
+Constraint equation to be differentiated:
+pipe.mediums[1].u = pipe.mediums[1].h - pipe.mediums[1].p / pipe.statesFM[1].d
+Differentiated equation:
+der(pipe.mediums[1].u) = der(pipe.mediums[1].h) + (pipe.mediums[1].p * der(pipe.statesFM[1].d) - der(pipe.mediums[1].p) * pipe.statesFM[1].d) / pipe.statesFM[1].d ^ 2.0
+
+------------------187------------------
+Constraint equation to be differentiated:
+pipe.Us[1] = pipe.ms[1] * pipe.mediums[1].u
+Differentiated equation:
+der(pipe.Us[1]) = pipe.ms[1] * der(pipe.mediums[1].u) + pipe.mb_flows[1] * pipe.mediums[1].u
+
+------------------152------------------
+Constraint equation to be differentiated:
+pipe.statesFM[1].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(pipe.mediums[1].p, pipe.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[1].p, pipe.mediums[1].h, pipe.statesFM[1].phase, 0))
+Differentiated equation:
+der(pipe.statesFM[1].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(pipe.mediums[1].p, pipe.mediums[1].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[1].p, pipe.mediums[1].h, pipe.statesFM[1].phase, 0), der(pipe.mediums[1].p), der(pipe.mediums[1].h))
+
+------------------186------------------
+Constraint equation to be differentiated:
+pipe.ms[1] = pipe.fluidVolumes[1] * pipe.statesFM[1].d
+Differentiated equation:
+pipe.mb_flows[1] = pipe.fluidVolumes[1] * der(pipe.statesFM[1].d)
+
+Update Incidence Matrix: 171 166 165 163 155 187 152 186
+
+##############--MSSS--##############
+Indices of constraint equations: 188 159 189 162
+
+------------------162------------------
+Constraint equation to be differentiated:
+pipe.mediums[2].u = pipe.mediums[2].h - pipe.mediums[2].p / pipe.statesFM[2].d
+Differentiated equation:
+der(pipe.mediums[2].u) = der(pipe.mediums[2].h) + (pipe.mediums[2].p * der(pipe.statesFM[2].d) - der(pipe.mediums[2].p) * pipe.statesFM[2].d) / pipe.statesFM[2].d ^ 2.0
+
+------------------189------------------
+Constraint equation to be differentiated:
+pipe.Us[2] = pipe.ms[2] * pipe.mediums[2].u
+Differentiated equation:
+der(pipe.Us[2]) = pipe.ms[2] * der(pipe.mediums[2].u) + pipe.mb_flows[2] * pipe.mediums[2].u
+
+------------------159------------------
+Constraint equation to be differentiated:
+pipe.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.rho_props_ph(pipe.mediums[2].p, pipe.mediums[2].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[2].p, pipe.mediums[2].h, pipe.statesFM[2].phase, 0))
+Differentiated equation:
+der(pipe.statesFM[2].d) = Modelica.Media.Water.IF97_Utilities.rho_ph_der(pipe.mediums[2].p, pipe.mediums[2].h, Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[2].p, pipe.mediums[2].h, pipe.statesFM[2].phase, 0), der(pipe.mediums[2].p), der(pipe.mediums[2].h))
+
+------------------188------------------
+Constraint equation to be differentiated:
+pipe.ms[2] = pipe.fluidVolumes[2] * pipe.statesFM[2].d
+Differentiated equation:
+pipe.mb_flows[2] = pipe.fluidVolumes[2] * der(pipe.statesFM[2].d)
+
+Update Incidence Matrix: 172 166 165 164 162 189 159 188
+
+########################### STATE SELECTION ###########################
+State Order: (5)
+=============
+pipe.ms[2] ---d/dt---> pipe.mb_flows[2]
+pipe.ms[1] ---d/dt---> pipe.mb_flows[1]
+radiator.ms[1] ---d/dt---> radiator.mb_flows[1]
+heater.ms[1] ---d/dt---> heater.mb_flows[1]
+tank.m ---d/dt---> tank.mb_flow
+
+########## Try static state selection ##########
+Try to select dummy vars with natural matching (newer)
+Select 42 dummy states from 52 candidates.
+
+Highest order derivatives (state candidates): (52)
+========================================
+1: tank.V:STATE(1)(unit = "m3" stateSelect=StateSelect.never )  "Actual tank volume" type: Real 
+2: tank.medium.u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real 
+3: tank.U:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real 
+4: tank.ports_penetration[2]:STATE(1)()  "penetration of port with fluid, depending on fluid level and port diameter" type: Real  [2]
+5: pump.dp_pump:STATE(1)(unit = "Pa" )  "Pressure change" type: Real 
+6: pump.eta:STATE(1)()  "Global Efficiency" type: Real 
+7: heater.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [1]
+8: heater.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [1]
+9: radiator.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [1]
+10: radiator.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [1]
+11: pipe.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [2]
+12: pipe.Us[2]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [2]
+13: pipe.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [2]
+14: pipe.mediums[2].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [2]
+15: pump.Hb_flow:STATE(1)(unit = "W" )  "Enthalpy flow across boundaries or energy source/sink" type: Real 
+16: pump.V_flow:STATE(1)(unit = "m3/s" )  "Volume flow rate (total)" type: Real 
+17: pump.W_single:STATE(1)(unit = "W" )  "Power Consumption (single pump)" type: Real 
+18: heater.flowModel.Fs_p[1]:STATE(1)(unit = "N" )  "Pressure forces" type: Real  [2]
+19: tank.ports[2].p:STATE(1)(flow=false min = max(611.657, max(611.657, 611.657)) max = min(100000000.0, min(100000000.0, 100000000.0)) start = pump.p_a_start unit = "Pa" nominal = 1000000.0 )  "Thermodynamic pressure in the connection point" type: Real  [2]
+20: tank.heatTransfer.states[1].d:STATE(1)(min = max(0.0, max(0.0, 0.0)) max = min(100000.0, min(100000.0, 100000.0)) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [1]
+21: tank.portInDensities[2]:STATE(1)(min = 0.0 max = 100000.0 start = 150.0 unit = "kg/m3" nominal = 500.0 )  "densities of the fluid at the device boundary" type: Real  [2]
+22: tank.vessel_ps_static[2]:STATE(1)(min = 611.657 max = 100000000.0 start = 5000000.0 unit = "Pa" nominal = 1000000.0 )  "static pressures inside the vessel at the height of the corresponding ports, zero flow velocity" type: Real  [2]
+23: pump.rho:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, 0.0)))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  type: Real 
+24: pump.V_flow_single:STATE(1)(start = pump.m_flow_start / (/*Real*/(pump.nParallel) * pump.rho_nominal) unit = "m3/s" )  "Volume flow rate (single pump)" type: Real 
+25: output m_flow:STATE(1)(min = max(max(-100000.0, if false and not false then -9.999999999999999e+59 else 0.0), max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(-(if true then 9.999999999999999e+59 else 0.0), max(-(if false and not false then 9.999999999999999e+59 else 0.0), if true then -9.999999999999999e+59 else 0.0)))))) max = min(min(100000.0, 100000.0), min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))))) start = pump.m_flow_start protected = true )  type: Real 
+26: heater.statesFM[1].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, 0.0))) max = min(100000.0, min(100000.0, min(100000.0, 100000.0))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+27: heater.statesFM[1].T:STATE(1)(min = max(273.15, max(273.15, 273.15)) max = min(2273.15, min(2273.15, 2273.15)) start = 500.0 unit = "K" nominal = 500.0 )  "Temperature" type: Real  [3]
+28: heater.flowModel.mus[1]:STATE(1)(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+29: heater.flowModel.mus[2]:STATE(1)(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+30: heater.flowModel.dps_fg[1]:STATE(1)(start = (130000.0 - 130000.0) / /*Real*/(-1 + 3) unit = "Pa" )  "pressure drop between states" type: Real  [2]
+31: heater.heatTransfer.Ts[1]:STATE(1)(min = max(273.15, max(273.15, max(273.15, max(273.15, max(273.15, max(0.0, max(0.0, max(0.0, 0.0)))))))) max = min(2273.15, min(2273.15, min(2273.15, min(2273.15, 2273.15)))) start = 353.15 unit = "K" nominal = 300.0 )  "Temperatures defined by fluid states" type: Real  [1]
+32: heater.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+33: radiator.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+34: pipe.statesFM[1].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [2]
+35: pipe.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [2]
+36: tank.m:STATE(1,tank.mb_flow)(min = 0.0 unit = "kg" )  "Mass of fluid" type: Real 
+37: heater.ms[1]:STATE(1,heater.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [1]
+38: radiator.ms[1]:STATE(1,radiator.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [1]
+39: pipe.ms[1]:STATE(1,pipe.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [2]
+40: pipe.ms[2]:STATE(1,pipe.mb_flows[2])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [2]
+41: pump.medium.h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0)))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0)))))))) start = pump.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real 
+42: tank.medium.h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = tank.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real 
+43: tank.level:STATE(1)(min = max(0.0, 0.0) start = tank.level_start_eps unit = "m" stateSelect=StateSelect.prefer )  "Level height of tank" type: Real 
+44: heater.mediums[1].h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = heater.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real  [1]
+45: radiator.mediums[1].p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))) start = 110000.0 unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real  [1]
+46: radiator.mediums[1].h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = radiator.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real  [1]
+47: pipe.mediums[1].p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0)))))))))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0))))))))))) start = 130000.0 unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real  [2]
+48: pipe.mediums[1].h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = pipe.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real  [2]
+49: pipe.mediums[2].p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))))))) start = 130000.0 unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real  [2]
+50: pipe.mediums[2].h:STATE(1)(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0)))))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0)))))))))) start = pipe.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real  [2]
+51: pump.medium.p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))))))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))))))))) start = pump.p_start unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real 
+52: heater.mediums[1].p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))) start = 130000.0 unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real  [1]
+
+
+Constraint equations: (42)
+========================================
+1/1 (1): pipe.Us[2] = pipe.ms[2] * pipe.mediums[2].u   [dynamic |0|0|0|0|]
+2/2 (1): pipe.ms[2] = pipe.fluidVolumes[2] * pipe.statesFM[2].d   [dynamic |0|0|0|0|]
+3/3 (1): pipe.Us[1] = pipe.ms[1] * pipe.mediums[1].u   [dynamic |0|0|0|0|]
+4/4 (1): pipe.ms[1] = pipe.fluidVolumes[1] * pipe.statesFM[1].d   [dynamic |0|0|0|0|]
+5/5 (1): pipe.mediums[2].u = pipe.mediums[2].h - pipe.mediums[2].p / pipe.statesFM[2].d   [dynamic |0|0|0|0|]
+6/6 (1): pipe.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[2].p, pipe.mediums[2].h, pipe.statesFM[2].phase, 0).rho   [dynamic |0|0|0|0|]
+7/7 (1): pipe.mediums[1].u = pipe.mediums[1].h - pipe.mediums[1].p / pipe.statesFM[1].d   [dynamic |0|0|0|0|]
+8/8 (1): pipe.statesFM[1].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pipe.mediums[1].p, pipe.mediums[1].h, pipe.statesFM[1].phase, 0).rho   [dynamic |0|0|0|0|]
+9/9 (1): radiator.Us[1] = radiator.ms[1] * radiator.mediums[1].u   [dynamic |0|0|0|0|]
+10/10 (1): radiator.ms[1] = radiator.fluidVolumes[1] * radiator.statesFM[2].d   [dynamic |0|0|0|0|]
+11/11 (1): radiator.mediums[1].u = radiator.mediums[1].h - radiator.mediums[1].p / radiator.statesFM[2].d   [dynamic |0|0|0|0|]
+12/12 (1): radiator.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(radiator.mediums[1].p, radiator.mediums[1].h, radiator.statesFM[2].phase, 0).rho   [dynamic |0|0|0|0|]
+13/13 (1): heater.Us[1] = heater.ms[1] * heater.mediums[1].u   [dynamic |0|0|0|0|]
+14/14 (1): heater.ms[1] = heater.fluidVolumes[1] * heater.statesFM[2].d   [dynamic |0|0|0|0|]
+15/15 (1): heater.statesFM[1].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0).rho   [dynamic |0|0|0|0|]
+16/16 (1): heater.statesFM[1].T = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0).T   [dynamic |0|0|0|0|]
+17/17 (1): heater.flowModel.dps_fg[1] = (-2.0) * heater.flowModel.Fs_p[1] / (heater.flowModel.nParallel * 2.0 * heater.crossAreas[1])   [dynamic |0|0|0|0|]
+18/18 (1): heater.flowModel.Fs_p[1] = heater.crossAreas[1] * (heater.mediums[1].p - pump.medium.p) * heater.flowModel.nParallel   [dynamic |0|0|0|0|]
+19/19 (1): m_flow = homotopy(Modelica.Fluid.Pipes.DynamicPipe$heater.FlowModel$heater$flowModel.WallFriction.massFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent) * heater.flowModel.nParallel, heater.flowModel.dps_fg[1] * heater.flowModel.m_flow_nominal / heater.flowModel.dp_nominal)   [dynamic |0|0|0|0|]
+20/20 (1): heater.flowModel.mus[2] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[2].d, heater.heatTransfer.Ts[1], heater.mediums[1].p, heater.statesFM[2].phase)   [dynamic |0|0|0|0|]
+21/21 (1): heater.flowModel.mus[1] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0)   [dynamic |0|0|0|0|]
+22/22 (1): heater.mediums[1].u = heater.mediums[1].h - heater.mediums[1].p / heater.statesFM[2].d   [dynamic |0|0|0|0|]
+23/23 (1): heater.heatTransfer.Ts[1] = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0).T   [dynamic |0|0|0|0|]
+24/24 (1): heater.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0).rho   [dynamic |0|0|0|0|]
+25/25 (1): pump.Hb_flow = m_flow * (smooth(0, tank.medium.h) - smooth(0, pump.medium.h))   [dynamic |0|0|0|0|]
+26/26 (1): pump.W_single = homotopy(pump.dp_pump * pump.V_flow_single / pump.eta, pump.dp_pump * pump.m_flow_start / (/*Real*/(pump.nParallel) * pump.rho_nominal * pump.eta))   [dynamic |0|0|0|0|]
+27/27 (1): pump.eta = 0.8   [dynamic |0|0|0|0|]
+28/28 (1): pump.V_flow_single = pump.V_flow / /*Real*/(pump.nParallel)   [dynamic |0|0|0|0|]
+29/29 (1): pump.V_flow = homotopy(m_flow / pump.rho, m_flow / pump.rho_nominal)   [dynamic |0|0|0|0|]
+30/30 (1): pump.dp_pump = pump.p_b_nominal - tank.ports[2].p   [dynamic |0|0|0|0|]
+31/31 (1): -pump.Hb_flow = pump.W_single * /*Real*/(pump.nParallel)   [binding |0|0|0|0|]
+32/32 (1): 0.0 = pump.medium.p - pump.p_b_nominal   [unknown |0|0|0|0|]
+33/33 (1): pump.rho = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, pump.heatTransfer.states[1].phase, 0).rho   [dynamic |0|0|0|0|]
+34/34 (1): tank.U = tank.m * tank.medium.u   [dynamic |0|0|0|0|]
+35/35 (1): tank.m = tank.V * tank.heatTransfer.states[1].d   [dynamic |0|0|0|0|]
+36/36 (1): 0.0 = if tank.regularFlow[2] then tank.ports[2].p - homotopy(tank.vessel_ps_static[2] + 0.5 * tank.portAreas[2] ^ (-2.0) * smooth(2, if noEvent((-m_flow) >= tank.m_flow_small) then (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] * m_flow ^ 2.0 else if noEvent((-m_flow) <= (-tank.m_flow_small)) then m_flow ^ 2.0 * (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) else if noEvent((-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] >= (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2])) then Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0) else -Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(m_flow, tank.m_flow_small, (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], false, 1.0)), tank.vessel_ps_static[2]) else if tank.inFlow[2] then tank.ports[2].p - tank.vessel_ps_static[2] else -m_flow   [unknown |0|0|0|0|]
+37/37 (1): tank.ports_penetration[2] = smooth(1, if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height > 0.1 * tank.portsData[2].diameter) then 1.0 else if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height < (-0.1) * tank.portsData[2].diameter) then 0.001 else if noEvent(0.1 * tank.portsData[2].diameter > 0.0) then 0.25 * (tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) * (-3.0 + 100.0 * ((tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) / tank.portsData[2].diameter) ^ 2.0) * (-9.99) / tank.portsData[2].diameter + 0.5004999999999999 else 0.5004999999999999)   [dynamic |0|0|0|0|]
+38/38 (1): tank.portInDensities[2] = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.vessel_ps_static[2], tank.medium.h, 0, 0).rho   [dynamic |0|0|0|0|]
+39/39 (1): tank.vessel_ps_static[2] = max(0.0, tank.level - tank.portsData[2].height) * system.g * tank.heatTransfer.states[1].d + tank.p_ambient   [dynamic |0|0|0|0|]
+40/40 (1): tank.V = tank.crossArea * tank.level   [dynamic |0|0|0|0|]
+41/41 (1): tank.medium.u = tank.medium.h - tank.p_ambient / tank.heatTransfer.states[1].d   [dynamic |0|0|0|0|]
+42/42 (1): tank.heatTransfer.states[1].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.p_ambient, tank.medium.h, tank.heatTransfer.states[1].phase, 0).rho   [dynamic |0|0|0|0|]
+
+Adjacency Matrix Enhanced (row == equation)
+====================================
+number of rows: 42
+1:(-12,solved) (-40,variable(true)) (-14,variable(true)) 
+2:(-40,solved) (-35,param(true)) 
+3:(-11,solved) (-39,variable(true)) (-13,variable(true)) 
+4:(-39,solved) (-34,param(true)) 
+5:(-14,solved) (-50,constone) (-49,constone) (-35,nonlinear) 
+6:(-35,solved) (-49,unsolvable) (-50,unsolvable) 
+7:(-13,solved) (-48,constone) (-47,constone) (-34,nonlinear) 
+8:(-34,solved) (-47,unsolvable) (-48,unsolvable) 
+9:(-9,solved) (-38,variable(true)) (-10,variable(true)) 
+10:(-38,solved) (-33,param(true)) 
+11:(-10,solved) (-46,constone) (-45,constone) (-33,nonlinear) 
+12:(-33,solved) (-45,unsolvable) (-46,unsolvable) 
+13:(-7,solved) (-37,variable(true)) (-8,variable(true)) 
+14:(-37,solved) (-32,param(true)) 
+15:(-26,solved) (-51,unsolvable) (-41,unsolvable) 
+16:(-27,solved) (-51,unsolvable) (-41,unsolvable) 
+17:(-30,solved) (-18,param(true)) 
+18:(-18,solved) (-52,param(true)) (-51,param(true)) 
+19:(-25,solved) (-30,unsolvable) (-26,unsolvable) (-32,unsolvable) (-28,unsolvable) (-29,unsolvable) 
+20:(-29,solved) (-32,unsolvable) (-31,unsolvable) (-52,unsolvable) 
+21:(-28,solved) (-26,unsolvable) (-27,unsolvable) (-51,unsolvable) 
+22:(-8,solved) (-44,constone) (-52,constone) (-32,nonlinear) 
+23:(-31,solved) (-52,unsolvable) (-44,unsolvable) 
+24:(-32,solved) (-52,unsolvable) (-44,unsolvable) 
+25:(-15,solved) (-25,variable(true)) (-42,variable(true)) (-41,variable(true)) 
+26:(-17,solved) (-5,variable(true)) (-24,variable(true)) (-6,nonlinear) 
+27:(-6,solved) 
+28:(-24,solved) (-16,param(true)) 
+29:(-16,solved) (-25,variable(true)) (-23,nonlinear) 
+30:(-5,solved) (-19,constone) 
+31:(-15,solved) (-17,param(true)) 
+32:(-51,constone) 
+33:(-23,solved) (-51,unsolvable) (-41,unsolvable) 
+34:(-3,solved) (-36,variable(true)) (-2,variable(true)) 
+35:(-36,solved) (-1,variable(true)) (-20,variable(true)) 
+36:(-19,unsolvable) (-22,unsolvable) (-4,unsolvable) (-21,unsolvable) (-25,unsolvable) (-20,unsolvable) 
+37:(-4,solved) (-43,unsolvable) 
+38:(-21,solved) (-22,unsolvable) (-42,unsolvable) 
+39:(-22,solved) (-43,nonlinear) (-20,variable(true)) 
+40:(-1,solved) (-43,param(true)) 
+41:(-2,solved) (-42,constone) (-20,nonlinear) 
+42:(-20,solved) (-42,unsolvable) 
+
+Transpose Adjacency Matrix Enhanced (row == var)
+=====================================
+number of rows: 52
+1:(-40,solved) (-35,variable(true)) 
+2:(-41,solved) (-34,variable(true)) 
+3:(-34,solved) 
+4:(-37,solved) (-36,unsolvable) 
+5:(-30,solved) (-26,variable(true)) 
+6:(-27,solved) (-26,nonlinear) 
+7:(-13,solved) 
+8:(-22,solved) (-13,variable(true)) 
+9:(-9,solved) 
+10:(-11,solved) (-9,variable(true)) 
+11:(-3,solved) 
+12:(-1,solved) 
+13:(-7,solved) (-3,variable(true)) 
+14:(-5,solved) (-1,variable(true)) 
+15:(-31,solved) (-25,solved) 
+16:(-29,solved) (-28,param(true)) 
+17:(-31,param(true)) (-26,solved) 
+18:(-18,solved) (-17,param(true)) 
+19:(-36,unsolvable) (-30,constone) 
+20:(-42,solved) (-41,nonlinear) (-39,variable(true)) (-36,unsolvable) (-35,variable(true)) 
+21:(-38,solved) (-36,unsolvable) 
+22:(-39,solved) (-38,unsolvable) (-36,unsolvable) 
+23:(-33,solved) (-29,nonlinear) 
+24:(-28,solved) (-26,variable(true)) 
+25:(-36,unsolvable) (-29,variable(true)) (-25,variable(true)) (-19,solved) 
+26:(-21,unsolvable) (-19,unsolvable) (-15,solved) 
+27:(-21,unsolvable) (-16,solved) 
+28:(-21,solved) (-19,unsolvable) 
+29:(-20,solved) (-19,unsolvable) 
+30:(-19,unsolvable) (-17,solved) 
+31:(-23,solved) (-20,unsolvable) 
+32:(-24,solved) (-22,nonlinear) (-20,unsolvable) (-19,unsolvable) (-14,param(true)) 
+33:(-12,solved) (-11,nonlinear) (-10,param(true)) 
+34:(-8,solved) (-7,nonlinear) (-4,param(true)) 
+35:(-6,solved) (-5,nonlinear) (-2,param(true)) 
+36:(-35,solved) (-34,variable(true)) 
+37:(-14,solved) (-13,variable(true)) 
+38:(-10,solved) (-9,variable(true)) 
+39:(-4,solved) (-3,variable(true)) 
+40:(-2,solved) (-1,variable(true)) 
+41:(-33,unsolvable) (-25,variable(true)) (-16,unsolvable) (-15,unsolvable) 
+42:(-42,unsolvable) (-41,constone) (-38,unsolvable) (-25,variable(true)) 
+43:(-40,param(true)) (-39,nonlinear) (-37,unsolvable) 
+44:(-24,unsolvable) (-23,unsolvable) (-22,constone) 
+45:(-12,unsolvable) (-11,constone) 
+46:(-12,unsolvable) (-11,constone) 
+47:(-8,unsolvable) (-7,constone) 
+48:(-8,unsolvable) (-7,constone) 
+49:(-6,unsolvable) (-5,constone) 
+50:(-6,unsolvable) (-5,constone) 
+51:(-33,unsolvable) (-32,constone) (-21,unsolvable) (-18,param(true)) (-16,unsolvable) (-15,unsolvable) 
+52:(-24,unsolvable) (-23,unsolvable) (-22,constone) (-20,unsolvable) (-18,param(true)) 
+
+Matching
+========================================
+52 variables and equations
+var 1 is solved in eqn 40
+var 2 is solved in eqn 41
+var 3 is solved in eqn 34
+var 4 is solved in eqn 37
+var 5 is solved in eqn 30
+var 6 is solved in eqn 27
+var 7 is solved in eqn 13
+var 8 is solved in eqn 22
+var 9 is solved in eqn 9
+var 10 is solved in eqn 11
+var 11 is solved in eqn 3
+var 12 is solved in eqn 1
+var 13 is solved in eqn 7
+var 14 is solved in eqn 5
+var 15 is solved in eqn 31
+var 16 is solved in eqn 29
+var 17 is solved in eqn 26
+var 18 is solved in eqn 18
+var 19 is solved in eqn -1
+var 20 is solved in eqn 42
+var 21 is solved in eqn 38
+var 22 is solved in eqn 39
+var 23 is solved in eqn 33
+var 24 is solved in eqn 28
+var 25 is solved in eqn 19
+var 26 is solved in eqn 15
+var 27 is solved in eqn 16
+var 28 is solved in eqn 21
+var 29 is solved in eqn 20
+var 30 is solved in eqn 17
+var 31 is solved in eqn 23
+var 32 is solved in eqn 24
+var 33 is solved in eqn 12
+var 34 is solved in eqn 8
+var 35 is solved in eqn 6
+var 36 is solved in eqn 35
+var 37 is solved in eqn 14
+var 38 is solved in eqn 10
+var 39 is solved in eqn 4
+var 40 is solved in eqn 2
+var 41 is solved in eqn -1
+var 42 is solved in eqn -1
+var 43 is solved in eqn -1
+var 44 is solved in eqn -1
+var 45 is solved in eqn -1
+var 46 is solved in eqn -1
+var 47 is solved in eqn -1
+var 48 is solved in eqn -1
+var 49 is solved in eqn -1
+var 50 is solved in eqn -1
+var 51 is solved in eqn 32
+var 52 is solved in eqn -1
+
+Matching
+========================================
+42 variables and equations
+var 1 is solved in eqn 12
+var 2 is solved in eqn 40
+var 3 is solved in eqn 11
+var 4 is solved in eqn 39
+var 5 is solved in eqn 14
+var 6 is solved in eqn 35
+var 7 is solved in eqn 13
+var 8 is solved in eqn 34
+var 9 is solved in eqn 9
+var 10 is solved in eqn 38
+var 11 is solved in eqn 10
+var 12 is solved in eqn 33
+var 13 is solved in eqn 7
+var 14 is solved in eqn 37
+var 15 is solved in eqn 26
+var 16 is solved in eqn 27
+var 17 is solved in eqn 30
+var 18 is solved in eqn 18
+var 19 is solved in eqn 25
+var 20 is solved in eqn 29
+var 21 is solved in eqn 28
+var 22 is solved in eqn 8
+var 23 is solved in eqn 31
+var 24 is solved in eqn 32
+var 25 is solved in eqn -1
+var 26 is solved in eqn 17
+var 27 is solved in eqn 6
+var 28 is solved in eqn 24
+var 29 is solved in eqn 16
+var 30 is solved in eqn 5
+var 31 is solved in eqn 15
+var 32 is solved in eqn 51
+var 33 is solved in eqn 23
+var 34 is solved in eqn 3
+var 35 is solved in eqn 36
+var 36 is solved in eqn -1
+var 37 is solved in eqn 4
+var 38 is solved in eqn 21
+var 39 is solved in eqn 22
+var 40 is solved in eqn 1
+var 41 is solved in eqn 2
+var 42 is solved in eqn 20
+
+Selected dummy states: (40)
+========================================
+1: pump.medium.p:STATE(1)(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))))))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))))))))) start = pump.p_start unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real 
+2: pipe.ms[2]:STATE(1,pipe.mb_flows[2])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [2]
+3: pipe.ms[1]:STATE(1,pipe.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [2]
+4: radiator.ms[1]:STATE(1,radiator.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [1]
+5: heater.ms[1]:STATE(1,heater.mb_flows[1])(min = 0.0 unit = "kg" )  "Fluid mass" type: Real  [1]
+6: tank.m:STATE(1,tank.mb_flow)(min = 0.0 unit = "kg" )  "Mass of fluid" type: Real 
+7: pipe.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [2]
+8: pipe.statesFM[1].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [2]
+9: radiator.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+10: heater.statesFM[2].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+11: heater.heatTransfer.Ts[1]:STATE(1)(min = max(273.15, max(273.15, max(273.15, max(273.15, max(273.15, max(0.0, max(0.0, max(0.0, 0.0)))))))) max = min(2273.15, min(2273.15, min(2273.15, min(2273.15, 2273.15)))) start = 353.15 unit = "K" nominal = 300.0 )  "Temperatures defined by fluid states" type: Real  [1]
+12: heater.flowModel.dps_fg[1]:STATE(1)(start = (130000.0 - 130000.0) / /*Real*/(-1 + 3) unit = "Pa" )  "pressure drop between states" type: Real  [2]
+13: heater.flowModel.mus[2]:STATE(1)(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+14: heater.flowModel.mus[1]:STATE(1)(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+15: heater.statesFM[1].T:STATE(1)(min = max(273.15, max(273.15, 273.15)) max = min(2273.15, min(2273.15, 2273.15)) start = 500.0 unit = "K" nominal = 500.0 )  "Temperature" type: Real  [3]
+16: heater.statesFM[1].d:STATE(1)(min = max(0.0, max(0.0, max(0.0, 0.0))) max = min(100000.0, min(100000.0, min(100000.0, 100000.0))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+17: output m_flow:STATE(1)(min = max(max(-100000.0, if false and not false then -9.999999999999999e+59 else 0.0), max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(-(if true then 9.999999999999999e+59 else 0.0), max(-(if false and not false then 9.999999999999999e+59 else 0.0), if true then -9.999999999999999e+59 else 0.0)))))) max = min(min(100000.0, 100000.0), min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))))) start = pump.m_flow_start protected = true )  type: Real 
+18: pump.V_flow_single:STATE(1)(start = pump.m_flow_start / (/*Real*/(pump.nParallel) * pump.rho_nominal) unit = "m3/s" )  "Volume flow rate (single pump)" type: Real 
+19: pump.rho:STATE(1)(min = max(0.0, max(0.0, max(0.0, max(0.0, 0.0)))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  type: Real 
+20: tank.vessel_ps_static[2]:STATE(1)(min = 611.657 max = 100000000.0 start = 5000000.0 unit = "Pa" nominal = 1000000.0 )  "static pressures inside the vessel at the height of the corresponding ports, zero flow velocity" type: Real  [2]
+21: tank.portInDensities[2]:STATE(1)(min = 0.0 max = 100000.0 start = 150.0 unit = "kg/m3" nominal = 500.0 )  "densities of the fluid at the device boundary" type: Real  [2]
+22: tank.heatTransfer.states[1].d:STATE(1)(min = max(0.0, max(0.0, 0.0)) max = min(100000.0, min(100000.0, 100000.0)) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [1]
+23: heater.flowModel.Fs_p[1]:STATE(1)(unit = "N" )  "Pressure forces" type: Real  [2]
+24: pump.W_single:STATE(1)(unit = "W" )  "Power Consumption (single pump)" type: Real 
+25: pump.V_flow:STATE(1)(unit = "m3/s" )  "Volume flow rate (total)" type: Real 
+26: pump.Hb_flow:STATE(1)(unit = "W" )  "Enthalpy flow across boundaries or energy source/sink" type: Real 
+27: pipe.mediums[2].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [2]
+28: pipe.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [2]
+29: pipe.Us[2]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [2]
+30: pipe.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [2]
+31: radiator.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [1]
+32: radiator.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [1]
+33: heater.mediums[1].u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real  [1]
+34: heater.Us[1]:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real  [1]
+35: pump.eta:STATE(1)()  "Global Efficiency" type: Real 
+36: pump.dp_pump:STATE(1)(unit = "Pa" )  "Pressure change" type: Real 
+37: tank.ports_penetration[2]:STATE(1)()  "penetration of port with fluid, depending on fluid level and port diameter" type: Real  [2]
+38: tank.U:STATE(1)(unit = "J" )  "Internal energy of fluid" type: Real 
+39: tank.medium.u:STATE(1)(min = -100000000.0 max = 100000000.0 unit = "J/kg" nominal = 1000000.0 )  "Specific internal energy of medium" type: Real 
+40: tank.V:STATE(1)(unit = "m3" stateSelect=StateSelect.never )  "Actual tank volume" type: Real 
+
+No perfect matching possible, dynamic index reduction needed.
+
+Unassigned equations: (2)
+========================================
+1/1 (1): 0.0 = if tank.regularFlow[2] then tank.ports[2].p - homotopy(tank.vessel_ps_static[2] + 0.5 * tank.portAreas[2] ^ (-2.0) * smooth(2, if noEvent((-m_flow) >= tank.m_flow_small) then (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] * m_flow ^ 2.0 else if noEvent((-m_flow) <= (-tank.m_flow_small)) then m_flow ^ 2.0 * (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) else if noEvent((-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] >= (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2])) then Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0) else -Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(m_flow, tank.m_flow_small, (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], false, 1.0)), tank.vessel_ps_static[2]) else if tank.inFlow[2] then tank.ports[2].p - tank.vessel_ps_static[2] else -m_flow   [unknown |0|0|0|0|]
+2/2 (1): pump.Hb_flow = m_flow * (smooth(0, tank.medium.h) - smooth(0, pump.medium.h))   [dynamic |0|0|0|0|]
+
+
+Select 4 from 6 States
+25 tank.ports[2].p
+24 tank.level
+23 tank.medium.h
+22 pump.medium.h
+21 heater.mediums[1].p
+20 heater.mediums[1].h
+Select as dummyStates(2):
+19 tank.ports_penetration[2]
+18 tank.portInDensities[2]
+17 tank.vessel_ps_static[2]
+16 tank.heatTransfer.states[1].d
+15 pump.Hb_flow
+14 pump.W_single
+13 pump.dp_pump
+12 pump.V_flow_single
+11 pump.V_flow
+10 pump.rho
+9 m_flow
+8 heater.flowModel.mus[1]
+7 heater.statesFM[1].d
+6 heater.statesFM[1].T
+5 heater.flowModel.mus[2]
+4 heater.heatTransfer.Ts[1]
+3 heater.flowModel.dps_fg[1]
+2 heater.flowModel.Fs_p[1]
+1 heater.statesFM[2].d
+
+Generated StateSets:
+========================================
+StateSet "$STATESET1" (rang 4)
+
+state candidates (6)
+========================================
+1: tank.ports[2].p:DUMMY_STATE(flow=false min = max(611.657, max(611.657, 611.657)) max = min(100000000.0, min(100000000.0, 100000000.0)) start = pump.p_a_start unit = "Pa" nominal = 1000000.0 )  "Thermodynamic pressure in the connection point" type: Real  [2]
+2: tank.level:DUMMY_STATE(min = max(0.0, 0.0) start = tank.level_start_eps unit = "m" stateSelect=StateSelect.prefer )  "Level height of tank" type: Real 
+3: tank.medium.h:DUMMY_STATE(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = tank.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real 
+4: pump.medium.h:DUMMY_STATE(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0)))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0)))))))) start = pump.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real 
+5: heater.mediums[1].p:DUMMY_STATE(min = max(611.657, max(611.657, max(611.657, max(611.657, max(611.657, 0.0))))) max = min(100000000.0, min(100000000.0, min(100000000.0, min(100000000.0, 100000000.0)))) start = 130000.0 unit = "Pa" nominal = 100000.0 stateSelect=StateSelect.prefer )  "Absolute pressure of medium" type: Real  [1]
+6: heater.mediums[1].h:DUMMY_STATE(min = max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, max(-10000000000.0, -10000000000.0))))))) max = min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, min(10000000000.0, 10000000000.0))))))) start = heater.h_start unit = "J/kg" nominal = 500000.0 stateSelect=StateSelect.prefer )  "Specific enthalpy of medium" type: Real  [1]
+
+
+eqns (2)
+========================================
+1/1 (1): pump.Hb_flow = m_flow * (smooth(0, tank.medium.h) - smooth(0, pump.medium.h))   [dynamic |0|0|0|0|]
+2/2 (1): 0.0 = if tank.regularFlow[2] then tank.ports[2].p - homotopy(tank.vessel_ps_static[2] + 0.5 * tank.portAreas[2] ^ (-2.0) * smooth(2, if noEvent((-m_flow) >= tank.m_flow_small) then (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] * m_flow ^ 2.0 else if noEvent((-m_flow) <= (-tank.m_flow_small)) then m_flow ^ 2.0 * (-1.0 + (tank.portAreas[2] / tank.vesselArea) ^ 2.0 - tank.portsData[2].zeta_out) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]) else if noEvent((-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2] >= (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2])) then Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(-m_flow, tank.m_flow_small, (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), false, 1.0) else -Modelica.Fluid.Utilities.regSquare2.regSquare2_utility(m_flow, tank.m_flow_small, (1.0 + tank.portsData[2].zeta_out - (tank.portAreas[2] / tank.vesselArea) ^ 2.0) / (tank.heatTransfer.states[1].d * tank.ports_penetration[2]), (-1.0 + tank.portsData[2].zeta_in + (tank.portAreas[2] / tank.vesselArea) ^ 2.0) * tank.ports_penetration[2] / tank.portInDensities[2], false, 1.0)), tank.vessel_ps_static[2]) else if tank.inFlow[2] then tank.ports[2].p - tank.vessel_ps_static[2] else -m_flow   [unknown |0|0|0|0|]
+
+
+ovars (19)
+========================================
+1: tank.ports_penetration[2]:DUMMY_STATE()  "penetration of port with fluid, depending on fluid level and port diameter" type: Real  [2]
+2: tank.portInDensities[2]:DUMMY_STATE(min = 0.0 max = 100000.0 start = 150.0 unit = "kg/m3" nominal = 500.0 )  "densities of the fluid at the device boundary" type: Real  [2]
+3: tank.vessel_ps_static[2]:DUMMY_STATE(min = 611.657 max = 100000000.0 start = 5000000.0 unit = "Pa" nominal = 1000000.0 )  "static pressures inside the vessel at the height of the corresponding ports, zero flow velocity" type: Real  [2]
+4: tank.heatTransfer.states[1].d:DUMMY_STATE(min = max(0.0, max(0.0, 0.0)) max = min(100000.0, min(100000.0, 100000.0)) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [1]
+5: pump.Hb_flow:DUMMY_STATE(unit = "W" )  "Enthalpy flow across boundaries or energy source/sink" type: Real 
+6: pump.W_single:DUMMY_STATE(unit = "W" )  "Power Consumption (single pump)" type: Real 
+7: pump.dp_pump:DUMMY_STATE(unit = "Pa" )  "Pressure change" type: Real 
+8: pump.V_flow_single:DUMMY_STATE(start = pump.m_flow_start / (/*Real*/(pump.nParallel) * pump.rho_nominal) unit = "m3/s" )  "Volume flow rate (single pump)" type: Real 
+9: pump.V_flow:DUMMY_STATE(unit = "m3/s" )  "Volume flow rate (total)" type: Real 
+10: pump.rho:DUMMY_STATE(min = max(0.0, max(0.0, max(0.0, max(0.0, 0.0)))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  type: Real 
+11: output m_flow:DUMMY_STATE(min = max(max(-100000.0, if false and not false then -9.999999999999999e+59 else 0.0), max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(if true then -9.999999999999999e+59 else 0.0, max(-(if true then 9.999999999999999e+59 else 0.0), max(-(if false and not false then 9.999999999999999e+59 else 0.0), if true then -9.999999999999999e+59 else 0.0)))))) max = min(min(100000.0, 100000.0), min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0)))))) start = pump.m_flow_start protected = true )  type: Real 
+12: heater.flowModel.mus[1]:DUMMY_STATE(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+13: heater.statesFM[1].d:DUMMY_STATE(min = max(0.0, max(0.0, max(0.0, 0.0))) max = min(100000.0, min(100000.0, min(100000.0, 100000.0))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+14: heater.statesFM[1].T:DUMMY_STATE(min = max(273.15, max(273.15, 273.15)) max = min(2273.15, min(2273.15, 2273.15)) start = 500.0 unit = "K" nominal = 500.0 )  "Temperature" type: Real  [3]
+15: heater.flowModel.mus[2]:DUMMY_STATE(min = 0.0 max = 100000000.0 start = 0.001 unit = "Pa.s" nominal = 0.001 )  type: Real  [3]
+16: heater.heatTransfer.Ts[1]:DUMMY_STATE(min = max(273.15, max(273.15, max(273.15, max(273.15, max(273.15, max(0.0, max(0.0, max(0.0, 0.0)))))))) max = min(2273.15, min(2273.15, min(2273.15, min(2273.15, 2273.15)))) start = 353.15 unit = "K" nominal = 300.0 )  "Temperatures defined by fluid states" type: Real  [1]
+17: heater.flowModel.dps_fg[1]:DUMMY_STATE(start = (130000.0 - 130000.0) / /*Real*/(-1 + 3) unit = "Pa" )  "pressure drop between states" type: Real  [2]
+18: heater.flowModel.Fs_p[1]:DUMMY_STATE(unit = "N" )  "Pressure forces" type: Real  [2]
+19: heater.statesFM[2].d:DUMMY_STATE(min = max(0.0, max(0.0, max(0.0, max(0.0, max(0.0, 0.0))))) max = min(100000.0, min(100000.0, min(100000.0, min(100000.0, min(100000.0, 100000.0))))) start = 150.0 unit = "kg/m3" nominal = 500.0 )  "Density" type: Real  [3]
+
+
+oeqns (19)
+========================================
+1/1 (1): tank.ports_penetration[2] = smooth(1, if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height > 0.1 * tank.portsData[2].diameter) then 1.0 else if noEvent(tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height < (-0.1) * tank.portsData[2].diameter) then 0.001 else if noEvent(0.1 * tank.portsData[2].diameter > 0.0) then 0.25 * (tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) * (-3.0 + 100.0 * ((tank.level + (-0.1) * tank.portsData[2].diameter - tank.portsData[2].height) / tank.portsData[2].diameter) ^ 2.0) * (-9.99) / tank.portsData[2].diameter + 0.5004999999999999 else 0.5004999999999999)   [dynamic |0|0|0|0|]
+2/2 (1): tank.portInDensities[2] = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.vessel_ps_static[2], tank.medium.h, 0, 0).rho   [dynamic |0|0|0|0|]
+3/3 (1): tank.vessel_ps_static[2] = max(0.0, tank.level - tank.portsData[2].height) * system.g * tank.heatTransfer.states[1].d + tank.p_ambient   [dynamic |0|0|0|0|]
+4/4 (1): tank.heatTransfer.states[1].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(tank.p_ambient, tank.medium.h, tank.heatTransfer.states[1].phase, 0).rho   [dynamic |0|0|0|0|]
+5/5 (1): -pump.Hb_flow = pump.W_single * /*Real*/(pump.nParallel)   [binding |0|0|0|0|]
+6/6 (1): pump.W_single = homotopy(pump.dp_pump * pump.V_flow_single / pump.eta, pump.dp_pump * pump.m_flow_start / (/*Real*/(pump.nParallel) * pump.rho_nominal * pump.eta))   [dynamic |0|0|0|0|]
+7/7 (1): pump.dp_pump = pump.p_b_nominal - tank.ports[2].p   [dynamic |0|0|0|0|]
+8/8 (1): pump.V_flow_single = pump.V_flow / /*Real*/(pump.nParallel)   [dynamic |0|0|0|0|]
+9/9 (1): pump.V_flow = homotopy(m_flow / pump.rho, m_flow / pump.rho_nominal)   [dynamic |0|0|0|0|]
+10/10 (1): pump.rho = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, pump.heatTransfer.states[1].phase, 0).rho   [dynamic |0|0|0|0|]
+11/11 (1): m_flow = homotopy(Modelica.Fluid.Pipes.DynamicPipe$heater.FlowModel$heater$flowModel.WallFriction.massFlowRate_dp_staticHead(heater.flowModel.dps_fg[1], heater.statesFM[1].d, heater.statesFM[2].d, heater.flowModel.mus[1], heater.flowModel.mus[2], heater.pathLengths[1], heater.dimensions[1], 0.0, heater.crossAreas[1], heater.roughnesses[1], 0.5 * heater.flowModel.dp_small, heater.flowModel.Re_turbulent) * heater.flowModel.nParallel, heater.flowModel.dps_fg[1] * heater.flowModel.m_flow_nominal / heater.flowModel.dp_nominal)   [dynamic |0|0|0|0|]
+12/12 (1): heater.flowModel.mus[1] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[1].d, heater.statesFM[1].T, pump.medium.p, 0)   [dynamic |0|0|0|0|]
+13/13 (1): heater.statesFM[1].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0).rho   [dynamic |0|0|0|0|]
+14/14 (1): heater.statesFM[1].T = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(pump.medium.p, pump.medium.h, 0, 0).T   [dynamic |0|0|0|0|]
+15/15 (1): heater.flowModel.mus[2] = Modelica.Media.Water.IF97_Utilities.dynamicViscosity(heater.statesFM[2].d, heater.heatTransfer.Ts[1], heater.mediums[1].p, heater.statesFM[2].phase)   [dynamic |0|0|0|0|]
+16/16 (1): heater.heatTransfer.Ts[1] = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0).T   [dynamic |0|0|0|0|]
+17/17 (1): heater.flowModel.dps_fg[1] = (-2.0) * heater.flowModel.Fs_p[1] / (heater.flowModel.nParallel * 2.0 * heater.crossAreas[1])   [dynamic |0|0|0|0|]
+18/18 (1): heater.flowModel.Fs_p[1] = heater.crossAreas[1] * (heater.mediums[1].p - pump.medium.p) * heater.flowModel.nParallel   [dynamic |0|0|0|0|]
+19/19 (1): heater.statesFM[2].d = Modelica.Media.Water.IF97_Utilities.waterBaseProp_ph(heater.mediums[1].p, heater.mediums[1].h, heater.statesFM[2].phase, 0).rho   [dynamic |0|0|0|0|]
+
+
+varA (24)
+========================================
+1: $STATESET1.A[1,1]:VARIABLE(start = 1 fixed = true )  type: Integer  [4,6]
+2: $STATESET1.A[1,2]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+3: $STATESET1.A[1,3]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+4: $STATESET1.A[1,4]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+5: $STATESET1.A[1,5]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+6: $STATESET1.A[1,6]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+7: $STATESET1.A[2,1]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+8: $STATESET1.A[2,2]:VARIABLE(start = 1 fixed = true )  type: Integer  [4,6]
+9: $STATESET1.A[2,3]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+10: $STATESET1.A[2,4]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+11: $STATESET1.A[2,5]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+12: $STATESET1.A[2,6]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+13: $STATESET1.A[3,1]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+14: $STATESET1.A[3,2]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+15: $STATESET1.A[3,3]:VARIABLE(start = 1 fixed = true )  type: Integer  [4,6]
+16: $STATESET1.A[3,4]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+17: $STATESET1.A[3,5]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+18: $STATESET1.A[3,6]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+19: $STATESET1.A[4,1]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+20: $STATESET1.A[4,2]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+21: $STATESET1.A[4,3]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+22: $STATESET1.A[4,4]:VARIABLE(start = 1 fixed = true )  type: Integer  [4,6]
+23: $STATESET1.A[4,5]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+24: $STATESET1.A[4,6]:VARIABLE(start = 0 fixed = true )  type: Integer  [4,6]
+
+
+varJ (2)
+========================================
+1: $STATESET1.J[1]:VARIABLE(fixed = false )  type: Real  [2]
+2: $STATESET1.J[2]:VARIABLE(fixed = false )  type: Real  [2]
+
+
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 6000.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'Modelica.Fluid.Examples.HeatingSystem', options = '', outputFormat = 'mat', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "Failed to build model: Modelica.Fluid.Examples.HeatingSystem",
+    timeFrontend = 9.302624866,
+    timeBackend = 0.0,
+    timeSimCode = 0.0,
+    timeTemplates = 0.0,
+    timeCompile = 0.0,
+    timeSimulation = 0.0,
+    timeTotal = 9.302663139
+end SimulationResult;
+"Warning: The model contains alias variables with conflicting start and/or nominal values. It is recommended to resolve the conflicts, because otherwise the system could be hard to solve. To print the conflicting alias sets and the chosen candidates please use -d=aliasConflicts.
+Error: Internal error Transformation Module PFPlusExt index Reduction Method Pantelides failed!
+Error: No system for the symbolic initialization was generated
+"
