@@ -1,0 +1,476 @@
+<!DOCTYPE OMNotebook>
+<Notebook>
+ <GroupCell closed="false" >
+  <GroupCell closed="false" >
+   <GroupCell closed="false" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-size:16pt; font-weight:600;">Packages and examples&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>loadModel(Modelica);
+loadFile("c:/modelicaprj/packages/mediapath.mo");
+loadFile("c:/modelicaprj/packages/control.mo");
+loadFile("c:/modelicaprj/packages/other.mo");</Input>
+     <Output>[done]</Output>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">MediaPath package&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">This package contains models for the elements found at a printers media path. The elements currently included in the package are two kinds of roller, the drive roller and a paper roll, and a totally rigid paper, as well as their connectors.&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>list(MediaPath)</Input>
+     <Output>"package MediaPath
+  package Interfaces
+      connector PaperCut
+          Modelica.SIunits.Position pos;
+      flow Modelica.SIunits.Force F;
+    end PaperCut;
+    partial model Paper
+          PaperCut cut_a,cut_b;
+      Modelica.SIunits.Force F;
+      Modelica.SIunits.Length pos_rel;
+
+    equation 
+      pos_rel=cut_a.pos - cut_b.pos;
+      cut_a.F=F;
+      cut_b.F=-F;
+    end Paper;
+    partial model Roller
+          extends Modelica.Mechanics.Rotational.Interfaces.Rigid(phi(start=0));
+      parameter Modelica.SIunits.Inertia J=1;
+      parameter Modelica.SIunits.Radius r=1;
+      Modelica.SIunits.AngularVelocity w(start=0);
+      Modelica.SIunits.AngularAcceleration a;
+      Modelica.SIunits.Position tanPos;
+      Modelica.SIunits.Velocity tanVel;
+
+    equation 
+      w=der(phi);
+      a=der(w);
+      tanPos=phi*r;
+      tanVel=w*r;
+    end Roller;
+  end Interfaces;
+  model DriveRoller
+      extends Interfaces.Roller;
+    Interfaces.PaperCut cut_a,cut_b;
+
+  equation 
+    cut_a.pos=phi*r;
+    cut_b.pos=phi*r;
+    J*a=flange_a.tau + flange_b.tau + cut_a.F*r + cut_b.F*r;
+  end DriveRoller;
+  model PaperRoll
+      extends Interfaces.Roller;
+    Interfaces.PaperCut cut_b;
+
+  equation 
+    cut_b.pos=phi*r;
+    J*a=flange_a.tau + flange_b.tau + cut_b.F*r;
+  end PaperRoll;
+  model Cardboard
+      extends Interfaces.Paper;
+
+  equation 
+    pos_rel=0;
+  end Cardboard;
+  model RealPaper
+      extends Interfaces.Paper;
+    parameter Real k=1;
+
+  equation 
+    F=if pos_rel > 0 then 0 else pos_rel*k;
+  end RealPaper;
+end MediaPath;
+
+"</Output>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Control package&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">This package contains models for some control elements. It includes a discrete PID implementation that acts like that of GoldenGate media advance servo, a PWMGenerator that converts a signal to voltage and an assembly of a whole control loop.&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>list(Control)</Input>
+     <Output>"package Control
+  block PID
+      extends Modelica.Blocks.Interfaces.SISO;
+    parameter Real Kp=1,Kd=1;
+    Modelica.Blocks.Math.Gain proportional(k=Kp),derivative(k=Kd);
+    Modelica.Blocks.Continuous.Der derivator;
+    Modelica.Blocks.Math.Add sum;
+
+  equation 
+    connect(u,derivator.u);
+    connect(u,proportional.u);
+    connect(derivator.y,derivative.u);
+    connect(proportional.y,sum.u1);
+    connect(derivative.y,sum.u2);
+    connect(sum.y,y);
+  end PID;
+  block DiscretePID
+      extends Modelica.Blocks.Interfaces.DiscreteSISO;
+    parameter Real Kp=1,Kd=1;
+    Modelica.SIUnits.Velocity verr;
+
+  equation 
+    verr=der(u);
+    when {sampleTrigger,initial()} then
+          y=Kp*u + Kd*verr;
+    
+    end when;
+  end DiscretePID;
+  model PWMGenerator
+      Modelica.Blocks.Interfaces.RealInput u;
+    Modelica.Electrical.Analog.Interfaces.Pin p,n;
+    parameter Real gain=1;
+
+  equation 
+    p.v - n.v=u*gain;
+    p.i + n.i=0;
+  end PWMGenerator;
+  model PWMSaturation
+      Modelica.Blocks.Interfaces.RealInput u;
+    Modelica.Electrical.Analog.Interfaces.Pin p,n;
+    parameter Real gain=1;
+    parameter Real saturation=42;
+
+  equation 
+    p.v - n.v=if u*gain > saturation then saturation else if u*gain &lt; -saturation then -saturation else u*gain;
+    p.i + n.i=0;
+  end PWMSaturation;
+  model LowPassFilter
+      parameter Real T=1;
+    Modelica.Blocks.Interfaces.RealInput u;
+    Modelica.Blocks.Interfaces.RealOutput y;
+
+  equation 
+    T*der(y) + y=u;
+  end LowPassFilter;
+  model Servo
+      parameter Real KP=1800,KD=6000;
+    parameter Real MotorJ=0.0001,MotorTorqueK=0.078,MotorResistance=7.1,MotorInductance=0.1;
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b;
+    Modelica.Blocks.Interfaces.RealInput u;
+    Modelica.Blocks.Math.Add comparator(k2=-1);
+    PID pid(Kp=KP,Kd=KD);
+    PWMSaturation pwm;
+    Modelica.Electrical.Analog.Basic.Ground ground;
+    DCMotor motor(load.J=MotorJ,emf1.k=MotorTorqueK,r1.R=MotorResistance,i1.L=MotorInductance);
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor encoder;
+
+  equation 
+    connect(u,comparator.u1);
+    connect(comparator.y,pid.u);
+    connect(pid.y,pwm.u);
+    connect(pwm.p,motor.p);
+    connect(pwm.n,motor.n);
+    connect(motor.n,ground.p);
+    connect(motor.flange_b,encoder.flange_a);
+    connect(encoder.phi,comparator.u2);
+    connect(motor.flange_b,flange_b);
+  end Servo;
+  model ServoWithFilter
+      parameter Real KP=1800,KD=6000;
+    parameter Real MotorJ=0.0001,MotorTorqueK=0.078,MotorResistance=7.1,MotorInductance=0.1;
+    Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b;
+    Modelica.Blocks.Interfaces.RealInput u;
+    Modelica.Blocks.Math.Add comparator(k2=-1);
+    PID pid(Kp=KP,Kd=KD);
+    LowPassFilter filter;
+    PWMSaturation pwm;
+    Modelica.Electrical.Analog.Basic.Ground ground;
+    DCMotor motor(load.J=MotorJ,emf1.k=MotorTorqueK,r1.R=MotorResistance,i1.L=MotorInductance);
+    Modelica.Mechanics.Rotational.Sensors.AngleSensor encoder;
+
+  equation 
+    connect(u,comparator.u1);
+    connect(comparator.y,pid.u);
+    connect(pid.y,filter.u);
+    connect(filter.y,pwm.u);
+    connect(pwm.p,motor.p);
+    connect(pwm.n,motor.n);
+    connect(motor.n,ground.p);
+    connect(motor.flange_b,encoder.flange_a);
+    connect(encoder.phi,comparator.u2);
+    connect(motor.flange_b,flange_b);
+  end ServoWithFilter;
+  model SpeedTrapezium
+      import SI = Modelica.SIUnits;
+    extends Modelica.Blocks.Interfaces.SO;
+    parameter Real acc=1,dec=1;
+    parameter SI.Length adv=1;
+    parameter SI.Velocity vel=1;
+    parameter SI.Time startTime=0;
+    SI.Time tAcc,tSlew,tDec;
+
+  equation 
+    tAcc=vel/acc;
+    tDec=vel/dec;
+    tSlew=if ((tAcc + tDec)*vel)/2 >= adv then 0 else (adv - ((tAcc + tDec)*vel)/2)/vel;
+    y=if time &lt;= startTime then 0 else if time &lt;= startTime + tAcc then (time - startTime)*acc else if time &lt;= startTime + tAcc + tSlew then vel else if time &lt;= startTime + tAcc + tSlew + tDec then vel - (time - startTime - tAcc + tSlew)*dec else 0;
+  end SpeedTrapezium;
+end Control;
+
+"</Output>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Motor model&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">This is a DC Motor model.&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>list(DCMotor)</Input>
+     <Output>"model DCMotor
+  Modelica.Electrical.Analog.Interfaces.Pin p,n;
+  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b;
+  Modelica.Electrical.Analog.Basic.Resistor r1(R=10);
+  Modelica.Electrical.Analog.Basic.Inductor i1;
+  Modelica.Electrical.Analog.Basic.EMF emf1;
+  Modelica.Mechanics.Rotational.Inertia load;
+
+equation 
+  connect(p,r1.p);
+  connect(r1.n,i1.p);
+  connect(i1.n,emf1.p);
+  connect(emf1.n,n);
+  connect(emf1.flange_b,load.flange_a);
+  connect(load.flange_b,flange_b);
+end DCMotor;
+
+"</Output>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Example 1 - DC Motor&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">In this example the use of the DC motor is showed. It consists of a constant voltage source connected to the DC motor. A rotational flange connector has been added in order to reuse this model in the following examples.&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>model ConstantVoltageMotor
+  Modelica.Electrical.Analog.Sources.ConstantVoltage source;
+  Modelica.Electrical.Analog.Basic.Ground ground;
+  DCMotor dcMotor;
+  Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b;
+equation
+  connect(ground.p,source.n);
+  connect(source.p,dcMotor.p);
+  connect(source.n,dcMotor.n);
+  connect(dcMotor.flange_b,flange_b);
+end ConstantVoltageMotor;</Input>
+     <Output>Ok</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>simulate(ConstantVoltageMotor,stopTime=5.0)</Input>
+     <Output>record
+    resultFile = "ConstantVoltageMotor_res.plt"
+end record</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({dcMotor.load.phi})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/1.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/1.png" >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</Image>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Example 2 - Motor &amp;amp; Rollers&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">This example uses the &lt;span style=" font-style:italic;">ConstantVoltageMotor&lt;/span> model of the previous example and attaches the &lt;span style=" font-style:italic;">DriveRoller&lt;/span> to it. It also includes an instance of &lt;span style=" font-style:italic;">PaperRoll&lt;/span> with bigger radius than the drive roller and connects them using a &lt;span style=" font-style:italic;">Cardboard &lt;/span>instance.&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>model MotorWithRollers
+  ConstantVoltageMotor motor;
+  MediaPath.DriveRoller driveRoller;
+  MediaPath.PaperRoll paperRoll(r=2);
+  MediaPath.Cardboard paper;
+equation
+  connect(motor.flange_b,driveRoller.flange_a);
+  connect(driveRoller.cut_a,paper.cut_b);
+  connect(paper.cut_a,paperRoll.cut_b);
+end MotorWithRollers;</Input>
+     <Output>Ok</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>simulate(MotorWithRollers,stopTime=5.0)</Input>
+     <Output>record
+    resultFile = "MotorWithRollers_res.plt"
+end record</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({driveRoller.phi,paperRoll.phi})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/2.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/2.png" >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</Image>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Example 3 - Controlled system&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">This example is an assembly of a control scheme for two rollers connected by an elastic paper. (Previous to the 'Servo' model implementation, see Example 4)&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>model ControlledRoller
+  parameter Real driveRollerRadius = 0.03369; //In meters.
+  parameter Real paperRollRadius = 2*driveRollerRadius;
+  Control.SpeedTrapezium trapezium(adv=0.1016,vel=0.100228);
+  Modelica.Blocks.Continuous.Integrator integrator;
+  Modelica.Blocks.Math.Add comparator(k2=-1);
+  Control.PID controller(Kp=1000,Kd=5000);
+  Modelica.Blocks.Math.Gain ang2tangent(k=driveRollerRadius);
+  Control.PWMGenerator pwm;
+  Modelica.Electrical.Analog.Basic.Ground ground;
+  DCMotor motor(load.J=0.0001,emf1.k=0.078,r1.R=7.1,i1.L=0.1);
+  Modelica.Mechanics.Rotational.IdealGear gear(ratio=40);
+  MediaPath.DriveRoller driveRoller(r=driveRollerRadius,J=0.00365); //Inertia in kg·m^2
+  MediaPath.PaperRoll paperRoll(r=paperRollRadius,J=0.008452); //Inertia in kg·m^2
+  Modelica.Mechanics.Rotational.Damper friction(d=0.01);
+  Modelica.Mechanics.Rotational.Fixed housing;
+  Modelica.Blocks.Sources.Constant btTorque(k=-0.9);
+  Modelica.Mechanics.Rotational.Torque backtension;
+  MediaPath.RealPaper paper(k=1e4);
+  Modelica.Mechanics.Rotational.Sensors.AngleSensor encoder;
+equation
+  connect(trapezium.y,integrator.u);
+  connect(integrator.y,comparator.u1);
+  connect(comparator.y,controller.u);
+  connect(controller.y,pwm.u);
+  connect(pwm.n,ground.p);
+  connect(pwm.p,motor.p);
+  connect(pwm.n,motor.n);
+  connect(motor.flange_b,gear.flange_a);
+  connect(gear.flange_b,driveRoller.flange_a);
+  connect(driveRoller.flange_b,encoder.flange_a);
+  connect(encoder.phi,ang2tangent.u);
+  connect(ang2tangent.y,comparator.u2);
+  connect(driveRoller.cut_a,paper.cut_b);
+  connect(paper.cut_a,paperRoll.cut_b);
+  connect(btTorque.y,backtension.tau);
+  connect(backtension.flange_b,paperRoll.flange_a);
+  connect(paperRoll.flange_a,friction.flange_b);
+  connect(friction.flange_a,housing.flange_b);
+end ControlledRoller;</Input>
+     <Output>Ok</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>simulate(ControlledRoller,stopTime=2)</Input>
+     <Output>record
+    resultFile = "ControlledRoller_res.plt"
+end record</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({integrator.u,driveRoller.tanVel})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/3.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/3.png" >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</Image>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({integrator.y,driveRoller.tanPos,paperRoll.tanPos})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/4.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/4.png" >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</Image>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="true" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Example 4 - Servo driven system&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>model Example4
+  parameter Real driveRollerRadius = 0.03369;
+  parameter Real gearRatio = 1;
+  Control.SpeedTrapezium trapezium(adv=0.1016,vel=0.100228);
+  Control.SpeedTrapezium trapezium2(adv=0.1016,vel=0.100228,startTime=4.0);
+  Modelica.Blocks.Math.Add sum;
+  Modelica.Blocks.Continuous.Integrator integrator;
+  Modelica.Blocks.Math.Gain commandCorrector(k=gearRatio/driveRollerRadius);
+  Control.DiscreteServoWithGear servo(KP=1,KD=5,filter.T=0.1);
+  Modelica.Mechanics.Rotational.IdealGear gear(ratio=gearRatio);
+  MediaPath.DriveRoller driveRoller(r=driveRollerRadius,J=0.00365);
+  MediaPath.PaperRoll paperRoll(r=0.05,J=0.008452);
+  MediaPath.RealPaper paper(k=1e4);
+  Modelica.Blocks.Sources.Constant tau(k=-0.9);
+  Modelica.Mechanics.Rotational.Torque backtension;
+  Modelica.Mechanics.Rotational.Damper friction(d=0.1);
+  Modelica.Mechanics.Rotational.Fixed housing;
+equation
+  connect(trapezium.y,sum.u1);
+  connect(trapezium2.y,sum.u2);
+  connect(sum.y,integrator.u);
+  connect(integrator.y,commandCorrector.u);
+  connect(commandCorrector.y,servo.u);
+  connect(servo.flange_b,gear.flange_a);
+  connect(gear.flange_b,driveRoller.flange_a);
+  connect(paperRoll.cut_b,paper.cut_a);
+  connect(paper.cut_b,driveRoller.cut_a);
+  connect(tau.y,backtension.tau);
+  connect(backtension.flange_b,paperRoll.flange_a);
+  connect(paperRoll.flange_a,friction.flange_a);
+  connect(friction.flange_b,housing.flange_b);
+end Example4;</Input>
+     <Output>Ok</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>simulate(Example4,stopTime=4)</Input>
+     <Output>record
+    resultFile = "Example4_res.plt"
+end record</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({sum.y,driveRoller.tanVel,paperRoll.tanVel})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/5.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/5.png" >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</Image>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({servo.u,servo.flange_b.phi})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;span style=" color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/6.png" width="492" height="250" />&lt;/span>&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/6.png" >AAAAAYlQTkcNChoKAAAADUlIRFIAAAHsAAAA+ggGAAAAY9J0UgAAAAlwSFlzAAAOxAAADsQBlSsOGwAADYpJREFUeJzt3emSozoSBlAx0e9lP7r9ZMyPKXoomkViTcE5ERX3lgvj9NJ8TiGgadu2TQBAaP+5ugAAYJnABoAKCGwAqIDABoAKCGwAqIDABoAKCGwAqIDABoAKCGwAqIDABoAKCGwAqIDABoAKCGwAqMBhgd00TWqa5qjVA8CjHBLYTdOktm1T27ZCGwB2cEhgu8Q2AOzr0H3YXacNAGxj0hkAVODPUSvWXV9nat5A//3olil9j5be17XrzXncoSs/X/16xupY+vuaxypZz/A+R70vwHmyO+ypEOhmg/f/3v2/meKxbH0vrnov5z57EQzriFJXXzcJFKhXVoc9t8Ecdm02DHGMddRLpjrDsS9kS+/z2HK5t+XW0/8M9tezVONcBzy2nrl1lcpZZ85rXFLb1PpyXofcxwCO9bfDnuoSDG0/x56d4ljAbzH8DOYG2dhj5z7PnOWm6sj5opBT35balsytI+d1A871N7D73UQ/pIV1vcZ2V8wt21nqfnNHUebW0/+sDZfdQ87oQP95zO33z6lt+Hzmlsmpb7jM2Hpyn0POOob667YNgBgOm3RGPCUhu/WkN3ut56jHzqnpqKDKqW+v51Ba05GPAWzzK7C7jYNv1PfgfTzHUfu6rza1Lx+4xq/A9o+S7gvbXp+FPdeTO4ku5zkcEaolE/uW6jv7OTgMDOL7Z0hcl/1MwzkM/duHSmcwD5ftHitnPVN1zdU3XHbusXPWtZec13jp+faX2fIc5tbR50s8xPFrlnjpfsf+P3ohX7+lmdgl7+8whPasq+T2qQlVuevKlTtJM+c1zXnt9ngOc7VM/U2Aw3WaVspygSOPb/aRBu7IucS5lHAFyCOwOZ1hVYByhsQBoAI6bACowKlnOjMUCpDPACh9p5+adO0HMOJhYxFrSkldpSLWFbGmlNRVYmtNGhyGFgM79/Abl+IDgOPMBvbY6SCXzkq1ZBjsn89n8T6d7/ebvexZItaUkrpKRawrYk0pqatESU3v9/u4QriFolniU4GdO/SzZYjojkNeR1FXmYh1RawpJXWV2GNIPNpz4lq77cM++mpFJZ34WSLWlJK6SkWsK2JNKamrRMSaqFt2YJcMh/tmCAD72qXDFs4AMGJqtv+K3MwKbB0zXCzIIT6vqwuYELIuQ+LsbPFMZzlh7XhBOEjThAlriKB/Sefcv/WvMT/1t6V1jy0/9vuRFg/r6v83pd/XxZ26frZuHHbQ3xDs+G9K/p/jk+IdZla7uUONlw5D7n6fCtjSw5ivMBvYJcdcR3ticBdNalMSsvCPktwZNpj9/9bCxT8goNfPSTSatP/GpG3X/3w+3033P+onYl3srwvZ0iHxuzj9XOJAGRt/+L+5YeuQ3fKONemwIZpu7khqhTX0lHTOc8vuNRx+dievwwagCnMTnLdOfp67/9Qk67lJbEcQ2BBJr7sG/rXmAlRjt+feNnb7VcPwhsQhKMPhQJ/ABoAKCGyIojcc/vk46Qbwm8AGgAoIbIjAoVzAAoENABVwWBdcTXdNxaJf+GmvE6RMrWNp/TteDluHDcA6XVhFDOqzOA4bHsaJUljjymtDj11+eevjD28fu+/ai3vkXud66TmHvR42cLBfw4kX1kF1rr429Nz5uHMff+n/S2uaMvfa5C6Xu44j6bABbmDLtaFT2jeEltaT8zh7BmLuutac9vRMOmy4islmbLB0sYurrwl9xONf/ZyuJrABKhX12tBjw8l7iNDlltqzZEPicAXdNRtFuzb0msfecr+9nv/adV5Bhw1QoQjXhs65f8k1o+fut+U5DdfbGRuVGFsuCoENZ9Nds5Orrw09NwS/Zrm5x13629J9tjzvKNfDFtgAhDDsxHPCcGm4/04ENgAhbOmgr3jss5l0BmcyHA6sJLABoAICG86iuwY2WNyHnTuNPvol1gCgZk07k665J1svWW7o8/mU1gzVeb3fKaX/ddefz/faYgjp/fMZ6dP80Dcb2P8svENgr/0Afr/f9Hq9Vt33KBFrSkldpU6pq3A4/NGv1QoR69pa01VXhCIu+7DhJPZdA1tkB7Zve7BS8PMTA3XQYQNABbICW3cNKzmUC9jJYmALawC43uxx2N1hWGPHWPeDfOul3OCWdNfAjmYDu+QyZ0IaAI5j0hkcQXcN7ExgA0AFBDYcSHcN7EVgw956w+EAexHYAFABgQ17MtkMOIjABoAKCGzYi+4aOJDABoAKCGzYke4aOIrAhj245jVwMIENO9JdA0cR2LCVE6UAJxDYAFABgQ1bOJQLOInABoAKCGxYS3cNnEhgA0AFBDZspLsGziCwYQ2HcgEnE9iwge4aOIvAhlK6a+ACAhsAKiCwoYRDuYCLCGwAqIDAhly6a+BCf3IWapomtQtbqGZwPeCl5QGAfE27kKxdEOcEdmmop5TS5/NZKBFieL3fKaWUvj6zHOD98/nq0/jQNxvYXQgvhXFOWJcsN+b7/abX67XqvkeJWFNK6iqVVdfJw+FVv1YXiFjX1pq2bC+5p9kh8ZIPS7979iHjrny0gatk7cPO0Q9p3wy5lX53fXEpwHPtMktcOAPAsRzWBXMcygUEsUtgj83+BgD2s3ofdn8/dTeTvGOInLvxkQaulhXYYwE8vE1IczsmmwGB2IcNC3wXBSIQ2DDGNa+BYAQ2zNBdA1EIbBjSXQMBCWwAqIDAhj4nSgGCEtgAUAGBDSN010A0Ahs6JpsBgQlsGNBdAxEJbEhJdw2EJ7B5vNf7nVIyMxyIbfXVuhgIdInR19UFTIhaV0o6ayA+HfYeAoU15bqw1l0Dkemwt7Lv8xaENRCdDnuD4b7PKD+fz/fyGmqrCyA6gQ0AFRDYOzCcCsDRBPZa9l0DcCKBvZHuGoAzCOw1dNcAnExgb2B2MQBnEdildNcAXEBgA0AFBHaJXndtshkAZxLYAFCBrMBuMi5u0TTN35+7010DcLambefjpwvgucWapvn19+Hvw3X1fT6f3Fov1T9vuNnhwN7eP9uYvoXNMw8zG9hd8E4F8HC5qd+Xbs/x/X7T6/Vadd9ddF82evVfXtMEdZWJWFfEmlJSV4mtNW3ZXnJPs0PiPiw/HMoFwMVMOivg+wsAVxHYS3TXAAQgsAGgAgI7k+FwAK70Z+0d+zMYu5nkndtMVuuf2eziUgB4tqzAHgvg4W23CekRN35qAFTCkPgUk80ACERgL9BdAxCBwB6juwYgGIE9Q3cNQBQCe0h3DUBAAhsAKiCwJxgOByASgd1nOByAoAT2CN01ANEI7I7uGoDABPaA7hqAiAR2SrprAMIT2D26awCiEtg/dNcARCawf4bDddcARCawAaACzw5sk80AqMSzA/uH4XAAontuYOuuAajIcwP7h+4agBo8M7B11wBU5pmB/UN3DUAtHh3YAFCL5wX2z3C49hqAmjwvsAGgQs8KbJPNAKjUswL7h9FwAGrzZ2mBptvnm1JqZ5Kuv9zSspfoddfBKgOARU07k6xN0/wK3uHvc8tOLTP0+XwyS93m9X6nlFL6nvR4ACXeP9uovnCND5faJbBzwrpkuTHf7ze9Xq9V9/158P911zt+/jfXdBB1lYlYV8SaUlJXia01bdleck+LQ+K5cofOL+Ga1wBUbrfAzh06BwDK7TJLPHQ4O1EKADfwyMO6AKA2uwT22OzvEJwoBYCbmN2H3bbt5GSy/n7queUiCFYOABRbnHQ2Fb7D26OFtBOlAHAnt9+HHe17BACscfvABoA7uGdgO5QLgJu5Z2ADwM3cL7B11wDc0P0CGwBu6F6B7UQpANzUvQL7h9FwAO7mPoGtuwbgxu4T2D901wDc0e0CGwDu6B6B7VAuAG7uHoENADdXf2DrrgF4gPoDGwAeoO7AdigXAA9Rd2D/MBoOwN3dIrAB4O7+LC3QdJO6UkrtTCubu9xuTDYD4EFmA7tpml/hO/y9dDkAYJ06h8R11wA8TJ2BDQAPU19g664BeKD6AhsAHqiuwNZdA/BQdQU2ADzU7GFdbdtOHl/dP3Rrbrm9vN7vbuW7rxsAomvaEw+Y7od65/P5ZN339X6nb+ayALV5d01Jj/NZ0Ld4prO9rf0Afj+f9Hq9dq5mm+/3G66mlNRVKmJdEWtKSV0lSmsabhvHGhyezT5sAKiAwAaACpy+D3vtw0U8P3nEmlJSV6mIdUWsKSV1ldhaU8TnxLV02ABQAYENABUQ2ABQgcuPwwZgnH3Y9J16HLYPHwCsY0gcACogsAGgAgIbACogsAGgAgIbACogsAGgAgIbACogsAGgAqeeOGWt/hnSIp18JeLVdCK/Vp1IdXUivZfDMwJGrCtiTZ0ItUV8rahf+MAebkijbFgjnmY18msVsa5OxPcy0uuTUtz3cFhDhPcy6mtF/QyJrxD1H2DEmlKKW1dEUT9bQxFrrOW1g7UE9go2CvcRcSPfNM3fn2gi1xXtfYS9hR8SZ52IG7BuQx+trmiiDqf2a4lUVzRt29qHzSEENqeJtrGPUkdftHr6ItcWiX3YHMWQ+A3ZQOTrD/FGHOplmc87TyGwbybixitqELZt+/en+/1qUV8r4Hrhh8TtD8o31ilGeL28h/mivlZR64rIa8VRmtanCQDCMyQOABUQ2ABQAYENABUQ2ABQgf8CoKFgOogpUr4AAAAASUVORK5CYII=</Image>
+    </InputCell>
+   </GroupCell>
+   <GroupCell closed="false" >
+    <TextCell style="Text" >
+     <Text>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Times New Roman; font-size:12pt; color:#000000;">&lt;span style=" font-weight:600;">Workspace&lt;/span>&lt;/p>&lt;/body>&lt;/html></Text>
+    </TextCell>
+    <InputCell style="Input" closed="false" >
+     <Input>model Test1
+  Control.SpeedTrapezium trapezium(adv=0.1016,vel=0.100228);
+  Control.DiscreteServoWithGear servo(KD=1000);
+  MediaPath.DriveRoller driveRoller(J=0.00365);
+equation
+  connect(trapezium.y,servo.u);
+  connect(servo.flange_b,driveRoller.flange_a);
+end Test1;</Input>
+     <Output>Ok</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>simulate(Test1,stopTime=2,numberOfIntervals=20000)</Input>
+     <Output>record
+    resultFile = "Test1_res.plt"
+end record</Output>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({trapezium.y,driveRoller.phi,servo.backlash.flange_a.phi})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/8.png" width="492" height="250" />&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/8.png" >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</Image>
+    </InputCell>
+    <InputCell style="Input" closed="false" >
+     <Input>plot({servo.pid.y})</Input>
+     <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/9.png" width="492" height="250" />&lt;/p>&lt;/body>&lt;/html></Output>
+     <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/9.png" >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</Image>
+    </InputCell>
+   </GroupCell>
+  </GroupCell>
+ </GroupCell>
+</Notebook>

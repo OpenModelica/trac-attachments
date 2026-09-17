@@ -1,0 +1,7 @@
+setDebugFlags("scodeInstShortcut,dumpdaelow"); getErrorString();
+setMatchingAlgorithm("PFPlusExt"); getErrorString();
+setIndexReductionMethod("dynamicStateSelection"); getErrorString();
+loadModel(Modelica, {"3.2.1"}); getErrorString();
+loadFile("TopModel.mo"); getErrorString();
+loadFile("SubModel.mo"); getErrorString();
+simulate(TopModel); getErrorString();

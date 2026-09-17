@@ -1,0 +1,33 @@
+Index: Compiler/FrontEnd/Inst.mo
+===================================================================
+--- Compiler/FrontEnd/Inst.mo	(revision 13830)
++++ Compiler/FrontEnd/Inst.mo	(working copy)
+@@ -8168,8 +8168,9 @@
+       DAE.Dimensions dims;
+       DAE.ComponentRef cr;
+       DAE.Type ty;
+-    case (_,_,_,_,DAE.DAE(dae),_,_,DAE.C_VAR(),_,_,_)
++    case (_,_,_,_,DAE.DAE(dae),_,_,_,_,_,_)
+       equation
++        false = Types.isConstant(const);
+         false = ClassInf.isFunctionOrRecord(inState);
+         ty = Types.simplifyType(inType);
+         false = Types.isExternalObject(Types.arrayElementType(ty));
+@@ -8178,7 +8179,7 @@
+         SOME(exp) = makeVariableBinding(ty, mod, const, pre, n, source);
+         cr = ComponentReference.makeCrefIdent(n,ty,{});
+         (cache,cr) = PrefixUtil.prefixCref(inCache,inEnv,inIH,pre,cr);
+-        eq = DAE.ARRAY_EQUATION(dims, DAE.CREF(cr,ty), exp, source);
++        eq = Util.if_(Types.isParameter(const),DAE.INITIAL_ARRAY_EQUATION(dims, DAE.CREF(cr,ty), exp, source),DAE.ARRAY_EQUATION(dims, DAE.CREF(cr,ty), exp, source));
+         // print("Creating array equation for " +& PrefixUtil.printPrefixStr(pre) +& "." +& n +& " of const " +& DAEUtil.constStr(const) +& " in classinf " +& ClassInf.printStateStr(inState) +& "\n");
+       then (cache,DAE.DAE(eq::dae));
+     else (inCache,inDae);
+@@ -8580,7 +8581,7 @@
+           PrefixUtil.prefixToCrefOpt(inPrefix), NONE(), NONE());
+ 
+         // Instantiate the components binding.
+-        mod = Util.if_(listLength(inSubscripts) > 0 and not SCode.isParameterOrConst(vt) and not ClassInf.isFunctionOrRecord(inState) and not Types.isComplexType(Types.arrayElementType(ty)) and not Types.isExternalObject(Types.arrayElementType(ty)),DAE.NOMOD(),inMod);
++        mod = Util.if_(listLength(inSubscripts) > 0 and not SCode.isConstant(vt) and not ClassInf.isFunctionOrRecord(inState) and not Types.isComplexType(Types.arrayElementType(ty)) and not Types.isExternalObject(Types.arrayElementType(ty)),DAE.NOMOD(),inMod);
+         opt_binding = makeVariableBinding(ty, mod, InstUtil.toConst(vt), inPrefix, inName, source);
+         start = instStartBindingExp(inMod /* Yup, let's keep the start-binding. It seems sane. */, ty, vt);
+ 

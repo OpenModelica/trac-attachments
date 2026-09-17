@@ -1,0 +1,424 @@
+Index: Compiler/FrontEnd/Ceval.mo
+===================================================================
+--- Compiler/FrontEnd/Ceval.mo	(revision 12744)
++++ Compiler/FrontEnd/Ceval.mo	(working copy)
+@@ -853,6 +853,44 @@
+   end matchcontinue;
+ end cevalIfConstant;
+ 
++public function cevalListIfConstantOrParam
++  "This function constant evaluates an expression if the expression is constant,
++   or if the expression is a call of parameter constness whose return type
++   contains unknown dimensions (in which case we need to determine the size of
++   those dimensions)."
++  input Env.Cache inCache;
++  input Env.Env inEnv;
++  input list<DAE.Exp> inExps;
++  input list<DAE.Const> inConst;
++  input Boolean impl;
++  input Msg msg;
++  input list<DAE.Exp> acc;
++  output Env.Cache outCache;
++  output list<DAE.Exp> outExps;
++algorithm
++  (outCache, outExps) := match (inCache, inEnv, inExps, inConst, impl, msg, acc)
++    local
++      list<DAE.Exp> exps;
++      DAE.Exp exp;
++      DAE.Const const;
++      list<DAE.Const> consts;
++      Env.Cache cache;
++      Env.Env env;
++      Values.Value val;
++    case (cache,env,exp::exps,DAE.C_VAR()::consts,impl,msg,acc)
++      equation
++        (cache,exps) = cevalListIfConstantOrParam(cache, env, exps, consts, impl, msg, exp::acc);
++      then (cache,exps);
++    case (cache,env,exp::exps,_::consts,impl,msg,acc)
++      equation
++        (cache,val,_) = ceval(cache, env, exp, impl, NONE(), msg);
++        exp = ValuesUtil.valueExp(val);
++        (cache,exps) = cevalListIfConstantOrParam(cache, env, exps, consts, impl, msg, exp::acc);
++      then (cache,exps);
++    case (cache,_,{},{},_,_,acc) then (cache,listReverse(acc));
++  end match;
++end cevalListIfConstantOrParam;
++
+ protected function cevalWholedimRetCall
+   "Helper function to cevalIfConstant. Determines the size of any unknown
+    dimensions in a function calls return type."
+Index: Compiler/FrontEnd/InstSection.mo
+===================================================================
+--- Compiler/FrontEnd/InstSection.mo	(revision 12744)
++++ Compiler/FrontEnd/InstSection.mo	(working copy)
+@@ -452,6 +452,7 @@
+       DAE.ComponentRef cr_,cr1_,cr2_;
+       DAE.Type t;
+       DAE.Properties tprop1,tprop2;
++      Boolean unreachable;
+       Real priority;
+       DAE.Exp exp;
+       Option<Values.Value> containsEmpty;
+@@ -510,83 +511,57 @@
+         Error.addSourceMessage(Error.TUPLE_ASSIGN_FUNCALL_ONLY,{s},info);
+       then fail();*/
+ 
+-    // if-equation        
+-    // if the condition is constant this case will select the correct branch and remove the if-equation
+-    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info=info),SCode.NON_INITIAL(),impl,graph)
+-      equation 
+-        (cache, expl1,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
+-        DAE.PROP(DAE.T_BOOL(varLst = _),cnst) = Types.propsAnd(props);
+-        true = Types.isParameterOrConstant(cnst);
+-        (cache,valList,_) = Ceval.cevalList(cache, env, expl1, impl, NONE(), Ceval.NO_MSG());
+-        // check if valList contains Values.EMPTY()
+-        containsEmpty = ValuesUtil.containsEmpty(valList);
+-        generateNoConstantBindingError(containsEmpty, info);
+-        blist = List.map(valList,ValuesUtil.valueBool);
+-        b = Util.selectList(blist, tb, fb);
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph) = Inst.instList(cache, env, ih, mod, pre, csets, ci_state, instEEquation, b, impl, Inst.alwaysUnroll, graph);
+-      then
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph);
+-        
+-    // if-equation
+-    // If we are doing checkModel we might get an if-equation whose condition is
+-    // a parameter without a binding, and which DAEUtil.ifEqToExpr can't handle.
+-    // If the model would have been instantiated one of the branches would have
+-    // been chosen, so this case therefore chooses one of the branches.
+-    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info=info),SCode.NON_INITIAL(),impl,graph)
++    // if equation 
++    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info = info),SCode.NON_INITIAL(),impl,graph)
+       equation
+-        true = Flags.getConfigBool(Flags.CHECK_MODEL);
+-        (cache, _,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
+-        DAE.PROP(DAE.T_BOOL(varLst = _),DAE.C_PARAM()) = Types.propsAnd(props);
+-        b = Util.selectList({true}, tb, fb);
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph) = Inst.instList(cache, env, ih, mod, pre, csets, ci_state, instEEquation, b, impl, Inst.alwaysUnroll, graph);
+-      then
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph);
+-
+-    // initial if-equation 
+-    // if the condition is constant this case will select the correct branch and remove the initial if-equation 
+-    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info=info),SCode.INITIAL(),impl,graph) 
+-      equation 
+         (cache, expl1,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
+         DAE.PROP(DAE.T_BOOL(varLst = _),_) = Types.propsAnd(props);
+-        (cache,valList,_) = Ceval.cevalList(cache, env, expl1, impl, NONE(), Ceval.NO_MSG());
+-        blist = List.map(valList,ValuesUtil.valueBool);
+-        b = Util.selectList(blist, tb, fb);
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph) = Inst.instList(cache,env,ih, mod, pre, csets, ci_state, instEInitialEquation, b, impl, Inst.alwaysUnroll, graph);
+-      then
+-        (cache,env_1,ih,dae,csets_1,ci_state_1,graph);
+-
+-    // if equation when condition is not constant 
+-    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info = info),SCode.NON_INITIAL(),impl,graph)
+-      equation 
+-        (cache, expl1,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
+-        DAE.PROP(DAE.T_BOOL(varLst = _),DAE.C_VAR()) = Types.propsAnd(props);
+-        (cache,expl1) = PrefixUtil.prefixExpList(cache, env, ih, expl1, pre);
++        (cache,expl1) = Ceval.cevalListIfConstantOrParam(cache, env, expl1, List.map(props,Types.propAllConst), impl, Ceval.MSG(info), {});
++        (cache,expl1) = PrefixUtil.prefixExpList(cache, inEnv, ih, expl1, pre);
+         
+         // set the source of this element
+         source = DAEUtil.createElementSource(info, Env.getEnvPath(env), PrefixUtil.prefixToCrefOpt(pre), NONE(), NONE());
+         
+-        (cache,env_1,ih,daeLLst,_,ci_state_1,graph) = instIfTrueBranches(cache, env,ih, mod, pre, csets, ci_state, tb, false, impl, graph);
+-        (cache,env_2,ih,DAE.DAE(daeElts2),_,ci_state_2,graph) = Inst.instList(cache,env_1,ih, mod, pre, csets, ci_state, instEEquation, fb, impl, Inst.alwaysUnroll, graph) "There are no connections inside if-clauses." ;
+-        dae = DAE.DAE({DAE.IF_EQUATION(expl1,daeLLst,daeElts2,source)});
++        (cache,env_1,ih,daeLLst,unreachable,csets,ci_state_1,graph) = instIfTrueBranches(cache, env,ih, mod, pre, csets, ci_state, expl1, false, tb, false, impl, graph);
++        (fb,_) = SCode.traverseEEquationsList(fb, (replaceConnectWithLegalEquation,unreachable));
++        (cache,env_2,ih,DAE.DAE(daeElts2),csets,ci_state_2,graph) = Inst.instList(cache,env_1,ih, mod, pre, csets, ci_state, instEEquation, fb, impl, Inst.alwaysUnroll, graph) "There are no connections inside if-clauses." ;
++        (cache,dae) = makeIfEquation(cache,env,impl,ih,pre,false,expl1,daeLLst,daeElts2,{},{},source);
+       then
+         (cache,env_1,ih,dae,csets,ci_state_1,graph);
+ 
+-    // initial if equation  when condition is not constant
++    // initial if equation
+     case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb, info = info),SCode.INITIAL(),impl,graph)
+       equation 
+         (cache, expl1,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
+-        DAE.PROP(DAE.T_BOOL(varLst = _),DAE.C_VAR()) = Types.propsAnd(props);
+-        (cache,expl1) = PrefixUtil.prefixExpList(cache, env, ih, expl1, pre);
++        DAE.PROP(DAE.T_BOOL(varLst = _),_) = Types.propsAnd(props);
++        (cache,expl1) = Ceval.cevalListIfConstantOrParam(cache, env, expl1, List.map(props,Types.propAllConst), impl, Ceval.MSG(info), {});
++        (cache,expl1) = PrefixUtil.prefixExpList(cache, inEnv, ih, expl1, pre);
+ 
+         // set the source of this element
+         source = DAEUtil.createElementSource(info, Env.getEnvPath(env), PrefixUtil.prefixToCrefOpt(pre), NONE(), NONE());
+         
+-        (cache,env_1,ih,daeLLst,_,ci_state_1,graph) = instIfTrueBranches(cache,env,ih, mod, pre, csets, ci_state, tb, true, impl, graph);
+-        (cache,env_2,ih,DAE.DAE(daeElts2),_,ci_state_2,graph) = Inst.instList(cache,env_1,ih, mod, pre, csets, ci_state, instEInitialEquation, fb, impl, Inst.alwaysUnroll, graph) "There are no connections inside if-clauses." ;
+-        dae = DAE.DAE({DAE.INITIAL_IF_EQUATION(expl1,daeLLst,daeElts2,source)});
++        (cache,env_1,ih,daeLLst,unreachable,csets,ci_state_1,graph) = instIfTrueBranches(cache,env,ih, mod, pre, csets, ci_state, expl1, false, tb, true, impl, graph);
++        (fb,_) = SCode.traverseEEquationsList(fb, (replaceConnectWithLegalEquation,unreachable));
++        (cache,env_2,ih,DAE.DAE(daeElts2),csets,ci_state_2,graph) = Inst.instList(cache,env_1,ih, mod, pre, csets, ci_state, instEInitialEquation, fb, impl, Inst.alwaysUnroll, graph) "There are no connections inside if-clauses." ;
++        (cache,dae) = makeIfEquation(cache,env,impl,ih,pre,true,expl1,daeLLst,daeElts2,{},{},source);
+       then
+         (cache,env_1,ih,dae,csets,ci_state_1,graph);
+ 
++    // if-equation
++    // If we are doing checkModel we might get an if-equation whose condition is
++    // a parameter without a binding, and which DAEUtil.ifEqToExpr can't handle.
++    // If the model would have been instantiated one of the branches would have
++    // been chosen, so this case therefore chooses one of the branches.
++    case (cache,env,ih,mod,pre,csets,ci_state,SCode.EQ_IF(condition = conditions,thenBranch = tb,elseBranch = fb,info=info),SCode.NON_INITIAL(),impl,graph)
++      equation
++        true = Flags.getConfigBool(Flags.CHECK_MODEL);
++        (cache, _,props,_) = Static.elabExpList(cache,env, conditions, impl,NONE(),true,pre,info);
++        DAE.PROP(DAE.T_BOOL(varLst = _),DAE.C_PARAM()) = Types.propsAnd(props);
++        b = Util.selectList({true}, tb, fb);
++        (cache,env_1,ih,dae,csets_1,ci_state_1,graph) = Inst.instList(cache, env, ih, mod, pre, csets, ci_state, instEEquation, b, impl, Inst.alwaysUnroll, graph);
++      then
++        (cache,env_1,ih,dae,csets_1,ci_state_1,graph);
++
+     // when equation statement, modelica 1.1 
+     //  When statements are instantiated by evaluating the conditional expression. 
+     case (cache,env,ih,mod,pre,csets,ci_state, eq as SCode.EQ_WHEN(condition = e,eEquationLst = el,elseBranches = ((ee,eel) :: eex),info=info),(initial_ as SCode.NON_INITIAL()),impl,graph) 
+@@ -2874,9 +2849,7 @@
+ end rangeExpression;
+ 
+ protected function instIfTrueBranches
+-"Author: BZ, 2008-09
+- Initialise a list of if-equations,
+- if, elseif-1 ... elseif-n."
++  "Initialise a list of if-equations, if, elseif-1 ... elseif-n."
+   input Env.Cache inCache;
+   input Env.Env inEnv;
+   input InstanceHierarchy inIH;
+@@ -2884,6 +2857,8 @@
+   input Prefix.Prefix inPrefix;
+   input Connect.Sets inSets;
+   input ClassInf.State inState;
++  input list<DAE.Exp> inConds;
++  input Boolean unreachable;
+   input list<list<SCode.EEquation>> inTypeALst;
+   input Boolean IE;
+   input Boolean inBoolean;
+@@ -2892,12 +2867,13 @@
+   output Env.Env outEnv;
+   output InstanceHierarchy outIH;
+   output list<list<DAE.Element>> outDaeLst;
++  output Boolean outUnreachable;
+   output Connect.Sets outSets;
+   output ClassInf.State outState;
+   output ConnectionGraph.ConnectionGraph outGraph;
+ algorithm
+-  (outCache,outEnv,outIH,outDaeLst,outSets,outState,outGraph):=
+-  matchcontinue (inCache,inEnv,inIH,inMod,inPrefix,inSets,inState,inTypeALst,IE,inBoolean,inGraph)
++  (outCache,outEnv,outIH,outDaeLst,outUnreachable,outSets,outState,outGraph):=
++  matchcontinue (inCache,inEnv,inIH,inMod,inPrefix,inSets,inState,inConds,unreachable,inTypeALst,IE,inBoolean,inGraph)
+     local
+       list<Env.Frame> env,env_1,env_2;
+       DAE.Mod mod;
+@@ -2909,33 +2885,52 @@
+       list<list<SCode.EEquation>> es;
+       list<SCode.EEquation> e;
+       Env.Cache cache;
+-      ConnectionGraph.ConnectionGraph graph;
++      ConnectionGraph.ConnectionGraph graph,graph2;
+       InstanceHierarchy ih;
+       list<DAE.Element> elts;
++      DAE.Exp exp;
++      list<DAE.Exp> restExp;
++      Integer i;
+ 
+-    case (cache,env,ih,mod,pre,csets,ci_state,{},_,impl,graph)
++    case (cache,env,ih,mod,pre,csets,ci_state,{},unreachable,{},_,impl,graph)
+       then
+-        (cache,env,ih,{},csets,ci_state,graph);
+-    case (cache,env,ih,mod,pre,csets,ci_state,(e :: es),false,impl,graph)
++        (cache,env,ih,{},unreachable,csets,ci_state,graph);
++
++    case (cache,env,ih,mod,pre,csets,ci_state,exp::restExp,unreachable,e::es,IE,impl,graph)
+       equation
++        true = Expression.isFalse(exp) or unreachable;
++        // Remove connections since they are evil
++        (e,_) = SCode.traverseEEquationsList(e,(replaceConnectWithLegalEquation,true));
+         (cache,env_1,ih,DAE.DAE(elts),csets_1,ci_state_1,graph) = 
+-           Inst.instList(cache, env, ih, mod, pre, csets, ci_state, instEEquation, e, impl, Inst.alwaysUnroll, graph);
+-        (cache,env_2,ih,llb,csets_2,ci_state_2,graph) = 
+-           instIfTrueBranches(cache, env_1, ih, mod, pre, csets_1, ci_state_1,  es, false, impl, graph);
++           Inst.instList(cache, env, ih, mod, pre, csets, ci_state, Util.if_(IE,instEInitialEquation,instEEquation), e, impl, Inst.alwaysUnroll, graph);
++        // Discard this connection graph since it is invalid; should not be needed since all connections were removed, but let's be safe
++        (cache,env_2,ih,llb,unreachable,csets_2,ci_state_2,graph) = 
++           instIfTrueBranches(cache, env_1, ih, mod, pre, csets_1, ci_state_1, restExp, unreachable, es, IE, impl, graph);
+       then
+-        (cache,env_2,ih,elts::llb,csets_2,ci_state_2,graph);
++        (cache,env_2,ih,elts::llb,unreachable,csets_2,ci_state_2,graph);
+ 
+-    case (cache,env,ih,mod,pre,csets,ci_state,(e :: es),true,impl,graph)
++    case (cache,env,ih,mod,pre,csets,ci_state,DAE.BCONST(true)::restExp,false,e::es,IE,impl,graph)
+       equation
+         (cache,env_1,ih,DAE.DAE(elts),csets_1,ci_state_1,graph) = 
+-           Inst.instList(cache, env, ih, mod, pre, csets, ci_state, instEInitialEquation, e, impl, Inst.alwaysUnroll, graph);
+-        (cache,env_2,ih,llb,csets_2,ci_state_2,graph) = 
+-           instIfTrueBranches(cache, env_1, ih, mod, pre, csets_1, ci_state_1,  es, true, impl, graph);
++           Inst.instList(cache, env, ih, mod, pre, csets, ci_state, Util.if_(IE,instEInitialEquation,instEEquation), e, impl, Inst.alwaysUnroll, graph);
++        (cache,env_2,ih,llb,unreachable,csets_2,ci_state_2,graph) = 
++           instIfTrueBranches(cache, env_1, ih, mod, pre, csets_1, ci_state_1, restExp, true, es, IE, impl, graph);
+       then
+-        (cache,env_2,ih,elts::llb,csets_2,ci_state_2,graph);
++        (cache,env_2,ih,elts::llb,unreachable,csets_2,ci_state_2,graph);
+ 
+-    case (cache,env,ih,mod,pre,csets,ci_state,(e :: es),_,impl,graph)
++    case (cache,env,ih,mod,pre,csets,ci_state,exp::restExp,false,e::es,IE,impl,graph)
+       equation
++        // Remove connections since they are evil
++        (e,(_,i)) = SCode.traverseEEquationsList(e,(findConnectInNonParamIfError,0));
++        (cache,env_1,ih,DAE.DAE(elts),csets_1,ci_state_1,graph) = 
++           Inst.instList(cache, env, ih, mod, pre, csets, ci_state, Util.if_(IE,instEInitialEquation,instEEquation), e, impl, Inst.alwaysUnroll, graph);
++        (cache,env_2,ih,llb,unreachable,csets_2,ci_state_2,graph) = 
++           instIfTrueBranches(cache, env_1, ih, mod, pre, csets_1, ci_state_1, restExp, unreachable, es, IE, impl, graph);
++      then
++        (cache,env_2,ih,elts::llb,unreachable,csets_2,ci_state_2,graph);
++
++    case (cache,env,ih,mod,pre,csets,ci_state,_,_,(e :: es),_,impl,graph)
++      equation
+         true = Flags.isSet(Flags.FAILTRACE);
+         Debug.fprintln(Flags.FAILTRACE, "InstSection.instIfTrueBranches failed on equations: " +&
+                        stringDelimitList(List.map(e, SCodeDump.equationStr), "\n"));
+@@ -2944,6 +2939,103 @@
+   end matchcontinue;
+ end instIfTrueBranches;
+ 
++protected function replaceConnectWithLegalEquation
++  "Replaces connections with a legal terminate equation"
++  input tuple<SCode.EEquation, Boolean> inTuple;
++  output tuple<SCode.EEquation, Boolean> outTuple;
++algorithm
++  outTuple := match inTuple
++    local
++      Absyn.Info info;
++    case ((SCode.EQ_CONNECT(info=info),true))
++      then ((SCode.EQ_TERMINATE(Absyn.STRING("Connection removed from type checking since branch was false"),NONE(),info),true));
++    else inTuple;
++  end match;
++end replaceConnectWithLegalEquation;
++
++protected function findConnectInNonParamIfError
++  "Replaces connections with a legal terminate equation"
++  input tuple<SCode.EEquation, Integer> inTuple;
++  output tuple<SCode.EEquation, Integer> outTuple;
++algorithm
++  outTuple := match inTuple
++    local
++      Absyn.Info info;
++    case ((SCode.EQ_CONNECT(info=info),_))
++      equation
++        Error.addSourceMessage(Error.INTERNAL_ERROR,{"Connections are not allowed in if-branches that cannot be evaluated at runtime"},info);
++      then fail();
++    else inTuple;
++  end match;
++end findConnectInNonParamIfError;
++
++protected function makeIfEquation "Selects branches and creates the elements associated with the if-equation"
++  input Env.Cache inCache;
++  input Env.Env inEnv;
++  input Boolean impl;
++  input InstanceHierarchy ih;
++  input Prefix.Prefix pre;
++  input Boolean isInitial;
++  input list<DAE.Exp> exps;
++  input list<list<DAE.Element>> tbs;
++  input list<DAE.Element> fb;
++  input list<DAE.Exp> accExp;
++  input list<list<DAE.Element>> accTb;
++  input DAE.ElementSource source;
++  output Env.Cache outCache;
++  output DAE.DAElist dae;
++algorithm
++  (outCache,dae) := matchcontinue (inCache,inEnv,impl,ih,pre,isInitial,exps,tbs,fb,accExp,accTb,source)
++    local
++      DAE.Exp exp;
++      list<DAE.Element> tb,elts;
++      list<list<DAE.Element>> restTb;
++      list<DAE.Exp> restExp,exps;
++      list<DAE.Properties> restProp;
++      DAE.Properties prop;
++      Env.Cache cache;
++      Boolean b;
++      Option<Values.Value> containsEmpty;
++      DAE.Const cnst;
++      list<Values.Value> valList;
++      list<Boolean> blist;
++    case (cache,inEnv,impl,ih,pre,isInitial,DAE.BCONST(false)::restExp,_::restTb,fb,accExp,accTb,source)
++      equation
++        (cache,dae) = makeIfEquation(cache,inEnv,impl,ih,pre,isInitial,restExp,restTb,fb,accExp,accTb,source);
++      then (cache,dae);
++    case (cache,inEnv,impl,ih,pre,isInitial,DAE.BCONST(true)::restExp,tb::_,_,accExp,accTb,source)
++      equation
++        elts = makeIfEquation2(isInitial,listReverse(accExp),listReverse(accTb),tb,source);
++      then (cache,DAE.DAE(elts));
++    case (cache,inEnv,impl,ih,pre,isInitial,exp::restExp,tb::restTb,fb,accExp,accTb,source)
++      equation
++        (cache,dae) = makeIfEquation(cache,inEnv,impl,ih,pre,isInitial,restExp,restTb,fb,exp::accExp,tb::accTb,source);
++      then (cache,dae);
++    case (cache,inEnv,impl,ih,pre,isInitial,{},{},fb,accExp,accTb,source)
++      equation
++        elts = makeIfEquation2(isInitial,listReverse(accExp),listReverse(accTb),fb,source);
++      then (cache,DAE.DAE(elts));
++  end matchcontinue;
++end makeIfEquation;
++
++protected function makeIfEquation2
++  input Boolean isInitial;
++  input list<DAE.Exp> exps;
++  input list<list<DAE.Element>> tbs;
++  input list<DAE.Element> fb;
++  input DAE.ElementSource source;
++  output list<DAE.Element> outElements;
++algorithm
++  outElements := matchcontinue (isInitial,exps,tbs,fb,source)
++    case (_,{},_,fb,source)
++      then fb;
++    case (false,exps,tbs,fb,source)
++      then DAE.IF_EQUATION(exps,tbs,fb,source)::{};
++    case (true,exps,tbs,fb,source)
++      then DAE.INITIAL_IF_EQUATION(exps,tbs,fb,source)::{};
++  end matchcontinue;
++end makeIfEquation2;
++
+ protected function instElseIfs
+ "function: instElseIfs
+   This function helps instStatement to handle elseif parts."
+Index: Compiler/FrontEnd/Expression.mo
+===================================================================
+--- Compiler/FrontEnd/Expression.mo	(revision 12744)
++++ Compiler/FrontEnd/Expression.mo	(working copy)
+@@ -5723,6 +5723,36 @@
+   end match;
+ end isZero;
+ 
++public function isFalse
++"function: isFalse
++  Returns true if an expression is constant
++  and has the value false, otherwise false"
++  input DAE.Exp inExp;
++  output Boolean outBoolean;
++algorithm
++  outBoolean := match (inExp)
++    local
++      Boolean b;
++    case (DAE.BCONST(b)) then not b;
++    else false;
++  end match;
++end isFalse;
++
++public function isTrue
++"function: isTrue
++  Returns true if an expression is constant
++  and has the value false, otherwise false"
++  input DAE.Exp inExp;
++  output Boolean outBoolean;
++algorithm
++  outBoolean := match (inExp)
++    local
++      Boolean b;
++    case (DAE.BCONST(b)) then b;
++    else false;
++  end match;
++end isTrue;
++
+ public function isPositiveOrZero
+   "Returns true if an expression is known to be >= 0"
+   input DAE.Exp inExp;

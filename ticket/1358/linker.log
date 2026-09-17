@@ -1,0 +1,274 @@
+Main_main.o: In function `_Corba_waitForCommand':
+Main_main.c:(.text+0x2515ef): undefined reference to `Corba_waitForCommand'
+Main_main.o: In function `_Corba_initialize':
+Main_main.c:(.text+0x255252): undefined reference to `Corba_initialize'
+Main_main.o: In function `_Corba_close':
+Main_main.c:(.text+0x25588f): undefined reference to `Corba_close'
+Main_main.o: In function `_Corba_sendreply':
+Main_main.c:(.text+0x2558b4): undefined reference to `Corba_sendreply'
+Main_main.o: In function `_DAEEXT_initMarks':
+Main_main.c:(.text+0x2725b8): undefined reference to `initMarks'
+Main_main.o: In function `_DAEEXT_eMark':
+Main_main.c:(.text+0x27260a): undefined reference to `eMark'
+Main_main.o: In function `_DAEEXT_clearDifferentiated':
+Main_main.c:(.text+0x274533): undefined reference to `clearDifferentiated'
+Main_main.o: In function `_DAEEXT_getMarkedVariables':
+Main_main.c:(.text+0x27454d): undefined reference to `getMarkedVariables'
+Main_main.o: In function `_DAEEXT_getLowLink':
+Main_main.c:(.text+0x274599): undefined reference to `getLowLink'
+Main_main.o: In function `_DAEEXT_getDifferentiatedEqns':
+Main_main.c:(.text+0x2745f3): undefined reference to `getDifferentiatedEqns'
+Main_main.o: In function `_DAEEXT_getMarkedEqns':
+Main_main.c:(.text+0x274631): undefined reference to `getMarkedEqns'
+Main_main.o: In function `_DAEEXT_getVMark':
+Main_main.c:(.text+0x27467d): undefined reference to `getVMark'
+Main_main.o: In function `_DAEEXT_getNumber':
+Main_main.c:(.text+0x2746ea): undefined reference to `getNumber'
+Main_main.o: In function `_DAEEXT_initLowLink':
+Main_main.c:(.text+0x274752): undefined reference to `initLowLink'
+Main_main.o: In function `_DAEEXT_setNumber':
+Main_main.c:(.text+0x27479f): undefined reference to `setNumber'
+Main_main.o: In function `_DAEEXT_markDifferentiated':
+Main_main.c:(.text+0x2747f1): undefined reference to `markDifferentiated'
+Main_main.o: In function `_DAEEXT_initNumber':
+Main_main.c:(.text+0x274830): undefined reference to `initNumber'
+Main_main.o: In function `_DAEEXT_setLowLink':
+Main_main.c:(.text+0x27487d): undefined reference to `setLowLink'
+Main_main.o: In function `_DAEEXT_vMark':
+Main_main.c:(.text+0x274940): undefined reference to `vMark'
+Main_main.o: In function `_DynLoad_executeFunction':
+Main_main.c:(.text+0x31f136): undefined reference to `executeFunction'
+Main_main.o: In function `_ErrorExt_addSourceMessage':
+Main_main.c:(.text+0x341d53): undefined reference to `addSourceMessage'
+Main_main.o: In function `_ErrorExt_clearMessages':
+Main_main.c:(.text+0x34233a): undefined reference to `clearMessages'
+Main_main.o: In function `_ErrorExt_getNumErrorMessages':
+Main_main.c:(.text+0x342354): undefined reference to `getNumErrorMessages'
+Main_main.o: In function `_ErrorExt_getMessagesStr':
+Main_main.c:(.text+0x34239b): undefined reference to `getMessagesStr'
+Main_main.o: In function `_ErrorExt_printMessagesStr':
+Main_main.c:(.text+0x342471): undefined reference to `printMessagesStr'
+Main_main.o: In function `_ErrorExt_updateCurrentComponent':
+Main_main.c:(.text+0x3425f6): undefined reference to `updateCurrentComponent'
+Main_main.o: In function `_OptManager_getOption':
+Main_main.c:(.text+0x606b45): undefined reference to `getOption'
+Main_main.o: In function `_Parser_parseexp':
+Main_main.c:(.text+0x619e2e): undefined reference to `parseexp'
+Main_main.o: In function `_OptManager_setOption':
+Main_main.c:(.text+0x619ea3): undefined reference to `setOption'
+Main_main.o: In function `_Parser_parse':
+Main_main.c:(.text+0x619f2b): undefined reference to `parse'
+Main_main.o: In function `_Parser_parsestring':
+Main_main.c:(.text+0x619f9a): undefined reference to `parsestring'
+Main_main.o: In function `_Parser_parsestringexp':
+Main_main.c:(.text+0x61a067): undefined reference to `parsestringexp'
+Main_main.o: In function `_RTOpts_getRunningTestsuite':
+Main_main.c:(.text+0x642808): undefined reference to `RTOpts_getRunningTestsuite'
+Main_main.o: In function `_RTOpts_eliminationLevel':
+Main_main.c:(.text+0x642b62): undefined reference to `RTOpts_level'
+Main_main.o: In function `_RTOpts_classToInstantiate':
+Main_main.c:(.text+0x642c1b): undefined reference to `RTOpts_classToInstantiate'
+Main_main.o: In function `_RTOpts_bandwidth':
+Main_main.c:(.text+0x642c69): undefined reference to `RTOpts_bandwidth'
+Main_main.o: In function `_RTOpts_getEvaluateParametersInAnnotations':
+Main_main.c:(.text+0x642cc0): undefined reference to `getEvaluateParametersInAnnotations'
+Main_main.o: In function `_RTOpts_getAnnotationVersion':
+Main_main.c:(.text+0x642d0c): undefined reference to `RTOpts_getAnnotationVersion'
+Main_main.o: In function `_RTOpts_setNoSimplify':
+Main_main.c:(.text+0x642e03): undefined reference to `setNoSimplify'
+Main_main.o: In function `_RTOpts_setEliminationLevel':
+Main_main.c:(.text+0x642e45): undefined reference to `setEliminationLevel'
+Main_main.o: In function `_RTOpts_noProc':
+Main_main.c:(.text+0x642e76): undefined reference to `RTOpts_noProc'
+Main_main.o: In function `_RTOpts_latency':
+Main_main.c:(.text+0x642f09): undefined reference to `RTOpts_latency'
+Main_main.o: In function `_RTOpts_setAnnotationVersion':
+Main_main.c:(.text+0x642f6b): undefined reference to `setAnnotationVersion'
+Main_main.o: In function `_RTOpts_setEvaluateParametersInAnnotations':
+Main_main.c:(.text+0x642fb5): undefined reference to `setEvaluateParametersInAnnotations'
+Main_main.o: In function `_RTOpts_setVectorizationLimit':
+Main_main.c:(.text+0x643043): undefined reference to `setVectorizationLimit'
+Main_main.o: In function `_RTOpts_setShowAnnotations':
+Main_main.c:(.text+0x643085): undefined reference to `setShowAnnotations'
+Main_main.o: In function `_RTOpts_simulationCg':
+Main_main.c:(.text+0x6430b9): undefined reference to `RTOpts_simulationCg'
+Main_main.o: In function `_RTOpts_silent':
+Main_main.c:(.text+0x643105): undefined reference to `RTOpts_silent'
+Main_main.o: In function `_RTOpts_splitArrays':
+Main_main.c:(.text+0x643151): undefined reference to `RTOpts_splitArrays'
+Main_main.o: In function `_RTOpts_versionRequest':
+Main_main.c:(.text+0x646281): undefined reference to `RTOpts_versionRequest'
+Main_main.o: In function `_RTOpts_vectorizationLimit':
+Main_main.c:(.text+0x6462cd): undefined reference to `RTOpts_vectorizationLimit'
+Main_main.o: In function `_System_userIsRoot':
+Main_main.c:(.text+0x68e7bb): undefined reference to `userIsRoot'
+Main_main.o: In function `_Settings_getCompileCommand':
+Main_main.c:(.text+0x69eb98): undefined reference to `getCompileCommand'
+Main_main.o: In function `_Settings_getEcho':
+Main_main.c:(.text+0x69eec3): undefined reference to `getEcho'
+Main_main.o: In function `_System_setVariableFilter':
+Main_main.c:(.text+0x69ef15): undefined reference to `setVariableFilter'
+Main_main.o: In function `_System_setEnv':
+Main_main.c:(.text+0x69efa1): undefined reference to `setEnv'
+Main_main.o: In function `_System_readEnv':
+Main_main.c:(.text+0x69f03d): undefined reference to `readEnv'
+Main_main.o: In function `_Settings_setPlotCommand':
+Main_main.c:(.text+0x6a97d1): undefined reference to `setPlotCommand'
+Main_main.o: In function `_Settings_setCompileCommand':
+Main_main.c:(.text+0x6a9815): undefined reference to `setCompileCommand'
+Main_main.o: In function `_Settings_getVersionNr':
+Main_main.c:(.text+0x6a984e): undefined reference to `getVersionNr'
+Main_main.o: In function `_Settings_getTempDirectoryPath':
+Main_main.c:(.text+0x6a989c): undefined reference to `getTempDirectoryPath'
+Main_main.o: In function `_Settings_getPlotCommand':
+Main_main.c:(.text+0x6a98ea): undefined reference to `getPlotCommand'
+Main_main.o: In function `_Settings_getModelicaPath':
+Main_main.c:(.text+0x6a9938): undefined reference to `getModelicaPath'
+Main_main.o: In function `_Settings_setInstallationDirectoryPath':
+Main_main.c:(.text+0x6a9991): undefined reference to `setInstallationDirectoryPath'
+Main_main.o: In function `_Settings_setEcho':
+Main_main.c:(.text+0x6a99d8): undefined reference to `setEcho'
+Main_main.o: In function `_Settings_setModelicaPath':
+Main_main.c:(.text+0x6a9a14): undefined reference to `setModelicaPath'
+Main_main.o: In function `_Settings_setTempDirectoryPath':
+Main_main.c:(.text+0x6aa199): undefined reference to `setTempDirectoryPath'
+Main_main.o: In function `_SimulationResults_readPtolemyplotDatasetSize':
+Main_main.c:(.text+0x88fa87): undefined reference to `readPtolemyplotDatasetSize'
+Main_main.o: In function `_SimulationResults_readPtolemyplotDataset':
+Main_main.c:(.text+0x8909bd): undefined reference to `readPtolemyplotDataset'
+Main_main.o: In function `_Socket_waitforconnect':
+Main_main.c:(.text+0x890a40): undefined reference to `Socket_waitforconnect'
+Main_main.o: In function `_Socket_handlerequest':
+Main_main.c:(.text+0x890aa8): undefined reference to `Socket_handlerequest'
+Main_main.o: In function `_Socket_cleanup':
+Main_main.c:(.text+0x890b05): undefined reference to `Socket_cleanup'
+Main_main.o: In function `_SimulationResults_readPtolemyplotVariables':
+Main_main.c:(.text+0x890b35): undefined reference to `readPtolemyplotVariables'
+Main_main.o: In function `_Socket_close':
+Main_main.c:(.text+0x890bb7): undefined reference to `Socket_close'
+Main_main.o: In function `_Socket_sendreply':
+Main_main.c:(.text+0x890c01): undefined reference to `Socket_sendreply'
+Main_main.o: In function `_System_cd':
+Main_main.c:(.text+0x9eff1d): undefined reference to `cd'
+Main_main.o: In function `_System_basename':
+Main_main.c:(.text+0x9f3fd8): undefined reference to `System_basename'
+Main_main.o: In function `_System_freeFunction':
+Main_main.c:(.text+0x9f470f): undefined reference to `freeFunction'
+Main_main.o: In function `_System_enableSendData':
+Main_main.c:(.text+0x9f4751): undefined reference to `enableSendData'
+Main_main.o: In function `_System_directoryExists':
+Main_main.c:(.text+0x9f4790): undefined reference to `directoryExists'
+Main_main.o: In function `_System_configureCommandLine':
+Main_main.c:(.text+0x9f47f7): undefined reference to `configureCommandLine'
+Main_main.o: In function `_System_freeLibrary':
+Main_main.c:(.text+0x9f4853): undefined reference to `freeLibrary'
+Main_main.o: In function `_System_getCurrentTime':
+Main_main.c:(.text+0x9f4920): undefined reference to `getCurrentTime'
+Main_main.o: In function `_System_getCurrentDateTime':
+Main_main.c:(.text+0x9f499c): undefined reference to `getCurrentDateTime'
+Main_main.o: In function `_System_getClassnamesForSimulation':
+Main_main.c:(.text+0x9f4aa5): undefined reference to `getClassnamesForSimulation'
+Main_main.o: In function `_System_getHasInnerOuterDefinitions':
+Main_main.c:(.text+0x9f4b41): undefined reference to `getHasInnerOuterDefinitions'
+Main_main.o: In function `_System_getFileModificationTime':
+Main_main.c:(.text+0x9f4b98): undefined reference to `getFileModificationTime'
+Main_main.o: In function `_System_getHasExpandableConnectors':
+Main_main.c:(.text+0x9f4c3f): undefined reference to `getHasExpandableConnectors'
+Main_main.o: In function `_System_loadLibrary':
+Main_main.c:(.text+0x9f4ce4): undefined reference to `loadLibrary'
+Main_main.o: In function `_System_getVariableNames':
+Main_main.c:(.text+0x9f4d51): undefined reference to `getVariableNames'
+Main_main.o: In function `_System_getUUIDStr':
+Main_main.c:(.text+0x9f4dba): undefined reference to `getUUIDStr'
+Main_main.o: In function `_System_getVariableValue':
+Main_main.c:(.text+0x9f4e8e): undefined reference to `getVariableValue'
+Main_main.o: In function `_System_groupDelimiter':
+Main_main.c:(.text+0x9f4f15): undefined reference to `groupDelimiter'
+Main_main.o: In function `_System_lookupFunction':
+Main_main.c:(.text+0x9f4fca): undefined reference to `lookupFunction'
+Main_main.o: In function `_System_moFiles':
+Main_main.c:(.text+0x9f504a): undefined reference to `moFiles'
+Main_main.o: In function `_System_platform':
+Main_main.c:(.text+0x9f50a3): undefined reference to `platform'
+Main_main.o: In function `_System_pathDelimiter':
+Main_main.c:(.text+0x9f50f1): undefined reference to `pathDelimiter'
+Main_main.o: In function `_System_pwd':
+Main_main.c:(.text+0x9f513f): undefined reference to `pwd'
+Main_main.o: In function `_System_readFileNoNumeric':
+Main_main.c:(.text+0x9f52bd): undefined reference to `readFileNoNumeric'
+Main_main.o: In function `_System_setCFlags':
+Main_main.c:(.text+0x9f53a9): undefined reference to `System_setCCompiler'
+Main_main.o: In function `_System_sendData2':
+Main_main.c:(.text+0x9f53f8): undefined reference to `sendData2'
+Main_main.o: In function `_System_sendData':
+Main_main.c:(.text+0x9f54e7): undefined reference to `sendData'
+Main_main.o: In function `_System_setCCompiler':
+Main_main.c:(.text+0x9f5631): undefined reference to `setCCompiler'
+Main_main.o: In function `_System_setDataPort':
+Main_main.c:(.text+0x9f5678): undefined reference to `setDataPort'
+Main_main.o: In function `_System_setClassnamesForSimulation':
+Main_main.c:(.text+0x9f56b4): undefined reference to `setClassnamesForSimulation'
+Main_main.o: In function `_System_setHasInnerOuterDefinitions':
+Main_main.c:(.text+0x9f56fe): undefined reference to `setHasInnerOuterDefinitions'
+Main_main.o: In function `_System_setHasExpandableConnectors':
+Main_main.c:(.text+0x9f5743): undefined reference to `setHasExpandableConnectors'
+Main_main.o: In function `_System_setLinker':
+Main_main.c:(.text+0x9f5782): undefined reference to `setLinker'
+Main_main.o: In function `_System_setLDFlags':
+Main_main.c:(.text+0x9f57c6): undefined reference to `setLDFlags'
+Main_main.o: In function `_System_systemCall':
+Main_main.c:(.text+0x9f580a): undefined reference to `systemCall'
+Main_main.o: In function `_System_strncmp':
+Main_main.c:(.text+0x9f588e): undefined reference to `System_strncmp'
+Main_main.o: In function `_System_strtok':
+Main_main.c:(.text+0x9f5a7f): undefined reference to `System_strtok'
+Main_main.o: In function `_System_subDirectories':
+Main_main.c:(.text+0x9f5afe): undefined reference to `subDirectories'
+Main_main.o: In function `_System_time':
+Main_main.c:(.text+0x9f5b9e): undefined reference to `System_time'
+Main_main.o: In function `_TaskGraphExt_newTask':
+Main_main.c:(.text+0xa083dc): undefined reference to `newTask'
+Main_main.o: In function `_TaskGraphExt_addEdge':
+Main_main.c:(.text+0xa13475): undefined reference to `addEdge'
+Main_main.o: In function `_TaskGraphExt_getTask':
+Main_main.c:(.text+0xa136ab): undefined reference to `getTask'
+Main_main.o: In function `_TaskGraphExt_addInitVar':
+Main_main.c:(.text+0xa1372e): undefined reference to `addInitVar'
+Main_main.o: In function `_TaskGraphExt_addInitState':
+Main_main.c:(.text+0xa137b3): undefined reference to `addInitState'
+Main_main.o: In function `_TaskGraphExt_addInitParam':
+Main_main.c:(.text+0xa13838): undefined reference to `addInitParam'
+Main_main.o: In function `_TaskGraphExt_dumpMergedGraph':
+Main_main.c:(.text+0xa138a7): undefined reference to `dumpMergedGraph'
+Main_main.o: In function `_TaskGraphExt_dumpGraph':
+Main_main.c:(.text+0xa138eb): undefined reference to `dumpGraph'
+Main_main.o: In function `_TaskGraphExt_generateCode':
+Main_main.c:(.text+0xa1394c): undefined reference to `generateCode'
+Main_main.o: In function `_TaskGraphExt_mergeTasks':
+Main_main.c:(.text+0xa139c9): undefined reference to `mergeTasks'
+Main_main.o: In function `_TaskGraphExt_setExecCost':
+Main_main.c:(.text+0xa15ea7): undefined reference to `setExecCost'
+Main_main.o: In function `_TaskGraphExt_registerStartStop':
+Main_main.c:(.text+0xa15f0e): undefined reference to `registerStartStop'
+Main_main.o: In function `_TaskGraphExt_schedule':
+Main_main.c:(.text+0xa15f60): undefined reference to `schedule'
+Main_main.o: In function `_TaskGraphExt_storeResult':
+Main_main.c:(.text+0xa15fc2): undefined reference to `storeResult'
+Main_main.o: In function `_TaskGraphExt_setTaskType':
+Main_main.c:(.text+0xa16061): undefined reference to `setTaskType'
+Main_main.o: In function `_UnitParserExt_checkpoint':
+Main_main.c:(.text+0xb01055): undefined reference to `checkpoint'
+Main_main.o: In function `_UnitParserExt_str2unit':
+Main_main.c:(.text+0xb0ee25): undefined reference to `str2unit'
+Main_main.o: In function `_UnitParserExt_registerWeight':
+Main_main.c:(.text+0xb0ef97): undefined reference to `registerWeight'
+Main_main.o: In function `_UnitParserExt_rollback':
+Main_main.c:(.text+0xb0efe6): undefined reference to `rollback'
+Main_main.o: In function `_UnitParserExt_unit2str':
+Main_main.c:(.text+0xb0f097): undefined reference to `unit2str'
+/home/marsj/dev/trunk/build/lib/omc/libomcruntime.a(rtclock.o): In function `rt_tock':
+rtclock.c:(.text+0x24): undefined reference to `clock_gettime'
+/home/marsj/dev/trunk/build/lib/omc/libomcruntime.a(rtclock.o): In function `rt_tick':
+rtclock.c:(.text+0x84): undefined reference to `clock_gettime'
+collect2: ld returned 1 exit status
+make: *** [main] Error 1

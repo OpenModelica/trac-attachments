@@ -1,0 +1,51 @@
+Index: Compiler/FrontEnd/Inst.mo
+===================================================================
+--- Compiler/FrontEnd/Inst.mo	(revision 13916)
++++ Compiler/FrontEnd/Inst.mo	(working copy)
+@@ -8177,8 +8177,9 @@
+       DAE.Dimensions dims;
+       DAE.ComponentRef cr;
+       DAE.Type ty;
+-    case (_,_,_,_,DAE.DAE(dae),_,_,DAE.C_VAR(),_,_,_)
++    case (_,_,_,_,DAE.DAE(dae),_,_,_,_,_,_)
+       equation
++        false = Types.isConstant(const);
+         false = ClassInf.isFunctionOrRecord(inState);
+         ty = Types.simplifyType(inType);
+         false = Types.isExternalObject(Types.arrayElementType(ty));
+@@ -8187,7 +8188,7 @@
+         SOME(exp) = makeVariableBinding(ty, mod, const, pre, n, source);
+         cr = ComponentReference.makeCrefIdent(n,ty,{});
+         (cache,cr) = PrefixUtil.prefixCref(inCache,inEnv,inIH,pre,cr);
+-        eq = DAE.ARRAY_EQUATION(dims, DAE.CREF(cr,ty), exp, source);
++        eq = Util.if_(Types.isParameter(const),DAE.PARAMETER_BINDING_EQUATION(dims, DAE.CREF(cr,ty), exp, source),DAE.ARRAY_EQUATION(dims, DAE.CREF(cr,ty), exp, source));
+         // print("Creating array equation for " +& PrefixUtil.printPrefixStr(pre) +& "." +& n +& " of const " +& DAEUtil.constStr(const) +& " in classinf " +& ClassInf.printStateStr(inState) +& "\n");
+       then (cache,DAE.DAE(eq::dae));
+     else (inCache,inDae);
+@@ -8589,7 +8590,7 @@
+           PrefixUtil.prefixToCrefOpt(inPrefix), NONE(), NONE());
+ 
+         // Instantiate the components binding.
+-        mod = Util.if_(listLength(inSubscripts) > 0 and not SCode.isParameterOrConst(vt) and not ClassInf.isFunctionOrRecord(inState) and not Types.isComplexType(Types.arrayElementType(ty)) and not Types.isExternalObject(Types.arrayElementType(ty)),DAE.NOMOD(),inMod);
++        mod = Util.if_(listLength(inSubscripts) > 0 and not SCode.isConstant(vt) and not ClassInf.isFunctionOrRecord(inState) and not Types.isComplexType(Types.arrayElementType(ty)) and not Types.isExternalObject(Types.arrayElementType(ty)),DAE.NOMOD(),inMod);
+         opt_binding = makeVariableBinding(ty, mod, InstUtil.toConst(vt), inPrefix, inName, source);
+         start = instStartBindingExp(inMod /* Yup, let's keep the start-binding. It seems sane. */, ty, vt);
+ 
+Index: Compiler/FrontEnd/DAE.mo
+===================================================================
+--- Compiler/FrontEnd/DAE.mo	(revision 13916)
++++ Compiler/FrontEnd/DAE.mo	(working copy)
+@@ -205,6 +205,13 @@
+     ElementSource source "the origin of the component/equation/algorithm";
+   end INITIAL_ARRAY_EQUATION;
+ 
++  record PARAMETER_BINDING_EQUATION "A parameter binding that was moved into a virtual array equation"
++    Dimensions dimension "dimension sizes" ;
++    Exp exp;
++    Exp array;
++    ElementSource source "the origin of the component/equation/algorithm";
++  end PARAMETER_BINDING_EQUATION;
++  
+   record COMPLEX_EQUATION "an equation of complex type, e.g. record = func(..)"
+     Exp lhs;
+     Exp rhs;

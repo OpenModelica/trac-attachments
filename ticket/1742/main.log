@@ -1,0 +1,727 @@
+version:1
+:msg:clean --->  Computing dependencies for openmodelica-devel:info:clean .:debug:clean Searching for dependency: rml-mmc
+:debug:clean Found Dependency: receipt exists for rml-mmc
+:debug:clean Searching for dependency: omniorb
+:debug:clean Found Dependency: receipt exists for omniorb
+:debug:clean Searching for dependency: sqlite3
+:debug:clean Found Dependency: receipt exists for sqlite3
+:debug:clean Searching for dependency: gtime
+:debug:clean Found Dependency: receipt exists for gtime
+:debug:clean Searching for dependency: autoconf
+:debug:clean Found Dependency: receipt exists for autoconf
+:debug:clean Searching for dependency: automake
+:debug:clean Found Dependency: receipt exists for automake
+:debug:clean Searching for dependency: libtool
+:debug:clean Found Dependency: receipt exists for libtool
+:debug:clean Searching for dependency: paradiseo
+:debug:clean Found Dependency: receipt exists for paradiseo
+:debug:clean Searching for dependency: lp_solve
+:debug:clean Found Dependency: receipt exists for lp_solve
+:debug:clean Searching for dependency: qt4-mac
+:debug:clean Found Dependency: receipt exists for qt4-mac
+:debug:clean Searching for dependency: qwt52
+:debug:clean Found Dependency: receipt exists for qwt52
+:msg:clean 
+:debug:main Executing org.macports.main (openmodelica-devel)
+:debug:main changing euid/egid - current euid: 0 - current egid: 0
+:debug:main egid changed to: 502
+:debug:main euid changed to: 506
+:debug:archivefetch archivefetch phase started at Fri May 11 15:48:53 CEST 2012
+:msg:archivefetch --->  Fetching archive for openmodelica-devel
+:debug:archivefetch Executing org.macports.archivefetch (openmodelica-devel)
+:debug:archivefetch euid/egid changed to: 0/0
+:debug:archivefetch chowned /opt/local/var/macports/software/openmodelica-devel to macports
+:debug:archivefetch euid/egid changed to: 506/502
+:debug:archivefetch euid/egid changed to: 0/0
+:debug:archivefetch chowned /opt/local/var/macports/incoming to macports
+:debug:archivefetch euid/egid changed to: 506/502
+:info:archivefetch --->  openmodelica-devel-11890_0+qt.darwin_10.x86_64.tbz2 doesn't seem to exist in /opt/local/var/macports/software/openmodelica-devel
+:msg:archivefetch --->  Attempting to fetch openmodelica-devel-11890_0+qt.darwin_10.x86_64.tbz2 from http://packages.macports.org/openmodelica-devel
+:debug:archivefetch Fetching archive failed:: The requested URL returned error: 404
+:debug:archivefetch Privilege de-escalation not attempted as not running as root.
+:debug:fetch fetch phase started at Fri May 11 15:48:54 CEST 2012
+:notice:fetch --->  Fetching openmodelica-devel
+:debug:fetch euid/egid changed to: 0/0
+:debug:fetch chowned /opt/local/var/macports/distfiles/openmodelica-devel to macports
+:debug:fetch euid/egid changed to: 506/502
+:debug:fetch Executing org.macports.fetch (openmodelica-devel)
+:info:fetch --->  openmodelica_11890.orig.tar.gz doesn't seem to exist in /opt/local/var/macports/distfiles/openmodelica-devel
+:debug:fetch Pinging build.openmodelica.org...
+:debug:fetch Pinging distfiles.macports.org...
+:debug:fetch Pinging aarnet.au.distfiles.macports.org...
+:debug:fetch Pinging her.gr.distfiles.macports.org...
+:debug:fetch Pinging jog.id.distfiles.macports.org...
+:debug:fetch Pinging lil.fr.distfiles.macports.org...
+:debug:fetch Pinging sea.us.distfiles.macports.org...
+:debug:fetch Pinging ykf.ca.distfiles.macports.org...
+:debug:fetch build.openmodelica.org ping time is 119.406
+:debug:fetch distfiles.macports.org ping time is 243.690
+:debug:fetch aarnet.au.distfiles.macports.org ping time is 402.447
+:debug:fetch her.gr.distfiles.macports.org ping time is 161.843
+:debug:fetch jog.id.distfiles.macports.org ping time is 457.616
+:debug:fetch lil.fr.distfiles.macports.org ping time is 93.654
+:debug:fetch sea.us.distfiles.macports.org ping time is 10000
+:debug:fetch ykf.ca.distfiles.macports.org ping time is 211.176
+:notice:fetch --->  Attempting to fetch openmodelica_11890.orig.tar.gz from http://lil.fr.distfiles.macports.org/openmodelica-devel
+:debug:fetch Fetching failed:: The requested URL returned error: 404
+:notice:fetch --->  Attempting to fetch openmodelica_11890.orig.tar.gz from http://build.openmodelica.org/apt/pool/contrib/
+:debug:fetch Privilege de-escalation not attempted as not running as root.
+:debug:checksum checksum phase started at Fri May 11 16:04:36 CEST 2012
+:notice:checksum --->  Verifying checksum(s) for openmodelica-devel
+:debug:checksum Executing org.macports.checksum (openmodelica-devel)
+:info:checksum --->  Checksumming openmodelica_11890.orig.tar.gz
+:debug:checksum Correct (md5) checksum for openmodelica_11890.orig.tar.gz
+:debug:checksum Correct (sha1) checksum for openmodelica_11890.orig.tar.gz
+:debug:checksum Correct (rmd160) checksum for openmodelica_11890.orig.tar.gz
+:debug:checksum Privilege de-escalation not attempted as not running as root.
+:debug:extract extract phase started at Fri May 11 16:04:39 CEST 2012
+:notice:extract --->  Extracting openmodelica-devel
+:debug:extract Executing org.macports.extract (openmodelica-devel)
+:info:extract --->  Extracting openmodelica_11890.orig.tar.gz
+:debug:extract setting option extract.args to '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_11890.orig.tar.gz'
+:debug:extract Environment: CPATH='/opt/local/include' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS' LIBRARY_PATH='/opt/local/lib' CC_PRINT_OPTIONS='YES' MACOSX_DEPLOYMENT_TARGET='10.6' GI_SCANNER_DISABLE_CACHE='1'
+:debug:extract Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work" && /usr/bin/gzip -dc '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_11890.orig.tar.gz' | /usr/bin/gnutar --no-same-owner -xf -'
+:debug:extract Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work" && /usr/bin/gzip -dc '/opt/local/var/macports/distfiles/openmodelica-devel/openmodelica_11890.orig.tar.gz' | /usr/bin/gnutar --no-same-owner -xf - 
+:debug:extract euid/egid changed to: 0/0
+:debug:extract chowned /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work to macports
+:debug:extract euid/egid changed to: 506/502
+:debug:extract Privilege de-escalation not attempted as not running as root.
+:debug:patch patch phase started at Fri May 11 16:04:52 CEST 2012
+:debug:patch Executing org.macports.patch (openmodelica-devel)
+:debug:patch Privilege de-escalation not attempted as not running as root.
+:debug:configure configure phase started at Fri May 11 16:04:52 CEST 2012
+:notice:configure --->  Configuring openmodelica-devel
+:debug:configure Using compiler 'Mac OS X gcc 4.2'
+:debug:configure Executing org.macports.configure (openmodelica-devel)
+:debug:configure Environment: CPATH='/opt/local/include' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS' LIBRARY_PATH='/opt/local/lib' CC_PRINT_OPTIONS='YES' MACOSX_DEPLOYMENT_TARGET='10.6' GI_SCANNER_DISABLE_CACHE='1'
+:debug:configure Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && autoconf'
+:debug:configure Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && autoconf 
+:debug:configure Environment: CPATH='/opt/local/include' CFLAGS='-pipe -O2 -arch x86_64' CPPFLAGS='-I/opt/local/include' CXXFLAGS='-pipe -O2 -arch x86_64' LIBRARY_PATH='/opt/local/lib' MACOSX_DEPLOYMENT_TARGET='10.6' ANTLRHOME='/opt/local' CXX='/usr/bin/g++-4.2' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS' F90FLAGS='-pipe -O2 -m64' RMLHOME='/opt/local' LDFLAGS='-L/opt/local/lib -arch x86_64' FCFLAGS='-pipe -O2 -m64' OBJC='/usr/bin/gcc-4.2' GI_SCANNER_DISABLE_CACHE='1' INSTALL='/usr/bin/install -c' OBJCFLAGS='-pipe -O2 -arch x86_64' FFLAGS='-pipe -O2 -m64' CC_PRINT_OPTIONS='YES' CC='/usr/bin/gcc-4.2'
+:debug:configure Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && ./configure --prefix=/opt/local --with-omniORB=/opt/local --disable-python-interface'
+:debug:configure Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && ./configure --prefix=/opt/local --with-omniORB=/opt/local --disable-python-interface 
+:info:configure checking for gcc... /usr/bin/gcc-4.2
+:info:configure checking whether the C compiler works... yes
+:info:configure checking for C compiler default output file name... a.out
+:info:configure checking for suffix of executables... 
+:info:configure checking whether we are cross compiling... no
+:info:configure checking for suffix of object files... o
+:info:configure checking whether we are using the GNU C compiler... yes
+:info:configure checking whether /usr/bin/gcc-4.2 accepts -g... yes
+:info:configure checking for /usr/bin/gcc-4.2 option to accept ISO C89... none needed
+:info:configure checking whether we are using the GNU C++ compiler... yes
+:info:configure checking whether /usr/bin/g++-4.2 accepts -g... yes
+:info:configure checking how to run the C preprocessor... /usr/bin/gcc-4.2 -E
+:info:configure checking whether make sets $(MAKE)... yes
+:info:configure checking for flex... flex
+:info:configure checking lex output file root... lex.yy
+:info:configure checking lex library... -lfl
+:info:configure checking whether yytext is a pointer... yes
+:info:configure checking for $RMLHOME... /opt/local
+:info:configure checking for rmlc... yes
+:info:configure checking for grep that handles long lines and -e... /usr/bin/grep
+:info:configure checking for egrep... /usr/bin/grep -E
+:info:configure checking for ANSI C header files... yes
+:info:configure checking for sys/types.h... yes
+:info:configure checking for sys/stat.h... yes
+:info:configure checking for stdlib.h... yes
+:info:configure checking for string.h... yes
+:info:configure checking for memory.h... yes
+:info:configure checking for strings.h... yes
+:info:configure checking for inttypes.h... yes
+:info:configure checking for stdint.h... yes
+:info:configure checking for unistd.h... yes
+:info:configure checking sys/time.h usability... yes
+:info:configure checking sys/time.h presence... yes
+:info:configure checking for sys/time.h... yes
+:info:configure checking sqlite3.h usability... yes
+:info:configure checking sqlite3.h presence... yes
+:info:configure checking for sqlite3.h... yes
+:info:configure checking f2c.h usability... no
+:info:configure checking f2c.h presence... no
+:info:configure checking for f2c.h... no
+:info:configure checking for rml includefiles in /opt/local... yes
+:info:configure checking if the user wants RML -trace support... yes
+:info:configure checking for antlr.Tool support... ANTLR Parser Generator   Version 2.7.7 (20060906)   1989-2005
+:info:configure yes
+:info:configure checking if the user wants to compile OMShell-terminal... yes
+:info:configure checking readline/readline.h usability... yes
+:info:configure checking readline/readline.h presence... yes
+:info:configure checking for readline/readline.h... yes
+:info:configure checking readline/history.h usability... yes
+:info:configure checking readline/history.h presence... yes
+:info:configure checking for readline/history.h... yes
+:info:configure checking for library containing readline... -lreadline
+:info:configure checking expat.h usability... yes
+:info:configure checking expat.h presence... yes
+:info:configure checking for expat.h... yes
+:info:configure checking for an ANSI C-conforming const... yes
+:info:configure checking for size_t... yes
+:info:configure checking for vprintf... yes
+:info:configure checking for _doprnt... no
+:info:configure checking for getcwd... yes
+:info:configure checking for select... yes
+:info:configure checking for strdup... yes
+:info:configure checking for strerror... yes
+:info:configure checking for scandir... no
+:info:configure checking for library containing dlopen... none required
+:info:configure checking for library containing sqrt... none required
+:info:configure checking for library containing colamd... no
+:info:configure checking for library containing make_lp... -llpsolve55
+:info:configure checking lp_lib.h usability... no
+:info:configure checking lp_lib.h presence... no
+:info:configure checking for lp_lib.h... no
+:info:configure checking lpsolve/lp_lib.h usability... yes
+:info:configure checking lpsolve/lp_lib.h presence... yes
+:info:configure checking for lpsolve/lp_lib.h... yes
+:info:configure checking for socket... yes
+:info:configure checking for gethostbyname... yes
+:info:configure checking for sqlite3_libversion in -lsqlite3... yes
+:info:configure checking LAPACK flags... ok
+:info:configure checking for /opt/local/bin/omniidl... ok
+:info:configure checking for CORBA... omniorb
+:info:configure checking if the user wants to use the Python interface... no
+:info:configure checking for qmake-qt4... no
+:info:configure checking for qmake-mac... no
+:info:configure checking for qmake... qmake
+:info:configure checking for qmake arguments... sh /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/qmake.sh
+:info:configure checking for qwt... /opt/local/include/qwt/
+:info:configure checking for paradisEO... //opt/local
+:info:configure Not compiling ModPar
+:info:configure Not compiling with BOOST
+:info:configure checking for revision... 11890
+:info:configure checking for OpenModelica platform name... darwin-i386
+:info:configure checking for Modelica platform name... darwin-i386
+:info:configure configure: creating ./config.status
+:info:configure config.status: creating Makefile
+:info:configure config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+:info:configure config.status: creating Compiler/Makefile
+:info:configure config.status: creating Compiler/omc_release/Makefile
+:info:configure config.status: creating Compiler/omc_debug/Makefile
+:info:configure config.status: creating Compiler/omc_profiler/Makefile
+:info:configure config.status: creating Compiler/runtime/Makefile
+:info:configure config.status: creating Compiler/modpar/Makefile
+:info:configure config.status: creating Compiler/runtime/config.unix.h
+:info:configure config.status: creating PythonInterface/Makefile
+:info:configure config.status: creating PythonInterface/OMPython/OMConfig.py
+:info:configure config.status: creating Parser/Makefile
+:info:configure config.status: creating OMNotebook/OMNotebookGUI/OMNotebook.config
+:info:configure config.status: creating OMNotebook/OMNotebookGUI/Makefile.unix
+:info:configure config.status: creating OMShell/OMShellGUI/OMShell.config
+:info:configure config.status: creating OMShell/OMShellGUI/Makefile.unix
+:info:configure config.status: creating OMEdit/OMEditGUI/Makefile.unix
+:info:configure config.status: creating OMEdit/OMEditGUI/OMEdit.config
+:info:configure config.status: creating OMPlot/OMPlotGUI/Makefile.unix
+:info:configure config.status: creating OMPlot/OMPlotGUI/OMPlotGUI.config
+:info:configure config.status: creating OMOptim/build/Makefile.unix
+:info:configure config.status: creating OMOptim/build/OMOptim.config
+:info:configure config.status: creating OMOptim/OMOptimBasis/build/Makefile.unix
+:info:configure config.status: creating OMOptim/OMOptimBasis/build/OMOptimBasis.config
+:info:configure config.status: creating testsuite/bootstrapping/LinkMain.makefile
+:info:configure config.status: creating SimulationRuntime/fmi/import/Makefile
+:info:configure config.status: creating SimulationRuntime/c/Makefile
+:info:configure config.status: creating SimulationRuntime/c/ModelicaExternalC/Makefile
+:info:configure config.status: creating SimulationRuntime/c/simulation/libf2c/makefile.u
+:info:configure config.status: creating SimulationRuntime/interactive/Makefile
+:info:configure config.status: creating mosh/src/Makefile
+:info:configure config.status: executing config.unix.h.fix commands
+:debug:configure Privilege de-escalation not attempted as not running as root.
+:debug:build build phase started at Fri May 11 16:04:58 CEST 2012
+:notice:build --->  Building openmodelica-devel
+:debug:build Executing org.macports.build (openmodelica-devel)
+:debug:build Environment: CPATH='/opt/local/include' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/.CC_PRINT_OPTIONS' LIBRARY_PATH='/opt/local/lib' CC_PRINT_OPTIONS='YES' MACOSX_DEPLOYMENT_TARGET='10.6' GI_SCANNER_DISABLE_CACHE='1'
+:debug:build Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && /usr/bin/make -j4 -w all omlibrary'
+:debug:build Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && /usr/bin/make -j4 -w all omlibrary 
+:info:build make: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890'
+:info:build if [ ".app" = ".app" ]; then mkdir -p ./build/Applications/; fi
+:info:build rm -rf build/lib/omlibrary
+:info:build (time /usr/bin/make -C PythonInterface -f Makefile)
+:info:build /usr/bin/make -C mosh/src -f Makefile
+:info:build (cd libraries/ && find . -type d -not -path "*svn*" -exec install -m755 -d ../build/lib/omlibrary/{} \;)
+:info:build mkdir -p ./build/bin
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/mosh/src'
+:info:build /opt/local/bin/omniidl -bcxx -Wbh=.h -Wbs=.cc ../../Compiler/runtime//omc_communication.idl
+:info:build mkdir -p ./build/lib/omc
+:info:build mkdir -p ./build/lib/omc/libexec
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/PythonInterface'
+:info:build mkdir -p ./build/lib/python
+:info:build mkdir -p ./build/lib/python/omniORB
+:info:build *** Python interfaced was disabled by user configuration
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/PythonInterface'
+:info:build 
+:info:build real	0m0.028s
+:info:build user	0m0.003s
+:info:build sys	0m0.004s
+:info:build /usr/bin/g++-4.2 -pipe -O2 -arch x86_64 -Wall -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include  -c -o options.o options.cpp
+:info:build mkdir -p ./build/include/omc
+:info:build mkdir -p ./build/share/omc/java/
+:info:build mkdir -p ./build/share//omc/scripts/PythonInterface/OMPython/OMParser
+:info:build mkdir -p ./build/share//omnotebook
+:info:build mkdir -p ./build/share/doc/omc/testmodels
+:info:build mkdir -p ./build/share/man//man1/
+:info:build /usr/bin/make -C testsuite/difftool
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/testsuite/difftool'
+:info:build flex omc-diff.l
+:info:build gcc -o ../../build/bin/omc-diff lex.yy.c
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/testsuite/difftool'
+:info:build /usr/bin/make -C SimulationRuntime/interactive -f Makefile
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/interactive'
+:info:build /usr/bin/g++-4.2 -pipe -O2 -arch x86_64  -I.. -Wall  -c -o socket.o socket.cpp
+:info:build /usr/bin/g++-4.2 -pipe -O2 -arch x86_64 -Wall -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include  -c -o mosh.o mosh.cpp
+:info:build /usr/bin/g++-4.2 -pipe -O2 -arch x86_64 -Wall -DUSE_CORBA -DUSE_OMNIORB -I/opt/local/include  -c -o omc_communication.o omc_communication.cc
+:info:build /usr/bin/g++-4.2 -pipe -O2 -arch x86_64  -I.. -Wall  -c -o thread.o thread.cpp
+:info:build (cd libraries/ && find . -type f -not -path "*svn*" -exec install -m644 {} ../build/lib/omlibrary/{} \;)
+:info:build echo "Building client for interactive simulation ... "
+:info:build Building client for interactive simulation ... 
+:info:build /usr/bin/g++-4.2 -I.. -Wall -o SampleClient/client client.cpp socket.cpp thread.cpp -lpthread
+:info:build /usr/bin/make -C OMPlot/OMPlotGUI -f Makefile.unix
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build sh /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/qmake.sh
+:info:build sh /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/qmake.sh OMPlotLib.pro -o Makefile.lib
+:info:build /usr/bin/make -f Makefile.lib
+:info:build /usr/bin/g++-4.2 -o OMShell-terminal mosh.o options.o omc_communication.o  -L/opt/local/lib -arch x86_64 -lreadline  -lncurses /opt/local/lib/libomniORB4.a /opt/local/lib/libomnithread.a -lpthread -lm -lpthread
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o main.o main.cpp
+:info:build cp OMShell-terminal ../../build/bin/
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/mosh/src'
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o read_matlab4.o ../../SimulationRuntime/c/util/read_matlab4.c
+:info:build ar -s -r libinteractive.a socket.o thread.o
+:info:build ar: creating archive libinteractive.a
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/interactive'
+:info:build # Depends on libinteractive.a
+:info:build /usr/bin/make -C SimulationRuntime/c -f Makefile
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/c'
+:info:build /usr/bin/make -C ModelicaExternalC -f Makefile
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/c/ModelicaExternalC'
+:info:build /usr/bin/gcc-4.2 -pipe -O2 -arch x86_64 -I../util  -I/opt/local/include -I.. -Dlinux   -c -o ModelicaInternal.o ModelicaInternal.c
+:info:build /usr/bin/gcc-4.2 -pipe -O2 -arch x86_64 -I../util  -I/opt/local/include -I.. -Dlinux   -c -o ModelicaStrings.o ModelicaStrings.c
+:info:build /usr/bin/gcc-4.2 -pipe -O2 -arch x86_64 -I../util  -I/opt/local/include -I.. -Dlinux   -c -o ModelicaTablesImpl.o ModelicaTablesImpl.c
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/meta_modelica_builtin.o meta/meta_modelica_builtin.c -I./meta/ -I./util/
+:info:build /usr/bin/gcc-4.2 -pipe -O2 -arch x86_64 -I../util  -I/opt/local/include -I.. -Dlinux   -c -o ModelicaUtilities.o ModelicaUtilities.c
+:info:build In file included from meta/meta_modelica_builtin.c:33:
+:info:build meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -pipe -O2 -arch x86_64 -I../util  -I/opt/local/include -I.. -Dlinux   -c -o tables.o tables.c
+:info:build meta/meta_modelica_builtin.c:429: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/meta_modelica_string_lit.o meta/meta_modelica_string_lit.c -I./meta/ -I./util/
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from meta/meta_modelica.h:46,
+:info:build                  from meta/meta_modelica_string_lit.c:1:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/realString.o meta/realString.c -I./meta/ -I./util/
+:info:build ar -ru libModelicaExternalC.a ModelicaInternal.o ModelicaStrings.o ModelicaTablesImpl.o ModelicaUtilities.o tables.o
+:info:build ar: creating archive libModelicaExternalC.a
+:info:build ranlib libModelicaExternalC.a
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/c/ModelicaExternalC'
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/meta_modelica.o meta/meta_modelica.c -I./meta/ -I./util/
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from meta/meta_modelica.h:46,
+:info:build                  from meta/realString.c:32:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from meta/meta_modelica.h:46,
+:info:build                  from meta/meta_modelica.c:33:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/meta_modelica_real.o meta/meta_modelica_real.c -I./meta/ -I./util/
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from meta/meta_modelica.h:46,
+:info:build                  from meta/meta_modelica_real.c:33:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/gc/gc.o meta/gc/gc.c -I./meta/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/gc/common.o meta/gc/common.c -I./meta/ -I./util/
+:info:build meta/gc/gc.c:1: warning: ISO C forbids an empty source file
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/gc/roots.o meta/gc/roots.c -I./meta/ -I./util/
+:info:build In file included from ./meta/meta_modelica.h:48,
+:info:build                  from ./util/modelica.h:98,
+:info:build                  from meta/gc/common.c:33:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build meta/gc/common.c: In function ‘list_get’:
+:info:build meta/gc/common.c:243: warning: unused variable ‘i’
+:info:build meta/gc/common.c: In function ‘list_populate’:
+:info:build meta/gc/common.c:543: warning: unused variable ‘i’
+:info:build In file included from ./meta/meta_modelica.h:48,
+:info:build                  from ./util/modelica.h:98,
+:info:build                  from meta/gc/roots.c:40:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build meta/gc/roots.c:276:3: warning: C++ style comments are not allowed in ISO C90
+:info:build meta/gc/roots.c:276:3: warning: (this will be reported only once per input file)
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/gc/generational.o meta/gc/generational.c -I./meta/ -I./util/
+:info:build In file included from ./meta/meta_modelica.h:48,
+:info:build                  from ./util/modelica.h:98,
+:info:build                  from meta/gc/generational.c:73:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build meta/gc/generational.c: In function ‘mmc_free_c_heap_region’:
+:info:build meta/gc/generational.c:238: warning: unused variable ‘tmp’
+:info:build meta/gc/generational.c: In function ‘mmc_collect’:
+:info:build meta/gc/generational.c:469: warning: unused variable ‘start’
+:info:build meta/gc/generational.c:468: warning: unused variable ‘ctor’
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o meta/gc/marksweep.o meta/gc/marksweep.c -I./meta/ -I./util/
+:info:build In file included from ./meta/meta_modelica.h:48,
+:info:build                  from ./util/modelica.h:98,
+:info:build                  from meta/gc/marksweep.c:42:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/base_array.o util/base_array.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/boolean_array.o util/boolean_array.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/omc_error.o util/omc_error.c -I./util/ -I./meta/
+:info:build /usr/bin/make -C OMShell/OMShellGUI -f Makefile.unix
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMShell/OMShellGUI'
+:info:build sh /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/qmake.sh
+:info:build WARNING: /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMShell/OMShellGUI/OMShell.config:7: Unescaped backslashes are deprecated.
+:info:build WARNING: Failure to find: omc_communication.cc
+:info:build WARNING: Failure to find: omc_communication.h
+:info:build /opt/local/bin/omniidl -bcxx -Wbh=.h -Wbs=.cc ../..//Compiler/runtime//omc_communication.idl
+:info:build /usr/bin/make -f Makefile
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMShell/OMShellGUI'
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/division.o util/division.c -I./util/ -I./meta/
+:info:build /opt/local/bin/lrelease OMShell_de.ts
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/index_spec.o util/index_spec.c -I./util/ -I./meta/
+:info:build Updating 'OMShell_de.qm'...
+:info:build     Generated 24 translation(s) (24 finished and 0 unfinished)
+:info:build     Ignored 10 untranslated source text(s)
+:info:build /opt/local/bin/lrelease OMShell_sv.ts
+:info:build Updating 'OMShell_sv.qm'...
+:info:build     Generated 34 translation(s) (34 finished and 0 unfinished)
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o commandcompletion.o commandcompletion.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/integer_array.o util/integer_array.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/java_interface.o util/java_interface.c -I./util/ -I./meta/
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from ./meta/meta_modelica.h:46,
+:info:build                  from util/java_interface.h:36,
+:info:build                  from util/java_interface.c:58:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build util/java_interface.c: In function ‘getJavaEnv’:
+:info:build util/java_interface.c:297: warning: assignment discards qualifiers from pointer target type
+:info:build util/java_interface.c: In function ‘copyJstring’:
+:info:build util/java_interface.c:779: warning: assignment discards qualifiers from pointer target type
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/list.o util/list.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/memory_pool.o util/memory_pool.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/modelica_string.o util/modelica_string.c -I./util/ -I./meta/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o omc_communication.o omc_communication.cc
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/modelinfo.o util/modelinfo.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/read_write.o util/read_write.c -I./util/ -I./meta/
+:info:build In file included from ./util/modelica.h:99,
+:info:build                  from ./meta/gc/gc.h:57,
+:info:build                  from ./meta/meta_modelica.h:46,
+:info:build                  from util/read_write.c:42:
+:info:build ./meta/meta_modelica_builtin.h:67: warning: type qualifiers ignored on function return type
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o Plot.o Plot.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/read_matlab4.o util/read_matlab4.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/real_array.o util/real_array.c -I./util/ -I./meta/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o omc_communicator.o omc_communicator.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/ringbuffer.o util/ringbuffer.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/rtclock.o util/rtclock.c -I./util/ -I./meta/
+:info:build util/rtclock.c: In function ‘rt_tock’:
+:info:build util/rtclock.c:195: warning: ISO C90 forbids mixed declarations and code
+:info:build util/rtclock.c:191: warning: unused variable ‘nsec’
+:info:build util/rtclock.c: In function ‘rtclock_value’:
+:info:build util/rtclock.c:226: warning: ISO C90 forbids mixed declarations and code
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/string_array.o util/string_array.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/utility.o util/utility.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o util/varinfo.o util/varinfo.c -I./util/ -I./meta/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/bigden.o math-support/bigden.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/biglag.o math-support/biglag.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/dgesv_aux.o math-support/dgesv_aux.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/dogleg.o math-support/dogleg.c -I./math-support/ -I./util/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o omcinteractiveenvironment.o omcinteractiveenvironment.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/dpmpar.o math-support/dpmpar.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/enorm.o math-support/enorm.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/fdjac1.o math-support/fdjac1.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/hybrd.o math-support/hybrd.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/hybrd1.o math-support/hybrd1.c -I./math-support/ -I./util/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotZoomer.o PlotZoomer.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/hybrj.o math-support/hybrj.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/lsame.o math-support/lsame.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/nelmead.o math-support/nelmead.c -I./math-support/ -I./util/
+:info:build touch build/lib/omlibrary/stamp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o oms.o oms.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/newuoa.o math-support/newuoa.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/newuob.o math-support/newuob.c -I./math-support/ -I./util/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o main.o main.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/qform.o math-support/qform.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/qrfac.o math-support/qrfac.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/r1mpyq.o math-support/r1mpyq.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/r1updt.o math-support/r1updt.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/trsapp.o math-support/trsapp.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o math-support/update.o math-support/update.c -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/daux.o simulation/solver/daux.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/ddasrt.o simulation/solver/ddasrt.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/ddassl.o simulation/solver/ddassl.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o Legend.o Legend.cpp
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/dassl.o simulation/solver/dassl.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/make -C OMOptim/OMOptimBasis/build -f Makefile.unix
+:info:build make[1]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMOptim/OMOptimBasis/build'
+:info:build sh /opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/qmake.sh OMOptimBasis.pro
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/delay.o simulation/solver/delay.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/dlamch.o simulation/solver/dlamch.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/dlinpk.o simulation/solver/dlinpk.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/events.o simulation/solver/events.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ commandcompletion.h -o ../generatedfiles/moc/moc_commandcompletion.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ omc_communicator.h -o ../generatedfiles/moc/moc_omc_communicator.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ oms.h -o ../generatedfiles/moc/moc_oms.cpp
+:info:build /usr/bin/make -f Makefile
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMOptim/OMOptimBasis/build'
+:info:build /opt/local/bin/uic ../GUI/Widgets/WidgetFilesList.ui -o ui_WidgetFilesList.h
+:info:build /opt/local/bin/uic ../GUI/Widgets/WidgetMOItem.ui -o ui_WidgetMOItem.h
+:info:build /opt/local/bin/uic ../GUI/Tabs/TabGeneric.ui -o ui_TabGeneric.h
+:info:build /opt/local/bin/rcc -name oms oms.qrc -o ../generatedfiles/rcc/qrc_oms.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_commandcompletion.o ../generatedfiles/moc/moc_commandcompletion.cpp
+:info:build /opt/local/bin/uic ../GUI/Tabs/TabProjectBase.ui -o ui_TabProjectBase.h
+:info:build /opt/local/bin/uic ../GUI/Widgets/WidgetProjectBaseInfos.ui -o ui_WidgetProjectBaseInfos.h
+:info:build /opt/local/bin/uic ../GUI/Widgets/WidgetSelectVars.ui -o ui_WidgetSelectVars.h
+:info:build /opt/local/bin/uic ../GUI/Dialogs/NewProjectBaseForm.ui -o ui_NewProjectBaseForm.h
+:info:build /usr/bin/gcc-4.2 -c -pipe -O2 -arch x86_64 -mfpmath=sse -Wall  -pedantic -I. -I./meta/ -I./meta/gc  -o simulation/solver/initialization.o simulation/solver/initialization.c -I./simulation/solver/ -I./simulation/ -I./math-support/ -I./util/
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Variables.o ../Variables.cpp
+:info:build simulation/solver/initialization.c:49:27: error: kinsol/kinsol.h: No such file or directory
+:info:build simulation/solver/initialization.c:50:33: error: kinsol/kinsol_dense.h: No such file or directory
+:info:build simulation/solver/initialization.c:51:36: error: nvector/nvector_serial.h: No such file or directory
+:info:build simulation/solver/initialization.c:52:37: error: sundials/sundials_types.h: No such file or directory
+:info:build simulation/solver/initialization.c:53:36: error: sundials/sundials_math.h: No such file or directory
+:info:build simulation/solver/initialization.c:225: error: expected ‘)’ before ‘z’
+:info:build simulation/solver/initialization.c: In function ‘kinsol_initialization’:
+:info:build simulation/solver/initialization.c:650: error: ‘N_Vector’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:650: error: (Each undeclared identifier is reported only once
+:info:build simulation/solver/initialization.c:650: error: for each function it appears in.)
+:info:build simulation/solver/initialization.c:650: error: expected ‘;’ before ‘z’
+:info:build simulation/solver/initialization.c:651: error: expected ‘;’ before ‘s’
+:info:build simulation/solver/initialization.c:652: error: expected ‘;’ before ‘c’
+:info:build simulation/solver/initialization.c:654: error: ‘KIN_LINESEARCH’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:654: warning: ISO C90 forbids mixed declarations and code
+:info:build simulation/solver/initialization.c:660: error: ‘KIN_NONE’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:678: error: ‘z’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:678: warning: implicit declaration of function ‘N_VNew_Serial’
+:info:build simulation/solver/initialization.c:681: error: ‘s’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:684: error: ‘c’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:690: warning: implicit declaration of function ‘NV_Ith_S’
+:info:build simulation/solver/initialization.c:690: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:691: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:692: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:695: warning: implicit declaration of function ‘N_VConst_Serial’
+:info:build simulation/solver/initialization.c:699: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:700: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:701: error: lvalue required as left operand of assignment
+:info:build simulation/solver/initialization.c:704: warning: implicit declaration of function ‘KINCreate’
+:info:build simulation/solver/initialization.c:704: warning: assignment makes pointer from integer without a cast
+:info:build simulation/solver/initialization.c:707: warning: implicit declaration of function ‘KINSetErrHandlerFn’
+:info:build simulation/solver/initialization.c:708: warning: implicit declaration of function ‘KINSetUserData’
+:info:build simulation/solver/initialization.c:709: warning: implicit declaration of function ‘KINSetConstraints’
+:info:build simulation/solver/initialization.c:710: warning: implicit declaration of function ‘KINSetFuncNormTol’
+:info:build simulation/solver/initialization.c:711: warning: implicit declaration of function ‘KINSetScaledStepTol’
+:info:build simulation/solver/initialization.c:712: warning: implicit declaration of function ‘KINInit’
+:info:build simulation/solver/initialization.c:712: error: ‘kinsol_residuals’ undeclared (first use in this function)
+:info:build simulation/solver/initialization.c:715: warning: implicit declaration of function ‘KINDense’
+:info:build simulation/solver/initialization.c:717: warning: implicit declaration of function ‘KINSetMaxSetupCalls’
+:info:build simulation/solver/initialization.c:721: warning: implicit declaration of function ‘KINSol’
+:info:build simulation/solver/initialization.c:729: warning: implicit declaration of function ‘KINGetNumNonlinSolvIters’
+:info:build simulation/solver/initialization.c:730: warning: implicit declaration of function ‘KINGetNumFuncEvals’
+:info:build simulation/solver/initialization.c:731: warning: implicit declaration of function ‘KINDlsGetNumJacEvals’
+:info:build simulation/solver/initialization.c:732: warning: implicit declaration of function ‘KINDlsGetNumFuncEvals’
+:info:build simulation/solver/initialization.c:741: warning: implicit declaration of function ‘N_VDestroy_Serial’
+:info:build simulation/solver/initialization.c:744: warning: implicit declaration of function ‘KINFree’
+:info:build make[1]: *** [simulation/solver/initialization.o] Error 1
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/SimulationRuntime/c'
+:info:build make: *** [interactive] Error 2
+:info:build make: *** Waiting for unfinished jobs....
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_omc_communicator.o ../generatedfiles/moc/moc_omc_communicator.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Variable.o ../Variable.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_oms.o ../generatedfiles/moc/moc_oms.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotPanner.o PlotPanner.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o qrc_oms.o ../generatedfiles/rcc/qrc_oms.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOThreads.o ../MOThreads.cpp
+:info:build /usr/bin/g++-4.2 -headerpad_max_install_names   -Xarch_x86_64 -mmacosx-version-min=10.6 -o ../bin/OMShell.app/Contents/MacOS/OMShell commandcompletion.o omc_communication.o omc_communicator.o omcinteractiveenvironment.o oms.o main.o moc_commandcompletion.o moc_omc_communicator.o moc_oms.o qrc_oms.o     /opt/local/lib/libomniORB4.a /opt/local/lib/libomnithread.a -lpthread -L/opt/local/lib -lQtXml -lQtGui -lQtCore 
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOTableView.o ../GUI/MOTableView.cpp
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMShell/OMShellGUI'
+:info:build mkdir -p ../..//build/share//omshell/nls/
+:info:build if [ ".app" = ".app" ]; then cp -rp ../bin/OMShell.app ../..//build/Applications/ ; else cp -p ../bin/OMShell ../..//build/bin/; fi
+:info:build cp -p ../..//OMNotebook/OMNotebookGUI/commands.xml ../..//build/share//omshell/
+:info:build cp -p OMShell_*.qm ../..//build/share//omshell/nls/
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMShell/OMShellGUI'
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotGrid.o PlotGrid.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOParameter.o ../MOParameter.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOOptVector.o ../MOOptVector.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotCurve.o PlotCurve.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotWindow.o PlotWindow.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotApplication.o PlotApplication.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOItem.o ../MOItem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetMOItem.o ../GUI/Widgets/WidgetMOItem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotWindowContainer.o PlotWindowContainer.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetFilesList.o ../GUI/Widgets/WidgetFilesList.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o PlotMainWindow.o PlotMainWindow.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o METemperature.o ../Units/METemperature.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MESurface.o ../Units/MESurface.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MESpecHeatCapacity.o ../Units/MESpecHeatCapacity.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MEQflow.o ../Units/MEQflow.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ Plot.h -o ../generatedfiles/moc/moc_Plot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MEMassFlow.o ../Units/MEMassFlow.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotZoomer.h -o ../generatedfiles/moc/moc_PlotZoomer.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ Legend.h -o ../generatedfiles/moc/moc_Legend.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotPanner.h -o ../generatedfiles/moc/moc_PlotPanner.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotWindow.h -o ../generatedfiles/moc/moc_PlotWindow.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotApplication.h -o ../generatedfiles/moc/moc_PlotApplication.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotWindowContainer.h -o ../generatedfiles/moc/moc_PlotWindowContainer.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -D__APPLE__ -D__GNUC__ PlotMainWindow.h -o ../generatedfiles/moc/moc_PlotMainWindow.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MEHTCoeff.o ../Units/MEHTCoeff.cpp
+:info:build /opt/local/bin/rcc -name resource_omplot resource_omplot.qrc -o ../generatedfiles/rcc/qrc_resource_omplot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MEDimValue.o ../Units/MEDimValue.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_Plot.o ../generatedfiles/moc/moc_Plot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotZoomer.o ../generatedfiles/moc/moc_PlotZoomer.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o XMLTools.o ../Tools/XMLTools.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o LowTools.o ../Tools/LowTools.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_Legend.o ../generatedfiles/moc/moc_Legend.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Results.o ../Problems/Results.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Result.o ../Problems/Result.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Problems.o ../Problems/Problems.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotPanner.o ../generatedfiles/moc/moc_PlotPanner.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o ProblemInterface.o ../Problems/ProblemInterface.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o ProblemConfig.o ../Problems/ProblemConfig.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Problem.o ../Problems/Problem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o OMCases.o ../Problems/OMCases.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o OMCase.o ../Problems/OMCase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotWindow.o ../generatedfiles/moc/moc_PlotWindow.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o InfoSender.o ../Infos/InfoSender.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotApplication.o ../generatedfiles/moc/moc_PlotApplication.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Info.o ../Infos/Info.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o qsciencespinbox.o ../GUI/Tools/qsciencespinbox.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotWindowContainer.o ../generatedfiles/moc/moc_PlotWindowContainer.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o XML.o ../FileData/XML.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Save.o ../FileData/Save.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o Load.o ../FileData/Load.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o moc_PlotMainWindow.o ../generatedfiles/moc/moc_PlotMainWindow.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I../generatedfiles/moc -I/opt/local/include/qwt -I. -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -o qrc_resource_omplot.o ../generatedfiles/rcc/qrc_resource_omplot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o CSVBase.o ../FileData/CSVBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o ProjectBase.o ../ProjectBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOSettings.o ../MOSettings.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o HighTools.o ../Tools/HighTools.cpp
+:info:build rm -f libOMPlot.a
+:info:build ar cq libOMPlot.a main.o read_matlab4.o Plot.o PlotZoomer.o Legend.o PlotPanner.o PlotGrid.o PlotCurve.o PlotWindow.o PlotApplication.o PlotWindowContainer.o PlotMainWindow.o moc_Plot.o moc_PlotZoomer.o moc_Legend.o moc_PlotPanner.o moc_PlotWindow.o moc_PlotApplication.o moc_PlotWindowContainer.o moc_PlotMainWindow.o qrc_resource_omplot.o
+:info:build ranlib -s libOMPlot.a
+:info:build rm -f ../bin/libOMPlot.a
+:info:build mv -f libOMPlot.a ../bin/
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build /usr/bin/make -f Makefile
+:info:build make[2]: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build /usr/bin/g++-4.2 -headerpad_max_install_names  -Xarch_x86_64 -mmacosx-version-min=10.6 -o ../bin/OMPlot.app/Contents/MacOS/OMPlot main.o read_matlab4.o Plot.o PlotZoomer.o Legend.o PlotPanner.o PlotGrid.o PlotCurve.o PlotWindow.o PlotApplication.o PlotWindowContainer.o PlotMainWindow.o moc_Plot.o moc_PlotZoomer.o moc_Legend.o moc_PlotPanner.o moc_PlotWindow.o moc_PlotApplication.o moc_PlotWindowContainer.o moc_PlotMainWindow.o qrc_resource_omplot.o     -lqwt -L/opt/local/lib -lQtSvg -lQtGui -lQtCore 
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build cp -p ../bin/OMPlot.app/Contents/MacOS/OMPlot ../bin/OMPlot
+:info:build cp -p ../bin/OMPlot ../..//build/bin/
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMPlot/OMPlotGUI'
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOParametersDlg.o ../GUI/Dialogs/MOParametersDlg.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o OMProcess.o ../Tools/OMProcess.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MyTreeView.o ../GUI/Tools/MyTreeView.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MyTextLog.o ../GUI/Tools/MyTextLog.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MyDelegates.o ../GUI/Tools/MyDelegates.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOStyleSheet.o ../GUI/Tools/MOStyleSheet.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOSplitter.o ../GUI/Tools/MOSplitter.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o GuiTools.o ../GUI/Tools/GuiTools.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o TabGeneric.o ../GUI/Tabs/TabGeneric.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOTabBase.o ../GUI/Tabs/MOTabBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOTab.o ../GUI/Tabs/MOTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOMainTab.o ../GUI/Tabs/MOMainTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MO2ColTab.o ../GUI/Tabs/MO2ColTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetTableVar.o ../GUI/Widgets/WidgetTableVar.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MyQwtPlotPicker.o ../GUI/Plots/MyQwtPlotPicker.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o MOPlot.o ../GUI/Plots/MOPlot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o TabProjectBase.o ../GUI/Tabs/TabProjectBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetProjectBaseInfos.o ../GUI/Widgets/WidgetProjectBaseInfos.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o DlgSettings.o ../GUI/Dialogs/DlgSettings.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o DlgSelectVars.o ../GUI/Dialogs/DlgSelectVars.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o DlgSelectFiles.o ../GUI/Dialogs/DlgSelectFiles.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetSelectVars.o ../GUI/Widgets/WidgetSelectVars.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o WidgetList.o ../GUI/Widgets/WidgetList.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o NewProjectBaseForm.o ../GUI/Dialogs/NewProjectBaseForm.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o ProblemInterfaces.o ../Problems/ProblemInterfaces.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Variable.h -o moc_Variable.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../MOThreads.h -o moc_MOThreads.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/MOTableView.h -o moc_MOTableView.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../MOParameter.h -o moc_MOParameter.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../MOOptVector.h -o moc_MOOptVector.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../MOItem.h -o moc_MOItem.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetMOItem.h -o moc_WidgetMOItem.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetFilesList.h -o moc_WidgetFilesList.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Problems/Result.h -o moc_Result.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Problems/Problem.h -o moc_Problem.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Problems/OMCases.h -o moc_OMCases.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Problems/OMCase.h -o moc_OMCase.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Infos/InfoSender.h -o moc_InfoSender.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Infos/Info.h -o moc_Info.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/qsciencespinbox.h -o moc_qsciencespinbox.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../FileData/Load.h -o moc_Load.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../ProjectBase.h -o moc_ProjectBase.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Dialogs/MOParametersDlg.h -o moc_MOParametersDlg.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../Tools/OMProcess.h -o moc_OMProcess.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/MyTreeView.h -o moc_MyTreeView.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/MyTextLog.h -o moc_MyTextLog.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/MyDelegates.h -o moc_MyDelegates.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/MOSplitter.h -o moc_MOSplitter.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tools/GuiTools.h -o moc_GuiTools.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tabs/TabGeneric.h -o moc_TabGeneric.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tabs/MOTab.h -o moc_MOTab.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tabs/MOMainTab.h -o moc_MOMainTab.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tabs/MO2ColTab.h -o moc_MO2ColTab.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetTableVar.h -o moc_WidgetTableVar.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Plots/MOPlot.h -o moc_MOPlot.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Tabs/TabProjectBase.h -o moc_TabProjectBase.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetProjectBaseInfos.h -o moc_WidgetProjectBaseInfos.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Dialogs/DlgSettings.h -o moc_DlgSettings.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Dialogs/DlgSelectVars.h -o moc_DlgSelectVars.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Dialogs/DlgSelectFiles.h -o moc_DlgSelectFiles.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetSelectVars.h -o moc_WidgetSelectVars.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Widgets/WidgetList.h -o moc_WidgetList.cpp
+:info:build /opt/local/bin/moc -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -D__APPLE__ -D__GNUC__ ../GUI/Dialogs/NewProjectBaseForm.h -o moc_NewProjectBaseForm.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_Variable.o moc_Variable.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOThreads.o moc_MOThreads.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOTableView.o moc_MOTableView.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOParameter.o moc_MOParameter.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOOptVector.o moc_MOOptVector.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOItem.o moc_MOItem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetMOItem.o moc_WidgetMOItem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetFilesList.o moc_WidgetFilesList.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_Result.o moc_Result.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_Problem.o moc_Problem.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_OMCases.o moc_OMCases.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_OMCase.o moc_OMCase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_InfoSender.o moc_InfoSender.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_Info.o moc_Info.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_qsciencespinbox.o moc_qsciencespinbox.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_Load.o moc_Load.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_ProjectBase.o moc_ProjectBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOParametersDlg.o moc_MOParametersDlg.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_OMProcess.o moc_OMProcess.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MyTreeView.o moc_MyTreeView.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MyTextLog.o moc_MyTextLog.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MyDelegates.o moc_MyDelegates.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOSplitter.o moc_MOSplitter.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_GuiTools.o moc_GuiTools.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_TabGeneric.o moc_TabGeneric.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOTab.o moc_MOTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOMainTab.o moc_MOMainTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MO2ColTab.o moc_MO2ColTab.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetTableVar.o moc_WidgetTableVar.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_MOPlot.o moc_MOPlot.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_TabProjectBase.o moc_TabProjectBase.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetProjectBaseInfos.o moc_WidgetProjectBaseInfos.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_DlgSettings.o moc_DlgSettings.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_DlgSelectVars.o moc_DlgSelectVars.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_DlgSelectFiles.o moc_DlgSelectFiles.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetSelectVars.o moc_WidgetSelectVars.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_WidgetList.o moc_WidgetList.cpp
+:info:build /usr/bin/g++-4.2 -c -pipe -O2  -Xarch_x86_64 -mmacosx-version-min=10.6 -w -fPIC -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/opt/local/share/qt4/mkspecs/macx-g++ -I. -I. -I/opt/local/include/qwt -I. -I.. -I../GUI -I../GUI/Widgets -I../GUI/Tools -I../GUI/Dialogs -I../Units -I../Tools -I../Infos -I../FileData -I../Problems -I/opt/local/include/QtXml -I/opt/local/include/QtGui -I/opt/local/include/QtCore -I/opt/local/include -I. -o moc_NewProjectBaseForm.o moc_NewProjectBaseForm.cpp
+:info:build rm -f libOMOptimBasis.a
+:info:build ar cq libOMOptimBasis.a Variables.o Variable.o MOThreads.o MOTableView.o MOParameter.o MOOptVector.o MOItem.o WidgetMOItem.o WidgetFilesList.o METemperature.o MESurface.o MESpecHeatCapacity.o MEQflow.o MEMassFlow.o MEHTCoeff.o MEDimValue.o XMLTools.o LowTools.o Results.o Result.o Problems.o ProblemInterface.o ProblemConfig.o Problem.o OMCases.o OMCase.o InfoSender.o Info.o qsciencespinbox.o XML.o Save.o Load.o CSVBase.o ProjectBase.o MOSettings.o HighTools.o MOParametersDlg.o OMProcess.o MyTreeView.o MyTextLog.o MyDelegates.o MOStyleSheet.o MOSplitter.o GuiTools.o TabGeneric.o MOTabBase.o MOTab.o MOMainTab.o MO2ColTab.o WidgetTableVar.o MyQwtPlotPicker.o MOPlot.o TabProjectBase.o WidgetProjectBaseInfos.o DlgSettings.o DlgSelectVars.o DlgSelectFiles.o WidgetSelectVars.o WidgetList.o NewProjectBaseForm.o ProblemInterfaces.o moc_Variable.o moc_MOThreads.o moc_MOTableView.o moc_MOParameter.o moc_MOOptVector.o moc_MOItem.o moc_WidgetMOItem.o moc_WidgetFilesList.o moc_Result.o moc_Problem.o moc_OMCases.o moc_OMCase.o moc_InfoSender.o moc_Info.o moc_qsciencespinbox.o moc_Load.o moc_ProjectBase.o moc_MOParametersDlg.o moc_OMProcess.o moc_MyTreeView.o moc_MyTextLog.o moc_MyDelegates.o moc_MOSplitter.o moc_GuiTools.o moc_TabGeneric.o moc_MOTab.o moc_MOMainTab.o moc_MO2ColTab.o moc_WidgetTableVar.o moc_MOPlot.o moc_TabProjectBase.o moc_WidgetProjectBaseInfos.o moc_DlgSettings.o moc_DlgSelectVars.o moc_DlgSelectFiles.o moc_WidgetSelectVars.o moc_WidgetList.o moc_NewProjectBaseForm.o
+:info:build ranlib -s libOMOptimBasis.a
+:info:build make[2]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMOptim/OMOptimBasis/build'
+:info:build cp libOMOptimBasis.a ../../..//build/lib/
+:info:build make[1]: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890/OMOptim/OMOptimBasis/build'
+:info:build make: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890'
+:info:build shell command " cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/work/openmodelica_11890" && /usr/bin/make -j4 -w all omlibrary " returned error 2
+:error:build Target org.macports.build returned: shell command failed (see log for details)
+:debug:build Backtrace: shell command failed (see log for details)
+    while executing
+"command_exec build"
+    (procedure "portbuild::build_main" line 8)
+    invoked from within
+"$procedure $targetname"
+:info:build Warning: the following items did not execute (for openmodelica-devel): org.macports.install org.macports.build org.macports.destroot
+:notice:build Log for openmodelica-devel is at: /opt/local/var/macports/logs/_opt_local_var_macports_sources_build.openmodelica.org_macports_lang_openmodelica-devel/openmodelica-devel/main.log

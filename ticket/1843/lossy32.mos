@@ -1,0 +1,3 @@
+loadModel(Modelica, {"3.2"}); getErrorString();
+instantiateModel(Modelica.Mechanics.Rotational.Examples.LossyGearDemo1); getErrorString();
+instantiateModel(Modelica.Mechanics.Rotational.Examples.LossyGearDemo2); getErrorString();

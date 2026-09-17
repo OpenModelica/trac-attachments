@@ -1,0 +1,4 @@
+loadFile("ModelTotal.mo");
+
+instantiateModel(Model);
+getErrorString();

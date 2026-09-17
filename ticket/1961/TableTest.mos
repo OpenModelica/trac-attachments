@@ -1,0 +1,3 @@
+loadModel(Modelica, {"3.2.1"});
+loadFile("TableTest.mo");
+simulate(TableTest, stopTime=10);

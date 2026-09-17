@@ -1,0 +1,3 @@
+loadModel(Modelica);
+loadFile("RealInput_Failure.mo");
+simulate(RealInput_Failure);

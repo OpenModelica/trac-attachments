@@ -1,0 +1,3 @@
+loadModel(Modelica);
+loadFile("MultiFunctionReturnValueUseOnlyFirst.mo");
+simulate(MultiFunctionReturnValueUseOnlyFirst);

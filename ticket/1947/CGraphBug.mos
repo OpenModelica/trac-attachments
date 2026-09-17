@@ -1,0 +1,9 @@
+// load all files
+loadModel(Modelica,{"3.2.1"}); getErrorString();
+
+setDebugFlags("scodeInstShortcut,dumpdaelow"); getErrorString();
+setMatchingAlgorithm("PFPlusExt"); getErrorString(); 
+setIndexReductionMethod("dynamicStateSelection"); getErrorString();
+
+loadFile("CGraphBug.mo"); getErrorString();
+buildModel(CGraphBug.TopModel); getErrorString();

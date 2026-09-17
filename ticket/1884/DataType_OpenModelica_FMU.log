@@ -1,0 +1,7 @@
+gcc  -I"D:/DevTools/OpenModelica1.9.0//include/omc" -O  -falign-functions -msse2 -mfpmath=sse   -I"D:/DevTools/OpenModelica1.9.0//include/omc" -I. -L"D:/Projects/MESSINAGUI/workspace/com.berner_mattner.fmi.modelparser/resources/test/fmiModels/1.0/TestModels/Datatype/DataType_OpenModelica"   -c -o DataType_OpenModelica_FMU.o DataType_OpenModelica_FMU.c
+gcc  -I"D:/DevTools/OpenModelica1.9.0//include/omc" -O  -falign-functions -msse2 -mfpmath=sse   -I"D:/DevTools/OpenModelica1.9.0//include/omc" -I. -L"D:/Projects/MESSINAGUI/workspace/com.berner_mattner.fmi.modelparser/resources/test/fmiModels/1.0/TestModels/Datatype/DataType_OpenModelica"   -c -o DataType_OpenModelica.o DataType_OpenModelica.c
+DataType_OpenModelica.c: In function 'input_function':
+DataType_OpenModelica.c:115: error: incompatible types when assigning to type 'modelica_string' from type 'modelica_real'
+DataType_OpenModelica.c: In function 'output_function':
+DataType_OpenModelica.c:121: error: incompatible types when assigning to type 'modelica_real' from type 'modelica_string'
+mingw32-make: *** [DataType_OpenModelica.o] Error 1

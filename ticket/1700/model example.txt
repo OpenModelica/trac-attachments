@@ -1,0 +1,24 @@
+
+*******************************
+function exemple
+public
+input Integer taille=3;
+output Real somme=0;
+protected
+Real v[taille];
+algorithm
+for i in 1:taille loop
+v[i]:=i;
+end for;
+somme := sum(v);
+end exemple;
+*****************************
+model appel
+parameter Integer n=3;
+Real x;
+
+equation
+
+x=exemple(n)+1;
+
+end appel;

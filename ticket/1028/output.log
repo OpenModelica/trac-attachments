@@ -1,0 +1,4 @@
+Assertion failed: current_state.real_buffer_ptr +n < NR_REAL_ELEMENTS, file memory_pool.c, line 99
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.

@@ -1,0 +1,147 @@
+Checking: block Modelica.Blocks.Continuous.StateSpace... 0.0549999999999997 seconds -> FAILED!
+Checking: block Modelica.Blocks.Continuous.TransferFunction... 0.0620000000000012 seconds -> FAILED!
+Checking: block Modelica.Blocks.Discrete.StateSpace... 0.0609999999999999 seconds -> FAILED!
+Checking: block Modelica.Blocks.Discrete.TransferFunction... 0.0609999999999999 seconds -> FAILED!
+Checking: block Modelica.Blocks.Sources.BooleanTable... 0.0560000000000009 seconds -> FAILED!
+Checking: block Modelica.Blocks.Sources.TimeTable... 0.0549999999999997 seconds -> FAILED!
+Checking: block Modelica.Blocks.Sources.KinematicPTP2... 0.0609999999999999 seconds -> FAILED!
+Checking: block Modelica.Blocks.Sources.KinematicPTP... 0.0609999999999999 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.LogicToReal... 0.0589999999999975 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.RealToLogic... 0.0619999999999976 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.LogicToBoolean... 0.0620000000000047 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.BooleanToLogic... 0.0640000000000001 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.LogicToUX01... 0.0559999999999974 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.LogicToXO1Z... 0.0630000000000024 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Converters.LogicToXO1... 0.0619999999999976 seconds -> FAILED!
+Checking: model Modelica.Electrical.Digital.Sources.Clock... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Sources.Pulse... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: block Modelica.Electrical.Digital.Sources.Table... 0.0589999999999975 seconds -> FAILED!
+Checking: block Modelica.Electrical.Digital.Sources.Step... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: block Modelica.Electrical.Digital.Sources.Set... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.BufGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.XnorGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.XorGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.NorGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.OrGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.NandGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.AndGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Gates.InvGate... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Xnor... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Xor... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Nor... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Or... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Nand... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.And... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Basic.Not... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Delay.InertialDelaySensitive... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: block Modelica.Electrical.Digital.Delay.InertialDelay... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Delay.TransportDelay... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: connector Modelica.Electrical.Digital.Interfaces.DigitalOutput... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: connector Modelica.Electrical.Digital.Interfaces.DigitalInput... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: connector Modelica.Electrical.Digital.Interfaces.DigitalSignal... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.Counter... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.Counter3... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.Adder... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.FullAdder... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.HalfAdder... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.JKFF... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.DFF... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.RSFF... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.RS... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Utilities.MUX4... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Counter... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Counter3... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Adder4... 0.0569999999999951 seconds -> FAILED!
+Checking: model Modelica.Electrical.Digital.Examples.FullAdder... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.HalfAdder... 0.0569999999999951 seconds -> FAILED!
+Checking: model Modelica.Electrical.Digital.Examples.FlipFlop... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Digital.Examples.Multiplexer... # Restriction violation: #getStateName failed# is not a CONNECTOR
+Checking: model Modelica.Electrical.Machines.Utilities.TerminalBox... 0.0700000000000003 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz10... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz08... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz06... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz04... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz02... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dz.Dz00... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd10... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd08... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd06... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd04... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd02... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dd.Dd00... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy11... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy09... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy07... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy05... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy03... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Dy.Dy01... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz11... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz09... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz07... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz05... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz03... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yz.Yz01... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd11... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd09... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd07... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd05... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd03... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yd.Yd01... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy10... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy08... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy06... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy04... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy02... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.Transformers.Yy.Yy00... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.BasicMachines.SynchronousInductionMachines.SM_ReluctanceRotor... 0.378999999999991 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.BasicMachines.SynchronousInductionMachines.SM_ElectricalExcited... 0.177000000000007 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.BasicMachines.SynchronousInductionMachines.SM_PermanentMagnet... 0.173000000000002 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.Examples.Rectifier12pulse... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.Examples.Rectifier6pulse... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.Examples.TransformerTestbench... #- Error building simulation code. Ceval.compileModel failed.
+Checking: model Modelica.Electrical.Machines.Examples.SMEE_Generator... 0.185000000000002 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.Examples.SMPM_Inverter... 0.179000000000002 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.Examples.SMR_Inverter... 0.179000000000002 seconds -> FAILED!
+Checking: model Modelica.Electrical.Machines.Examples.AIMC_Inverter... 0.240000000000009 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Basic.OpAmpDetailed... 0.0769999999999982 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.TLine3... 0.0690000000000168 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.TLine2... 0.0619999999999834 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.ULine... 0.0660000000000025 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.M_OLine.segment... 0.125 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.M_OLine... 0.404999999999973 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Lines.OLine... 0.0600000000000023 seconds -> FAILED!
+Checking: model Modelica.Electrical.Analog.Examples.AmplifierWithOpAmpDetailed... 0.111999999999995 seconds -> FAILED!
+Checking: model Modelica.Fluid.Fittings.BaseClasses.QuadraticTurbulent.TestWallFriction... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Fittings.TeeJunctionVolume... 0.063999999999993 seconds -> FAILED!
+Checking: model Modelica.Fluid.Fittings.TeeJunctionIdeal... 0.061000000000007 seconds -> FAILED!
+Checking: model Modelica.Fluid.Fittings.MultiPort... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Fittings.AbruptAdaptor... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Fittings.SharpEdgedOrifice... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Fittings.SimpleGenericOrifice... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: connector Modelica.Fluid.Interfaces.FluidPorts_b... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: connector Modelica.Fluid.Interfaces.FluidPorts_a... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: connector Modelica.Fluid.Interfaces.FluidPort_b... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: connector Modelica.Fluid.Interfaces.FluidPort_a... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: connector Modelica.Fluid.Interfaces.FluidPort... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: function Modelica.Fluid.Machines.BaseClasses.PumpCharacteristics.polynomialFlow... 0.0630000000000166 seconds -> FAILED!
+Checking: model Modelica.Fluid.Machines.PrescribedPump... 0.0629999999999882 seconds -> FAILED!
+Checking: model Modelica.Fluid.Machines.ControlledPump... 0.0620000000000118 seconds -> FAILED!
+Checking: model Modelica.Fluid.Machines.Pump... 0.0609999999999786 seconds -> FAILED!
+Checking: model Modelica.Fluid.Machines.SweptVolume... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.WallFriction.TestWallFrictionAndGravity... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.Detailed.pressureLoss_m_flow_staticHead... 0.100999999999999 seconds -> FAILED!
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.Detailed.massFlowRate_dp_staticHead... - Algorithm.makeAssignment failed
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.LaminarAndQuadraticTurbulent.pressureLoss_m_flow_staticHead... 0.0870000000000175 seconds -> FAILED!
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.LaminarAndQuadraticTurbulent.massFlowRate_dp_staticHead... - Algorithm.makeAssignment failed
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.QuadraticTurbulent.pressureLoss_m_flow_staticHead... - Algorithm.makeAssignment failed
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.QuadraticTurbulent.massFlowRate_dp_staticHead... - Algorithm.makeAssignment failed
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.Laminar.pressureLoss_m_flow_staticHead... - Algorithm.makeAssignment failed
+Checking: function Modelica.Fluid.Pipes.BaseClasses.WallFriction.Laminar.massFlowRate_dp_staticHead... - Algorithm.makeAssignment failed
+Checking: model Modelica.Fluid.Pipes.BaseClasses.HeatTransfer.LocalPipeFlowHeatTransfer... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.HeatTransfer.ConstantFlowHeatTransfer... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.HeatTransfer.IdealFlowHeatTransfer... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.FlowModels.DetailedPipeFlow... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.FlowModels.TurbulentPipeFlow... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.FlowModels.NominalTurbulentPipeFlow... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.BaseClasses.FlowModels.NominalLaminarFlow... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium
+Checking: model Modelica.Fluid.Pipes.DynamicPipe... instantiateDaeFunction failed for specificEnthalpy_pTX in scope: Modelica.Media.Interfaces.PartialMedium

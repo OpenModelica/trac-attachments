@@ -1,0 +1,29 @@
+// name:     strange_bug.mo
+// keywords: mixed nonlinear problem
+// status:   incorrect
+// 
+// 
+function f
+  input Real t;
+  input Boolean i[2];
+  output Boolean o[2];
+algorithm
+  o := if t > 0.5 then {not i[1],not i[2]} else {true,true};
+end f; 
+
+function fR
+  input Real t;
+  input Real i[2];
+  output Real o[2];
+algorithm
+  o := if t > 0.5 then {sin(t)*i[1],sin(t)*i[2]} else {1.0,2.0};
+end fR; 
+ 
+model lastrange
+  parameter Integer nIn = 2;
+  Real bh[nIn];
+  Real barr[nIn];
+ equation
+    barr = if sin(time)>0 then fR(0,bh) else fill(1.0,nIn);
+    bh = if sin(time)<0 then fR(time,barr) else fill(3.0,nIn);
+end lastrange; 

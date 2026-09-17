@@ -1,0 +1,50 @@
+version:1
+:msg:clean --->  Computing dependencies for omniORB:info:clean .:debug:clean Searching for dependency: python26
+:debug:clean Found Dependency: receipt exists for python26
+:msg:clean 
+:debug:main Executing org.macports.main (omniORB)
+:debug:main changing euid/egid - current euid: 0 - current egid: 0
+:debug:main egid changed to: 502
+:debug:main euid changed to: 506
+:debug:main Skipping completed org.macports.archivefetch (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.fetch (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.checksum (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.extract (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.patch (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:main Skipping completed org.macports.configure (omniORB)
+:debug:main Privilege de-escalation not attempted as not running as root.
+:debug:build build phase started at Sun Apr  8 08:42:12 CEST 2012
+:notice:build --->  Building omniORB
+:debug:build Executing org.macports.build (omniORB)
+:debug:build Environment: CPATH='/opt/local/include' CC_PRINT_OPTIONS_FILE='/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/.CC_PRINT_OPTIONS' LIBRARY_PATH='/opt/local/lib' CC_PRINT_OPTIONS='YES' MACOSX_DEPLOYMENT_TARGET='10.6' GI_SCANNER_DISABLE_CACHE='1'
+:debug:build Assembled command: 'cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/omniORB-4.1.6" && /usr/bin/make -j4 -w all'
+:debug:build Executing command line:  cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/omniORB-4.1.6" && /usr/bin/make -j4 -w all 
+:info:build make: Entering directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/omniORB-4.1.6'
+:info:build making export in ./src...
+:info:build making export in src/tool...
+:info:build making export in src/tool/omkdepend...
+:info:build File omkdepend hasn't changed.
+:info:build making export in src/tool/omniidl...
+:info:build making export in src/tool/omniidl/cxx...
+:info:build making export in src/tool/omniidl/cxx/cccp...
+:info:build File omnicpp hasn't changed.
+:info:build make[3]: *** [export] Error 1
+:info:build make[2]: *** [export] Error 1
+:info:build make[1]: *** [export] Error 1
+:info:build make: *** [all] Error 1
+:info:build make: Leaving directory `/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/omniORB-4.1.6'
+:info:build shell command " cd "/opt/local/var/macports/build/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/work/omniORB-4.1.6" && /usr/bin/make -j4 -w all " returned error 2
+:error:build Target org.macports.build returned: shell command failed (see log for details)
+:debug:build Backtrace: shell command failed (see log for details)
+    while executing
+"command_exec build"
+    (procedure "portbuild::build_main" line 8)
+    invoked from within
+"$procedure $targetname"
+:info:build Warning: the following items did not execute (for omniORB): org.macports.install org.macports.build org.macports.destroot
+:notice:build Log for omniORB is at: /opt/local/var/macports/logs/_opt_local_var_macports_sources_rsync.macports.org_release_ports_devel_omniORB/omniORB/main.log

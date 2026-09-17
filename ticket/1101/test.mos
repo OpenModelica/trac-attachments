@@ -1,0 +1,3 @@
+loadFile("test.mo");
+instantiateModel(Test);
+dumpXMLDAE(Test);

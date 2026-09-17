@@ -1,0 +1,19 @@
+//name:        Modelica.Math [version 3.1]
+//keyword:     instantiating MSL 3.1 Modelica.Math
+//status:      correct
+//env: OPENMODELICALIBRARY=../../../libraries/msl31/
+//
+// instantiate example
+//
+
+loadFile("../../../MathModelica/Libraries/MathModelicaLibraries/Modelica 3.0/Modelica/package.mo");
+getErrorString();
+
+loadFile("MathTest.mo");
+checkModel(Test_Math_Matrices_norm);
+saveTotalModel("Test_Math_Matrices_normTotal.mo",Test_Math_Matrices_norm);
+//simulate(Test_Math_Matrices_norm);
+//val(x4,0.0);
+
+// Result:
+// endResult

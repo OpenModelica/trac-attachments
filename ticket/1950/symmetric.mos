@@ -1,0 +1,5 @@
+system("cls");
+loadFile("symmetric.mo");
+getErrorString();
+simulate(test_symmetric);
+getErrorString();

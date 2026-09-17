@@ -1,0 +1,49 @@
+
+getAnnotationVersion();
+setAnnotationVersion("3.x");
+getAnnotationVersion();
+
+loadModel(Modelica); getErrorString();
+loadModel(ModelicaServices); getErrorString();
+
+// If we set the annotations version to 3, then the OMC API getIconAnnotation don't returns the flat model for some components. 
+// I have tried it for Resistor, Conductor, EMF..........i am not sure how many more have this problem. 
+// Here is the output for 3 of them
+
+getIconAnnotation(Modelica.Electrical.Analog.Basic.Resistor);        getErrorString();
+getIconAnnotation(Modelica.Electrical.Analog.Basic.HeatingResistor); getErrorString();
+getIconAnnotation(Modelica.Electrical.Analog.Basic.EMF);             getErrorString();
+getIconAnnotation(Modelica.Electrical.Analog.Basic.Conductor);       getErrorString();
+
+// I am using MSL31.
+// One more thing, can someone tell me what is the output of getComponentAnnotations,
+
+getIconAnnotation(Modelica.Electrical.Analog.Basic.Ground); getErrorString();
+getComponentAnnotations(Modelica.Electrical.Analog.Basic.Ground); getErrorString();
+
+// What does each parameter means? I have looked for it in the Modelica Specifications for 3.2 but couldn't find anything.
+// One more thing i have noticed is, the default parameter values for the components are empty. Like,
+
+getParameterNames(Modelica.Electrical.Analog.Basic.Resistor);                   getErrorString();
+// R one doesn't have a default value!
+getParameterValue(Modelica.Electrical.Analog.Basic.Resistor, R);                getErrorString();
+// the the modification names
+getComponentModifierNames(Modelica.Electrical.Analog.Basic.Resistor, R);        getErrorString();
+// retrieve the start value
+getComponentModifierValue(Modelica.Electrical.Analog.Basic.Resistor, R.start); getErrorString();
+getParameterValue(Modelica.Electrical.Analog.Basic.Resistor, T_ref);            getErrorString();
+getComponentModifierNames(Modelica.Electrical.Analog.Basic.Resistor, T_ref);    getErrorString();
+getParameterValue(Modelica.Electrical.Analog.Basic.Resistor, alpha);            getErrorString();
+getComponentModifierNames(Modelica.Electrical.Analog.Basic.Resistor, alpha);    getErrorString();
+
+// Also there are old bug report related to this issue: bug 1166 and 1160
+// Best Regards Mohsen
+
+// get documentation from package
+getDocumentationAnnotation(Modelica.Mechanics.Rotational.Components); getErrorString();
+// get documentation from model
+getDocumentationAnnotation(Modelica.Mechanics.Rotational.Components.Intertia); getErrorString();
+// get documentation from package
+getDocumentationAnnotation(Modelica.Electrical.Analog.Basic); getErrorString();
+// get documentation from model
+getDocumentationAnnotation(Modelica.Electrical.Analog.Basic.EMF); getErrorString();

@@ -1,0 +1,4 @@
+loadModel(Modelica);
+loadFile("Test.mo");
+simulate(MyModel2);
+simulate(MyModel3);

@@ -1,0 +1,3 @@
+setDebugFlags("dumpdaelow");
+loadFile("Unbalanced.mo"); getErrorString();
+simulate(F); getErrorString();

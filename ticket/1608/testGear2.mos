@@ -1,0 +1,5 @@
+loadModel(Modelica);
+loadFile("GearWithExternalRatio.mo");
+loadFile("testGear2.mo");
+simulate(testGear2,startTime=0.0,stopTime=2.0);
+plot({inertia1.w, inertia2.w});

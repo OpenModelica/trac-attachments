@@ -1,0 +1,44 @@
+events        | info    | number of sorted, unique sample events: 0
+stdout        | info    | Status of relations:
+|             | |       | | [0] (-cylinder1.Cylinder.v) < 0.0 = F | pre((-cylinder1.Cylinder.v) < 0.0) = F
+|             | |       | | [1] cylinder1.gasForce.x < 0.987 = F | pre(cylinder1.gasForce.x < 0.987) = F
+|             | |       | | [2] cylinder1.gasForce.x > 0.93 = F | pre(cylinder1.gasForce.x > 0.93) = F
+|             | |       | | [3] (-cylinder2.Cylinder.v) < 0.0 = F | pre((-cylinder2.Cylinder.v) < 0.0) = F
+|             | |       | | [4] cylinder2.gasForce.x < 0.987 = F | pre(cylinder2.gasForce.x < 0.987) = F
+|             | |       | | [5] cylinder2.gasForce.x > 0.93 = F | pre(cylinder2.gasForce.x > 0.93) = F
+|             | |       | | [6] (-cylinder3.Cylinder.v) < 0.0 = F | pre((-cylinder3.Cylinder.v) < 0.0) = F
+|             | |       | | [7] cylinder3.gasForce.x < 0.987 = F | pre(cylinder3.gasForce.x < 0.987) = F
+|             | |       | | [8] cylinder3.gasForce.x > 0.93 = F | pre(cylinder3.gasForce.x > 0.93) = F
+|             | |       | | [9] (-cylinder4.Cylinder.v) < 0.0 = F | pre((-cylinder4.Cylinder.v) < 0.0) = F
+|             | |       | | [10] cylinder4.gasForce.x < 0.987 = F | pre(cylinder4.gasForce.x < 0.987) = F
+|             | |       | | [11] cylinder4.gasForce.x > 0.93 = F | pre(cylinder4.gasForce.x > 0.93) = F
+|             | |       | | [12] (-cylinder5.Cylinder.v) < 0.0 = F | pre((-cylinder5.Cylinder.v) < 0.0) = F
+|             | |       | | [13] cylinder5.gasForce.x < 0.987 = F | pre(cylinder5.gasForce.x < 0.987) = F
+|             | |       | | [14] cylinder5.gasForce.x > 0.93 = F | pre(cylinder5.gasForce.x > 0.93) = F
+|             | |       | | [15] (-cylinder6.Cylinder.v) < 0.0 = F | pre((-cylinder6.Cylinder.v) < 0.0) = F
+|             | |       | | [16] cylinder6.gasForce.x < 0.987 = F | pre(cylinder6.gasForce.x < 0.987) = F
+|             | |       | | [17] cylinder6.gasForce.x > 0.93 = F | pre(cylinder6.gasForce.x > 0.93) = F
+events        | info    | Relation LESS:  1.10621763449206960000e+000 < 0.00000000000000000000e+000 = f (f)
+events        | info    | Result := f
+events        | info    | Relation GREATER:  5.92170744423634040000e-001 > 9.30000000000000050000e-001 = f (f)
+events        | info    | Result := f
+events        | info    | Relation LESS:  -6.25833173076808080000e-001 < 0.00000000000000000000e+000 = t (f)
+events        | info    | Result := t
+events        | info    | Relation LESS:  1.37625289878179240000e-001 < 9.86999999999999990000e-001 = t (f)
+events        | info    | Result := t
+events        | info    | Relation LESS:  1.92296268638356380000e-016 < 0.00000000000000000000e+000 = f (f)
+events        | info    | Result := f
+events        | info    | Relation GREATER:  -2.22044604925031310000e-016 > 9.30000000000000050000e-001 = f (f)
+events        | info    | Result := f
+events        | info    | Relation LESS:  6.25833173076807970000e-001 < 0.00000000000000000000e+000 = f (f)
+events        | info    | Result := f
+events        | info    | Relation GREATER:  1.37625289878179240000e-001 > 9.30000000000000050000e-001 = f (f)
+events        | info    | Result := f
+events        | info    | Relation LESS:  -1.10621763449206930000e+000 < 0.00000000000000000000e+000 = t (f)
+events        | info    | Result := t
+events        | info    | Relation LESS:  5.92170744423633820000e-001 < 9.86999999999999990000e-001 = t (f)
+events        | info    | Result := t
+events        | info    | Relation LESS:  -0.00000000000000000000e+000 < 0.00000000000000000000e+000 = f (f)
+events        | info    | Result := f
+events        | info    | Relation GREATER:  9.09090909090909280000e-001 > 9.30000000000000050000e-001 = f (f)
+events        | info    | Result := f

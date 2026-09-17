@@ -1,0 +1,32 @@
+<!DOCTYPE OMNotebook>
+<Notebook>
+  <GroupCell closed="false">
+    <GraphCell style="Graph" closed="false">
+      <Input>model Test
+ Real x "densità fluido 跳ねるボール";
+equation
+ der(x) = -1 * x;
+end Test;</Input>
+      <Output>{Test}</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>writeFile("a.mo",list(Test))</Input>
+      <Output>true</Output>
+    </GraphCell>
+    <GraphCell style="Graph" closed="false">
+      <Input>simulate(Test)</Input>
+      <Output>record SimulationResult
+    resultFile = "/tmp/OpenModelica/Test_res.mat",
+    simulationOptions = "startTime = 0.0, stopTime = 1.0, numberOfIntervals = 500, tolerance = 0.000001, method = 'dassl', fileNamePrefix = 'Test', storeInTemp = false, noClean = false, options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = ''",
+    messages = "",
+    timeFrontend = 0.009006059,
+    timeBackend = 0.0073957350000000005,
+    timeSimCode = 0.004460148000000001,
+    timeTemplates = 0.0013231800000000002,
+    timeCompile = 0.21075357,
+    timeSimulation = 0.00325389,
+    timeTotal = 0.23626497600000002
+end SimulationResult;</Output>
+    </GraphCell>
+  </GroupCell>
+</Notebook>

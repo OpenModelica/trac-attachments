@@ -1,0 +1,91 @@
+// name:     AsubCrefIndexing
+// keywords: simulate
+// status:   correct
+// 
+// Test code generation for ASUB component reference indexing in simulation context (and runtime functions).
+//
+loadFile("AsubCRefIndexing.mo"); 
+getErrorString();
+
+checkModel(AsubCrefIndexing.A);
+getErrorString();
+
+simulate(AsubCrefIndexing.A, stopTime=1.0);
+getErrorString();
+
+val(c.s1,0.5);
+val(c.s2,0.5);
+
+val(d.s11,0.5);
+val(d.s12,0.5);
+val(d.s21,0.5);
+val(d.s22,0.5);
+
+val(e.s111,0.5);
+val(e.s112,0.5);
+val(e.s121,0.5);
+val(e.s122,0.5);
+val(e.s211,0.5);
+val(e.s212,0.5);
+val(e.s221,0.5);
+val(e.s222,0.5);
+
+val(f.s1111,0.5);
+val(f.s1112,0.5);
+val(f.s1121,0.5);
+val(f.s1122,0.5);
+val(f.s1211,0.5);
+val(f.s1212,0.5);
+val(f.s1221,0.5);
+val(f.s1222,0.5);
+val(f.s2111,0.5);
+val(f.s2112,0.5);
+val(f.s2121,0.5);
+val(f.s2122,0.5);
+val(f.s2211,0.5);
+val(f.s2212,0.5);
+val(f.s2221,0.5);
+val(f.s2222,0.5);
+// Result:
+// true
+// ""
+// "Check of AsubCrefIndexing.A completed successfully.
+// Class AsubCrefIndexing.A has 30 equation(s) and 30 variable(s).
+// 2 of these are trivial equation(s).
+// "
+// ""
+// record SimulationResult
+//     resultFile = "AsubCrefIndexing.A_res.mat"
+// end SimulationResult;
+// ""
+// 1.0
+// 2.0
+// 1.0
+// 2.0
+// 3.0
+// 4.0
+// 1.0
+// 2.0
+// 3.0
+// 4.0
+// 5.0
+// 6.0
+// 7.0
+// 8.0
+// 1.0
+// 2.0
+// 3.0
+// 4.0
+// 5.0
+// 6.0
+// 7.0
+// 8.0
+// 9.0
+// 10.0
+// 11.0
+// 12.0
+// 13.0
+// 14.0
+// 15.0
+// 16.0
+// endResult

@@ -1,0 +1,9 @@
+(cd c_runtime && make -f Makefile)
+make[1]: Entering directory `/home/dietmarw/.workspace/OM_trunk/c_runtime'
+cd libf2c && make -f makefile.u
+make[2]: Entering directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/libf2c'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/libf2c'
+mkdir -p sendData/release && g++ -c -o sendData/libsendData.o sendData/humbug.cpp && ar -ru sendData/release/libsendData.a sendData/libsendData.o
+cp blaswrap.h f2c.h integer_array.h memory_pool.h modelica_string.h base_array.h inline.h real_array.h string_array.h boolean_array.h index_spec.h matrix.h modelica.h read_write.h simulation_runtime.h simulation_events.h utility.h simulation_init.h simulation_input.h solver_dasrt.h solver_euler.h simulation_result.h meta_modelica.h ../build/include/
+make[1]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/c_runtime'

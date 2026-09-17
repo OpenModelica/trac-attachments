@@ -1,0 +1,27 @@
+<!DOCTYPE OMNotebook>
+<Notebook>
+ <GroupCell closed="false" >
+  <InputCell style="Input" closed="false" >
+   <Input>loadModel(Modelica);
+loadFile("c:/modelicaprj/packages/control.mo");</Input>
+   <Output>[done]</Output>
+  </InputCell>
+  <InputCell style="Input" closed="false" >
+   <Input>model prueba
+  Control.Sources.DiscreteSpeedTrapezium trapezium(acc1=1,acc2=1,dec1=1,dec2=1,pv_acc=0.5,pv_dec=0.5,adv=4,vel=1,period=0.5);
+end prueba;</Input>
+   <Output>Ok</Output>
+  </InputCell>
+  <InputCell style="Input" closed="false" >
+   <Input>simulate(prueba,stopTime=5.0)</Input>
+   <Output>record
+    resultFile = "prueba_res.plt"
+end record</Output>
+  </InputCell>
+  <InputCell style="Input" closed="false" >
+   <Input>plot({trapezium.counter})</Input>
+   <Output>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;/head>&lt;body style=" white-space: pre-wrap; font-family:MS Shell Dlg; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:Courier New; font-size:11pt; color:#000000;">&lt;img src="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/15.png" width="492" height="250" />&lt;/p>&lt;/body>&lt;/html></Output>
+   <Image name="file:///C:/OpenModelica1.4.3/bin/OMNoteboook_tempfiles/15.png" >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</Image>
+  </InputCell>
+ </GroupCell>
+</Notebook>

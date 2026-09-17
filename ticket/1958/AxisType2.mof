@@ -1,0 +1,62 @@
+model AxisType2
+constant Integer controller.sum.nin = 4 "Number of inputs";
+parameter Real controller.sum.k[controller.sum.nin] = ones(controller.sum.nin) 
+  "Optional: sum coefficients";
+
+Boolean controller.axisControlBus.motion_ref "= true, if reference motion is not in rest";
+Modelica.SIunits.Angle controller.axisControlBus.angle_ref "Reference angle of axis flange";
+Modelica.SIunits.Angle controller.axisControlBus.angle "Angle of axis flange";
+Modelica.SIunits.AngularVelocity controller.axisControlBus.speed_ref "Reference speed of axis flange";
+Modelica.SIunits.AngularVelocity controller.axisControlBus.speed "Speed of axis flange";
+Modelica.SIunits.AngularAcceleration controller.axisControlBus.acceleration_ref "Reference acceleration of axis flange";
+Modelica.SIunits.AngularAcceleration controller.axisControlBus.acceleration "Acceleration of axis flange";
+Modelica.SIunits.Current controller.axisControlBus.current_ref "Reference current of motor";
+Modelica.SIunits.Current controller.axisControlBus.current "Current of motor";
+Modelica.SIunits.Angle controller.axisControlBus.motorAngle "Angle of motor flange";
+Modelica.SIunits.AngularVelocity controller.axisControlBus.motorSpeed "Speed of motor flange";
+Modelica.Blocks.Interfaces.RealInput controller.sum.u[4] "Connector of Real input signals";
+Modelica.Blocks.Interfaces.RealOutput controller.sum.y "Connector of Real output signal";
+Boolean axisControlBus.motion_ref "= true, if reference motion is not in rest";
+Modelica.SIunits.Angle axisControlBus.angle_ref "Reference angle of axis flange";
+Modelica.SIunits.Angle axisControlBus.angle "Angle of axis flange";
+Modelica.SIunits.AngularVelocity axisControlBus.speed_ref "Reference speed of axis flange";
+Modelica.SIunits.AngularVelocity axisControlBus.speed "Speed of axis flange";
+Modelica.SIunits.AngularAcceleration axisControlBus.acceleration_ref "Reference acceleration of axis flange";
+Modelica.SIunits.AngularAcceleration axisControlBus.acceleration "Acceleration of axis flange";
+Modelica.SIunits.Current axisControlBus.current_ref "Reference current of motor";
+Modelica.SIunits.Current axisControlBus.current "Current of motor";
+Modelica.SIunits.Angle axisControlBus.motorAngle "Angle of motor flange";
+Modelica.SIunits.AngularVelocity axisControlBus.motorSpeed "Speed of motor flange";
+
+// Equations and algorithms
+
+  // Component controller.sum
+  // class Modelica.Blocks.Math.Sum
+  equation
+    controller.sum.y = controller.sum.k*controller.sum.u;
+
+  // Component controller
+  // class Controller
+  equation
+    controller.sum.u[1] = controller.axisControlBus.speed_ref;
+    controller.sum.u[2] = controller.axisControlBus.angle_ref;
+    controller.sum.u[3] = controller.axisControlBus.motorAngle;
+    controller.sum.u[4] = controller.axisControlBus.motorSpeed;
+    controller.sum.y = controller.axisControlBus.current_ref;
+
+  // Component 
+  // class AxisType2
+  equation
+    controller.axisControlBus.acceleration = axisControlBus.acceleration;
+    controller.axisControlBus.acceleration_ref = axisControlBus.acceleration_ref;
+    controller.axisControlBus.angle = axisControlBus.angle;
+    controller.axisControlBus.angle_ref = axisControlBus.angle_ref;
+    controller.axisControlBus.current = axisControlBus.current;
+    controller.axisControlBus.current_ref = axisControlBus.current_ref;
+    controller.axisControlBus.motion_ref = axisControlBus.motion_ref;
+    controller.axisControlBus.motorAngle = axisControlBus.motorAngle;
+    controller.axisControlBus.motorSpeed = axisControlBus.motorSpeed;
+    controller.axisControlBus.speed = axisControlBus.speed;
+    controller.axisControlBus.speed_ref = axisControlBus.speed_ref;
+
+end AxisType2;

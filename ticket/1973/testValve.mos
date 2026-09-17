@@ -1,0 +1,6 @@
+loadFile("ValveAirTotal.mo"); getErrorString();
+setDebugFlags("scodeInstShortcut,solveinitialsystem");
+simulate(TestPolimi.Fluid.ValveAir);
+getErrorString();
+plot(valve.Av)
+

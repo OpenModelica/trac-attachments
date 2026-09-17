@@ -1,0 +1,2 @@
+loadFile("WhenCount.mo"); getErrorString();
+simulate(WhenCount); getErrorString();

@@ -1,0 +1,4 @@
+loadFile("IndexConnect.mo");
+instantiateModel(IndexConnect);
+
+instantiateModel(IndexConnectFor);

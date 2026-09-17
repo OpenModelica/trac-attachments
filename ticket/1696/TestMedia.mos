@@ -1,0 +1,26 @@
+loadModel(Modelica); getErrorString();
+loadFile("TestMedia.mo"); getErrorString();
+
+instantiateModel(TestMedia.TestModels.TestWater); getErrorString();
+checkModel(TestMedia.TestModels.TestWater); getErrorString();
+buildModel(TestMedia.TestModels.TestWater); getErrorString();
+
+instantiateModel(TestMedia.TestModels.TestSteam); getErrorString();
+checkModel(TestMedia.TestModels.TestSteam); getErrorString();
+buildModel(TestMedia.TestModels.TestSteam); getErrorString();
+
+instantiateModel(TestMedia.TestModels.TestFlueGas); getErrorString();
+checkModel(TestMedia.TestModels.TestFlueGas); getErrorString();
+buildModel(TestMedia.TestModels.TestFlueGas); getErrorString();
+
+instantiateModel(TestMedia.TestModels.TestNitrogen); getErrorString();
+checkModel(TestMedia.TestModels.TestNitrogen); getErrorString();
+buildModel(TestMedia.TestModels.TestNitrogen); getErrorString();
+
+
+
+
+
+
+
+

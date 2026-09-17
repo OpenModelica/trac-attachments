@@ -1,0 +1,9 @@
+loadModel(Modelica,{"3.2.1"});
+loadFile("AxisType2.mo");
+loadFile("Controller.mo");
+
+setMatchingAlgorithm("PFPlusExt");
+setIndexReductionMethod("dynamicStateSelection");
+
+simulate(AxisType2);
+getErrorString();

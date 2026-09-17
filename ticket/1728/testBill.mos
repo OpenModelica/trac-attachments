@@ -1,0 +1,20 @@
+loadString("
+model simple4
+  type modetype = enumeration(on, off);
+  modetype mode(start = modetype.off);
+  Real v(start = 0);
+algorithm
+  when (v > 0.5) then
+    mode := modetype.on;
+  elsewhen (v <= 0.5) then
+    mode := modetype.off;
+  end when;
+equation
+  if (mode == modetype.off) then
+    v = time * 1.1;
+  else
+    v = time * 1.1 + 40;
+  end if;
+end simple4;
+");
+simulate(simple4, outputFormat="csv");

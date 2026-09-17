@@ -1,0 +1,273 @@
+true
+true
+true
+State Order: (0)
+=============
+
+Reduce Index failed! Found empty set of continues equations.
+marked equations:
+10: not showValue4.showActive = not Modelica.Math.BooleanVectors.anyTrue({or2.u[1], xor1.u[2]});
+Variables (16)
+=========
+1: output  showValue5.showActive:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean 
+2: input  triggeredAdd.trigger:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean 
+3: output  triggeredAdd.y:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Modelica.Blocks.Interfaces.IntegerOutput type: Integer 
+4: input  set1.u[2]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+5: input  set1.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+6:  set1.firstActiveIndex:DISCRETE(protected = true ) .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Integer type: Integer 
+7: output  showValue4.showActive:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean 
+8: input  or2.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nor, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+9: input  nand1.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nand, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+10: input  xor1.u[2]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Xor, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+11: input  xor1.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Xor, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+12: input  or1.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Or, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]
+13:  booleanPulse2.pulsStart:DISCRETE(protected = true ) .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real 
+14:  booleanPulse1.pulsStart:DISCRETE(protected = true ) .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real 
+15: input  and1.u[2]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.And, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [3]
+16: input  and1.u[1]:DISCRETE() .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.And, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [3]
+
+
+Equations (16, 16)
+=========
+1 : or1.u[1] = Modelica.Math.BooleanVectors.allTrue({and1.u[1], and1.u[2], xor1.u[2]})
+2 : when sample(booleanPulse1.startTime, booleanPulse1.period) then
+  booleanPulse1.pulsStart := time
+end when
+3 : and1.u[1] = time >= booleanPulse1.pulsStart and time < booleanPulse1.pulsStart + booleanPulse1.Twidth
+4 : when sample(booleanPulse2.startTime, booleanPulse2.period) then
+  booleanPulse2.pulsStart := time
+end when
+5 : xor1.u[2] = time >= booleanPulse2.pulsStart and time < booleanPulse2.pulsStart + booleanPulse2.Twidth
+6 : and1.u[2] = if time >= booleanStep.startTime then not booleanStep.startValue else booleanStep.startValue
+7 : xor1.u[1] = Modelica.Math.BooleanVectors.anyTrue({or1.u[1], xor1.u[2]})
+8 : nand1.u[1] = Modelica.Math.BooleanVectors.oneTrue({xor1.u[1], xor1.u[2]})
+9 : or2.u[1] = not Modelica.Math.BooleanVectors.allTrue({nand1.u[1], xor1.u[2]})
+10 : not showValue4.showActive = not Modelica.Math.BooleanVectors.anyTrue({or2.u[1], xor1.u[2]})
+11 : set1.u[1] = edge(xor1.u[2])
+12 : set1.firstActiveIndex = Modelica.Math.BooleanVectors.firstTrueIndex({set1.u[1], set1.u[2]})
+13 : showValue5.showActive = if set1.firstActiveIndex == 0 then if set1.use_pre_as_default then pre(showValue5.showActive) else set1.y_default else {false, true}[set1.firstActiveIndex]
+14 : set1.u[2] = edge(not xor1.u[2])
+15 : triggeredAdd.trigger = change(xor1.u[2])
+16 : when {triggeredAdd.trigger, false} then
+  triggeredAdd.y := pre(triggeredAdd.y) + integerConstant.k
+end when
+
+Incidence Matrix (row == equation)
+====================================
+number of rows: 16
+1:10 15 16 12 
+2:14 
+3:16 
+4:13 
+5:10 
+6:15 
+7:10 12 11 
+8:10 11 9 
+9:8 
+10:
+11:10 5 
+12:4 5 6 
+13:6 1 
+14:4 
+15:10 2 
+16:3 2 
+Transpose Incidence Matrix (row == var)
+=====================================
+number of rows: 16
+1:13 
+2:16 15 
+3:16 
+4:14 12 
+5:12 11 
+6:13 12 
+7:
+8:9 
+9:8 
+10:15 11 8 7 5 1 
+11:8 7 
+12:7 1 
+13:4 
+14:2 
+15:6 1 
+16:3 1 
+Matching
+========
+16 variables and equations
+var 1 is solved in eqn 13
+var 2 is solved in eqn 15
+var 3 is solved in eqn 16
+var 4 is solved in eqn 14
+var 5 is solved in eqn 11
+var 6 is solved in eqn 12
+var 7 is solved in eqn -1
+var 8 is solved in eqn 9
+var 9 is solved in eqn 8
+var 10 is solved in eqn 5
+var 11 is solved in eqn 7
+var 12 is solved in eqn 1
+var 13 is solved in eqn 4
+var 14 is solved in eqn 2
+var 15 is solved in eqn 6
+var 16 is solved in eqn 3
+StrongComponents
+=======
+
+BackendDAEType: simulation
+
+Known Variables (constants) (53)
+=============================
+1:  showValue6.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+2:  showValue5.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+3:  showValue1.use_numberPort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.IntegerValue, .Boolean type: Boolean (final = true )
+4:  integerConstant.k:PARAM(start = 1 )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.IntegerConstant, .Integer type: Integer (start = 1 )
+5:  triggeredAdd.y_start:PARAM()  = 0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Integer type: Integer ()
+6:  triggeredAdd.use_set:PARAM(final = true )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Boolean type: Boolean (final = true )
+7:  triggeredAdd.use_reset:PARAM(final = true )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Boolean type: Boolean (final = true )
+8:  changing.pre_u_start:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.ChangingEdge, .Boolean type: Boolean ()
+9:  booleanTable.n:PARAM(protected = true )  = 7 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Integer type: Integer (protected = true )
+10:  booleanTable.table[7]:PARAM()  = 11.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+11:  booleanTable.table[6]:PARAM()  = 9.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+12:  booleanTable.table[5]:PARAM()  = 7.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+13:  booleanTable.table[4]:PARAM()  = 6.5 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+14:  booleanTable.table[3]:PARAM()  = 6.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+15:  booleanTable.table[2]:PARAM()  = 4.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+16:  booleanTable.table[1]:PARAM()  = 2.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.SIunits.Time type: Real [7]()
+17:  booleanTable.startValue:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Boolean type: Boolean ()
+18:  falling.pre_u_start:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.FallingEdge, .Boolean type: Boolean ()
+19:  set1.nu:PARAM(min = 0 final = true )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Integer type: Integer (min = 0 final = true )
+20:  set1.y_default:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Boolean type: Boolean ()
+21:  set1.use_pre_as_default:PARAM()  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Boolean type: Boolean ()
+22:  rising.pre_u_start:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.RisingEdge, .Boolean type: Boolean ()
+23:  onDelay.delayTime:PARAM()  = 1.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.OnDelay, .Modelica.SIunits.Time type: Real ()
+24:  showValue4.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+25:  or2.nu:PARAM(min = 0 final = true )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nor, .Integer type: Integer (min = 0 final = true )
+26:  nand1.nu:PARAM(min = 0 final = true )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nand, .Integer type: Integer (min = 0 final = true )
+27:  showValue3.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+28:  showValue2.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+29:  xor1.nu:PARAM(min = 0 final = true )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Xor, .Integer type: Integer (min = 0 final = true )
+30:  or1.nu:PARAM(min = 0 final = true )  = 2 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Or, .Integer type: Integer (min = 0 final = true )
+31:  booleanStep.startValue:PARAM()  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanStep, .Boolean type: Boolean ()
+32:  booleanStep.startTime:PARAM()  = 1.5 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanStep, .Modelica.SIunits.Time type: Real ()
+33:  booleanPulse2.Twidth:PARAM(protected = true )  = booleanPulse2.period * booleanPulse2.width / 100.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real (protected = true )
+34:  booleanPulse2.startTime:PARAM()  = 0.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real ()
+35:  booleanPulse2.period:PARAM(min = 1e-60 start = 1.0 )  = 1.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real (min = 1e-60 start = 1.0 )
+36:  booleanPulse2.width:PARAM(min = 1e-60 max = 100.0 )  = 80.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Real type: Real (min = 1e-60 max = 100.0 )
+37:  booleanPulse1.Twidth:PARAM(protected = true )  = booleanPulse1.period * booleanPulse1.width / 100.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real (protected = true )
+38:  booleanPulse1.startTime:PARAM()  = 0.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real ()
+39:  booleanPulse1.period:PARAM(min = 1e-60 start = 1.0 )  = 1.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.SIunits.Time type: Real (min = 1e-60 start = 1.0 )
+40:  booleanPulse1.width:PARAM(min = 1e-60 max = 100.0 )  = 20.0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Real type: Real (min = 1e-60 max = 100.0 )
+41:  and1.nu:PARAM(min = 0 final = true )  = 3 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.And, .Integer type: Integer (min = 0 final = true )
+42:  showValue.use_activePort:PARAM(final = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (final = true )
+43: input  set1.expr[1]:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Boolean type: Boolean [2](start = false )
+44: input  set1.expr[2]:DISCRETE(start = true )  = true .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Boolean type: Boolean [2](start = true )
+45: output  triggeredAdd.local_reset:DISCRETE(start = false protected = true )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean (start = false protected = true )
+46: output  triggeredAdd.local_set:DISCRETE(start = 0 protected = true )  = 0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Modelica.Blocks.Interfaces.IntegerOutput type: Integer (start = 0 protected = true )
+47: input  showValue6.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+48: input  showValue5.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+49: input  showValue1.number:DISCRETE(start = 0 )  = 0 .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.IntegerValue, .Integer type: Integer (start = 0 )
+50: input  showValue4.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+51: input  showValue3.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+52: input  showValue2.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+53: input  showValue.active:DISCRETE(start = false )  = false .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Boolean type: Boolean (start = false )
+External Objects (0)
+=============================
+Classes of External Objects (0)
+=============================
+AliasVariables: 37
+===============
+1: input  showValue6.activePort:DISCRETE()  = showValue6.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+2: output  booleanTable.y:DISCRETE()  = onDelay.u .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanTable, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+3: output  onDelay.y:DISCRETE()  = showValue6.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.OnDelay, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+4: output  nor1.y:DISCRETE()  = not not showValue4.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Not, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+5:  falling.not_u:DISCRETE(protected = true )  = not xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.FallingEdge, .Boolean type: Boolean (protected = true )
+6: output  integerConstant.y:DISCRETE()  = integerConstant.k .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.IntegerConstant, .Modelica.Blocks.Interfaces.IntegerOutput type: Integer ()
+7: input  showValue.activePort:DISCRETE()  = or1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+8: input  showValue2.activePort:DISCRETE()  = xor1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+9: input  showValue3.activePort:DISCRETE()  = nand1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+10: input  showValue4.activePort:DISCRETE()  = showValue4.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+11: input  showValue1.numberPort:DISCRETE()  = triggeredAdd.y .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.IntegerValue, .Modelica.Blocks.Interfaces.IntegerInput type: Integer ()
+12: input  showValue5.activePort:DISCRETE()  = showValue5.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+13: output  booleanPulse1.y:DISCRETE()  = and1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+14: output  booleanStep.y:DISCRETE()  = and1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanStep, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+15: output  booleanPulse2.y:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Sources.BooleanPulse, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+16: input  changing.u:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.ChangingEdge, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+17: input  falling.u:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.FallingEdge, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+18: input  and1.u[3]:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.And, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [3]()
+19: input  nand1.u[2]:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nand, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]()
+20: input  or1.u[2]:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Or, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]()
+21: input  rising.u:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.RisingEdge, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+22: input  or2.u[2]:DISCRETE()  = xor1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nor, .Modelica.Blocks.Interfaces.BooleanVectorInput type: Boolean [2]()
+23: output  and1.y:DISCRETE()  = or1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.And, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+24: output  showValue.showActive:DISCRETE()  = or1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+25: output  or1.y:DISCRETE()  = xor1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Or, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+26: output  showValue2.showActive:DISCRETE()  = xor1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+27: output  showValue3.showActive:DISCRETE()  = nand1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.BooleanValue, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+28: output  xor1.y:DISCRETE()  = nand1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Xor, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+29: output  nand1.y:DISCRETE()  = or2.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nand, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+30: input  nor1.u:DISCRETE()  = not showValue4.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Not, .Modelica.Blocks.Interfaces.BooleanInput type: Boolean ()
+31: output  or2.y:DISCRETE()  = not showValue4.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.Nor, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+32: output  rising.y:DISCRETE()  = set1.u[1] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.RisingEdge, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+33: output  falling.y:DISCRETE()  = set1.u[2] .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.FallingEdge, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+34: input  triggeredAdd.u:DISCRETE()  = integerConstant.k .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathInteger.TriggeredAdd, .Modelica.Blocks.Interfaces.IntegerInput type: Integer ()
+35: output  changing.y:DISCRETE()  = triggeredAdd.trigger .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.ChangingEdge, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+36: output  showValue1.showNumber:DISCRETE()  = triggeredAdd.y .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.Interaction.Show.IntegerValue, .Modelica.Blocks.Interfaces.IntegerOutput type: Integer ()
+37: output  set1.y:DISCRETE()  = showValue5.showActive .Modelica.Blocks.Examples.BooleanNetwork1, .Modelica.Blocks.MathBoolean.MultiSwitch, .Modelica.Blocks.Interfaces.BooleanOutput type: Boolean ()
+
+Simple Equations (0)
+=========
+Initial Equations (21)
+=========
+1 : pre(and1.u[1]) = false
+2 : pre(and1.u[2]) = false
+3 : pre(xor1.u[2]) = false
+4 : booleanPulse1.pulsStart = booleanPulse1.startTime
+5 : booleanPulse2.pulsStart = booleanPulse2.startTime
+6 : pre(or1.u[1]) = false
+7 : pre(xor1.u[2]) = false
+8 : pre(xor1.u[1]) = false
+9 : pre(xor1.u[2]) = false
+10 : pre(nand1.u[1]) = false
+11 : pre(xor1.u[2]) = false
+12 : pre(or2.u[1]) = false
+13 : pre(xor1.u[2]) = false
+14 : pre(onDelay.u) = false
+15 : pre(onDelay.t_next) = -1.0 + time
+16 : pre(xor1.u[2]) = rising.pre_u_start
+17 : pre(showValue5.showActive) = set1.y_default
+18 : pre(not xor1.u[2]) = not falling.pre_u_start
+19 :   (booleanTable.index, booleanTable.nextTime, onDelay.u) := Modelica.Blocks.Sources.BooleanTable.getFirstIndex({booleanTable.table[1], booleanTable.table[2], booleanTable.table[3], booleanTable.table[4], booleanTable.table[5], booleanTable.table[6], booleanTable.table[7]}, time, booleanTable.startValue);
+
+20 : pre(xor1.u[2]) = changing.pre_u_start
+21 : pre(triggeredAdd.y) = triggeredAdd.y_start
+Zero Crossings (numberOfRelations = 0) : 
+===============
+Samples : 
+===============
+
+When Clauses :
+===============
+
+Constraints:
+===============
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 10.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'Modelica.Blocks.Examples.BooleanNetwork1', storeInTemp = false, noClean = false, options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = ''",
+    messages = "Simulation failed for model: Modelica.Blocks.Examples.BooleanNetwork1
+Error: Ableitung des Ausdrucks time >= booleanPulse1.pulsStart and time < booleanPulse1.pulsStart + booleanPulse1.Twidth ist nicht existent
+Error: Ableitung des Ausdrucks time >= booleanPulse2.pulsStart and time < booleanPulse2.pulsStart + booleanPulse2.Twidth ist nicht existent
+Error: Interner Fehler IndexReduction.pantelidesIndexReduction failed! Found empty set of continues equations. Use +d=bltdump to get more information.
+Error: Interner Fehler - IndexReduction.pantelidesIndexReduction failed! Use +d=bltdump to get more information.
+Error: Interner Fehler - IndexReduction.pantelidesIndexReduction failed!
+Error: Das Modell ist strukturell singulär. Fehler wurde durch Sortieren der Gleichungen  für Variable  gefunden
+Error: Interner Fehler Transformation Module failed!
+",
+    timeFrontend = 0.0,
+    timeBackend = 0.0,
+    timeSimCode = 0.0,
+    timeTemplates = 0.0,
+    timeCompile = 0.0,
+    timeSimulation = 0.0,
+    timeTotal = 0.0
+end SimulationResult;
+""
+"Error Open File!"

@@ -1,0 +1,2 @@
+loadFile("B.mo");
+simulate(B.C);

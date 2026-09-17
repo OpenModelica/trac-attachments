@@ -1,0 +1,3 @@
+loadFile("planarRotationTotal.mo"); 
+checkModel(Modelica.Mechanics.MultiBody.Frames.Quaternions.planarRotation);
+getErrorString();

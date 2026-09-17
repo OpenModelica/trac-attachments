@@ -1,0 +1,44 @@
+// name:     Modelica.Blocks.Examples.BooleanNetwork1
+// keywords: simulation MSL Examples
+// status: correct
+// teardown_command: rm -f *_init.xml *_records.c *.exe *.log *_res.mat *.c *.libs *.makefile *.o *.dll *.so *_functions.h *.h *_diff.csv
+//
+// Simulation Results 
+// Modelica Standard Library
+//
+
+loadModel(Modelica,{"3.2.1"});
+
+setMatchingAlgorithm("PFPlusExt");
+setIndexReductionMethod("dynamicStateSelection");
+simulate(Modelica.Blocks.Examples.BooleanNetwork1);
+getErrorString();
+
+res := OpenModelica.Scripting.compareSimulationResults("Modelica.Blocks.Examples.BooleanNetwork1_res.mat",
+  "ReferenceFiles/Modelica.Blocks.Examples.BooleanNetwork1.mat",
+  "Modelica.Blocks.Examples.BooleanNetwork1_diff.csv",0.01,0.0001,
+  {""});
+
+// Result:
+// true
+// true
+// true
+// No. of Equations: 70
+// No. of Variables: 70
+// record SimulationResult
+//     resultFile = "",
+//     simulationOptions = "startTime = 0.0, stopTime = 10.0, numberOfIntervals = 500, tolerance = 1e-06, method = 'dassl', fileNamePrefix = 'Modelica.Blocks.Examples.BooleanNetwork1', storeInTemp = false, noClean = false, options = '', outputFormat = 'mat', variableFilter = '.*', measureTime = false, cflags = '', simflags = ''",
+//     messages = "Simulation failed for model: Modelica.Blocks.Examples.BooleanNetwork1
+// Error: Ableitung des Ausdrucks time >= booleanPulse1.pulsStart and time < booleanPulse1.pulsStart + booleanPulse1.Twidth ist nicht existent
+// Error: Ableitung des Ausdrucks time >= booleanPulse2.pulsStart and time < booleanPulse2.pulsStart + booleanPulse2.Twidth ist nicht existent
+// Error: Interner Fehler IndexReduction.pantelidesIndexReduction failed! Found empty set of continues equations. Use +d=bltdump to get more information.
+// Error: Interner Fehler - IndexReduction.pantelidesIndexReduction failed! Use +d=bltdump to get more information.
+// Error: Interner Fehler - IndexReduction.pantelidesIndexReduction failed!
+// Error: Das Modell ist strukturell singulär. Fehler wurde durch Sortieren der Gleichungen  für Variable  gefunden
+// Error: Interner Fehler Transformation Module failed!
+// ",
+// end SimulationResult;
+// ""
+// "Error Open File!"
+// "Files Equal!"
+// endResult

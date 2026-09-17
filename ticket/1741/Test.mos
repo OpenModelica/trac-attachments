@@ -1,0 +1,6 @@
+loadFile("test.mo");
+getErrorString();
+setEnvironmentVar("MODELICAUSERCFLAGS", "-L.");
+simulate(Test, stopTime=10);
+
+plot({x,y});

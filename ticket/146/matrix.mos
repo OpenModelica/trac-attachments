@@ -1,0 +1,5 @@
+loadFile("matrix.mo");
+system("gcc -c -o libFunc.a Func.c");
+checkModel(tt);
+buildModel(tt,numberOfIntervals=1);
+simulate(tt,numberOfIntervals=1)

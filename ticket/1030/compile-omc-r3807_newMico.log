@@ -1,0 +1,1127 @@
+mkdir -p ./build/bin
+mkdir -p ./build/lib
+mkdir -p ./build/include
+mkdir -p ./build/doc
+mkdir -p ./build/doc/testmodels
+(cd c_runtime && make -f Makefile)
+make[1]: Entering directory `/home/dietmarw/.workspace/OM_trunk/c_runtime'
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o simulation_runtime.o simulation_runtime.cpp
+simulation_runtime.cpp: In function ‘int main(int, char**)’:
+simulation_runtime.cpp:206: warning: deprecated conversion from string constant to ‘char*’
+simulation_runtime.cpp:222: warning: deprecated conversion from string constant to ‘char*’
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o simulation_init.o simulation_init.cpp
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o simulation_input.o simulation_input.cpp
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o simulation_events.o simulation_events.cpp
+simulation_events.cpp: In function ‘bool change(double&)’:
+simulation_events.cpp:426: warning: suggest parentheses around && within ||
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o solver_dasrt.o solver_dasrt.cpp
+solver_dasrt.cpp: In function ‘double calcTinyStep(double)’:
+solver_dasrt.cpp:64: warning: deprecated conversion from string constant to ‘char*’
+solver_dasrt.cpp: In function ‘int dassl_main(int, char**, double&, double&, double&, long int&, double&)’:
+solver_dasrt.cpp:92: warning: deprecated conversion from string constant to ‘char*’
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o solver_euler.o solver_euler.cpp
+solver_euler.cpp: In function ‘int euler_main(int, char**, double&, double&, double&, long int&, double&)’:
+solver_euler.cpp:54: warning: deprecated conversion from string constant to ‘char*’
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o simulation_result.o simulation_result.cpp
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o tables.o tables.cpp
+g++  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o options.o options.cpp
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o dgesv_aux.o dgesv_aux.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o meta_modelica.o meta_modelica.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o boolean_array.o boolean_array.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o index_spec.o index_spec.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o integer_array.o integer_array.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o memory_pool.o memory_pool.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o base_array.o base_array.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o real_array.o real_array.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o string_array.o string_array.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o read_write.o read_write.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o utility.o utility.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o modelica_string.o modelica_string.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o bigden.o bigden.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o ddasrt.o ddasrt.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o dlinpk.o dlinpk.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o enorm.o enorm.c
+enorm.c: In function ‘enorm_’:
+enorm.c:26: warning: ‘ret_val’ may be used uninitialized in this function
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o hybrd1.o hybrd1.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o nelmead.o nelmead.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o qform.o qform.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o r1updt.o r1updt.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o biglag.o biglag.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o ddassl.o ddassl.c
+ddassl.c: In function ‘xermsg_’:
+ddassl.c:4244: warning: suggest parentheses around && within ||
+ddassl.c:4297: warning: suggest parentheses around && within ||
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o dogleg.o dogleg.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o fdjac1.o fdjac1.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o hybrj.o hybrj.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o newuoa.o newuoa.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o qrfac.o qrfac.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o trsapp.o trsapp.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o daux.o daux.c
+daux.c: In function ‘i1mach_’:
+daux.c:179: warning: missing braces around initializer
+daux.c:179: warning: (near initialization for ‘equiv_0.e_1’)
+daux.c:717: warning: ‘ret_val’ may be used uninitialized in this function
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o dlamch.o dlamch.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o dpmpar.o dpmpar.c
+dpmpar.c: In function ‘dpmpar_’:
+dpmpar.c:22: warning: missing braces around initializer
+dpmpar.c:22: warning: (near initialization for ‘equiv_2.e_1’)
+dpmpar.c:194: warning: suggest parentheses around + or - inside shift
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o hybrd.o hybrd.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o lsame.o lsame.c
+lsame.c: In function ‘lsame_’:
+lsame.c:89: warning: suggest parentheses around && within ||
+lsame.c:90: warning: suggest parentheses around && within ||
+lsame.c:93: warning: suggest parentheses around && within ||
+lsame.c:94: warning: suggest parentheses around && within ||
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o newuob.o newuob.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o r1mpyq.o r1mpyq.c
+gcc -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.  -Wall -O3 `case i686 in i[3456]86) echo "-msse2 -mfpmath=sse";; x86_64) echo "-msse2 -mfpmath=sse -fPIC";; *) echo "";; esac` -fexceptions -ansi -pedantic -I.   -c -o update.o update.c
+ar -ru libc_runtime.a  boolean_array.o index_spec.o integer_array.o memory_pool.o base_array.o real_array.o string_array.o read_write.o utility.o modelica_string.o bigden.o ddasrt.o  dlinpk.o  enorm.o   hybrd1.o  nelmead.o  qform.o   r1updt.o biglag.o  ddassl.o  dogleg.o  fdjac1.o  hybrj.o   newuoa.o   qrfac.o   trsapp.o daux.o    dlamch.o  dpmpar.o  hybrd.o   lsame.o   newuob.o   r1mpyq.o  update.o 
+ar: creating libc_runtime.a
+ar -ru libsim.a  simulation_runtime.o simulation_init.o simulation_input.o simulation_events.o solver_dasrt.o solver_euler.o simulation_result.o tables.o options.o dgesv_aux.o meta_modelica.o 
+ar: creating libsim.a
+cd libf2c && make -f makefile.u
+make[2]: Entering directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/libf2c'
+cp signal1.h0 signal1.h
+cp sysdep1.h0 sysdep1.h
+cc -c f77vers.c
+cc -c i77vers.c
+cc -c -DSkip_f2c_Undefs -fexceptions -O main.c
+ld -r -x -o main.xxx main.o
+mv main.xxx main.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_rnge.c
+ld -r -x -o s_rnge.xxx s_rnge.o
+mv s_rnge.xxx s_rnge.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O abort_.c
+ld -r -x -o abort_.xxx abort_.o
+mv abort_.xxx abort_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O exit_.c
+ld -r -x -o exit_.xxx exit_.o
+mv exit_.xxx exit_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O getarg_.c
+ld -r -x -o getarg_.xxx getarg_.o
+mv getarg_.xxx getarg_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O iargc_.c
+ld -r -x -o iargc_.xxx iargc_.o
+mv iargc_.xxx iargc_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O getenv_.c
+ld -r -x -o getenv_.xxx getenv_.o
+mv getenv_.xxx getenv_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O signal_.c
+ld -r -x -o signal_.xxx signal_.o
+mv signal_.xxx signal_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_stop.c
+ld -r -x -o s_stop.xxx s_stop.o
+mv s_stop.xxx s_stop.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_paus.c
+ld -r -x -o s_paus.xxx s_paus.o
+mv s_paus.xxx s_paus.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O system_.c
+ld -r -x -o system_.xxx system_.o
+mv system_.xxx system_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O cabs.c
+ld -r -x -o cabs.xxx cabs.o
+mv cabs.xxx cabs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O derf_.c
+ld -r -x -o derf_.xxx derf_.o
+mv derf_.xxx derf_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O derfc_.c
+ld -r -x -o derfc_.xxx derfc_.o
+mv derfc_.xxx derfc_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O erf_.c
+ld -r -x -o erf_.xxx erf_.o
+mv erf_.xxx erf_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O erfc_.c
+ld -r -x -o erfc_.xxx erfc_.o
+mv erfc_.xxx erfc_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O sig_die.c
+ld -r -x -o sig_die.xxx sig_die.o
+mv sig_die.xxx sig_die.o
+cc -fexceptions -O -DNO_FPINIT arithchk.c -lm -o a.exe ||\
+	 cc -DNO_LONG_LONG -fexceptions -O -DNO_FPINIT arithchk.c -lm -o a.exe
+arithchk.c: In function ‘ccheck’:
+arithchk.c:125: warning: format not a string literal and no format arguments
+./a.exe >arith.h
+rm -f a.exe arithchk.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O uninit.c
+ld -r -x -o uninit.xxx uninit.o
+mv uninit.xxx uninit.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_ci.c
+ld -r -x -o pow_ci.xxx pow_ci.o
+mv pow_ci.xxx pow_ci.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_dd.c
+ld -r -x -o pow_dd.xxx pow_dd.o
+mv pow_dd.xxx pow_dd.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_di.c
+ld -r -x -o pow_di.xxx pow_di.o
+mv pow_di.xxx pow_di.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_hh.c
+ld -r -x -o pow_hh.xxx pow_hh.o
+mv pow_hh.xxx pow_hh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_ii.c
+ld -r -x -o pow_ii.xxx pow_ii.o
+mv pow_ii.xxx pow_ii.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_ri.c
+ld -r -x -o pow_ri.xxx pow_ri.o
+mv pow_ri.xxx pow_ri.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_zi.c
+ld -r -x -o pow_zi.xxx pow_zi.o
+mv pow_zi.xxx pow_zi.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O pow_zz.c
+ld -r -x -o pow_zz.xxx pow_zz.o
+mv pow_zz.xxx pow_zz.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_abs.c
+ld -r -x -o c_abs.xxx c_abs.o
+mv c_abs.xxx c_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_cos.c
+ld -r -x -o c_cos.xxx c_cos.o
+mv c_cos.xxx c_cos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_div.c
+ld -r -x -o c_div.xxx c_div.o
+mv c_div.xxx c_div.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_exp.c
+ld -r -x -o c_exp.xxx c_exp.o
+mv c_exp.xxx c_exp.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_log.c
+ld -r -x -o c_log.xxx c_log.o
+mv c_log.xxx c_log.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_sin.c
+ld -r -x -o c_sin.xxx c_sin.o
+mv c_sin.xxx c_sin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O c_sqrt.c
+ld -r -x -o c_sqrt.xxx c_sqrt.o
+mv c_sqrt.xxx c_sqrt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_abs.c
+ld -r -x -o z_abs.xxx z_abs.o
+mv z_abs.xxx z_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_cos.c
+ld -r -x -o z_cos.xxx z_cos.o
+mv z_cos.xxx z_cos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_div.c
+ld -r -x -o z_div.xxx z_div.o
+mv z_div.xxx z_div.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_exp.c
+ld -r -x -o z_exp.xxx z_exp.o
+mv z_exp.xxx z_exp.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_log.c
+ld -r -x -o z_log.xxx z_log.o
+mv z_log.xxx z_log.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_sin.c
+ld -r -x -o z_sin.xxx z_sin.o
+mv z_sin.xxx z_sin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O z_sqrt.c
+ld -r -x -o z_sqrt.xxx z_sqrt.o
+mv z_sqrt.xxx z_sqrt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_abs.c
+ld -r -x -o r_abs.xxx r_abs.o
+mv r_abs.xxx r_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_acos.c
+ld -r -x -o r_acos.xxx r_acos.o
+mv r_acos.xxx r_acos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_asin.c
+ld -r -x -o r_asin.xxx r_asin.o
+mv r_asin.xxx r_asin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_atan.c
+ld -r -x -o r_atan.xxx r_atan.o
+mv r_atan.xxx r_atan.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_atn2.c
+ld -r -x -o r_atn2.xxx r_atn2.o
+mv r_atn2.xxx r_atn2.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_cnjg.c
+ld -r -x -o r_cnjg.xxx r_cnjg.o
+mv r_cnjg.xxx r_cnjg.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_cos.c
+ld -r -x -o r_cos.xxx r_cos.o
+mv r_cos.xxx r_cos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_cosh.c
+ld -r -x -o r_cosh.xxx r_cosh.o
+mv r_cosh.xxx r_cosh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_dim.c
+ld -r -x -o r_dim.xxx r_dim.o
+mv r_dim.xxx r_dim.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_exp.c
+ld -r -x -o r_exp.xxx r_exp.o
+mv r_exp.xxx r_exp.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_imag.c
+ld -r -x -o r_imag.xxx r_imag.o
+mv r_imag.xxx r_imag.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_int.c
+ld -r -x -o r_int.xxx r_int.o
+mv r_int.xxx r_int.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_lg10.c
+ld -r -x -o r_lg10.xxx r_lg10.o
+mv r_lg10.xxx r_lg10.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_log.c
+ld -r -x -o r_log.xxx r_log.o
+mv r_log.xxx r_log.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_mod.c
+ld -r -x -o r_mod.xxx r_mod.o
+mv r_mod.xxx r_mod.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_nint.c
+ld -r -x -o r_nint.xxx r_nint.o
+mv r_nint.xxx r_nint.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_sign.c
+ld -r -x -o r_sign.xxx r_sign.o
+mv r_sign.xxx r_sign.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_sin.c
+ld -r -x -o r_sin.xxx r_sin.o
+mv r_sin.xxx r_sin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_sinh.c
+ld -r -x -o r_sinh.xxx r_sinh.o
+mv r_sinh.xxx r_sinh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_sqrt.c
+ld -r -x -o r_sqrt.xxx r_sqrt.o
+mv r_sqrt.xxx r_sqrt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_tan.c
+ld -r -x -o r_tan.xxx r_tan.o
+mv r_tan.xxx r_tan.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O r_tanh.c
+ld -r -x -o r_tanh.xxx r_tanh.o
+mv r_tanh.xxx r_tanh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_abs.c
+ld -r -x -o d_abs.xxx d_abs.o
+mv d_abs.xxx d_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_acos.c
+ld -r -x -o d_acos.xxx d_acos.o
+mv d_acos.xxx d_acos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_asin.c
+ld -r -x -o d_asin.xxx d_asin.o
+mv d_asin.xxx d_asin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_atan.c
+ld -r -x -o d_atan.xxx d_atan.o
+mv d_atan.xxx d_atan.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_atn2.c
+ld -r -x -o d_atn2.xxx d_atn2.o
+mv d_atn2.xxx d_atn2.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_cnjg.c
+ld -r -x -o d_cnjg.xxx d_cnjg.o
+mv d_cnjg.xxx d_cnjg.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_cos.c
+ld -r -x -o d_cos.xxx d_cos.o
+mv d_cos.xxx d_cos.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_cosh.c
+ld -r -x -o d_cosh.xxx d_cosh.o
+mv d_cosh.xxx d_cosh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_dim.c
+ld -r -x -o d_dim.xxx d_dim.o
+mv d_dim.xxx d_dim.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_exp.c
+ld -r -x -o d_exp.xxx d_exp.o
+mv d_exp.xxx d_exp.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_imag.c
+ld -r -x -o d_imag.xxx d_imag.o
+mv d_imag.xxx d_imag.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_int.c
+ld -r -x -o d_int.xxx d_int.o
+mv d_int.xxx d_int.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_lg10.c
+ld -r -x -o d_lg10.xxx d_lg10.o
+mv d_lg10.xxx d_lg10.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_log.c
+ld -r -x -o d_log.xxx d_log.o
+mv d_log.xxx d_log.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_mod.c
+ld -r -x -o d_mod.xxx d_mod.o
+mv d_mod.xxx d_mod.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_nint.c
+ld -r -x -o d_nint.xxx d_nint.o
+mv d_nint.xxx d_nint.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_prod.c
+ld -r -x -o d_prod.xxx d_prod.o
+mv d_prod.xxx d_prod.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_sign.c
+ld -r -x -o d_sign.xxx d_sign.o
+mv d_sign.xxx d_sign.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_sin.c
+ld -r -x -o d_sin.xxx d_sin.o
+mv d_sin.xxx d_sin.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_sinh.c
+ld -r -x -o d_sinh.xxx d_sinh.o
+mv d_sinh.xxx d_sinh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_sqrt.c
+ld -r -x -o d_sqrt.xxx d_sqrt.o
+mv d_sqrt.xxx d_sqrt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_tan.c
+ld -r -x -o d_tan.xxx d_tan.o
+mv d_tan.xxx d_tan.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O d_tanh.c
+ld -r -x -o d_tanh.xxx d_tanh.o
+mv d_tanh.xxx d_tanh.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_abs.c
+ld -r -x -o i_abs.xxx i_abs.o
+mv i_abs.xxx i_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_dim.c
+ld -r -x -o i_dim.xxx i_dim.o
+mv i_dim.xxx i_dim.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_dnnt.c
+ld -r -x -o i_dnnt.xxx i_dnnt.o
+mv i_dnnt.xxx i_dnnt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_indx.c
+ld -r -x -o i_indx.xxx i_indx.o
+mv i_indx.xxx i_indx.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_len.c
+ld -r -x -o i_len.xxx i_len.o
+mv i_len.xxx i_len.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_mod.c
+ld -r -x -o i_mod.xxx i_mod.o
+mv i_mod.xxx i_mod.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_nint.c
+ld -r -x -o i_nint.xxx i_nint.o
+mv i_nint.xxx i_nint.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O i_sign.c
+ld -r -x -o i_sign.xxx i_sign.o
+mv i_sign.xxx i_sign.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O lbitbits.c
+ld -r -x -o lbitbits.xxx lbitbits.o
+mv lbitbits.xxx lbitbits.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O lbitshft.c
+ld -r -x -o lbitshft.xxx lbitshft.o
+mv lbitshft.xxx lbitshft.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_abs.c
+ld -r -x -o h_abs.xxx h_abs.o
+mv h_abs.xxx h_abs.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_dim.c
+ld -r -x -o h_dim.xxx h_dim.o
+mv h_dim.xxx h_dim.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_dnnt.c
+ld -r -x -o h_dnnt.xxx h_dnnt.o
+mv h_dnnt.xxx h_dnnt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_indx.c
+ld -r -x -o h_indx.xxx h_indx.o
+mv h_indx.xxx h_indx.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_len.c
+ld -r -x -o h_len.xxx h_len.o
+mv h_len.xxx h_len.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_mod.c
+ld -r -x -o h_mod.xxx h_mod.o
+mv h_mod.xxx h_mod.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_nint.c
+ld -r -x -o h_nint.xxx h_nint.o
+mv h_nint.xxx h_nint.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O h_sign.c
+ld -r -x -o h_sign.xxx h_sign.o
+mv h_sign.xxx h_sign.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O l_ge.c
+ld -r -x -o l_ge.xxx l_ge.o
+mv l_ge.xxx l_ge.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O l_gt.c
+ld -r -x -o l_gt.xxx l_gt.o
+mv l_gt.xxx l_gt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O l_le.c
+ld -r -x -o l_le.xxx l_le.o
+mv l_le.xxx l_le.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O l_lt.c
+ld -r -x -o l_lt.xxx l_lt.o
+mv l_lt.xxx l_lt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O hl_ge.c
+ld -r -x -o hl_ge.xxx hl_ge.o
+mv hl_ge.xxx hl_ge.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O hl_gt.c
+ld -r -x -o hl_gt.xxx hl_gt.o
+mv hl_gt.xxx hl_gt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O hl_le.c
+ld -r -x -o hl_le.xxx hl_le.o
+mv hl_le.xxx hl_le.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O hl_lt.c
+ld -r -x -o hl_lt.xxx hl_lt.o
+mv hl_lt.xxx hl_lt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O ef1asc_.c
+ld -r -x -o ef1asc_.xxx ef1asc_.o
+mv ef1asc_.xxx ef1asc_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O ef1cmc_.c
+ld -r -x -o ef1cmc_.xxx ef1cmc_.o
+mv ef1cmc_.xxx ef1cmc_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O f77_aloc.c
+ld -r -x -o f77_aloc.xxx f77_aloc.o
+mv f77_aloc.xxx f77_aloc.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_cat.c
+ld -r -x -o s_cat.xxx s_cat.o
+mv s_cat.xxx s_cat.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_cmp.c
+ld -r -x -o s_cmp.xxx s_cmp.o
+mv s_cmp.xxx s_cmp.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O s_copy.c
+ld -r -x -o s_copy.xxx s_copy.o
+mv s_copy.xxx s_copy.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O backspac.c
+backspac.c: In function ‘f_back’:
+backspac.c:47: warning: ignoring return value of ‘fread’, declared with attribute warn_unused_result
+ld -r -x -o backspac.xxx backspac.o
+mv backspac.xxx backspac.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O close.c
+ld -r -x -o close.xxx close.o
+mv close.xxx close.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O dfe.c
+ld -r -x -o dfe.xxx dfe.o
+mv dfe.xxx dfe.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O dolio.c
+ld -r -x -o dolio.xxx dolio.o
+mv dolio.xxx dolio.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O due.c
+ld -r -x -o due.xxx due.o
+mv due.xxx due.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O endfile.c
+ld -r -x -o endfile.xxx endfile.o
+mv endfile.xxx endfile.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O err.c
+ld -r -x -o err.xxx err.o
+mv err.xxx err.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O fmt.c
+ld -r -x -o fmt.xxx fmt.o
+mv fmt.xxx fmt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O fmtlib.c
+ld -r -x -o fmtlib.xxx fmtlib.o
+mv fmtlib.xxx fmtlib.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O ftell_.c
+ld -r -x -o ftell_.xxx ftell_.o
+mv ftell_.xxx ftell_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O iio.c
+ld -r -x -o iio.xxx iio.o
+mv iio.xxx iio.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O ilnw.c
+ld -r -x -o ilnw.xxx ilnw.o
+mv ilnw.xxx ilnw.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O inquire.c
+ld -r -x -o inquire.xxx inquire.o
+mv inquire.xxx inquire.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O lread.c
+ld -r -x -o lread.xxx lread.o
+mv lread.xxx lread.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O lwrite.c
+ld -r -x -o lwrite.xxx lwrite.o
+mv lwrite.xxx lwrite.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O open.c
+ld -r -x -o open.xxx open.o
+mv open.xxx open.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O rdfmt.c
+ld -r -x -o rdfmt.xxx rdfmt.o
+mv rdfmt.xxx rdfmt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O rewind.c
+ld -r -x -o rewind.xxx rewind.o
+mv rewind.xxx rewind.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O rsfe.c
+ld -r -x -o rsfe.xxx rsfe.o
+mv rsfe.xxx rsfe.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O rsli.c
+ld -r -x -o rsli.xxx rsli.o
+mv rsli.xxx rsli.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O rsne.c
+ld -r -x -o rsne.xxx rsne.o
+mv rsne.xxx rsne.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O sfe.c
+ld -r -x -o sfe.xxx sfe.o
+mv sfe.xxx sfe.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O sue.c
+sue.c: In function ‘e_wsue’:
+sue.c:72: warning: ignoring return value of ‘fwrite’, declared with attribute warn_unused_result
+sue.c:79: warning: ignoring return value of ‘fwrite’, declared with attribute warn_unused_result
+ld -r -x -o sue.xxx sue.o
+mv sue.xxx sue.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O typesize.c
+ld -r -x -o typesize.xxx typesize.o
+mv typesize.xxx typesize.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O uio.c
+uio.c: In function ‘do_us’:
+uio.c:27: warning: ignoring return value of ‘fwrite’, declared with attribute warn_unused_result
+uio.c: In function ‘do_ud’:
+uio.c:60: warning: ignoring return value of ‘fwrite’, declared with attribute warn_unused_result
+ld -r -x -o uio.xxx uio.o
+mv uio.xxx uio.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O util.c
+ld -r -x -o util.xxx util.o
+mv util.xxx util.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O wref.c
+ld -r -x -o wref.xxx wref.o
+mv wref.xxx wref.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O wrtfmt.c
+ld -r -x -o wrtfmt.xxx wrtfmt.o
+mv wrtfmt.xxx wrtfmt.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O wsfe.c
+ld -r -x -o wsfe.xxx wsfe.o
+mv wsfe.xxx wsfe.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O wsle.c
+ld -r -x -o wsle.xxx wsle.o
+mv wsle.xxx wsle.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O wsne.c
+ld -r -x -o wsne.xxx wsne.o
+mv wsne.xxx wsne.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O xwsne.c
+ld -r -x -o xwsne.xxx xwsne.o
+mv xwsne.xxx xwsne.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O dtime_.c
+ld -r -x -o dtime_.xxx dtime_.o
+mv dtime_.xxx dtime_.o
+cc -c -DSkip_f2c_Undefs -fexceptions -O etime_.c
+ld -r -x -o etime_.xxx etime_.o
+mv etime_.xxx etime_.o
+ar r libf2c.a f77vers.o i77vers.o main.o s_rnge.o abort_.o exit_.o getarg_.o iargc_.o getenv_.o signal_.o s_stop.o s_paus.o system_.o cabs.o derf_.o derfc_.o erf_.o erfc_.o sig_die.o uninit.o pow_ci.o pow_dd.o pow_di.o pow_hh.o pow_ii.o pow_ri.o pow_zi.o pow_zz.o c_abs.o c_cos.o c_div.o c_exp.o c_log.o c_sin.o c_sqrt.o z_abs.o z_cos.o z_div.o z_exp.o z_log.o z_sin.o z_sqrt.o r_abs.o r_acos.o r_asin.o r_atan.o r_atn2.o r_cnjg.o r_cos.o r_cosh.o r_dim.o r_exp.o r_imag.o r_int.o r_lg10.o r_log.o r_mod.o r_nint.o r_sign.o r_sin.o r_sinh.o r_sqrt.o r_tan.o r_tanh.o d_abs.o d_acos.o d_asin.o d_atan.o d_atn2.o d_cnjg.o d_cos.o d_cosh.o d_dim.o d_exp.o d_imag.o d_int.o d_lg10.o d_log.o d_mod.o d_nint.o d_prod.o d_sign.o d_sin.o d_sinh.o d_sqrt.o d_tan.o d_tanh.o i_abs.o i_dim.o i_dnnt.o i_indx.o i_len.o i_mod.o i_nint.o i_sign.o lbitbits.o lbitshft.o h_abs.o h_dim.o h_dnnt.o h_indx.o h_len.o h_mod.o h_nint.o h_sign.o l_ge.o l_gt.o l_le.o l_lt.o hl_ge.o hl_gt.o hl_le.o hl_lt.o ef1asc_.o ef1cmc_.o f77_aloc.o s_cat.o s_cmp.o s_copy.o backspac.o close.o dfe.o dolio.o due.o endfile.o err.o fmt.o fmtlib.o ftell_.o iio.o ilnw.o inquire.o lread.o lwrite.o open.o rdfmt.o rewind.o rsfe.o rsli.o rsne.o sfe.o sue.o typesize.o uio.o util.o wref.o wrtfmt.o wsfe.o wsle.o wsne.o xwsne.o dtime_.o etime_.o
+ar: creating libf2c.a
+ranlib libf2c.a
+make[2]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/libf2c'
+cd ./sendData && /usr//bin/qmake && make -f Makefile
+make[2]: Entering directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/sendData'
+g++ -c -pipe -O2 -fPIC -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -I. -I. -o sendData.o sendData.cpp
+sendData.cpp:1183: warning: unused parameter ‘port’
+rm -f libsendData.a
+ar cqs libsendData.a sendData.o
+rm -f release/libsendData.a
+mv -f libsendData.a release/
+make[2]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/c_runtime/sendData'
+cp blaswrap.h f2c.h integer_array.h memory_pool.h modelica_string.h base_array.h inline.h real_array.h string_array.h boolean_array.h index_spec.h matrix.h modelica.h read_write.h simulation_runtime.h simulation_events.h utility.h simulation_init.h simulation_input.h solver_dasrt.h solver_euler.h simulation_result.h meta_modelica.h sendData/sendData.h sendData/humbug.h ../build/include/
+cp libc_runtime.a libsim.a ../build/lib/
+cp libf2c/libf2c.* ../build/lib/
+cp sendData/release/libsendData.a ../build/lib/
+make[1]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/c_runtime'
+#(cd Compiler/rml2sig && make -f Makefile)
+(cd Compiler && make -f Makefile release)
+make[1]: Entering directory `/home/dietmarw/.workspace/OM_trunk/Compiler'
+rm -f .depend
+time /home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml -fdump-depends Absyn.mo Algorithm.mo Builtin.mo Ceval.mo ClassInf.mo ClassLoader.mo Codegen.mo Connect.mo Convert.mo DAE.mo DAELow.mo Derive.mo Debug.mo DFA.mo Dump.mo DumpGraphviz.mo Constants.mo Env.mo Error.mo Exp.mo SCode.mo Graphviz.mo Inst.mo Interactive.mo Lookup.mo Main.mo MetaUtil.mo Mod.mo ModUtil.mo Patternm.mo Prefix.mo Static.mo SimCodegen.mo Types.mo TaskGraph.mo Util.mo Values.mo VarTransform.mo Refactor.mo DAEQuery.mo XMLDump.mo > .depend
+7.09user 0.76system 0:10.82elapsed 72%CPU (0avgtext+0avgdata 0maxresident)k
+0inputs+16outputs (0major+94330minor)pagefaults 0swaps
+(cd omc_release && make)
+make[2]: Entering directory `/home/dietmarw/.workspace/OM_trunk/Compiler/omc_release'
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Absyn.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Absyn.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Absyn.o Absyn.c
+cp Absyn.h ../Absyn.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Algorithm.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Algorithm.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Algorithm.o Algorithm.c
+cp Algorithm.h ../Algorithm.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Builtin.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Builtin.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Builtin.o Builtin.c
+cp Builtin.h ../Builtin.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Ceval.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Ceval.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Ceval.o Ceval.c
+cp Ceval.h ../Ceval.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c ClassInf.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace ClassInf.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o ClassInf.o ClassInf.c
+cp ClassInf.h ../ClassInf.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c ClassLoader.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace ClassLoader.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o ClassLoader.o ClassLoader.c
+cp ClassLoader.h ../ClassLoader.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Codegen.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Codegen.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Codegen.o Codegen.c
+cp Codegen.h ../Codegen.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Connect.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Connect.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Connect.o Connect.c
+cp Connect.h ../Connect.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Convert.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Convert.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Convert.o Convert.c
+cp Convert.h ../Convert.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c DAE.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace DAE.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o DAE.o DAE.c
+cp DAE.h ../DAE.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c DAELow.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace DAELow.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o DAELow.o DAELow.c
+cp DAELow.h ../DAELow.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Derive.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Derive.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Derive.o Derive.c
+cp Derive.h ../Derive.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Debug.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Debug.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Debug.o Debug.c
+cp Debug.h ../Debug.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c DFA.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace DFA.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o DFA.o DFA.c
+cp DFA.h ../DFA.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Dump.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Dump.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Dump.o Dump.c
+cp Dump.h ../Dump.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c DumpGraphviz.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace DumpGraphviz.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o DumpGraphviz.o DumpGraphviz.c
+cp DumpGraphviz.h ../DumpGraphviz.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Constants.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Constants.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Constants.o Constants.c
+cp Constants.h ../Constants.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Env.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Env.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Env.o Env.c
+cp Env.h ../Env.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Error.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Error.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Error.o Error.c
+cp Error.h ../Error.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Exp.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Exp.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Exp.o Exp.c
+cp Exp.h ../Exp.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c SCode.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace SCode.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o SCode.o SCode.c
+cp SCode.h ../SCode.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Graphviz.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Graphviz.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Graphviz.o Graphviz.c
+cp Graphviz.h ../Graphviz.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Inst.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Inst.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Inst.o Inst.c
+cp Inst.h ../Inst.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Interactive.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Interactive.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Interactive.o Interactive.c
+cp Interactive.h ../Interactive.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Lookup.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Lookup.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Lookup.o Lookup.c
+cp Lookup.h ../Lookup.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Main.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Main.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Main.o Main.c
+cp Main.h ../Main.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c MetaUtil.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace MetaUtil.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o MetaUtil.o MetaUtil.c
+cp MetaUtil.h ../MetaUtil.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Mod.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Mod.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Mod.o Mod.c
+cp Mod.h ../Mod.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c ModUtil.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace ModUtil.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o ModUtil.o ModUtil.c
+cp ModUtil.h ../ModUtil.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Patternm.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Patternm.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Patternm.o Patternm.c
+cp Patternm.h ../Patternm.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Prefix.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Prefix.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Prefix.o Prefix.c
+cp Prefix.h ../Prefix.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Static.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Static.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Static.o Static.c
+cp Static.h ../Static.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c SimCodegen.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace SimCodegen.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o SimCodegen.o SimCodegen.c
+cp SimCodegen.h ../SimCodegen.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Types.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Types.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Types.o Types.c
+cp Types.h ../Types.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c TaskGraph.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace TaskGraph.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o TaskGraph.o TaskGraph.c
+cp TaskGraph.h ../TaskGraph.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Util.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Util.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Util.o Util.c
+cp Util.h ../Util.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Values.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Values.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Values.o Values.c
+cp Values.h ../Values.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c VarTransform.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace VarTransform.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o VarTransform.o VarTransform.c
+cp VarTransform.h ../VarTransform.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c Refactor.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace Refactor.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o Refactor.o Refactor.c
+cp Refactor.h ../Refactor.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c DAEQuery.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace DAEQuery.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o DAEQuery.o DAEQuery.c
+cp DAEQuery.h ../DAEQuery.h
+/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rmlc -Wr,-ftrace -c XMLDump.mo
+"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/bin/rml" -Eplain -ftrace XMLDump.mo
+gcc -c -O2 -fomit-frame-pointer -I"/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include"/plain -o XMLDump.o XMLDump.c
+cp XMLDump.h ../XMLDump.h
+make -C ../runtime
+make[3]: Entering directory `/home/dietmarw/.workspace/OM_trunk/Compiler/runtime'
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o rtopts.o rtopts.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o socketimpl.o socketimpl.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o printimpl.o printimpl.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o systemimpl.o systemimpl.c
+systemimpl.c: In function ‘System__pwd’:
+systemimpl.c:2077: warning: ignoring return value of ‘getcwd’, declared with attribute warn_unused_result
+systemimpl.c: In function ‘System__writeFile’:
+systemimpl.c:2103: warning: ignoring return value of ‘fwrite’, declared with attribute warn_unused_result
+systemimpl.c: In function ‘System__setDataPort’:
+systemimpl.c:2697: warning: format ‘%s’ expects type ‘char *’, but argument 3 has type ‘int’
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o settingsimpl.o settingsimpl.c
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o ptolemyio.o ptolemyio.cpp
+ptolemyio.cpp: In function ‘void* read_ptolemy_dataset(char*, int, char**, int)’:
+ptolemyio.cpp:78: warning: deprecated conversion from string constant to ‘char*’
+ptolemyio.cpp:83: warning: deprecated conversion from string constant to ‘char*’
+ptolemyio.cpp: In function ‘int read_ptolemy_dataset_size(char*)’:
+ptolemyio.cpp:152: warning: deprecated conversion from string constant to ‘char*’
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o daeext.o daeext.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o ErrorMessage.o ErrorMessage.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o errorext.o errorext.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o omc_communication_impl.o omc_communication_impl.cpp
+omc_communication_impl.cpp:110: warning: deprecated conversion from string constant to ‘char*’
+omc_communication_impl.cpp:111: warning: deprecated conversion from string constant to ‘char*’
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o corbaimpl.o corbaimpl.cpp
+corbaimpl.cpp: In function ‘void* Corba__initialize(rml_state*)’:
+corbaimpl.cpp:357: warning: deprecated conversion from string constant to ‘char*’
+corbaimpl.cpp:357: warning: deprecated conversion from string constant to ‘char*’
+corbaimpl.cpp:357: warning: deprecated conversion from string constant to ‘char*’
+corbaimpl.cpp:357: warning: deprecated conversion from string constant to ‘char*’
+corbaimpl.cpp:371: warning: deprecated conversion from string constant to ‘char*’
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DYYTEXT_POINTER=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DHAVE_VPRINTF=1 -DHAVE_GETCWD=1 -DHAVE_SELECT=1 -DHAVE_STRDUP=1 -DHAVE_STRERROR=1 -DHAVE_SCANDIR=1  -DUSE_CORBA -O3 -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I../../c_runtime -I../ -I. -I/usr/local//include -I./   -c -o omc_communication.o omc_communication.cc
+make[3]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/Compiler/runtime'
+make -C ../absyn_builder
+make[3]: Entering directory `/home/dietmarw/.workspace/OM_trunk/Compiler/absyn_builder'
+cd ../../flat_modelica_parser/src; make -f Makefile
+make[4]: Entering directory `/home/dietmarw/.workspace/OM_trunk/flat_modelica_parser/src'
+g++ -O3 -Wall -I/usr/include/ -I../../modelica_parser/src -c flat_modelica_lexer.cpp
+g++ -O3 -Wall -I/usr/include/ -I../../modelica_parser/src -c flat_modelica_parser.cpp
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::element_list()’:
+flat_modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::element()’:
+flat_modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::equation_annotation_list()’:
+flat_modelica_parser.g:569: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:569: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:569: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::equation()’:
+flat_modelica_parser.g:639: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:639: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:639: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::algorithm_annotation_list()’:
+flat_modelica_parser.g:607: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:607: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:607: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g: In member function ‘void flat_modelica_parser::algorithm()’:
+flat_modelica_parser.g:673: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:673: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.g:673: warning: deprecated conversion from string constant to ‘char*’
+flat_modelica_parser.cpp: In member function ‘void flat_modelica_parser::for_or_expression_list()’:
+flat_modelica_parser.cpp:7237: warning: suggest parentheses around && within ||
+ar -r libflat_modelica_parser.a flat_modelica_lexer.o flat_modelica_parser.o
+ar: creating libflat_modelica_parser.a
+make[4]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/flat_modelica_parser/src'
+cd ../../modelica_parser/src; make -f Makefile
+make[4]: Entering directory `/home/dietmarw/.workspace/OM_trunk/modelica_parser/src'
+g++ -O3 -Wall -I/usr/include/ -c modelica_lexer.cpp
+g++ -O3 -Wall -I/usr/include/ -c modelica_parser.cpp
+modelica_parser.g: In member function ‘void modelica_parser::element_list()’:
+modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:327: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g: In member function ‘void modelica_parser::element()’:
+modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:368: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g: In member function ‘void modelica_parser::equation_annotation_list()’:
+modelica_parser.g:561: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:561: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:561: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g: In member function ‘void modelica_parser::equation()’:
+modelica_parser.g:632: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:632: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:632: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g: In member function ‘void modelica_parser::algorithm_annotation_list()’:
+modelica_parser.g:599: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:599: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:599: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g: In member function ‘void modelica_parser::algorithm()’:
+modelica_parser.g:666: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:666: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.g:666: warning: deprecated conversion from string constant to ‘char*’
+modelica_parser.cpp: In member function ‘void modelica_parser::for_or_expression_list()’:
+modelica_parser.cpp:7246: warning: suggest parentheses around && within ||
+g++ -O3 -Wall -I/usr/include/ -c token_names.cpp
+g++ -O3 -Wall -I/usr/include/ -c parse_tree_dumper.cpp
+ar -r libmodelica_parser.a modelica_lexer.o modelica_parser.o token_names.o parse_tree_dumper.o
+ar: creating libmodelica_parser.a
+make[4]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/modelica_parser/src'
+cp ../../modelica_parser/src/modelica_parserTokenTypes.txt modelica_parserTokenTypes.txt
+java antlr.Tool  walker.g
+ANTLR Parser Generator   Version 2.7.7 (20081030)   1989-2005
+g++ -I/usr/include/ -I../../modelica_parser/src -I../../flat_modelica_parser/src -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -O3 -Wall   -c -o modelica_tree_parser.o modelica_tree_parser.cpp
+walker.g: In member function ‘void* modelica_tree_parser::element(RefMyAST)’:
+walker.g:677: warning: deprecated conversion from string constant to ‘char*’
+walker.g:689: warning: deprecated conversion from string constant to ‘char*’
+walker.g:707: warning: deprecated conversion from string constant to ‘char*’
+walker.g:726: warning: deprecated conversion from string constant to ‘char*’
+walker.g:754: warning: deprecated conversion from string constant to ‘char*’
+walker.g:779: warning: deprecated conversion from string constant to ‘char*’
+walker.g: In member function ‘void* modelica_tree_parser::primary(RefMyAST)’:
+walker.g:2077: warning: deprecated conversion from string constant to ‘char*’
+walker.g:2089: warning: deprecated conversion from string constant to ‘char*’
+walker.g: In member function ‘void* modelica_tree_parser::component_reference__function_call(RefMyAST)’:
+walker.g:2116: warning: deprecated conversion from string constant to ‘char*’
+walker.g: In member function ‘void* modelica_tree_parser::primary(RefMyAST)’:
+walker.g:2057: warning: ‘v’ may be used uninitialized in this function
+walker.g:2057: note: ‘v’ was declared here
+java antlr.Tool -glib ../../modelica_parser/src/modelica_parser.g  expression_parser.g
+ANTLR Parser Generator   Version 2.7.7 (20081030)   1989-2005
+g++ -I/usr/include/ -I../../modelica_parser/src -I../../flat_modelica_parser/src -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -O3 -Wall   -c -o modelica_expression_parser.o modelica_expression_parser.cpp
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::algorithm()’:
+expandedexpression_parser.g:565: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:565: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:565: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::element_list()’:
+expandedexpression_parser.g:250: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:250: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:250: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::element()’:
+expandedexpression_parser.g:290: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:290: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:290: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::equation_annotation_list()’:
+expandedexpression_parser.g:464: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:464: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:464: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::equation()’:
+expandedexpression_parser.g:532: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:532: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:532: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g: In member function ‘void modelica_expression_parser::algorithm_annotation_list()’:
+expandedexpression_parser.g:501: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:501: warning: deprecated conversion from string constant to ‘char*’
+expandedexpression_parser.g:501: warning: deprecated conversion from string constant to ‘char*’
+modelica_expression_parser.cpp: In member function ‘void modelica_expression_parser::for_or_expression_list()’:
+modelica_expression_parser.cpp:7418: warning: suggest parentheses around && within ||
+g++ -I/usr/include/ -I../../modelica_parser/src -I../../flat_modelica_parser/src -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -O3 -Wall   -c -o parse.o parse.cpp
+parse.cpp: In function ‘void* Parser__parse(rml_state*)’:
+parse.cpp:116: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:116: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:116: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:188: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:188: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:188: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:205: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:205: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:205: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:222: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:222: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:222: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:240: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:240: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:240: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:257: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:257: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:257: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:274: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:274: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:274: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp: In function ‘void* Parser__parsestring(rml_state*)’:
+parse.cpp:446: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:453: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:470: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:498: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:512: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp: In function ‘void* Parser__parsestringexp(rml_state*)’:
+parse.cpp:569: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:576: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp: In function ‘void* Parser__parseexp(rml_state*)’:
+parse.cpp:631: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:631: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:631: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:686: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:686: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:686: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:697: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:697: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:697: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:708: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:708: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:708: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:720: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:720: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:720: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:731: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:731: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:731: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:742: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:742: warning: deprecated conversion from string constant to ‘char*’
+parse.cpp:742: warning: deprecated conversion from string constant to ‘char*’
+ar -r absyn_builder.a modelica_tree_parser.o modelica_expression_parser.o ../../flat_modelica_parser/src/flat_modelica_parser.o ../../flat_modelica_parser/src/flat_modelica_lexer.o ../../modelica_parser/src/modelica_parser.o ../../modelica_parser/src/modelica_lexer.o ../../modelica_parser/src/token_names.o ../../modelica_parser/src/parse_tree_dumper.o parse.o
+ar: creating absyn_builder.a
+make[3]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/Compiler/absyn_builder'
+make -C ../modpar
+make[3]: Entering directory `/home/dietmarw/.workspace/OM_trunk/Compiler/modpar'
+g++ -I/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/include/plain -I -I../../mosh/src -g -Wall -DUNIX=1   -c -o TaskGraphExt_stub.o TaskGraphExt_stub.cpp
+ar -r libmodpar.a TaskGraphExt_stub.o
+make[3]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/Compiler/modpar'
+g++ -O3 -o omc Absyn.o Algorithm.o Builtin.o Ceval.o ClassInf.o ClassLoader.o Codegen.o Connect.o Convert.o DAE.o DAELow.o Derive.o Debug.o DFA.o Dump.o DumpGraphviz.o Constants.o Env.o Error.o Exp.o SCode.o Graphviz.o Inst.o Interactive.o Lookup.o Main.o MetaUtil.o Mod.o ModUtil.o Patternm.o Prefix.o Static.o SimCodegen.o Types.o TaskGraph.o Util.o Values.o VarTransform.o Refactor.o DAEQuery.o XMLDump.o ../absyn_builder/absyn_builder.a ../runtime/systemimpl.o ../../c_runtime/libc_runtime.a ../runtime/rtopts.o ../runtime/socketimpl.o ../runtime/printimpl.o ../runtime/ptolemyio.o ../runtime/errorext.o ../runtime/ErrorMessage.o ../runtime/daeext.o ../runtime/corbaimpl.o ../runtime/omc_communication_impl.o ../runtime/omc_communication.o ../modpar/libmodpar.a ../runtime/settingsimpl.o -lm -L/home/dietmarw/.workspace/OM_MetaModelica/x86-linux-gcc/lib/plain -lrml -L/usr/lib/ -lantlr  `mico-config --libs` -ldl -L../../build/lib -lsendData -L/usr//lib -lQtNetwork -lQtCore -lQtGui
+make[2]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/Compiler/omc_release'
+echo Copying omc into ../build/bin
+Copying omc into ../build/bin
+cp omc_release/omc ../build/bin/
+for x in omc_helptext.txt omc_interactive_api.txt; do \
+		echo Copying $x into ../build/doc; \
+		cp doc/$x ../build/doc/; \
+	done
+Copying omc_helptext.txt into ../build/doc
+Copying omc_interactive_api.txt into ../build/doc
+for x in Compile Compile.bat doPlot doPlot.bat doPlot.Cygwin; do \
+		echo Copying $x into ../build/bin; \
+		cp scripts/$x ../build/bin/; \
+	done
+Copying Compile into ../build/bin
+Copying Compile.bat into ../build/bin
+Copying doPlot into ../build/bin
+Copying doPlot.bat into ../build/bin
+Copying doPlot.Cygwin into ../build/bin
+echo Copying needed helpfiles....
+Copying needed helpfiles....
+for x in omc_helptext.txt omc_interactive_api.txt; do \
+		echo Copying $x into ../build/bin where omc expects it...; \
+		cp doc/$x ../build/bin/; \
+	done
+Copying omc_helptext.txt into ../build/bin where omc expects it...
+Copying omc_interactive_api.txt into ../build/bin where omc expects it...
+make[1]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/Compiler'
+(cp doc/*.pdf ./build/doc/)
+(cp -p Examples/*.* ./build/doc/testmodels/)
+echo "environment variable QTHOME should be defined"
+environment variable QTHOME should be defined
+echo "Coin3D (www.coin3d.org) and SoQt should be installed and in the path!"
+Coin3D (www.coin3d.org) and SoQt should be installed and in the path!
+echo "using QTHOME=/usr/"
+using QTHOME=/usr/
+(cd OMShell && qmake && make && cp -p OMShell .././build/bin/.)
+make[1]: Entering directory `/home/dietmarw/.workspace/OM_trunk/OMShell'
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o commandcompletion.o commandcompletion.cpp
+commandcompletion.h: In constructor ‘IAEX::CommandCompletion::CommandCompletion(const QString&)’:
+commandcompletion.h:97: warning: ‘IAEX::CommandCompletion::currentList_’ will be initialized after
+commandcompletion.h:94: warning:   ‘int IAEX::CommandCompletion::commandStartPos_’
+commandcompletion.cpp:94: warning:   when initialized here
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o omc_communication.o omc_communication.cc
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o omc_communicator.o omc_communicator.cpp
+omc_communicator.cpp: In member function ‘bool OmcCommunicator::establishConnection()’:
+omc_communicator.cpp:129: warning: deprecated conversion from string constant to ‘char*’
+omc_communicator.cpp: In member function ‘QString OmcCommunicator::callOmc(const QString&)’:
+omc_communicator.cpp:229: warning: format not a string literal and no format arguments
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o omcinteractiveenvironment.o omcinteractiveenvironment.cpp
+omcinteractiveenvironment.cpp: In static member function ‘static bool IAEX::OmcInteractiveEnvironment::startOMC()’:
+omcinteractiveenvironment.cpp:160: warning: statement has no effect
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o oms.o oms.cpp
+oms.cpp:741: warning: unused parameter ‘e’
+oms.cpp:1212: warning: unused parameter ‘event’
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o main.o main.cpp
+/usr/bin/moc-qt4 -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. commandcompletion.h -o moc_commandcompletion.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o moc_commandcompletion.o moc_commandcompletion.cpp
+/usr/bin/moc-qt4 -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. omc_communicator.h -o moc_omc_communicator.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o moc_omc_communicator.o moc_omc_communicator.cpp
+/usr/bin/moc-qt4 -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. oms.h -o moc_oms.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o moc_oms.o moc_oms.cpp
+/usr/bin/rcc -name oms oms.qrc -o qrc_oms.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I/usr/local/include -I. -I. -o qrc_oms.o qrc_oms.cpp
+g++ -Wl,--no-undefined -o OMShell commandcompletion.o omc_communication.o omc_communicator.o omcinteractiveenvironment.o oms.o main.o moc_commandcompletion.o moc_omc_communicator.o moc_oms.o qrc_oms.o    -L/usr/lib -rdynamic -L/usr/local//lib -lmico2.3.13 -lssl -lcrypto -ldl -lm -lQtXml -lQtGui -lQtNetwork -lQtCore -lpthread
+make[1]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/OMShell'
+(cd OMNotebook/ext && qmake && make && cp -p ext ../.././build/bin/.)
+sh: coin-config: not found
+sh: soqt-config: not found
+sh: coin-config: not found
+sh: soqt-config: not found
+make[1]: Entering directory `/home/dietmarw/.workspace/OM_trunk/OMNotebook/ext'
+/usr/bin/uic-qt4 ../Pltpkg2/compoundWidget.ui -o ui_compoundWidget.h
+/usr/bin/uic-qt4 ../Pltpkg2/dataSelect.ui -o ui_dataSelect.h
+/usr/bin/uic-qt4 ../Pltpkg2/graphWindow.ui -o ui_graphWindow.h
+/usr/bin/uic-qt4 ../Pltpkg2/preferences.ui -o ui_preferences.h
+Warning: name layoutWidget is already used
+Warning: name layoutWidget is already used
+/usr/bin/uic-qt4 ../Pltpkg2/newgraph.ui -o ui_newgraph.h
+g++ -c -pipe -O2 -w -D_REENTRANT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtXml -I/usr/include/qt4 -I. -I../Pltpkg2 -I. -I. -o e.o e.cpp
+In file included from ../Pltpkg2/compoundWidget.h:44,
+                 from ./ui_graphWindow.h:24,
+                 from ../Pltpkg2/graphWindow.h:40,
+                 from e.cpp:34:
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:50:30: error: Inventor/Qt/SoQt.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:51:40: error: Inventor/Qt/SoQtRenderArea.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:52:52: error: Inventor/Qt/viewers/SoQtExaminerViewer.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:53:40: error: Inventor/nodes/SoBaseColor.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:54:35: error: Inventor/nodes/SoCube.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:55:36: error: Inventor/nodes/SoRotor.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:56:36: error: Inventor/nodes/SoArray.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:57:40: error: Inventor/nodes/SoSeparator.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:58:47: error: Inventor/nodes/SoDirectionalLight.h: No such file or directory
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:59:48: error: Inventor/nodes/SoPerspectiveCamera.h: No such file or directory
+In file included from ../Pltpkg2/../3Dpkg/VisualizationWidget.h:62,
+                 from ../Pltpkg2/compoundWidget.h:44,
+                 from ./ui_graphWindow.h:24,
+                 from ../Pltpkg2/graphWindow.h:40,
+                 from e.cpp:34:
+../Pltpkg2/../3Dpkg/SimulationData.h:42:42: error: Inventor/nodes/SoTranslation.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:43:39: error: Inventor/nodes/SoRotation.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:44:36: error: Inventor/nodes/SoScale.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:46:40: error: Inventor/nodes/SoDrawStyle.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:47:41: error: Inventor/nodes/SoLightModel.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:48:39: error: Inventor/fields/SoSFVec3f.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:50:35: error: Inventor/nodes/SoCone.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:51:39: error: Inventor/nodes/SoCylinder.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:52:37: error: Inventor/nodes/SoSphere.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:54:41: error: Inventor/nodes/SoAnnotation.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:55:36: error: Inventor/nodes/SoText2.h: No such file or directory
+../Pltpkg2/../3Dpkg/SimulationData.h:56:35: error: Inventor/nodes/SoFont.h: No such file or directory
+In file included from ../Pltpkg2/../3Dpkg/VisualizationWidget.h:62,
+                 from ../Pltpkg2/compoundWidget.h:44,
+                 from ./ui_graphWindow.h:24,
+                 from ../Pltpkg2/graphWindow.h:40,
+                 from e.cpp:34:
+../Pltpkg2/../3Dpkg/SimulationData.h:79: error: ‘SoSeparator’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:80: error: expected `)' before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:90: error: ISO C++ forbids declaration of ‘SoSeparator’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:90: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:91: error: ‘SoSeparator’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:92: error: ISO C++ forbids declaration of ‘SbColor’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:92: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:94: error: ‘SbVec3f’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:95: error: ‘SbRotation’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:96: error: ‘SbVec3f’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:97: error: ‘SbVec3f’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:104: error: ISO C++ forbids declaration of ‘SoTranslation’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:104: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:105: error: ISO C++ forbids declaration of ‘SoRotation’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:105: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:106: error: ISO C++ forbids declaration of ‘SoScale’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:106: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:107: error: ISO C++ forbids declaration of ‘SoTranslation’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:107: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:117: error: ISO C++ forbids declaration of ‘SbColor’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:117: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:118: error: ISO C++ forbids declaration of ‘SoSeparator’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:118: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:119: error: ISO C++ forbids declaration of ‘SoSeparator’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:119: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:133: error: ISO C++ forbids declaration of ‘SoSeparator’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:133: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:134: error: expected `;' before ‘void’
+../Pltpkg2/../3Dpkg/SimulationData.h:136: error: ‘SbViewportRegion’ has not been declared
+../Pltpkg2/../3Dpkg/SimulationData.h:140: error: ISO C++ forbids declaration of ‘SoSeparator’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:140: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/SimulationData.h:141: error: ISO C++ forbids declaration of ‘SoPerspectiveCamera’ with no type
+../Pltpkg2/../3Dpkg/SimulationData.h:141: error: expected ‘;’ before ‘*’ token
+In file included from ../Pltpkg2/compoundWidget.h:44,
+                 from ./ui_graphWindow.h:24,
+                 from ../Pltpkg2/graphWindow.h:40,
+                 from e.cpp:34:
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:92: error: ISO C++ forbids declaration of ‘SoQtExaminerViewer’ with no type
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:92: error: expected ‘;’ before ‘*’ token
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:93: error: ISO C++ forbids declaration of ‘SoQtRenderArea’ with no type
+../Pltpkg2/../3Dpkg/VisualizationWidget.h:93: error: expected ‘;’ before ‘*’ token
+e.cpp: In function ‘int main(int, char**)’:
+e.cpp:41: error: ‘SoQt’ has not been declared
+make[1]: *** [e.o] Error 1
+make[1]: Leaving directory `/home/dietmarw/.workspace/OM_trunk/OMNotebook/ext'
+make: *** [qtclients] Error 2

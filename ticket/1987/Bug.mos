@@ -1,0 +1,2 @@
+loadFile("Bug.mo"); getErrorString();
+simulate(Bug.B); getErrorString();

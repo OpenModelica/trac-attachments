@@ -1,0 +1,3 @@
+loadModel(Modelica);
+loadFile("Test2.mo");
+buildModel(MyModel3);
